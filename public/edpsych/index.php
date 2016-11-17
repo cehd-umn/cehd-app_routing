@@ -1,6 +1,5 @@
 <?php
-// require_once __DIR__ . '/../../vendor/autoload.php';
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $router = new \Klein\Klein();
 
@@ -13,17 +12,25 @@ class Config {
 
 // TODO Move this out of the global namespace
 // TODO make this a private function?
-function twig_bootstrap() {
-    require_once __DIR__ . '/../../../vendor/twig/twig/lib/Twig/Autoloader.php';
+function bootstrap_twig() {
+    require_once __DIR__ . '/../../vendor/twig/twig/lib/Twig/Autoloader.php';
     Twig_Autoloader::register();
 
     $loader = new Twig_Loader_Filesystem(__DIR__ . '/../../templates');
     $twig = new Twig_Environment($loader, array(
-        'cache' => __DIR__ . '/../../../cache', // Look here if vars don't show up
+        'cache' => __DIR__ . '/../../cache', // Look here if vars don't show up
         'debug' => Config::DEBUG,
         'autoescape' => true,
     ));
     return $twig;
+}
+
+function bootstrap_people_tool_client() {
+    $uri ="https://apps.cehd.umn.edu/people/admin/";
+    $client = new GuzzleHttp\Client([
+        'base_uri' => $uri,
+    ]);
+    return $client;
 }
 
 $router->respond(function($request, $response, $service, $app) use ($router) {
@@ -33,7 +40,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $css_base = $asset_base . '/dist/css';
         $js_base = $asset_base . '/dist/js';
         $cehd_edpsych_nav_open = false;
-        $twig = twig_bootstrap();
+        $twig = bootstrap_twig();
         $config = [
             'asset_base' => $asset_base,
             'base_url' => Config::BASE_URL,
@@ -51,6 +58,11 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $twig->addGlobal('config', $config);
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
         return $twig;
+    });
+
+    $app->register('http_client', function() {
+        $http_client = bootstrap_people_tool_client();
+        return $http_client;
     });
 });
 
@@ -162,35 +174,18 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
 
         /**
-         * People Tool Feed
+         * People Tool Feeds
          */
-        $router->respond('GET', '/people-tool/', function($request, $response, $service, $app) {
-            $uri ="https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?tg=213";
-
-            // Init curl
-            $ch = curl_init($uri);
-
-            // curl_setopt($ch, CURLOPT_HEADER, true);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_URL, $uri);
-            $content = curl_exec($ch);
-
-            // list($header, $contents) = preg_split('/([\r\n][\r\n])\\1/', curl_exec($ch), 2);
-            // // $status = curl_getinfo($ch);
-            // curl_close($ch);
-            // $header_text = preg_split('/[\r\n]+/', $header);
-
-            // Propagate headers to response.
-            // foreach ($header_text as $header) {
-            //     if (preg_match('/^(?:Content-Type|Content-Language|Set-Cookie):/i', $header)) {
-            //         header($header);
-            //     }
-            // }
-
-            // Send along the contents
-            // echo $contents;
-            // echo file_get_contents($uri);
-            echo $content;
+        $router->with('/people-tool', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                $client_response = $app->http_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
+                $xml_string = $client_response->getBody();
+                $xml = simplexml_load_string($xml_string);
+                $json = json_encode($xml);
+                $response->header('Content-Type', 'application/json');
+                $response->body($json);
+                $response->send();
+            });
         });
 
         /**
