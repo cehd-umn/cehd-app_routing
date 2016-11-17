@@ -1,0 +1,37 @@
+{
+  "name": "edpsych-assets",
+  "version": "1.0.0",
+  "description": "Assets for the Educational Psychology website",
+  "main": "edpsych.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "CSS",
+    "Base",
+    "base",
+    "css",
+    "sass",
+    "framework"
+  ],
+  "author": "Tony Thomas",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "js-cookie": "^2.1.3"
+  }
+}

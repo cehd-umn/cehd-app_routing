@@ -1,0 +1,67 @@
+var browserify = require("browserify");
+var buffer = require("vinyl-buffer");
+var gulp = require("gulp");
+var gutil = require("gulp-util");
+var rename = require("gulp-rename");
+var runSequence = require("run-sequence");
+var sass = require("gulp-sass");
+var source = require("vinyl-source-stream");
+var sourcemaps = require("gulp-sourcemaps");
+var uglify = require("gulp-uglify");
+
+gulp.task("default", function() {
+    runSequence(
+        "javascript",
+        "sass-minified-task",
+        "sass-expanded-task"
+    );
+});
+
+gulp.task("javascript", function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: "./src/js/edpsych.js",
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source("./src/js/edpsych.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on("error", gutil.log)
+    .pipe(rename("js/edpsych.min.js"))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./dist"));
+});
+
+gulp.task("sass-minified-task", function() {
+    return gulp.src("./src/sass/edpsych.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest("./dist/css/minified/"));
+});
+
+gulp.task("sass-expanded-task", function() {
+    return gulp.src("./src/sass/edpsych.scss")
+    .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
+    .pipe(gulp.dest("./dist/css/unminified/"));
+});
+
+// Watch task
+gulp.task("watch", function() {
+    gulp.watch(
+        "./src/sass/**/*.scss",
+        [
+            "sass-minified-task",
+            "sass-expanded-task"
+        ]
+    );
+
+    gulp.watch(
+        "./src/js/edpsych.js",
+        ["javascript"]
+    );
+});

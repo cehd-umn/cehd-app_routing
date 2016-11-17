@@ -1,0 +1,11 @@
+.DS_Store
+bower_components
+node_modules
+.sass-cache
+cache
+vendor
+
+# exclusions
+!cache/Readme.md
+!node_modules/Readme.md
+!vendor/Readme.md

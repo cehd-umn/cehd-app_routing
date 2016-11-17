@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*
+        Owner: College of Education and Human Development - U of M
+        Title: CEHD Public Web - CSS Reset
+        Version: 1.0
+
+        What's it do?: This creates the core structure, layout elements, and
+        styles for CEHD web pages
+
+        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
+        Created: 2013-06-13
+        Updated: 2015-05-05 "Cinco de CSS"
+*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+body {
+    font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    // scss-lint:disable PropertySortOrder
+    // scss-lint:disable ColorVariable
+    border-collapse: collapse;
+    border-spacing: 0;
+    // TODO make a color var for this
+    border: 1px solid #e2e2e2;
+    empty-cells: show;
+    margin: 10px 25px;
+    padding: 0;
+    width: 90%;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q {
+    &:before,
+    &:after {
+        content: "";
+        // TODO The second one always wins. Why two?
+        // scss-lint:disable DuplicateProperty
+        content: none;
+    }
+}
+
+blockquote {
+    display: block;
+    font-style: italic;
+    margin: 10px 40px;
+    padding: 0;
+
+    &:before,
+    &:after {
+        content: none;
+    }
+}
+
+a img {
+    border: 0;
+}
+
+article,
+aside,
+details,
+div,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+menu,
+nav,
+p,
+section,
+summary {
+    clear: both;
+    display: block;
+}
+
+/****** End CSS Reset *****/

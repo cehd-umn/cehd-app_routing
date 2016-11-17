@@ -1,0 +1,28 @@
+// #container {
+//     max-width: 1400px;
+//     width: 100%;
+// }
+//
+// @media only screen and (max-width: 1199px) {
+//     #container,
+//     footer {
+//         width: 100%;
+//     }
+// }
+
+@media all and (max-width: 520px) {
+    // #container {
+    //     min-width: 320px;
+    // }
+
+    #maincontent {
+        // width: 100%;
+        z-index: 2;
+
+        .callout-right {
+            float: none;
+            margin: 0 0 0 25px;
+            width: 90%;
+        }
+    }
+}

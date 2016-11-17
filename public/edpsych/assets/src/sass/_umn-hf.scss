@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import "colors";
+@import "variables";
+
+/*
+        TODO edit these comments for accuracy
+        Owner: College of Education and Human Development - U of M
+        Title: CEHD Public Web - Core layout elements
+        Version: UMN Header 2015 (this is an update of the UMN header made to work with core 2013)
+        What's it do?: These are all of the styles for the U of M header, which was updated in 2015
+        Dependencies: This file should be placed after "core2015.css" to use @font-face declaration.
+        Authors: Dan Sagisser and Jeff Abuzzahab
+        Created: 2013-06-13
+        Updated: 2016-02-23
+*/
+
+/*
+import grabs the google font Raleway for use for MyU and OneStop links
+import needs to be the first thing on the stylesheet to work
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*
+
+Note:
+If you are using this header outside of drydock, you have to change a few things.
+
+1. Uncomment the icon font stuff a few lines down.
+2. Copy the icon fonts over to the other server (their paths are in that block below)
+3. Copy the U of M DtoD logos over to the new server (there are two fo them)
+4. If the icons still aren't showing up, you may have to have those MIME types added to the server
+
+
+Fontello
+
+Here are the characters defined in fontello:
+
+* Menu icon:  "\f0c9  "
+* More icon (9 dots): "  \e024"
+* More icon (layered stacks):"  \e79d"
+* Search icon: "\e803"
+* MyU lock icon:"  \e801"
+
+***/
+
+/* ---------- Campus Links -----------------------------------*/
+/* this hides the campus links div, just in case some old version of HTML sill has it */
+
+#campuslinks {
+    display: none;
+}
+
+#umn-links {
+    list-style: none;
+    margin: 0;
+
+    li {
+        margin: 0;
+    }
+}
+
+/* ---------- U of M Header ----------------------------------*/
+#umnheader-container {
+    padding: 0 30px;
+}
+
+#umnheader {
+    background-color: $umn-maroon;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 $core-layout-padding-default;
+
+    #umnh-logos {
+        background: url("../assets/images/umnheader/umnh-logos.png") transparent no-repeat;
+        background-position-y: 50%;
+        background-size: 292px 39px;
+        display: block;
+        float: left;
+        height: 63px;
+        margin: 5px 0;
+        overflow: hidden;
+        position: relative;
+        width: 315px;
+    }
+
+    a {
+        color: $umn-light-grey;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+
+        &:hover {
+            color: $umn-light-grey;
+            text-decoration: underline;
+        }
+
+        &:active,
+        &:visited {
+            color: $umn-light-grey;
+            text-decoration: none;
+        }
+    }
+
+    #umnh-myu {
+        clear: none;
+        display: block;
+        float: right;
+        font-size: .8em;
+        height: 15px;
+        margin: 14px 0 4px 4px;
+
+        &::after {
+            content: "  \e801";
+            font-family: 'fontello';
+        }
+    }
+
+    #umnh-onestop {
+        clear: none;
+        display: block;
+        float: right;
+        font-size: .8em;
+        height: 15px;
+        margin: 14px 5px 4px 4px;
+    }
+
+    #umnh-searchbox {
+        clear: both;
+        display: block;
+        float: right;
+        height: 30px;
+        margin: -2em 0;
+        padding: 0;
+        text-align: right;
+        width: 220px;
+    }
+}
+
+#umnh-searchfield {
+    background-color: $base-white;
+    border: 0;
+    border-radius: 0;
+    color: $umn-dark-grey;
+    display: inline;
+    font-size: .85em;
+    height: 18px;
+    margin: 3px 0 0 3px;
+    padding: 0 0 0 5px;
+    width: 185px;
+}
+
+#umnh-searchbtn {
+    background: transparent;
+    border: 0;
+    color: $umn-medium-grey;
+    display: inline;
+    font-family: 'fontello';
+    font-size: 1em;
+    font-weight: normal;
+    margin: 4px 4px 0 0;
+    padding: 0;
+    width: auto;
+}
+
+/* ---------- end U of M Header ------------------------------*/
+
+/* ---------- start U of M Footer ----------------------------*/
+// TODO break footer styles out into their own files
+
+#umnfoot {
+    background-color: $base-white;
+    border-top: 1px $umn-medium-grey solid;
+    clear: both;
+    color: $umn-charcoal;
+    display: block;
+    font-size: .8em;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    p {
+        line-height: 1.8;
+        margin: 15px;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+/* ---------- end   U of M Footer ----------------------------*/
+
+/* ---------- media query for high dpi ----------------------*/
+// TODO use a mixin for media queries
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
+    #umnheader #umnh-logos {
+        background: url("../assets/images/umnheader/umnh-logos@2x.png") no-repeat;
+        // TODO use short syntax for these
+        background-position-y: 50%;
+        background-size: 292px 39px;
+    }
+}
+
+/* ---------- end media query for high dpi ------------------*/
+/* ---------- media query for medium Screen -----------------*/
+
+// Large screens
+@media all and (min-width: 960px) {
+    #umnheader {
+        padding: 0 $core-layout-padding-large-screen;
+    }
+}
+
+/* ---------- end media query for medium Screen -------------*/
+/* ---------- media query for small Screen ------------------*/
+// TODO use a mixin for media queries
+@media only screen and (max-width: 620px) {
+    #umnheader-container {
+        padding: 0 1em;
+    }
+
+    #umnheader {
+        height: 100px;
+        min-width: 320px;
+
+        #umnh-logos {
+            background-size: 100% auto;
+            float: none;
+            margin: 0 auto;
+        }
+
+        #umnh-myu,
+        #umnh-onestop {
+            display: none;
+        }
+
+        #umnh-searchbox {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            position: static;
+        }
+    }
+}
+/* ---------- end media query for small Screen --------------*/

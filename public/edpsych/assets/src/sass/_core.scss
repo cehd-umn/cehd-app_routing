@@ -1,0 +1,863 @@
+@charset "UTF-8";
+@import "colors";
+@import "bourbon/bourbon";
+@import "nav";
+@import "variables";
+
+/*
+        Owner: College of Education and Human Development - U of M
+        Title: CEHD Public Web - Core layout elements
+        What's it do?: This creates the core structure, layout elements, and
+            styles for CEHD web pages
+        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
+*/
+
+/* Accessibly hides text */
+.accessible-hidden {
+    @include hide-text;
+}
+
+.accessible-no-display {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+}
+
+/** Begin Main Structure   **/
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+
+body {
+    font-family: 'Lato', Verdana, Geneva, sans-serif;
+    font-size: em(16);
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+
+a {
+    color: $link-base-blue;
+
+    &.muted {
+        &:hover,
+        &:focus {
+            color: $base-dark-grey;
+        }
+    }
+
+    &.text-warning {
+        &:hover,
+        &:focus {
+            color: $warning-text-dark-yellow;
+        }
+    }
+
+    &.text-error {
+        &:hover,
+        &:focus {
+            color: $error-text-dark-red;
+        }
+    }
+
+    &.text-info {
+        &:hover,
+        &:focus {
+            color: $base-dark-blue;
+        }
+    }
+
+    &.text-success {
+        &:hover,
+        &:focus {
+            color: $success-text-dark-green;
+        }
+    }
+}
+
+#maincontent {
+    margin: em(40) $core-layout-padding-default 1em;
+}
+
+.half,
+.third,
+.twothird,
+.whole {
+    width: auto;
+}
+
+
+
+.active-extra {
+    // TODO combine these styles with _nav.scss?
+    nav {
+        // TODO use bourbon
+        -moz-transition: .2s all ease;
+        -ms-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        -webkit-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    #maincontent,
+    #extracontent {
+        // TODO use bourbon
+        -moz-transition: .2s all ease;
+        -ms-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        -webkit-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+}
+
+.active-nav {
+    nav {
+        // TODO use bourbon
+        -moz-transition: .2s all ease;
+        -ms-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        -webkit-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+
+    #maincontent,
+    #extracontent {
+        // TODO use bourbon
+        -moz-transition: .2s all ease;
+        -ms-transition: .2s all ease;
+        -o-transition: .2s all ease;
+        -webkit-transition: .2s all ease;
+        transition: .2s all ease;
+    }
+}
+
+.wordmarks {
+    padding: 0 $core-layout-padding-default;
+}
+
+.wordmark-svg {
+    clear: both;
+    display: block;
+    margin: 1em 0 .4em;
+    max-width: 100%;
+}
+
+#cehd-wordmark {
+    border-bottom: 2px solid $base-black;
+    padding: 0 0 .2em;
+}
+
+.dept-wordmark {
+    float: left;
+    margin-top: 0;
+    max-width: 66%;
+}
+
+/**  End Main Structure   **/
+/**  CORE ELEMENTS */
+
+/* icon font for responsive panes, and UMN header */
+@font-face {
+    font-family: 'fontello';
+    src: url("../assets/fonts/fontello-2015/fontello.eot");
+    src: url("../assets/fonts/fontello-2015/fontello.eot") format("embedded-opentype"), url("../assets/fonts/fontello-2015/fontello.woff") format("woff"), url("../assets/fonts/fontello-2015fontello.ttf") format("truetype"), url("../assets/fonts/fontello-2015/fontello.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** Headings **/
+
+// Convert pts to ems
+@each $heading, $size in $heading-map-desktop {
+    #{$heading}, .#{$heading} {
+        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+        font-size: em($size, 22);
+        font-weight: bold;
+        margin: em(10) 0;
+        padding: 0;
+    }
+}
+
+.h-override-color {
+    font-size: 80%;
+}
+
+.h-override-black {
+    color: $base-black;
+    font-size: 80%;
+}
+
+/* ---------------------------------------- PARAGRAPHS ---- */
+
+p {
+    margin: 1em 0;
+    padding: 0;
+}
+
+.subhead {
+    margin: 0 25px 10px;
+    padding: 0;
+}
+
+.revised {
+    font-size: .8em;
+    font-style: italic;
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: right;
+    width: 90%;
+}
+
+.citation {
+    margin-left: 5em;
+    text-indent: -2.5em;
+}
+
+.tinytype {
+    font-size: .7em;
+}
+
+/* ---------------------------------------- LISTS ---- */
+
+ul {
+    list-style: disc;
+    margin: 10px 25px;
+    padding: 0;
+
+    &.no-bullet {
+        list-style-image: none;
+        list-style-type: none;
+    }
+
+    ul {
+        list-style: circle;
+        margin: 10px 0 10px 10px;
+
+        ul {
+            list-style: square;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+ol {
+    list-style: decimal;
+    margin: 10px 25px;
+    padding: 0;
+
+    ol {
+        list-style: lower-alpha;
+        margin: 10px 0 10px 10px;
+
+        ol {
+            list-style: lower-roman;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+li {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+.tight li,
+.tight li {
+    margin: 0 0 0 25px;
+}
+
+dl {
+    margin: 10px 25px;
+    padding: 0;
+}
+
+dt {
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0;
+}
+
+dd {
+    margin: 10px 0 10px 25px;
+    padding: 0;
+}
+
+/* ---------------------------------------- BLOCK ELEMENTS ---- */
+
+address {
+    display: block;
+    font-style: normal;
+    margin: 10px;
+    padding: 0;
+}
+
+pre {
+    display: block;
+    margin: 10px;
+    padding: 0;
+}
+
+/* ---------------------------------------- INLINE ELEMENTS ---- */
+
+strong {
+    font-weight: bold;
+
+    &.alert {
+        color: $base-red;
+    }
+
+    // TODO write better class names for states
+    &.yes {
+        color: $base-green;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+/* ---------------------------------------- TABLES ---- */
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+th {
+    background-color: $base-blue;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    font-weight: bold;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    background-color: transparent;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* ---------------------------------------- FORMS ---- */
+
+form {
+    display: block;
+    padding: 1%;
+    width: 100%;
+
+    p {
+        border: $base-white thin solid;
+        min-height: 30px;
+    }
+}
+
+fieldset {
+    border: 1px $base-white solid;
+    margin: 0 25px 0 0;
+}
+
+legend {
+    color: $base-blue;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px 25px 10px 0;
+    padding: 0;
+    width: 90%;
+}
+
+label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin: 0 0 10px;
+    width: 100%;
+
+    span {
+        color: $base-charcoal;
+        display: block;
+        font-size: .8em;
+        font-weight: normal;
+        width: 100%;
+    }
+}
+
+input {
+    border: solid thin $base-grey;
+    font-size: 1em;
+    margin: 0 0 10px;
+    padding: 1%;
+    width: 100%;
+}
+
+textarea {
+    border: solid thin $base-light-grey;
+    font-size: 1em;
+    height: 5em;
+    margin: 0 0 10px;
+    padding: 1%;
+    width: 100%;
+}
+
+.wide {
+    float: none;
+    text-align: left;
+    width: 100%;
+
+    span {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+// scss-lint:disable SelectorFormat
+.CheckorRadio-Short {  // XXX Deprecated. Use lowercase version below.
+    border: thin $base-white solid;
+    margin: 10px 25px;
+
+    label {
+        border: 0;
+        display: block;
+        float: left;
+        font-weight: bold;
+        margin: 0;
+        text-align: right;
+        width: 30%;
+    }
+
+    input {
+        border: 0;
+        display: block;
+        float: none;
+        height: 15px;
+        margin: 2px 25px 20px 32%;
+        padding: 0;
+        width: 15px;
+    }
+}
+
+.CheckorRadio-Long { // XXX Deprecated. Use lowercase version below.
+    border: thin $base-white solid;
+    margin: 10px 25px;
+
+    label {
+        display: block;
+        float: none;
+        font-weight: bold;
+        margin: 0 0 0 25px;
+        text-align: left;
+        width: 80%;
+
+        span {
+            color: $base-charcoal;
+            display: block;
+            font-size: .8em;
+            font-weight: normal;
+            text-align: left;
+            width: 80%;
+        }
+    }
+
+    input {
+        border: 0;
+        float: left;
+        height: 1%;
+        margin: 2px 10px 0 0;
+        padding: 0;
+        width: 1%;
+    }
+}
+// scss-lint:enable SelectorFormat
+
+.checkorradio-short {
+    border: thin $base-white solid;
+    margin: 10px 25px;
+
+    label {
+        border: 0;
+        display: block;
+        float: left;
+        font-weight: bold;
+        margin: 0;
+        text-align: right;
+        width: 30%;
+    }
+
+    input {
+        border: 0;
+        display: block;
+        float: none;
+        height: 15px;
+        margin: 2px 25px 20px 32%;
+        padding: 0;
+        width: 15px;
+    }
+}
+
+.checkorradio-long {
+    border: thin $base-white solid;
+    margin: 10px 25px;
+
+    label {
+        display: block;
+        float: none;
+        font-weight: bold;
+        margin: 0 0 0 25px;
+        text-align: left;
+        width: 80%;
+
+        span {
+            color: $base-charcoal;
+            display: block;
+            font-size: .8em;
+            font-weight: normal;
+            text-align: left;
+            width: 80%;
+        }
+    }
+
+    input {
+        border: 0;
+        float: left;
+        height: 1%;
+        margin: 2px 10px 0 0;
+        padding: 0;
+        width: 1%;
+    }
+}
+
+select {
+    margin: 0 0 20px 10px;
+    padding: 8px;
+}
+
+.button {
+    background: $base-dark-red none;
+    clear: both;
+    color: $base-white;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 8%;
+    line-height: 2em;
+    margin-left: 40%;
+    text-align: center;
+    width: 15%;
+}
+
+/* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */
+
+.img-right {
+    float: right;
+    margin: 1% 0 10px 10px;
+    padding: 0;
+    position: relative;
+}
+
+.img-left {
+    float: left;
+    margin: 1% 10px 10px 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ------------------------------------- ALIGNMENT, FLOATS, CLEAR FLOAT ---- */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fltrt {
+    /* this class can be used to float an element right in your page.
+        * The floated element must precede the element it should be next to on
+        * the page. */
+    float: right;
+    margin-left: 8px;
+}
+
+.fltlft {
+    /* this class can be used to float an element left in your page */
+    float: left;
+    margin-right: 8px;
+}
+
+.clearfloat {
+    /* this class should be placed on a div or break element and should be the
+     * final element before the close of a container that should fully contain
+     * a float
+    */
+    clear: both;
+    font-size: 1px;
+    height: 0;
+    line-height: 0;
+}
+
+/* ---------------------------------------- Alert Text */
+
+.muted {
+    color: $base-medium-grey;
+}
+
+.text-warning {
+    color: $warning-text-yellow;
+}
+
+.text-error {
+    color: $error-text-red;
+}
+
+.text-info {
+    color: $base-medium-blue;
+}
+
+.text-success {
+    color: $success-text-green;
+}
+
+/* ---------------------------------------- Alert Boxes */
+
+.alert {
+    background-color: $warning-light-yellow;
+    border: 1px solid $warning-light-orange;
+    // TODO use bourbon
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: $warning-text-yellow;
+    margin: 10px 25px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 $text-shadow-rgba;
+
+    h4 {
+        color: $warning-text-yellow;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .close {
+        line-height: 20px;
+        position: relative;
+        right: -21px;
+        top: -2px;
+    }
+}
+
+.alert-success {
+    background-color: $success-light-green;
+    border-color: $success-medium-green;
+    color: $success-text-green;
+
+    h4 {
+        color: $success-text-green;
+    }
+}
+
+.alert-danger,
+.alert-error {
+    background-color: $error-light-red;
+    border-color: $error-medium-red;
+    color: $error-text-dark-red;
+}
+
+.alert-danger h4,
+.alert-error h4 {
+    color: $error-text-red;
+}
+
+.alert-info {
+    background-color: $base-light-blue;
+    border-color: $base-light-blue;
+    color: $base-medium-blue;
+}
+
+.alert-question {
+    background-color: $base-light-grey;
+    border-color: $base-grey;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $base-black;
+        margin: 10px 10px 5px;
+    }
+
+    p {
+        color: $base-black;
+        margin: 5px 10px;
+    }
+
+    ul {
+        color: $base-black;
+    }
+}
+
+.alert-block {
+    padding-bottom: 14px;
+    padding-top: 14px;
+
+    > {
+        p,
+        ul {
+            margin-bottom: 0;
+        }
+    }
+
+    p + p {
+        margin-top: 5px;
+    }
+}
+
+/* ---------------------------------------- Image placement*/
+
+.media,
+.media-body {
+    // scss-lint:disable PropertySpelling
+    // scss-lint:disable PropertySortOrder
+    overflow: hidden;
+    *overflow: visible;
+    zoom: 1;
+}
+
+.media {
+    margin-top: 15px;
+
+    .media {
+        margin-top: 15px;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    > .pull-left {
+        margin-right: 10px;
+    }
+
+    > .pull-right {
+        margin-left: 10px;
+    }
+}
+
+.media-object {
+    display: block;
+}
+
+.media-heading {
+    margin: 0 0 5px;
+}
+
+.media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.tabs {
+    margin: 10px 25px;
+}
+
+/**    Begin Media Breaks   **/
+
+
+@media all and (max-width: 1200px) {
+    .half,
+    .third,
+    .twothird,
+    .whole {
+        clear: none;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .half {
+        width: 50%;
+    }
+
+    .third {
+        width: 33%;
+    }
+
+    .twothird {
+        width: 66%;
+    }
+
+    .whole {
+        width: 100%;
+    }
+}
+
+
+@media all and (min-width: 768px) {
+    .half,
+    .third {
+        width: auto;
+    }
+
+    // Convert pts to ems
+    @each $heading, $size in $heading-map-mobile {
+        #{$heading}, .#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: em($size, 22);
+            font-weight: bold;
+            padding: 0;
+            text-align: left;
+        }
+    }
+
+    .wordmark-svg {
+        clear: none;
+        display: inline-block;
+        max-width: 33%;
+        padding: .6em 0;
+    }
+
+    #cehd-wordmark {
+        border: 0;
+        float: right;
+        padding: .6em 0;
+    }
+}
+
+@media all and (min-width: 960px) {
+    @each $heading, $size in $heading-map-desktop {
+        #{$heading}, .#{$heading} {
+            text-align: left;
+        }
+    }
+
+    .nav-container {
+        position: relative;
+    }
+
+    .dept-wordmark {
+        float: left;
+    }
+
+    #maincontent {
+        margin: 2.5em $core-layout-padding-large-screen 1em;
+    }
+
+    .wordmarks {
+        padding: 0 $core-layout-padding-large-screen;
+    }
+}
