@@ -1,0 +1,8 @@
+{% set fullName = data.person.firstName + " " + data.person.lastName %}
+<h2 class="h2">{{ fullName }}</h2>
+{% if data.person.headshotAddr != "[object Object]" %}
+    <p><img src="{{ data.person.headshotAddr }}" alt="{{ fullName }} headshot"></p>
+{% endif %}
+{% if data.person.briefBio != "[object Object]" %}
+    <p>{{ data.person.briefBio|safe }}</p>
+{% endif %}

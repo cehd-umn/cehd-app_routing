@@ -1,0 +1,9 @@
+<ul>
+{% for person in data.people %}
+    <li>
+        <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">
+            {{ person.firstName }} {{ person.lastName }}
+        </a>
+    </li>
+{% endfor %}
+</ul>

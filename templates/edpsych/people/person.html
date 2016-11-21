@@ -1,0 +1,38 @@
+{% extends "edpsych/layout/section.html" %}
+{% set page_title = "Faculty & Instructors" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+{# This uses a JavaScript template located at:
+   app_template/public/edpsych/assets/dist/views/edpsych/people/person.html
+
+   The reason JavaScript is handling this is so we can make the requests to the
+   People Tool asynchronous.
+#}
+<div id="people-tool-container"></div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    <script>
+        var params = {
+            url: "{{ config.base_url }}/services/people-tool/person/",
+            data: {
+                internetId: "{{ internet_id }}"
+            }
+        };
+        var client = new PeopleToolClient();
+        var $request = client.get(params);
+
+        $request.done(function() {
+            var results = client.getResults();
+            var template_params = {
+                'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
+                'template_name': 'person.html',
+                'data': {
+                    person: results.channel.item,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+    </script>
+{% endblock %}

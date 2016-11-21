@@ -13,14 +13,19 @@ gulp.task("default", function() {
     runSequence(
         "javascript",
         "sass-minified-task",
-        "sass-expanded-task"
+        "sass-expanded-task",
+        "copy-views"
     );
 });
 
 gulp.task("javascript", function () {
   // set up the browserify instance on a task basis
   var b = browserify({
-    entries: "./public/edpsych/assets/src/js/edpsych.js",
+    entries: [
+        "./public/edpsych/assets/src/js/edpsych.js",
+        "./public/edpsych/assets/src/js/people_tool_client.js",
+        "./public/edpsych/assets/src/js/renderer.js",
+    ],
     debug: true
   });
 
@@ -36,6 +41,11 @@ gulp.task("javascript", function () {
     .pipe(gulp.dest("./public/edpsych/assets/dist"));
 });
 
+gulp.task("copy-views", function() {
+    return gulp.src("./public/edpsych/assets/src/views/**/*.html")
+    .pipe(gulp.dest("./public/edpsych/assets/dist/views"));
+});
+
 gulp.task("sass-minified-task", function() {
     return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
     .pipe(sourcemaps.init())
@@ -45,7 +55,7 @@ gulp.task("sass-minified-task", function() {
 });
 
 gulp.task("sass-expanded-task", function() {
-    return gulp.src("./src/sass/edpsych.scss")
+    return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
     .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
     .pipe(gulp.dest("./public/edpsych/assets/dist/css/unminified/"));
 });
@@ -53,7 +63,7 @@ gulp.task("sass-expanded-task", function() {
 // Watch task
 gulp.task("watch", function() {
     gulp.watch(
-        "./src/sass/**/*.scss",
+        "./public/edpsych/assets/src/sass/**/*.scss",
         [
             "sass-minified-task",
             "sass-expanded-task"
@@ -61,7 +71,12 @@ gulp.task("watch", function() {
     );
 
     gulp.watch(
-        "./src/js/edpsych.js",
+        "./public/edpsych/assets/src/js/**/*.js",
         ["javascript"]
+    );
+
+    gulp.watch(
+        "./public/edpsych/assets/src/views/**/*.html",
+        ["copy-views"]
     );
 });

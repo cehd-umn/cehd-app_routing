@@ -37,6 +37,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
         $asset_base = Config::BASE_URL . '/assets';
+        $nunjucks_view_base = $asset_base . '/dist/views';
         $css_base = $asset_base . '/dist/css';
         $js_base = $asset_base . '/dist/js';
         $cehd_edpsych_nav_open = false;
@@ -48,6 +49,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
             'css_base' => $css_base,
             'dept_name' => Config::DEPT_NAME,
             'js_base' => $js_base,
+            'nunjucks_view_base' => $nunjucks_view_base,
         ];
 
         // Check for main nav state
@@ -60,20 +62,24 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         return $twig;
     });
 
-    $app->register('http_client', function() {
-        $http_client = bootstrap_people_tool_client();
-        return $http_client;
+    $app->register('people_tool_client', function() {
+        $people_tool_client = bootstrap_people_tool_client();
+        return $people_tool_client;
     });
 });
 
 $router->with(Config::BASE_URL, function() use ($router) {
 
-    // Ed Psych HOME
+    /*
+     * Ed Psych Home
+     */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/index.html', []);
     });
 
-    // ABOUT
+    /*
+     * About
+     */
     $router->with('/about', function() use ($router) {
         /**
          * Redirects
@@ -147,8 +153,10 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 
-    // GIVING
-    // TODO Figure out what's happening with forms
+    /**
+     * Giving
+     * TODO Figure out what's happening with forms
+     */
     $router->with('/forms', function() use ($router) {
         /**
          * Redirects
@@ -166,19 +174,23 @@ $router->with(Config::BASE_URL, function() use ($router) {
     });
 
     /**
-     * People
+     * Services
+     * TODO Make these services their own thing
      */
-    $router->with('/people', function() use ($router) {
-        $router->respond('GET', '/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/people/index.html', ["section" => "people"]);
-        });
-
+    $router->with('/services', function() use ($router) {
         /**
-         * People Tool Feeds
+         * People Tool
          */
+
+        // function xml_to_json(xml_string) {
+        //     return true;
+        // };
+
         $router->with('/people-tool', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
-                $client_response = $app->http_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
+                // TODO make the query string a var so we can have one endpoint
+                // $works = xml_to_json('');
+                $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
                 $xml_string = $client_response->getBody();
                 $xml = simplexml_load_string($xml_string);
                 $json = json_encode($xml);
@@ -186,7 +198,42 @@ $router->with(Config::BASE_URL, function() use ($router) {
                 $response->body($json);
                 $response->send();
             });
+
+            $router->respond('GET', '/person/', function($request, $response, $service, $app) {
+                $query_data = $request->params();
+                if (array_key_exists('internetId', $query_data)) {
+                    $client_query_data = ['query' => [
+                        'id' => $query_data['internetId'
+                        ]
+                    ]];
+                    $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', $client_query_data);
+                    $xml_string = $client_response->getBody();
+                    $xml = simplexml_load_string($xml_string);
+                    $json = json_encode($xml);
+                    $response->header('Content-Type', 'application/json');
+                    $response->body($json);
+                    $response->send();
+                }
+            });
         });
+    });
+
+    /**
+     * People
+     */
+    $router->with('/people', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/people/index.html', ["section" => "people"]);
+        });
+
+        $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {
+            $template_vars = [
+                "section" => "people",
+                "internet_id" => $request->internetId,
+            ];
+            echo $app->template->render('edpsych/people/person.html', $template_vars);
+        });
+
 
         /**
          * Faculty
@@ -203,9 +250,9 @@ $router->with(Config::BASE_URL, function() use ($router) {
             /**
              * Routes
              */
-            $router->respond('GET', '/penny/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/people/faculty/penny.html', ["section" => "people"]);
-            });
+            // $router->respond('GET', '/penny/', function($request, $response, $service, $app) {
+            //     echo $app->template->render('edpsych/people/faculty/penny.html', ["section" => "people"]);
+            // });
         });
 
         /**
