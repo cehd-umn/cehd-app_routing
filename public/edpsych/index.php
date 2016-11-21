@@ -10,6 +10,18 @@ class Config {
     const DEPT_NAME = "Department of Educational Psychology";
 }
 
+
+/**
+ * Custom Response class with extra methods
+ */
+class BaseResponse extends \Klein\Response {
+
+    public function xmlToJSON($xml_string) {
+        $xml = simplexml_load_string($xml_string);
+        return json_encode($xml);
+    }
+}
+
 // TODO Move this out of the global namespace
 // TODO make this a private function?
 function bootstrap_twig() {
@@ -191,9 +203,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
                 // TODO make the query string a var so we can have one endpoint
                 // $works = xml_to_json('');
                 $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
-                $xml_string = $client_response->getBody();
-                $xml = simplexml_load_string($xml_string);
-                $json = json_encode($xml);
+                $json = $response->xmlToJSON($client_response->getBody());
                 $response->header('Content-Type', 'application/json');
                 $response->body($json);
                 $response->send();
@@ -207,9 +217,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
                         ]
                     ]];
                     $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', $client_query_data);
-                    $xml_string = $client_response->getBody();
-                    $xml = simplexml_load_string($xml_string);
-                    $json = json_encode($xml);
+                    $json = $response->xmlToJSON($client_response->getBody());
                     $response->header('Content-Type', 'application/json');
                     $response->body($json);
                     $response->send();
@@ -378,4 +386,5 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 });
-$router->dispatch();
+
+$router->dispatch(null, new BaseResponse());
