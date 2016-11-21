@@ -13,12 +13,19 @@ class Config {
 
 /**
  * Custom Response class with extra methods
+ * TODO Move this class to its own file.
  */
 class BaseResponse extends \Klein\Response {
 
     public function xmlToJSON($xml_string) {
         $xml = simplexml_load_string($xml_string);
         return json_encode($xml);
+    }
+
+    public function sendJSONResponse($json) {
+        $this->header('Content-Type', 'application/json');
+        $this->body($json);
+        $this->send();
     }
 }
 
@@ -194,19 +201,11 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * People Tool
          */
 
-        // function xml_to_json(xml_string) {
-        //     return true;
-        // };
-
         $router->with('/people-tool', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 // TODO make the query string a var so we can have one endpoint
-                // $works = xml_to_json('');
                 $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
-                $json = $response->xmlToJSON($client_response->getBody());
-                $response->header('Content-Type', 'application/json');
-                $response->body($json);
-                $response->send();
+                $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
             });
 
             $router->respond('GET', '/person/', function($request, $response, $service, $app) {
@@ -217,10 +216,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
                         ]
                     ]];
                     $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', $client_query_data);
-                    $json = $response->xmlToJSON($client_response->getBody());
-                    $response->header('Content-Type', 'application/json');
-                    $response->body($json);
-                    $response->send();
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                 }
             });
         });
