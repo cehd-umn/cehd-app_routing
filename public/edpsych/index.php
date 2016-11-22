@@ -27,6 +27,12 @@ class BaseResponse extends \Klein\Response {
         $this->body($json);
         $this->send();
     }
+
+    public function getNav() {
+        $yaml = new Symfony\Component\Yaml\Yaml;
+        $file_path = __DIR__ . '/../../cehd/config/nav.yml';
+        return $yaml::parse(file_get_contents($file_path));
+    }
 }
 
 // TODO Move this out of the global namespace
@@ -41,6 +47,10 @@ function bootstrap_twig() {
         'debug' => Config::DEBUG,
         'autoescape' => true,
     ));
+    
+    if (Config::DEBUG) {
+        $twig->addExtension(new Twig_Extension_Debug());
+    }
     return $twig;
 }
 
@@ -93,7 +103,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
      * Ed Psych Home
      */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/index.html', []);
+        echo $app->template->render('edpsych/index.html', ['nav' => $response->getNav()]);
     });
 
     /*

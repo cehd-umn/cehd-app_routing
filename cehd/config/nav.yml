@@ -1,0 +1,20 @@
+---
+- name: Home
+  href: /
+- name: Programs & Degrees
+  href: /programs/
+  subnav:
+    - name: American Sign Language
+      href: /programs/asl/
+- name: Current Students
+  href: /current/
+- name: People
+  href: /people/
+- name: Research
+  href: /research/
+- name: Giving
+  href: /forms/giving/
+- name: Alumni
+  href: /alumni/
+- name: About
+  href: /about/

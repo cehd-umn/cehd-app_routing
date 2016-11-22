@@ -2,6 +2,7 @@
     "require": {
         "twig/twig": "~1.0",
         "klein/klein": "^2.1",
-        "guzzlehttp/guzzle": "~6.0"
+        "guzzlehttp/guzzle": "~6.0",
+        "symfony/yaml": "^3.1"
     }
 }
