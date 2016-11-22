@@ -10,83 +10,23 @@
     <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
     <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</button>
     <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
-        <li role="treeitem" tabindex="0">
-            <a href="{{ config.base_url }}/">Home</a>
+    {% for nav_item in config.nav_items %}
+        {% set has_sub = nav_item.subnav %}
+        <li role="treeitem" tabindex="0" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
+            <a href="{{ config.base_url }}{{ nav_item.href }}">{{ nav_item.name }}</a>
+            {% if has_sub %}
+                <ul role="group" aria-expanded="false" class="group-programs">
+                    {% for subnav_item in nav_item.subnav %}
+                        <li role="treeitem" tabindex="-1" class="tree-item-program{% if loop.last %} last{% endif %}">
+                            <a href="{{ config.base_url }}{{ subnav_item.href }}">
+                                {{ subnav_item.name}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </li>
-        <li role="treeitem" tabindex="0" class="has-more{% if section == "programs-degrees" %} open{% endif %}">
-            <a href="{{ config.base_url }}/programs/">Programs &amp; Degrees</a>
-            <ul role="group" aria-expanded="false" class="group-programs">
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/asl/">American Sign Language</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/cspp/">Counseling &amp; Student Personnel Psychology</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/foundations/">Psychological Foundations of Education</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/qme/">Quantitative Methods in Education</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/schoolpsych/">School Psychology</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/specialed/">Special Education</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program">
-                    <a href="{{ config.base_url }}/programs/graduate-minor/">Graduate Minor</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="tree-item-program last">
-                    <a href="{{ config.base_url }}/programs/minor/">Undergraduate Minor</a>
-                </li>
-            </ul>
-        </li>
-        <li role="treeitem" tabindex="0" class="has-more{% if section == "current" %} open{% endif %}">
-            <a href="{{ config.base_url }}/current/">Current Students</a>
-            <ul role="group" aria-expanded="false">
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/current/cspp/">Counseling &amp; Student Personnel Psychology</a>
-                </li>
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/current/foundations/">Psychological Foundations of Education</a>
-                </li>
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/current/qme/">Quantitative Methods in Education</a>
-                </li>
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/programs/schoolpsych/students/">School Psychology</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="last">
-                    <a href="{{ config.base_url }}/current/special-ed/">Special Education</a>
-                </li>
-            </ul>
-        </li>
-        <li role="treeitem" tabindex="0"><a href="{{ config.base_url }}/people/">People</a></li>
-        <li role="treeitem" tabindex="0" class="has-more{% if section == "research" %} open{% endif %}">
-            <a href="{{ config.base_url }}/research/">Research</a>
-            <ul role="group" aria-expanded="false">
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/research/labs/">Labs</a>
-                </li>
-                <li role="treeitem" tabindex="-1">
-                    <a href="{{ config.base_url }}/research/topics/">Topics</a>
-                </li>
-                <li role="treeitem" tabindex="-1" class="last">
-                    <a href="{{ config.base_url }}/research/student-dissertations/">Student Dissertations</a>
-                </li>
-            </ul>
-        </li>
-        <li role="treeitem" tabindex="0"><a href="{{ config.base_url }}/forms/giving/">Giving</a></li>
-        <li role="treeitem" tabindex="0"><a href="{{ config.base_url }}/alumni/">Alumni</a></li>
-        <li role="treeitem" tabindex="0" class="has-more{% if section == "about" %} open{% endif %}">
-            <a href="{{ config.base_url }}/about/">About</a>
-            <ul role="group" aria-expanded="false">
-                <li role="treeitem" tabindex="-1" class="last">
-                    <a href="{{ config.base_url }}/about/diversity-inclusion/">Diversity &amp; Inclusion</a>
-                </li>
-            </ul>
-        </li>
+    {% endfor %}
     </ul>
 </nav>
 {% endblock %}

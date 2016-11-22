@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../../cehd/apps/helpers/Navigation.php';
 
 $router = new \Klein\Klein();
 
@@ -28,11 +29,6 @@ class BaseResponse extends \Klein\Response {
         $this->send();
     }
 
-    public function getNav() {
-        $yaml = new Symfony\Component\Yaml\Yaml;
-        $file_path = __DIR__ . '/../../cehd/config/nav.yml';
-        return $yaml::parse(file_get_contents($file_path));
-    }
 }
 
 // TODO Move this out of the global namespace
@@ -47,7 +43,7 @@ function bootstrap_twig() {
         'debug' => Config::DEBUG,
         'autoescape' => true,
     ));
-    
+
     if (Config::DEBUG) {
         $twig->addExtension(new Twig_Extension_Debug());
     }
@@ -65,6 +61,12 @@ function bootstrap_people_tool_client() {
 $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
+        // Set up nav from yaml file
+
+        $nav_file_path = __DIR__ . '/../../cehd/config/nav.yml';
+        $nav_helper = new CEHD\Helpers\Navigation\Navigation();
+        $nav_helper->set_nav($nav_file_path);
+
         $asset_base = Config::BASE_URL . '/assets';
         $nunjucks_view_base = $asset_base . '/dist/views';
         $css_base = $asset_base . '/dist/css';
@@ -79,6 +81,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
             'dept_name' => Config::DEPT_NAME,
             'js_base' => $js_base,
             'nunjucks_view_base' => $nunjucks_view_base,
+            'nav_items' => $nav_helper->get_nav(),
         ];
 
         // Check for main nav state
@@ -88,6 +91,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
 
         $twig->addGlobal('config', $config);
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
+        // $twig->addGlobal('main_nav_items', $config);
         return $twig;
     });
 
@@ -95,6 +99,20 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $people_tool_client = bootstrap_people_tool_client();
         return $people_tool_client;
     });
+
+    // $app->register('nav_helper', function() {
+    //     require_once __DIR__ . '/../../cehd/apps/Navigation.php';
+    //     $file_path = __DIR__ . '/../../cehd/config/nav.yml';
+    //     $nav_helper = new CEHD\Navigation\Navigation();
+    //     $nav_helper->set_nav($file_path);
+    //     return $nav_helper;
+    // });
+
+    // $app->register('site_config', function() {
+    //     require_once __DIR__ . '/../../cehd/apps/config/Config.php';
+    //     $config_obj = new CEHD\Config\Config();
+    //     return $config_obj->get_config();
+    // });
 });
 
 $router->with(Config::BASE_URL, function() use ($router) {
@@ -103,7 +121,12 @@ $router->with(Config::BASE_URL, function() use ($router) {
      * Ed Psych Home
      */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/index.html', ['nav' => $response->getNav()]);
+        $file_path = __DIR__ . '/../../cehd/config/nav.yml';
+        $template_vars = [
+            // 'nav' => $app->nav_helper->get_nav(),
+        ];
+
+        echo $app->template->render('edpsych/index.html', $template_vars);
     });
 
     /*
@@ -251,6 +274,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
 
         /**
          * Faculty
+         * TODO Set up redirects once directory is set up
          */
         $router->with('/faculty', function() use ($router) {
             /**
