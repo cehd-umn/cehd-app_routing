@@ -1,6 +1,5 @@
 <?php
-// require_once __DIR__ . '/../../vendor/autoload.php';
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $router = new \Klein\Klein();
 
@@ -11,29 +10,67 @@ class Config {
     const DEPT_NAME = "Department of Educational Psychology";
 }
 
+
+/**
+ * Custom Response class with extra methods
+ * TODO Move this class to its own file.
+ */
+class BaseResponse extends \Klein\Response {
+
+    public function xmlToJSON($xml_string) {
+        $xml = simplexml_load_string($xml_string);
+        return json_encode($xml);
+    }
+
+    public function sendJSONResponse($json) {
+        $this->header('Content-Type', 'application/json');
+        $this->body($json);
+        $this->send();
+    }
+
+    public function getNav() {
+        $yaml = new Symfony\Component\Yaml\Yaml;
+        $file_path = __DIR__ . '/../../cehd/config/nav.yml';
+        return $yaml::parse(file_get_contents($file_path));
+    }
+}
+
 // TODO Move this out of the global namespace
 // TODO make this a private function?
-function twig_bootstrap() {
-    require_once __DIR__ . '/../../../vendor/twig/twig/lib/Twig/Autoloader.php';
+function bootstrap_twig() {
+    require_once __DIR__ . '/../../vendor/twig/twig/lib/Twig/Autoloader.php';
     Twig_Autoloader::register();
 
     $loader = new Twig_Loader_Filesystem(__DIR__ . '/../../templates');
     $twig = new Twig_Environment($loader, array(
-        'cache' => __DIR__ . '/../../../cache', // Look here if vars don't show up
+        'cache' => __DIR__ . '/../../cache', // Look here if vars don't show up
         'debug' => Config::DEBUG,
         'autoescape' => true,
     ));
+    
+    if (Config::DEBUG) {
+        $twig->addExtension(new Twig_Extension_Debug());
+    }
     return $twig;
+}
+
+function bootstrap_people_tool_client() {
+    $uri ="https://apps.cehd.umn.edu/people/admin/";
+    $client = new GuzzleHttp\Client([
+        'base_uri' => $uri,
+    ]);
+    return $client;
 }
 
 $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
         $asset_base = Config::BASE_URL . '/assets';
+        $nunjucks_view_base = $asset_base . '/dist/views';
         $css_base = $asset_base . '/dist/css';
         $js_base = $asset_base . '/dist/js';
         $cehd_edpsych_nav_open = false;
-        $twig = twig_bootstrap();
+        $twig = bootstrap_twig();
         $config = [
             'asset_base' => $asset_base,
             'base_url' => Config::BASE_URL,
@@ -41,6 +78,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
             'css_base' => $css_base,
             'dept_name' => Config::DEPT_NAME,
             'js_base' => $js_base,
+            'nunjucks_view_base' => $nunjucks_view_base,
         ];
 
         // Check for main nav state
@@ -52,16 +90,25 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
         return $twig;
     });
+
+    $app->register('people_tool_client', function() {
+        $people_tool_client = bootstrap_people_tool_client();
+        return $people_tool_client;
+    });
 });
 
 $router->with(Config::BASE_URL, function() use ($router) {
 
-    // Ed Psych HOME
+    /*
+     * Ed Psych Home
+     */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/index.html', []);
+        echo $app->template->render('edpsych/index.html', ['nav' => $response->getNav()]);
     });
 
-    // ABOUT
+    /*
+     * About
+     */
     $router->with('/about', function() use ($router) {
         /**
          * Redirects
@@ -135,8 +182,10 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 
-    // GIVING
-    // TODO Figure out what's happening with forms
+    /**
+     * Giving
+     * TODO Figure out what's happening with forms
+     */
     $router->with('/forms', function() use ($router) {
         /**
          * Redirects
@@ -154,6 +203,36 @@ $router->with(Config::BASE_URL, function() use ($router) {
     });
 
     /**
+     * Services
+     * TODO Make these services their own thing
+     */
+    $router->with('/services', function() use ($router) {
+        /**
+         * People Tool
+         */
+
+        $router->with('/people-tool', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                // TODO make the query string a var so we can have one endpoint
+                $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
+                $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+            });
+
+            $router->respond('GET', '/person/', function($request, $response, $service, $app) {
+                $query_data = $request->params();
+                if (array_key_exists('internetId', $query_data)) {
+                    $client_query_data = ['query' => [
+                        'id' => $query_data['internetId'
+                        ]
+                    ]];
+                    $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', $client_query_data);
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                }
+            });
+        });
+    });
+
+    /**
      * People
      */
     $router->with('/people', function() use ($router) {
@@ -161,37 +240,14 @@ $router->with(Config::BASE_URL, function() use ($router) {
             echo $app->template->render('edpsych/people/index.html', ["section" => "people"]);
         });
 
-        /**
-         * People Tool Feed
-         */
-        $router->respond('GET', '/people-tool/', function($request, $response, $service, $app) {
-            $uri ="https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?tg=213";
-
-            // Init curl
-            $ch = curl_init($uri);
-
-            // curl_setopt($ch, CURLOPT_HEADER, true);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_URL, $uri);
-            $content = curl_exec($ch);
-
-            // list($header, $contents) = preg_split('/([\r\n][\r\n])\\1/', curl_exec($ch), 2);
-            // // $status = curl_getinfo($ch);
-            // curl_close($ch);
-            // $header_text = preg_split('/[\r\n]+/', $header);
-
-            // Propagate headers to response.
-            // foreach ($header_text as $header) {
-            //     if (preg_match('/^(?:Content-Type|Content-Language|Set-Cookie):/i', $header)) {
-            //         header($header);
-            //     }
-            // }
-
-            // Send along the contents
-            // echo $contents;
-            // echo file_get_contents($uri);
-            echo $content;
+        $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {
+            $template_vars = [
+                "section" => "people",
+                "internet_id" => $request->internetId,
+            ];
+            echo $app->template->render('edpsych/people/person.html', $template_vars);
         });
+
 
         /**
          * Faculty
@@ -208,9 +264,9 @@ $router->with(Config::BASE_URL, function() use ($router) {
             /**
              * Routes
              */
-            $router->respond('GET', '/penny/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/people/faculty/penny.html', ["section" => "people"]);
-            });
+            // $router->respond('GET', '/penny/', function($request, $response, $service, $app) {
+            //     echo $app->template->render('edpsych/people/faculty/penny.html', ["section" => "people"]);
+            // });
         });
 
         /**
@@ -336,4 +392,5 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 });
-$router->dispatch();
+
+$router->dispatch(null, new BaseResponse());

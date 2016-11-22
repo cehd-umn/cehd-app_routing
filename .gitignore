@@ -4,6 +4,7 @@ node_modules
 .sass-cache
 cache
 vendor
+.htaccess
 
 # exclusions
 !cache/Readme.md
