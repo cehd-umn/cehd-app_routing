@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
-require_once __DIR__ . '/../../cehd/apps/helpers/Navigation.php';
+const BASE_PATH = __DIR__ . '/../../';
+
+require_once BASE_PATH . 'vendor/autoload.php';
+require_once BASE_PATH . 'cehd/apps/helpers/Navigation.php';
+require_once BASE_PATH . 'cehd/apps/helpers/Bootstrap.php';
 
 $router = new \Klein\Klein();
 
@@ -31,39 +34,11 @@ class BaseResponse extends \Klein\Response {
 
 }
 
-// TODO Move this out of the global namespace
-// TODO make this a private function?
-function bootstrap_twig() {
-    require_once __DIR__ . '/../../vendor/twig/twig/lib/Twig/Autoloader.php';
-    Twig_Autoloader::register();
-
-    $loader = new Twig_Loader_Filesystem(__DIR__ . '/../../templates');
-    $twig = new Twig_Environment($loader, array(
-        'cache' => __DIR__ . '/../../cache', // Look here if vars don't show up
-        'debug' => Config::DEBUG,
-        'autoescape' => true,
-    ));
-
-    if (Config::DEBUG) {
-        $twig->addExtension(new Twig_Extension_Debug());
-    }
-    return $twig;
-}
-
-function bootstrap_people_tool_client() {
-    $uri ="https://apps.cehd.umn.edu/people/admin/";
-    $client = new GuzzleHttp\Client([
-        'base_uri' => $uri,
-    ]);
-    return $client;
-}
-
 $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
         // Set up nav from yaml file
-
-        $nav_file_path = __DIR__ . '/../../cehd/config/nav.yml';
+        $nav_file_path = BASE_PATH . 'cehd/config/nav.yml';
         $nav_helper = new CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($nav_file_path);
 
@@ -72,7 +47,8 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $css_base = $asset_base . '/dist/css';
         $js_base = $asset_base . '/dist/js';
         $cehd_edpsych_nav_open = false;
-        $twig = bootstrap_twig();
+        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+        $twig = $bootstrap_helper::bootstrap_twig(Config::DEBUG);
         $config = [
             'asset_base' => $asset_base,
             'base_url' => Config::BASE_URL,
@@ -91,28 +67,18 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
 
         $twig->addGlobal('config', $config);
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
-        // $twig->addGlobal('main_nav_items', $config);
         return $twig;
     });
 
     $app->register('people_tool_client', function() {
-        $people_tool_client = bootstrap_people_tool_client();
+        $client_params = [
+            'base_uri' => "https://apps.cehd.umn.edu/people/admin/",
+        ];
+        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+        $people_tool_client = $bootstrap_helper::bootstrap_http_client($client_params);
         return $people_tool_client;
     });
 
-    // $app->register('nav_helper', function() {
-    //     require_once __DIR__ . '/../../cehd/apps/Navigation.php';
-    //     $file_path = __DIR__ . '/../../cehd/config/nav.yml';
-    //     $nav_helper = new CEHD\Navigation\Navigation();
-    //     $nav_helper->set_nav($file_path);
-    //     return $nav_helper;
-    // });
-
-    // $app->register('site_config', function() {
-    //     require_once __DIR__ . '/../../cehd/apps/config/Config.php';
-    //     $config_obj = new CEHD\Config\Config();
-    //     return $config_obj->get_config();
-    // });
 });
 
 $router->with(Config::BASE_URL, function() use ($router) {
