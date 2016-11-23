@@ -11,7 +11,7 @@
         {% block extra_css %}{% endblock %}
     </head>
     <body>
-        <header role="banner">
+        <header>
             <h1 class="accessible-no-display">{% block heading_1 %}{% endblock %}</h1>
             <p class="accessible-no-display"><a href="#maincontent">Skip to main content</a></p>
             <div id="umnheader">
@@ -36,10 +36,10 @@
         <div class="nav-container">
             {% block nav %}{% endblock %}
         </div>
-        <main id="maincontent" role="main">
+        <main id="maincontent">
             {% block main_content %}{% endblock %}
         </main>
-        <footer id="umnfoot" role="contentinfo">
+        <footer id="umnfoot">
             <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
                 The University of Minnesota is an equal opportunity educator and employer.
                 <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
