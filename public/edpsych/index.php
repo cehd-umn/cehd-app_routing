@@ -4,8 +4,7 @@ const BASE_PATH = __DIR__ . '/../../';
 require_once BASE_PATH . 'vendor/autoload.php';
 require_once BASE_PATH . 'cehd/apps/helpers/Navigation.php';
 require_once BASE_PATH . 'cehd/apps/helpers/Bootstrap.php';
-
-$router = new \Klein\Klein();
+require_once BASE_PATH . 'cehd/apps/Response/BaseResponse.php';
 
 // TODO Re-evaluate how this config is managed
 class Config {
@@ -14,26 +13,12 @@ class Config {
     const DEPT_NAME = "Department of Educational Psychology";
 }
 
+$router = new \Klein\Klein();
 
 /**
- * Custom Response class with extra methods
- * TODO Move this class to its own file.
+ * Register Twig and set up some global vars for templates
+ * Register a Guzzle HTTP client for making requests to the people tool
  */
-class BaseResponse extends \Klein\Response {
-
-    public function xmlToJSON($xml_string) {
-        $xml = simplexml_load_string($xml_string);
-        return json_encode($xml);
-    }
-
-    public function sendJSONResponse($json) {
-        $this->header('Content-Type', 'application/json');
-        $this->body($json);
-        $this->send();
-    }
-
-}
-
 $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
@@ -81,9 +66,12 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
 
 });
 
+/**
+ * Set up routes and redirects
+ */
 $router->with(Config::BASE_URL, function() use ($router) {
 
-    /*
+    /**
      * Ed Psych Home
      */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -95,7 +83,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
         echo $app->template->render('edpsych/index.html', $template_vars);
     });
 
-    /*
+    /**
      * About
      */
     $router->with('/about', function() use ($router) {
@@ -119,14 +107,18 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 
-    // ALUMNI
+    /**
+     * Alumni
+     */
     $router->with('/alumni', function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/alumni/index.html', []);
         });
     });
 
-    // CURRENT STUDENTS
+    /* Current Students
+     *
+     */
     $router->with('/current', function() use ($router) {
         /**
          * Redirects
@@ -173,21 +165,23 @@ $router->with(Config::BASE_URL, function() use ($router) {
 
     /**
      * Giving
-     * TODO Figure out what's happening with forms
      */
     $router->with('/forms', function() use ($router) {
         /**
          * Redirects
          */
         $router->respond('GET', '/giving.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/forms/giving/', 301)->send();
+            $response->redirect(Config::BASE_URL . '/giving/', 301)->send();
         });
+    });
+
+    $router->with('/giving', function() use ($router) {
 
         /**
          * Routes
          */
-        $router->respond('GET', '/giving/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/forms/index.html', []);
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/giving/index.html', []);
         });
     });
 
@@ -198,15 +192,24 @@ $router->with(Config::BASE_URL, function() use ($router) {
     $router->with('/services', function() use ($router) {
         /**
          * People Tool
+         *
+         * This makes a request for People Tool data, parses it to JSON and
+         * sends a JSON blob back
          */
 
         $router->with('/people-tool', function() use ($router) {
+            /**
+             * GET handler for directory
+             */
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 // TODO make the query string a var so we can have one endpoint
                 $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
                 $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
             });
 
+            /**
+             * GET handler for individual people
+             */
             $router->respond('GET', '/person/', function($request, $response, $service, $app) {
                 $query_data = $request->params();
                 if (array_key_exists('internetId', $query_data)) {
@@ -341,7 +344,9 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 
-    // RESEARCH
+    /**
+     * Research
+     */
     $router->with('/research', function() use ($router) {
         /**
          * Redirects
@@ -383,4 +388,4 @@ $router->with(Config::BASE_URL, function() use ($router) {
     });
 });
 
-$router->dispatch(null, new BaseResponse());
+$router->dispatch(null, new \CEHD\Apps\Response\BaseResponse());
