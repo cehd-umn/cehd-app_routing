@@ -15,6 +15,8 @@ var cookie_options = {
 
 // TODO load modules and scope them within an app. I.e., App.Renderer, App.Client
 
+$(".no-js").removeClass("no-js");
+
 $open_button.on("click", function() {
     $nav.addClass("active");
     cookies.set(cookie_name, true, cookie_options);

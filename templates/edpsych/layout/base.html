@@ -15,10 +15,10 @@
         <li role="treeitem" tabindex="0" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
             <a href="{{ config.base_url }}{{ nav_item.href }}">{{ nav_item.name }}</a>
             {% if has_sub %}
-                <ul role="group" aria-expanded="false" class="group-programs">
+                <ul role="group" aria-expanded="{% if section == nav_item.section %}true{% else %}false{% endif %}" class="group-{{ section }}" data-section="{{ section }}">
                     {% for subnav_item in nav_item.subnav %}
-                        <li role="treeitem" tabindex="-1" class="tree-item-program{% if loop.last %} last{% endif %}">
-                            <a href="{{ config.base_url }}{{ subnav_item.href }}">
+                        <li role="treeitem" class="tree-item-{{ section }}{% if loop.last %} last{% endif %}">
+                            <a href="{{ config.base_url }}{{ subnav_item.href }}" tabindex="{% if section == nav_item.section %}0{% else %}-1{% endif %}">
                                 {{ subnav_item.name}}
                             </a>
                         </li>
