@@ -2,10 +2,12 @@
 {% set page_title = "Faculty & Instructors" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<h2 class="h1">{{ page_title }}</h2>
-{# This uses a JavaScript template located at:
-   app_template/public/edpsych/assets/dist/views/edpsych/people/index.html #}
-<div id="people-tool-container"></div>
+    <h2 class="h1">{{ page_title }}</h2>
+    {# This uses a JavaScript template located at:
+    app_template/public/edpsych/assets/dist/views/edpsych/people/index.html #}
+    <div id="people-tool-container">
+        <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
+    </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     <script>

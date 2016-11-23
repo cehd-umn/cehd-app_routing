@@ -23,7 +23,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
     $app->register('template', function() {
 
         // Set up nav from yaml file
-        $nav_file_path = BASE_PATH . 'cehd/config/nav.yml';
+        $nav_file_path = BASE_PATH . 'cehd/config/nav/edpsych/nav.yml';
         $nav_helper = new CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($nav_file_path);
 
@@ -75,12 +75,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
      * Ed Psych Home
      */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
-        $file_path = __DIR__ . '/../../cehd/config/nav.yml';
-        $template_vars = [
-            // 'nav' => $app->nav_helper->get_nav(),
-        ];
-
-        echo $app->template->render('edpsych/index.html', $template_vars);
+        echo $app->template->render('edpsych/index.html', []);
     });
 
     /**
