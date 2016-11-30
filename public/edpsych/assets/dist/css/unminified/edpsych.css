@@ -216,6 +216,14 @@ Here are the characters defined in fontello:
 * MyU lock icon:"  \e801"
 
 ***/
+@font-face {
+  font-family: 'fontello';
+  src: url("../assets/fonts/fontello-2015/fontello.eot");
+  src: url("../assets/fonts/fontello-2015/fontello.eot") format("embedded-opentype"), url("../assets/fonts/fontello-2015/fontello.woff") format("woff"), url("../assets/fonts/fontello-2015fontello.ttf") format("truetype"), url("../assets/fonts/fontello-2015/fontello.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ---------- Campus Links -----------------------------------*/
 /* this hides the campus links div, just in case some old version of HTML sill has it */
 #campuslinks {
@@ -577,6 +585,15 @@ nav li li {
   width: 0;
 }
 
+.emphasis {
+  background-color: #ffec99;
+  padding: 2em;
+}
+
+.pull-quote {
+  font-size: 1.5em;
+}
+
 /** Begin Main Structure   **/
 body {
   font-family: 'Lato', Verdana, Geneva, sans-serif;
@@ -588,30 +605,6 @@ body {
   text-align: left;
 }
 
-a {
-  color: #0072bc;
-}
-
-a.muted:hover, a.muted:focus {
-  color: #808080;
-}
-
-a.text-warning:hover, a.text-warning:focus {
-  color: #a47e3c;
-}
-
-a.text-error:hover, a.text-error:focus {
-  color: #953b39;
-}
-
-a.text-info:hover, a.text-info:focus {
-  color: #2d6987;
-}
-
-a.text-success:hover, a.text-success:focus {
-  color: #356635;
-}
-
 #maincontent {
   margin: 2.5em 2em 1em;
 }
@@ -619,6 +612,7 @@ a.text-success:hover, a.text-success:focus {
 .half,
 .third,
 .twothird,
+.twothirds,
 .whole {
   width: auto;
 }
@@ -1424,11 +1418,33 @@ select {
   .dept-wordmark {
     float: left;
   }
-  #maincontent {
-    margin: 2.5em 3em 1em;
-  }
   .wordmarks {
     padding: 0 3em;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .feature {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  .column {
+    clear: none;
+    display: inline-block;
+    float: left;
+  }
+  .half {
+    width: 50%;
+  }
+  .third {
+    width: 33%;
+  }
+  .twothird,
+  .twothirds {
+    width: 66%;
+  }
+  .whole {
+    clear: both;
   }
 }
 

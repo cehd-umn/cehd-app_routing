@@ -1,6 +1,155 @@
 {% extends "edpsych/layout/section.html" %}
-{% block main_content %}
 {% set page_title = "Alumni" %}
 {% block title %}{{ page_title }}{% endblock %}
-    <h2>{{ page_title }}</h2>
+
+{% block main_content %}
+    <section class="feature">
+        <h2 class="h1 text-center">{{ page_title }}</h2>
+        <article>
+            <div class="column third">
+                <img src="http://apps.cehd.umn.edu/people/Headshot/RodriguezM-2015.jpg" alt="Professor Michael Rodriguez headshot.">
+            </div>
+            <div class="column twothird">
+                <h3>Rodriguez featured in University's Driven to Discover campaign</h3>
+                <p>The opportunity gap among children in our society is growing,
+                and part of the problem is how we assess and educate them.
+                Professor Michael Rodriguez is working to close the gap by helping
+                schools understand how to work with diverse students, families, and
+                communities.</p>
+                <p><a href="/">View the campaign</a>.</p>
+            </div>
+        </article>
+    </section>
+    <section class="asides">
+        <aside class="column third">
+            <h4 class="text-center">Alumni in the news</h4>
+            <div id="alumni-news-container"></div>
+        </aside>
+        <aside class="column third">
+            <h4 class="text-center">Department news</h4>
+            <div id="dept-news-container"></div>
+        </aside>
+        <aside class="column third">
+            <h4 class="text-center">Calendar</h4>
+            <div id="calendar-container"></div>
+        </aside>
+    </section>
+    <section>
+        <article class="feature">
+            <h3 class="h1 text-center">Stay Involved</h3>
+            <p>We love to keep in touch with our former students. Please let us
+            know what you're doing. You can either email us at epsy-adm@umn.edu
+            or fill out the form.<!-- link forthcoming --> (We won’t share this
+            information with anyone except your advisor and to update our
+            alumni database.)</p>
+        </article>
+        <article class="column half">
+            <h4 class="h2">Alumni Groups</h4>
+            <p>The {{ config.dept_name }} would like to encourage our alumni to
+            stay involved with the program, the College of Education and Human
+            Development, and the University of Minnesota. See links below for
+            alumni groups.</p>
+            <p>(Links forthcoming.)</p>
+        </article>
+        <article class="column half">
+            <div class="whole">
+                <h4 class="h2">Newsletter</h4>
+                <p>Stay connected to what's happening in educational psychology
+                at the University of Minnesota. Send and email to
+                epcomn@umn.edu to subscribe to our quarterly enewsletter.
+            </div>
+            <div class="whole">
+                <h4 class="h2">Newsletter archive</h4>
+                <p>Miss and issue? Catch up on past Educational Psychology newsletters.</p>
+            </div>
+        </article>
+    </section>
+    <section class="whole emphasis">
+        <div class="feature">
+            <aside class="pull-quote">
+                <p>&ldquo;I conduct research with young children and their families to
+                explore language development and interventions within naturally
+                occurring routines.&rdquo;
+            </aside>
+            <article>
+                <h3>Anne Larson, Ph.D '16<br>
+                <small>Assistant professor, Utah State University</small></h3>
+
+                <p>Anne researches early language development and studies
+                sociocultural and environmental factors that affect
+                child-caregiver interactions.</p>
+
+                <p>She also teaches course in the birth-to-5 program to prepare
+                early childhood special educators for work with children who have
+                disabilities, as well as the parents and caregivers who who help
+                support those children.</p>
+            </article>
+        </div>
+    </section>
+    <section>
+        <article class="feature">
+            <h3 class="h1 text-center">Where are they now</h3>
+            <p>Our alumni find jobs. In fact, 100% of our counseling and student
+            personnel psychology and school psychology students found jobs in 2015.
+            Dedicated to improving the way people learn and grouw, our graduates
+            work in schools and communities and conduct cutting edge research in
+            educational psychology.</p>
+
+            <p>Below are just a few examples of our graduates' careers.</p>
+        </article>
+        <aside>
+            <div class="column half">
+                <h4 class="h2">Counseling and student personnel</h4>
+                <ul>
+                    <li>Psychology</li>
+                    <li>Licensed K-12 school counselor</li>
+                    <li>College and student personnel counselor</li>
+                    <li>Mental health professional in a community agency</li>
+                </ul>
+                <h4 class="h2">Psychological foundations of education</h4>
+                <ul>
+                    <li>Governmental Agencies</li>
+                    <li>Health care organization evaluator/researcher</li>
+                    <li>Human and social service organizations</li>
+                    <li>Research scientists at universities and corporations</li>
+                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
+                    <li>Other educational settings (e.g., K-12 school research offices)</li>
+                </ul>
+                <h4 class="h2">Quantitative methods in education</h4>
+                <ul>
+                    <li>Public school systems</li>
+                    <li>Private industry</li>
+                    <li>Research and evaluation centers</li>
+                    <li>State departments of instruction</li>
+                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
+                    <li>Test publishing firms</li>
+                </ul>
+
+                <p>More info on where quantitative methods in education graduates found jobs.</p>
+            </div>
+            <div class="column half">
+                <h4 class="h2">School psychology</h4>
+                <ul class="no-bullet">
+                    <li><strong>M.A./Specialist</strong>: Work in public and
+                    private schools, preschools, and state depar of
+                    education.</li>
+                    <li><strong>Ph.D.</strong>: Work in universities (as
+                    faculty), mental health agencies, research centers and
+                    think tanks, clinical settings, state departments of
+                    education, and independent practices.</li>
+                </ul>
+                <h4 class="h2">Special education</h4>
+                <ul>
+                    <li>B.S./ABS licensure: Teach individuals in special education from birth to age 21</li>
+                    <li>M.Ed./licensure: Teach individuals in special education from birth to age 21</li>
+                    <li>M.A./Ph.D.: Conduct research, teach in universities,
+                    and work in other educational settings in special
+                    education.</li>
+                    <li>State departments of instruction</li>
+                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
+                    <li>Test publishing firms</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
 {% endblock %}
