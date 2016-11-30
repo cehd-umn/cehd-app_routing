@@ -15,7 +15,7 @@
             url: "{{ config.base_url }}/services/people-tool/",
             data: {}
         };
-        var client = new PeopleToolClient();
+        var client = new HTTPClient();
         var $request = client.get(params);
 
         $request.done(function() {
@@ -23,6 +23,7 @@
             var template_params = {
                 'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
                 'template_name': 'index.html',
+                "$target_element": $("#people-tool-container"),
                 'data': {
                     people: results.channel.item,
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates

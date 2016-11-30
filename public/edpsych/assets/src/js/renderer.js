@@ -6,7 +6,7 @@ var $ = require("jquery");
 var Renderer = {
     defaults: {
         template_path: "../views",
-        $target_element: $("#people-tool-container")
+        $target_element: $("#results-container")
     },
 
     settings: null,

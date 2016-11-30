@@ -1,7 +1,7 @@
 "use strict";
 var $ = require("jquery");
 
-var PeopleToolClient = function() {
+var HTTPClient = function() {
 
     this.get = function(params) {
         var self = this;
@@ -25,4 +25,4 @@ var PeopleToolClient = function() {
     return this;
 };
 
-window.PeopleToolClient = PeopleToolClient;
+window.HTTPClient = HTTPClient;

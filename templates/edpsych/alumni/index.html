@@ -20,14 +20,24 @@
             </div>
         </article>
     </section>
-    <section class="asides">
+    <section class="asides dynamic-content">
         <aside class="column third">
-            <h4 class="text-center">Alumni in the news</h4>
-            <div id="alumni-news-container"></div>
+            <h4 class="text-center" >Alumni in the news</h4>
+            <div id="alumni-news-container" aria-live="polite">
+                <div class="loader small">
+                    <div class="loader-figure small"></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
         </aside>
         <aside class="column third">
             <h4 class="text-center">Department news</h4>
-            <div id="dept-news-container"></div>
+            <div id="dept-news-container">
+                <div class="loader small">
+                    <div class="loader-figure small"></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
         </aside>
         <aside class="column third">
             <h4 class="text-center">Calendar</h4>
@@ -152,4 +162,59 @@
             </aside>
         </div>
     </section>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    <script>
+        var base_url = "{{ config.base_url }}/services/news/feed/";
+        var dept_params = {
+            url: base_url,
+            data: {
+                "feed-path": "category/alumni,educational-psychology/feed"
+            }
+        };
+        var dept_client = new HTTPClient();
+        var $dept_request = dept_client.get(dept_params);
+
+        $dept_request.done(function() {
+            var results = dept_client.getResults();
+            console.log(results);
+            var template_params = {
+                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
+                "template_name": "alumni.html",
+                "$target_element": $("#alumni-news-container"),
+                "data": {
+                    news: results.channel.item,
+                    limit: 3,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+
+        var alum_params = {
+            url: base_url,
+            data: {
+                "feed-path": "category/departments/educational-psychology/feed"
+            }
+        };
+        var alum_client = new HTTPClient();
+        var $alum_request = alum_client.get(alum_params);
+
+        $alum_request.done(function() {
+            var results = alum_client.getResults();
+            var template_params = {
+                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
+                "template_name": "alumni.html",
+                "$target_element": $("#dept-news-container"),
+                "data": {
+                    news: results.channel.item,
+                    limit: 3,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+    </script>
 {% endblock %}

@@ -420,21 +420,34 @@ Here are the characters defined in fontello:
 
 #nav-expand {
   background-color: #fff;
-  border-radius: 0 0 10px;
+  border-radius: 0 10px 10px 0;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  height: 65px;
   opacity: .8;
   padding: 5px 10px 5px 5px;
   position: absolute;
-  width: 75px;
+  width: 1.6em;
   z-index: 6500;
 }
 
-#menuicon::before {
+#menuicon::after {
+  clear: both;
   content: "\f0c9 ";
+  display: block;
   font-family: 'FontAwesome';
   font-size: 1em;
+  margin-bottom: .5em;
   padding: 0 5px 0 15px;
+}
+
+#menuword {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  display: inline-block;
 }
 
 .has-more.open > [aria-expanded="false"] {
@@ -594,6 +607,10 @@ nav li li {
   font-size: 1.5em;
 }
 
+.dynamic-content {
+  min-height: 8em;
+}
+
 /** Begin Main Structure   **/
 body {
   font-family: 'Lato', Verdana, Geneva, sans-serif;
@@ -687,7 +704,7 @@ body {
 /** Headings **/
 h1, .h1 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.63636em;
+  font-size: 2.18182em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -695,7 +712,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.36364em;
+  font-size: 1.63636em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -703,7 +720,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.09091em;
+  font-size: 1.36364em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -711,7 +728,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 0.81818em;
+  font-size: 1.09091em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -719,7 +736,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 0.72727em;
+  font-size: 0.90909em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -727,7 +744,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 0.72727em;
+  font-size: 0.81818em;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -950,6 +967,10 @@ textarea {
   margin: 0 0 10px;
   padding: 1%;
   width: 100%;
+}
+
+div {
+  position: relative;
 }
 
 .wide {
@@ -1432,6 +1453,7 @@ select {
     clear: none;
     display: inline-block;
     float: left;
+    position: relative;
   }
   .half {
     width: 50%;
@@ -1478,6 +1500,12 @@ select {
   padding-top: 4em;
 }
 
+.loader.small {
+  height: 0;
+  width: 2em;
+  padding-top: 2em;
+}
+
 .loader-figure {
   height: 0;
   width: 0;
@@ -1487,6 +1515,12 @@ select {
   border: 0 solid #79111a;
   border-radius: 50%;
   box-sizing: border-box;
+}
+
+.loader-figure.small {
+  -webkit-animation: loader-figure-small 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-animation: loader-figure-small 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: loader-figure-small 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .loader-label {
@@ -1560,6 +1594,63 @@ select {
   100% {
     height: 4em;
     width: 4em;
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loader-figure-small {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes loader-figure-small {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes loader-figure-small {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 2em;
     border-width: 0;
     opacity: 0;
   }

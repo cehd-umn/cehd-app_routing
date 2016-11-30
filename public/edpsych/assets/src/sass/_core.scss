@@ -34,6 +34,10 @@
     font-size: 1.5em;
 }
 
+.dynamic-content {
+    min-height: 8em;
+}
+
 /** Begin Main Structure   **/
 @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
 
@@ -373,6 +377,11 @@ textarea {
     margin: 0 0 10px;
     padding: 1%;
     width: 100%;
+}
+
+
+div {
+    position: relative;
 }
 
 .wide {
@@ -782,7 +791,7 @@ select {
     }
 
     // Convert pts to ems
-    @each $heading, $size in $heading-map-mobile {
+    @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             font-family: 'Montserrat', Verdana, Geneva, sans-serif;
             font-size: em($size, 22);
@@ -842,6 +851,7 @@ select {
         clear: none;
         display: inline-block;
         float: left;
+        position: relative;
     }
 
     .half {

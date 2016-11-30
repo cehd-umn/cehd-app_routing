@@ -23,7 +23,7 @@ gulp.task("javascript", function () {
   var b = browserify({
     entries: [
         "./public/edpsych/assets/src/js/edpsych.js",
-        "./public/edpsych/assets/src/js/people_tool_client.js",
+        "./public/edpsych/assets/src/js/http_client.js",
         "./public/edpsych/assets/src/js/renderer.js",
     ],
     debug: true

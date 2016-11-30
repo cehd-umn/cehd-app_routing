@@ -55,15 +55,14 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         return $twig;
     });
 
-    $app->register('people_tool_client', function() {
+    $app->register('http_client', function() {
         $client_params = [
             'base_uri' => "https://apps.cehd.umn.edu/people/admin/",
         ];
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
-        $people_tool_client = $bootstrap_helper::bootstrap_http_client($client_params);
-        return $people_tool_client;
+        $http_client = $bootstrap_helper::bootstrap_http_client([]);
+        return $http_client;
     });
-
 });
 
 /**
@@ -197,8 +196,11 @@ $router->with(Config::BASE_URL, function() use ($router) {
              * GET handler for directory
              */
             $router->respond('GET', '/', function($request, $response, $service, $app) {
+                // TODO add base urls to config
+                $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
                 // TODO make the query string a var so we can have one endpoint
-                $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', ['query' => ['tg' => '213']]);
+                $client_query_data = ['query' => ['tg' => '213']];
+                $client_response = $app->http_client->request('GET',$base_url, $client_query_data);
                 $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
             });
 
@@ -207,12 +209,32 @@ $router->with(Config::BASE_URL, function() use ($router) {
              */
             $router->respond('GET', '/person/', function($request, $response, $service, $app) {
                 $query_data = $request->params();
+                $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
+
                 if (array_key_exists('internetId', $query_data)) {
                     $client_query_data = ['query' => [
                         'id' => $query_data['internetId'
                         ]
                     ]];
-                    $client_response = $app->people_tool_client->request('GET', 'RSSFeed.aspx', $client_query_data);
+                    $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                }
+            });
+        });
+
+        /**
+         * News Feeds
+         *
+         * This makes a request to the news RSS feed, parses it to JSON and
+         * sends a JSON blob back
+         */
+        $router->with('/news', function() use ($router) {
+            $router->respond('GET', '/feed/', function($request, $response, $service, $app) {
+                $base_url = "http://news.cehd.umn.edu/";
+                $query_data = $request->params();
+                if (array_key_exists('feed-path', $query_data)) {
+                    $request_url = $base_url . $query_data['feed-path'];
+                    $client_response = $app->http_client->request('GET', $request_url);
                     $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                 }
             });

@@ -1,0 +1,9 @@
+<ul>
+{% for news_item in data.news %}
+    {% if loop.index0 < data.limit %}
+        <li>
+            <a href="{{ news_item.link }}">{{ news_item.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>

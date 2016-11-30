@@ -20,7 +20,7 @@
                 internetId: "{{ internet_id }}"
             }
         };
-        var client = new PeopleToolClient();
+        var client = new HTTPClient();
         var $request = client.get(params);
 
         $request.done(function() {
