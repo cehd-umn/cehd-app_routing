@@ -517,7 +517,7 @@ select {
 }
 
 .button {
-    @include transition(color .5s ease-out 0s, background-color .5s ease-out 0s);
+    @include transition(color .5s ease-out 0s, background-color .5s ease-out 0s, border .5s ease-out 0s);
 
     background: $base-light-grey none;
     border: .15em solid $base-medium-grey;

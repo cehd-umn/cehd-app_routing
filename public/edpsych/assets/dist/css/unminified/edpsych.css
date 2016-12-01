@@ -1104,9 +1104,9 @@ select {
 }
 
 .button {
-  -webkit-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
-  -moz-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
-  transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
+  -webkit-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s, border 0.5s ease-out 0s;
+  -moz-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s, border 0.5s ease-out 0s;
+  transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s, border 0.5s ease-out 0s;
   background: #e2e2e2 none;
   border: 0.15em solid #999;
   border-radius: .2em;
