@@ -1103,18 +1103,91 @@ select {
   padding: 8px;
 }
 
+button,
 .button {
-  background: #7a0019 none;
+  -webkit-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
+  -moz-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
+  transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
+  background: #e2e2e2 none;
+  border: 0.15em solid #999;
+  border-radius: .2em;
   clear: both;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   font-size: 1.2em;
   font-weight: bold;
-  height: 8%;
+  height: 3em;
   line-height: 2em;
-  margin-left: 40%;
+  position: relative;
   text-align: center;
-  width: 15%;
+  width: 9em;
+}
+
+button.center,
+.button.center {
+  display: block;
+  margin: 0 auto;
+}
+
+button:focus, button:hover,
+.button:focus,
+.button:hover {
+  background: #999 none;
+  border: 0.15em solid #e2e2e2;
+  color: #e2e2e2;
+}
+
+button:focus::after, button:focus::before, button:hover::after, button:hover::before,
+.button:focus::after,
+.button:focus::before,
+.button:hover::after,
+.button:hover::before {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+button::after, button::before,
+.button::after,
+.button::before {
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translate(-10px);
+  -moz-transform: translate(-10px);
+  -ms-transform: translate(-10px);
+  -o-transform: translate(-10px);
+  transform: translate(-10px);
+  background: #e2e2e2;
+  content: '';
+  height: 2px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+button::after,
+.button::after {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  bottom: 10px;
+}
+
+button::before,
+.button::before {
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  top: 10px;
 }
 
 /* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */
