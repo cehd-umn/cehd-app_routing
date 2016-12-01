@@ -61,6 +61,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         ];
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $http_client = $bootstrap_helper::bootstrap_http_client([]);
+        // $http_client->setDefaultOption('verify', false);
         return $http_client;
     });
 });
