@@ -1103,7 +1103,6 @@ select {
   padding: 8px;
 }
 
-button,
 .button {
   -webkit-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
   -moz-transition: color 0.5s ease-out 0s, background-color 0.5s ease-out 0s;
@@ -1114,34 +1113,25 @@ button,
   clear: both;
   color: #000;
   cursor: pointer;
-  font-size: 1.2em;
   font-weight: bold;
-  height: 3em;
-  line-height: 2em;
+  padding: 2em 5em;
   position: relative;
   text-align: center;
-  width: 9em;
+  text-decoration: none;
 }
 
-button.center,
 .button.center {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
 }
 
-button:focus, button:hover,
-.button:focus,
-.button:hover {
+.button:focus, .button:hover {
   background: #999 none;
-  border: 0.15em solid #e2e2e2;
+  border: 0.15em solid #fff;
   color: #e2e2e2;
 }
 
-button:focus::after, button:focus::before, button:hover::after, button:hover::before,
-.button:focus::after,
-.button:focus::before,
-.button:hover::after,
-.button:hover::before {
+.button:focus::after, .button:focus::before, .button:hover::after, .button:hover::before {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -1150,9 +1140,7 @@ button:focus::after, button:focus::before, button:hover::after, button:hover::be
   opacity: 1;
 }
 
-button::after, button::before,
-.button::after,
-.button::before {
+.button::after, .button::before {
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
@@ -1170,24 +1158,22 @@ button::after, button::before,
   width: 100%;
 }
 
-button::after,
 .button::after {
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
   -ms-transform: translateY(10px);
   -o-transform: translateY(10px);
   transform: translateY(10px);
-  bottom: 10px;
+  bottom: 1em;
 }
 
-button::before,
 .button::before {
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -o-transform: translateY(-10px);
   transform: translateY(-10px);
-  top: 10px;
+  top: 1em;
 }
 
 /* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */

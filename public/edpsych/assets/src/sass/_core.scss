@@ -516,7 +516,6 @@ select {
     padding: 8px;
 }
 
-button,
 .button {
     @include transition(color .5s ease-out 0s, background-color .5s ease-out 0s);
 
@@ -526,23 +525,21 @@ button,
     clear: both;
     color: $base-black;
     cursor: pointer;
-    font-size: 1.2em;
     font-weight: bold;
-    height: 3em;
-    line-height: 2em;
+    padding: 2em 5em;
     position: relative;
     text-align: center;
-    width: 9em;
+    text-decoration: none;
 
     &.center {
-        display: block;
+        display: inline-block;
         margin: 0 auto;
     }
 
     &:focus,
     &:hover {
         background: $base-medium-grey none;
-        border: .15em solid $base-light-grey;
+        border: .15em solid $base-white;
         color: $base-light-grey;
 
         &::after,
@@ -570,13 +567,13 @@ button,
     &::after {
         @include transform(translateY(10px));
 
-        bottom: 10px;
+        bottom: 1em;
     }
 
     &::before {
         @include transform(translateY(-10px));
 
-        top: 10px;
+        top: 1em;
     }
 }
 
