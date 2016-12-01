@@ -182,6 +182,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
     /**
      * Services
      * TODO Make these services their own thing
+     * TODO return 404's if query params are not valid
      */
     $router->with('/services', function() use ($router) {
         /**
@@ -235,6 +236,29 @@ $router->with(Config::BASE_URL, function() use ($router) {
                 if (array_key_exists('feed-path', $query_data)) {
                     $request_url = $base_url . $query_data['feed-path'];
                     $client_response = $app->http_client->request('GET', $request_url);
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                }
+            });
+        });
+
+        /**
+         * Events Calendar
+         *
+         * This makes a request to the news RSS feed, parses it to JSON and
+         * sends a JSON blob back
+         */
+        $router->with('/events', function() use ($router) {
+            $router->respond('GET', '/feed/', function($request, $response, $service, $app) {
+                $base_url =  'http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx';
+                $query_data = $request->params();
+                if (array_key_exists('r', $query_data) && array_key_exists('t', $query_data) && array_key_exists('q', $query_data)) {
+                    $client_query_data = ['query' => [
+                        'r' => $query_data['r'],
+                        't' => $query_data['t'],
+                        'q' => $query_data['q'],
+                        ]
+                    ];
+                    $client_response = $app->http_client->request('GET',$base_url, $client_query_data);
                     $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                 }
             });

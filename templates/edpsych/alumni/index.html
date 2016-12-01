@@ -41,7 +41,12 @@
         </aside>
         <aside class="column third">
             <h4 class="text-center">Calendar</h4>
-            <div id="calendar-container"></div>
+            <div id="calendar-container">
+                <div class="loader small">
+                    <div class="loader-figure small"></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
         </aside>
     </section>
     <section>
@@ -165,9 +170,12 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     <script>
-        var base_url = "{{ config.base_url }}/services/news/feed/";
+        /**
+         * Dept. News
+         */
+        var news_base_url = "{{ config.base_url }}/services/news/feed/";
         var dept_params = {
-            url: base_url,
+            url: news_base_url,
             data: {
                 "feed-path": "category/alumni,educational-psychology/feed"
             }
@@ -177,7 +185,6 @@
 
         $dept_request.done(function() {
             var results = dept_client.getResults();
-            console.log(results);
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
                 "template_name": "alumni.html",
@@ -192,8 +199,11 @@
             Renderer.render();
         });
 
+        /**
+         * Alumni news
+         */
         var alum_params = {
-            url: base_url,
+            url: news_base_url,
             data: {
                 "feed-path": "category/departments/educational-psychology/feed"
             }
@@ -213,6 +223,48 @@
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+
+        /**
+         * Events calendar
+         */
+        var events_base_url = "{{ config.base_url }}/services/events/feed/";
+        var events_params = {
+            url: events_base_url,
+            data: {
+                "q": "6",
+                "r": "3",
+                "t": "129",
+            }
+        };
+        var events_client = new HTTPClient();
+        var $events_request = events_client.get(events_params);
+
+        $events_request.done(function() {
+            var results = events_client.getResults();
+            var $target_element = $("#calendar-container");
+            var events = null;
+
+            if (typeof results["@attributes"].totalCount > 0) {
+                // Results come back in chronological order so reverse the array
+                results.event.reverse();
+            } else {
+                results.event = [];
+            }
+
+            var template_params = {
+                "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
+                "template_name": "alumni.html",
+                "$target_element": $target_element,
+                "data": {
+                    events: results.event,
+                    limit: 3,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+
             Renderer.init(template_params);
             Renderer.render();
         });
