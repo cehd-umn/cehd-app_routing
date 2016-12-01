@@ -249,7 +249,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
          */
         $router->with('/events', function() use ($router) {
             $router->respond('GET', '/feed/', function($request, $response, $service, $app) {
-                $base_url =  'http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx';
+                $base_url =  'https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx';
                 $query_data = $request->params();
                 if (array_key_exists('r', $query_data) && array_key_exists('t', $query_data) && array_key_exists('q', $query_data)) {
                     $client_query_data = ['query' => [
