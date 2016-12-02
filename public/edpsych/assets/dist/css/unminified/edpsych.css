@@ -354,6 +354,10 @@ Here are the characters defined in fontello:
 @media all and (min-width: 960px) {
   #umnheader {
     padding: 0 3em;
+    width: auto;
+  }
+  #umn-links {
+    margin: 0;
   }
 }
 
