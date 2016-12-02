@@ -179,6 +179,14 @@ summary {
 }
 
 /****** End CSS Reset *****/
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 /*
 
 Fontello
@@ -208,8 +216,7 @@ Here are the characters defined in fontello:
 
 #umn-links {
   list-style: none;
-  margin: 0 2em;
-  padding: 0;
+  margin: 0;
 }
 
 #umn-links li {
@@ -222,7 +229,6 @@ Here are the characters defined in fontello:
   background-color: #79111a;
   font-family: Arial, Helvetica, sans-serif;
   height: 75px;
-  padding: 0 2em;
   width: 100%;
 }
 
@@ -370,7 +376,6 @@ Here are the characters defined in fontello:
   #umnheader {
     height: 100px;
     min-width: 320px;
-    padding: 0;
   }
   #umnheader #umnh-logos {
     background-size: 100% auto;
@@ -390,6 +395,14 @@ Here are the characters defined in fontello:
 }
 
 /* ---------- end media query for small Screen --------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("assets/fonts/font-awesome-4.5.0/fontawesome-webfont.eot");
@@ -591,6 +604,19 @@ nav li li {
   min-height: 8em;
 }
 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4.72458% 0 4.72458%;
+}
+
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 /** Begin Main Structure   **/
 body {
   font-family: 'Lato', Verdana, Geneva, sans-serif;
@@ -602,16 +628,11 @@ body {
   text-align: left;
 }
 
-#maincontent {
-  margin: 2.5em 2em 1em;
-}
-
 .half,
 .third,
 .twothird,
-.twothirds,
-.whole {
-  width: auto;
+.twothirds {
+  clear: none;
 }
 
 .active-extra nav {
@@ -646,10 +667,6 @@ body {
   -o-transition: .2s all ease;
   -webkit-transition: .2s all ease;
   transition: .2s all ease;
-}
-
-.wordmarks {
-  padding: 0 2em;
 }
 
 .wordmark-svg {
@@ -1369,34 +1386,15 @@ select {
 }
 
 /**    Begin Media Breaks   **/
-@media all and (max-width: 1200px) {
-  .half,
-  .third,
-  .twothird,
-  .whole {
-    clear: none;
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-  .half {
-    width: 50%;
-  }
-  .third {
-    width: 33%;
-  }
-  .twothird {
-    width: 66%;
-  }
-  .whole {
-    width: 100%;
-  }
-}
-
 @media all and (min-width: 768px) {
-  .half,
-  .third {
-    width: auto;
+  .half {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 47.63771%;
+  }
+  .half:last-child {
+    margin-right: 0;
   }
   h1, .h1 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
@@ -1478,6 +1476,17 @@ select {
   .dept-wordmark {
     float: left;
   }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
   .wordmarks {
     padding: 0 3em;
   }
@@ -1488,24 +1497,34 @@ select {
     margin: 0 auto;
     max-width: 50%;
   }
-  .column {
-    clear: none;
-    display: inline-block;
-    float: left;
-    position: relative;
-  }
   .half {
-    width: 50%;
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 47.63771%;
+  }
+  .half:last-child {
+    margin-right: 0;
   }
   .third {
-    width: 33%;
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 30.18362%;
+  }
+  .third:last-child {
+    margin-right: 0;
   }
   .twothird,
   .twothirds {
-    width: 66%;
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 65.09181%;
   }
-  .whole {
-    clear: both;
+  .twothird:last-child,
+  .twothirds:last-child {
+    margin-right: 0;
   }
 }
 

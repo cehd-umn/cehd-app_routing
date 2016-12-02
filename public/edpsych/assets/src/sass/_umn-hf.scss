@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import "colors";
 @import "variables";
+@import "grid-settings";
+@import "neat/neat";
 
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
@@ -33,9 +35,9 @@ Here are the characters defined in fontello:
 }
 
 #umn-links {
+
     list-style: none;
-    margin: 0 $core-layout-padding-default;
-    padding: 0;
+    margin: 0;
 
     li {
         margin: 0;
@@ -45,10 +47,10 @@ Here are the characters defined in fontello:
 
 /* ---------- U of M Header ----------------------------------*/
 #umnheader {
+
     background-color: $umn-maroon;
     font-family: Arial, Helvetica, sans-serif;
     height: 75px;
-    padding: 0 $core-layout-padding-default;
     width: 100%;
 
     a {
@@ -208,9 +210,9 @@ Here are the characters defined in fontello:
     }
 
     #umnheader {
+
         height: 100px;
         min-width: 320px;
-        padding: 0;
 
         #umnh-logos {
             background-size: 100% auto;
