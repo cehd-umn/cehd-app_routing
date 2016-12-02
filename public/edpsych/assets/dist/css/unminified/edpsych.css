@@ -180,30 +180,6 @@ summary {
 
 /****** End CSS Reset *****/
 /*
-        TODO edit these comments for accuracy
-        Owner: College of Education and Human Development - U of M
-        Title: CEHD Public Web - Core layout elements
-        Version: UMN Header 2015 (this is an update of the UMN header made to work with core 2013)
-        What's it do?: These are all of the styles for the U of M header, which was updated in 2015
-        Dependencies: This file should be placed after "core2015.css" to use @font-face declaration.
-        Authors: Dan Sagisser and Jeff Abuzzahab
-        Created: 2013-06-13
-        Updated: 2016-02-23
-*/
-/*
-import grabs the google font Raleway for use for MyU and OneStop links
-import needs to be the first thing on the stylesheet to work
-*/
-/*
-
-Note:
-If you are using this header outside of drydock, you have to change a few things.
-
-1. Uncomment the icon font stuff a few lines down.
-2. Copy the icon fonts over to the other server (their paths are in that block below)
-3. Copy the U of M DtoD logos over to the new server (there are two fo them)
-4. If the icons still aren't showing up, you may have to have those MIME types added to the server
-
 
 Fontello
 
@@ -232,37 +208,22 @@ Here are the characters defined in fontello:
 
 #umn-links {
   list-style: none;
-  margin: 0;
+  margin: 0 2em;
+  padding: 0;
 }
 
 #umn-links li {
   margin: 0;
+  padding: 0;
 }
 
 /* ---------- U of M Header ----------------------------------*/
-#umnheader-container {
-  padding: 0 30px;
-}
-
 #umnheader {
   background-color: #79111a;
   font-family: Arial, Helvetica, sans-serif;
   height: 75px;
-  margin: 0 auto;
   padding: 0 2em;
-}
-
-#umnheader #umnh-logos {
-  background: url("../assets/images/umnheader/umnh-logos.png") transparent no-repeat;
-  background-position-y: 50%;
-  background-size: 292px 39px;
-  display: block;
-  float: left;
-  height: 63px;
-  margin: 5px 0;
-  overflow: hidden;
-  position: relative;
-  width: 315px;
+  width: 100%;
 }
 
 #umnheader a {
@@ -282,7 +243,21 @@ Here are the characters defined in fontello:
   text-decoration: none;
 }
 
-#umnheader #umnh-myu {
+#umnh-logos {
+  background: url("../assets/images/umnheader/umnh-logos.png") transparent no-repeat;
+  background-position-y: 50%;
+  background-size: 292px 39px;
+  display: block;
+  float: left;
+  height: 63px;
+  margin: 5px 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 315px;
+}
+
+#umnh-myu {
   clear: none;
   display: block;
   float: right;
@@ -291,12 +266,12 @@ Here are the characters defined in fontello:
   margin: 14px 0 4px 4px;
 }
 
-#umnheader #umnh-myu::after {
+#umnh-myu::after {
   content: "  \e801";
   font-family: 'fontello';
 }
 
-#umnheader #umnh-onestop {
+#umnh-onestop {
   clear: none;
   display: block;
   float: right;
@@ -305,7 +280,7 @@ Here are the characters defined in fontello:
   margin: 14px 5px 4px 4px;
 }
 
-#umnheader #umnh-searchbox {
+#umnh-searchbox {
   clear: both;
   display: block;
   float: right;
@@ -337,7 +312,7 @@ Here are the characters defined in fontello:
   font-family: 'fontello';
   font-size: 1em;
   font-weight: normal;
-  margin: 4px 4px 0 0;
+  margin: 4px 0;
   padding: 0;
   width: auto;
 }
@@ -391,6 +366,7 @@ Here are the characters defined in fontello:
   #umnheader {
     height: 100px;
     min-width: 320px;
+    padding: 0;
   }
   #umnheader #umnh-logos {
     background-size: 100% auto;
