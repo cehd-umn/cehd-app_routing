@@ -45,6 +45,26 @@
     @include pad(0 default 0 default);
 }
 
+.nav-container {
+    position: absolute;
+    // top: 75px;
+    top: 100px;
+}
+
+// Granular grid options
+
+@for $grid-span from 1 through 12 {
+    .span-#{$grid-span} {
+        @include span-columns($grid-span);
+        clear: none;
+    }
+}
+
+.menuicon-container {
+    width: 2em;
+}
+
+
 /** Begin Main Structure   **/
 @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
 
@@ -121,8 +141,9 @@ body {
 }
 
 .dept-wordmark {
+    clear: none;
     float: left;
-    margin-top: 0;
+    margin-top: em(9px);
     max-width: 66%;
 }
 
@@ -148,6 +169,11 @@ body {
         font-weight: bold;
         margin: em(10) 0;
         padding: 0;
+
+        &.first {
+            margin-top: 0;
+        }
+
     }
 }
 
@@ -771,53 +797,61 @@ select {
 
 /* ---------------------------------------- Image placement*/
 
-.media,
-.media-body {
-    // scss-lint:disable PropertySpelling
-    // scss-lint:disable PropertySortOrder
-    overflow: hidden;
-    *overflow: visible;
-    zoom: 1;
-}
+// .media,
+// .media-body {
+//     // scss-lint:disable PropertySpelling
+//     // scss-lint:disable PropertySortOrder
+//     overflow: hidden;
+//     *overflow: visible;
+//     zoom: 1;
+// }
+//
+// .media {
+//     margin-top: 15px;
+//
+//     .media {
+//         margin-top: 15px;
+//     }
+//
+//     &:first-child {
+//         margin-top: 0;
+//     }
+//
+//     > .pull-left {
+//         margin-right: 10px;
+//     }
+//
+//     > .pull-right {
+//         margin-left: 10px;
+//     }
+// }
+//
+// .media-object {
+//     display: block;
+// }
+//
+// .media-heading {
+//     margin: 0 0 5px;
+// }
+//
+// .media-list {
+//     list-style: none;
+//     margin-left: 0;
+// }
 
-.media {
-    margin-top: 15px;
-
-    .media {
-        margin-top: 15px;
-    }
-
-    &:first-child {
-        margin-top: 0;
-    }
-
-    > .pull-left {
-        margin-right: 10px;
-    }
-
-    > .pull-right {
-        margin-left: 10px;
-    }
-}
-
-.media-object {
-    display: block;
-}
-
-.media-heading {
-    margin: 0 0 5px;
-}
-
-.media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.tabs {
-    margin: 10px 25px;
-}
+// .tabs {
+//     margin: 10px 25px;
+// }
 
 /**    Begin Media Breaks   **/
+
+// @media all and (min-width: 620px) {
+@media all and (min-width: 321px) {
+    .nav-container {
+        position: absolute;
+        top: 75px;
+    }
+}
 
 @media all and (min-width: 768px) {
     .half {
@@ -839,7 +873,7 @@ select {
     .wordmark-svg {
         clear: none;
         display: inline-block;
-        max-width: 33%;
+        //max-width: 33%;
         padding: .6em 0;
     }
 
@@ -856,13 +890,9 @@ select {
             text-align: left;
 
             &.first {
-                margin-top: 0;
+                // margin-top: 0;
             }
         }
-    }
-
-    .nav-container {
-        position: relative;
     }
 
     .dept-wordmark {
@@ -897,9 +927,4 @@ select {
             @include shift(2);
         }
     }
-
-    // .feature {
-    //     float: none;
-    //     margin: 0 auto;
-    // }
 }

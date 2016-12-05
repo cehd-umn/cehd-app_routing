@@ -30,10 +30,18 @@
                     </div><!-- /#umnh-searchbox -->
                 </div>
             </div><!-- /#umnheader -->
-            <div class="wordmarks">
+            {# <div class="wordmarks">
                 <div class="container">
                     <img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark.">
                     {% block section_wordmark %}{% endblock %}
+                </div>
+            </div>#}
+            <div class="container">
+                <div class="span-6">
+                    {% block section_wordmark %}{% endblock %}
+                </div>
+                <div class="span-6">
+                    <img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark.">
                 </div>
             </div>
         </header>

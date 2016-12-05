@@ -3,7 +3,8 @@
 var $ = require("jquery");
 var cookies = require("js-cookie");
 
-var $open_button = $("#nav-expand");
+// var $open_button = $("#nav-expand");
+var $open_button = $("#menuicon");
 var $close_button = $("#navhide");
 var $nav = $("#main-nav");
 var $links = $nav.find("a");

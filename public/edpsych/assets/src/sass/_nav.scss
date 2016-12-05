@@ -9,34 +9,40 @@
     font-style: normal;
 }
 
-#nav-expand {
-    background-color: $base-white;
-    // border-radius: 0 10px 10px 0;
-    // box-shadow: 1px 1px 3px $box-shadow-rgba;
+// #nav-expand {
+//     background-color: $base-white;
+//     clear: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     float: left;
+//     // height: 75px;
+//     margin-right: 1em;
+//     opacity: .8;
+//     // padding: 5px 10px 5px 5px;
+//     width: 2em;
+//     z-index: 6500;
+// }
+
+#menuicon {
     cursor: pointer;
-    height: 75px;
-    opacity: .8;
-    padding: 5px 10px 5px 5px;
-    position: absolute;
-    width: 2em;
-    z-index: 6500;
-}
-
-#menuicon::after {
-    clear: both;
-    content: "\f0c9 ";
-    display: block;
-    font-family: 'FontAwesome';
-    font-size: 1em;
-    margin-bottom: .5em;
-    // padding: 0 5px 0 15px;
-}
-
-#menuword {
-    @include transform(rotate(-90deg));
     display: inline-block;
-    margin-left: -1em;
+
+    &::after {
+        clear: both;
+        content: "\f0c9 ";
+        display: block;
+        font-family: 'FontAwesome';
+        font-size: 2em;
+        // margin-right: 1em;
+        // margin-bottom: .5em;
+    }
 }
+
+// #menuword {
+//     @include transform(rotate(-90deg));
+//     display: inline-block;
+//     margin-left: -1em;
+// }
 
 // Keep these in case we want to open an close nav in future
 .has-more {
@@ -220,6 +226,16 @@ nav {
 //         position: relative;
 //     }
 // }
+
+// @media all and (min-width: 321px) {
+// @media all and (min-width: 376px) {
+@media all and (min-width: 620px) {
+    #menuicon {
+        &::after {
+            font-size: 3em;
+        }
+    }
+}
 
 @media all and (min-width: 1900px) {
     nav {
