@@ -359,7 +359,6 @@ Here are the characters defined in fontello:
 /* ---------- media query for medium Screen -----------------*/
 @media all and (min-width: 960px) {
   #umnheader {
-    padding: 0 3em;
     width: auto;
   }
   #umn-links {
@@ -413,14 +412,12 @@ html {
 
 #nav-expand {
   background-color: #fff;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  height: 65px;
+  height: 75px;
   opacity: .8;
   padding: 5px 10px 5px 5px;
   position: absolute;
-  width: 1.6em;
+  width: 2em;
   z-index: 6500;
 }
 
@@ -431,7 +428,6 @@ html {
   font-family: 'FontAwesome';
   font-size: 1em;
   margin-bottom: .5em;
-  padding: 0 5px 0 15px;
 }
 
 #menuword {
@@ -441,6 +437,7 @@ html {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   display: inline-block;
+  margin-left: -1em;
 }
 
 .has-more.open > [aria-expanded="false"] {
@@ -554,12 +551,6 @@ nav li li {
   text-transform: none;
 }
 
-@media all and (max-width: 400px) {
-  #nav-expand {
-    top: 175px;
-  }
-}
-
 @media all and (min-width: 1900px) {
   nav {
     left: -250px;
@@ -605,7 +596,7 @@ nav li li {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 4.72458% 0 4.72458%;
@@ -793,8 +784,12 @@ ul {
 }
 
 ul.no-bullet {
-  list-style-image: none;
-  list-style-type: none;
+  list-style: none;
+  margin-left: 0;
+}
+
+ul.no-bullet li {
+  margin-left: 0;
 }
 
 ul ul {
@@ -970,15 +965,20 @@ div {
   position: relative;
 }
 
-.wide {
-  float: none;
-  text-align: left;
-  width: 100%;
+a {
+  color: #0072bc;
 }
 
-.wide span {
-  text-align: left;
-  width: 100%;
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #79111a;
+}
+
+a:active {
+  color: #bc4a00;
 }
 
 .CheckorRadio-Short {
@@ -1400,6 +1400,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 2.18182em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1407,6 +1408,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 1.63636em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1414,6 +1416,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 1.36364em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1421,6 +1424,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 1.09091em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1428,6 +1432,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 0.90909em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1435,6 +1440,7 @@ select {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 0.81818em;
     font-weight: bold;
+    margin: 1em 0;
     padding: 0;
     text-align: left;
   }
@@ -1455,20 +1461,38 @@ select {
   h1, .h1 {
     text-align: left;
   }
+  h1.first, .h1.first {
+    margin-top: 0;
+  }
   h2, .h2 {
     text-align: left;
+  }
+  h2.first, .h2.first {
+    margin-top: 0;
   }
   h3, .h3 {
     text-align: left;
   }
+  h3.first, .h3.first {
+    margin-top: 0;
+  }
   h4, .h4 {
     text-align: left;
+  }
+  h4.first, .h4.first {
+    margin-top: 0;
   }
   h5, .h5 {
     text-align: left;
   }
+  h5.first, .h5.first {
+    margin-top: 0;
+  }
   h6, .h6 {
     text-align: left;
+  }
+  h6.first, .h6.first {
+    margin-top: 0;
   }
   .nav-container {
     position: relative;
@@ -1477,25 +1501,17 @@ select {
     float: left;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
   }
   .container::after {
     clear: both;
     content: "";
     display: table;
   }
-  .wordmarks {
-    padding: 0 3em;
-  }
   .text-center {
     text-align: center;
-  }
-  .feature {
-    margin: 0 auto;
-    max-width: 50%;
   }
   .half {
     float: left;
@@ -1505,6 +1521,9 @@ select {
   }
   .half:last-child {
     margin-right: 0;
+  }
+  .half.feature {
+    margin-left: 26.18114%;
   }
   .third {
     float: left;
@@ -1525,6 +1544,10 @@ select {
   .twothird:last-child,
   .twothirds:last-child {
     margin-right: 0;
+  }
+  .twothird.feature,
+  .twothirds.feature {
+    margin-left: 17.4541%;
   }
 }
 

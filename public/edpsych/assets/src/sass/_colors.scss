@@ -45,9 +45,12 @@ $text-shadow-rgba: rgba(255, 255, 255, .5);
 // Links
 
 $link-base-blue: #0072bc;
+$link-base-active: complement($link-base-blue);
+$link-base-visited: $umn-maroon;
 
 // nav
 $nav-background-color: rgba(247, 247, 247, .95);
 $box-shadow-rgba: rgba(0, 0, 0, .15);
 
+// CEHD
 $cehd-tertiary-gold: #ffec99;

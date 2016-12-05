@@ -3,13 +3,13 @@
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block main_content %}
-    <article class="feature">
-        <h2 class="h1 text-center">{{ page_title }}</h2>
+    <article class="twothirds feature">
+        <h2 class="h1 text-center first">{{ page_title }}</h2>
         <section>
-            <div class="column third">
+            <div class="third">
                 <img src="http://apps.cehd.umn.edu/people/Headshot/RodriguezM-2015.jpg" alt="Professor Michael Rodriguez headshot.">
             </div>
-            <div class="column twothird">
+            <div class="twothird">
                 <h3>Rodriguez featured in University's Driven to Discover campaign</h3>
                 <p>The opportunity gap among children in our society is growing,
                 and part of the problem is how we assess and educate them.
@@ -20,37 +20,37 @@
             </div>
         </section>
     </article>
-    <article class="asides dynamic-content">
-        <aside class="column third">
-            <h4 class="text-center" >Alumni in the news</h4>
+    <div class="asides dynamic-content">
+        <article class="third">
+            <h4 class="h2" >Alumni in the news</h4>
             <div id="alumni-news-container" aria-live="polite">
                 <div class="loader small">
                     <div class="loader-figure small"></div>
                     <p class="loader-label">Loading&hellip;</p>
                 </div>
             </div>
-        </aside>
-        <aside class="column third">
-            <h4 class="text-center">Department news</h4>
+        </article>
+        <article class="third">
+            <h4 class="h2">Department news</h4>
             <div id="dept-news-container">
                 <div class="loader small">
                     <div class="loader-figure small"></div>
                     <p class="loader-label">Loading&hellip;</p>
                 </div>
             </div>
-        </aside>
-        <aside class="column third">
-            <h4 class="text-center">Calendar</h4>
+        </article>
+        <article class="third">
+            <h4 class="h2">Calendar</h4>
             <div id="calendar-container">
                 <div class="loader small">
                     <div class="loader-figure small"></div>
                     <p class="loader-label">Loading&hellip;</p>
                 </div>
             </div>
-        </aside>
-    </article>
+        </article>
+    </div>
     <article>
-        <section class="feature">
+        <section class="feature half">
             <h3 class="h1 text-center">Stay Involved</h3>
             <p>We love to keep in touch with our former students. Please let us
             know what you're doing. You can either email us at epsy-adm@umn.edu
@@ -58,28 +58,27 @@
             information with anyone except your advisor and to update our
             alumni database.)</p>
         </section>
-        <section class="column half">
-            <h4 class="h2">Alumni Groups</h4>
-            <p>The {{ config.dept_name }} would like to encourage our alumni to
-            stay involved with the program, the College of Education and Human
-            Development, and the University of Minnesota. See links below for
-            alumni groups.</p>
-            <p>(Links forthcoming.)</p>
-        </section>
-        <section class="column half">
-            <div class="whole">
+        <div class="twothirds feature">
+            <section class="half">
+                <h4 class="h2">Alumni Groups</h4>
+                <p>The {{ config.dept_name }} would like to encourage our alumni to
+                stay involved with the program, the College of Education and Human
+                Development, and the University of Minnesota. See links below for
+                alumni groups.</p>
+                <p>(Links forthcoming.)</p>
+            </section>
+            <section class="half">
                 <h4 class="h2">Newsletter</h4>
                 <p>Stay connected to what's happening in educational psychology
                 at the University of Minnesota. Send and email to
                 epcomn@umn.edu to subscribe to our quarterly enewsletter.
-            </div>
-            <div class="whole">
+
                 <h4 class="h2">Newsletter archive</h4>
                 <p>Miss and issue? Catch up on past Educational Psychology newsletters.</p>
-            </div>
-        </section>
+            </section>
+        </div>
     </article>
-    <article class="whole emphasis">
+    <article class="emphasis">
         <div class="feature">
             <aside class="pull-quote">
                 <p>&ldquo;I conduct research with young children and their families to
@@ -102,7 +101,7 @@
         </div>
     </article>
     <article>
-        <section class="feature">
+        <section class="twothirds feature">
             <h3 class="h1 text-center">Where are they now</h3>
             <p>Our alumni find jobs. In fact, 100% of our counseling and student
             personnel psychology and school psychology students found jobs in 2015.
@@ -113,7 +112,7 @@
             <p>Below are just a few examples of our graduates' careers.</p>
         </section>
         <section>
-            <div class="column half">
+            <div class="half">
                 <h4 class="h2">Counseling and student personnel</h4>
                 <ul>
                     <li>Psychology</li>
@@ -142,7 +141,7 @@
 
                 <p>More info on where quantitative methods in education graduates found jobs.</p>
             </div><!-- end half column -->
-            <div class="column half">
+            <div class="half">
                 <h4 class="h2">School psychology</h4>
                 <ul class="no-bullet">
                     <li><strong>M.A./Specialist</strong>: Work in public and

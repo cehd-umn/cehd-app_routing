@@ -11,14 +11,14 @@
 
 #nav-expand {
     background-color: $base-white;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 1px 1px 3px $box-shadow-rgba;
+    // border-radius: 0 10px 10px 0;
+    // box-shadow: 1px 1px 3px $box-shadow-rgba;
     cursor: pointer;
-    height: 65px;
+    height: 75px;
     opacity: .8;
     padding: 5px 10px 5px 5px;
     position: absolute;
-    width: 1.6em;
+    width: 2em;
     z-index: 6500;
 }
 
@@ -29,12 +29,13 @@
     font-family: 'FontAwesome';
     font-size: 1em;
     margin-bottom: .5em;
-    padding: 0 5px 0 15px;
+    // padding: 0 5px 0 15px;
 }
 
 #menuword {
     @include transform(rotate(-90deg));
     display: inline-block;
+    margin-left: -1em;
 }
 
 // Keep these in case we want to open an close nav in future
@@ -194,11 +195,31 @@ nav {
     }
 }
 
-@media all and (max-width: 400px) {
-    #nav-expand {
-        top: 175px;
-    }
-}
+// @media all and (max-width: 400px) {
+//     #nav-expand {
+//         // top: 175px;
+//     }
+// }
+
+// @media all and (min-width: 768px), (max-width: 768px)  {
+//     #menuword {
+//         display: none;
+//     }
+//
+//     #menuicon {
+//         &::after {
+//             margin-bottom: 0;
+//         }
+//     }
+//
+//     #nav-expand {
+//         background: none;
+//         font-size: 2em;
+//         height: auto;
+//         padding: 0;
+//         position: relative;
+//     }
+// }
 
 @media all and (min-width: 1900px) {
     nav {
