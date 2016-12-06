@@ -111,8 +111,71 @@ $router->with(Config::BASE_URL, function() use ($router) {
         });
     });
 
-    /* Current Students
-     *
+    /*
+     * Future Students
+     */
+    $router->with('/future-students', function() use ($router) {
+        /**
+         * Redirects
+         */
+        $router->respond('GET', '/CSPP.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/cspp/', 301)->send();
+        });
+
+        $router->respond('GET', '/Foundations.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/foundations/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/qme/', 301)->send();
+        });
+
+        $router->respond('GET', '/schoolpsych.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/school-psych/', 301)->send();
+        });
+
+        $router->respond('GET', '/SpecialEd.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/special-ed/', 301)->send();
+        });
+
+        $router->respond('GET', '/SpEd-MEd.html', function($request, $response, $service, $app) {
+            $response->redirect(Config::BASE_URL . '/future-students/special-ed-med/', 301)->send();
+        });
+
+        /**
+         * Routes
+         */
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/index.html', []);
+        });
+
+        $router->respond('GET', '/cspp/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/cspp.html', []);
+        });
+
+        $router->respond('GET', '/foundations/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/foundations.html', []);
+        });
+
+        $router->respond('GET', '/qme/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/qme.html', []);
+        });
+
+        $router->respond('GET', '/school-psych/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/school-psych.html', []);
+        });
+
+        $router->respond('GET', '/special-ed/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/special-ed.html', []);
+        });
+
+        $router->respond('GET', '/special-ed-med/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/future-students/special-ed-med.html', []);
+        });
+    });
+
+    /*
+     * Current Students
      */
     $router->with('/current', function() use ($router) {
         /**
