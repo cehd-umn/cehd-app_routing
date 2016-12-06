@@ -70,6 +70,7 @@
 }
 
 .menuicon-container {
+    line-height: 1;
     width: 2em;
 }
 
@@ -140,7 +141,7 @@ body {
 .wordmark-svg {
     clear: both;
     display: block;
-    margin: 1em 0 0;
+    // margin: 1em 0 0;
     max-width: 100%;
 }
 
@@ -152,8 +153,12 @@ body {
 .dept-wordmark {
     clear: none;
     float: left;
-    margin-top: em(9px);
+    // margin-top: em(9px);
     // max-width: 66%;
+}
+
+.wordmark-container {
+    padding: .6em 0 0;
 }
 
 /**  End Main Structure   **/
@@ -881,15 +886,28 @@ select {
 
     .wordmark-svg {
         clear: none;
-        display: inline-block;
-        //max-width: 33%;
-        padding: .6em 0;
     }
 
     #cehd-wordmark {
         border: 0;
         float: right;
-        padding: .6em 0;
+        padding: .61em 0 0;
+    }
+
+    @for $grid-span from 1 through 12 {
+        .span-#{$grid-span} {
+            @include span-columns($grid-span);
+            clear: none;
+        }
+    }
+
+    @for $grid-span from 1 through 12 {
+        @include direction-context(right-to-left) {
+            .reverse-span-#{$grid-span} {
+                @include span-columns($grid-span);
+                clear: none;
+            }
+        }
     }
 }
 
@@ -922,12 +940,6 @@ select {
         &.feature {
             @include shift(3);
         }
-
-        // &.reverse-flow {
-        //     @include direction-context(right-to-left) {
-        //         @include span-columns(6);
-        //     }
-        // }
     }
 
     .third {
@@ -943,19 +955,7 @@ select {
         }
     }
 
-    @for $grid-span from 1 through 12 {
-        .span-#{$grid-span} {
-            @include span-columns($grid-span);
-            clear: none;
-        }
-    }
-
-    @for $grid-span from 1 through 12 {
-        @include direction-context(right-to-left) {
-            .reverse-span-#{$grid-span} {
-                @include span-columns($grid-span);
-                clear: none;
-            }
-        }
+    #cehd-wordmark {
+        padding: .74em 0 0;
     }
 }

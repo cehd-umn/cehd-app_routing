@@ -537,6 +537,13 @@ nav li li {
 @media all and (min-width: 620px) {
   #menuicon::after {
     font-size: 3em;
+    line-height: .65;
+  }
+}
+
+@media all and (min-width: 769px) {
+  #menuicon::after {
+    line-height: 1;
   }
 }
 
@@ -747,6 +754,7 @@ nav li li {
 }
 
 .menuicon-container {
+  line-height: 1;
   width: 2em;
 }
 
@@ -805,7 +813,6 @@ body {
 .wordmark-svg {
   clear: both;
   display: block;
-  margin: 1em 0 0;
   max-width: 100%;
 }
 
@@ -817,7 +824,10 @@ body {
 .dept-wordmark {
   clear: none;
   float: left;
-  margin-top: 0.5625em;
+}
+
+.wordmark-container {
+  padding: .6em 0 0;
 }
 
 /**  End Main Structure   **/
@@ -1551,86 +1561,11 @@ select {
   }
   .wordmark-svg {
     clear: none;
-    display: inline-block;
-    padding: .6em 0;
   }
   #cehd-wordmark {
     border: 0;
     float: right;
-    padding: .6em 0;
-  }
-}
-
-@media all and (min-width: 960px) {
-  h1, .h1 {
-    text-align: left;
-  }
-  h2, .h2 {
-    text-align: left;
-  }
-  h3, .h3 {
-    text-align: left;
-  }
-  h4, .h4 {
-    text-align: left;
-  }
-  h5, .h5 {
-    text-align: left;
-  }
-  h6, .h6 {
-    text-align: left;
-  }
-  .dept-wordmark {
-    float: left;
-  }
-  .container {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  .text-center {
-    text-align: center;
-  }
-  .half {
-    float: left;
-    display: block;
-    margin-right: 4.72458%;
-    width: 47.63771%;
-  }
-  .half:last-child {
-    margin-right: 0;
-  }
-  .half.feature {
-    margin-left: 26.18114%;
-  }
-  .third {
-    float: left;
-    display: block;
-    margin-right: 4.72458%;
-    width: 30.18362%;
-  }
-  .third:last-child {
-    margin-right: 0;
-  }
-  .twothird,
-  .twothirds {
-    float: left;
-    display: block;
-    margin-right: 4.72458%;
-    width: 65.09181%;
-  }
-  .twothird:last-child,
-  .twothirds:last-child {
-    margin-right: 0;
-  }
-  .twothird.feature,
-  .twothirds.feature {
-    margin-left: 17.4541%;
+    padding: .61em 0 0;
   }
   .span-1 {
     float: left;
@@ -1871,6 +1806,82 @@ select {
   }
   .reverse-span-12:last-child {
     margin-left: 0;
+  }
+}
+
+@media all and (min-width: 960px) {
+  h1, .h1 {
+    text-align: left;
+  }
+  h2, .h2 {
+    text-align: left;
+  }
+  h3, .h3 {
+    text-align: left;
+  }
+  h4, .h4 {
+    text-align: left;
+  }
+  h5, .h5 {
+    text-align: left;
+  }
+  h6, .h6 {
+    text-align: left;
+  }
+  .dept-wordmark {
+    float: left;
+  }
+  .container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .half {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 47.63771%;
+  }
+  .half:last-child {
+    margin-right: 0;
+  }
+  .half.feature {
+    margin-left: 26.18114%;
+  }
+  .third {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 30.18362%;
+  }
+  .third:last-child {
+    margin-right: 0;
+  }
+  .twothird,
+  .twothirds {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 65.09181%;
+  }
+  .twothird:last-child,
+  .twothirds:last-child {
+    margin-right: 0;
+  }
+  .twothird.feature,
+  .twothirds.feature {
+    margin-left: 17.4541%;
+  }
+  #cehd-wordmark {
+    padding: .74em 0 0;
   }
 }
 

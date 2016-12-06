@@ -9,20 +9,6 @@
     font-style: normal;
 }
 
-// #nav-expand {
-//     background-color: $base-white;
-//     clear: none;
-//     cursor: pointer;
-//     display: inline-block;
-//     float: left;
-//     // height: 75px;
-//     margin-right: 1em;
-//     opacity: .8;
-//     // padding: 5px 10px 5px 5px;
-//     width: 2em;
-//     z-index: 6500;
-// }
-
 #menuicon {
     cursor: pointer;
     display: inline-block;
@@ -33,60 +19,15 @@
         display: block;
         font-family: 'FontAwesome';
         font-size: 2em;
-        // margin-right: 1em;
-        // margin-bottom: .5em;
     }
 }
 
-// #menuword {
-//     @include transform(rotate(-90deg));
-//     display: inline-block;
-//     margin-left: -1em;
-// }
-
-// Keep these in case we want to open an close nav in future
 .has-more {
     &.open {
         > [aria-expanded="false"] {
             display: block;
         }
     }
-//     &:hover {
-//         > [aria-expanded="false"] {
-//             display: block;
-//         }
-//
-//         &::after,
-//         &::before {
-//             border: 0;
-//         }
-//     }
-//
-//     &::after,
-//     &::before {
-//         border: solid transparent;
-//         content: " ";
-//         height: 0;
-//         left: 95%;
-//         pointer-events: none;
-//         position: absolute;
-//         top: 50%;
-//         width: 0;
-//     }
-//
-//     &::after {
-//         // border-color: rgba(136, 183, 213, 0);
-//         border-left-color: $umn-dark-grey;
-//         border-width: .5em;
-//         margin-top: -.5em;
-//     }
-//
-//     &::before {
-//         // border-color: rgba(194, 225, 245, 0);
-//         border-left-color: inherit;
-//         border-width: .5em;
-//         margin-top: -.5em;
-//     }
 }
 
 nav {
@@ -201,38 +142,27 @@ nav {
     }
 }
 
-// @media all and (max-width: 400px) {
-//     #nav-expand {
-//         // top: 175px;
-//     }
-// }
-
-// @media all and (min-width: 768px), (max-width: 768px)  {
-//     #menuword {
-//         display: none;
-//     }
-//
-//     #menuicon {
-//         &::after {
-//             margin-bottom: 0;
-//         }
-//     }
-//
-//     #nav-expand {
-//         background: none;
-//         font-size: 2em;
-//         height: auto;
-//         padding: 0;
-//         position: relative;
-//     }
-// }
-
-// @media all and (min-width: 321px) {
-// @media all and (min-width: 376px) {
 @media all and (min-width: 620px) {
     #menuicon {
         &::after {
             font-size: 3em;
+            line-height: .65;
+        }
+    }
+}
+
+// @media all and (max-width: 620px) {
+//     #menuicon {
+//         &::after {
+//             line-height: .65;
+//         }
+//     }
+// }
+
+@media all and (min-width: 769px) {
+    #menuicon {
+        &::after {
+            line-height: 1;
         }
     }
 }
