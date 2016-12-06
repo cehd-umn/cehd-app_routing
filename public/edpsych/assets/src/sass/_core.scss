@@ -53,8 +53,17 @@
 
 // Granular grid options
 
+// @for $grid-span from 1 through 12 {
+//     @include direction-context(right-to-left) {
+//         .reverse-span-#{$grid-span} {
+//             @include span-columns($grid-span);
+//             clear: none;
+//         }
+//     }
+// }
+
 @for $grid-span from 1 through 12 {
-    .span-#{$grid-span} {
+    .super-span-#{$grid-span} {
         @include span-columns($grid-span);
         clear: none;
     }
@@ -131,7 +140,7 @@ body {
 .wordmark-svg {
     clear: both;
     display: block;
-    margin: 1em 0 .4em;
+    margin: 1em 0 0;
     max-width: 100%;
 }
 
@@ -144,7 +153,7 @@ body {
     clear: none;
     float: left;
     margin-top: em(9px);
-    max-width: 66%;
+    // max-width: 66%;
 }
 
 /**  End Main Structure   **/
@@ -171,7 +180,7 @@ body {
         padding: 0;
 
         &.first {
-            margin-top: 0;
+            // margin-top: 0;
         }
 
     }
@@ -913,6 +922,12 @@ select {
         &.feature {
             @include shift(3);
         }
+
+        // &.reverse-flow {
+        //     @include direction-context(right-to-left) {
+        //         @include span-columns(6);
+        //     }
+        // }
     }
 
     .third {
@@ -925,6 +940,22 @@ select {
 
         &.feature {
             @include shift(2);
+        }
+    }
+
+    @for $grid-span from 1 through 12 {
+        .span-#{$grid-span} {
+            @include span-columns($grid-span);
+            clear: none;
+        }
+    }
+
+    @for $grid-span from 1 through 12 {
+        @include direction-context(right-to-left) {
+            .reverse-span-#{$grid-span} {
+                @include span-columns($grid-span);
+                clear: none;
+            }
         }
     }
 }
