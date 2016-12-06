@@ -12,6 +12,9 @@
 #menuicon {
     cursor: pointer;
     display: inline-block;
+    left: 0;
+    position: absolute;
+    top: 0;
 
     &::after {
         clear: both;
@@ -144,20 +147,19 @@ nav {
 
 @media all and (min-width: 620px) {
     #menuicon {
+        top: -3.4375em;
+
         &::after {
             font-size: 3em;
-            line-height: .65;
+            line-height: 1;
         }
     }
 }
 
-@media all and (min-width: 769px) {
+@media all and (min-width: 960px) {
     #menuicon {
-        &::after {
-            font-size: 4em;
-            // line-height: 1;
-            line-height: .95;
-        }
+        left: -11%;
+        margin-top: .6em;
     }
 }
 

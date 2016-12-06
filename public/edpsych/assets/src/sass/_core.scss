@@ -47,7 +47,6 @@
 
 .nav-container {
     position: absolute;
-    // top: 75px;
     top: 100px;
 }
 
@@ -131,17 +130,18 @@ body {
 .wordmark-svg {
     clear: both;
     display: block;
+    margin: 0 auto;
     max-width: 100%;
+    width: em(400);
 }
 
 #cehd-wordmark {
     border-bottom: 2px solid $base-black;
-    padding: 0 0 .2em;
+    padding: .9em 0 0;
 }
 
 .dept-wordmark {
     clear: none;
-    float: left;
 }
 
 .wordmark-container {
@@ -178,23 +178,18 @@ body {
     }
 }
 
-.h-override-color {
-    font-size: 80%;
-}
-
-.h-override-black {
-    color: $base-black;
-    font-size: 80%;
-}
-
-/* ---------------------------------------- PARAGRAPHS ---- */
+/**
+ * Paragraphs
+ */
 
 p {
     margin: 1em 0;
     padding: 0;
 }
 
-/* ---------------------------------------- LISTS ---- */
+/**
+ * Lists
+ */
 
 ul {
     list-style: disc;
@@ -258,7 +253,9 @@ dd {
     padding: 0;
 }
 
-/* ---------------------------------------- BLOCK ELEMENTS ---- */
+/**
+ * Block elements
+ */
 
 address {
     display: block;
@@ -267,13 +264,19 @@ address {
     padding: 0;
 }
 
+div {
+    position: relative;
+}
+
 pre {
     display: block;
     margin: 10px;
     padding: 0;
 }
 
-/* ---------------------------------------- INLINE ELEMENTS ---- */
+/**
+ * Inline elements
+ */
 
 strong {
     font-weight: bold;
@@ -283,7 +286,9 @@ em {
     font-style: italic;
 }
 
-/* ---------------------------------------- TABLES ---- */
+/**
+ * Tables
+ */
 
 caption {
     font-size: 1.2em;
@@ -311,7 +316,9 @@ td {
     vertical-align: top;
 }
 
-/* ---------------------------------------- FORMS ---- */
+/**
+ * Forms
+ */
 
 form {
     display: block;
@@ -371,11 +378,14 @@ textarea {
     width: 100%;
 }
 
-
-div {
-    position: relative;
+select {
+    margin: 0 0 20px 10px;
+    padding: 8px;
 }
 
+/**
+ * Links
+ */
 a {
     color: $link-base-blue;
 
@@ -390,11 +400,6 @@ a {
     &:active {
         color: $link-base-active;
     }
-}
-
-select {
-    margin: 0 0 20px 10px;
-    padding: 8px;
 }
 
 .button {
@@ -458,7 +463,9 @@ select {
     }
 }
 
-/* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */
+/**
+ * Image positioning
+ */
 
 .img-right {
     float: right;
@@ -474,7 +481,9 @@ select {
     position: relative;
 }
 
-/* ------------------------------------- ALIGNMENT, FLOATS, CLEAR FLOAT ---- */
+/**
+ * Alignments
+ */
 
 .text-left {
     text-align: left;
@@ -493,6 +502,12 @@ select {
     .nav-container {
         position: absolute;
         top: 75px;
+    }
+}
+
+@media all and (max-width: 620px) {
+    .wordmark-svg {
+        float: left;
     }
 }
 
@@ -517,25 +532,14 @@ select {
         clear: none;
     }
 
-    #cehd-wordmark {
-        border: 0;
-        float: right;
-        padding: .61em 0 0;
+    .dept-wordmark {
+        float: none;
     }
 
     @for $grid-span from 1 through 12 {
         .span-#{$grid-span} {
             @include span-columns($grid-span);
             clear: none;
-        }
-    }
-
-    @for $grid-span from 1 through 12 {
-        @include direction-context(right-to-left) {
-            .reverse-span-#{$grid-span} {
-                @include span-columns($grid-span);
-                clear: none;
-            }
         }
     }
 }
@@ -550,6 +554,15 @@ select {
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;
+        }
+    }
+
+    @for $grid-span from 1 through 12 {
+        @include direction-context(right-to-left) {
+            .reverse-span-#{$grid-span} {
+                @include span-columns($grid-span);
+                clear: none;
+            }
         }
     }
 
@@ -588,6 +601,5 @@ select {
 
     #cehd-wordmark {
         padding: .9em 0 0;
-        // padding: .74em 0 0;
     }
 }

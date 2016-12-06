@@ -413,6 +413,9 @@ html {
 #menuicon {
   cursor: pointer;
   display: inline-block;
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 #menuicon::after {
@@ -535,16 +538,19 @@ nav li li {
 }
 
 @media all and (min-width: 620px) {
+  #menuicon {
+    top: -3.4375em;
+  }
   #menuicon::after {
     font-size: 3em;
-    line-height: .65;
+    line-height: 1;
   }
 }
 
-@media all and (min-width: 769px) {
-  #menuicon::after {
-    font-size: 4em;
-    line-height: .95;
+@media all and (min-width: 960px) {
+  #menuicon {
+    left: -11%;
+    margin-top: .6em;
   }
 }
 
@@ -814,17 +820,18 @@ body {
 .wordmark-svg {
   clear: both;
   display: block;
+  margin: 0 auto;
   max-width: 100%;
+  width: 25em;
 }
 
 #cehd-wordmark {
   border-bottom: 2px solid #000;
-  padding: 0 0 .2em;
+  padding: .9em 0 0;
 }
 
 .dept-wordmark {
   clear: none;
-  float: left;
 }
 
 .wordmark-container {
@@ -891,22 +898,17 @@ h6, .h6 {
   padding: 0;
 }
 
-.h-override-color {
-  font-size: 80%;
-}
-
-.h-override-black {
-  color: #000;
-  font-size: 80%;
-}
-
-/* ---------------------------------------- PARAGRAPHS ---- */
+/**
+ * Paragraphs
+ */
 p {
   margin: 1em 0;
   padding: 0;
 }
 
-/* ---------------------------------------- LISTS ---- */
+/**
+ * Lists
+ */
 ul {
   list-style: disc;
   margin: 10px 25px;
@@ -969,12 +971,18 @@ dd {
   padding: 0;
 }
 
-/* ---------------------------------------- BLOCK ELEMENTS ---- */
+/**
+ * Block elements
+ */
 address {
   display: block;
   font-style: normal;
   margin: 10px;
   padding: 0;
+}
+
+div {
+  position: relative;
 }
 
 pre {
@@ -983,7 +991,9 @@ pre {
   padding: 0;
 }
 
-/* ---------------------------------------- INLINE ELEMENTS ---- */
+/**
+ * Inline elements
+ */
 strong {
   font-weight: bold;
 }
@@ -992,7 +1002,9 @@ em {
   font-style: italic;
 }
 
-/* ---------------------------------------- TABLES ---- */
+/**
+ * Tables
+ */
 caption {
   font-size: 1.2em;
   font-weight: bold;
@@ -1019,7 +1031,9 @@ td {
   vertical-align: top;
 }
 
-/* ---------------------------------------- FORMS ---- */
+/**
+ * Forms
+ */
 form {
   display: block;
   padding: 1%;
@@ -1078,10 +1092,14 @@ textarea {
   width: 100%;
 }
 
-div {
-  position: relative;
+select {
+  margin: 0 0 20px 10px;
+  padding: 8px;
 }
 
+/**
+ * Links
+ */
 a {
   color: #0072bc;
 }
@@ -1096,11 +1114,6 @@ a:visited {
 
 a:active {
   color: #bc4a00;
-}
-
-select {
-  margin: 0 0 20px 10px;
-  padding: 8px;
 }
 
 .button {
@@ -1176,7 +1189,9 @@ select {
   top: 1em;
 }
 
-/* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */
+/**
+ * Image positioning
+ */
 .img-right {
   float: right;
   margin: 1% 0 10px 10px;
@@ -1191,7 +1206,9 @@ select {
   position: relative;
 }
 
-/* ------------------------------------- ALIGNMENT, FLOATS, CLEAR FLOAT ---- */
+/**
+ * Alignments
+ */
 .text-left {
   text-align: left;
 }
@@ -1209,6 +1226,12 @@ select {
   .nav-container {
     position: absolute;
     top: 75px;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .wordmark-svg {
+    float: left;
   }
 }
 
@@ -1273,10 +1296,8 @@ select {
   .wordmark-svg {
     clear: none;
   }
-  #cehd-wordmark {
-    border: 0;
-    float: right;
-    padding: .61em 0 0;
+  .dept-wordmark {
+    float: none;
   }
   .span-1 {
     float: left;
@@ -1398,6 +1419,33 @@ select {
   .span-12:last-child {
     margin-right: 0;
   }
+}
+
+@media all and (min-width: 769px) {
+  .menuicon-container {
+    width: 4em;
+  }
+}
+
+@media all and (min-width: 960px) {
+  h1, .h1 {
+    text-align: left;
+  }
+  h2, .h2 {
+    text-align: left;
+  }
+  h3, .h3 {
+    text-align: left;
+  }
+  h4, .h4 {
+    text-align: left;
+  }
+  h5, .h5 {
+    text-align: left;
+  }
+  h6, .h6 {
+    text-align: left;
+  }
   .reverse-span-1 {
     float: right;
     display: block;
@@ -1517,33 +1565,6 @@ select {
   }
   .reverse-span-12:last-child {
     margin-left: 0;
-  }
-}
-
-@media all and (min-width: 769px) {
-  .menuicon-container {
-    width: 4em;
-  }
-}
-
-@media all and (min-width: 960px) {
-  h1, .h1 {
-    text-align: left;
-  }
-  h2, .h2 {
-    text-align: left;
-  }
-  h3, .h3 {
-    text-align: left;
-  }
-  h4, .h4 {
-    text-align: left;
-  }
-  h5, .h5 {
-    text-align: left;
-  }
-  h6, .h6 {
-    text-align: left;
   }
   .dept-wordmark {
     float: left;
