@@ -1619,6 +1619,7 @@ a:active {
     margin-left: 17.4541%;
   }
   #cehd-wordmark {
+    border-bottom: 0;
     float: right;
     padding: .9em 0 0;
   }
