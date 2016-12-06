@@ -52,16 +52,6 @@
 }
 
 // Granular grid options
-
-// @for $grid-span from 1 through 12 {
-//     @include direction-context(right-to-left) {
-//         .reverse-span-#{$grid-span} {
-//             @include span-columns($grid-span);
-//             clear: none;
-//         }
-//     }
-// }
-
 @for $grid-span from 1 through 12 {
     .super-span-#{$grid-span} {
         @include span-columns($grid-span);
@@ -141,7 +131,6 @@ body {
 .wordmark-svg {
     clear: both;
     display: block;
-    // margin: 1em 0 0;
     max-width: 100%;
 }
 
@@ -153,8 +142,6 @@ body {
 .dept-wordmark {
     clear: none;
     float: left;
-    // margin-top: em(9px);
-    // max-width: 66%;
 }
 
 .wordmark-container {
@@ -207,29 +194,6 @@ p {
     padding: 0;
 }
 
-.subhead {
-    margin: 0 25px 10px;
-    padding: 0;
-}
-
-.revised {
-    font-size: .8em;
-    font-style: italic;
-    margin: 0;
-    padding: 10px 0 0;
-    text-align: right;
-    width: 90%;
-}
-
-.citation {
-    margin-left: 5em;
-    text-indent: -2.5em;
-}
-
-.tinytype {
-    font-size: .7em;
-}
-
 /* ---------------------------------------- LISTS ---- */
 
 ul {
@@ -278,11 +242,6 @@ li {
     padding: 0;
 }
 
-.tight li,
-.tight li {
-    margin: 0 0 0 25px;
-}
-
 dl {
     margin: 10px 25px;
     padding: 0;
@@ -318,15 +277,6 @@ pre {
 
 strong {
     font-weight: bold;
-
-    &.alert {
-        color: $base-red;
-    }
-
-    // TODO write better class names for states
-    &.yes {
-        color: $base-green;
-    }
 }
 
 em {
@@ -442,133 +392,6 @@ a {
     }
 }
 
-// .wide {
-//     float: none;
-//     text-align: left;
-//     width: 100%;
-//
-//     span {
-//         text-align: left;
-//         width: 100%;
-//     }
-// }
-
-// scss-lint:disable SelectorFormat
-.CheckorRadio-Short {  // XXX Deprecated. Use lowercase version below.
-    border: thin $base-white solid;
-    margin: 10px 25px;
-
-    label {
-        border: 0;
-        display: block;
-        float: left;
-        font-weight: bold;
-        margin: 0;
-        text-align: right;
-        width: 30%;
-    }
-
-    input {
-        border: 0;
-        display: block;
-        float: none;
-        height: 15px;
-        margin: 2px 25px 20px 32%;
-        padding: 0;
-        width: 15px;
-    }
-}
-
-.CheckorRadio-Long { // XXX Deprecated. Use lowercase version below.
-    border: thin $base-white solid;
-    margin: 10px 25px;
-
-    label {
-        display: block;
-        float: none;
-        font-weight: bold;
-        margin: 0 0 0 25px;
-        text-align: left;
-        width: 80%;
-
-        span {
-            color: $base-charcoal;
-            display: block;
-            font-size: .8em;
-            font-weight: normal;
-            text-align: left;
-            width: 80%;
-        }
-    }
-
-    input {
-        border: 0;
-        float: left;
-        height: 1%;
-        margin: 2px 10px 0 0;
-        padding: 0;
-        width: 1%;
-    }
-}
-// scss-lint:enable SelectorFormat
-
-.checkorradio-short {
-    border: thin $base-white solid;
-    margin: 10px 25px;
-
-    label {
-        border: 0;
-        display: block;
-        float: left;
-        font-weight: bold;
-        margin: 0;
-        text-align: right;
-        width: 30%;
-    }
-
-    input {
-        border: 0;
-        display: block;
-        float: none;
-        height: 15px;
-        margin: 2px 25px 20px 32%;
-        padding: 0;
-        width: 15px;
-    }
-}
-
-.checkorradio-long {
-    border: thin $base-white solid;
-    margin: 10px 25px;
-
-    label {
-        display: block;
-        float: none;
-        font-weight: bold;
-        margin: 0 0 0 25px;
-        text-align: left;
-        width: 80%;
-
-        span {
-            color: $base-charcoal;
-            display: block;
-            font-size: .8em;
-            font-weight: normal;
-            text-align: left;
-            width: 80%;
-        }
-    }
-
-    input {
-        border: 0;
-        float: left;
-        height: 1%;
-        margin: 2px 10px 0 0;
-        padding: 0;
-        width: 1%;
-    }
-}
-
 select {
     margin: 0 0 20px 10px;
     padding: 8px;
@@ -665,201 +488,7 @@ select {
     text-align: center;
 }
 
-.fltrt {
-    /* this class can be used to float an element right in your page.
-        * The floated element must precede the element it should be next to on
-        * the page. */
-    float: right;
-    margin-left: 8px;
-}
-
-.fltlft {
-    /* this class can be used to float an element left in your page */
-    float: left;
-    margin-right: 8px;
-}
-
-.clearfloat {
-    /* this class should be placed on a div or break element and should be the
-     * final element before the close of a container that should fully contain
-     * a float
-    */
-    clear: both;
-    font-size: 1px;
-    height: 0;
-    line-height: 0;
-}
-
-/* ---------------------------------------- Alert Text */
-
-.muted {
-    color: $base-medium-grey;
-}
-
-.text-warning {
-    color: $warning-text-yellow;
-}
-
-.text-error {
-    color: $error-text-red;
-}
-
-.text-info {
-    color: $base-medium-blue;
-}
-
-.text-success {
-    color: $success-text-green;
-}
-
-/* ---------------------------------------- Alert Boxes */
-
-.alert {
-    background-color: $warning-light-yellow;
-    border: 1px solid $warning-light-orange;
-    // TODO use bourbon
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    color: $warning-text-yellow;
-    margin: 10px 25px;
-    padding: 8px 35px 8px 14px;
-    text-shadow: 0 1px 0 $text-shadow-rgba;
-
-    h4 {
-        color: $warning-text-yellow;
-        margin: 0;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .close {
-        line-height: 20px;
-        position: relative;
-        right: -21px;
-        top: -2px;
-    }
-}
-
-.alert-success {
-    background-color: $success-light-green;
-    border-color: $success-medium-green;
-    color: $success-text-green;
-
-    h4 {
-        color: $success-text-green;
-    }
-}
-
-.alert-danger,
-.alert-error {
-    background-color: $error-light-red;
-    border-color: $error-medium-red;
-    color: $error-text-dark-red;
-}
-
-.alert-danger h4,
-.alert-error h4 {
-    color: $error-text-red;
-}
-
-.alert-info {
-    background-color: $base-light-blue;
-    border-color: $base-light-blue;
-    color: $base-medium-blue;
-}
-
-.alert-question {
-    background-color: $base-light-grey;
-    border-color: $base-grey;
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: $base-black;
-        margin: 10px 10px 5px;
-    }
-
-    p {
-        color: $base-black;
-        margin: 5px 10px;
-    }
-
-    ul {
-        color: $base-black;
-    }
-}
-
-.alert-block {
-    padding-bottom: 14px;
-    padding-top: 14px;
-
-    > {
-        p,
-        ul {
-            margin-bottom: 0;
-        }
-    }
-
-    p + p {
-        margin-top: 5px;
-    }
-}
-
-/* ---------------------------------------- Image placement*/
-
-// .media,
-// .media-body {
-//     // scss-lint:disable PropertySpelling
-//     // scss-lint:disable PropertySortOrder
-//     overflow: hidden;
-//     *overflow: visible;
-//     zoom: 1;
-// }
-//
-// .media {
-//     margin-top: 15px;
-//
-//     .media {
-//         margin-top: 15px;
-//     }
-//
-//     &:first-child {
-//         margin-top: 0;
-//     }
-//
-//     > .pull-left {
-//         margin-right: 10px;
-//     }
-//
-//     > .pull-right {
-//         margin-left: 10px;
-//     }
-// }
-//
-// .media-object {
-//     display: block;
-// }
-//
-// .media-heading {
-//     margin: 0 0 5px;
-// }
-//
-// .media-list {
-//     list-style: none;
-//     margin-left: 0;
-// }
-
-// .tabs {
-//     margin: 10px 25px;
-// }
-
 /**    Begin Media Breaks   **/
-
-// @media all and (min-width: 620px) {
 @media all and (min-width: 321px) {
     .nav-container {
         position: absolute;
@@ -911,14 +540,16 @@ select {
     }
 }
 
+@media all and (min-width: 769px) {
+    .menuicon-container {
+        width: 4em;
+    }
+}
+
 @media all and (min-width: 960px) {
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;
-
-            &.first {
-                // margin-top: 0;
-            }
         }
     }
 
@@ -956,6 +587,7 @@ select {
     }
 
     #cehd-wordmark {
-        padding: .74em 0 0;
+        padding: .9em 0 0;
+        // padding: .74em 0 0;
     }
 }

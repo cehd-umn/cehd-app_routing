@@ -151,18 +151,12 @@ nav {
     }
 }
 
-// @media all and (max-width: 620px) {
-//     #menuicon {
-//         &::after {
-//             line-height: .65;
-//         }
-//     }
-// }
-
 @media all and (min-width: 769px) {
     #menuicon {
         &::after {
-            line-height: 1;
+            font-size: 4em;
+            // line-height: 1;
+            line-height: .95;
         }
     }
 }

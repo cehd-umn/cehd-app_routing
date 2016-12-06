@@ -543,7 +543,8 @@ nav li li {
 
 @media all and (min-width: 769px) {
   #menuicon::after {
-    line-height: 1;
+    font-size: 4em;
+    line-height: .95;
   }
 }
 
@@ -905,29 +906,6 @@ p {
   padding: 0;
 }
 
-.subhead {
-  margin: 0 25px 10px;
-  padding: 0;
-}
-
-.revised {
-  font-size: .8em;
-  font-style: italic;
-  margin: 0;
-  padding: 10px 0 0;
-  text-align: right;
-  width: 90%;
-}
-
-.citation {
-  margin-left: 5em;
-  text-indent: -2.5em;
-}
-
-.tinytype {
-  font-size: .7em;
-}
-
 /* ---------------------------------------- LISTS ---- */
 ul {
   list-style: disc;
@@ -975,11 +953,6 @@ li {
   padding: 0;
 }
 
-.tight li,
-.tight li {
-  margin: 0 0 0 25px;
-}
-
 dl {
   margin: 10px 25px;
   padding: 0;
@@ -1013,14 +986,6 @@ pre {
 /* ---------------------------------------- INLINE ELEMENTS ---- */
 strong {
   font-weight: bold;
-}
-
-strong.alert {
-  color: #f00;
-}
-
-strong.yes {
-  color: #008000;
 }
 
 em {
@@ -1133,120 +1098,6 @@ a:active {
   color: #bc4a00;
 }
 
-.CheckorRadio-Short {
-  border: thin #fff solid;
-  margin: 10px 25px;
-}
-
-.CheckorRadio-Short label {
-  border: 0;
-  display: block;
-  float: left;
-  font-weight: bold;
-  margin: 0;
-  text-align: right;
-  width: 30%;
-}
-
-.CheckorRadio-Short input {
-  border: 0;
-  display: block;
-  float: none;
-  height: 15px;
-  margin: 2px 25px 20px 32%;
-  padding: 0;
-  width: 15px;
-}
-
-.CheckorRadio-Long {
-  border: thin #fff solid;
-  margin: 10px 25px;
-}
-
-.CheckorRadio-Long label {
-  display: block;
-  float: none;
-  font-weight: bold;
-  margin: 0 0 0 25px;
-  text-align: left;
-  width: 80%;
-}
-
-.CheckorRadio-Long label span {
-  color: #666;
-  display: block;
-  font-size: .8em;
-  font-weight: normal;
-  text-align: left;
-  width: 80%;
-}
-
-.CheckorRadio-Long input {
-  border: 0;
-  float: left;
-  height: 1%;
-  margin: 2px 10px 0 0;
-  padding: 0;
-  width: 1%;
-}
-
-.checkorradio-short {
-  border: thin #fff solid;
-  margin: 10px 25px;
-}
-
-.checkorradio-short label {
-  border: 0;
-  display: block;
-  float: left;
-  font-weight: bold;
-  margin: 0;
-  text-align: right;
-  width: 30%;
-}
-
-.checkorradio-short input {
-  border: 0;
-  display: block;
-  float: none;
-  height: 15px;
-  margin: 2px 25px 20px 32%;
-  padding: 0;
-  width: 15px;
-}
-
-.checkorradio-long {
-  border: thin #fff solid;
-  margin: 10px 25px;
-}
-
-.checkorradio-long label {
-  display: block;
-  float: none;
-  font-weight: bold;
-  margin: 0 0 0 25px;
-  text-align: left;
-  width: 80%;
-}
-
-.checkorradio-long label span {
-  color: #666;
-  display: block;
-  font-size: .8em;
-  font-weight: normal;
-  text-align: left;
-  width: 80%;
-}
-
-.checkorradio-long input {
-  border: 0;
-  float: left;
-  height: 1%;
-  margin: 2px 10px 0 0;
-  padding: 0;
-  width: 1%;
-}
-
 select {
   margin: 0 0 20px 10px;
   padding: 8px;
@@ -1353,146 +1204,6 @@ select {
   text-align: center;
 }
 
-.fltrt {
-  /* this class can be used to float an element right in your page.
-        * The floated element must precede the element it should be next to on
-        * the page. */
-  float: right;
-  margin-left: 8px;
-}
-
-.fltlft {
-  /* this class can be used to float an element left in your page */
-  float: left;
-  margin-right: 8px;
-}
-
-.clearfloat {
-  /* this class should be placed on a div or break element and should be the
-     * final element before the close of a container that should fully contain
-     * a float
-    */
-  clear: both;
-  font-size: 1px;
-  height: 0;
-  line-height: 0;
-}
-
-/* ---------------------------------------- Alert Text */
-.muted {
-  color: #999;
-}
-
-.text-warning {
-  color: #c09853;
-}
-
-.text-error {
-  color: #b94a48;
-}
-
-.text-info {
-  color: #3a87ad;
-}
-
-.text-success {
-  color: #468847;
-}
-
-/* ---------------------------------------- Alert Boxes */
-.alert {
-  background-color: #fcf8e3;
-  border: 1px solid #fbeed5;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  color: #c09853;
-  margin: 10px 25px;
-  padding: 8px 35px 8px 14px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.alert h4 {
-  color: #c09853;
-  margin: 0;
-}
-
-.alert p {
-  margin: 0;
-}
-
-.alert .close {
-  line-height: 20px;
-  position: relative;
-  right: -21px;
-  top: -2px;
-}
-
-.alert-success {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #468847;
-}
-
-.alert-success h4 {
-  color: #468847;
-}
-
-.alert-danger,
-.alert-error {
-  background-color: #f2dede;
-  border-color: #eed3d7;
-  color: #953b39;
-}
-
-.alert-danger h4,
-.alert-error h4 {
-  color: #b94a48;
-}
-
-.alert-info {
-  background-color: #d9edf7;
-  border-color: #d9edf7;
-  color: #3a87ad;
-}
-
-.alert-question {
-  background-color: #e2e2e2;
-  border-color: #c0c0c0;
-}
-
-.alert-question h1,
-.alert-question h2,
-.alert-question h3,
-.alert-question h4 {
-  color: #000;
-  margin: 10px 10px 5px;
-}
-
-.alert-question p {
-  color: #000;
-  margin: 5px 10px;
-}
-
-.alert-question ul {
-  color: #000;
-}
-
-.alert-block {
-  padding-bottom: 14px;
-  padding-top: 14px;
-}
-
-.alert-block > p,
-.alert-block > ul {
-  margin-bottom: 0;
-}
-
-.alert-block p + p {
-  margin-top: 5px;
-}
-
-/* ---------------------------------------- Image placement*/
 /**    Begin Media Breaks   **/
 @media all and (min-width: 321px) {
   .nav-container {
@@ -1809,6 +1520,12 @@ select {
   }
 }
 
+@media all and (min-width: 769px) {
+  .menuicon-container {
+    width: 4em;
+  }
+}
+
 @media all and (min-width: 960px) {
   h1, .h1 {
     text-align: left;
@@ -1881,7 +1598,7 @@ select {
     margin-left: 17.4541%;
   }
   #cehd-wordmark {
-    padding: .74em 0 0;
+    padding: .9em 0 0;
   }
 }
 
