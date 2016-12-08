@@ -138,14 +138,16 @@ Here are the characters defined in fontello:
 #umnh-searchbtn {
     background: transparent;
     border: 0;
+    border-radius: 0;
     color: $umn-medium-grey;
     display: inline;
     font-family: 'fontello';
     font-size: 1em;
     font-weight: normal;
+    height: auto;
     margin: 4px 0;
     padding: 0;
-    width: auto;
+    width: 1.1em;
 }
 
 /* ---------- end U of M Header ------------------------------*/
