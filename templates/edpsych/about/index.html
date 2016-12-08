@@ -4,8 +4,12 @@
 {% block heading_1 %}My Heading{% endblock %}
 {% block main_content %}
     <h2 class="h1">{{ page_title }}</h2>
+    <h3>Figure and Figcaption</h3>
+    <figure>
+        <img src="http://apps.cehd.umn.edu/people/Headshot/RodriguezM-2015.jpg" alt="Professor Michael Rodriguez headshot.">
+        <figcaption>Professor Michael Rodriguez</figcaption>
+    </figure>
     <h3>Our mission</h3>
-    <p>{{ uri }}</p>
     <p>The Department of Educational Psychology provides training in the
     cognitive, emotional, and social learning processes that underlie education
     and human development across the lifespan, including: the <a
@@ -25,8 +29,6 @@
     teaching enhance professional practice in schools and universities,
     community mental health agencies, business and industrial organizations,
     early childhood programs, and government agencies.</p>
-
-    <div class="breakline"></div>{# TODO should this be a styled <hr> tag? #}
 
     <h3>Our location</h3>
     <p>Located on the East Bank campus, the <a
