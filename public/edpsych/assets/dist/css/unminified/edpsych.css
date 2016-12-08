@@ -10,8 +10,6 @@
         Created: 2013-06-13
         Updated: 2015-05-05 "Cinco de CSS"
 */
-@import url(http://fonts.googleapis.com/css?family=Raleway);
-@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat");
 a,
 abbr,
 acronym,
@@ -569,13 +567,6 @@ nav li li {
   }
 }
 
-/*
-        Owner: College of Education and Human Development - U of M
-        Title: CEHD Public Web - Core layout elements
-        What's it do?: This creates the core structure, layout elements, and
-            styles for CEHD web pages
-        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
-*/
 /* Accessibly hides text */
 .accessible-hidden {
   overflow: hidden;
@@ -774,7 +765,7 @@ nav li li {
 /** Begin Main Structure   **/
 body {
   font-family: 'Lato', Verdana, Geneva, sans-serif;
-  font-size: 1em;
+  font-size: 1.125em;
   margin: 0 auto;
   max-width: 1400px;
   padding: 0;
@@ -1200,6 +1191,9 @@ a:active {
 @media all and (max-width: 620px) {
   .wordmark-svg {
     float: left;
+  }
+  body {
+    font-size: 1em;
   }
 }
 

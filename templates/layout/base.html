@@ -7,6 +7,7 @@
         <meta name="description" content="{% block meta_content %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
+        {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
         {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
         {% block extra_css %}{% endblock %}
     </head>

@@ -3,6 +3,30 @@
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_prepend %}{{ config.dept_name }}:{% endblock %}
 {% block bottom_js %}<script src="{{ config.js_base }}/edpsych.min.js"></script>{% endblock %}
+{% block inline_css %}
+{# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+<style>
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+}
+</style>
+{% endblock %}
 {% block section_wordmark %}
     <a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a>
     <div>

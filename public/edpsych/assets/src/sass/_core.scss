@@ -6,14 +6,6 @@
 @import "nav";
 @import "variables";
 
-/*
-        Owner: College of Education and Human Development - U of M
-        Title: CEHD Public Web - Core layout elements
-        What's it do?: This creates the core structure, layout elements, and
-            styles for CEHD web pages
-        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
-*/
-
 /* Accessibly hides text */
 .accessible-hidden {
     @include hide-text;
@@ -65,11 +57,9 @@
 
 
 /** Begin Main Structure   **/
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
-
 body {
     font-family: 'Lato', Verdana, Geneva, sans-serif;
-    font-size: em(16);
+    font-size: em(18);
     margin: 0 auto;
     max-width: 1400px;
     padding: 0;
@@ -474,6 +464,10 @@ a {
 @media all and (max-width: 620px) {
     .wordmark-svg {
         float: left;
+    }
+
+    body {
+        font-size: em(16);
     }
 }
 
