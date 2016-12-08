@@ -109,6 +109,10 @@ $router->with(Config::BASE_URL, function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/alumni/index.html', []);
         });
+
+        $router->respond('GET', '/information/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/alumni/information.html', []);
+        });
     });
 
     /*

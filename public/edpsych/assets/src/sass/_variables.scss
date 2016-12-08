@@ -8,3 +8,8 @@ $core-layout-padding-large-screen: 3em;
 $loader-size-lg: em(64);
 $loader-size-sm: em(32);
 $loader-animation-duration: 1.15s;
+
+// Form hack settings
+$fh-textarea-height: em(200);
+$fh-textarea-width: em(800);
+$fh-textarea-max-width: 100%;

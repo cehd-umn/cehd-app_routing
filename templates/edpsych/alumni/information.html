@@ -1,0 +1,76 @@
+{% extends "edpsych/layout/section.html" %}
+{% set page_title = "Alumni" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block main_content %}
+    <h2 class="h1 text-center first">{{ page_title }}</h2>
+    <form action="https://apps.cehd.umn.edu/forms/afp.aspx?formid=89" method="post">
+        <fieldset>
+            <legend>Your Information</legend>
+            <label for="FirstName">First Name
+                <input id="FirstName" type="text" name="fname">
+            </label>
+            <label for="LastName">Last Name
+                <input id="LastName" type="text" name="lname">
+            </label>
+            <label for="Advisor">Advisor
+                <input id="Advisor" type="text" name="advisor">
+            </label>
+            <label for="Employer">Employer
+                <input id="Employer" type="text" name="employer">
+            </label>
+            <label for="Title">Job Title
+                <input id="Title" type="text" name="title">
+            </label>
+            <label for="Address">New Address
+                <input id="Address" type="text" name="address">
+            </label>
+            <label for="Email">New Email
+                <input id="Email" type="text" name="email">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend><strong>Program (check one):</strong></legend>
+            <ul>
+                <li>
+                    <label for="CSPP">
+                        <input id="CSPP" type="radio" name="CSPP" value="CSPP">
+                        CSPP
+                    </label>
+                </li>
+                <li>
+                    <label for="PsyF">
+                        <input id="PsyF" type="radio" name="PsyF" value="PsyF">
+                        PsyF
+                    </label>
+                </li>
+                <li>
+                    <label for="QME">
+                        <input id="QME" type="radio" name="QME" value="QME">
+                        QME
+                    </label>
+                </li>
+                <li>
+                    <label for="School">
+                        <input id="School" type="radio" name="School" value="School">
+                        School Psychology
+                    </label>
+                </li>
+                <li>
+                    <label for="SpEd">
+                        <input id="SpEd" type="radio" name="SpEd" value="SpEd">
+                        Special Ed
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <label for="News">Other News: We would love to hear what you have been working on lately!</label>
+        <textarea id="News" name="news"></textarea>
+        <div class="captcha-container">
+            <label for="xlaAFPcaptcha">Please enter the code:</label>
+                <script language="JavaScript" src="https://apps.cehd.umn.edu/forms/afpcaptcha.aspx?formid=89"></script>
+            </p>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
