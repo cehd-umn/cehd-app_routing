@@ -1,48 +1,71 @@
 <?php
 const BASE_PATH = __DIR__ . '/../../';
+const BASE_CONFIG_PATH = BASE_PATH . 'cehd/config/app/config.yml';
+const EDPSYCH_CONFIG_PATH = BASE_PATH . 'cehd/config/edpsych/config.yml';
 
 require_once BASE_PATH . 'vendor/autoload.php';
-require_once BASE_PATH . 'cehd/apps/helpers/Navigation.php';
-require_once BASE_PATH . 'cehd/apps/helpers/Bootstrap.php';
-require_once BASE_PATH . 'cehd/apps/Response/BaseResponse.php';
-
-// TODO Re-evaluate how this config is managed
-class Config {
-    const BASE_URL = '/edpsych-twig';
-    const DEBUG = true;
-    const DEPT_NAME = "Department of Educational Psychology";
-}
+require_once BASE_PATH . 'cehd/app/helpers/Navigation.php';
+require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
+require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
+require_once BASE_PATH . 'cehd/app/Config/Config.php';
 
 $router = new \Klein\Klein();
+$bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+$global_config = $bootstrap_helper::bootstrap_config(
+    [
+        BASE_CONFIG_PATH,
+        EDPSYCH_CONFIG_PATH,
+    ]
+);
 
 /**
  * Register Twig and set up some global vars for templates
  * Register a Guzzle HTTP client for making requests to the people tool
  */
 $router->respond(function($request, $response, $service, $app) use ($router) {
+    $app->register('site_config', function() {
+        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+        return $bootstrap_helper::bootstrap_config(
+            [
+                BASE_CONFIG_PATH,
+                EDPSYCH_CONFIG_PATH,
+            ]
+        );
+    });
+
     $app->register('template', function() {
+
+        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+
+        // Loads environment and other settings from yaml files into a single array
+        $site_config = $bootstrap_helper::bootstrap_config(
+            [
+                BASE_CONFIG_PATH,
+                EDPSYCH_CONFIG_PATH,
+            ]
+        );
 
         // Set up nav from yaml file
         $nav_file_path = BASE_PATH . 'cehd/config/nav/edpsych/nav.yml';
         $nav_helper = new CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($nav_file_path);
 
-        $asset_base = Config::BASE_URL . '/assets';
+        $asset_base = $site_config['base_url'] . '/assets';
         $nunjucks_view_base = $asset_base . '/dist/views';
         $css_base = $asset_base . '/dist/css';
         $js_base = $asset_base . '/dist/js';
         $cehd_edpsych_nav_open = false;
-        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
-        $twig = $bootstrap_helper::bootstrap_twig(Config::DEBUG);
-        $config = [
+        $twig = $bootstrap_helper::bootstrap_twig($site_config['debug']);
+        $twig_config = [
             'asset_base' => $asset_base,
-            'base_url' => Config::BASE_URL,
+            'base_url' => $site_config['base_url'],
             'copyright_year' => date('Y'),
             'css_base' => $css_base,
-            'dept_name' => Config::DEPT_NAME,
+            'dept_name' => $site_config['dept_name'],
             'js_base' => $js_base,
             'nunjucks_view_base' => $nunjucks_view_base,
             'nav_items' => $nav_helper->get_nav(),
+            'site_config' => $site_config,
         ];
 
         // Check for main nav state
@@ -50,18 +73,14 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
             $cehd_edpsych_nav_open = $_COOKIE['cehd-edpsych-navOpen'];
         }
 
-        $twig->addGlobal('config', $config);
+        $twig->addGlobal('config', $twig_config);
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
         return $twig;
     });
 
     $app->register('http_client', function() {
-        $client_params = [
-            'base_uri' => "https://apps.cehd.umn.edu/people/admin/",
-        ];
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $http_client = $bootstrap_helper::bootstrap_http_client([]);
-        // $http_client->setDefaultOption('verify', false);
         return $http_client;
     });
 });
@@ -69,13 +88,24 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
 /**
  * Set up routes and redirects
  */
-$router->with(Config::BASE_URL, function() use ($router) {
-
+$router->with($global_config['base_url'], function() use ($router) {
     /**
      * Ed Psych Home
      */
     $router->respond('GET', '/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/index.html', []);
+    });
+
+    /**
+     * Examples
+     * Only loads if $_SERVER['SERVER_NAME'] contains "scotch" or "drydock"
+     */
+    $router->respond('GET', '/examples/', function($request, $response, $service, $app) {
+        // Only expose this route if not in production
+        if (!$app->site_config['is_prod'])
+        {
+            echo $app->template->render('edpsych/examples/index.html', []);
+        }
     });
 
     /**
@@ -87,7 +117,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * TODO Figure out a more programmatic way to manage these redirects
          */
         $router->respond('GET', '/diversity-inclusion.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/about/diversity-inclusion/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/about/diversity-inclusion/', 301)->send();
         });
 
         /**
@@ -123,27 +153,27 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * Redirects
          */
         $router->respond('GET', '/CSPP.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/cspp/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/cspp/', 301)->send();
         });
 
         $router->respond('GET', '/Foundations.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/foundations/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/foundations/', 301)->send();
         });
 
         $router->respond('GET', '/QME.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/qme/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/qme/', 301)->send();
         });
 
         $router->respond('GET', '/schoolpsych.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/school-psych/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/school-psych/', 301)->send();
         });
 
         $router->respond('GET', '/SpecialEd.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/special-ed/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/special-ed/', 301)->send();
         });
 
         $router->respond('GET', '/SpEd-MEd.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/future-students/special-ed-med/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/future-students/special-ed-med/', 301)->send();
         });
 
         /**
@@ -186,19 +216,19 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * Redirects
          */
         $router->respond('GET', '/CSPP.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/current/cspp/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/cspp/', 301)->send();
         });
 
         $router->respond('GET', '/Foundations.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/current/foundations/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/foundations/', 301)->send();
         });
 
         $router->respond('GET', '/QME.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/current/qme/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/qme/', 301)->send();
         });
 
         $router->respond('GET', '/SpecialEd.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/current/special-ed/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/special-ed/', 301)->send();
         });
 
         /**
@@ -233,7 +263,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * Redirects
          */
         $router->respond('GET', '/giving.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/giving/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/giving/', 301)->send();
         });
     });
 
@@ -360,7 +390,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
              */
             $router->respond('GET', '/Penny.html', function($request, $response, $service, $app) {
                 // TODO fix this redirect
-                $response->redirect(Config::BASE_URL . '/people/faculty/penny/', 301)->send();
+                $response->redirect($app->site_config['base_url'] . '/people/faculty/penny/', 301)->send();
             });
 
             /**
@@ -379,7 +409,7 @@ $router->with(Config::BASE_URL, function() use ($router) {
              * Redirects
              */
             // $router->respond('GET', '/Penny.html', function($request, $response, $service, $app) {
-            //     $response->redirect(Config::BASE_URL . '/people/faculty/penny/', 301)->send();
+            //     $response->redirect($app->site_config['base_url'] . '/people/faculty/penny/', 301)->send();
             // });
 
             /**
@@ -394,19 +424,19 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * Redirects
          */
         $router->respond('GET', '/CSPP/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/programs/cspp/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/programs/cspp/', 301)->send();
         });
 
         $router->respond('GET', '/QME/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/programs/qme/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/', 301)->send();
         });
 
         $router->respond('GET', '/Graduate-Minor.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/programs/graduate-minor/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/programs/graduate-minor/', 301)->send();
         });
 
         $router->respond('GET', '/SchoolPsych/students.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/programs/schoolpsych/students/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/students/', 301)->send();
         });
 
         /**
@@ -461,19 +491,19 @@ $router->with(Config::BASE_URL, function() use ($router) {
          * Redirects
          */
         $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/research/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/research/', 301)->send();
         });
 
         $router->respond('GET', '/labs/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/research/labs/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/research/labs/', 301)->send();
         });
 
         $router->respond('GET', '/topics/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/research/topics/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/research/topics/', 301)->send();
         });
 
         $router->respond('GET', '/student-dissertations/default.html', function($request, $response, $service, $app) {
-            $response->redirect(Config::BASE_URL . '/research/student-dissertations/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/research/student-dissertations/', 301)->send();
         });
 
         /**
@@ -495,6 +525,11 @@ $router->with(Config::BASE_URL, function() use ($router) {
             echo $app->template->render('edpsych/research/student-dissertations.html', ["section" => "research"]);
         });
     });
+
+    $router->respond('404', function ($request) {
+        $page = $request->uri();
+        echo "Oops, it looks like $page doesn't exist..\n";
+    });
 });
 
-$router->dispatch(null, new \CEHD\Apps\Response\BaseResponse());
+$router->dispatch(null, new \CEHD\App\Response\BaseResponse());

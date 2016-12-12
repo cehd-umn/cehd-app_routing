@@ -1,5 +1,5 @@
 <?php
-namespace CEHD\Apps\Response;
+namespace CEHD\App\Response;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
