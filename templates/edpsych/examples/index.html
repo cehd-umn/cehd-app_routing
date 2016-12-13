@@ -1,272 +1,380 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Alumni" %}
+{% set page_title = "Ed Psych Code Examples" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        samp, code {
+            font-family: monospace;
+        }
 
-{% block main_content %}
-    {# TODO write code samples here #}
-    <article class="twothirds feature">
-        <h2 class="h1 text-center first">{{ page_title }}</h2>
-        <section>
-            <div class="third">
-                <img src="http://apps.cehd.umn.edu/people/Headshot/RodriguezM-2015.jpg" alt="Professor Michael Rodriguez headshot.">
-            </div>
-            <div class="twothird">
-                <h3>Rodriguez featured in University's Driven to Discover campaign</h3>
-                <p>The opportunity gap among children in our society is growing,
-                and part of the problem is how we assess and educate them.
-                Professor Michael Rodriguez is working to close the gap by helping
-                schools understand how to work with diverse students, families, and
-                communities.</p>
-                <p><a href="/">View the campaign</a>.</p>
-            </div>
-        </section>
-    </article>
-    <div class="asides dynamic-content">
-        <article class="third">
-            <h4 class="h2" >Alumni in the news</h4>
-            <div id="alumni-news-container" aria-live="polite">
-                <div class="loader small">
-                    <div class="loader-figure small"></div>
-                    <p class="loader-label">Loading&hellip;</p>
-                </div>
-            </div>
-        </article>
-        <article class="third">
-            <h4 class="h2">Department news</h4>
-            <div id="dept-news-container">
-                <div class="loader small">
-                    <div class="loader-figure small"></div>
-                    <p class="loader-label">Loading&hellip;</p>
-                </div>
-            </div>
-        </article>
-        <article class="third">
-            <h4 class="h2">Calendar</h4>
-            <div id="calendar-container">
-                <div class="loader small">
-                    <div class="loader-figure small"></div>
-                    <p class="loader-label">Loading&hellip;</p>
-                </div>
-            </div>
-        </article>
-    </div>
-    <article>
-        <section class="feature half">
-            <h3 class="h1 text-center">Stay Involved</h3>
-            <p>We love to keep in touch with our former students. Please let us
-            know what you're doing. You can either email us at epsy-adm@umn.edu
-            or fill out the form.<!-- link forthcoming --> (We won’t share this
-            information with anyone except your advisor and to update our
-            alumni database.)</p>
-        </section>
-        <div class="twothirds feature">
-            <section class="half">
-                <h4 class="h2">Alumni Groups</h4>
-                <p>The {{ config.dept_name }} would like to encourage our alumni to
-                stay involved with the program, the College of Education and Human
-                Development, and the University of Minnesota. See links below for
-                alumni groups.</p>
-                <p>(Links forthcoming.)</p>
-            </section>
-            <section class="half">
-                <h4 class="h2">Newsletter</h4>
-                <p>Stay connected to what's happening in educational psychology
-                at the University of Minnesota. Send and email to
-                epcomn@umn.edu to subscribe to our quarterly enewsletter.
+        samp {
+            background: #f0f0f0;
+            color: #79111a;
+            font-family: monospace;
+        }
 
-                <h4 class="h2">Newsletter archive</h4>
-                <p>Miss and issue? Catch up on past Educational Psychology newsletters.</p>
-            </section>
-        </div>
-    </article>
-    <article class="emphasis">
-        <div class="feature">
-            <aside class="pull-quote">
-                <p>&ldquo;I conduct research with young children and their families to
-                explore language development and interventions within naturally
-                occurring routines.&rdquo;</p>
-            </aside>
-            <article>
-                <h3>Anne Larson, Ph.D '16<br>
-                <small>Assistant professor, Utah State University</small></h3>
-
-                <p>Anne researches early language development and studies
-                sociocultural and environmental factors that affect
-                child-caregiver interactions.</p>
-
-                <p>She also teaches course in the birth-to-5 program to prepare
-                early childhood special educators for work with children who have
-                disabilities, as well as the parents and caregivers who who help
-                support those children.</p>
-            </article>
-        </div>
-    </article>
-    <article>
-        <section class="twothirds feature">
-            <h3 class="h1 text-center">Where are they now</h3>
-            <p>Our alumni find jobs. In fact, 100% of our counseling and student
-            personnel psychology and school psychology students found jobs in 2015.
-            Dedicated to improving the way people learn and grouw, our graduates
-            work in schools and communities and conduct cutting edge research in
-            educational psychology.</p>
-
-            <p>Below are just a few examples of our graduates' careers.</p>
-        </section>
-        <section>
-            <div class="half">
-                <h4 class="h2">Counseling and student personnel</h4>
-                <ul>
-                    <li>Psychology</li>
-                    <li>Licensed K-12 school counselor</li>
-                    <li>College and student personnel counselor</li>
-                    <li>Mental health professional in a community agency</li>
-                </ul>
-                <h4 class="h2">Psychological foundations of education</h4>
-                <ul>
-                    <li>Governmental Agencies</li>
-                    <li>Health care organization evaluator/researcher</li>
-                    <li>Human and social service organizations</li>
-                    <li>Research scientists at universities and corporations</li>
-                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
-                    <li>Other educational settings (e.g., K-12 school research offices)</li>
-                </ul>
-                <h4 class="h2">Quantitative methods in education</h4>
-                <ul>
-                    <li>Public school systems</li>
-                    <li>Private industry</li>
-                    <li>Research and evaluation centers</li>
-                    <li>State departments of instruction</li>
-                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
-                    <li>Test publishing firms</li>
-                </ul>
-
-                <p>More info on where quantitative methods in education graduates found jobs.</p>
-            </div><!-- end half column -->
-            <div class="half">
-                <h4 class="h2">School psychology</h4>
-                <ul class="no-bullet">
-                    <li><strong>M.A./Specialist</strong>: Work in public and
-                    private schools, preschools, and state depar of
-                    education.</li>
-                    <li><strong>Ph.D.</strong>: Work in universities (as
-                    faculty), mental health agencies, research centers and
-                    think tanks, clinical settings, state departments of
-                    education, and independent practices.</li>
-                </ul>
-                <h4 class="h2">Special education</h4>
-                <ul>
-                    <li>B.S./ABS licensure: Teach individuals in special education from birth to age 21</li>
-                    <li>M.Ed./licensure: Teach individuals in special education from birth to age 21</li>
-                    <li>M.A./Ph.D.: Conduct research, teach in universities,
-                    and work in other educational settings in special
-                    education.</li>
-                    <li>State departments of instruction</li>
-                    <li>Teaching and research at colleges and universities (Ph.D. only)</li>
-                    <li>Test publishing firms</li>
-                </ul>
-            </div><!-- end half column -->
-        </section>
-    </article>
+        code {
+            display: block;
+            padding: 1em;
+        }
+        pre {
+            margin: 0;
+        }
+        .grid-example {
+            background: #f0f0f0;
+        }
+        .margin-top-1 {
+            margin-top: 1em;
+        }
+        .margin-top-2 {
+            margin-top: 2em;
+        }
+        .margin-top-3 {
+            margin-top: 3em;
+        }
+    </style>
 {% endblock %}
-{% block bottom_js %}{{ parent() }}
-    <script>
-        /**
-         * Dept. News
-         */
-        var news_base_url = "{{ config.base_url }}/services/news/feed/";
-        var dept_params = {
-            url: news_base_url,
-            data: {
-                "feed-path": "category/alumni,educational-psychology/feed"
-            }
-        };
-        var dept_client = new HTTPClient();
-        var $dept_request = dept_client.get(dept_params);
+{% block main_content %}
+<div class="feature half margin-top-2">
+    <p>The Ed Psych site has several custom CSS classes to make it easy to generate
+    pages that match their designs. Most of the time you should be able to use a
+    combination and HTML elements and CSS classes to make a page look the way it
+    should.</p>
 
-        $dept_request.done(function() {
-            var results = dept_client.getResults();
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "alumni.html",
-                "$target_element": $("#alumni-news-container"),
-                "data": {
-                    news: results.channel.item,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-            Renderer.init(template_params);
-            Renderer.render();
-        });
+    <h2 class="h1">Page Title and H1</h2>
 
-        /**
-         * Alumni news
-         */
-        var alum_params = {
-            url: news_base_url,
-            data: {
-                "feed-path": "category/departments/educational-psychology/feed"
-            }
-        };
-        var alum_client = new HTTPClient();
-        var $alum_request = alum_client.get(alum_params);
+    <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
+    engine</a> is configured to build off of a "base" template that includes a lot
+    of code that you shouldn't have to worry about. Included in that base template
+    are the <samp>title</samp> and <samp>h1</samp> tag.</p>
 
-        $alum_request.done(function() {
-            var results = alum_client.getResults();
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "alumni.html",
-                "$target_element": $("#dept-news-container"),
-                "data": {
-                    news: results.channel.item,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-            Renderer.init(template_params);
-            Renderer.render();
-        });
+    <p><em>You shouldn't include an <samp>h1</samp> in your templates</em>. To
+    control what appears in those tags, use the <samp>title</samp> and
+    <samp>heading_1</samp> <a
+    href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
 
-        /**
-         * Events calendar
-         */
-        var events_base_url = "{{ config.base_url }}/services/events/feed/";
-        var events_params = {
-            url: events_base_url,
-            data: {
-                "q": "6",
-                "r": "3",
-                "t": "129",
-            }
-        };
-        var events_client = new HTTPClient();
-        var $events_request = events_client.get(events_params);
+    <pre><code class="twig">{%- raw -%}
+{# Set the title #}
+{% block title %}
+    My Page Title
+{% endblock %}
 
-        $events_request.done(function() {
-            var results = events_client.getResults();
-            var $target_element = $("#calendar-container");
-            var events = null;
+{# Set the h1 #}
+{% block heading_1 %}
+    My H1 Text
+{% endblock %}
+{%- endraw -%}</code></pre>
 
-            if (typeof results["@attributes"].totalCount > 0) {
-                // Results come back in chronological order so reverse the array
-                results.event.reverse();
-            } else {
-                results.event = [];
-            }
+    <p>The code above will generate this html on the page:</p>
 
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
-                "template_name": "alumni.html",
-                "$target_element": $target_element,
-                "data": {
-                    events: results.event,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
+    <pre><code class="html">
+&lt;title&gt;My Page Title&lt;/title&gt;
 
-            Renderer.init(template_params);
-            Renderer.render();
-        });
-    </script>
+&lt;h1&gt;My H1 Text&lt;/h1&gt;
+    </code></pre>
+
+    <h3 class="h2">Setting Variables</h3>
+    <p>If you find that you're repeating yourself, you can define <a
+    href="http://twig.sensiolabs.org/doc/templates.html#variables">a
+    variable</a> and insert it anywhere in the template using double curly
+    braces: <samp>
+    {% raw %}{{ }}{% endraw %}</samp>.
+    <pre><code class="twig">{%- raw -%}
+{% set page_title = "Alumni" %}{# set the variable #}
+{% block title %}
+    {{ page_title }}{# use the page title variable for both the title and h1 #}
+{% endblock %}
+{% block heading_1 %}
+    {{ page_title }}
+{% endblock %}
+{%- endraw -%}</code></pre>
+
+    <h2 class="h1">Heading Tags</h2>
+
+    <p>To maintain a consistent document structure, it's a good idea to try to
+    only have one <samp>&lt;h1&gt;</samp> tag on the page. Since the
+    <samp>&lt;h1&gt;</samp> tag is already used, start your content  with an
+    <samp>&lt;h2&gt;</samp> instead. <emphasis>Remember, headings are for
+    structure, not presentation.</emphasis></p>
+
+    <h3 class="h2">Heading Classes</h3>
+
+    <p>In order to maintain a <emphasis>visual</emphasis> hierarchy, headings
+    have matching CSS classes to control their sizes. For example:</p>
+
+    <pre><code>
+&lt;h1&gt;This is what an h1 would look like&lt;/h1&gt;
+&lt;h2&gt;This is what an h2 would look like&lt;/h2&gt;
+&lt;h2 class=&quot;h1&quot;&gt;This is an h2 with the .h1 class&lt;/h2&gt;
+    </code></pre>
+
+    <h1>This is what an h1 would look like</h1>
+    <h2>This is what an h2 would look like</h2>
+    <h2 class="h1">This is an h2 with the .h1 class</h2>
+
+    <p>This provides control over the <emphasis>styles</emphasis> while
+    maintaining good document structure.</p>
+</div>
+<div class="feature twothird">
+
+    <pre><code>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+        </code></pre>
+
+    <pre><code>
+&lt;h2 class=&quot;h1&quot;&gt;h2 with .h1 class&lt;/h2&gt;
+&lt;h2 class=&quot;h2&quot;&gt;h2 with .h2 class&lt;/h2&gt;
+&lt;h2 class=&quot;h3&quot;&gt;h2 with .h3 class&lt;/h2&gt;
+&lt;h2 class=&quot;h4&quot;&gt;h2 with .h4 class&lt;/h2&gt;
+&lt;h2 class=&quot;h5&quot;&gt;h2 with .h5 class&lt;/h2&gt;
+&lt;h2 class=&quot;h6&quot;&gt;h2 with .h6 class&lt;/h2&gt;
+    </code></pre>
+
+    <div class="half">
+        <h4 class="h3">Default Heading Sizes</h3>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </div>
+    <div class="half">
+        <h4 class="h3">h2 With Clases</h4>
+        <h2 class="h1">h2 with <samp>.h1</samp> class</h2>
+        <h2 class="h2">h2 with <samp>.h2</samp> class</h2>
+        <h2 class="h3">h2 with <samp>.h3</samp> class</h2>
+        <h2 class="h4">h2 with <samp>.h4</samp> class</h2>
+        <h2 class="h5">h2 with <samp>.h5</samp> class</h2>
+        <h2 class="h6">h2 with <samp>.h6</samp> class</h2>
+    </div>
+
+</div>
+<div class="half feature">
+    <h3 class="h2">Layout and Grid</h3>
+    <p>Most pages will need elements laid out at half, one third or two thirds
+    of the page. You can also create narrower, centered columns at half or
+    two-thirds widths.</p>
+
+    <h4 class="h3">Two Columns at Equal Widths</h4>
+    <pre><code>
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+    </code></pre>
+    <div class="margin-top-3">
+        <div class="half grid-example">50%</div>
+        <div class="half grid-example">50%</div>
+    </div>
+</div>
+<div class="half feature">
+    <h4 class="h3">Three Columns at Equal Widths</h4>
+    <pre><code>
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+    </code></pre>
+    <div class="margin-top-1">
+        <div class="third grid-example">33%</div>
+        <div class="third grid-example">33%</div>
+        <div class="third grid-example">33%</div>
+    </div>
+</div>
+<div class="half feature">
+    <h4 class="h3">Two Thirds/One Third Columns</h4>
+    <pre><code>
+&lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+    </code></pre>
+    <div class="margin-top-1">
+        <div class="twothird grid-example">66%</div>
+        <div class="third grid-example">33%</div>
+    </div>
+</div>
+<div class="half feature margin-top-3">
+    <p>To make a half-width or two-thirds width column that is centered, use
+    the <samp>.feature</samp> class.</p>
+</div>
+<div class="half feature">
+    <pre><code>
+&lt;div class=&quot;half feature&quot;&gt;
+    &lt;p&gt;Half-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+</div>
+<div class="half feature grid-example margin-top-1">
+    <p>Half-width column that is centered</p>
+</div>
+<div class="half feature margin-top-2">
+    <pre><code>
+&lt;div class=&quot;twothirds feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- note: &quot;twothirds&quot; and &quot;twothird&quot; will both work. (I
+kept forgetting which was correct.) --&gt;
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+</div>
+<div class="twothirds feature grid-example margin-top-1">
+    <p>Two thirds-width column that is centered</p>
+</div>
+<div class="half feature margin-top-3">
+    <p>To add a background with the correct shade of yellow and bigger margins
+    to one of these, add the <samp>.emphasis</samp> class.</p>
+</div>
+<div class="half feature margin-top-1">
+    <pre><code>
+&lt;div class=&quot;half feature emphasis&quot;&gt;
+    &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+</div>
+<div class="half feature emphasis margin-top-1">
+    <p>A half-width column with yellow background</p>
+</div>
+<div class="half feature margin-top-3">
+    <p>Building on this further, you can use the <samp>.pull-quote</samp> class
+    to bump up the font size for things like, well, pull quotes.</p>
+    <pre><code>
+&lt;div class=&quot;half feature emphasis&quot;&gt;
+    &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+    &lt;p class=&quot;pull-quote&quot;&gt;"This is an important quote."&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+</div>
+<div class="half feature emphasis margin-top-1">
+    <p>A half-width column with yellow background</p>
+    <p class="pull-quote">"This is an important quote."</p>
+</div>
+<div class="half feature margin-top-3">
+    <h4 class="h3">12-column Grid</h4>
+    <p>Some times you may need more granular control over column widths. There
+    is a set of classes for a 12-column grid system. Think of a grid of 12
+    columns like so:
+</div>
+<div class="span-12">
+    <div class="span-1 grid-example">1</div>
+    <div class="span-1 grid-example">2</div>
+    <div class="span-1 grid-example">3</div>
+    <div class="span-1 grid-example">4</div>
+    <div class="span-1 grid-example">5</div>
+    <div class="span-1 grid-example">6</div>
+    <div class="span-1 grid-example">7</div>
+    <div class="span-1 grid-example">8</div>
+    <div class="span-1 grid-example">9</div>
+    <div class="span-1 grid-example">10</div>
+    <div class="span-1 grid-example">11</div>
+    <div class="span-1 grid-example">12</div>
+</div>
+<div class="half feature margin-top-3">
+    <p>To span two of those columns, you would use the <samp>.span-2</samp>
+    class like so:</p>
+</div>
+<div class="span-12">
+    <div class="span-1 grid-example">1</div>
+    <div class="span-1 grid-example">2</div>
+    <div class="span-1 grid-example">3</div>
+    <div class="span-1 grid-example">4</div>
+    <div class="span-1 grid-example">5</div>
+    <div class="span-1 grid-example">6</div>
+    <div class="span-1 grid-example">7</div>
+    <div class="span-1 grid-example">8</div>
+    <div class="span-1 grid-example">9</div>
+    <div class="span-1 grid-example">10</div>
+    <div class="span-1 grid-example">11</div>
+    <div class="span-1 grid-example">12</div>
+</div>
+<div class="span-12 margin-top-1">
+    <div class="span-2 grid-example">.span-2</div>
+</div>
+<div class="half feature">
+    <pre><code>
+&lt;div class=&quot;span-2&quot;&gt;.span-2&lt;/div&gt;
+    </code></pre>
+</div>
+<div class="half feature margin-top-3">
+    <p>Just append the number of columns you wish to span to
+    <samp>.span-</samp>. (I.e, <samp>.span-1</samp>, <samp>.span-2</samp>,
+    <samp>.span-3</samp>, <samp>.span-4</samp>, etc.)</p>
+</div>
+<div class="span-12">
+    <div class="span-1 grid-example">1</div>
+    <div class="span-1 grid-example">2</div>
+    <div class="span-1 grid-example">3</div>
+    <div class="span-1 grid-example">4</div>
+    <div class="span-1 grid-example">5</div>
+    <div class="span-1 grid-example">6</div>
+    <div class="span-1 grid-example">7</div>
+    <div class="span-1 grid-example">8</div>
+    <div class="span-1 grid-example">9</div>
+    <div class="span-1 grid-example">10</div>
+    <div class="span-1 grid-example">11</div>
+    <div class="span-1 grid-example">12</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-1 grid-example">.span-1</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-2 grid-example">.span-2</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-3 grid-example">.span-3</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-4 grid-example">.span-4</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-5 grid-example">.span-5</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-6 grid-example">.span-6</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-7 grid-example">.span-7</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-8 grid-example">.span-8</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-9 grid-example">.span-9</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-10 grid-example">.span-10</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-11 grid-example">.span-11</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-12 grid-example">.span-12</div>
+</div>
+<div class="half feature margin-top-3">
+    <p>You can also use these in different combinations to achieve the result
+    you want <em>as long as the <samp>.span-x</samp> values add up to
+    12</em>.</p>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-10 grid-example">.span-10</div>
+    <div class="span-2 grid-example">.span-2</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-4 grid-example">.span-4</div>
+    <div class="span-8 grid-example">.span-8</div>
+</div>
+<div class="margin-top-1 span-12">
+    <div class="span-6 grid-example">.span-6</div>
+    <div class="span-2 grid-example">.span-2</div>
+    <div class="span-2 grid-example">.span-2</div>
+    <div class="span-2 grid-example">.span-2</div>
+</div>
 {% endblock %}
