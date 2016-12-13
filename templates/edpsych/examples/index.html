@@ -45,7 +45,7 @@
     combination and HTML elements and CSS classes to make a page look the way it
     should.</p>
 
-    <h2 class="h1">Page Title and H1</h2>
+    <h2 class="h1">Page Title and H1 Blocks</h2>
 
     <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
     engine</a> is configured to build off of a "base" template that includes a lot
@@ -56,6 +56,15 @@
     control what appears in those tags, use the <samp>title</samp> and
     <samp>heading_1</samp> <a
     href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
+
+    <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
+    <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
+
+    <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
+
+    <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
+
+    <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
 
     <pre><code class="twig">{%- raw -%}
 {# Set the title #}
@@ -77,12 +86,86 @@
 &lt;h1&gt;My H1 Text&lt;/h1&gt;
     </code></pre>
 
-    <h3 class="h2">Setting Variables</h3>
+    <h2 class="h1">Other Blocks</h2>
+
+    <h3 class="h2"><samp>main_content</samp></h3>
+
+    <p>Use the <samp>main_content</samp> block for the content of the page.</p>
+
+    <p>Every template already has this block set up.</p>
+
+    <pre><code>{% raw %}
+{% block main_content %}
+    Your html content goes here.
+{% endblock %}
+    {% endraw %}</code></pre>
+
+    <h3 class="h2"><samp>title_prepend</samp> and <samp>title_append</samp></h3>
+
+    <p><samp>title_prepend</samp> allows us to prepend the same thing to
+    multiple page titles. E.g., every page title can be prepended with
+    "Department of Educational Psychology".</p>
+
+    <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
+    for appending, obviously.
+
+    <h3 class="h2"><samp>meta_content</samp></h3>
+
+    <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
+    can insert a <samp>meta_content</samp> block on a template to populate a
+    <samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
+
+    <pre><code>{% raw %}
+{% meta_content %}This is my page description for search engines to read{% endblock %}{% endraw %}
+    </code></pre>
+</div>
+
+<div class="half feature margin-top-1">
+    <pre><code>
+&lt;meta name=&quot;description&quot; content=&quot;This is my page description for search engines to read&quot;&gt;
+    </code></pre>
+</div>
+
+<div class="half feature">
+    <h3 class="h2"><samp>extra_css</samp></h4>
+
+    <p>If you need to create a brand new style that you can't find here,
+    there's <a
+    href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">a
+    Twig template block</a> for that.</p>
+
+    <pre><code>
+{% raw %}{% block extra_css %}
+&lt;style&gt;
+    .special-snowflake {
+        color: white;
+    }
+&lt;/style&gt;
+{% endblock %}{% endraw %}
+    </code></pre>
+</div>
+
+<div class="half feature margin-top-3">
+        <h2 class="h1">Template Variables</h2>
+
+    <p>There are a handful of variables set up for use in all templates. You
+    can insert variables any where using double curly braces: <samp>
+    {% raw %}{{ }}{% endraw %}</samp>.</p>
+
+    <p>The department name is probably the one that is most useful. You can
+    insert that anywhere by doing this:</p>
+
+    <pre><code>{% raw %}{{ config.dept_name }}{% endraw %}</code></pre>
+
+    <p>Inserting that code will output "{{ config.dept_name }}".</p>
+
+    <p>Hopefully that will help with using the department name in a consistent way.</p>
+
+    <h3 class="h2">Setting Your Own Variables</h3>
+
     <p>If you find that you're repeating yourself, you can define <a
     href="http://twig.sensiolabs.org/doc/templates.html#variables">a
-    variable</a> and insert it anywhere in the template using double curly
-    braces: <samp>
-    {% raw %}{{ }}{% endraw %}</samp>.
+    variable</a> using <samp>set</samp>, and insert it anywhere in the template.
     <pre><code class="twig">{%- raw -%}
 {% set page_title = "Alumni" %}{# set the variable #}
 {% block title %}
@@ -92,7 +175,40 @@
     {{ page_title }}
 {% endblock %}
 {%- endraw -%}</code></pre>
+</div>
 
+<div class="half feature margin-top-2">
+    <p>Put all together a beginning template will look something like this:</p>
+    <pre><code>{% raw %}{# this is important, don't delete it #}
+{% extends "edpsych/layout/section.html" %}
+
+{# Set a variable so we can use the same text for the title element and the h1 element #}
+{% set page_title = "Current" %}
+
+{# Use the variable for the page title #}
+{% block title %}{{ page_title }}{% endblock %}
+
+{# Use the same variable for the h1 #}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+
+{# Insert custom CSS #}
+{% block extra_css %}
+    &lt;style&gt;
+        .special-snowflake {
+            color: white;
+        }
+    &lt;/style&gt;
+{% endblock %}
+
+{# Put all the content in the main_content block #}
+{% block main_content %}
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+
+    &lt;p&gt;This is where my content goes.&lt;/p&gt;
+{% endblock %}{% endraw %}</code></pre>
+</div>
+
+<div class="half feature margin-top-3">
     <h2 class="h1">Heading Tags</h2>
 
     <p>To maintain a consistent document structure, it's a good idea to try to
@@ -112,9 +228,9 @@
 &lt;h2 class=&quot;h1&quot;&gt;This is an h2 with the .h1 class&lt;/h2&gt;
     </code></pre>
 
-    <h1>This is what an h1 would look like</h1>
-    <h2>This is what an h2 would look like</h2>
-    <h2 class="h1">This is an h2 with the .h1 class</h2>
+    <h1>This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
+    <h2>This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
+    <h2 class="h1">This is an <samp>&lt;h2&gt;</samp> with the <samp>.h1</samp> class</h2>
 
     <p>This provides control over the <emphasis>styles</emphasis> while
     maintaining good document structure.</p>
@@ -279,7 +395,7 @@ kept forgetting which was correct.) --&gt;
 </div>
 <div class="half feature margin-top-3">
     <p>To span two of those columns, you would use the <samp>.span-2</samp>
-    class like so:</p>
+    class like this:</p>
 </div>
 <div class="span-12">
     <div class="span-1 grid-example">1</div>
@@ -378,7 +494,7 @@ kept forgetting which was correct.) --&gt;
     <div class="span-2 grid-example">.span-2</div>
 </div>
 
-<div class="half feature">
+<div class="half feature margin-top-3">
     <h3 class="h2">Other Styles</h3>
 
     <h4 class="h3">Centering Text</h4>
