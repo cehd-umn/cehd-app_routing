@@ -9,6 +9,16 @@
 @import "loader";
 @import "form_hack";
 
-// #maincontent {
-//     margin-top: 40px;
-// }
+.emphasis {
+    background-color: $cehd-tertiary-gold;
+    padding: 2em;
+}
+
+.pull-quote {
+    font-size: 1.5em;
+}
+
+.menuicon-container {
+    line-height: 1;
+    width: 2em;
+}

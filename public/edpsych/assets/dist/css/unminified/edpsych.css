@@ -583,15 +583,6 @@ nav li li {
   width: 0;
 }
 
-.emphasis {
-  background-color: #ffec99;
-  padding: 2em;
-}
-
-.pull-quote {
-  font-size: 1.5em;
-}
-
 .dynamic-content {
   min-height: 8em;
 }
@@ -758,11 +749,6 @@ nav li li {
   margin-right: 0;
 }
 
-.menuicon-container {
-  line-height: 1;
-  width: 2em;
-}
-
 /** Begin Main Structure   **/
 body {
   font-family: 'Lato', Verdana, Geneva, sans-serif;
@@ -779,40 +765,6 @@ body {
 .twothird,
 .twothirds {
   clear: none;
-}
-
-.active-extra nav {
-  -moz-transition: .2s all ease;
-  -ms-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
-}
-
-.active-extra #maincontent,
-.active-extra #extracontent {
-  -moz-transition: .2s all ease;
-  -ms-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
-}
-
-.active-nav nav {
-  -moz-transition: .2s all ease;
-  -ms-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
-}
-
-.active-nav #maincontent,
-.active-nav #extracontent {
-  -moz-transition: .2s all ease;
-  -ms-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
 }
 
 .wordmark-svg {
@@ -1013,6 +965,7 @@ div {
 
 pre {
   display: block;
+  font-family: monospace;
   margin: 10px;
   padding: 0;
 }
@@ -2006,4 +1959,18 @@ input[type="submit"]:focus,
 input[type="reset"]:focus {
   background-color: #c8c8c8;
   color: #282828;
+}
+
+.emphasis {
+  background-color: #ffec99;
+  padding: 2em;
+}
+
+.pull-quote {
+  font-size: 1.5em;
+}
+
+.menuicon-container {
+  line-height: 1;
+  width: 2em;
 }
