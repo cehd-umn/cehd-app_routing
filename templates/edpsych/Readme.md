@@ -7,11 +7,11 @@ site specifically.
 
 To make updating and coding the site navigation simpler, the information about
 the main navigation is stored in [a YAML
-file](../cehd/config/nav/edpsych/nav.yml).
+file](../../cehd/config/nav/edpsych/nav.yml).
 
 The information in that file is parsed into an array. [The Ed Psych `base.html`
-template](layout/base.html) loops over the array to output the navigation.  
-Here is a snipped of the YAML file that defines the main nav:
+template](layout/base.html) loops over the array to output the navigation.
+Here is a snippet of the YAML file that defines the main nav:
 
 ```
 ---
