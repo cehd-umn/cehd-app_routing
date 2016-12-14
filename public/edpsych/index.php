@@ -1,4 +1,11 @@
 <?php
+/**
+ * The Ed Psych site app
+ * @author Tony Thomas <thoma127@umn.edu>
+ * @license GPL 3.0
+ * @version 0.1.0
+ */
+
 const BASE_PATH = __DIR__ . '/../../';
 const BASE_CONFIG_PATH = BASE_PATH . 'cehd/config/app/config.yml';
 const EDPSYCH_CONFIG_PATH = BASE_PATH . 'cehd/config/edpsych/config.yml';
@@ -9,8 +16,23 @@ require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
 require_once BASE_PATH . 'cehd/app/Config/Config.php';
 
+/**
+ * Instantiate a new instance of Klein. I'm calling it `$router` because I like
+ * that better.
+ */
 $router = new \Klein\Klein();
+
+/**
+ * Instantiate a new boostrap helper Class
+ * TODO figure out how to only do this once
+ */
 $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+
+/**
+ * Set up a global config to pass into the Klein app
+ * TODO There must be a way to do this inside Klein. Perhaps the next minor
+ * version will support that.
+ */
 $global_config = $bootstrap_helper::bootstrap_config(
     [
         BASE_CONFIG_PATH,
@@ -23,7 +45,12 @@ $global_config = $bootstrap_helper::bootstrap_config(
  * Register a Guzzle HTTP client for making requests to the people tool
  */
 $router->respond(function($request, $response, $service, $app) use ($router) {
+
+    /**
+     * Register an app site_config using info in YAML files
+     */
     $app->register('site_config', function() {
+        // TODO This is not DRY
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         return $bootstrap_helper::bootstrap_config(
             [
@@ -33,8 +60,11 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         );
     });
 
+    /**
+     * Register Twig as the template engine for the app
+     */
     $app->register('template', function() {
-
+        // TODO This is not DRY
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
 
         // Loads environment and other settings from yaml files into a single array
@@ -50,6 +80,7 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $nav_helper = new CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($nav_file_path);
 
+        // Set up configuration variables for Twig
         $asset_base = $site_config['base_url'] . '/assets';
         $nunjucks_view_base = $asset_base . '/dist/views';
         $css_base = $asset_base . '/dist/css';
@@ -73,12 +104,18 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
             $cehd_edpsych_nav_open = $_COOKIE['cehd-edpsych-navOpen'];
         }
 
+        // Add global variables to Twig
         $twig->addGlobal('config', $twig_config);
         $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
         return $twig;
     });
 
+    /**
+     * Register a GuzzleHTTP client for the app. This is used to make requests
+     * for things like news and People Tool feeds.
+     */
     $app->register('http_client', function() {
+        // TODO This is not DRY
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $http_client = $bootstrap_helper::bootstrap_http_client([]);
         return $http_client;

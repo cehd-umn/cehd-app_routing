@@ -148,4 +148,4 @@ Page content goes here.
 
 To avoid repetition and also for convenience, a handful of global variables are
 defined for all templates. For an example, see [the Ed Psych template
-Readme](edpsych/Readme.md).
+Readme](edpsych/).
