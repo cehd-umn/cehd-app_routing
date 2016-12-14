@@ -99,7 +99,7 @@ That's about all you need to worry about with namespacing.
 Site configuration is generated from YAML files. Multiple files can be parsed
 by the Config class to return a single array of values. This makes adding new
 configuration values very simple. There are app-level configuration values in
-[the app config.yaml file](../cehd/config/app/config.yml).
+[the app config.yaml file](../../cehd/config/app/config.yml).
 
 For an example of a site-level config file, [see the Ed Psych
 config](../cehd/config/edpsych/config.yml).
