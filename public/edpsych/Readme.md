@@ -102,7 +102,7 @@ configuration values very simple. There are app-level configuration values in
 [the app config.yaml file](../../cehd/config/app/config.yml).
 
 For an example of a site-level config file, [see the Ed Psych
-config](../cehd/config/edpsych/config.yml).
+config](../../cehd/config/edpsych/config.yml).
 
 We can add an arbitray number of files, or configuration values within these
 files. then we just have to pass them in to the Configuration class to get an
