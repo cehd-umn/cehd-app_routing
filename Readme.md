@@ -46,7 +46,7 @@ has a lot of good information. Here are the basics.
 
 Templates can "extend" other templates. That allows us to reuse code across
 pages and entire sites. E.g., the University header and footer. That code can
-exist in a single template and other templates can **extend** it and inject
+exist in a single template and other templates can *extend* it and inject
 code into "blocks."
 
 #### Blocks
@@ -91,7 +91,7 @@ you may want the `<h1>` to have the same content as the page title element.
 Variables are set using the `set` keyword enclosed in `{% %}`.
 
 ```
-{% set my_variable = "My variable value %}
+{% set my_variable = "My variable value" %}
 ```
 
 Once variables are set, they can be inserted anywhere in the template by enclosing

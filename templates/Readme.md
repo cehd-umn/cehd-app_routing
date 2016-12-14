@@ -43,8 +43,8 @@ than the rest of the site. Thus we end up with a structure that looks like this:
 * layout/base.html
   * edpsych/layout/
     * base.html (extends layout/base.html)
-    * section.html (extends edpsych/layout/base.html)
-    * home.html (extends edpsych/layout/base.html)
+      * section.html (extends edpsych/layout/base.html)
+      * home.html (extends edpsych/layout/base.html)
 
 [`edpsych/layout/base.html`](templates/edpsych/layout/base.html) contains
 elements that *are only common to the Ed Psych site* and not common
@@ -148,4 +148,4 @@ Page content goes here.
 
 To avoid repetition and also for convenience, a handful of global variables are
 defined for all templates. For an example, see [the Ed Psych template
-Readme](templates/edpsych/Readme.md).
+Readme](edpsych/Readme.md).
