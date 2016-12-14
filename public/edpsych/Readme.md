@@ -1,8 +1,8 @@
 # The Ed Psych App
 
 This is only an app in the strictest sense. There's actually very little
-business logic here. The `index.php` file *mostly* a way of pointing urls (or
-"routes") to the correct Twig template. These routes are handled using
+business logic here. The `index.php` file is *mostly* a way of pointing urls
+(or "routes") to the correct Twig template. These routes are handled using
 [Klein](https://github.com/klein/klein.php), a very lightweight routing
 framework written in PHP.
 
@@ -99,10 +99,10 @@ That's about all you need to worry about with namespacing.
 Site configuration is generated from YAML files. Multiple files can be parsed
 by the Config class to return a single array of values. This makes adding new
 configuration values very simple. There are app-level configuration values in
-[the app config.yaml file](cehd/config/app/config.yml).
+[the app config.yaml file](../cehd/config/app/config.yml).
 
 For an example of a site-level config file, [see the Ed Psych
-config](cehd/config/edpsych/config.yml).
+config](../cehd/config/edpsych/config.yml).
 
 We can add an arbitray number of files, or configuration values within these
 files. then we just have to pass them in to the Configuration class to get an
