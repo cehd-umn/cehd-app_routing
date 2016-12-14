@@ -61,10 +61,6 @@ At that level most of the HTML has been abstracted away and content strategists
 can focus on the content of the page for the most part. They can write
 their content as HTML.
 
-### TODO
-
-[ ] Write documentation for how the navigation works
-
 ### Blocks
 
 Child templates can inject content into `base.html`. In order to do that
