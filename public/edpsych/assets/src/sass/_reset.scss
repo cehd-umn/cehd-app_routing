@@ -1,16 +1,13 @@
 @charset "UTF-8";
-/*
-        Owner: College of Education and Human Development - U of M
-        Title: CEHD Public Web - CSS Reset
-        Version: 1.0
+/// @author Jeff Abuzzahab
+/// @author Susan Andre
+/// @author Dan Sagisser
+/// @author Tony Thomas
+///
+/// CSS Reset
 
-        What's it do?: This creates the core structure, layout elements, and
-        styles for CEHD web pages
-
-        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
-        Created: 2013-06-13
-        Updated: 2015-05-05 "Cinco de CSS"
-*/
+@import "bourbon/bourbon";
+@import "colors";
 
 a,
 abbr,
@@ -101,10 +98,15 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-
+/// HTML5 display-role reset for older browsers
 body {
     font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Lato', Verdana, Geneva, sans-serif;
+    font-size: em(18);
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: left;
 }
 
 ol,
@@ -113,12 +115,9 @@ ul {
 }
 
 table {
-    // scss-lint:disable PropertySortOrder
-    // scss-lint:disable ColorVariable
+    border: 1px solid $base-light-grey;
     border-collapse: collapse;
     border-spacing: 0;
-    // TODO make a color var for this
-    border: 1px solid #e2e2e2;
     empty-cells: show;
     margin: 10px 25px;
     padding: 0;
@@ -139,10 +138,10 @@ blockquote {
 }
 
 q {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: "";
-        // TODO The second one always wins. Why two?
+        /// @todo The second one always wins. Why two?
         // scss-lint:disable DuplicateProperty
         content: none;
     }
@@ -154,14 +153,30 @@ blockquote {
     margin: 10px 40px;
     padding: 0;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: none;
     }
 }
 
-a img {
-    border: 0;
+a {
+    color: $link-base-blue;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: $link-base-visited;
+    }
+
+    &:active {
+        color: $link-base-active;
+    }
+
+    img {
+        border: 0;
+    }
 }
 
 article,
@@ -186,6 +201,126 @@ section,
 summary {
     clear: both;
     display: block;
+    position: relative;
 }
 
-/****** End CSS Reset *****/
+p {
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul {
+    list-style: disc;
+    margin: 10px 25px;
+    padding: 0;
+
+    ul {
+        list-style: circle;
+        margin: 10px 0 10px 10px;
+
+        ul {
+            list-style: square;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+ol {
+    list-style: decimal;
+    margin: 10px 25px;
+    padding: 0;
+
+    ol {
+        list-style: lower-alpha;
+        margin: 10px 0 10px 10px;
+
+        ol {
+            list-style: lower-roman;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+li {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+dl {
+    margin: 10px 25px;
+    padding: 0;
+}
+
+dt {
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0;
+}
+
+dd {
+    margin: 10px 0 10px 25px;
+    padding: 0;
+}
+
+form {
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        margin: 1em 0;
+
+        label {
+            display: inline;
+        }
+    }
+}
+
+address {
+    display: block;
+    font-style: normal;
+    margin: 10px;
+    padding: 0;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    margin: 10px;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+th {
+    background-color: $base-blue;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    font-weight: bold;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    background-color: transparent;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}

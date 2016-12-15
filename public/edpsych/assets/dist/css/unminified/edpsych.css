@@ -1,15 +1,3 @@
-/*
-        Owner: College of Education and Human Development - U of M
-        Title: CEHD Public Web - CSS Reset
-        Version: 1.0
-
-        What's it do?: This creates the core structure, layout elements, and
-        styles for CEHD web pages
-
-        Authors: Dan Sagisser, Jeff Abuzzahab, Susan Andre & Tony Thomas
-        Created: 2013-06-13
-        Updated: 2015-05-05 "Cinco de CSS"
-*/
 a,
 abbr,
 acronym,
@@ -99,9 +87,14 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 body {
   font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Geneva, sans-serif;
+  font-size: 1.125em;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: left;
 }
 
 ol,
@@ -110,9 +103,9 @@ ul {
 }
 
 table {
+  border: 1px solid #e2e2e2;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #e2e2e2;
   empty-cells: show;
   margin: 10px 25px;
   padding: 0;
@@ -132,7 +125,7 @@ blockquote {
   quotes: none;
 }
 
-q:before, q:after {
+q::before, q::after {
   content: "";
   content: none;
 }
@@ -144,8 +137,24 @@ blockquote {
   padding: 0;
 }
 
-blockquote:before, blockquote:after {
+blockquote::before, blockquote::after {
   content: none;
+}
+
+a {
+  color: #0072bc;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #79111a;
+}
+
+a:active {
+  color: #bc4a00;
 }
 
 a img {
@@ -174,9 +183,128 @@ section,
 summary {
   clear: both;
   display: block;
+  position: relative;
 }
 
-/****** End CSS Reset *****/
+p {
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+ul ul {
+  list-style: circle;
+  margin: 10px 0 10px 10px;
+}
+
+ul ul ul {
+  list-style: square;
+  margin: 10px 0 10px 10px;
+}
+
+ol {
+  list-style: decimal;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+ol ol {
+  list-style: lower-alpha;
+  margin: 10px 0 10px 10px;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+  margin: 10px 0 10px 10px;
+}
+
+li {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+}
+
+dl {
+  margin: 10px 25px;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 0;
+}
+
+dd {
+  margin: 10px 0 10px 25px;
+  padding: 0;
+}
+
+form ul {
+  list-style: none;
+  margin: 0;
+}
+
+form li {
+  margin: 1em 0;
+}
+
+form li label {
+  display: inline;
+}
+
+address {
+  display: block;
+  font-style: normal;
+  margin: 10px;
+  padding: 0;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  margin: 10px;
+  padding: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: left;
+}
+
+th {
+  background-color: #09f;
+  border: 1px solid #e2e2e2;
+  border-spacing: 1%;
+  font-weight: bold;
+  padding: 1%;
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+  border-spacing: 1%;
+  padding: 1%;
+  text-align: left;
+  vertical-align: top;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -185,19 +313,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
-
-Fontello
-
-Here are the characters defined in fontello:
-
-* Menu icon:  "\f0c9  "
-* More icon (9 dots): "  \e024"
-* More icon (layered stacks):"  \e79d"
-* Search icon: "\e803"
-* MyU lock icon:"  \e801"
-
-***/
 @font-face {
   font-family: 'fontello';
   src: url("../assets/fonts/fontello-2015/fontello.eot");
@@ -206,8 +321,6 @@ Here are the characters defined in fontello:
   font-style: normal;
 }
 
-/* ---------- Campus Links -----------------------------------*/
-/* this hides the campus links div, just in case some old version of HTML sill has it */
 #campuslinks {
   display: none;
 }
@@ -222,7 +335,6 @@ Here are the characters defined in fontello:
   padding: 0;
 }
 
-/* ---------- U of M Header ----------------------------------*/
 #umnheader {
   background-color: #79111a;
   font-family: Arial, Helvetica, sans-serif;
@@ -323,8 +435,6 @@ Here are the characters defined in fontello:
   width: 1.1em;
 }
 
-/* ---------- end U of M Header ------------------------------*/
-/* ---------- start U of M Footer ----------------------------*/
 #umnfoot {
   background-color: #fff;
   border-top: 1px #ccc solid;
@@ -346,8 +456,6 @@ Here are the characters defined in fontello:
   text-align: center;
 }
 
-/* ---------- end   U of M Footer ----------------------------*/
-/* ---------- media query for high dpi ----------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
   #umnheader #umnh-logos {
     background: url("../assets/images/umnheader/umnh-logos@2x.png") no-repeat;
@@ -356,8 +464,6 @@ Here are the characters defined in fontello:
   }
 }
 
-/* ---------- end media query for high dpi ------------------*/
-/* ---------- media query for medium Screen -----------------*/
 @media all and (min-width: 960px) {
   #umnheader {
     width: auto;
@@ -367,8 +473,6 @@ Here are the characters defined in fontello:
   }
 }
 
-/* ---------- end media query for medium Screen -------------*/
-/* ---------- media query for small Screen ------------------*/
 @media only screen and (max-width: 620px) {
   #umnheader-container {
     padding: 0 1em;
@@ -394,7 +498,6 @@ Here are the characters defined in fontello:
   }
 }
 
-/* ---------- end media query for small Screen --------------*/
 html {
   box-sizing: border-box;
 }
@@ -568,7 +671,15 @@ nav li li {
   }
 }
 
-/* Accessibly hides text */
+.no-bullet {
+  list-style: none;
+  margin-left: 0;
+}
+
+.no-bullet li {
+  margin-left: 0;
+}
+
 .accessible-hidden {
   overflow: hidden;
   text-indent: 101%;
@@ -749,17 +860,6 @@ nav li li {
   margin-right: 0;
 }
 
-/** Begin Main Structure   **/
-body {
-  font-family: 'Lato', Verdana, Geneva, sans-serif;
-  font-size: 1.125em;
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 0;
-  position: relative;
-  text-align: left;
-}
-
 .half,
 .third,
 .twothird,
@@ -788,9 +888,6 @@ body {
   padding: .6em 0 0;
 }
 
-/**  End Main Structure   **/
-/**  CORE ELEMENTS */
-/* icon font for responsive panes, and UMN header */
 @font-face {
   font-family: 'fontello';
   src: url("../assets/fonts/fontello-2015/fontello.eot");
@@ -799,7 +896,6 @@ body {
   font-style: normal;
 }
 
-/** Headings **/
 h1, .h1 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 2.18182em;
@@ -846,187 +942,6 @@ h6, .h6 {
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
-}
-
-/**
- * Paragraphs
- */
-p {
-  margin: 1em 0;
-  padding: 0;
-}
-
-/**
- * Lists
- */
-ul {
-  list-style: disc;
-  margin: 10px 25px;
-  padding: 0;
-}
-
-ul.no-bullet {
-  list-style: none;
-  margin-left: 0;
-}
-
-ul.no-bullet li {
-  margin-left: 0;
-}
-
-ul ul {
-  list-style: circle;
-  margin: 10px 0 10px 10px;
-}
-
-ul ul ul {
-  list-style: square;
-  margin: 10px 0 10px 10px;
-}
-
-ol {
-  list-style: decimal;
-  margin: 10px 25px;
-  padding: 0;
-}
-
-ol ol {
-  list-style: lower-alpha;
-  margin: 10px 0 10px 10px;
-}
-
-ol ol ol {
-  list-style: lower-roman;
-  margin: 10px 0 10px 10px;
-}
-
-li {
-  margin: 10px 0 10px 20px;
-  padding: 0;
-}
-
-dl {
-  margin: 10px 25px;
-  padding: 0;
-}
-
-dt {
-  font-weight: bold;
-  margin: 10px 0;
-  padding: 0;
-}
-
-dd {
-  margin: 10px 0 10px 25px;
-  padding: 0;
-}
-
-/**
- * Forms
- */
-.captcha-container input {
-  display: inline;
-}
-
-.captcha-container span {
-  border-radius: .1em;
-  left: 11em;
-  padding: .1em;
-  position: absolute;
-  top: 0;
-}
-
-form ul {
-  list-style: none;
-  margin: 0;
-}
-
-form li {
-  margin: 1em 0;
-}
-
-form li label {
-  display: inline;
-}
-
-/**
- * Block elements
- */
-address {
-  display: block;
-  font-style: normal;
-  margin: 10px;
-  padding: 0;
-}
-
-div {
-  position: relative;
-}
-
-pre {
-  display: block;
-  font-family: monospace;
-  margin: 10px;
-  padding: 0;
-}
-
-/**
- * Inline elements
- */
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
-/**
- * Tables
- */
-caption {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: .5em;
-  text-align: left;
-}
-
-th {
-  background-color: #09f;
-  border: 1px solid #e2e2e2;
-  border-spacing: 1%;
-  font-weight: bold;
-  padding: 1%;
-  text-align: left;
-  vertical-align: top;
-}
-
-td {
-  background-color: transparent;
-  border: 1px solid #e2e2e2;
-  border-spacing: 1%;
-  padding: 1%;
-  text-align: left;
-  vertical-align: top;
-}
-
-/**
- * Links
- */
-a {
-  color: #0072bc;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:visited {
-  color: #79111a;
-}
-
-a:active {
-  color: #bc4a00;
 }
 
 .button {
@@ -1102,9 +1017,6 @@ a:active {
   top: 1em;
 }
 
-/**
- * Image positioning
- */
 .img-right {
   float: right;
   margin: 1% 0 10px 10px;
@@ -1119,9 +1031,6 @@ a:active {
   position: relative;
 }
 
-/**
- * Alignments
- */
 .text-left {
   text-align: left;
 }
@@ -1134,7 +1043,6 @@ a:active {
   text-align: center;
 }
 
-/**    Begin Media Breaks   **/
 @media all and (min-width: 321px) {
   .nav-container {
     position: absolute;
@@ -1538,17 +1446,6 @@ a:active {
     border-bottom: 0;
     float: right;
     padding: .9em 0 0;
-  }
-}
-
-@media all and (max-width: 520px) {
-  #maincontent {
-    z-index: 2;
-  }
-  #maincontent .callout-right {
-    float: none;
-    margin: 0 0 0 25px;
-    width: 90%;
   }
 }
 

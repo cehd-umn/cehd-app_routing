@@ -34,11 +34,11 @@ the top-level `base.html`.
 {% extends "layout/base.html" %}
 ```
 
-We can keep building out templates based on their role until we get down
-to a level where there is no longer common code between pages. E.g.,
-for Ed Psych we created [`section.html` and `home.html`](templates/edpsych/layout)
-with the thought that the home page may look significantly different
-than the rest of the site. Thus we end up with a structure that looks like this:
+We can keep building out templates based on their role until we get down to a
+level where there is no longer common code between pages. E.g., for Ed Psych we
+created [`section.html` and `home.html`](templates/edpsych/layout) with the
+thought that the home page may look significantly different than the rest of
+the site. Thus we end up with a structure that looks like this:
 
 * layout/base.html
   * edpsych/layout/

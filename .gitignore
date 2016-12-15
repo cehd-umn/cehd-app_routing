@@ -5,6 +5,7 @@ node_modules
 cache
 vendor
 .htaccess
+completer.hist
 
 # exclusions
 !cache/Readme.md

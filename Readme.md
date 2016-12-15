@@ -1,5 +1,6 @@
 # CEHD Routes, Templates, SASS & JavaScript
 
+
 Beginning with the Ed Psych site, this will be the primary way for us to manage
 department websites. This is an "app" in a very strict sense, but we've tried
 to keep the back end logic to a minimum to keep this app very small and fast.
@@ -11,7 +12,7 @@ requests.
 ## Requests
 
 Let's imagine a web server hosting static HTML pages. Those are just plain text
-files as I'm sure you know.  A browser sends a request to the server. If the
+files as I'm sure you know. A browser sends a request to the server. If the
 server can find a file that matches the request it returns a status code of
 `200 OK` and sends the contents of the file back. (If the server can't find it,
 it sends a `404` status code back.)
@@ -24,6 +25,9 @@ If you look at `index.php` you'll find the routes among other things. That file
 is written to route requests to their proper Twig template or return a 404 if
 there is not a matching route. Klein handles the routing part. Twig is the
 template engine.
+
+For more specific information about routes [see The Ed Psych
+App](public/edpsych/).
 
 ## Templates
 

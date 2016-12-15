@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/// @author Dan Sagisser
+/// @author Tony Thomas
+///
+/// Core styles for use across CEHD sites
+/// In general these styles are mobile first with breakpoints at the bottom
+/// @todo tighten up use of breakpoints
+
 @import "colors";
 @import "bourbon/bourbon";
 @import "grid-settings";
@@ -6,11 +13,22 @@
 @import "nav";
 @import "variables";
 
-/* Accessibly hides text */
+/// lists with no bullets
+.no-bullet {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+        margin-left: 0;
+    }
+}
+
+/// Accessibly hides text
 .accessible-hidden {
     @include hide-text;
 }
 
+/// Accessibly hides entire element
 .accessible-no-display {
     height: 0;
     margin: 0;
@@ -19,21 +37,26 @@
     width: 0;
 }
 
+/// Gives elements that are populated via an AJAX request a min height
 .dynamic-content {
     min-height: 8em;
 }
 
+/// Column container
+/// @requires neat/neat
 .container {
     @include outer-container;
     @include pad(0 default 0 default);
 }
 
+/// Container for main navigation
+/// @todo move this to _nav.scss
 .nav-container {
     position: absolute;
     top: 100px;
 }
 
-// Granular grid options
+/// Granular grid options for all breakpoints
 @for $grid-span from 1 through 12 {
     .super-span-#{$grid-span} {
         @include span-columns($grid-span);
@@ -41,17 +64,7 @@
     }
 }
 
-/** Begin Main Structure   **/
-body {
-    font-family: 'Lato', Verdana, Geneva, sans-serif;
-    font-size: em(18);
-    margin: 0 auto;
-    max-width: 1400px;
-    padding: 0;
-    position: relative;
-    text-align: left;
-}
-
+/// No `clear` for simple columns
 .half,
 .third,
 .twothird,
@@ -59,6 +72,7 @@ body {
     clear: none;
 }
 
+/// Base styles for SVG wordmarks
 .wordmark-svg {
     clear: both;
     display: block;
@@ -67,23 +81,23 @@ body {
     width: em(400);
 }
 
+/// CEHD Wordmark
 #cehd-wordmark {
     border-bottom: 2px solid $base-black;
     padding: .9em 0 0;
 }
 
+/// Dept wordmark should not clear
 .dept-wordmark {
     clear: none;
 }
 
+/// Consistent padding for wordmarks
 .wordmark-container {
     padding: .6em 0 0;
 }
 
-/**  End Main Structure   **/
-/**  CORE ELEMENTS */
-
-/* icon font for responsive panes, and UMN header */
+/// icon font for responsive panes, and UMN header
 @font-face {
     font-family: 'fontello';
     src: url("../assets/fonts/fontello-2015/fontello.eot");
@@ -92,9 +106,10 @@ body {
     font-style: normal;
 }
 
-/** Headings **/
-
-// Convert pts to ems
+/// Iterates over map of heading sizes to generate heading styles and matching
+/// classes
+///
+/// @requires $heading-map-desktop found in _variables.scss
 @each $heading, $size in $heading-map-desktop {
     #{$heading}, .#{$heading} {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
@@ -102,205 +117,10 @@ body {
         font-weight: bold;
         margin: em(10) 0;
         padding: 0;
-
-        &.first {
-            // margin-top: 0;
-        }
-
     }
 }
 
-/**
- * Paragraphs
- */
-
-p {
-    margin: 1em 0;
-    padding: 0;
-}
-
-/**
- * Lists
- */
-
-ul {
-    list-style: disc;
-    margin: 10px 25px;
-    padding: 0;
-
-    &.no-bullet {
-        list-style: none;
-        margin-left: 0;
-
-        li {
-            margin-left: 0;
-        }
-    }
-
-    ul {
-        list-style: circle;
-        margin: 10px 0 10px 10px;
-
-        ul {
-            list-style: square;
-            margin: 10px 0 10px 10px;
-        }
-    }
-}
-
-ol {
-    list-style: decimal;
-    margin: 10px 25px;
-    padding: 0;
-
-    ol {
-        list-style: lower-alpha;
-        margin: 10px 0 10px 10px;
-
-        ol {
-            list-style: lower-roman;
-            margin: 10px 0 10px 10px;
-        }
-    }
-}
-
-li {
-    margin: 10px 0 10px 20px;
-    padding: 0;
-}
-
-dl {
-    margin: 10px 25px;
-    padding: 0;
-}
-
-dt {
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 0;
-}
-
-dd {
-    margin: 10px 0 10px 25px;
-    padding: 0;
-}
-
-/**
- * Forms
- */
-
-.captcha-container {
-    input {
-        display: inline;
-    }
-
-    span {
-        border-radius: .1em;
-        left: 11em;
-        padding: .1em;
-        position: absolute;
-        top: 0;
-    }
-}
-
-form {
-    ul {
-        list-style: none;
-        margin: 0;
-    }
-
-    li {
-        margin: 1em 0;
-
-        label {
-            display: inline;
-        }
-    }
-}
-
-/**
- * Block elements
- */
-
-address {
-    display: block;
-    font-style: normal;
-    margin: 10px;
-    padding: 0;
-}
-
-div {
-    position: relative;
-}
-
-pre {
-    display: block;
-    font-family: monospace;
-    margin: 10px;
-    padding: 0;
-}
-
-/**
- * Inline elements
- */
-
-strong {
-    font-weight: bold;
-}
-
-em {
-    font-style: italic;
-}
-
-/**
- * Tables
- */
-
-caption {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: .5em;
-    text-align: left;
-}
-
-th {
-    background-color: $base-blue;
-    border: 1px solid $base-light-grey;
-    border-spacing: 1%;
-    font-weight: bold;
-    padding: 1%;
-    text-align: left;
-    vertical-align: top;
-}
-
-td {
-    background-color: transparent;
-    border: 1px solid $base-light-grey;
-    border-spacing: 1%;
-    padding: 1%;
-    text-align: left;
-    vertical-align: top;
-}
-
-/**
- * Links
- */
-a {
-    color: $link-base-blue;
-
-    &:hover {
-        text-decoration: none;
-    }
-
-    &:visited {
-        color: $link-base-visited;
-    }
-
-    &:active {
-        color: $link-base-active;
-    }
-}
-
+/// Button with fancy hover effect
 .button {
     @include transition(color .5s ease-out 0s, background-color .5s ease-out 0s, border .5s ease-out 0s);
 
@@ -362,10 +182,7 @@ a {
     }
 }
 
-/**
- * Image positioning
- */
-
+/// Image positioning
 .img-right {
     float: right;
     margin: 1% 0 10px 10px;
@@ -380,9 +197,7 @@ a {
     position: relative;
 }
 
-/**
- * Alignments
- */
+ /// Text alignments
 
 .text-left {
     text-align: left;
@@ -396,7 +211,10 @@ a {
     text-align: center;
 }
 
-/**    Begin Media Breaks   **/
+/// These aren't necessarily breakpoints defined around devices, but rather,
+/// they're defined based on where things break in the *design*.
+///
+/// @todo better organize these media breakpoints
 @media all and (min-width: 321px) {
     .nav-container {
         position: absolute;
@@ -419,8 +237,8 @@ a {
         @include span-columns(6);
     }
 
-    // Convert pts to ems
-    // TODO remove any redundant properties
+    /// Convert pts to ems
+    /// @todo remove any redundant properties
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             font-family: 'Montserrat', Verdana, Geneva, sans-serif;

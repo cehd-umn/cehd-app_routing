@@ -1,23 +1,19 @@
 @charset "UTF-8";
+/// University of Minnesota header and footer styles
 @import "colors";
 @import "variables";
 @import "grid-settings";
 @import "neat/neat";
 
-/*
-
-Fontello
-
-Here are the characters defined in fontello:
-
-* Menu icon:  "\f0c9  "
-* More icon (9 dots): "  \e024"
-* More icon (layered stacks):"  \e79d"
-* Search icon: "\e803"
-* MyU lock icon:"  \e801"
-
-***/
-
+/// Fontello
+///
+/// Here are the characters defined in fontello:
+///
+/// * Menu icon:  "\f0c9  "
+/// * More icon (9 dots): "  \e024"
+/// * More icon (layered stacks):"  \e79d"
+/// * Search icon: "\e803"
+/// * MyU lock icon:"  \e801"
 @font-face {
     font-family: 'fontello';
     src: url("../assets/fonts/fontello-2015/fontello.eot");
@@ -25,8 +21,6 @@ Here are the characters defined in fontello:
     font-weight: normal;
     font-style: normal;
 }
-/* ---------- Campus Links -----------------------------------*/
-/* this hides the campus links div, just in case some old version of HTML sill has it */
 
 #campuslinks {
     display: none;
@@ -43,7 +37,7 @@ Here are the characters defined in fontello:
     }
 }
 
-/* ---------- U of M Header ----------------------------------*/
+/// U of M Header
 #umnheader {
 
     background-color: $umn-maroon;
@@ -108,7 +102,6 @@ Here are the characters defined in fontello:
     margin: 14px 5px 4px 4px;
 }
 
-
 #umnh-searchbox {
     clear: both;
     display: block;
@@ -148,11 +141,6 @@ Here are the characters defined in fontello:
     width: 1.1em;
 }
 
-/* ---------- end U of M Header ------------------------------*/
-
-/* ---------- start U of M Footer ----------------------------*/
-// TODO break footer styles out into their own files
-
 #umnfoot {
     background-color: $base-white;
     border-top: 1px $umn-medium-grey solid;
@@ -174,23 +162,17 @@ Here are the characters defined in fontello:
     }
 }
 
-/* ---------- end   U of M Footer ----------------------------*/
-
-/* ---------- media query for high dpi ----------------------*/
-// TODO use a mixin for media queries
+/// @todo use a mixin for media queries
 @media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
     #umnheader #umnh-logos {
         background: url("../assets/images/umnheader/umnh-logos@2x.png") no-repeat;
-        // TODO use short syntax for these
+        /// @todo use short syntax for these
         background-position-y: 50%;
         background-size: 292px 39px;
     }
 }
 
-/* ---------- end media query for high dpi ------------------*/
-/* ---------- media query for medium Screen -----------------*/
-
-// Large screens
+/// Large screens
 @media all and (min-width: 960px) {
     #umnheader {
         width: auto;
@@ -201,9 +183,7 @@ Here are the characters defined in fontello:
     }
 }
 
-/* ---------- end media query for medium Screen -------------*/
-/* ---------- media query for small Screen ------------------*/
-// TODO use a mixin for media queries
+/// @todo use a mixin for media queries
 @media only screen and (max-width: 620px) {
     #umnheader-container {
         padding: 0 1em;
@@ -233,4 +213,3 @@ Here are the characters defined in fontello:
         }
     }
 }
-/* ---------- end media query for small Screen --------------*/

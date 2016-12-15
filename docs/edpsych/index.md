@@ -130,3 +130,26 @@ $global_config = $bootstrap_helper::bootstrap_config(
 Managing config this way allows us to do some simple logic as well, including
 environment detection (development or production). It also makes config changes
 or new configs easy to set up.
+
+## Services
+
+Ed Psych currently has a few routes at `/services`. These will eventually be
+moved out of the Ed Psych namespace. For now, Ed Psych is the only site using
+Twig, so the routes temporarily exist here.
+
+In the Ed Psych site (and other sites in the future), consumes feeds from the
+news site, People Tool and Events calendar and renders templates using
+*JavaScript*. This is a change from our normal way of parsing these feeds on
+the back end using XSLT.
+
+Since JavaScript is handling this data, we needed an endpoint *within the same
+domain* in order to make AJAX requests to retrieve it. Browsers do not support
+cross-domain requests. PHP does.
+
+The `/services` endpoints here do three things:
+
+* Retrieve a feed from a COPE tool
+* Parse it into JSON
+* Send the resulting JSON blob back
+
+We *could* just parse XML with JavaScript, but JSON is much cleaner.
