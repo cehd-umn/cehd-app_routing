@@ -9,7 +9,7 @@
 ## Sites
 
 * Ed Psych
-  * [App](edpsych/index.md)
+  * [App](edpsych/)
   * [Templates](edpsych/templates.md)
   * Sass
   * JavaScript
