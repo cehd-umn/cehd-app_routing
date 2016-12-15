@@ -9,6 +9,8 @@ The app uses [Twig for templates](http://twig.sensiolabs.org/) and [Klein for
 routing](https://github.com/klein/klein.php). What does that mean? Let's talk
 requests.
 
+[Go here for more detailed documentation](/docs/).
+
 ## Requests
 
 Let's imagine a web server hosting static HTML pages. Those are just plain text
