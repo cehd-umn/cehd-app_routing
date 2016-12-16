@@ -92,21 +92,23 @@ var,
 video {
     border: 0;
     font: inherit;
-    font-size: 100%;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
 }
 
-/// HTML5 display-role reset for older browsers
 body {
-    font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    color: $umn-charcoal;
     font-family: 'Lato', Verdana, Geneva, sans-serif;
-    font-size: em(18);
+    font-size: 16px;
     margin: 0 auto;
     padding: 0;
     position: relative;
     text-align: left;
+}
+
+img {
+    max-width: 100%;
 }
 
 ol,
@@ -160,18 +162,17 @@ blockquote {
 }
 
 a {
-    color: $link-base-blue;
+    color: $link-base;
+    text-decoration: none;
+
+    @each $pseudo-class, $color in $link-pseudo-classes {
+        &:#{$pseudo-class} {
+            color: $color;
+        }
+    }
 
     &:hover {
-        text-decoration: none;
-    }
-
-    &:visited {
-        color: $link-base-visited;
-    }
-
-    &:active {
-        color: $link-base-active;
+        text-decoration: underline;
     }
 
     img {
@@ -323,4 +324,14 @@ td {
     padding: 1%;
     text-align: left;
     vertical-align: top;
+}
+
+figure,
+figcaption {
+    color: $cehd-charcoal;
+    font-size: 12px;
+}
+
+figure {
+    display: inline-block;
 }

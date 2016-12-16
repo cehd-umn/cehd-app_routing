@@ -84,20 +84,14 @@ nav {
         padding: 8px 0 8px 15px;
         text-decoration: none;
 
-        &:visited {
-            color: $base-charcoal;
-        }
-
-        &:active {
-            color: $base-black;
-        }
-
-        &:hover {
-            color: $link-base-blue;
+        @each $pseudo-class, $color in $link-pseudo-classes {
+            &:#{$pseudo-class} {
+                color: $color;
+            }
         }
 
         &.current {
-            color: $link-base-blue;
+            color: $link-base;
         }
 
     }

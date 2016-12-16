@@ -110,10 +110,10 @@
 /// classes
 ///
 /// @requires $heading-map-desktop found in _variables.scss
-@each $heading, $size in $heading-map-desktop {
+@each $heading, $size in $heading-map-mobile {
     #{$heading}, .#{$heading} {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-        font-size: em($size, 22);
+        font-size: $size;
         font-weight: bold;
         margin: em(10) 0;
         padding: 0;
@@ -182,6 +182,22 @@
     }
 }
 
+a {
+    &.button {
+        @each $pseudo-class, $color in $link-pseudo-classes {
+            @if $pseudo-class != hover {
+                &:#{$pseudo-class} {
+                    color: $umn-charcoal;
+                }
+            }
+        }
+
+        &:hover {
+            color: $base-light-grey;
+        }
+    }
+}
+
 /// Image positioning
 .img-right {
     float: right;
@@ -227,12 +243,16 @@
         float: left;
     }
 
-    body {
-        font-size: em(16);
-    }
+    // body {
+    //     font-size: em(16);
+    // }
 }
 
 @media all and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
     .half {
         @include span-columns(6);
     }
@@ -242,7 +262,7 @@
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-            font-size: em($size, 22);
+            font-size: $size;
             font-weight: bold;
             margin: em(16) 0;
             padding: 0;

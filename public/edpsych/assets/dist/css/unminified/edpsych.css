@@ -81,20 +81,23 @@ var,
 video {
   border: 0;
   font: inherit;
-  font-size: 100%;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
 }
 
 body {
-  font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+  color: #333;
   font-family: 'Lato', Verdana, Geneva, sans-serif;
-  font-size: 1.125em;
+  font-size: 16px;
   margin: 0 auto;
   padding: 0;
   position: relative;
   text-align: left;
+}
+
+img {
+  max-width: 100%;
 }
 
 ol,
@@ -142,19 +145,28 @@ blockquote::before, blockquote::after {
 }
 
 a {
-  color: #0072bc;
-}
-
-a:hover {
+  color: #005d9a;
   text-decoration: none;
 }
 
+a:link {
+  color: #005d9a;
+}
+
+a:hover {
+  color: #005d9a;
+}
+
 a:visited {
-  color: #79111a;
+  color: #005d9a;
 }
 
 a:active {
-  color: #bc4a00;
+  color: #005d9a;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a img {
@@ -303,6 +315,16 @@ td {
   padding: 1%;
   text-align: left;
   vertical-align: top;
+}
+
+figure,
+figcaption {
+  color: #555;
+  font-size: 12px;
+}
+
+figure {
+  display: inline-block;
 }
 
 html {
@@ -586,20 +608,24 @@ nav a {
   text-decoration: none;
 }
 
-nav a:visited {
-  color: #666;
-}
-
-nav a:active {
-  color: #000;
+nav a:link {
+  color: #005d9a;
 }
 
 nav a:hover {
-  color: #0072bc;
+  color: #005d9a;
+}
+
+nav a:visited {
+  color: #005d9a;
+}
+
+nav a:active {
+  color: #005d9a;
 }
 
 nav a.current {
-  color: #0072bc;
+  color: #005d9a;
 }
 
 nav ul {
@@ -898,7 +924,7 @@ nav li li {
 
 h1, .h1 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 2.18182em;
+  font-size: 36px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -906,7 +932,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.63636em;
+  font-size: 30px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -914,7 +940,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.36364em;
+  font-size: 24px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -922,7 +948,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 1.09091em;
+  font-size: 18px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -930,7 +956,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 0.90909em;
+  font-size: 16px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -938,7 +964,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 0.81818em;
+  font-size: 16px;
   font-weight: bold;
   margin: 0.625em 0;
   padding: 0;
@@ -1017,6 +1043,22 @@ h6, .h6 {
   top: 1em;
 }
 
+a.button:link {
+  color: #333;
+}
+
+a.button:visited {
+  color: #333;
+}
+
+a.button:active {
+  color: #333;
+}
+
+a.button:hover {
+  color: #e2e2e2;
+}
+
 .img-right {
   float: right;
   margin: 1% 0 10px 10px;
@@ -1054,12 +1096,12 @@ h6, .h6 {
   .wordmark-svg {
     float: left;
   }
-  body {
-    font-size: 1em;
-  }
 }
 
 @media all and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
   .half {
     float: left;
     display: block;
@@ -1071,7 +1113,7 @@ h6, .h6 {
   }
   h1, .h1 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 2.18182em;
+    font-size: 48px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1079,7 +1121,7 @@ h6, .h6 {
   }
   h2, .h2 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 1.63636em;
+    font-size: 36px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1087,7 +1129,7 @@ h6, .h6 {
   }
   h3, .h3 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 1.36364em;
+    font-size: 30px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1095,7 +1137,7 @@ h6, .h6 {
   }
   h4, .h4 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 1.09091em;
+    font-size: 24px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1103,7 +1145,7 @@ h6, .h6 {
   }
   h5, .h5 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 0.90909em;
+    font-size: 20px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1111,7 +1153,7 @@ h6, .h6 {
   }
   h6, .h6 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 0.81818em;
+    font-size: 18px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1463,15 +1505,15 @@ h6, .h6 {
 
 .loader {
   height: 0;
-  width: 4em;
+  width: 64px;
   overflow: visible;
-  padding-top: 4em;
+  padding-top: 64px;
 }
 
 .loader.small {
   height: 0;
-  width: 2em;
-  padding-top: 2em;
+  width: 32px;
+  padding-top: 32px;
 }
 
 .loader-figure {
@@ -1516,14 +1558,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 4em;
-    width: 4em;
-    border-width: 2em;
+    height: 64px;
+    width: 64px;
+    border-width: 32px;
     opacity: 1;
   }
   100% {
-    height: 4em;
-    width: 4em;
+    height: 64px;
+    width: 64px;
     border-width: 0;
     opacity: 0;
   }
@@ -1535,14 +1577,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 4em;
-    width: 4em;
-    border-width: 2em;
+    height: 64px;
+    width: 64px;
+    border-width: 32px;
     opacity: 1;
   }
   100% {
-    height: 4em;
-    width: 4em;
+    height: 64px;
+    width: 64px;
     border-width: 0;
     opacity: 0;
   }
@@ -1554,14 +1596,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 4em;
-    width: 4em;
-    border-width: 2em;
+    height: 64px;
+    width: 64px;
+    border-width: 32px;
     opacity: 1;
   }
   100% {
-    height: 4em;
-    width: 4em;
+    height: 64px;
+    width: 64px;
     border-width: 0;
     opacity: 0;
   }
@@ -1573,14 +1615,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 2em;
-    width: 2em;
-    border-width: 1em;
+    height: 32px;
+    width: 32px;
+    border-width: 16px;
     opacity: 1;
   }
   100% {
-    height: 2em;
-    width: 2em;
+    height: 32px;
+    width: 32px;
     border-width: 0;
     opacity: 0;
   }
@@ -1592,14 +1634,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 2em;
-    width: 2em;
-    border-width: 1em;
+    height: 32px;
+    width: 32px;
+    border-width: 16px;
     opacity: 1;
   }
   100% {
-    height: 2em;
-    width: 2em;
+    height: 32px;
+    width: 32px;
     border-width: 0;
     opacity: 0;
   }
@@ -1611,14 +1653,14 @@ h6, .h6 {
     width: 0;
   }
   30% {
-    height: 2em;
-    width: 2em;
-    border-width: 1em;
+    height: 32px;
+    width: 32px;
+    border-width: 16px;
     opacity: 1;
   }
   100% {
-    height: 2em;
-    width: 2em;
+    height: 32px;
+    width: 32px;
     border-width: 0;
     opacity: 0;
   }
@@ -1709,8 +1751,8 @@ input[list],
 input[type="file"],
 select,
 textarea {
-  height: 12.5em;
-  width: 50em;
+  height: 200px;
+  width: 800px;
   max-width: 100%;
   padding: 8px;
   background-color: #fff;
