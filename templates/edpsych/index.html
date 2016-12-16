@@ -1,9 +1,4 @@
 {% extends "edpsych/layout/home.html" %}
 {% block main_content %}
-<ul>
-    {% for i in config.site_config %}
-        <li>{{ i }}</li>
-    {% endfor %}
-</ul>
-<p>{{ dump(config.site_config) }}</p>
+<h2 class="h1">Home</h2>
 {% endblock %}

@@ -13,6 +13,10 @@
 @import "nav";
 @import "variables";
 
+header {
+    margin-bottom: 48px;
+}
+
 /// lists with no bullets
 .no-bullet {
     list-style: none;
@@ -110,12 +114,13 @@
 /// classes
 ///
 /// @requires $heading-map-desktop found in _variables.scss
+/// @todo figure out what margins should be
 @each $heading, $size in $heading-map-mobile {
     #{$heading}, .#{$heading} {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
         font-size: $size;
         font-weight: bold;
-        margin: em(10) 0;
+        margin: .7em 0;
         padding: 0;
     }
 }
@@ -242,10 +247,6 @@ a {
     .wordmark-svg {
         float: left;
     }
-
-    // body {
-    //     font-size: em(16);
-    // }
 }
 
 @media all and (min-width: 768px) {
@@ -293,6 +294,10 @@ a {
 }
 
 @media all and (min-width: 960px) {
+    header {
+        margin-bottom: 0;
+    }
+
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;

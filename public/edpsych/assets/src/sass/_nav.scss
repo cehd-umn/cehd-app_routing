@@ -14,7 +14,7 @@
     display: inline-block;
     left: 0;
     position: absolute;
-    top: 0;
+    top: 8px;
 
     &::after {
         clear: both;
@@ -86,7 +86,7 @@ nav {
 
         @each $pseudo-class, $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
-                color: $color;
+                color: $base-charcoal;
             }
         }
 
