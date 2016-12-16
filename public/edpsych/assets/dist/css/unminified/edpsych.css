@@ -701,6 +701,11 @@ header {
   margin-bottom: 48px;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+}
+
 .no-bullet {
   list-style: none;
   margin-left: 0;
@@ -1301,23 +1306,45 @@ a.button:hover {
   header {
     margin-bottom: 0;
   }
+  img {
+    display: inline-block;
+    margin: auto;
+  }
   h1, .h1 {
     text-align: left;
+  }
+  .no-margin-top {
+    margin-top: 0;
   }
   h2, .h2 {
     text-align: left;
   }
+  .no-margin-top {
+    margin-top: 0;
+  }
   h3, .h3 {
     text-align: left;
+  }
+  .no-margin-top {
+    margin-top: 0;
   }
   h4, .h4 {
     text-align: left;
   }
+  .no-margin-top {
+    margin-top: 0;
+  }
   h5, .h5 {
     text-align: left;
   }
+  .no-margin-top {
+    margin-top: 0;
+  }
   h6, .h6 {
     text-align: left;
+  }
+  .no-margin-top {
+    margin-top: 0;
   }
   .reverse-span-1 {
     float: right;

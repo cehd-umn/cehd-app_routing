@@ -17,6 +17,11 @@ header {
     margin-bottom: 48px;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+}
+
 /// lists with no bullets
 .no-bullet {
     list-style: none;
@@ -258,14 +263,13 @@ a {
         @include span-columns(6);
     }
 
-    /// Convert pts to ems
     /// @todo remove any redundant properties
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             font-family: 'Montserrat', Verdana, Geneva, sans-serif;
             font-size: $size;
             font-weight: bold;
-            margin: em(16) 0;
+            margin: 1em 0;
             padding: 0;
             text-align: left;
         }
@@ -298,9 +302,18 @@ a {
         margin-bottom: 0;
     }
 
+    img {
+        display: inline-block;
+        margin: auto;
+    }
+
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;
+        }
+
+        &.no-margin-top {
+            margin-top: 0;
         }
     }
 
