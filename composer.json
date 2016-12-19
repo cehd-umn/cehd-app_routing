@@ -4,5 +4,8 @@
         "klein/klein": "^2.1",
         "guzzlehttp/guzzle": "~6.0",
         "symfony/yaml": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/php-code-coverage": "^4.0"
     }
 }
