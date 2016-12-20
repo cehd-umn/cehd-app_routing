@@ -338,6 +338,12 @@ a {
         text-align: center;
     }
 
+    .divider {
+        &.right {
+            border-right: 1px solid $base-black;
+        }
+    }
+
     .half {
         @include span-columns(6);
 

@@ -1482,6 +1482,9 @@ a.button:hover {
   .text-center {
     text-align: center;
   }
+  .divider.right {
+    border-right: 1px solid #000;
+  }
   .half {
     float: left;
     display: block;
