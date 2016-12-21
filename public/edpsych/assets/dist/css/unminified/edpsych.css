@@ -911,8 +911,8 @@ img {
 }
 
 #cehd-wordmark {
-  border-bottom: 2px solid #000;
-  padding: .9em 0 0;
+  border-bottom: 1px solid #000;
+  padding: .9em 0 .7em;
 }
 
 .dept-wordmark {
@@ -1522,9 +1522,7 @@ a.button:hover {
     margin-left: 17.4541%;
   }
   #cehd-wordmark {
-    border-bottom: 0;
     float: right;
-    padding: .9em 0 0;
   }
 }
 

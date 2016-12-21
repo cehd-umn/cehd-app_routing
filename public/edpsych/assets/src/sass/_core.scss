@@ -92,8 +92,8 @@ img {
 
 /// CEHD Wordmark
 #cehd-wordmark {
-    border-bottom: 2px solid $base-black;
-    padding: .9em 0 0;
+    border-bottom: 1px solid $base-black;
+    padding: .9em 0 .7em;
 }
 
 /// Dept wordmark should not clear
@@ -366,8 +366,8 @@ a {
     }
 
     #cehd-wordmark {
-        border-bottom: 0;
+        // border-bottom: 0;
         float: right;
-        padding: .9em 0 0;
+        // padding: .9em 0 0;
     }
 }
