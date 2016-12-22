@@ -276,10 +276,21 @@
     <div class="container">
         <div class="half feature">
             <h3 class="h2">Layout and Grid</h3>
-            <p>All columns must be contained in a <samp>.row</samp>.</p>
+            <p>All columns must be contained in two <samp>div</samp>s with
+            <samp>.row</samp> and <samp>.container</samp> classes
+            respectively.</p>
+
+            <p>Rows will create an element that always extends to 100% of the
+            browser window. That can be handy as demonstrated below.</p>
+
+            <p>The container element will limit width to a maximum width of
+            1400px and center the layout on the page.</p>
+
             <pre><code>
 &lt;div class=&quot;row&quot;&gt;
-    &lt;p&gt;All columns must be contained in a &lt;samp&gt;.row&lt;/samp&gt;.&lt;/p&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;p&gt;All columns must be contained in a &lt;samp&gt;.row&lt;/samp&gt;.&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
             </code></pre>
 

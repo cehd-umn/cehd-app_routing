@@ -2,15 +2,19 @@
 {% set page_title = "Faculty & Instructors" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-    {# This uses a JavaScript template located at:
-    app_template/public/edpsych/assets/dist/views/edpsych/people/person.html
+<div class="row">
+    <div class="container">
+        {# This uses a JavaScript template located at:
+        app_template/public/edpsych/assets/dist/views/edpsych/people/person.html
 
-    The reason JavaScript is handling this is so we can make the requests to the
-    People Tool asynchronous.
-    #}
-    <div id="results-container" aria-live="polite">
-        <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
+        The reason JavaScript is handling this is so we can make the requests to the
+        People Tool asynchronous.
+        #}
+        <div id="results-container" aria-live="polite">
+            <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
+        </div>
     </div>
+</div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     <script>
