@@ -20,6 +20,16 @@ header {
 img {
     display: block;
     margin: 0 auto;
+
+    &.mobile-hide {
+        display: none;
+    }
+}
+
+@for $margin from 1 through 4 {
+    .margin-top-#{ $margin } {
+        margin-top: #{ $margin }em;
+    }
 }
 
 /// lists with no bullets
@@ -44,6 +54,10 @@ img {
     opacity: 0;
     padding: 0;
     width: 0;
+}
+
+.clearfix {
+    @include clearfix;
 }
 
 /// Gives elements that are populated via an AJAX request a min height
@@ -81,6 +95,10 @@ img {
     clear: none;
 }
 
+.whole {
+    @include span-columns(12);
+}
+
 /// Base styles for SVG wordmarks
 .wordmark-svg {
     clear: both;
@@ -103,7 +121,7 @@ img {
 
 /// Consistent padding for wordmarks
 .wordmark-container {
-    padding: .6em 0 0;
+    padding: 11px 0 0;
 }
 
 /// icon font for responsive panes, and UMN header
@@ -124,10 +142,34 @@ img {
     #{$heading}, .#{$heading} {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
         font-size: $size;
-        font-weight: bold;
         margin: .7em 0;
         padding: 0;
     }
+
+}
+
+@each $heading, $size in $subheading-map-mobile {
+    #{$heading} {
+        small {
+            font-size: $size;
+
+            &.clear {
+                clear: both;
+                display: block;
+                margin-top: -.2em;
+            }
+        }
+    }
+
+    small {
+        &.#{$heading} {
+            font-size: $size;
+        }
+    }
+}
+
+.margin-top-0 {
+    margin-top: 0;
 }
 
 /// Button with fancy hover effect
@@ -148,14 +190,15 @@ img {
 
     &.center {
         display: inline-block;
-        margin: 0 auto;
+        margin: 3em auto;
     }
 
     &:focus,
     &:hover {
-        background: $base-medium-grey none;
+        background: $cehd-charcoal none;
         border: .15em solid $base-white;
-        color: $base-light-grey;
+        color: $base-white;
+        text-decoration: none;
 
         &::after,
         &::before {
@@ -275,6 +318,20 @@ a {
         }
     }
 
+    @each $heading, $size in $subheading-map-desktop {
+        #{$heading} {
+            small {
+                font-size: $size;
+            }
+        }
+
+        small {
+            &.#{$heading} {
+                font-size: $size;
+            }
+        }
+    }
+
     .wordmark-svg {
         clear: none;
     }
@@ -283,10 +340,21 @@ a {
         float: none;
     }
 
+    // It's a little weird to put a variable right in the middle, but it's only
+    // related to this loop so it seemed best to put it here.
+    $offset: 5.5;
+
     @for $grid-span from 1 through 12 {
         .span-#{$grid-span} {
             @include span-columns($grid-span);
             clear: none;
+
+            &.feature {
+                @include shift($offset);
+                // Take another .5 column off for the next iteration of the
+                // loop.
+                $offset: $offset - .5;
+            }
         }
     }
 }
@@ -305,6 +373,10 @@ a {
     img {
         display: inline-block;
         margin: auto;
+
+        &.mobile-hide {
+            display: inline-block;
+        }
     }
 
     @each $heading, $size in $heading-map-desktop {
@@ -328,10 +400,13 @@ a {
 
     .dept-wordmark {
         float: left;
+        margin-top: 4px;
+        max-width: 400px;
     }
 
-    .container {
-        @include outer-container;
+    .container,
+    .row {
+        @include clearfix;
     }
 
     .text-center {
@@ -366,8 +441,8 @@ a {
     }
 
     #cehd-wordmark {
-        // border-bottom: 0;
+        border-bottom: 0;
         float: right;
-        // padding: .9em 0 0;
+        padding: .9em 0 0;
     }
 }

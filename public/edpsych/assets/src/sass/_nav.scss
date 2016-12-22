@@ -146,10 +146,10 @@ nav {
 
 @media all and (min-width: 620px) {
     #menuicon {
-        top: -3.4375em;
+        top: -56px;
 
         &::after {
-            font-size: 3em;
+            font-size: 2.5em;
             line-height: 1;
         }
     }
@@ -158,7 +158,7 @@ nav {
 @media all and (min-width: 960px) {
     #menuicon {
         left: -11%;
-        margin-top: .6em;
+        margin-top: 12px;
     }
 }
 

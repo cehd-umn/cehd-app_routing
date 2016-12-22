@@ -29,49 +29,39 @@
         .grid-example {
             background: #f0f0f0;
         }
-
-        .margin-top-1 {
-            margin-top: 1em;
-        }
-
-        .margin-top-2 {
-            margin-top: 2em;
-        }
-
-        .margin-top-3 {
-            margin-top: 3em;
-        }
     </style>
 {% endblock %}
 {% block main_content %}
-<div class="feature half margin-top-2">
-    <p>The Ed Psych site has several custom CSS classes to make it easy to generate
-    pages that match their designs. Most of the time you should be able to use a
-    combination and HTML elements and CSS classes to make a page look the way it
-    should.</p>
+<div class="row">
+    <div class="container">
+        <div class="feature half margin-top-2">
+            <p>The Ed Psych site has several custom CSS classes to make it easy to generate
+            pages that match their designs. Most of the time you should be able to use a
+            combination and HTML elements and CSS classes to make a page look the way it
+            should.</p>
 
-    <h2 class="h1">Page Title and H1 Blocks</h2>
+            <h2 class="h1">Page Title and H1 Blocks</h2>
 
-    <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
-    engine</a> is configured to build off of a "base" template that includes a lot
-    of code that you shouldn't have to worry about. Included in that base template
-    are the <samp>title</samp> and <samp>h1</samp> tag.</p>
+            <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
+            engine</a> is configured to build off of a "base" template that includes a lot
+            of code that you shouldn't have to worry about. Included in that base template
+            are the <samp>title</samp> and <samp>h1</samp> tag.</p>
 
-    <p><em>You shouldn't include an <samp>h1</samp> in your templates</em>. To
-    control what appears in those tags, use the <samp>title</samp> and
-    <samp>heading_1</samp> <a
-    href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
+            <p><em>You shouldn't include an <samp>h1</samp> in your templates</em>. To
+            control what appears in those tags, use the <samp>title</samp> and
+            <samp>heading_1</samp> <a
+            href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
 
-    <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
-    <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
+            <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
+            <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
 
-    <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
+            <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
 
-    <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
+            <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
 
-    <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
+            <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
 
-    <pre><code class="twig">{%- raw -%}
+            <pre><code class="twig">{%- raw -%}
 {# Set the title #}
 {% block title %}
     My Page Title
@@ -83,63 +73,63 @@
 {% endblock %}
 {%- endraw -%}</code></pre>
 
-    <p>The code above will generate this html on the page:</p>
+            <p>The code above will generate this html on the page:</p>
 
-    <pre><code class="html">
+            <pre><code class="html">
 &lt;title&gt;My Page Title&lt;/title&gt;
 
 &lt;h1&gt;My H1 Text&lt;/h1&gt;
-    </code></pre>
+            </code></pre>
 
-    <h2 class="h1">Other Blocks</h2>
+            <h2 class="h1">Other Blocks</h2>
 
-    <h3 class="h2"><samp>main_content</samp></h3>
+            <h3 class="h2"><samp>main_content</samp></h3>
 
-    <p>Use the <samp>main_content</samp> block for the content of the page.</p>
+            <p>Use the <samp>main_content</samp> block for the content of the page.</p>
 
-    <p>Every template already has this block set up.</p>
+            <p>Every template already has this block set up.</p>
 
-    <pre><code>{% raw %}
+            <pre><code>{% raw %}
 {% block main_content %}
     Your html content goes here.
 {% endblock %}
     {% endraw %}</code></pre>
 
-    <h3 class="h2"><samp>title_prepend</samp> and <samp>title_append</samp></h3>
+            <h3 class="h2"><samp>title_prepend</samp> and <samp>title_append</samp></h3>
 
-    <p><samp>title_prepend</samp> allows us to prepend the same thing to
-    multiple page titles. E.g., every page title can be prepended with
-    "Department of Educational Psychology".</p>
+            <p><samp>title_prepend</samp> allows us to prepend the same thing to
+            multiple page titles. E.g., every page title can be prepended with
+            "Department of Educational Psychology".</p>
 
-    <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
-    for appending, obviously.
+            <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
+            for appending, obviously.
 
-    <h3 class="h2"><samp>meta_content</samp></h3>
+            <h3 class="h2"><samp>meta_content</samp></h3>
 
-    <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
-    can insert a <samp>meta_content</samp> block on a template to populate a
-    <samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
+            <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
+            can insert a <samp>meta_content</samp> block on a template to populate a
+            <samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
 
-    <pre><code>{% raw %}
+            <pre><code>{% raw %}
 {% meta_content %}This is my page description for search engines to read{% endblock %}{% endraw %}
-    </code></pre>
-</div>
+            </code></pre>
+        </div>
 
-<div class="half feature margin-top-1">
-    <pre><code>
+        <div class="half feature margin-top-1">
+            <pre><code>
 &lt;meta name=&quot;description&quot; content=&quot;This is my page description for search engines to read&quot;&gt;
-    </code></pre>
-</div>
+            </code></pre>
+        </div>
 
-<div class="half feature">
-    <h3 class="h2"><samp>extra_css</samp></h4>
+        <div class="half feature">
+            <h3><samp>extra_css</samp></h3>
 
-    <p>If you need to create a brand new style that you can't find here,
-    there's <a
-    href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">a
-    Twig template block</a> for that.</p>
+            <p>If you need to create a brand new style that you can't find here,
+            there's <a
+            href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">a
+            Twig template block</a> for that.</p>
 
-    <pre><code>
+            <pre><code>
 {% raw %}{% block extra_css %}
 &lt;style&gt;
     .special-snowflake {
@@ -147,31 +137,31 @@
     }
 &lt;/style&gt;
 {% endblock %}{% endraw %}
-    </code></pre>
-</div>
+            </code></pre>
+        </div>
 
-<div class="half feature margin-top-3">
-        <h2 class="h1">Template Variables</h2>
+        <div class="half feature margin-top-3">
+                <h2>Template Variables</h2>
 
-    <p>There are a handful of variables set up for use in all templates. You
-    can insert variables any where using double curly braces: <samp>
-    {% raw %}{{ }}{% endraw %}</samp>.</p>
+            <p>There are a handful of variables set up for use in all templates. You
+            can insert variables anywhere using double curly braces: <samp>
+            {% raw %}{{ }}{% endraw %}</samp>.</p>
 
-    <p>The department name is probably the one that is most useful. You can
-    insert that anywhere by doing this:</p>
+            <p>The department name is probably the one that is most useful. You can
+            insert that anywhere by doing this:</p>
 
-    <pre><code>{% raw %}{{ config.dept_name }}{% endraw %}</code></pre>
+            <pre><code>{% raw %}{{ config.dept_name }}{% endraw %}</code></pre>
 
-    <p>Inserting that code will output "{{ config.dept_name }}".</p>
+            <p>Inserting that code will output "{{ config.dept_name }}".</p>
 
-    <p>Hopefully that will help with using the department name in a consistent way.</p>
+            <p>Hopefully that will help with using the department name in a consistent way.</p>
 
-    <h3 class="h2">Setting Your Own Variables</h3>
+            <h3 class="h2">Setting Your Own Variables</h3>
 
-    <p>If you find that you're repeating yourself, you can define <a
-    href="http://twig.sensiolabs.org/doc/templates.html#variables">a
-    variable</a> using <samp>set</samp>, and insert it anywhere in the template.
-    <pre><code class="twig">{%- raw -%}
+            <p>If you find that you're repeating yourself, you can define <a
+            href="http://twig.sensiolabs.org/doc/templates.html#variables">a
+            variable</a> using <samp>set</samp>, and insert it anywhere in the template.
+            <pre><code class="twig">{%- raw -%}
 {% set page_title = "Alumni" %}{# set the variable #}
 {% block title %}
     {{ page_title }}{# use the page title variable for both the title and h1 #}
@@ -180,11 +170,11 @@
     {{ page_title }}
 {% endblock %}
 {%- endraw -%}</code></pre>
-</div>
+        </div>
 
-<div class="half feature margin-top-2">
-    <p>Put all together a beginning template will look something like this:</p>
-    <pre><code>{% raw %}{# this is important, don't delete it #}
+        <div class="half feature margin-top-2">
+            <p>Put all together a beginning template will look something like this:</p>
+            <pre><code>{% raw %}{# this is important, don't delete it #}
 {% extends "edpsych/layout/section.html" %}
 
 {# Set a variable so we can use the same text for the title element and the h1 element #}
@@ -211,131 +201,142 @@
 
     &lt;p&gt;This is where my content goes.&lt;/p&gt;
 {% endblock %}{% endraw %}</code></pre>
-</div>
+        </div>
 
-<div class="half feature margin-top-3">
-    <h2 class="h1">Heading Tags</h2>
+        <div class="half feature margin-top-3">
+            <h2 class="h1">Heading Tags</h2>
 
-    <p>To maintain a consistent document structure, it's a good idea to try to
-    only have one <samp>&lt;h1&gt;</samp> tag on the page. Since the
-    <samp>&lt;h1&gt;</samp> tag is already used, start your content  with an
-    <samp>&lt;h2&gt;</samp> instead. <emphasis>Remember, headings are for
-    structure, not presentation.</emphasis></p>
+            <p>To maintain a consistent document structure, it's a good idea to try to
+            only have one <samp>&lt;h1&gt;</samp> tag on the page. Since the
+            <samp>&lt;h1&gt;</samp> tag is already used, start your content  with an
+            <samp>&lt;h2&gt;</samp> instead. <emphasis>Remember, headings are for
+            structure, not presentation.</emphasis></p>
 
-    <h3 class="h2">Heading Classes</h3>
+            <h3 class="h2">Heading Classes</h3>
 
-    <p>In order to maintain a <emphasis>visual</emphasis> hierarchy, headings
-    have matching CSS classes to control their sizes. For example:</p>
+            <p>In order to maintain a <emphasis>visual</emphasis> hierarchy, headings
+            have matching CSS classes to control their sizes. For example:</p>
 
-    <pre><code>
+            <pre><code>
 &lt;h1&gt;This is what an h1 would look like&lt;/h1&gt;
 &lt;h2&gt;This is what an h2 would look like&lt;/h2&gt;
 &lt;h2 class=&quot;h1&quot;&gt;This is an h2 with the .h1 class&lt;/h2&gt;
-    </code></pre>
+            </code></pre>
 
-    <h1>This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
-    <h2>This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
-    <h2 class="h1">This is an <samp>&lt;h2&gt;</samp> with the <samp>.h1</samp> class</h2>
+            <h1>This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
+            <h2>This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
+            <h2 class="h1">This is an <samp>&lt;h2&gt;</samp> with the <samp>.h1</samp> class</h2>
 
-    <p>This provides control over the <emphasis>styles</emphasis> while
-    maintaining good document structure.</p>
-</div>
-<div class="feature twothird">
+            <p>This provides control over the <emphasis>styles</emphasis> while
+            maintaining good document structure.</p>
+        </div>
+        <div class="feature twothird">
 
-    <pre><code>
+            <pre><code>
 &lt;h1&gt;Heading 1&lt;/h1&gt;
 &lt;h2&gt;Heading 2&lt;/h2&gt;
 &lt;h3&gt;Heading 3&lt;/h3&gt;
 &lt;h4&gt;Heading 4&lt;/h4&gt;
 &lt;h5&gt;Heading 5&lt;/h5&gt;
 &lt;h6&gt;Heading 6&lt;/h6&gt;
-        </code></pre>
+                </code></pre>
 
-    <pre><code>
+            <pre><code>
 &lt;h2 class=&quot;h1&quot;&gt;h2 with .h1 class&lt;/h2&gt;
 &lt;h2 class=&quot;h2&quot;&gt;h2 with .h2 class&lt;/h2&gt;
 &lt;h2 class=&quot;h3&quot;&gt;h2 with .h3 class&lt;/h2&gt;
 &lt;h2 class=&quot;h4&quot;&gt;h2 with .h4 class&lt;/h2&gt;
 &lt;h2 class=&quot;h5&quot;&gt;h2 with .h5 class&lt;/h2&gt;
 &lt;h2 class=&quot;h6&quot;&gt;h2 with .h6 class&lt;/h2&gt;
-    </code></pre>
+            </code></pre>
 
-    <div class="half">
-        <h4 class="h3">Default Heading Sizes</h3>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-    </div>
-    <div class="half">
-        <h4 class="h3">h2 With Clases</h4>
-        <h2 class="h1">h2 with <samp>.h1</samp> class</h2>
-        <h2 class="h2">h2 with <samp>.h2</samp> class</h2>
-        <h2 class="h3">h2 with <samp>.h3</samp> class</h2>
-        <h2 class="h4">h2 with <samp>.h4</samp> class</h2>
-        <h2 class="h5">h2 with <samp>.h5</samp> class</h2>
-        <h2 class="h6">h2 with <samp>.h6</samp> class</h2>
-    </div>
+            <div class="half">
+                <h4 class="h3">Default Heading Sizes</h3>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+            <div class="half">
+                <h4 class="h3">h2 With Classes</h4>
+                <h2 class="h1">h2 with <samp>.h1</samp> class</h2>
+                <h2 class="h2">h2 with <samp>.h2</samp> class</h2>
+                <h2 class="h3">h2 with <samp>.h3</samp> class</h2>
+                <h2 class="h4">h2 with <samp>.h4</samp> class</h2>
+                <h2 class="h5">h2 with <samp>.h5</samp> class</h2>
+                <h2 class="h6">h2 with <samp>.h6</samp> class</h2>
+            </div>
 
+        </div>
+    </div>
 </div>
-<div class="half feature">
-    <h3 class="h2">Layout and Grid</h3>
-    <p>Most pages will need elements laid out at half, one third or two thirds
-    of the page. You can also create narrower, centered columns at half or
-    two-thirds widths.</p>
+<div class="row">
+    <div class="container">
+        <div class="half feature">
+            <h3 class="h2">Layout and Grid</h3>
+            <p>All columns must be contained in a <samp>.row</samp>.</p>
+            <pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;p&gt;All columns must be contained in a &lt;samp&gt;.row&lt;/samp&gt;.&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
 
-    <h4 class="h3">Two Columns at Equal Widths</h4>
-    <pre><code>
+            <p>Most pages will need elements laid out at half, one third or two thirds
+            of the page. You can also create narrower, centered columns at half or
+            two-thirds widths.</p>
+
+            <h4 class="h3">Two Columns at Equal Widths</h4>
+            <pre><code>
 &lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
 &lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
-    </code></pre>
-    <div class="margin-top-3">
-        <div class="half grid-example">50%</div>
-        <div class="half grid-example">50%</div>
-    </div>
-</div>
-<div class="half feature">
-    <h4 class="h3">Three Columns at Equal Widths</h4>
-    <pre><code>
+            </code></pre>
+            <div class="margin-top-3">
+                <div class="half grid-example">50%</div>
+                <div class="half grid-example">50%</div>
+            </div>
+        </div>
+        <div class="half feature">
+            <h4 class="h3">Three Columns at Equal Widths</h4>
+            <pre><code>
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
-    </code></pre>
-    <div class="margin-top-1">
-        <div class="third grid-example">33%</div>
-        <div class="third grid-example">33%</div>
-        <div class="third grid-example">33%</div>
-    </div>
-</div>
-<div class="half feature">
-    <h4 class="h3">Two Thirds/One Third Columns</h4>
-    <pre><code>
+            </code></pre>
+            <div class="margin-top-1">
+                <div class="third grid-example">33%</div>
+                <div class="third grid-example">33%</div>
+                <div class="third grid-example">33%</div>
+            </div>
+        </div>
+        <div class="half feature">
+            <h4 class="h3">Two Thirds/One Third Columns</h4>
+            <pre><code>
 &lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
-    </code></pre>
-    <div class="margin-top-1">
-        <div class="twothird grid-example">66%</div>
-        <div class="third grid-example">33%</div>
-    </div>
-</div>
-<div class="half feature margin-top-3">
-    <p>To make a half-width or two-thirds width column that is centered, use
-    the <samp>.feature</samp> class.</p>
-</div>
-<div class="half feature">
-    <pre><code>
+            </code></pre>
+            <div class="margin-top-1">
+                <div class="twothird grid-example">66%</div>
+                <div class="third grid-example">33%</div>
+            </div>
+        </div>
+        <div class="half feature margin-top-3">
+            <p>To make a half-width or two-thirds width column that is centered, use
+            the <samp>.feature</samp> class.</p>
+        </div>
+        <div class="half feature">
+            <pre><code>
 &lt;div class=&quot;half feature&quot;&gt;
     &lt;p&gt;Half-width column that is centered&lt;/p&gt;
 &lt;/div&gt;
-    </code></pre>
-</div>
-<div class="half feature grid-example margin-top-1">
-    <p>Half-width column that is centered</p>
-</div>
-<div class="half feature margin-top-2">
-    <pre><code>
+            </code></pre>
+        </div>
+        <div class="half feature grid-example margin-top-1">
+            <p>Half-width column that is centered</p>
+        </div>
+        <div class="half feature margin-top-2">
+            <pre><code>
 &lt;div class=&quot;twothirds feature&quot;&gt;
     &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
 &lt;/div&gt;
@@ -345,177 +346,279 @@ kept forgetting which was correct.) --&gt;
 &lt;div class=&quot;twothird feature&quot;&gt;
     &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
 &lt;/div&gt;
-    </code></pre>
+            </code></pre>
+        </div>
+        <div class="twothirds feature grid-example margin-top-1">
+            <p>Two thirds-width column that is centered</p>
+        </div>
+    </div>
 </div>
-<div class="twothirds feature grid-example margin-top-1">
-    <p>Two thirds-width column that is centered</p>
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <p>To add a background with the correct shade of yellow and bigger margins
+            to one of these, add the <samp>.emphasis</samp> class.</p>
+        </div>
+    </div>
 </div>
-<div class="half feature margin-top-3">
-    <p>To add a background with the correct shade of yellow and bigger margins
-    to one of these, add the <samp>.emphasis</samp> class.</p>
-</div>
-<div class="half feature margin-top-1">
-    <pre><code>
-&lt;div class=&quot;half feature emphasis&quot;&gt;
-    &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+<div class="row">
+    <div class="half feature margin-top-1">
+        <pre><code>
+&lt;div class=&quot;row emphasis margin-top-1&quot;&gt;
+    &lt;div class=&quot;half feature&quot;&gt;
+        &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-    </code></pre>
+        </code></pre>
+    </div>
 </div>
-<div class="half feature emphasis margin-top-1">
-    <p>A half-width column with yellow background</p>
+<div class="row emphasis margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with yellow background</p>
+        </div>
+    </div>
 </div>
-<div class="half feature margin-top-3">
-    <p>Building on this further, you can use the <samp>.pull-quote</samp> class
-    to bump up the font size for things like, well, pull quotes.</p>
-    <pre><code>
-&lt;div class=&quot;half feature emphasis&quot;&gt;
-    &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
-    &lt;p class=&quot;pull-quote&quot;&gt;"This is an important quote."&lt;/p&gt;
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <p>Building on this further, you can use the <samp>.pull-quote</samp> class
+            to bump up the font size for things like, well, pull quotes.</p>
+            <pre><code>
+&lt;div class=&quot;row emphasis margin-top-1&quot;&gt;
+    &lt;div class=&quot;half feature&quot;&gt;
+        &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+        &lt;p class=&quot;pull-quote&quot;&gt;&quot;This is an important quote.&quot;&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-    </code></pre>
+            </code></pre>
+        </div>
+    </div>
 </div>
-<div class="half feature emphasis margin-top-1">
-    <p>A half-width column with yellow background</p>
-    <p class="pull-quote">"This is an important quote."</p>
+<div class="row emphasis margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with yellow background</p>
+            <p class="pull-quote">"This is an important quote."</p>
+        </div>
+    </div>
 </div>
-<div class="half feature margin-top-3">
-    <h4 class="h3">12-column Grid</h4>
-    <p>Some times you may need more granular control over column widths. There
-    is a set of classes for a 12-column grid system. Think of a grid of 12
-    columns like so:
-</div>
-<div class="span-12">
-    <div class="span-1 grid-example">1</div>
-    <div class="span-1 grid-example">2</div>
-    <div class="span-1 grid-example">3</div>
-    <div class="span-1 grid-example">4</div>
-    <div class="span-1 grid-example">5</div>
-    <div class="span-1 grid-example">6</div>
-    <div class="span-1 grid-example">7</div>
-    <div class="span-1 grid-example">8</div>
-    <div class="span-1 grid-example">9</div>
-    <div class="span-1 grid-example">10</div>
-    <div class="span-1 grid-example">11</div>
-    <div class="span-1 grid-example">12</div>
-</div>
-<div class="half feature margin-top-3">
-    <p>To span two of those columns, you would use the <samp>.span-2</samp>
-    class like this:</p>
-</div>
-<div class="span-12">
-    <div class="span-1 grid-example">1</div>
-    <div class="span-1 grid-example">2</div>
-    <div class="span-1 grid-example">3</div>
-    <div class="span-1 grid-example">4</div>
-    <div class="span-1 grid-example">5</div>
-    <div class="span-1 grid-example">6</div>
-    <div class="span-1 grid-example">7</div>
-    <div class="span-1 grid-example">8</div>
-    <div class="span-1 grid-example">9</div>
-    <div class="span-1 grid-example">10</div>
-    <div class="span-1 grid-example">11</div>
-    <div class="span-1 grid-example">12</div>
-</div>
-<div class="span-12 margin-top-1">
-    <div class="span-2 grid-example">.span-2</div>
-</div>
-<div class="half feature">
-    <pre><code>
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <h4 class="h3">12-column Grid</h4>
+            <p>Some times you may need more granular control over column widths. There
+            is a set of classes for a 12-column grid system. Think of a grid of 12
+            columns like so:
+        </div>
+        <div class="span-12">
+            <div class="span-1 grid-example">1</div>
+            <div class="span-1 grid-example">2</div>
+            <div class="span-1 grid-example">3</div>
+            <div class="span-1 grid-example">4</div>
+            <div class="span-1 grid-example">5</div>
+            <div class="span-1 grid-example">6</div>
+            <div class="span-1 grid-example">7</div>
+            <div class="span-1 grid-example">8</div>
+            <div class="span-1 grid-example">9</div>
+            <div class="span-1 grid-example">10</div>
+            <div class="span-1 grid-example">11</div>
+            <div class="span-1 grid-example">12</div>
+        </div>
+        <div class="half feature margin-top-3">
+            <p>To span two of those columns, you would use the <samp>.span-2</samp>
+            class like this:</p>
+        </div>
+        <div class="span-12">
+            <div class="span-1 grid-example">1</div>
+            <div class="span-1 grid-example">2</div>
+            <div class="span-1 grid-example">3</div>
+            <div class="span-1 grid-example">4</div>
+            <div class="span-1 grid-example">5</div>
+            <div class="span-1 grid-example">6</div>
+            <div class="span-1 grid-example">7</div>
+            <div class="span-1 grid-example">8</div>
+            <div class="span-1 grid-example">9</div>
+            <div class="span-1 grid-example">10</div>
+            <div class="span-1 grid-example">11</div>
+            <div class="span-1 grid-example">12</div>
+        </div>
+        <div class="span-12 margin-top-1">
+            <div class="span-2 grid-example">.span-2</div>
+        </div>
+        <div class="half feature">
+            <pre><code>
 &lt;div class=&quot;span-2&quot;&gt;.span-2&lt;/div&gt;
-    </code></pre>
-</div>
-<div class="half feature margin-top-3">
-    <p>Just append the number of columns you wish to span to
-    <samp>.span-</samp>. (I.e, <samp>.span-1</samp>, <samp>.span-2</samp>,
-    <samp>.span-3</samp>, <samp>.span-4</samp>, etc.)</p>
-</div>
-<div class="span-12">
-    <div class="span-1 grid-example">1</div>
-    <div class="span-1 grid-example">2</div>
-    <div class="span-1 grid-example">3</div>
-    <div class="span-1 grid-example">4</div>
-    <div class="span-1 grid-example">5</div>
-    <div class="span-1 grid-example">6</div>
-    <div class="span-1 grid-example">7</div>
-    <div class="span-1 grid-example">8</div>
-    <div class="span-1 grid-example">9</div>
-    <div class="span-1 grid-example">10</div>
-    <div class="span-1 grid-example">11</div>
-    <div class="span-1 grid-example">12</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-1 grid-example">.span-1</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-2 grid-example">.span-2</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-3 grid-example">.span-3</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-4 grid-example">.span-4</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-5 grid-example">.span-5</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-6 grid-example">.span-6</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-7 grid-example">.span-7</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-8 grid-example">.span-8</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-9 grid-example">.span-9</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-10 grid-example">.span-10</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-11 grid-example">.span-11</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-12 grid-example">.span-12</div>
-</div>
-<div class="half feature margin-top-3">
-    <p>You can also use these in different combinations to achieve the result
-    you want <em>as long as the <samp>.span-x</samp> values add up to
-    12</em>.</p>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-10 grid-example">.span-10</div>
-    <div class="span-2 grid-example">.span-2</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-4 grid-example">.span-4</div>
-    <div class="span-8 grid-example">.span-8</div>
-</div>
-<div class="margin-top-1 span-12">
-    <div class="span-6 grid-example">.span-6</div>
-    <div class="span-2 grid-example">.span-2</div>
-    <div class="span-2 grid-example">.span-2</div>
-    <div class="span-2 grid-example">.span-2</div>
-</div>
+            </code></pre>
+        </div>
+        <div class="half feature margin-top-3">
+            <p>Just append the number of columns you wish to span to
+            <samp>.span-</samp>. (I.e, <samp>.span-1</samp>, <samp>.span-2</samp>,
+            <samp>.span-3</samp>, <samp>.span-4</samp>, etc.)</p>
+        </div>
+        <div class="span-12">
+            <div class="span-1 grid-example">1</div>
+            <div class="span-1 grid-example">2</div>
+            <div class="span-1 grid-example">3</div>
+            <div class="span-1 grid-example">4</div>
+            <div class="span-1 grid-example">5</div>
+            <div class="span-1 grid-example">6</div>
+            <div class="span-1 grid-example">7</div>
+            <div class="span-1 grid-example">8</div>
+            <div class="span-1 grid-example">9</div>
+            <div class="span-1 grid-example">10</div>
+            <div class="span-1 grid-example">11</div>
+            <div class="span-1 grid-example">12</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-1 grid-example">.span-1</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-2 grid-example">.span-2</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-3 grid-example">.span-3</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-4 grid-example">.span-4</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-5 grid-example">.span-5</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-6 grid-example">.span-6</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-7 grid-example">.span-7</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-8 grid-example">.span-8</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-9 grid-example">.span-9</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-10 grid-example">.span-10</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-11 grid-example">.span-11</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-12 grid-example">.span-12</div>
+        </div>
+        <div class="half feature margin-top-3">
+            <p>You can also use these in different combinations to achieve the result
+            you want <em>as long as the <samp>.span-x</samp> values add up to
+            12</em>.</p>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-10 grid-example">.span-10</div>
+            <div class="span-2 grid-example">.span-2</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-4 grid-example">.span-4</div>
+            <div class="span-8 grid-example">.span-8</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-6 grid-example">.span-6</div>
+            <div class="span-2 grid-example">.span-2</div>
+            <div class="span-2 grid-example">.span-2</div>
+            <div class="span-2 grid-example">.span-2</div>
+        </div>
+        <div class="margin-top-1 span-12">
+            <p>The <samp>.feature</samp> class will also work in conjunction with the
+            <samp>.span-x</samp> classes for very granular control over the width.</p>
 
-<div class="half feature margin-top-3">
-    <h3 class="h2">Other Styles</h3>
+            <p><strong>Note:</strong> Each column here is wrapped in a
+            <samp>.span-12</samp> column so it clears content above and below it.</p>
 
-    <h4 class="h3">Centering Text</h4>
-    <pre><code>&lt;h4 class=&quot;text-center&quot;&gt;This heading will be centered&lt;/h4&gt;</code></pre>
-    <h4 class="text-center">This heading will be centered</h4>
-</div>
+            <pre><code>
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-1 feature&quot;&gt;.span-1.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-2 feature&quot;&gt;.span-2.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-3 feature&quot;&gt;.span-3.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-4 feature&quot;&gt;.span-4.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-5 feature&quot;&gt;.span-5.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-6 feature&quot;&gt;.span-6.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-7 feature&quot;&gt;.span-7.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-8 feature&quot;&gt;.span-8.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-9 feature&quot;&gt;.span-9.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-10 feature&quot;&gt;.span-10.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-11 feature&quot;&gt;.span-11.feature&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
 
-<div class="half feature">
-    <h4 class="h3">Fancy Centered Button With Hover Effect</h4>
-    <pre><code>&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
-    <p class="text-center"><a href="" class="button center">How to apply</a></p>
-</div>
+            <div class="margin-top-1 span-12">
+                <div class="span-1 feature grid-example">.span-1.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-2 feature grid-example">.span-2.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-3 feature grid-example">.span-3.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-4 feature grid-example">.span-4.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-5 feature grid-example">.span-5.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-6 feature grid-example">.span-6.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-7 feature grid-example">.span-7.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-8 feature grid-example">.span-8.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-9 feature grid-example">.span-9.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-10 feature grid-example">.span-10.feature</div>
+            </div>
+            <div class="margin-top-1 span-12">
+                <div class="span-11 feature grid-example">.span-11.feature</div>
+            </div>
+        </div>
+        <div class="half feature margin-top-3">
+            <h3 class="h2">Other Styles</h3>
 
-<div class="twothirds feature">
-    <h4 class="h3">Column Divider</h4>
-    <pre><code>
+            <h4 class="h3">Centering Text</h4>
+            <pre><code>&lt;h4 class=&quot;text-center&quot;&gt;This heading will be centered&lt;/h4&gt;</code></pre>
+            <h4 class="text-center">This heading will be centered</h4>
+        </div>
+
+        <div class="half feature">
+            <h4 class="h3">Fancy Centered Button With Hover Effect</h4>
+            <pre><code>&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
+            <p class="text-center"><a href="" class="button center">How to apply</a></p>
+        </div>
+
+        <div class="twothirds feature">
+            <h4 class="h3">Column Divider</h4>
+            <pre><code>
 &lt;div class=&quot;third right divider&quot;&gt;
     &lt;p&gt;Hodor hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
     hodor hodor. Hodor hodor hodor hodor. Hodor hodor hodor hodor hodor
@@ -532,25 +635,185 @@ kept forgetting which was correct.) --&gt;
     Organically grow the holistic world view of disruptive innovation via
     workplace diversity and empowerment.&lt;/p&gt;
 &lt;/div&gt;
-    </code></pre>
-</div>
-<div class="twothirds feature margin-top-1">
-    <div class="third">
-        <p class="right divider">Hodor hodor hodor hodor hodor hodor
-        hodor hodor hodor. Hodor hodor hodor hodor. Hodor hodor hodor hodor.
-        Hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor.
-        Hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor hodor
-        hodor. Hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
-        hodor hodor hodor hodor hodor.  Hodor hodor hodor hodor hodor hodor
-        hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor
-        hodor hodor hodor hodor hodor hodor.</p>
-    </div>
-    <div class="twothirds">
-        <p>Leverage agile frameworks to provide a robust synopsis for high
-        level overviews. Iterative approaches to corporate strategy foster
-        collaborative thinking to further the overall value proposition.
-        Organically grow the holistic world view of disruptive innovation via
-        workplace diversity and empowerment.</p>
+            </code></pre>
+        </div>
+        <div class="twothirds feature margin-top-1">
+            <div class="third">
+                <p class="right divider">Hodor hodor hodor hodor hodor hodor
+                hodor hodor hodor. Hodor hodor hodor hodor. Hodor hodor hodor hodor.
+                Hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor.
+                Hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor hodor
+                hodor. Hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
+                hodor hodor hodor hodor hodor.  Hodor hodor hodor hodor hodor hodor
+                hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor
+                hodor hodor hodor hodor hodor hodor.</p>
+            </div>
+            <div class="twothirds">
+                <p>Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy foster
+                collaborative thinking to further the overall value proposition.
+                Organically grow the holistic world view of disruptive innovation via
+                workplace diversity and empowerment.</p>
+            </div>
+        </div>
+        <div class="twothirds feature">
+            <h4>An image with caption</h4>
+            <p>This uses the <samp>figure</samp> and <samp>figcaption</samp>
+            elements.</p>
+            <pre><code>
+&lt;figure&gt;
+    &lt;img src=&quot;{% raw %}{{ config.asset_base }}{% endraw %}/dist/images/rodriquez-alumni.jpg&quot; alt=&quot;Professor Michael Rodriguez headshot.&quot;&gt;
+    &lt;figcaption&gt;Professor Michael Rodriguez&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </code></pre>
+            <div class="span-12 margin-top-1">
+                <figure>
+                    <img src="{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg" alt="Professor Michael Rodriguez headshot.">
+                    <figcaption>Professor Michael Rodriguez</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="span-7 feature">
+            <h4>Aligning the top of a heading with an image</h4>
+            <div class="half">
+                <img src="{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg" alt="Professor Michael Rodriguez headshot.">
+            </div>
+            <div class="half">
+                <h5 class="no-margin-top">Heading</h5>
+                <p>Use the <samp>.no-margin-top</samp> class to remove the top margin
+                from a heading so it aligns with the top of an image.</p>
+            </div>
+        </div>
+        <div class="span-12">
+            <div class="twothirds feature">
+                <pre><code>
+&lt;div class=&quot;half&quot;&gt;
+    &lt;img src=&quot;{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg&quot; alt=&quot;Professor Michael Rodriguez headshot.&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;
+    &lt;h5 class=&quot;no-margin-top&quot;&gt;Heading&lt;/h5&gt;
+    &lt;p&gt;Use the &lt;samp&gt;.no-margin-top&lt;/samp&gt; class to remove the top margin
+    from a heading so it aligns with the top of an image.&lt;/p&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+        </div>
+        <div class="twothirds feature">
+            <h4>Adding top margin</h4>
+            <div class="span-12">
+                <pre><code>
+&lt;div&gt;
+    (empty)
+&lt;/div&gt;
+&lt;div&gt;
+    No margin-top class
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-1&quot;&gt;
+    .margin-top-1
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-2&quot;&gt;
+    .margin-top-2
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-3&quot;&gt;
+    .margin-top-3
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-4&quot;&gt;
+    .margin-top-4
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div class="grid-example margin-top-1 span-12">
+                (empty)
+            </div>
+            <div class="grid-example span-12">
+                No margin-top class
+            </div>
+            <div class="grid-example margin-top-1 span-12">
+                .margin-top-1
+            </div>
+            <div class="grid-example margin-top-2 span-12">
+                .margin-top-2
+            </div>
+            <div class="grid-example margin-top-3 span-12">
+                .margin-top-3
+            </div>
+            <div class="grid-example margin-top-4 span-12">
+                .margin-top-4
+            </div>
+        </div>
+        <div class="twothirds feature margin-top-3">
+            <h4>Smaller text</h4>
+            <p>Use the <samp>&lt;small&gt;</samp> element.</p>
+
+            <div class="span-12">
+                <pre><code>
+&lt;p&gt;&lt;small&gt;Prime number tendrils of gossamer clouds intelligent beings
+cosmic fugue Tunguska event. Astonishment. Dispassionate extraterrestrial
+observer consciousness citizens of distant epochs. White dwarf rich in
+mystery tingling of the spine. The carbon in our apple pies ship of the
+imagination. Laws of physics, with pretty stories for which there's little
+good evidence, cosmic ocean made in the interiors of collapsing stars
+circumnavigated. Stirred by starlight Orion's sword billions upon billions,
+consciousness! Billions upon billions and billions upon billions upon
+billions upon billions upon billions upon billions upon
+billions.&lt;/small&gt;&lt;/p&gt;
+                </code></code>
+            </div>
+
+            <p><small>Prime number tendrils of gossamer clouds intelligent beings
+            cosmic fugue Tunguska event. Astonishment. Dispassionate extraterrestrial
+            observer consciousness citizens of distant epochs. White dwarf rich in
+            mystery tingling of the spine. The carbon in our apple pies ship of the
+            imagination. Laws of physics, with pretty stories for which there's little
+            good evidence, cosmic ocean made in the interiors of collapsing stars
+            circumnavigated. Stirred by starlight Orion's sword billions upon billions,
+            consciousness! Billions upon billions and billions upon billions upon
+            billions upon billions upon billions upon billions upon
+            billions.</small></p>
+        </div>
+        <div class="twothirds feature margin-top-3">
+            <h4>Sub headings</h4>
+
+            <div class="span-12">
+                <pre><code>
+&lt;h5&gt;Heading &lt;small&gt;smaller text&lt;/small&gt;&lt;/h5&gt;
+&lt;h5&gt;Heading &lt;small class=&quot;clear&quot;&gt;smaller text that clears&lt;/small&gt;&lt;/h5&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <h5>Heading <small>smaller text</small></h5>
+                <h5>Heading <small class="clear">smaller text that clears</small></h5>
+            </div>
+            <div class="span-12 margin-top-1">
+                <p>You can bump the small text size up or down just like you do heading sizes.</p>
+            </div>
+            <div class="span-12 margin-top-1">
+                <pre><code>
+&lt;h2&gt;Heading 2 &lt;small class=&quot;clear&quot;&gt;smaller text&lt;/small&gt;&lt;/h2&gt;
+&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h4&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
+&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h5&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
+&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h6&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <h2>Heading 2 <small class="clear">smaller text</small></h2>
+                <h2>Heading 2 <small class="clear h4">even smaller text</small></h2>
+                <h2>Heading 2 <small class="clear h5">even smaller text</small></h2>
+                <h2>Heading 2 <small class="clear h6">even smaller text</small></h2>
+            </div>
+        </div>
+        <div class="twothirds feature margin-top-1">
+            <h4>Hiding images for mobile</h4>
+            <p>Use the <samp>.mobile-hide</samp> class.</p>
+            <div class="span-12 margin-top-1">
+                <pre><code>
+&lt;img src=&quot;{% raw %}{{ config.asset_base }}{% endraw %}/dist/images/rodriquez-alumni.jpg&quot; class=&quot;mobile-hide&quot; alt=&quot;Professor Michael Rodriguez headshot.&quot;&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <img src="{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg" class="mobile-hide" alt="Professor Michael Rodriguez headshot.">
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

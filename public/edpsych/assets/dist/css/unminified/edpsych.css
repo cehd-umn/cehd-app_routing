@@ -100,9 +100,17 @@ img {
   max-width: 100%;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 ol,
 ul {
   list-style: none;
+}
+
+small {
+  font-size: .9em;
 }
 
 table {
@@ -198,7 +206,33 @@ summary {
   position: relative;
 }
 
+article::after,
+aside::after,
+details::after,
+div::after,
+figcaption::after,
+figure::after,
+footer::after,
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after,
+header::after,
+hgroup::after,
+menu::after,
+nav::after,
+p::after,
+section::after,
+summary::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 p {
+  line-height: 1.5;
   margin: 1em 0;
   padding: 0;
 }
@@ -236,7 +270,7 @@ ol ol ol {
 }
 
 li {
-  margin: 10px 0 10px 20px;
+  margin: 5px 0 5px 20px;
   padding: 0;
 }
 
@@ -673,10 +707,10 @@ nav li li {
 
 @media all and (min-width: 620px) {
   #menuicon {
-    top: -3.4375em;
+    top: -56px;
   }
   #menuicon::after {
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1;
   }
 }
@@ -684,7 +718,7 @@ nav li li {
 @media all and (min-width: 960px) {
   #menuicon {
     left: -11%;
-    margin-top: .6em;
+    margin-top: 12px;
   }
 }
 
@@ -704,6 +738,26 @@ header {
 img {
   display: block;
   margin: 0 auto;
+}
+
+img.mobile-hide {
+  display: none;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.margin-top-3 {
+  margin-top: 3em;
+}
+
+.margin-top-4 {
+  margin-top: 4em;
 }
 
 .no-bullet {
@@ -727,6 +781,12 @@ img {
   opacity: 0;
   padding: 0;
   width: 0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .dynamic-content {
@@ -902,6 +962,17 @@ img {
   clear: none;
 }
 
+.whole {
+  float: left;
+  display: block;
+  margin-right: 4.72458%;
+  width: 100%;
+}
+
+.whole:last-child {
+  margin-right: 0;
+}
+
 .wordmark-svg {
   clear: both;
   display: block;
@@ -920,7 +991,7 @@ img {
 }
 
 .wordmark-container {
-  padding: .6em 0 0;
+  padding: 11px 0 0;
 }
 
 @font-face {
@@ -934,39 +1005,34 @@ img {
 h1, .h1 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 36px;
-  font-weight: bold;
   margin: .7em 0;
   padding: 0;
 }
 
 h2, .h2 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 36px;
   margin: .7em 0;
   padding: 0;
 }
 
 h3, .h3 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 30px;
   margin: .7em 0;
   padding: 0;
 }
 
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
   margin: .7em 0;
   padding: 0;
 }
 
 h5, .h5 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
   margin: .7em 0;
   padding: 0;
 }
@@ -974,9 +1040,96 @@ h5, .h5 {
 h6, .h6 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 16px;
-  font-weight: bold;
   margin: .7em 0;
   padding: 0;
+}
+
+h1 small {
+  font-size: 30px;
+}
+
+h1 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h1 {
+  font-size: 30px;
+}
+
+h2 small {
+  font-size: 30px;
+}
+
+h2 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h2 {
+  font-size: 30px;
+}
+
+h3 small {
+  font-size: 24px;
+}
+
+h3 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h3 {
+  font-size: 24px;
+}
+
+h4 small {
+  font-size: 18px;
+}
+
+h4 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h4 {
+  font-size: 18px;
+}
+
+h5 small {
+  font-size: 16px;
+}
+
+h5 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h5 {
+  font-size: 16px;
+}
+
+h6 small {
+  font-size: 14px;
+}
+
+h6 small.clear {
+  clear: both;
+  display: block;
+  margin-top: -.2em;
+}
+
+small.h6 {
+  font-size: 14px;
+}
+
+.margin-top-0 {
+  margin-top: 0;
 }
 
 .button {
@@ -998,13 +1151,14 @@ h6, .h6 {
 
 .button.center {
   display: inline-block;
-  margin: 0 auto;
+  margin: 3em auto;
 }
 
 .button:focus, .button:hover {
-  background: #999 none;
+  background: #555 none;
   border: 0.15em solid #fff;
-  color: #e2e2e2;
+  color: #fff;
+  text-decoration: none;
 }
 
 .button:focus::after, .button:focus::before, .button:hover::after, .button:hover::before {
@@ -1130,7 +1284,7 @@ a.button:hover {
   }
   h2, .h2 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1138,7 +1292,7 @@ a.button:hover {
   }
   h3, .h3 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1146,7 +1300,7 @@ a.button:hover {
   }
   h4, .h4 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1154,7 +1308,7 @@ a.button:hover {
   }
   h5, .h5 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1162,11 +1316,47 @@ a.button:hover {
   }
   h6, .h6 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
     text-align: left;
+  }
+  h1 small {
+    font-size: 36px;
+  }
+  small.h1 {
+    font-size: 36px;
+  }
+  h2 small {
+    font-size: 36px;
+  }
+  small.h2 {
+    font-size: 36px;
+  }
+  h3 small {
+    font-size: 30px;
+  }
+  small.h3 {
+    font-size: 30px;
+  }
+  h4 small {
+    font-size: 24px;
+  }
+  small.h4 {
+    font-size: 24px;
+  }
+  h5 small {
+    font-size: 20px;
+  }
+  small.h5 {
+    font-size: 20px;
+  }
+  h6 small {
+    font-size: 18px;
+  }
+  small.h6 {
+    font-size: 18px;
   }
   .wordmark-svg {
     clear: none;
@@ -1184,6 +1374,9 @@ a.button:hover {
   .span-1:last-child {
     margin-right: 0;
   }
+  .span-1.feature {
+    margin-left: 47.99876%;
+  }
   .span-2 {
     float: left;
     display: block;
@@ -1193,6 +1386,9 @@ a.button:hover {
   }
   .span-2:last-child {
     margin-right: 0;
+  }
+  .span-2.feature {
+    margin-left: 43.63524%;
   }
   .span-3 {
     float: left;
@@ -1204,6 +1400,9 @@ a.button:hover {
   .span-3:last-child {
     margin-right: 0;
   }
+  .span-3.feature {
+    margin-left: 39.27172%;
+  }
   .span-4 {
     float: left;
     display: block;
@@ -1213,6 +1412,9 @@ a.button:hover {
   }
   .span-4:last-child {
     margin-right: 0;
+  }
+  .span-4.feature {
+    margin-left: 34.90819%;
   }
   .span-5 {
     float: left;
@@ -1224,6 +1426,9 @@ a.button:hover {
   .span-5:last-child {
     margin-right: 0;
   }
+  .span-5.feature {
+    margin-left: 30.54467%;
+  }
   .span-6 {
     float: left;
     display: block;
@@ -1233,6 +1438,9 @@ a.button:hover {
   }
   .span-6:last-child {
     margin-right: 0;
+  }
+  .span-6.feature {
+    margin-left: 26.18114%;
   }
   .span-7 {
     float: left;
@@ -1244,6 +1452,9 @@ a.button:hover {
   .span-7:last-child {
     margin-right: 0;
   }
+  .span-7.feature {
+    margin-left: 21.81762%;
+  }
   .span-8 {
     float: left;
     display: block;
@@ -1253,6 +1464,9 @@ a.button:hover {
   }
   .span-8:last-child {
     margin-right: 0;
+  }
+  .span-8.feature {
+    margin-left: 17.4541%;
   }
   .span-9 {
     float: left;
@@ -1264,6 +1478,9 @@ a.button:hover {
   .span-9:last-child {
     margin-right: 0;
   }
+  .span-9.feature {
+    margin-left: 13.09057%;
+  }
   .span-10 {
     float: left;
     display: block;
@@ -1273,6 +1490,9 @@ a.button:hover {
   }
   .span-10:last-child {
     margin-right: 0;
+  }
+  .span-10.feature {
+    margin-left: 8.72705%;
   }
   .span-11 {
     float: left;
@@ -1284,6 +1504,9 @@ a.button:hover {
   .span-11:last-child {
     margin-right: 0;
   }
+  .span-11.feature {
+    margin-left: 4.36352%;
+  }
   .span-12 {
     float: left;
     display: block;
@@ -1293,6 +1516,9 @@ a.button:hover {
   }
   .span-12:last-child {
     margin-right: 0;
+  }
+  .span-12.feature {
+    margin-left: 0%;
   }
 }
 
@@ -1309,6 +1535,9 @@ a.button:hover {
   img {
     display: inline-block;
     margin: auto;
+  }
+  img.mobile-hide {
+    display: inline-block;
   }
   h1, .h1 {
     text-align: left;
@@ -1468,13 +1697,11 @@ a.button:hover {
   }
   .dept-wordmark {
     float: left;
+    margin-top: 4px;
+    max-width: 400px;
   }
-  .container {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container::after {
+  .container::after,
+  .row::after {
     clear: both;
     content: "";
     display: table;
@@ -1522,7 +1749,9 @@ a.button:hover {
     margin-left: 17.4541%;
   }
   #cehd-wordmark {
+    border-bottom: 0;
     float: right;
+    padding: .9em 0 0;
   }
 }
 

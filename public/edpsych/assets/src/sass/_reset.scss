@@ -111,9 +111,17 @@ img {
     max-width: 100%;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 ol,
 ul {
     list-style: none;
+}
+
+small {
+    font-size: .9em;
 }
 
 table {
@@ -200,12 +208,15 @@ nav,
 p,
 section,
 summary {
+    @include clearfix;
+
     clear: both;
     display: block;
     position: relative;
 }
 
 p {
+    line-height: 1.5;
     margin: 1em 0;
     padding: 0;
 }
@@ -243,7 +254,7 @@ ol {
 }
 
 li {
-    margin: 10px 0 10px 20px;
+    margin: 5px 0 5px 20px;
     padding: 0;
 }
 
