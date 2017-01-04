@@ -35,12 +35,17 @@
 <div class="row">
     <div class="container">
         <div class="feature half margin-top-2">
+            <h2>Table of Contents</h2>
+            <div id="toc-container">
+                <ul id="toc">
+                </ul>
+            </div>
             <p>The Ed Psych site has several custom CSS classes to make it easy to generate
             pages that match their designs. Most of the time you should be able to use a
             combination and HTML elements and CSS classes to make a page look the way it
             should.</p>
 
-            <h2 class="h1">Page Title and H1 Blocks</h2>
+            <h2 class="toc">Page Title and H1 Blocks</h2>
 
             <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
             engine</a> is configured to build off of a "base" template that includes a lot
@@ -81,9 +86,9 @@
 &lt;h1&gt;My H1 Text&lt;/h1&gt;
             </code></pre>
 
-            <h2 class="h1">Other Blocks</h2>
+            <h2 class="toc">Other Blocks</h2>
 
-            <h3 class="h2"><samp>main_content</samp></h3>
+            <h3><samp>main_content</samp></h3>
 
             <p>Use the <samp>main_content</samp> block for the content of the page.</p>
 
@@ -95,7 +100,7 @@
 {% endblock %}
     {% endraw %}</code></pre>
 
-            <h3 class="h2"><samp>title_prepend</samp> and <samp>title_append</samp></h3>
+            <h3><samp>title_prepend</samp> and <samp>title_append</samp></h3>
 
             <p><samp>title_prepend</samp> allows us to prepend the same thing to
             multiple page titles. E.g., every page title can be prepended with
@@ -104,7 +109,7 @@
             <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
             for appending, obviously.
 
-            <h3 class="h2"><samp>meta_content</samp></h3>
+            <h3><samp>meta_content</samp></h3>
 
             <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
             can insert a <samp>meta_content</samp> block on a template to populate a
@@ -141,7 +146,7 @@
         </div>
 
         <div class="half feature margin-top-3">
-                <h2>Template Variables</h2>
+                <h2 class="toc">Template Variables</h2>
 
             <p>There are a handful of variables set up for use in all templates. You
             can insert variables anywhere using double curly braces: <samp>
@@ -156,7 +161,7 @@
 
             <p>Hopefully that will help with using the department name in a consistent way.</p>
 
-            <h3 class="h2">Setting Your Own Variables</h3>
+            <h3>Setting Your Own Variables</h3>
 
             <p>If you find that you're repeating yourself, you can define <a
             href="http://twig.sensiolabs.org/doc/templates.html#variables">a
@@ -204,7 +209,7 @@
         </div>
 
         <div class="half feature margin-top-3">
-            <h2 class="h1">Heading Tags</h2>
+            <h2 class="toc">Heading Tags</h2>
 
             <p>To maintain a consistent document structure, it's a good idea to try to
             only have one <samp>&lt;h1&gt;</samp> tag on the page. Since the
@@ -212,20 +217,20 @@
             <samp>&lt;h2&gt;</samp> instead. <emphasis>Remember, headings are for
             structure, not presentation.</emphasis></p>
 
-            <h3 class="h2">Heading Classes</h3>
+            <h3>Heading Classes</h3>
 
             <p>In order to maintain a <emphasis>visual</emphasis> hierarchy, headings
             have matching CSS classes to control their sizes. For example:</p>
 
             <pre><code>
-&lt;h1&gt;This is what an h1 would look like&lt;/h1&gt;
-&lt;h2&gt;This is what an h2 would look like&lt;/h2&gt;
-&lt;h2 class=&quot;h1&quot;&gt;This is an h2 with the .h1 class&lt;/h2&gt;
+&lt;h2&gt;This is what an &lt;h2&gt; would look like&lt;/h2&gt;
+&lt;h3&gt;This is what an &lt;h3&gt; would look like&lt;/h3&gt;
+&lt;h3 class=&quot;h2&quot;&gt;This is an &lt;h3&gt; with the .h2 class&lt;/h3&gt;
             </code></pre>
 
-            <h1>This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
             <h2>This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
-            <h2 class="h1">This is an <samp>&lt;h2&gt;</samp> with the <samp>.h1</samp> class</h2>
+            <h3 class="no-toc">This is what an <samp>&lt;h3&gt;</samp> would look like</h3>
+            <h3 class="h2 no-toc">This is an <samp>&lt;h3&gt;</samp> with the <samp>.h2</samp> class</h3>
 
             <p>This provides control over the <emphasis>styles</emphasis> while
             maintaining good document structure.</p>
@@ -254,7 +259,7 @@
                 <h4 class="h3">Default Heading Sizes</h3>
                 <h1>Heading 1</h1>
                 <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
+                <h3 class="no-toc">Heading 3</h3>
                 <h4>Heading 4</h4>
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
@@ -275,7 +280,7 @@
 <div class="row">
     <div class="container">
         <div class="half feature">
-            <h3 class="h2">Layout and Grid</h3>
+            <h2 class="toc">Layout and Grid</h2>
             <p>All columns must be contained in two <samp>div</samp>s with
             <samp>.row</samp> and <samp>.container</samp> classes
             respectively.</p>
@@ -298,7 +303,7 @@
             of the page. You can also create narrower, centered columns at half or
             two-thirds widths.</p>
 
-            <h4 class="h3">Two Columns at Equal Widths</h4>
+            <h3>Two Columns at Equal Widths</h3>
             <pre><code>
 &lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
 &lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
@@ -309,7 +314,7 @@
             </div>
         </div>
         <div class="half feature">
-            <h4 class="h3">Three Columns at Equal Widths</h4>
+            <h3>Three Columns at Equal Widths</h3>
             <pre><code>
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
@@ -322,7 +327,7 @@
             </div>
         </div>
         <div class="half feature">
-            <h4 class="h3">Two Thirds/One Third Columns</h4>
+            <h3>Two Thirds/One Third Columns</h3>
             <pre><code>
 &lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
@@ -482,7 +487,7 @@ kept forgetting which was correct.) --&gt;
 <div class="row">
     <div class="container">
         <div class="half feature margin-top-3">
-            <h4 class="h3">12-column Grid</h4>
+            <h3>12-column Grid</h3>
             <p>Some times you may need more granular control over column widths. There
             is a set of classes for a 12-column grid system. Think of a grid of 12
             columns like so:
@@ -678,22 +683,18 @@ kept forgetting which was correct.) --&gt;
                 <div class="span-11 feature grid-example">.span-11.feature</div>
             </div>
         </div>
-        <div class="half feature margin-top-3">
-            <h3 class="h2">Other Styles</h3>
+        <div class="twothirds feature margin-top-3">
+            <h2 class="toc">Other Styles</h2>
 
-            <h4 class="h3">Centering Text</h4>
+            <h3>Centering Text</h3>
             <pre><code>&lt;h4 class=&quot;text-center&quot;&gt;This heading will be centered&lt;/h4&gt;</code></pre>
             <h4 class="text-center">This heading will be centered</h4>
-        </div>
 
-        <div class="half feature">
-            <h4 class="h3">Fancy Centered Button With Hover Effect</h4>
+            <h3>Fancy Centered Button With Hover Effect</h3>
             <pre><code>&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
             <p class="text-center"><a href="" class="button center">How to apply</a></p>
-        </div>
 
-        <div class="twothirds feature">
-            <h4 class="h3">Column Divider</h4>
+            <h3>Column Divider</h3>
             <pre><code>
 &lt;div class=&quot;third right divider&quot;&gt;
     &lt;p&gt;Hodor hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
@@ -712,28 +713,27 @@ kept forgetting which was correct.) --&gt;
     workplace diversity and empowerment.&lt;/p&gt;
 &lt;/div&gt;
             </code></pre>
-        </div>
-        <div class="twothirds feature margin-top-1">
-            <div class="third">
-                <p class="right divider">Hodor hodor hodor hodor hodor hodor
-                hodor hodor hodor. Hodor hodor hodor hodor. Hodor hodor hodor hodor.
-                Hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor.
-                Hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor hodor
-                hodor. Hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
-                hodor hodor hodor hodor hodor.  Hodor hodor hodor hodor hodor hodor
-                hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor
-                hodor hodor hodor hodor hodor hodor.</p>
+            <div>
+                <div class="third">
+                    <p class="right divider">Hodor hodor hodor hodor hodor hodor
+                    hodor hodor hodor. Hodor hodor hodor hodor. Hodor hodor hodor hodor.
+                    Hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor hodor.
+                    Hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor hodor
+                    hodor. Hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor
+                    hodor hodor hodor hodor hodor.  Hodor hodor hodor hodor hodor hodor
+                    hodor hodor hodor hodor hodor hodor hodor hodor. Hodor hodor hodor
+                    hodor hodor hodor hodor hodor hodor.</p>
+                </div>
+                <div class="twothirds">
+                    <p>Leverage agile frameworks to provide a robust synopsis for high
+                    level overviews. Iterative approaches to corporate strategy foster
+                    collaborative thinking to further the overall value proposition.
+                    Organically grow the holistic world view of disruptive innovation via
+                    workplace diversity and empowerment.</p>
+                </div>
             </div>
-            <div class="twothirds">
-                <p>Leverage agile frameworks to provide a robust synopsis for high
-                level overviews. Iterative approaches to corporate strategy foster
-                collaborative thinking to further the overall value proposition.
-                Organically grow the holistic world view of disruptive innovation via
-                workplace diversity and empowerment.</p>
-            </div>
-        </div>
-        <div class="twothirds feature">
-            <h4>An image with caption</h4>
+
+            <h3>An image with caption</h3>
             <p>This uses the <samp>figure</samp> and <samp>figcaption</samp>
             elements.</p>
             <pre><code>
@@ -748,21 +748,20 @@ kept forgetting which was correct.) --&gt;
                     <figcaption>Professor Michael Rodriguez</figcaption>
                 </figure>
             </div>
-        </div>
-        <div class="span-7 feature">
-            <h4>Aligning the top of a heading with an image</h4>
-            <div class="half">
-                <img src="{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg" alt="Professor Michael Rodriguez headshot.">
+
+            <hr>
+            <h3 class="margin-top-2">Aligning the top of a heading with an image</h3>
+            <div>
+                <div class="half">
+                    <img src="{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg" alt="Professor Michael Rodriguez headshot.">
+                </div>
+                <div class="half">
+                    <h4 class="no-margin-top">Heading</h4>
+                    <p>Use the <samp>.no-margin-top</samp> class to remove the top margin
+                    from a heading so it aligns with the top of an image.</p>
+                </div>
             </div>
-            <div class="half">
-                <h5 class="no-margin-top">Heading</h5>
-                <p>Use the <samp>.no-margin-top</samp> class to remove the top margin
-                from a heading so it aligns with the top of an image.</p>
-            </div>
-        </div>
-        <div class="span-12">
-            <div class="twothirds feature">
-                <pre><code>
+            <pre><code>
 &lt;div class=&quot;half&quot;&gt;
     &lt;img src=&quot;{{ config.asset_base }}/dist/images/rodriquez-alumni.jpg&quot; alt=&quot;Professor Michael Rodriguez headshot.&quot;&gt;
 &lt;/div&gt;
@@ -771,12 +770,9 @@ kept forgetting which was correct.) --&gt;
     &lt;p&gt;Use the &lt;samp&gt;.no-margin-top&lt;/samp&gt; class to remove the top margin
     from a heading so it aligns with the top of an image.&lt;/p&gt;
 &lt;/div&gt;
-                </code></pre>
-            </div>
-        </div>
-        <div class="twothirds feature">
-            <h4>Adding top margin</h4>
-            <div class="span-12">
+        </code></pre>
+        <h3>Adding top margin</h3>
+        <div class="span-12">
                 <pre><code>
 &lt;div&gt;
     (empty)
@@ -816,12 +812,11 @@ kept forgetting which was correct.) --&gt;
             <div class="grid-example margin-top-4 span-12">
                 .margin-top-4
             </div>
-        </div>
-        <div class="twothirds feature margin-top-3">
-            <h4>Smaller text</h4>
-            <p>Use the <samp>&lt;small&gt;</samp> element.</p>
 
             <div class="span-12">
+                <h3>Smaller text</h3>
+                <p>Use the <samp>&lt;small&gt;</samp> element.</p>
+
                 <pre><code>
 &lt;p&gt;&lt;small&gt;Prime number tendrils of gossamer clouds intelligent beings
 cosmic fugue Tunguska event. Astonishment. Dispassionate extraterrestrial
@@ -846,9 +841,8 @@ billions.&lt;/small&gt;&lt;/p&gt;
             consciousness! Billions upon billions and billions upon billions upon
             billions upon billions upon billions upon billions upon
             billions.</small></p>
-        </div>
-        <div class="twothirds feature margin-top-3">
-            <h4>Sub headings</h4>
+
+            <h3>Sub headings</h3>
 
             <div class="span-12">
                 <pre><code>
@@ -879,9 +873,8 @@ billions.&lt;/small&gt;&lt;/p&gt;
                 <h2>Heading 2 <small class="clear h5">even smaller text</small></h2>
                 <h2>Heading 2 <small class="clear h6">even smaller text</small></h2>
             </div>
-        </div>
-        <div class="twothirds feature margin-top-1">
-            <h4>Hiding images for mobile</h4>
+
+            <h3>Hiding images for mobile</h3>
             <p>Use the <samp>.mobile-hide</samp> class.</p>
             <div class="span-12 margin-top-1">
                 <pre><code>
@@ -894,4 +887,51 @@ billions.&lt;/small&gt;&lt;/p&gt;
         </div>
     </div>
 </div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    $(function() {
+        var $main_headings = $('.toc');
+        var $toc_container = $('#toc-container');
+        var $toc = $toc_container.find('ul');
+        var nav_structure = [];
+
+        $main_headings.each(function(idx, element) {
+            var nav_obj = {};
+            var $heading = $(this);
+            var $subheadings = $heading.siblings('h3').filter(function() {
+                return !$(this).hasClass('no-toc');
+            });
+            var heading_id = 'toc-' + idx;
+
+            $heading.attr('id', heading_id);
+            nav_obj.title = $heading.text();
+            nav_obj.link = "#" + heading_id;
+            nav_obj.sub = [];
+
+            $subheadings.each(function(idx, element) {
+                var sub_id = heading_id + '-sub-' + idx;
+                var $sub = $(this);
+                var sub_obj = {};
+
+                $sub.attr('id', sub_id);
+                sub_obj.title = $sub.text();
+                sub_obj.link = "#" + sub_id;
+                nav_obj.sub.push(sub_obj);
+            });
+
+            nav_structure.push(nav_obj);
+        });
+
+        $.each(nav_structure, function(k, v) {
+            var $list_item = $('<li><a href="' + v.link + '">' + v.title + '</a><ul></ul></li>')
+            $toc.append($list_item);
+
+            $.each(v.sub, function(k, v) {
+                var $sub = $list_item.find('ul');
+                $sub.append('<li><a href="' + v.link + '">' + v.title + '</a></li>');
+            });
+        });
+    });
+</script>
 {% endblock %}
