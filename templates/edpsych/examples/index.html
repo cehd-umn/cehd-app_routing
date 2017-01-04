@@ -414,6 +414,71 @@ kept forgetting which was correct.) --&gt;
         </div>
     </div>
 </div>
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>You can also add the <samp>.subtle</samp> class to change the
+            background color to light grey.</p>
+            <pre><code>
+&lt;div class=&quot;row emphasis subtle&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with grey background&lt;/p&gt;
+            &lt;p class=&quot;pull-quote&quot;&gt;&quot;This is an important quote.&quot;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row emphasis subtle margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with grey background</p>
+            <p class="pull-quote">"This is an important quote."</p>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>Here's that same grey background with three buttons:</p>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <pre><code>
+&lt;div class=&quot;row emphasis subtle&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 1&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 2&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 3&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+<div class="row emphasis subtle margin-top-1">
+    <div class="container">
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 1</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 2</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 3</a></p>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="container">
         <div class="half feature margin-top-3">
@@ -789,11 +854,13 @@ billions.&lt;/small&gt;&lt;/p&gt;
                 <pre><code>
 &lt;h5&gt;Heading &lt;small&gt;smaller text&lt;/small&gt;&lt;/h5&gt;
 &lt;h5&gt;Heading &lt;small class=&quot;clear&quot;&gt;smaller text that clears&lt;/small&gt;&lt;/h5&gt;
+&lt;h5&gt;Heading &lt;small class=&quot;clear normal&quot;&gt;smaller text that clears and will always be 16px&lt;/small&gt;&lt;/h5&gt;
                 </code></pre>
             </div>
             <div class="span-12 margin-top-1">
                 <h5>Heading <small>smaller text</small></h5>
                 <h5>Heading <small class="clear">smaller text that clears</small></h5>
+                <h5>Heading <small class="clear normal">smaller text that clears and will always be 16px</small></h5>
             </div>
             <div class="span-12 margin-top-1">
                 <p>You can bump the small text size up or down just like you do heading sizes.</p>

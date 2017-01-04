@@ -11,6 +11,14 @@
 .emphasis {
     background-color: $cehd-tertiary-gold;
     padding: 2em;
+
+    &.subtle {
+        background-color: $cehd-light-grey;
+
+        .button {
+            border-color: $base-white;
+        }
+    }
 }
 
 .pull-quote {

@@ -1058,6 +1058,11 @@ small.h1 {
   font-size: 30px;
 }
 
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
+}
+
 h2 small {
   font-size: 30px;
 }
@@ -1070,6 +1075,11 @@ h2 small.clear {
 
 small.h2 {
   font-size: 30px;
+}
+
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
 }
 
 h3 small {
@@ -1086,6 +1096,11 @@ small.h3 {
   font-size: 24px;
 }
 
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
+}
+
 h4 small {
   font-size: 18px;
 }
@@ -1098,6 +1113,11 @@ h4 small.clear {
 
 small.h4 {
   font-size: 18px;
+}
+
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
 }
 
 h5 small {
@@ -1114,6 +1134,11 @@ small.h5 {
   font-size: 16px;
 }
 
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
+}
+
 h6 small {
   font-size: 14px;
 }
@@ -1126,6 +1151,11 @@ h6 small.clear {
 
 small.h6 {
   font-size: 14px;
+}
+
+small.normal {
+  font-size: 16px;
+  margin-top: 0;
 }
 
 .margin-top-0 {
@@ -1152,6 +1182,10 @@ small.h6 {
 .button.center {
   display: inline-block;
   margin: 3em auto;
+}
+
+.button.no-margin-top {
+  margin-top: 0;
 }
 
 .button:focus, .button:hover {
@@ -1248,6 +1282,10 @@ a.button:hover {
   text-align: center;
 }
 
+.text-center small {
+  text-align: center;
+}
+
 @media all and (min-width: 321px) {
   .nav-container {
     position: absolute;
@@ -1328,11 +1366,19 @@ a.button:hover {
   small.h1 {
     font-size: 36px;
   }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
+  }
   h2 small {
     font-size: 36px;
   }
   small.h2 {
     font-size: 36px;
+  }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
   }
   h3 small {
     font-size: 30px;
@@ -1340,11 +1386,19 @@ a.button:hover {
   small.h3 {
     font-size: 30px;
   }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
+  }
   h4 small {
     font-size: 24px;
   }
   small.h4 {
     font-size: 24px;
+  }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
   }
   h5 small {
     font-size: 20px;
@@ -1352,11 +1406,19 @@ a.button:hover {
   small.h5 {
     font-size: 20px;
   }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
+  }
   h6 small {
     font-size: 18px;
   }
   small.h6 {
     font-size: 18px;
+  }
+  small.normal {
+    font-size: 16px;
+    margin-top: 0;
   }
   .wordmark-svg {
     clear: none;
@@ -2167,6 +2229,14 @@ input[type="reset"]:focus {
 .emphasis {
   background-color: #ffec99;
   padding: 2em;
+}
+
+.emphasis.subtle {
+  background-color: #efefee;
+}
+
+.emphasis.subtle .button {
+  border-color: #fff;
 }
 
 .pull-quote {
