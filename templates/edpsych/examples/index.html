@@ -45,28 +45,29 @@
             combination and HTML elements and CSS classes to make a page look the way it
             should.</p>
 
-            <h2 class="toc">Page Title and H1 Blocks</h2>
+            <div>
+                <h2 class="toc">Page Title and H1 Blocks</h2>
 
-            <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
-            engine</a> is configured to build off of a "base" template that includes a lot
-            of code that you shouldn't have to worry about. Included in that base template
-            are the <samp>title</samp> and <samp>h1</samp> tag.</p>
+                <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
+                engine</a> is configured to build off of a "base" template that includes a lot
+                of code that you shouldn't have to worry about. Included in that base template
+                are the <samp>title</samp> and <samp>h1</samp> tag.</p>
 
-            <p><em>You shouldn't include an <samp>h1</samp> in your templates</em>. To
-            control what appears in those tags, use the <samp>title</samp> and
-            <samp>heading_1</samp> <a
-            href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
+                <p><em>You shouldn't include an <samp>h1</samp> in your templates</em>. To
+                control what appears in those tags, use the <samp>title</samp> and
+                <samp>heading_1</samp> <a
+                href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
 
-            <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
-            <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
+                <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
+                <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
 
-            <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
+                <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
 
-            <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
+                <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
 
-            <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
+                <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
 
-            <pre><code class="twig">{%- raw -%}
+                <pre><code class="twig">{%- raw -%}
 {# Set the title #}
 {% block title %}
     My Page Title
@@ -78,13 +79,14 @@
 {% endblock %}
 {%- endraw -%}</code></pre>
 
-            <p>The code above will generate this html on the page:</p>
+                <p>The code above will generate this html on the page:</p>
 
-            <pre><code class="html">
+                <pre><code class="html">
 &lt;title&gt;My Page Title&lt;/title&gt;
 
 &lt;h1&gt;My H1 Text&lt;/h1&gt;
-            </code></pre>
+                </code></pre>
+            </div>
 
             <h2 class="toc">Other Blocks</h2>
 
@@ -312,8 +314,7 @@
                 <div class="half grid-example">50%</div>
                 <div class="half grid-example">50%</div>
             </div>
-        </div>
-        <div class="half feature">
+
             <h3>Three Columns at Equal Widths</h3>
             <pre><code>
 &lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
@@ -325,8 +326,7 @@
                 <div class="third grid-example">33%</div>
                 <div class="third grid-example">33%</div>
             </div>
-        </div>
-        <div class="half feature">
+
             <h3>Two Thirds/One Third Columns</h3>
             <pre><code>
 &lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
@@ -336,22 +336,18 @@
                 <div class="twothird grid-example">66%</div>
                 <div class="third grid-example">33%</div>
             </div>
-        </div>
-        <div class="half feature margin-top-3">
+
             <p>To make a half-width or two-thirds width column that is centered, use
             the <samp>.feature</samp> class.</p>
-        </div>
-        <div class="half feature">
+
             <pre><code>
 &lt;div class=&quot;half feature&quot;&gt;
     &lt;p&gt;Half-width column that is centered&lt;/p&gt;
 &lt;/div&gt;
             </code></pre>
-        </div>
-        <div class="half feature grid-example margin-top-1">
+
             <p>Half-width column that is centered</p>
-        </div>
-        <div class="half feature margin-top-2">
+
             <pre><code>
 &lt;div class=&quot;twothirds feature&quot;&gt;
     &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
@@ -487,7 +483,7 @@ kept forgetting which was correct.) --&gt;
 <div class="row">
     <div class="container">
         <div class="half feature margin-top-3">
-            <h3>12-column Grid</h3>
+            <h2 class="toc">12-column Grid</h2>
             <p>Some times you may need more granular control over column widths. There
             is a set of classes for a 12-column grid system. Think of a grid of 12
             columns like so:
