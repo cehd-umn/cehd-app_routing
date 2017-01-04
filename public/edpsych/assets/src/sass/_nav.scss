@@ -1,14 +1,6 @@
 @import "colors";
 @import "bourbon/bourbon";
 
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('assets/fonts/font-awesome-4.5.0/fontawesome-webfont.eot');
-    src: url('assets/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 #menuicon {
     cursor: pointer;
     display: inline-block;
@@ -23,6 +15,16 @@
         font-family: 'FontAwesome';
         font-size: 2em;
     }
+}
+
+#menulabel {
+    @include transform(rotate(-90deg));
+
+    display: inline-block;
+    font-size: 10px;
+    position: absolute;
+    right: -19px;
+    top: 10px;
 }
 
 .has-more {
@@ -153,12 +155,25 @@ nav {
             line-height: 1;
         }
     }
+
+    #menulabel {
+        @include transform(rotate(0));
+
+        font-size: 14px;
+        right: 2px;
+        top: 38px;
+    }
 }
 
 @media all and (min-width: 960px) {
     #menuicon {
         left: -11%;
         margin-top: 12px;
+    }
+
+    #menulabel {
+        right: 2px;
+        top: 38px;
     }
 }
 
