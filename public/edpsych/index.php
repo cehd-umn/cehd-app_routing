@@ -624,6 +624,18 @@ $router->with($global_config['base_url'], function() use ($router) {
         /**
          * Redirects
          */
+        $router->respond('GET', '/ASL/faq.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/asl/faq/', 301)->send();
+        });
+
+        $router->respond('GET', '/ASL/ASL-Placement-Assessment.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/asl/placement-assessment/', 301)->send();
+        });
+
+        $router->respond('GET', '/Courses/ASL.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/courses/asl/', 301)->send();
+        });
+
         $router->respond('GET', '/CSPP/default.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/cspp/', 301)->send();
         });
@@ -651,8 +663,198 @@ $router->with($global_config['base_url'], function() use ($router) {
             echo $app->template->render('edpsych/programs/asl.html', ["section" => "programs-degrees"]);
         });
 
-        $router->respond('GET', '/cspp/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/cspp.html', ["section" => "programs-degrees"]);
+        $router->respond('GET', '/asl/faq/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/asl-faq.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/asl/placement-assessment/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/asl-placement-assessment.html', ["section" => "programs-degrees"]);
+        });
+
+        // @TODO Get something working for the programs RSS feed
+        $router->respond('GET', '/courses/asl/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/courses/asl.html', ["section" => "programs-degrees"]);
+        });
+
+        /**
+         * CSPP Section
+         */
+        $router->with('/cspp', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/cspp/index.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->with('/handbooks', function() use ($router) {
+                /**
+                 * Redirects
+                 */
+                $router->respond('GET', '/AdvancedPracticum/default.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/Expectations.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/expectations/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/advanced.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/advanced/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/documentation.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/documentation/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/interview.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/interview/', 301)->send();
+                });
+
+                $router->respond('GET', '/AdvancedPracticum/liability.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/advanced-practicum/liability/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/default.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/CEU.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/ceu/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/Guidelines.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/guidelines/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/K-12.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/k-12/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/Minneapolis.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/minneapolis/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/areas.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/areas/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/forms.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/forms/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/information.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/information/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/interview.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/interview/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/letter.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/letter/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/requirements.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/requirements/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/site.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/site/', 301)->send();
+                });
+
+                $router->respond('GET', '/Counseling/taping.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/taping/', 301)->send();
+                });
+
+                /**
+                 * Routes
+                 */
+                $router->respond('GET', '/', function($request, $response, $service, $app) {
+                    echo $app->template->render('edpsych/programs/cspp/handbooks/index.html', ["section" => "programs-degrees"]);
+                });
+
+                $router->with('/advanced-practicum', function() use ($router) {
+                    $router->respond('GET', '/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/index.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/expectations/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/expectations.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/advanced/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/advanced.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/documentation/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/documentation.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/interview/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/interview.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/liability/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/liability.html', ["section" => "programs-degrees"]);
+                    });
+                });
+
+                $router->with('/counseling', function() use ($router) {
+                    $router->respond('GET', '/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/index.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/ceu/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/ceu.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/guidelines/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/guidelines.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/k-12/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/k-12.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/minneapolis/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/minneapolis.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/areas/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/areas.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/forms/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/forms.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/information/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/information.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/interview/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/interview.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/letter/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/letter.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/requirements/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/requirements.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/site/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/site.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/taping/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/taping.html', ["section" => "programs-degrees"]);
+                    });
+                });
+            });
         });
 
         $router->respond('GET', '/foundations/', function($request, $response, $service, $app) {
