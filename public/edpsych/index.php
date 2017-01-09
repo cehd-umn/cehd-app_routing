@@ -1038,7 +1038,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
                     $router->respond('GET', '/[8452|8509|8994|:course_number]/', function($request, $response, $service, $app) {
                         $course_number = $request->param('course_number');
-                        $template_path = 'edpsych/programs/cspp/handbooks/doctoral/' . $course_name . '.html';
+                        $template_path = 'edpsych/programs/cspp/handbooks/doctoral/' . $course_number . '.html';
                         echo $app->template->render($template_path, ["section" => "programs-degrees"]);
                     });
 
