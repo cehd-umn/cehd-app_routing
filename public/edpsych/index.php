@@ -672,8 +672,32 @@ $router->with($global_config['base_url'], function() use ($router) {
             $response->redirect($app->site_config['base_url'] . '/programs/foundations/social-psych/', 301)->send();
         });
 
+        $router->respond('GET', '/QME/', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/', 301)->send();
+        });
+
         $router->respond('GET', '/QME/default.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/qme/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME/handbook.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/handbook/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME/job-placement.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/job-placement/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME/minor.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/minor/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME/stats-ed-courses.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/stats-ed/courses/', 301)->send();
+        });
+
+        $router->respond('GET', '/QME/stats-intro.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/qme/stats-intro/', 301)->send();
         });
 
         $router->respond('GET', '/Graduate-Minor.html', function($request, $response, $service, $app) {
@@ -723,6 +747,9 @@ $router->with($global_config['base_url'], function() use ($router) {
                 $response->redirect($app->site_config['base_url'] . '/programs/cspp/sullivan/', 301)->send();
             });
 
+            /**
+             * Routes
+             */
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/cspp/index.html', ["section" => "programs-degrees"]);
             });
@@ -1050,7 +1077,7 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $router->respond('GET', '/liability/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/advanced-practicum/liability.html', ["section" => "programs-degrees"]);
                     });
-                });
+                }); // end /cspp/handbooks/advanced-practicum
 
                 $router->with('/counseling', function() use ($router) {
                     $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -1104,7 +1131,7 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $router->respond('GET', '/taping/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/taping.html', ["section" => "programs-degrees"]);
                     });
-                });
+                }); // end /cspp/handbooks/counseling
 
                 $router->with('/doctoral', function() use ($router) {
                     $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -1179,7 +1206,7 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $router->respond('GET', '/thesis/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/thesis.html', ["section" => "programs-degrees"]);
                     });
-                });
+                }); // end /cspp/handbooks/doctoral
 
                 $router->with('/masters', function() use ($router) {
                     $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -1257,7 +1284,7 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $router->respond('GET', '/progress/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/masters/progress.html', ["section" => "programs-degrees"]);
                     });
-                });
+                }); // end /cspp/handbooks/masters
 
                 $router->with('/practicums', function() use ($router) {
                     $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -1279,9 +1306,9 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $router->respond('GET', '/supervisor/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/supervisor.html', ["section" => "programs-degrees"]);
                     });
-                });
-            });
-        });
+                }); // end /cspp/handbooks/practicums
+            }); // end /cspp/handbooks subsection
+        }); // end /cspp subsection
 
         $router->with('/foundations', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
@@ -1311,11 +1338,33 @@ $router->with($global_config['base_url'], function() use ($router) {
             $router->respond('GET', '/social-psych/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/foundations/social-psych.html', ["section" => "programs-degrees"]);
             });
-        });
+        }); // end programs/foundations
 
-        $router->respond('GET', '/qme/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/qme.html', ["section" => "programs-degrees"]);
-        });
+        $router->with('/qme', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/index.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/handbook/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/handbook.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/job-placement/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/job-placement.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/minor/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/minor.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/stats-ed-courses/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/stats-ed-courses.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/stats-intro/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/qme/stats-intro.html', ["section" => "programs-degrees"]);
+            });
+        }); // end programs/qme
 
         $router->respond('GET', '/schoolpsych/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/schoolpsych.html', ["section" => "programs-degrees"]);
