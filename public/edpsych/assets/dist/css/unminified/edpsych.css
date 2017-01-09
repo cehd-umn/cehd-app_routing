@@ -1037,21 +1037,21 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   margin: .7em 0;
   padding: 0;
 }
 
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   margin: .7em 0;
   padding: 0;
 }
 
 h5, .h5 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: .7em 0;
   padding: 0;
 }
@@ -1349,7 +1349,7 @@ a.button:hover {
   }
   h3, .h3 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1357,7 +1357,7 @@ a.button:hover {
   }
   h4, .h4 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1365,7 +1365,7 @@ a.button:hover {
   }
   h5, .h5 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
@@ -1373,7 +1373,7 @@ a.button:hover {
   }
   h6, .h6 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin: 1em 0;
     padding: 0;
