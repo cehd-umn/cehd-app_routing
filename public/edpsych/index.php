@@ -768,6 +768,182 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/counseling/taping/', 301)->send();
                 });
 
+                $router->respond('GET', '/Doctoral/', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/default.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/8452.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/8452/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/8509.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/8509/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/8994.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/8994/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/A.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/appendix-a/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/B.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/appendix-b/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/D.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/appendix-d/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/E.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/appendix-e/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/FinalOral.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/final-oral/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/Liability.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/liability/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/Licensing.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/licensing/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/certification.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/certification/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/disclosure.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/disclosure/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/general.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/general/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/graduation.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/graduation/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/internship.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/internship/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/personnel.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/personnel/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/practicum.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/practicum/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/preliminary.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/preliminary/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/procedures.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/procedures/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/seminar.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/seminar/', 301)->send();
+                });
+
+                $router->respond('GET', '/Doctoral/thesis.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/doctoral/thesis/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/thesis/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/default.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/thesis/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/A.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/appendix-a/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/C.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/appendix-c/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/D.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/appendix-d/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/L.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/appendix-l/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/Commencement.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/commencement/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/Liability.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/liability/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/Licensing.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/liability/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/National.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/national/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/PlanB.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/plan-b/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/counseling.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/counseling/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/courses.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/courses/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/disclosure.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/disclosure/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/exam.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/exam/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/general.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/general/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/learning.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/learning/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/personnel.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/personnel/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/portfolio.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/portfolio/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/practicum.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/practicum/', 301)->send();
+                });
+
+                $router->respond('GET', '/Masters/progress.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/progress/', 301)->send();
+                });
+
                 /**
                  * Routes
                  */
@@ -852,6 +1028,159 @@ $router->with($global_config['base_url'], function() use ($router) {
 
                     $router->respond('GET', '/taping/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/counseling/taping.html', ["section" => "programs-degrees"]);
+                    });
+                });
+
+                $router->with('/doctoral', function() use ($router) {
+                    $router->respond('GET', '/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/index.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/[8452|8509|8994|:course_number]/', function($request, $response, $service, $app) {
+                        $course_number = $request->param('course_number');
+                        $template_path = 'edpsych/programs/cspp/handbooks/doctoral/' . $course_name . '.html';
+                        echo $app->template->render($template_path, ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/appendix-[a|b|d|e:appendix]/', function($request, $response, $service, $app) {
+                        $appendix = $request->param('appendix');
+                        $template_name = 'appendix-' . $appendix;
+                        $template_path = 'edpsych/programs/cspp/handbooks/doctoral/' . $template_name . '.html';
+                        echo $app->template->render($template_path, ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/final-oral/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/final-oral.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/liability/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/liability.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/licensing/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/licensing.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/certification/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/certification.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/disclosure/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/disclosure.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/general/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/general.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/graduation/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/graduation.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/internship/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/internship.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/personnel/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/personnel.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/practicum/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/practicum.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/preliminary/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/preliminary.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/procedures/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/procedures.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/seminar/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/seminar.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/thesis/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/doctoral/thesis.html', ["section" => "programs-degrees"]);
+                    });
+                });
+
+                $router->with('/masters', function() use ($router) {
+                    $router->respond('GET', '/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/index.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/appendix-[a|c|d|e|l:appendix]/', function($request, $response, $service, $app) {
+                        // "a", "c", "d" or "l" get assigned to $appendix
+                        $appendix = $request->param('appendix');
+
+                        // Use that to build the name of the template
+                        $template_name = 'appendix-' . $appendix;
+
+                        // Put the path together and use it to render the correct template
+                        $template_path = 'edpsych/programs/cspp/handbooks/doctoral/' . $template_name . '.html';
+                        echo $app->template->render($template_path, ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/commencement/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/commencement.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/liability/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/liability.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/licensing/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/licensing.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/national/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/national.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/plan-b/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/plan-b.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/counseling/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/counseling.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/courses/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/courses.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/disclosure/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/disclosure.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/exam/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/exam.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/general/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/general.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/learning/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/learning.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/personnel/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/personnel.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/portfolio/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/portfolio.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/practicum/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/practicum.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/progress/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/masters/progress.html', ["section" => "programs-degrees"]);
                     });
                 });
             });
