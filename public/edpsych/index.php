@@ -944,6 +944,30 @@ $router->with($global_config['base_url'], function() use ($router) {
                     $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/masters/progress/', 301)->send();
                 });
 
+                $router->respond('GET', '/Practicums/', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/', 301)->send();
+                });
+
+                $router->respond('GET', '/Practicums/default.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/', 301)->send();
+                });
+
+                $router->respond('GET', '/Practicums/forms.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/forms/', 301)->send();
+                });
+
+                $router->respond('GET', '/Practicums/general.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/general/', 301)->send();
+                });
+
+                $router->respond('GET', '/Practicums/guidelines.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/guidelines/', 301)->send();
+                });
+
+                $router->respond('GET', '/Practicums/supervisor.html', function($request, $response, $service, $app) {
+                    $response->redirect($app->site_config['base_url'] . '/programs/cspp/handbook/practicums/supervisor/', 301)->send();
+                });
+
                 /**
                  * Routes
                  */
@@ -1181,6 +1205,28 @@ $router->with($global_config['base_url'], function() use ($router) {
 
                     $router->respond('GET', '/progress/', function($request, $response, $service, $app) {
                         echo $app->template->render('edpsych/programs/cspp/handbooks/masters/progress.html', ["section" => "programs-degrees"]);
+                    });
+                });
+
+                $router->with('/practicums', function() use ($router) {
+                    $router->respond('GET', '/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/index.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/forms/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/forms.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/general/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/general.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/guidelines/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/guidelines.html', ["section" => "programs-degrees"]);
+                    });
+
+                    $router->respond('GET', '/supervisor/', function($request, $response, $service, $app) {
+                        echo $app->template->render('edpsych/programs/cspp/handbooks/practicums/supervisor.html', ["section" => "programs-degrees"]);
                     });
                 });
             });
