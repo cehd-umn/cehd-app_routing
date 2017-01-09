@@ -680,8 +680,27 @@ $router->with($global_config['base_url'], function() use ($router) {
          * CSPP Section
          */
         $router->with('/cspp', function() use ($router) {
+            /**
+             * Redirects
+             */
+            $router->respond('GET', '/Hansen.html', function($request, $response, $service, $app) {
+                $response->redirect($app->site_config['base_url'] . '/programs/cspp/hansen/', 301)->send();
+            });
+
+            $router->respond('GET', '/Sullivan.html', function($request, $response, $service, $app) {
+                $response->redirect($app->site_config['base_url'] . '/programs/cspp/sullivan/', 301)->send();
+            });
+
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/cspp/index.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/hansen/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/cspp/hansen.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/sullivan/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/cspp/sullivan.html', ["section" => "programs-degrees"]);
             });
 
             $router->with('/handbooks', function() use ($router) {
