@@ -779,6 +779,10 @@ $router->with($global_config['base_url'], function() use ($router) {
             echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
         });
 
+        $router->respond('GET', '/foundations/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations.html', ["section" => "programs-degrees"]);
+        });
+
         $router->respond('GET', '/graduate-minor/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/graduate-minor.html', ["section" => "programs-degrees"]);
         });
