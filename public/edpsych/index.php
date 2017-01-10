@@ -640,38 +640,6 @@ $router->with($global_config['base_url'], function() use ($router) {
             $response->redirect($app->site_config['base_url'] . '/programs/cspp/', 301)->send();
         });
 
-        $router->respond('GET', '/Foundations/default.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/5135.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/5135/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/AREA-Personality.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/area-personality/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/StudentAwards.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/student-awards/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/learning.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/learning/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/prelim.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/prelim/', 301)->send();
-        });
-
-        $router->respond('GET', '/Foundations/social-psych.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/foundations/social-psych/', 301)->send();
-        });
-
         $router->respond('GET', '/QME/', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/qme/', 301)->send();
         });
@@ -772,36 +740,6 @@ $router->with($global_config['base_url'], function() use ($router) {
 
             }); // end /cspp/handbooks subsection
         }); // end /cspp subsection
-
-        $router->with('/foundations', function() use ($router) {
-            $router->respond('GET', '/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/index.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/5135/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/5135.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/area-personality/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/area-personality.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/student-awards/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/student-awards.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/learning/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/learning.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/prelim/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/prelim.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/social-psych/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/foundations/social-psych.html', ["section" => "programs-degrees"]);
-            });
-        }); // end programs/foundations
 
         $router->with('/qme', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
