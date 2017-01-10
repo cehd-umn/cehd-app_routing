@@ -69,7 +69,7 @@ img {
 /// @requires neat/neat
 .container {
     @include outer-container;
-    @include pad(0 default 0 default);
+    @include pad(0 2em 0 2em);
 }
 
 /// Container for main navigation
@@ -425,6 +425,10 @@ a {
     .container,
     .row {
         @include clearfix;
+    }
+
+    .container {
+        @include pad(0 3em 0 3em);
     }
 
     .text-center {

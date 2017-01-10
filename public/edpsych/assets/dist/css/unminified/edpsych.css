@@ -196,6 +196,7 @@ h5,
 h6,
 header,
 hgroup,
+main,
 menu,
 nav,
 p,
@@ -221,6 +222,7 @@ h5::after,
 h6::after,
 header::after,
 hgroup::after,
+main::after,
 menu::after,
 nav::after,
 p::after,
@@ -396,6 +398,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   height: 75px;
   width: 100%;
+  z-index: 2;
 }
 
 #umnheader a {
@@ -562,33 +565,47 @@ html {
   box-sizing: inherit;
 }
 
+#menuicon-wrapper {
+  background: #ccc;
+  border-radius: 3px;
+  display: inline-block;
+  height: 31px;
+  left: -15px;
+  top: 213px;
+  width: 36px;
+  z-index: 999;
+}
+
 #menuicon {
   cursor: pointer;
   display: inline-block;
-  left: 0;
-  position: absolute;
-  top: 8px;
+  left: 5px;
+  position: relative;
+  top: 0;
+  z-index: 999;
 }
 
-#menuicon::after {
+#menuicon::before {
   clear: both;
   content: "\f0c9 ";
   display: block;
   font-family: 'FontAwesome';
   font-size: 2em;
+  position: relative;
 }
 
 #menulabel {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  display: inline-block;
-  font-size: 10px;
-  position: absolute;
-  right: -19px;
-  top: 10px;
+  display: none;
+}
+
+#menutab {
+  background: #ccc;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: .5em;
+  z-index: 1;
 }
 
 .has-more.open > [aria-expanded="false"] {
@@ -598,9 +615,11 @@ html {
 nav {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
   clear: none;
+  font-size: 16px;
   height: 100%;
   left: -600px;
   position: absolute;
+  top: 0;
   transition: ease-in-out .5s;
   width: 250px;
   z-index: 10000;
@@ -611,7 +630,7 @@ nav .last {
 }
 
 nav.active {
-  left: 0;
+  left: 15px;
   transition: ease-in-out .5s;
 }
 
@@ -712,32 +731,30 @@ nav li li {
 
 @media all and (min-width: 620px) {
   #menuicon {
-    top: -56px;
-  }
-  #menuicon::after {
-    font-size: 2.5em;
-    line-height: 1;
-  }
-  #menulabel {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0);
-    font-size: 14px;
-    right: 2px;
-    top: 38px;
+    font-size: 16px;
   }
 }
 
 @media all and (min-width: 960px) {
-  #menuicon {
-    left: -11%;
-    margin-top: 12px;
-  }
   #menulabel {
-    right: 2px;
-    top: 38px;
+    background-color: transparent;
+    display: block;
+    font-size: 12px;
+  }
+  #menuicon-wrapper {
+    font-size: 12px;
+    left: -10px;
+    top: 196px;
+    width: 52px;
+  }
+  #menutab {
+    background-color: transparent;
+  }
+  #menuicon {
+    left: 20px;
+  }
+  nav {
+    font-size: 18px;
   }
 }
 
@@ -816,7 +833,7 @@ img.mobile-hide {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 4.72458% 0 4.72458%;
+  padding: 0 2em 0 2em;
 }
 
 .container::after {
@@ -1786,6 +1803,9 @@ a.button:hover {
     clear: both;
     content: "";
     display: table;
+  }
+  .container {
+    padding: 0 3em 0 3em;
   }
   .text-center {
     text-align: center;

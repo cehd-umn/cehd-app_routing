@@ -1,30 +1,47 @@
 @import "colors";
 @import "bourbon/bourbon";
 
+#menuicon-wrapper {
+    background: $umn-medium-grey;
+    border-radius: 3px;
+    display: inline-block;
+    height: 31px;
+    left: -15px;
+    top: 213px;
+    width: 36px;
+    z-index: 999;
+}
+
 #menuicon {
     cursor: pointer;
     display: inline-block;
-    left: 0;
-    position: absolute;
-    top: 8px;
+    left: 5px;
+    position: relative;
+    top: 0;
+    z-index: 999;
 
-    &::after {
+    &::before {
         clear: both;
         content: "\f0c9 ";
         display: block;
         font-family: 'FontAwesome';
         font-size: 2em;
+        position: relative;
     }
 }
 
 #menulabel {
-    @include transform(rotate(-90deg));
+    display: none;
+}
 
-    display: inline-block;
-    font-size: 10px;
-    position: absolute;
-    right: -19px;
-    top: 10px;
+#menutab {
+    background: $umn-medium-grey;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: .5em;
+    z-index: 1;
 }
 
 .has-more {
@@ -38,9 +55,11 @@
 nav {
     box-shadow: 1px 1px 2px $box-shadow-rgba;
     clear: none;
+    font-size: 16px;
     height: 100%;
     left: -600px;
     position: absolute;
+    top: 0;
     transition: ease-in-out .5s;
     width: 250px;
     z-index: 10000;
@@ -50,7 +69,7 @@ nav {
     }
 
     &.active {
-        left: 0;
+        left: 15px;
         transition: ease-in-out .5s;
     }
 
@@ -148,32 +167,38 @@ nav {
 
 @media all and (min-width: 620px) {
     #menuicon {
-        top: -56px;
-
-        &::after {
-            font-size: 2.5em;
-            line-height: 1;
-        }
-    }
-
-    #menulabel {
-        @include transform(rotate(0));
-
-        font-size: 14px;
-        right: 2px;
-        top: 38px;
+        font-size: 16px;
     }
 }
 
 @media all and (min-width: 960px) {
     #menuicon {
-        left: -11%;
-        margin-top: 12px;
+        // left: -11%;
     }
 
     #menulabel {
-        right: 2px;
-        top: 38px;
+        background-color: transparent;
+        display: block;
+        font-size: 12px;
+    }
+
+    #menuicon-wrapper {
+        font-size: 12px;
+        left: -10px;
+        top: 196px;
+        width: 52px;
+    }
+
+    #menutab {
+        background-color: transparent;
+    }
+
+    #menuicon {
+        left: 20px;
+    }
+
+    nav {
+        font-size: 18px;
     }
 }
 

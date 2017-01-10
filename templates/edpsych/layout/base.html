@@ -53,35 +53,36 @@
 {% endblock %}
 {% block section_wordmark %}
     <a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a>
-    <div>
+{% endblock %}
+{% block nav %}
+<div id="menutab">
+    <div id="menuicon-wrapper">
         <span id="menuicon">
             <span id="menulabel">Menu</span>
         </span>
+        <nav id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
+            <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
+            <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</span></button>
+            <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
+            {% for nav_item in config.nav_items %}
+                {% set has_sub = nav_item.subnav %}
+                <li role="treeitem" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
+                    <a href="{{ config.base_url }}{{ nav_item.href }}" tabindex="0">{{ nav_item.name }}</a>
+                    {% if has_sub %}
+                        <ul role="group" aria-expanded="{% if section == nav_item.section %}true{% else %}false{% endif %}" class="group-{{ section }}" data-section="{{ section }}">
+                            {% for subnav_item in nav_item.subnav %}
+                                <li role="treeitem" class="tree-item tree-item-{{ section }}{% if loop.last %} last{% endif %}">
+                                    <a href="{{ config.base_url }}{{ subnav_item.href }}" tabindex="{% if section == nav_item.section %}0{% else %}-1{% endif %}">
+                                        {{ subnav_item.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </nav>
     </div>
-{% endblock %}
-{% block nav %}
-
-<nav id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
-    <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
-    <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</span></button>
-    <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
-    {% for nav_item in config.nav_items %}
-        {% set has_sub = nav_item.subnav %}
-        <li role="treeitem" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
-            <a href="{{ config.base_url }}{{ nav_item.href }}" tabindex="0">{{ nav_item.name }}</a>
-            {% if has_sub %}
-                <ul role="group" aria-expanded="{% if section == nav_item.section %}true{% else %}false{% endif %}" class="group-{{ section }}" data-section="{{ section }}">
-                    {% for subnav_item in nav_item.subnav %}
-                        <li role="treeitem" class="tree-item tree-item-{{ section }}{% if loop.last %} last{% endif %}">
-                            <a href="{{ config.base_url }}{{ subnav_item.href }}" tabindex="{% if section == nav_item.section %}0{% else %}-1{% endif %}">
-                                {{ subnav_item.name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </li>
-    {% endfor %}
-    </ul>
-</nav>
+</div>
 {% endblock %}
