@@ -562,6 +562,35 @@ $router->with($global_config['base_url'], function() use ($router) {
                 }
             });
         });
+
+        $router->with('/programs', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                // $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx?t=&p=EPSY_ASL&d=both&a=both';
+                $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
+                $query_data = $request->params();
+                $client_query_data = ['query' => []];
+                $valid_query_params = [
+                    'a',
+                    'd',
+                    'p',
+                    't',
+                ];
+
+                foreach ($valid_query_params as $valid_query_param)
+                {
+                    if (array_key_exists($valid_query_param, $query_data))
+                    {
+                        $client_query_data['query'][$valid_query_param] = $query_data[$valid_query_param];
+                    }
+                }
+
+                if (!empty($client_query_data))
+                {
+                    $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                }
+            });
+        });
     });
 
     /**
@@ -695,9 +724,21 @@ $router->with($global_config['base_url'], function() use ($router) {
             echo $app->template->render('edpsych/programs/asl-placement-assessment.html', ["section" => "programs-degrees"]);
         });
 
-        // @TODO Get something working for the programs RSS feed
-        $router->respond('GET', '/courses/asl/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/courses/asl.html', ["section" => "programs-degrees"]);
+        $router->respond('GET', '/courses/[asl|qme|psyf:course]/', function($request, $response, $service, $app) {
+            // values for the "p" query parameter in the JavaScript request
+            $p_params = [
+                "asl" => "EPSY_ASL",
+                "qme" => "EPSY_PSE",
+                "psyf" => "EPSY_PSYF",
+            ];
+            $course = $request->param('course');
+            $template_vars = [
+                "section" => "programs-degrees",
+                "p_param" => $p_params[$course],
+            ];
+
+            // @todo rename this template courses.html
+            echo $app->template->render('edpsych/programs/courses/course.html', $template_vars);
         });
 
         /**
