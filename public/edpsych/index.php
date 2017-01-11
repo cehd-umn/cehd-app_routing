@@ -660,50 +660,16 @@ $router->with($global_config['base_url'], function() use ($router) {
         });
     });
 
+    /**
+     * Programs
+     */
     require_once BASE_PATH . 'routes/edpsych/programs/routes.php';
 
     /**
      * Research
      */
-    $router->with('/research', function() use ($router) {
-        /**
-         * Redirects
-         */
-        $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/research/', 301)->send();
-        });
+    require_once BASE_PATH . 'routes/edpsych/research/routes.php';
 
-        $router->respond('GET', '/labs/default.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/research/labs/', 301)->send();
-        });
-
-        $router->respond('GET', '/topics/default.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/research/topics/', 301)->send();
-        });
-
-        $router->respond('GET', '/student-dissertations/default.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/research/student-dissertations/', 301)->send();
-        });
-
-        /**
-         * Routes
-         */
-        $router->respond('GET', '/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/research/index.html', ["section" => "research"]);
-        });
-
-        $router->respond('GET', '/labs/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/research/labs.html', ["section" => "research"]);
-        });
-
-        $router->respond('GET', '/topics/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/research/topics.html', ["section" => "research"]);
-        });
-
-        $router->respond('GET', '/student-dissertations/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/research/student-dissertations.html', ["section" => "research"]);
-        });
-    });
 
     $router->respond('404', function ($request) {
         $page = $request->uri();
