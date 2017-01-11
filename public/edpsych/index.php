@@ -287,8 +287,14 @@ $router->with($global_config['base_url'], function() use ($router) {
             echo $app->template->render('edpsych/current/index.html', ["section" => "current"]);
         });
 
-        $router->respond('GET', '/cspp/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/current/cspp.html', ["section" => "current"]);
+        $router->with('/cspp', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/current/cspp/index.html', ["section" => "current"]);
+            });
+
+            $router->respond('GET', '/handbooks/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/current/cspp/handbooks/index.html', ["section" => "current"]);
+            });
         });
 
         $router->respond('GET', '/foundations/', function($request, $response, $service, $app) {
@@ -665,6 +671,10 @@ $router->with($global_config['base_url'], function() use ($router) {
             $response->redirect($app->site_config['base_url'] . '/programs/courses/asl/', 301)->send();
         });
 
+        $router->respond('GET', '/CSPP/', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/cspp/', 301)->send();
+        });
+
         $router->respond('GET', '/CSPP/default.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/cspp/', 301)->send();
         });
@@ -691,6 +701,10 @@ $router->with($global_config['base_url'], function() use ($router) {
 
         $router->respond('GET', '/Foundations/certificate/5135.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/foundations/5135/', 301)->send();
+        });
+
+        $router->respond('GET', '/CSPP/handbooks/', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/current/cspp/handbooks/', 301)->send();
         });
 
         $router->respond('GET', '/QME/', function($request, $response, $service, $app) {
@@ -794,16 +808,6 @@ $router->with($global_config['base_url'], function() use ($router) {
             $router->respond('GET', '/sullivan/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/cspp/sullivan.html', ["section" => "programs-degrees"]);
             });
-
-            $router->with('/handbooks', function() use ($router) {
-                /**
-                 * Routes
-                 */
-                $router->respond('GET', '/', function($request, $response, $service, $app) {
-                    echo $app->template->render('edpsych/programs/cspp/handbooks/index.html', ["section" => "programs-degrees"]);
-                });
-
-            }); // end /cspp/handbooks subsection
         }); // end /cspp subsection
 
         $router->with('/qme', function() use ($router) {
