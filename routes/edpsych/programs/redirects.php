@@ -35,7 +35,7 @@ $router->respond('GET', '/Foundations/learning.html', function($request, $respon
 });
 
 $router->respond('GET', '/Foundations/social-psych.html', function($request, $response, $service, $app) {
-    $response->redirect($app->site_config['base_url'] . '/programs/foundations/school-psych/', 301)->send();
+    $response->redirect($app->site_config['base_url'] . '/programs/foundations/social-psych/', 301)->send();
 });
 
 $router->respond('GET', '/Foundations/certificate/Talent.html', function($request, $response, $service, $app) {

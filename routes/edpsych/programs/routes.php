@@ -141,8 +141,8 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/foundations/learning.html', ["section" => "programs-degrees"]);
         });
 
-        $router->respond('GET', '/school-psych/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/school-psych.html', ["section" => "programs-degrees"]);
+        $router->respond('GET', '/social-psych/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/social-psych.html', ["section" => "programs-degrees"]);
         });
 
         $router->respond('GET', '/talent/', function($request, $response, $service, $app) {
