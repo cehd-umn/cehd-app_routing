@@ -85,3 +85,15 @@ $router->respond('GET', '/Graduate-Minor.html', function($request, $response, $s
 $router->respond('GET', '/SchoolPsych/students.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/students/', 301)->send();
 });
+
+$router->respond('GET', '/SchoolPsych/focus.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/focus/', 301)->send();
+});
+
+$router->respond('GET', '/SchoolPsych/diversity.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/diversity/', 301)->send();
+});
+
+$router->respond('GET', '/SchoolPsych/outcomes.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/outcomes/', 301)->send();
+});
