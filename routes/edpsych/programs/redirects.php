@@ -97,3 +97,15 @@ $router->respond('GET', '/SchoolPsych/diversity.html', function($request, $respo
 $router->respond('GET', '/SchoolPsych/outcomes.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/outcomes/', 301)->send();
 });
+
+$router->respond('GET', 'FutureStudents/pridefellow.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/pride-fellow/', 301)->send();
+});
+
+$router->respond('GET', 'FutureStudents/master.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/master/', 301)->send();
+});
+
+$router->respond('GET', 'FutureStudents/doctor.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/doctor/', 301)->send();
+});

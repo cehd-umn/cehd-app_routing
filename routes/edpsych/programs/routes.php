@@ -1,5 +1,7 @@
 <?php
-// PROGRAMS AND DEGREES Routes
+/**
+ * PROGRAMS AND DEGREES Routes
+ */
 $router->with('/programs', function() use ($router) {
     // Redirects are in their own file
     require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';
@@ -109,8 +111,20 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/schoolpsych/diversity.html', ["section" => "programs-degrees"]);
         });
 
+        $router->respond('GET', '/doctor/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/doctor.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/master/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/master.html', ["section" => "programs-degrees"]);
+        });
+
         $router->respond('GET', '/outcomes/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/schoolpsych/outcomes.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/pride-fellow/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/pride-fellow.html', ["section" => "programs-degrees"]);
         });
     }); // end schoolpsych section
 
