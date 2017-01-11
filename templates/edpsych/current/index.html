@@ -4,7 +4,37 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>{{ page_title }}</h2>
+        <h2>Current students</h2>
+        <section>
+        <div class="twothird">
+          <p>Welcome to the Educational Psychology graduate program. Below are several links that will be useful to you as you begin and continue your graduate studies.</p>
+          <ul>
+            <li><a href="{{ config.base_url }}/current/handbook/">Educational Psychology Handbook</a></li>
+            <li><a href="{{ config.asset_base }}/dist/documents/current/Preparing for EPSY 8251-8261.docx">Preparing for EPSY 8251/8261</a></li>
+            <li>Forms</li>
+            <li><a href="http://www.grad.umn.edu/students">Graduate School</a></li>
+            <li><a href="https://sites.google.com/a/umn.edu/e47eb18e/home">Council of Graduate Students (COGS)</a></li>
+          </ul>
+        </div>
+        <div class="third">
+          <figure>
+            <img src="{{ config.asset_base }}/dist/images/Current/PedBridge.jpg" alt="Pedestrian Bridge.">
+            <figcaption>Students visit on the pedestrian bridge that connects the Education Sciences building to the other side of the Mississippi River.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <div class="half">
+          <h3>For students</h3>
+            <p><strong>Go to MyU > Academics > Enrollment Tools > Course Catalog	>	EPSY</strong></p>
+            <p>This tool provides course information that includes: course details, enrollment information, short description &amp; class sections. Please utilize this tool when you are searching for or signing up for classes each semester.</p>
+            <p>Questions? <a href="{{ config.base_url }}/people/">Contact your program coordinator.</a></p>
+        </div>
+        <div class="half">
+          <h3>How to search &amp; sign up for classes</h3>
+            <p>Due to the changes that have taken place within the University systems, there is a new tool offered to students for course information.</p>
+        </div>
+      </section>
     </div>
 </div>
 {% endblock %}
