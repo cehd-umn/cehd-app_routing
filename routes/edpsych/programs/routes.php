@@ -89,13 +89,30 @@ $router->with('/programs', function() use ($router) {
         });
     }); // end programs/qme
 
-    $router->respond('GET', '/schoolpsych/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/schoolpsych.html', ["section" => "programs-degrees"]);
-    });
+    /**
+     * School Psych section
+     */
+    $router->with('/schoolpsych', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/index.html', ["section" => "programs-degrees"]);
+        });
 
-    $router->respond('GET', '/schoolpsych/students/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/schoolpsych-students.html', ["section" => "programs-degrees"]);
-    });
+        $router->respond('GET', '/students/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/students.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/focus/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/focus.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/diversity/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/diversity.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/outcomes/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/schoolpsych/outcomes.html', ["section" => "programs-degrees"]);
+        });
+    }); // end schoolpsych section
 
     $router->respond('GET', '/specialed/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
