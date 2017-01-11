@@ -2,8 +2,15 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>American Sign Language Courses</h2>
-        <div class="twothirds">
+        <div class="twothirds feature">
+            <h2>American Sign Language Courses</h2>
+        </div>
+        <div class="twothirds feature" id="programs-container">
+        <div class="loader">
+            <div class="loader-figure small"></div>
+            <p class="loader-label">Loading&hellip;</p>
+        </div>
+        {#
         <p class="pull-quote">ASL 1701—American Sign Language I (Undergraduate)</p>
           <p>First of a 4-course sequence. American Sign Language (ASL), cultural values/rules of behavior of Deaf community in the United States. Receptive/expressive readiness activities, sign vocabulary, grammatical structure, receptive/expressive fingerspelling, aspects of Deaf culture. Lab sessions.</p>
         <p class="pull-quote">ASL 1702—American Sign Language II (Undergraduate)</p>
@@ -15,8 +22,43 @@
         <p class="pull-quote">ASL 3705—Cultural and Sociolingual Views within the Deaf Community (Undergraduate)</p>
           <p>This course investigates the Deaf community using an ethnocentric view of culture. Students will explore cultural readings and various sources in class discussion using multi-disciplinary approaches: sociological, educational, and linguistic views. Can be taken concurrently with ASL 1701-3704. Class instruction conducted entirely in ASL with an English interpreter.</p>
         </div>
+        #}
         <h3>Register</h3>
           <p>Complete course schedule and registration information is available through <a href="http://onestop.umn.edu/academics/classes">OneStop</a>.</p>
     </div>
 </div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    <script>
+        var base_url = "{{ config.base_url }}/services/programs/";
+        var client_params = {
+            url: base_url,
+            data: {
+                "a": "both",
+                "d": "both",
+                "p": "{{ p_param }}"
+            }
+        };
+
+        var client = new HTTPClient();
+        var $request = client.get(client_params);
+
+        $request.done(function() {
+            var results = client.getResults();
+            var $target_element = $("#programs-container");
+
+            var template_params = {
+                "template_path": "{{ config.nunjucks_view_base }}/edpsych/programs/",
+                "template_name": "index.html",
+                "$target_element": $target_element,
+                "data": {
+                    programs: results.channel.item,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+    </script>
 {% endblock %}
