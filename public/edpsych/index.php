@@ -309,8 +309,14 @@ $router->with($global_config['base_url'], function() use ($router) {
             echo $app->template->render('edpsych/current/school-psychology.html', ["section" => "current"]);
         });
 
-        $router->respond('GET', '/qme/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/current/qme.html', ["section" => "current"]);
+        $router->with('/qme', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/current/qme/index.html', ["section" => "current"]);
+            });
+
+            $router->respond('GET', '/handbook/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/current/qme/handbook.html', ["section" => "current"]);
+            });
         });
 
         $router->respond('GET', '/special-ed/', function($request, $response, $service, $app) {
@@ -716,7 +722,7 @@ $router->with($global_config['base_url'], function() use ($router) {
         });
 
         $router->respond('GET', '/QME/handbook.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/qme/handbook/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/qme/handbook/', 301)->send();
         });
 
         $router->respond('GET', '/QME/job-placement.html', function($request, $response, $service, $app) {
@@ -813,10 +819,6 @@ $router->with($global_config['base_url'], function() use ($router) {
         $router->with('/qme', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/qme/index.html', ["section" => "programs-degrees"]);
-            });
-
-            $router->respond('GET', '/handbook/', function($request, $response, $service, $app) {
-                echo $app->template->render('edpsych/programs/qme/handbook.html', ["section" => "programs-degrees"]);
             });
 
             $router->respond('GET', '/job-placement/', function($request, $response, $service, $app) {
