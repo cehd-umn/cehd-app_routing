@@ -137,6 +137,10 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/foundations/index.html', ["section" => "programs-degrees"]);
         });
 
+        $router->respond('GET', '/funding/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/funding.html', ["section" => "programs-degrees"]);
+        });
+
         $router->respond('GET', '/learning/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/foundations/learning.html', ["section" => "programs-degrees"]);
         });
@@ -158,7 +162,14 @@ $router->with('/programs', function() use ($router) {
         echo $app->template->render('edpsych/programs/graduate-minor.html', ["section" => "programs-degrees"]);
     });
 
-    $router->respond('GET', '/minor/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/minor.html', ["section" => "programs-degrees"]);
+    $router->with('/minor', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            // @todo move this template to programs/minor/index.html
+            echo $app->template->render('edpsych/programs/minor.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/curriculum/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/minor/curriculum.html', ["section" => "programs-degrees"]);
+        });
     });
 });

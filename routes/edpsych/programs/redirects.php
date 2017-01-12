@@ -30,8 +30,16 @@ $router->respond('GET', '/Foundations/', function($request, $response, $service,
     $response->redirect($app->site_config['base_url'] . '/programs/foundations/', 301)->send();
 });
 
+$router->respond('GET', '/Foundations/funding/default.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/foundations/funding/', 301)->send();
+});
+
 $router->respond('GET', '/Foundations/learning.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/foundations/learning/', 301)->send();
+});
+
+$router->respond('GET', '/Foundations/prelim.html', function($request, $response, $service, $app) {
+    $response->redirectToURI($request->uri());
 });
 
 $router->respond('GET', '/Foundations/social-psych.html', function($request, $response, $service, $app) {
@@ -98,14 +106,18 @@ $router->respond('GET', '/SchoolPsych/outcomes.html', function($request, $respon
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/outcomes/', 301)->send();
 });
 
-$router->respond('GET', 'FutureStudents/pridefellow.html', function($request, $response, $service, $app) {
+$router->respond('GET', '/FutureStudents/pridefellow.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/pride-fellow/', 301)->send();
 });
 
-$router->respond('GET', 'FutureStudents/master.html', function($request, $response, $service, $app) {
+$router->respond('GET', '/FutureStudents/master.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/master/', 301)->send();
 });
 
-$router->respond('GET', 'FutureStudents/doctor.html', function($request, $response, $service, $app) {
+$router->respond('GET', '/FutureStudents/doctor.html', function($request, $response, $service, $app) {
     $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/doctor/', 301)->send();
+});
+
+$router->respond('GET', '/minor/curriculum.html', function($request, $response, $service, $app) {
+    $response->redirectToURI($request->uri());
 });
