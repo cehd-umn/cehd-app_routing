@@ -46,8 +46,7 @@ $router->with('/research', function() use ($router) {
         {
             $router->with('/' . $name, function() use ($router) {
                 $router->respond('GET', '*', function($request, $response, $service, $app) {
-                    $redirect = strtolower(rtrim($request->uri(), '.html'));
-                    $response->redirect($redirect . '/', 301)->send();
+                    $response->redirectToURI($request->uri());
                 });
             });
         }
@@ -82,26 +81,91 @@ $router->with('/research', function() use ($router) {
         foreach ($names as $name)
         {
             $router->with('/' .$name, function() use ($router) {
+                // @todo make this anonymous callback an object to handle these
                 $router->respond('GET', '*', function($request, $response, $service, $app) {
-                    // trim the opening and closing slashes
-                    $trimmed = ltrim($request->uri(), '/');
-                    $trimmed = rtrim($trimmed, '/');
+                    // Get the template name based on the uri
+                    $file_path = 'edpsych/research/labs/';
+                    $template_name = $response->templateNameFromURI($request->uri());
+                    $template_path = $file_path . $template_name;
 
-                    // turn the uri into an array
-                    $path_array = explode('/', $trimmed);
-
-                    // get the last element and concatenate the html extension
-                    $template_name = strtolower(array_pop($path_array)) . '.html';
-
-                    // render the template
-                    echo $app->template->render('edpsych/research/labs/'. $template_name, ["section" => "research"]);
+                    if (file_exists(BASE_PATH . 'templates/' . $template_path))
+                    {
+                        // render the template
+                        echo $app->template->render($template_path, ["section" => "research"]);
+                    }
                 });
             });
         }
     });
 
-    $router->respond('GET', '/topics/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/research/topics.html', ["section" => "research"]);
+    $router->with('/topics', function() use ($router) {
+        /**
+         * Set up redirects from old .html urls
+         */
+        $html_filenames = [
+            'achievementgap.html',
+            'autism.html',
+            'behavioral-social.html',
+            'instruction-intervention.html',
+            'language-literacy-reading.html',
+            'mathematical-thinking.html',
+            'neurobehavioral-methods.html',
+            'prevention.html',
+            'professional-development.html',
+            'progress.html',
+            'statistical-techniques.html',
+            'test-and-measures.html',
+        ];
+
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+
+        /**
+         * Routes
+         */
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            // @todo rename this topics/index.html
+            echo $app->template->render('edpsych/research/topics.html', ["section" => "research"]);
+        });
+
+        $topics = [
+            'achievementgap',
+            'autism',
+            'behavioral-social',
+            'instruction-intervention',
+            'language-literacy-reading',
+            'mathematical-thinking',
+            'neurobehavioral-methods',
+            'prevention',
+            'professional-development',
+            'progress',
+            'statistical-techniques',
+            'test-and-measures',
+        ];
+
+        foreach ($topics as $topic)
+        {
+            $router->with('/' .$topic, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    // Get the template name based on the uri
+                    $file_path = 'edpsych/research/topics/';
+                    $template_name = $response->templateNameFromURI($request->uri());
+                    $template_path = $file_path . $template_name;
+
+                    if (file_exists(BASE_PATH . 'templates/' . $template_path))
+                    {
+                        // render the template
+                        echo $app->template->render($template_path, ["section" => "research"]);
+                    }
+                });
+            });
+        }
     });
 
     $router->respond('GET', '/student-dissertations/', function($request, $response, $service, $app) {
