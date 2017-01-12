@@ -6,7 +6,7 @@
     <div class="container">
       <section>
         <h2 class="h1">Counseling &amp; student personnel psychology</h2>
-        	<section>
+            <section>
             <div class="half">
               <div class="whole">
                   <h3 class="no-margin-top">Help others grow academically and professionally</h3>
@@ -18,11 +18,12 @@
                       <li>Mental health professional in a community agency</li>
                     </ul>
                   <h3>Latest News</h3>
-                    <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
+                  <div id="news-container">
+                    <div class="loader small">
+                        <div class="loader-figure small"></div>
+                        <p class="loader-label">Loading&hellip;</p>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="half">
@@ -185,4 +186,33 @@
     </div>
 </div>
 
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    <script>
+        var base_url = "{{ config.base_url }}/services/news/feed/";
+        var params = {
+            url: base_url,
+            data: {
+                "feed-path": "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/"
+            }
+        };
+        var client = new HTTPClient();
+        var $request = client.get(params);
+
+        $request.done(function() {
+            var results = client.getResults();
+            var template_params = {
+                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
+                "template_name": "alumni.html",
+                "$target_element": $("#news-container"),
+                "data": {
+                    news: results.channel.item,
+                    limit: 3,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            Renderer.init(template_params);
+            Renderer.render();
+        });
+    </script>
 {% endblock %}
