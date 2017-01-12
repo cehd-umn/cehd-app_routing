@@ -82,12 +82,15 @@ $router->with('/current', function() use ($router) {
         });
     });
 
-    $router->respond('GET', '/special-ed/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/current/special-ed.html', ["section" => "current"]);
-    });
+    $router->with('/special-ed', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            // @todo move this to special-ed/index.html
+            echo $app->template->render('edpsych/current/special-ed/index.html', ["section" => "current"]);
+        });
 
-    $router->respond('GET', '/student-teaching-practicum/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/current/student-teaching-practicum.html', ["section" => "current"]);
+        $router->respond('GET', '/student-teaching-practicum/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/current/special-ed/student-teaching-practicum.html', ["section" => "current"]);
+        });
     });
 
     $router->with('/handbook', function() use ($router) {
