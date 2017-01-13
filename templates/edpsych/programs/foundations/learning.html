@@ -1,52 +1,65 @@
 {% extends "edpsych/layout/section.html" %}
 {% set page_title = "Foundations of Education" %}
-{% block title %}Learning &amp; Cognition/Educational Technology M.A. &amp; Ph.D.{% endblock %}
+{% block title %}Learning &amp; cognition/educational technology M.A. &amp; Ph.D.{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>Learning &amp; Cognition/Educational Technology M.A. &amp; Ph.D.</h2>
+        <h2>Learning &amp; cognition/educational technology M.A. &amp; Ph.D.</h2>
         <h3>Make improvements in education through psychology, science, and technology</h3>
         <p>As a student in the program, you’ll study the psychological processes critical to education. Research in our program focuses on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan. You'll use this knowledge to develop better educational processes and procedures for schools and other educational agencies, businesses, human and social service organizations, health care providers, government agencies, and more.</p>
         <section>
         <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
         </section>
         <section>
-        <div class="span-6">
-          <h3>Careers</h3>
+        <div class="half">
+          <h3 class="text-center">Careers</h3>
           <ul>
             <li>Faculty (Ph.D only)</li>
             <li>Research scientists at universities and companies</li>
             <li>Human service organizations, health care units</li>
             <li>Government agencies</li>
           </ul>
-          <h3>Degrees &amp; coursework</h3>
-          <p><em>A master's degree is not required to apply for the doctoral program.</em></p>
-          <p><strong>Master's of Arts (M.A.)</strong></p>
-          <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7541">M.A. curriculum (33-34 credits)</a></p>
-          <p><strong>Doctor of Philosophy (Ph.D)</strong></p>
-          <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7542">Ph.D. curriculum (72 credits)</a></p>
         </div>
-        <div class="span-4">
-          <h3>What you'll study</h3>
-          <ul>
-            <li>Cognitive processes</li>
-            <li>Scientific reasoning</li>
-            <li>Problem solving</li>
-            <li>Teaching effectiveness</li>
-            <li>Intelligence</li>
-            <li>Dynamic-based simulations</li>
-            <li>Learning from texts</li>
-            <li>Software and courseware design</li>
-            <li>Reading and language</li>
-            <li>Adaptive learning systems</li>
-            <li>Technology-enhanced learning</li>
-            <li>Conceptual change</li>
-            <li>Mathematical cognition</li>
-          </ul>
+        <div class="half">
+          <h3 class="text-center">What you'll study</h3>
+            <div class="half">
+              <ul>
+                <li>Cognitive processes</li>
+                <li>Scientific reasoning</li>
+                <li>Problem solving</li>
+                <li>Teaching effectiveness</li>
+                <li>Intelligence</li>
+                <li>Dynamic-based simulations</li>
+                <li>Learning from texts</li>
+                <li>Software and courseware design</li>
+              </ul>
+            </div>
+            <div class="half">
+              <ul>
+                <li>Reading and language</li>
+                <li>Adaptive learning systems</li>
+                <li>Technology-enhanced learning</li>
+                <li>Conceptual change</li>
+                <li>Mathematical cognition</li>
+              </ul>
+            </div>
         </div>
     </section>
   </div>
 </div>
+<section>
+<div class="feature half">
+    <h3 class="text-center">Degrees &amp; coursework</h3>
+      <p class="text-center"><em>A master's degree is not required to apply for the doctoral program.</em></p>
+  <div class="half">
+      <h4 class="text-center">Master's of Arts (M.A.)</h4>
+      <p class="text-center"><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7541">M.A. curriculum (33-34 credits)</a></p>
+  </div>
+  <div class="half">
+      <h4 class="text-center">Doctor of Philosophy (Ph.D)</h4>
+      <p class="text-center"><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7542">Ph.D. curriculum (72 credits)</a></p>
+</div>
+</section>
 <section>
 <div class="row emphasis margin-top-1">
   <div class="container">
@@ -64,17 +77,17 @@
     </div>
 </div>
 </section>
+<section>
 <div class="row">
-  <div class="emphasis">
+  <div class="container">
     <section>
       <h3 class="text-center">Faculty</h3>
       <h4 class="text-center">Learning and cognition / educational technology</h4>
-      <section>
           <div class="half">
               <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BartB-2003.jpg" class="mobile-hide" alt="William M. Bart headshot"></div>
               <div class="span-9">
                   <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/Bart.html">William M. Bart</a></h5>
-                      <p><a href="mailto:bartx001@umn.edu">Email</a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/bart.html"> | Lab</a></p>
+                      <p><a href="mailto:bartx001@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/bart/">Lab</a></p>
                   <ul>
                       <li>Relationships among cognition, instruction, and testing</li>
                       <li>Gifted and talented education</li>
@@ -88,7 +101,7 @@
               </div>
               <div class="span-9">
                   <h5 class="no-margin-top" ><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/Kendeou.html">Panayiota Andrea Kendeou</a></h5>
-                  <p><a href="mailto:kend0040@umn.edu">Email</a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/kendeou.html"> | Lab</a></p>
+                  <p><a href="mailto:kend0040@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/kendeou/">Lab</a></p>
                   <ul>
                       <li>Cognitive processes in reading comprehension</li>
                       <li>Change of pre-existing beliefs and misconceptions</li>
@@ -105,7 +118,7 @@
               <div class="span-9">
                   <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/Tennyson.html">Robert D. Tennyson</a>
                   </h5>
-                  <p><a href="mailto:rtenny@umn.edu">Email | </a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/tennyson.html">Lab</a></p>
+                  <p><a href="mailto:rtenny@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/tennyson/">Lab</a></p>
                   <ul>
                     <li>Cognitive processes in reading comprehension</li>
                     <li>Change of pre-existing beliefs and misconceptions</li>
@@ -116,7 +129,7 @@
           <div class="half">
               <div class="span-9">
                   <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/KVarma.html">Keisha Varma</a></h5>
-                      <p><a href="mailto:keisha@umn.edu">Email | </a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/kvarma.html">Lab</a></p>
+                      <p><a href="mailto:keisha@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/kvarma/">Lab</a></p>
                       <ul>
                           <li>Cognitive processes in science learning</li>
                           <li>Scientific visualizations and student learning outcomes</li>
@@ -132,9 +145,9 @@
               </div>
               <div class="span-9">
                   <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/SVarma.html">Sashank Varma</a>
-                    <small class="clear normal">Program coordinator</small>
+                    <small class="clear h6">Program coordinator</small>
                   </h5>
-                  <p><a href="mailto:sashank@umn.edu">Email</a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/svarma.html"> | Lab</a></p>
+                  <p><a href="mailto:sashank@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/svarma/">Lab</a></p>
                   <ul>
                       <li>Understanding of abstract mathematical concepts</li>
                       <li>Long-term memory and language understanding</li>
@@ -146,7 +159,7 @@
               <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/YussenS_2015.jpg" class="mobile-hide" alt="Steve Yussen headshot"></div>
               <div class="span-9">
                   <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/Yussen.html">Steve Yussen</a></h5>
-                      <p><a href="mailto:syussen@umn.edu">Email</a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/yussen.html"> | Lab</a></p>
+                      <p><a href="mailto:syussen@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/yussen/"> | Lab</a></p>
                       <ul>
                           <li>Memory and comprehension of stories</li>
                           <li>Narrative exchanges between children and parents (e.g., storybook reading, reminiscence)</li>
