@@ -15,8 +15,15 @@
                 {#-
                   This places the html the JavaScript is expecting for
                   rendering the list of news items, including the fancy loader
+
+                  In this case we're passing in all the arguments:
+
+                  * heading_text
+                  * h_tag
+                  * container_id
+                  * heading_classes
                 -#}
-                {{ newsfeed.container(heading_classes="no-margin-top") }}
+                {{ newsfeed.container("Latest news", "h3", "news-container", "no-margin-top") }}
             </div>
           </div>
         <div class="half">
