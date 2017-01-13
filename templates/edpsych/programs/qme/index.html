@@ -13,12 +13,11 @@
                   </div>
                   <div class="whole">
                     <p>Doctoral student Kyle Nickodem finds better ways to understand and communicate data about student achievement. <a href="http://www.cehd.umn.edu/people/profiles/Nickodem/">Read more.</a></p>
-                    <h3> Latest News</h3>
-                        <ul class="text-center">
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                        </ul>
+                  {#-
+                    This places the html the JavaScript is expecting for
+                    rendering the list of news items, including the fancy loader
+                  -#}
+                  {{ newsfeed.container() }}
                   </div>
               </div>
               <div class="half">
@@ -196,3 +195,7 @@
     </div>
 </div>
 {% endblock %}
+{% import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/departments/educational-psychology/quantitative-methods-in-education/feed/") }}
+{%- endblock -%}

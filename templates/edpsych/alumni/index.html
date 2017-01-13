@@ -190,7 +190,7 @@
             var results = dept_client.getResults();
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "alumni.html",
+                "template_name": "index.html",
                 "$target_element": $("#alumni-news-container"),
                 "data": {
                     news: results.channel.item,
@@ -218,7 +218,7 @@
             var results = alum_client.getResults();
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "alumni.html",
+                "template_name": "index.html",
                 "$target_element": $("#dept-news-container"),
                 "data": {
                     news: results.channel.item,

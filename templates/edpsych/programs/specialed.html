@@ -1,66 +1,64 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/news-feed.html" as newsfeed %}
 {% set page_title = "Special Education" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
         <h2 class="h1">Special education</h2>
-        	<section>
-            	<div class="half">
-                	<h3 class="no-margin-top">Help all students get the support they need to succeed</h3>
-                		<p>Improve outcomes for individuals who require specialized support to
+        <section>
+            <div class="half">
+                <h3 class="no-margin-top">Help all students get the support they need to succeed</h3>
+                <p>Improve outcomes for individuals who require specialized support to
                 achieve success throughout their lifespan. At the University of Minnesota,
                 we are committed to engaging in meaningful research&mdash;and to bridging
                 research and practice&mdash;to improve the lives of children and families in
                 diverse contexts, and to have a lasting impact on teacher education,
                 leadership, and policy. Watch videos on our research in special
                 education.</p>
-          <h3 >Latest news</h3>
-            <ul>
-              <li><a href="http://news.cehd.umn.edu/ed-psych-faculty-students-call-on-lawmakers-to-approve-special-education-funding/">Ed Psych faculty, students call on lawmakers to approve special education funding</a></li>
-              <li><a href="http://news.cehd.umn.edu/project-leep-trains-school-psychology-students-for-faculty-careers/">Project LEEP trains school psychology students for faculty careers</a></li>
-              <li><a href="http://news.cehd.umn.edu/codding-publishes-book-on-effective-math-interventions/">Codding publishes book on Effective Math Interventions</a></li>
-            </ul>
+                {#-
+                  This places the html the JavaScript is expecting for
+                  rendering the list of news items, including the fancy loader
+                -#}
+                {{ newsfeed.container() }}
             </div>
             <div class="half">
-                    <div class="whole">
-                        <h3 class="no-margin-top">Seeking the origins of autism</h3>
-                    </div>
-                    <div class="Whole">
-<img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jason_Wolff_feature.jpg" alt="Jason Wolff in his office">
-                    </div>
-                <div class="whole">
-                    <p>Assistant professor, Jason Wolff leverages the power of
-                    brain-imaging data to determine the biological origins of autism. <a
-                    href="http://www.cehd.umn.edu/people/profiles/Wolff/">Read
-                    more.</a></p>
-                </div>
+                <h3 class="no-margin-top">Seeking the origins of autism</h3>
+                <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jason_Wolff_feature.jpg" alt="Jason Wolff in his office">
+                <p>Assistant professor, Jason Wolff leverages the power of
+                brain-imaging data to determine the biological origins of autism. <a
+                href="http://www.cehd.umn.edu/people/profiles/Wolff/">Read
+                more.</a></p>
             </div>
         </section>
         <section>
-          <div class="half feature"">
-          	  <p class="pull-quote">#8 Special Education Program by <em>U.S. News &amp; World Report</em></p>
+          <div class="half feature">
+              <p class="pull-quote">#8 Special Education Program by <em>U.S. News &amp; World Report</em></p>
               <p class="pull-quote">#6 Top 20 Most Innovative Master's
               in Special Education Degrees by <em>Masters in Special Education Program Guide</em></p>
           </div>
         </section>
+    </div>
+</div>
+<div class="row emphasis subtle">
+    <div class="container">
         <section>
-        <div class="row emphasis subtle">
-          <div class="container">
             <div class="third">
-              <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" class="button center">How to apply (M.A.&#47;Ph.D.)</a></p>
+                <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" class="button center">How to apply (M.A.&#47;Ph.D.)</a></p>
             </div>
             <div class="third">
                 <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply (M.Ed.)</a></p>
             </div>
             <div class="third">
-                <p class="text-center"><a href="{{ config.base_url }}/programs/" class="button center">Apply&#47;transfer (B.S.)</a>
+                <p class="text-center"><a href="{{ config.base_url }}/programs/" class="button center">Apply &#47; transfer (B.S.)</a>
             </div>
-          </div>
-        </div>
-      </section>
-    <section>
-      <h3 class="text-center">Programs &amp; degrees<small class="clear h4">Learn with us</small></h3>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <section>
+            <h3 class="text-center">Programs &amp; degrees<small class="clear h4">Learn with us</small></h3>
             <div class="third">
                 <h5>Graduate degrees</h5>
                 <h4 class="h6"><a href="http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/PhD.html">Doctor of philosophy (Ph.D.)</a></h4>
@@ -219,4 +217,7 @@
     </div>
 </div>
 
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/departments/educational-psychology/special-education/feed/") }}
 {% endblock %}

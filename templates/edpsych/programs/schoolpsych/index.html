@@ -37,14 +37,11 @@
     </ul>
     </div>
     <div class="half">
-    <h3>Latest news</h3>
-    <ul>
-    <li><a href="http://news.cehd.umn.edu/ed-psych-faculty-students-call-on-lawmakers-to-approve-special-education-funding/">Ed Psych faculty, students call on lawmakers to approve special education funding</a></li>
-    <li><a href="http://news.cehd.umn.edu/project-leep-trains-school-psychology-students-for-faculty-careers/">Project LEEP trains school psychology students for faculty careers</a></li>
-    <li><a href="http://news.cehd.umn.edu/codding-publishes-book-on-effective-math-interventions/">Codding publishes book on Effective Math Interventions</a></li>
-    <li><a href="http://news.cehd.umn.edu/amanda-sullivan-getting-to-the-bottom-of-special-education-disparities/">Amanda Sullivan: Getting to the bottom of special education disparities</a></li>
-    <li><a href="http://news.cehd.umn.edu/cook-featured-in-news-tribune-article-for-work-with-sumner-school-district-to-prevent-bullying/">Cook featured in News Tribune article for work with Sumner School District to prevent bullying</a></li>
-    </ul>
+        {#-
+        This places the html the JavaScript is expecting for rendering the list
+        of news items, including the fancy loader
+        -#}
+        {{ newsfeed.container() }}
     </div>
     </section>
     <section>
@@ -209,3 +206,7 @@
     </div>
 </div>
 {% endblock %}
+{% import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/departments/educational-psychology/quantitative-methods-in-education/feed/") }}
+{%- endblock -%}

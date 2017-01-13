@@ -12,14 +12,11 @@
                 <p>As a student in the program, you’ll study the psychological processes critical to education. Research in our program focuses on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan. You'll use this knowledge to develop better educational processes and procedures for schools and other educational agencies, businesses, human and social service organizations, health care providers, government agencies, and more.</p>
             </div>
             <div class="whole">
-              <h3 class="no-margin-top">Latest news</h3>
-                <ul>
-                    <li><a href="http://news.cehd.umn.edu/johnson-authors-psychology-today-article-why-false-news-endangers-democracy/">Johnson authors Psychology Today post, 'Why false news endangers democracy'</a></li>
-                    <li><a href="http://news.cehd.umn.edu/psych-foundations-students-to-present-at-annual-aera-meeting/">Psych foundations students to present at annual AERA meeting</a></li>
-                    <li><a href="http://news.cehd.umn.edu/nic-vanmeerten-psych-foundations-student-hosts-games-research-forum/">Nic VanMeerten, psych foundations student, hosts Games Research Forum</a></li>
-                    <li><a href="http://news.cehd.umn.edu/varma-promotes-positive-math-mindsets-parent-involvement-for-minority-and-immigrant-families/">Dr. Keisha Varma promotes positive math mindsets, parent involvement for minority and immigrant families</a></li>
-                    <li><a href="http://news.cehd.umn.edu/dr-sashank-varma-quoted-in-pbs-nova-next-on-neuroeducation-programs/">Dr. Sashank Varma quoted in PBS' NOVA NEXT on neuroeducation programs</a></li>
-                </ul>
+                {#-
+                  This places the html the JavaScript is expecting for
+                  rendering the list of news items, including the fancy loader
+                -#}
+                {{ newsfeed.container(heading_classes="no-margin-top") }}
             </div>
           </div>
         <div class="half">
@@ -191,3 +188,7 @@
                       </div>
 </div>
 {% endblock %}
+{% import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/departments/educational-psychology/psychological-foundations-of-education/feed/") }}
+{%- endblock -%}

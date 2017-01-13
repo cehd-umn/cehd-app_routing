@@ -1,0 +1,39 @@
+{%- macro news_feed_js(feed_path, target_element_selector="#news-container", template_name="index.html", limit=3) -%}
+<script>
+    var base_url = "{{ config.base_url }}/services/news/feed/";
+    var params = {
+        url: base_url,
+        data: {
+            "feed-path": "{{ feed_path }}"
+        }
+    };
+    var client = new HTTPClient();
+    var $request = client.get(params);
+
+    $request.done(function() {
+        var results = client.getResults();
+        var template_params = {
+            "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
+            "template_name": "{{ template_name }}",
+            "$target_element": $("{{ target_element_selector }}"),
+            "data": {
+                news: results.channel.item,
+                limit: {{ limit }},
+                config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+            }
+        };
+        Renderer.init(template_params);
+        Renderer.render();
+    });
+</script>
+{%- endmacro -%}
+
+{%- macro container(heading_text="Latest news", h_tag="h3", container_id="news-container", heading_classes="") -%}
+<{{ h_tag }} class="{{ heading_classes }}">{{ heading_text }}</{{ h_tag }}>
+<div id="{{ container_id }}">
+    <div class="loader small">
+        <div class="loader-figure small"></div>
+        <p class="loader-label">Loading&hellip;</p>
+    </div>
+</div>
+{%- endmacro -%}
