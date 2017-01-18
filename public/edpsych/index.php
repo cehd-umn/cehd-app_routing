@@ -385,7 +385,11 @@ $router->with($global_config['base_url'], function() use ($router) {
                 if (array_key_exists('feed-path', $query_data)) {
                     $request_url = $base_url . $query_data['feed-path'];
                     $client_response = $app->http_client->request('GET', $request_url);
-                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                    $xml = $client_response->getBody();
+                    $xml_obj = $response->xmlStrToObject($xml);
+                    $result_array = $response->getNewsfeedArrayFromXML($xml_obj);
+                    $json = json_encode($result_array);
+                    $response->sendJSONResponse($json);
                 }
             });
         });

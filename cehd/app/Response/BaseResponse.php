@@ -17,7 +17,10 @@ class BaseResponse extends \Klein\Response
 
     public function xmlStrToObject($xml_string)
     {
-        return simplexml_load_string($xml_string);
+        return simplexml_load_string(
+            $xml_string,
+            null,
+            LIBXML_NOCDATA);
     }
 
     public function sendJSONResponse($json)
@@ -81,6 +84,28 @@ class BaseResponse extends \Klein\Response
             $i++;
         }
 
+        return $results;
+    }
+
+    public function getNewsfeedArrayFromXML($xml)
+    {
+        $results = [];
+        $xml->registerXPathNamespace('ns',
+          'http://purl.org/rss/1.0/modules/content/');
+
+        $thumbnails = $xml->xpath("//content:thumbnail");
+        $i = 0;
+
+        foreach ($xml->channel->item as $node)
+        {
+            array_push($results, [
+                "title" => (string) $node->title,
+                "description" => (string) $node->description,
+                "thumbnail" => (string) $thumbnails[$i],
+            ]);
+
+            $i++;
+        }
         return $results;
     }
 }
