@@ -145,6 +145,10 @@ $router->with($global_config['base_url'], function() use ($router) {
         }
     });
 
+    $router->respond('GET', '/contact/', function($request, $response, $service, $app) {
+        echo $app->template->render('edpsych/contact.html', []);
+    });
+
     /**
      * About
      */
