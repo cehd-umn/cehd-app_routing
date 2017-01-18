@@ -149,6 +149,39 @@ $router->with($global_config['base_url'], function() use ($router) {
         echo $app->template->render('edpsych/contact.html', []);
     });
 
+    $router->respond('GET', '/search/', function($request, $response, $service, $app) {
+        $query_data = $request->params();
+
+        if (array_key_exists('q', $query_data))
+        {
+            $sites = [
+                "Educational Psychology" => "www.cehd.umn.edu/edpsych",
+                "College of Education + Human Development" => "www.cehd.umn.edu",
+                "University of Minnesota" => "www.umn.edu",
+            ];
+
+            $results = [];
+
+            foreach ($sites as $site_name => $site)
+            {
+                $client_response = $response->getSearchResponse(
+                        $query_data["q"],
+                        $site,
+                        $app->http_client
+                );
+
+                $xml_obj = $response->xmlStrToObject($client_response->getBody());
+
+                $results[$site] = [
+                    "name" => $site_name,
+                    "results" => $response->getSearchResultsFromXMLObject($xml_obj),
+                ];
+            };
+        };
+
+        echo $app->template->render('edpsych/search.html', ["results" => $results]);
+    });
+
     /**
      * About
      */
@@ -282,6 +315,25 @@ $router->with($global_config['base_url'], function() use ($router) {
      * TODO return 404's if query params are not valid
      */
     $router->with('/services', function() use ($router) {
+        /**
+         * Search
+         */
+        $router->with('/search', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                $query_data = $request->params();
+
+                if (array_key_exists('q', $query_data) && array_key_exists('site', $query_data))
+                {
+                    $client_response = $response->getSearchResponse(
+                        $query_data["q"],
+                        $query_data["site"],
+                        $app->http_client);
+
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                };
+            });
+        });
+
         /**
          * People Tool
          *

@@ -23,9 +23,9 @@
                         <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
                     </ul>
                     <div id="umnh-searchbox">
-                        <form action="/Search/default.html" method="get" name="gsearch" id="gsearch" title="Search for U of M sites and people">
+                        <form action="{{ config.base_url }}/search/" method="get" name="gsearch" id="gsearch" title="Search for U of M sites and people">
                             <!-- TODO evaluate use of tabindex -->
-                            <input id="umnh-searchfield" type="text" name="query" placeholder="Search" title="Search text" tabindex="80">
+                            <input id="umnh-searchfield" type="text" name="q" placeholder="Search" title="Search text" tabindex="80">
                             <input id="umnh-searchbtn" type="submit" name="Search" value="&#xe803;">
                         </form>
                     </div><!-- /#umnh-searchbox -->
