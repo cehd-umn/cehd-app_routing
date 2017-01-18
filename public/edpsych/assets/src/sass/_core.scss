@@ -293,6 +293,23 @@ a {
     }
 }
 
+#deptfooter {
+    border-top: 1px $base-light-grey solid;
+}
+
+#footerlinks {
+    float: right;
+    text-align: right;
+
+    a {
+        @each $pseudo-class, $color in $link-pseudo-classes {
+            &:#{$pseudo-class} {
+                color: $umn-charcoal;
+            }
+        }
+    }
+}
+
 /// These aren't necessarily breakpoints defined around devices, but rather,
 /// they're defined based on where things break in the *design*.
 ///

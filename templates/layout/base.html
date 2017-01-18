@@ -46,11 +46,38 @@
         <main id="maincontent">
             {% block main_content %}{% endblock %}
         </main>
-        <footer id="umnfoot">
-            <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
-                The University of Minnesota is an equal opportunity educator and employer.
-                <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
-            </p>
+        <footer class="margin-top-2">
+            <div id="deptfooter">
+                <div class="row">
+                    <div class="container">
+                        <div class="half">
+                            <p><a href="{{ config.base_url}}/contact/">Contact EdPsych by email</a></p>
+                            <address>
+                                Educational Psychology<br>
+                                250 Education Sciences Bldg<br>
+                                56 East River Road<br>
+                                Minneapolis, MN 55455<br>
+                                P: 612-624-6083 | F: 612-624-8241<br>
+                            </address>
+                        </div>
+                        <div class="half">
+                            <ul id="footerlinks" class="no-bullet">
+                                <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
+                                <li><a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a></li>
+                                <li><a href="/directory/">College Directory</a></li>
+                                <li><a href="/">CEHD</a></li>
+                                <li><a href="http://www.umn.edu">U of M</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="umnfoot">
+                <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
+                    The University of Minnesota is an equal opportunity educator and employer.
+                    <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
+                </p>
+            </div>
         </footer>
         {% block bottom_js %}{% endblock %}
     </body>

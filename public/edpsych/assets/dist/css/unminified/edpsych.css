@@ -308,7 +308,7 @@ form li label {
 address {
   display: block;
   font-style: normal;
-  margin: 10px;
+  margin: 10px 0;
   padding: 0;
 }
 
@@ -1320,6 +1320,31 @@ a.button:hover {
 
 .text-center small {
   text-align: center;
+}
+
+#deptfooter {
+  border-top: 1px #e2e2e2 solid;
+}
+
+#footerlinks {
+  float: right;
+  text-align: right;
+}
+
+#footerlinks a:link {
+  color: #333;
+}
+
+#footerlinks a:hover {
+  color: #333;
+}
+
+#footerlinks a:visited {
+  color: #333;
+}
+
+#footerlinks a:active {
+  color: #333;
 }
 
 @media all and (min-width: 321px) {
