@@ -4,6 +4,7 @@
 #menuicon-wrapper {
     background: $umn-medium-grey;
     border-radius: 3px;
+    cursor: pointer;
     display: inline-block;
     height: 31px;
     left: -15px;
@@ -13,21 +14,32 @@
 }
 
 #menuicon {
-    cursor: pointer;
     display: inline-block;
     left: 5px;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 999;
 
     &::before {
-        clear: both;
-        content: "\f0c9 ";
+        background: $base-black;
+        box-shadow: 0 8px 0 0 $base-black, 0 16px 0 0 $base-black;
+        content: "";
         display: block;
-        font-family: 'FontAwesome';
-        font-size: 2em;
-        position: relative;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: 6px;
+        width: 25px;
     }
+
+    // &::before {
+    //     clear: both;
+    //     content: "\f0c9 ";
+    //     display: block;
+    //     font-family: 'FontAwesome';
+    //     font-size: 2em;
+    //     position: relative;
+    // }
 }
 
 #menulabel {
@@ -88,7 +100,7 @@ nav {
         height: auto;
         margin: 0;
         max-width: 250px;
-        padding: 15px;
+        padding: 10px 15px;
         text-align: right;
         width: 250px;
 
@@ -180,6 +192,8 @@ nav {
         background-color: transparent;
         display: block;
         font-size: 12px;
+        margin-left: 20px;
+        margin-top: 30px;
     }
 
     #menuicon-wrapper {
