@@ -349,7 +349,7 @@ $router->with($global_config['base_url'], function() use ($router) {
                 // TODO add base urls to config
                 $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
                 // TODO make the query string a var so we can have one endpoint
-                $client_query_data = ['query' => ['tg' => '213']];
+                $client_query_data = ['query' => ['tg' => '225']];
                 $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
                 $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
             });
