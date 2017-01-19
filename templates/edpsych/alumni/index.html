@@ -193,7 +193,7 @@
                 "template_name": "index.html",
                 "$target_element": $("#alumni-news-container"),
                 "data": {
-                    news: results.channel.item,
+                    news: results,
                     limit: 3,
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
@@ -221,7 +221,7 @@
                 "template_name": "index.html",
                 "$target_element": $("#dept-news-container"),
                 "data": {
-                    news: results.channel.item,
+                    news: results,
                     limit: 3,
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
