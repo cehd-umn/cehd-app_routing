@@ -206,8 +206,14 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/foundations/index.html', ["section" => "programs-degrees"]);
         });
 
-        $router->respond('GET', '/funding/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/funding.html', ["section" => "programs-degrees"]);
+        $router->with('/funding', function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/index.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/psyf-assistantships/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/psyf-assistantships.html', ["section" => "programs-degrees"]);
+            });
         });
 
         $router->respond('GET', '/learning/', function($request, $response, $service, $app) {

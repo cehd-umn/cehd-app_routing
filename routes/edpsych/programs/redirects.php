@@ -121,3 +121,7 @@ $router->respond('GET', '/FutureStudents/doctor.html', function($request, $respo
 $router->respond('GET', '/minor/curriculum.html', function($request, $response, $service, $app) {
     $response->redirectToURI($request->uri());
 });
+
+$router->respond('GET', 'Foundations/Funding/PsyFassistantships.html', function($request, $response, $service, $app) {
+    $response->redirect($app->site_config['base_url'] . '/programs/foundations/funding/psyf-assistantships/', 301)->send();
+});
