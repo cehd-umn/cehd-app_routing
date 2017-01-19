@@ -6,7 +6,7 @@
     border-radius: 3px;
     cursor: pointer;
     display: inline-block;
-    height: 31px;
+    height: 51px;
     left: -15px;
     top: 213px;
     width: 36px;
@@ -25,21 +25,12 @@
         box-shadow: 0 8px 0 0 $base-black, 0 16px 0 0 $base-black;
         content: "";
         display: block;
-        height: 2px;
-        left: 0;
+        height: 4px;
+        left: -4px;
         position: absolute;
-        top: 6px;
-        width: 25px;
+        top: 8px;
+        width: 29px;
     }
-
-    // &::before {
-    //     clear: both;
-    //     content: "\f0c9 ";
-    //     display: block;
-    //     font-family: 'FontAwesome';
-    //     font-size: 2em;
-    //     position: relative;
-    // }
 }
 
 #menulabel {
@@ -192,8 +183,8 @@ nav {
         background-color: transparent;
         display: block;
         font-size: 12px;
-        margin-left: 20px;
-        margin-top: 30px;
+        margin-left: 15px;
+        margin-top: 31px;
     }
 
     #menuicon-wrapper {
