@@ -43,8 +43,8 @@ $router->with('/programs', function() use ($router) {
      */
     $router->with('/cspp', function() use ($router) {
         /**
-            * Redirects
-            */
+         * Redirects
+         */
         $router->respond('GET', '/Hansen.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/programs/cspp/hansen/', 301)->send();
         });
@@ -128,8 +128,77 @@ $router->with('/programs', function() use ($router) {
         });
     }); // end schoolpsych section
 
-    $router->respond('GET', '/specialed/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
+    $router->with('/specialed', function() use ($router) {
+
+        $html_filenames = [
+            "videos.html",
+            "SpEd-BS.html",
+            "PhD.html",
+            "masters.html",
+            "ABS-licensure.html",
+            "ASD.html",
+            "DHH-licensure.html",
+            "dd-licensure.html",
+            "esce-licensure.html",
+            "ld-licensure.html",
+        ];
+
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+
+        $router->respond('GET', '/EBD-residency-based/default.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/specialed/ebd-residency-based/', 301)->send();
+        });
+
+        $router->respond('GET', '/SpecialEd/certificate/Autism.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/specialed/certificate/autism/', 301)->send();
+        });
+
+        $routes = [
+            "abs-licensure",
+            "asd",
+            "dd-licensure",
+            "dhh-licensure",
+            "ebd-residency-based",
+            "esce-licensure",
+            "ld-licensure",
+            "masters",
+            "phd",
+            "sped-bs",
+            "videos",
+        ];
+
+        foreach ($routes as $route)
+        {
+            $router->with('/' . $route, function() use ($router) {
+                // @todo make this anonymous callback an object to handle these
+                $router->respond('GET', '/', function($request, $response, $service, $app) {
+                    // Get the template name based on the uri
+                    $file_path = 'edpsych/programs/specialed/';
+                    $template_name = $response->templateNameFromURI($request->uri());
+                    $template_path = $file_path . $template_name;
+
+                    // render the template
+                    echo $app->template->render($template_path, ["section" => "programs-degrees"]);
+                });
+            });
+
+            $router->with('/certificate', function() use ($router) {
+                $router->respond('GET', '/autism/', function($request, $response, $service, $app) {
+                    echo $app->template->render('edpsych/programs/specialed/autism.html', ["section" => "programs-degrees"]);
+                });
+            });
+        }
+
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
+        });
     });
 
     $router->with('/foundations', function() use ($router) {

@@ -56,7 +56,7 @@ $router->with('/research', function() use ($router) {
             echo $app->template->render('edpsych/research/labs.html', ["section" => "research"]);
         });
 
-        $names = [
+        $routes = [
             'bart',
             'christ',
             'codding',
@@ -78,21 +78,18 @@ $router->with('/research', function() use ($router) {
             'wolff',
         ];
 
-        foreach ($names as $name)
+        foreach ($routes as $route)
         {
-            $router->with('/' .$name, function() use ($router) {
+            $router->with('/' . $route, function() use ($router) {
                 // @todo make this anonymous callback an object to handle these
-                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                $router->respond('GET', '/', function($request, $response, $service, $app) {
                     // Get the template name based on the uri
                     $file_path = 'edpsych/research/labs/';
                     $template_name = $response->templateNameFromURI($request->uri());
                     $template_path = $file_path . $template_name;
 
-                    if (file_exists(BASE_PATH . 'templates/' . $template_path))
-                    {
-                        // render the template
-                        echo $app->template->render($template_path, ["section" => "research"]);
-                    }
+                    // render the template
+                    echo $app->template->render($template_path, ["section" => "research"]);
                 });
             });
         }
