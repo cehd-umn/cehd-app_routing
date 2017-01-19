@@ -4,8 +4,8 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        {% for result_set in results %}
-            <h2>{{ result_set.name }}</h2>
+        {% for result_level, result_set in results %}
+            <h2 class="search-heading search-{{ result_level }}">{{ result_set.name }}</h2>
             <dl>
             {% for result in result_set.results %}
                 <dt><a href="{{ result.link }}">{{ result.title|raw }}</a></dt>

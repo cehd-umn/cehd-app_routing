@@ -155,25 +155,34 @@ $router->with($global_config['base_url'], function() use ($router) {
         if (array_key_exists('q', $query_data))
         {
             $sites = [
-                "Educational Psychology" => "www.cehd.umn.edu/edpsych",
-                "College of Education + Human Development" => "www.cehd.umn.edu",
-                "University of Minnesota" => "www.umn.edu",
+                "primary" => [
+                    "name" => "Educational Psychology",
+                    "url" => "www.cehd.umn.edu/edpsych",
+                ],
+                "secondary" => [
+                    "name" => "College of Education + Human Development",
+                    "url" => "www.cehd.umn.edu",
+                ],
+                "tertiary" => [
+                    "name" => "University of Minnesota",
+                    "url" => "www.umn.edu",
+                ]
             ];
 
             $results = [];
 
-            foreach ($sites as $site_name => $site)
+            foreach ($sites as $result_level => $site)
             {
                 $client_response = $response->getSearchResponse(
                         $query_data["q"],
-                        $site,
+                        $site["url"],
                         $app->http_client
                 );
 
                 $xml_obj = $response->xmlStrToObject($client_response->getBody());
 
-                $results[$site] = [
-                    "name" => $site_name,
+                $results[$result_level] = [
+                    "name" => $site["name"],
                     "results" => $response->getSearchResultsFromXMLObject($xml_obj),
                 ];
             };

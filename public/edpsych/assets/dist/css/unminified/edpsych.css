@@ -1887,6 +1887,24 @@ a.button:hover {
   }
 }
 
+.search-heading {
+  color: #fff;
+  font-size: 2em;
+  padding: .1em .5em;
+}
+
+.search-primary {
+  background: #4074ad;
+}
+
+.search-secondary {
+  background: #0f3f59;
+}
+
+.search-tertiary {
+  background: #7a0019;
+}
+
 .loader,
 .loader-figure {
   position: absolute;

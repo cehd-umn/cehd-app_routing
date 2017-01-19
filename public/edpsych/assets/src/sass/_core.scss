@@ -486,3 +486,21 @@ a {
         padding: .9em 0 0;
     }
 }
+
+.search-heading {
+    color: $base-white;
+    font-size: 2em;
+    padding: .1em .5em;
+}
+
+.search-primary {
+    background: $search-primary-blue;
+}
+
+.search-secondary {
+    background: $search-secondary-blue;
+}
+
+.search-tertiary {
+    background: $search-tertiary-maroon;
+}
