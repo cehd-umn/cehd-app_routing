@@ -40,6 +40,10 @@ $router->with('/current', function() use ($router) {
         echo $app->template->render('edpsych/current/index.html', ["section" => "current"]);
     });
 
+    $router->respond('GET', '/schoolpsych/spsa/', function($request, $response, $service, $app) {
+        echo $app->template->render('edpsych/current/schoolpsych/spsa.html', ["section" => "current"]);
+    });
+
     $router->with('/psych-foundations', function() use ($router) {
         $router->respond('GET', '/prelim/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/current/psych-foundations/prelim.html', ["section" => "programs-degrees"]);

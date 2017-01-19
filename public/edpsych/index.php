@@ -294,9 +294,18 @@ $router->with($global_config['base_url'], function() use ($router) {
         /**
          * Redirects
          */
+        $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/', 301)->send();
+        });
+
         $router->respond('GET', '/giving.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/giving/', 301)->send();
         });
+
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/forms/index.html', []);
+        });
+
     });
 
     $router->with('/giving', function() use ($router) {
