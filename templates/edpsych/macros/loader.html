@@ -1,0 +1,15 @@
+{%- macro loader(
+    heading_text="Latest news",
+    h_tag="h3",
+    container_id="news-container",
+    heading_classes="",
+    loader_additional_classes="small",
+    loading_text="Loading&hellip;") -%}
+<{{ h_tag }}{% if heading_classes %} class="{{ heading_classes }}"{% endif %}>{{ heading_text }}</{{ h_tag }}>
+<div id="{{ container_id }}">
+    <div class="loader {{ loader_additional_classes }}">
+        <div class="loader-figure {{ loader_additional_classes }}"></div>
+        <p class="loader-label">{{ loading_text|raw }}</p>
+    </div>
+</div>
+{%- endmacro -%}

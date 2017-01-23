@@ -25,6 +25,7 @@ gulp.task("javascript", function () {
         "./public/edpsych/assets/src/js/edpsych.js",
         "./public/edpsych/assets/src/js/http_client.js",
         "./public/edpsych/assets/src/js/renderer.js",
+        "./public/edpsych/assets/src/js/helpers.js",
     ],
     debug: true
   });

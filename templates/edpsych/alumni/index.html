@@ -248,21 +248,13 @@
         $events_request.done(function() {
             var results = events_client.getResults();
             var $target_element = $("#calendar-container");
-            var events = null;
-
-            if (typeof results["@attributes"].totalCount > 0) {
-                // Results come back in chronological order so reverse the array
-                results.event.reverse();
-            } else {
-                results.event = [];
-            }
-
+            var events = Helpers.parseEvents(results);
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
                 "template_name": "alumni.html",
                 "$target_element": $target_element,
                 "data": {
-                    events: results.event,
+                    events: events,
                     limit: 3,
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
