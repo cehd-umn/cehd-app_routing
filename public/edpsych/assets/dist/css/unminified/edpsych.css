@@ -593,7 +593,7 @@ html {
   height: 4px;
   left: -4px;
   position: absolute;
-  top: 8px;
+  top: 15px;
   width: 29px;
 }
 
@@ -735,6 +735,9 @@ nav li li {
 @media all and (min-width: 620px) {
   #menuicon {
     font-size: 16px;
+  }
+  #menuicon::before {
+    top: 8px;
   }
 }
 
@@ -1937,6 +1940,25 @@ a.button:hover {
 
 .search-tertiary {
   background: #7a0019;
+}
+
+.search-form-element {
+  display: inline-block;
+  height: 39px;
+}
+
+#search-page-query-input {
+  background: #e2e2e2;
+  border: 1px solid #e2e2e2;
+  padding: .55em;
+  width: 88%;
+}
+
+#search-page-submit {
+  border-radius: 0;
+  font-family: fontello;
+  height: 39px;
+  width: 12%;
 }
 
 .loader,

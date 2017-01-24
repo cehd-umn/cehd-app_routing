@@ -188,7 +188,12 @@ $router->with($global_config['base_url'], function() use ($router) {
             };
         };
 
-        echo $app->template->render('edpsych/search.html', ["results" => $results]);
+        $template_data = [
+            "results" => $results,
+            "query" => $query_data["q"],
+        ];
+
+        echo $app->template->render('edpsych/search.html', $template_data);
     });
 
     /**
