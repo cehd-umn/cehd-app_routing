@@ -806,6 +806,10 @@ img.mobile-hide {
   margin-left: 0;
 }
 
+.no-bullet .no-bullet {
+  margin-left: 20px;
+}
+
 .no-bullet li {
   margin-bottom: 10px;
   margin-left: 0;
@@ -1051,11 +1055,21 @@ h1, .h1 {
   padding: 0;
 }
 
+h1.light, .h1.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
+}
+
 h2, .h2 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 36px;
   margin: .7em 0;
   padding: 0;
+}
+
+h2.light, .h2.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
 }
 
 h3, .h3 {
@@ -1065,11 +1079,21 @@ h3, .h3 {
   padding: 0;
 }
 
+h3.light, .h3.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
+}
+
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 18px;
   margin: .7em 0;
   padding: 0;
+}
+
+h4.light, .h4.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
 }
 
 h5, .h5 {
@@ -1079,11 +1103,21 @@ h5, .h5 {
   padding: 0;
 }
 
+h5.light, .h5.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
+}
+
 h6, .h6 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 16px;
   margin: .7em 0;
   padding: 0;
+}
+
+h6.light, .h6.light {
+  font-family: Lato, Verdana, Geneva, sans-serif;
+  font-weight: normal;
 }
 
 h1 small {
@@ -2334,4 +2368,75 @@ input[type="reset"]:focus {
 .menuicon-container {
   line-height: 1;
   width: 2em;
+}
+
+.home-images {
+  display: flex;
+}
+
+.home-image figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 3px;
+  color: #fff;
+  font-size: 2.5em;
+  height: 100px;
+  left: 0;
+  padding: .5em 2em;
+  position: absolute;
+  width: 100%;
+}
+
+.home-image.small.bottom {
+  margin-top: 10px;
+}
+
+.home-image.small figcaption {
+  font-size: 1.1em;
+  height: 50px;
+}
+
+.home-images-container {
+  padding: 0;
+}
+
+.large-image-container {
+  clear: none;
+  float: left;
+  margin-right: 10px;
+  width: 988px;
+}
+
+.large-image-container::after {
+  clear: none;
+  display: inline;
+}
+
+.small-image-container {
+  clear: none;
+  flex: 1;
+  float: right;
+}
+
+.small-image-container img {
+  width: 100%;
+}
+
+h2 small.clear.home {
+  margin-top: 0;
+}
+
+dl.events-listing, dl.event-listing {
+  margin: 0;
+}
+
+dt.event-title {
+  margin-bottom: 0;
+}
+
+dd.event-data {
+  margin-left: 0;
+}
+
+dd.event-link {
+  margin-left: 0;
 }

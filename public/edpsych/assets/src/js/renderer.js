@@ -3,21 +3,21 @@
 var nunjucks = require("nunjucks");
 var $ = require("jquery");
 
-var Renderer = {
-    defaults: {
+var Renderer = function () {
+    this.defaults = {
         template_path: "../views",
         $target_element: $("#results-container")
-    },
+    };
 
-    settings: null,
+    this.settings = null;
 
-    init: function(params) {
+    this.init = function(params) {
         this.settings = this._mergeOptions(params);
         nunjucks.configure(this.settings.template_path, { autoescape: true });
-    },
+    };
 
     // TODO improve performance by making this async? https://mozilla.github.io/nunjucks/api.html#asynchronous-support
-    render: function() {
+    this.render = function() {
         this.settings.$target_element.html(
             nunjucks.render(this.settings.template_name,
                 {
@@ -25,11 +25,11 @@ var Renderer = {
                 }
             )
         );
-    },
+    };
 
-    _mergeOptions: function(params) {
+    this._mergeOptions = function(params) {
         return $.extend(this.defaults, params);
-    }
+    };
 };
 
 window.Renderer = Renderer;

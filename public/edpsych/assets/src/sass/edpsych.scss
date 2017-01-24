@@ -29,3 +29,93 @@
     line-height: 1;
     width: 2em;
 }
+
+// home page
+
+.home-images {
+    display: flex;
+}
+
+.home-image {
+
+    figcaption {
+        background-color: $home-figcaption-background-color;
+        bottom: 3px;
+        color: $base-white;
+        font-size: 2.5em;
+        height: 100px;
+        left: 0;
+        padding: .5em 2em;
+        position: absolute;
+        width: 100%;
+    }
+
+    &.small {
+        &.bottom {
+            margin-top: 10px;
+        }
+
+        figcaption {
+            font-size: 1.1em;
+            height: 50px;
+        }
+    }
+
+}
+
+.home-images-container {
+    padding: 0;
+}
+
+.large-image-container {
+    clear: none;
+    float: left;
+    margin-right: 10px;
+    width: 988px;
+
+    &::after {
+        clear: none;
+        display: inline;
+    }
+}
+
+.small-image-container {
+    clear: none;
+    flex: 1;
+    float: right;
+
+    img {
+        width: 100%;
+    }
+}
+
+h2 small.clear {
+    &.home {
+        margin-top: 0;
+    }
+}
+
+// Events calendar
+
+dl {
+    &.events-listing,
+    &.event-listing {
+        margin: 0;
+    }
+}
+
+dt {
+    &.event-title {
+        margin-bottom: 0;
+    }
+}
+
+dd {
+    &.event-data {
+        margin-left: 0;
+    }
+
+    &.event-link {
+        margin-left: 0;
+    }
+}

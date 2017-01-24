@@ -1,8 +1,124 @@
 {% extends "edpsych/layout/home.html" %}
+{%- import "edpsych/macros/news-feed.html" as newsfeed -%}
+{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
+{%- import "edpsych/macros/loader.html" as loader -%}
+{% set page_title = "Department of Educational Psychology" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
+    <div class="container home-images-container margin-top-2">
+        <div class="home-images">
+            <div class="large-image-container">
+                <div class="home-image large">
+                    <figure>
+                        <img src="{{ config.base_url}}/assets/dist/images/home/large.jpg" alt="a man and a woman talking in a classroom in the foreground with two other people talking in the background">
+                        <figcaption>A diverse ethnic, cultural and socio-economic community of students.</figcaption>
+                    </figure>
+                </div><!-- end home-image -->
+            </div><!-- end large-image-container -->
+            <div class="small-image-container">
+                <div class="home-image small top">
+                    <figure>
+                        <img src="{{ config.base_url}}/assets/dist/images/home/small-top.jpg" alt="a stack of books">
+                        <figcaption>#10 in the nation among educational psychology research programs.</figcaption>
+                    </figure>
+                </div><!-- end home-image -->
+                <div class="home-image small bottom">
+                    <figure>
+                        <img src="{{ config.base_url}}/assets/dist/images/home/small-bottom.jpg" alt="a man and a woman talking with a bridge in the background">
+                        <figcaption>Michael Rodrigquez:<br>
+                            "I am driven to help education fit each child's needs."
+                        </figcaption>
+                    </figure>
+                </div><!-- end home-image -->
+            </div><!-- end small-image-container -->
+        </div><!-- end home-images -->
+        <div class="half feature">
+            <h2 class="text-center">Educational Psychology
+                <small class="clear home">
+                    Helping people learn and grow
+                </small>
+            </h2>
+            <p>At the department of Educational Psychology, we believe that
+            education is both an art and a science. Our focus: preparing the
+            next generation of researchers and scientist-practitioners with
+            degrees in psychological foundations of education, quantitative
+            methods in education, counseling psychology, school psychology, and
+            special education.</p>
+
+            <h3 class="text-center">Learn with us: programs and degrees</h3>
+            <div class="half">
+                <h4 class="no-margin-top">Graduate programs</h4>
+                <ul class="no-bullet">
+                    <li>Counseling &amp; Student Personnel Psychology</li>
+                    <li>
+                        Psychological Foundations of Education:
+                        <ul class="no-bullet">
+                            <li>Learning &amp; Cognition / Educational Technology</li>
+                            <li>Social Psychological &amp; Social Development Processes</li>
+                        </ul>
+                    </li>
+                    <li>School Psychology</li>
+                    <li>Special Education</li>
+                    <li>Graduate Minor</li>
+                </ul>
+            </div><!-- end half -->
+            <div class="half">
+                <h4 class="no-margin-top">Undergraduate programs</h4>
+                <ul class="no-bullet">
+                    <li>American Sign Language (ASL)</li>
+                    <li>Special Education</li>
+                    <li>Undergraduate Minor</li>
+                </ul>
+                <h4>Certificates</h4>
+                <ul class="no-bullet">
+                    <li>Autism Spectrum Disorder (ASD)</li>
+                    <li>Talent Development &amp; Gifted Education</li>
+                </ul>
+            </div><!-- end half -->
+        </div><!-- end half -->
+    </div><!-- end container -->
+</div><!-- end row -->
+<div class="row emphasis">
     <div class="container">
-        <h2 class="h1">Home</h2>
-    </div>
-</div>
+        <div class="half feature">
+            <div class="half">
+                <p class="h3">Questions?<br>
+                    Contact us</p>
+            </div><!-- end half -->
+            <div class="half">
+                <p>For general information...</p>
+            </div><!-- end half -->
+        </div><!-- end half -->
+    </div><!-- end container -->
+</div><!-- end row -->
+<div class="row">
+    <div class="container">
+        <div class="twothird">
+            {#- This places the html the JavaScript is expecting for rendering
+            the list of news items, including the fancy loader -#}
+            {{ loader.loader("News & announcements") }}
+        </div><!-- end twothird -->
+        <div class="third">
+            {{ loader.loader(
+                "Events & deadlines",
+                "h3",
+                "events-container"
+                ) }}
+        </div><!-- end third -->
+    </div><!-- end container -->
+</div><!-- end row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {#- news feed -#}
+    {{ newsfeed.news_feed_js(
+        "category/educational-psychology/feed/",
+        "#news-container",
+        "home.html",
+        2
+    ) }}
+    {#- events feed -#}
+    {{ eventsfeed.events_feed_js(
+    ) }}
 {% endblock %}
