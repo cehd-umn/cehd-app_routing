@@ -1,13 +1,19 @@
 {% if data.events|length > 0 %}
-    <ul>
-        {% for event in data.events %}
-            {% if loop.index0 < data.limit %}
-                <li>
-                    {{ event.dateMD }}: <a href="{{ event.link }}">{{ event.title }}</a>
-                </li>
-            {% endif %}
+    <dl class="events-listing">
+    {% for month, events in data.events %}
+        {% if loop.index0 < data.limit %}
+        <dt class="events-title h4 light no-margin-top">{{ month }}</dt>
+        {% for event in events %}
+            <dd class="event-data">
+                <dl class="event-listing">
+                    <dt class="event-title h3 light">{{ event.day }}:</dt>
+                    <dd class="event-link"><a href="{{ event.link }}">{{ event.title }}</a></dd>
+                </dl>
+            </dd>
         {% endfor %}
-    </ul>
+        {% endif %}
+    {% endfor %}
+    </dl>
 {% else %}
     <p>There are no upcoming events.</p>
 {% endif %}

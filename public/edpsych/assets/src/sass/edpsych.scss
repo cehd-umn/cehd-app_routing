@@ -83,7 +83,6 @@
     clear: none;
     flex: 1;
     float: right;
-    // max-width: 438px;
 
     img {
         width: 100%;
@@ -93,5 +92,30 @@
 h2 small.clear {
     &.home {
         margin-top: 0;
+    }
+}
+
+// Events calendar
+
+dl {
+    &.events-listing,
+    &.event-listing {
+        margin: 0;
+    }
+}
+
+dt {
+    &.event-title {
+        margin-bottom: 0;
+    }
+}
+
+dd {
+    &.event-data {
+        margin-left: 0;
+    }
+
+    &.event-link {
+        margin-left: 0;
     }
 }

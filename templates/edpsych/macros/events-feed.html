@@ -1,4 +1,4 @@
-{%- macro events_feed_js(target_element_selector="#events-container", template_name="index.html", limit=4, prefix="") -%}
+{%- macro events_feed_js(target_element_selector="#events-container", template_name="index.html", limit=4) -%}
 <script>
     (function() {
         "use strict";
@@ -12,13 +12,11 @@
             }
         };
         var client = new HTTPClient();
-        var $request = client.get(params);
-        var renderer = Renderer;
+        var $response = client.get(params);
 
-        $request.done(function() {
+        $response.done(function() {
             var results = client.getResults();
             var events = Helpers.parseEvents(results);
-            console.log(events);
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
                 "template_name": "{{ template_name }}",
@@ -35,6 +33,5 @@
             renderer.render();
         });
     })();
-
 </script>
 {%- endmacro -%}

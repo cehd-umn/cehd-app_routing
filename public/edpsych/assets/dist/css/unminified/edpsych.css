@@ -2424,3 +2424,19 @@ input[type="reset"]:focus {
 h2 small.clear.home {
   margin-top: 0;
 }
+
+dl.events-listing, dl.event-listing {
+  margin: 0;
+}
+
+dt.event-title {
+  margin-bottom: 0;
+}
+
+dd.event-data {
+  margin-left: 0;
+}
+
+dd.event-link {
+  margin-left: 0;
+}
