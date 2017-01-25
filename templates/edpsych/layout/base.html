@@ -86,3 +86,41 @@
     </div>
 </div>
 {% endblock %}
+{% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
+<div id="dept-footer">
+    <div class="row">
+        <div class="container">
+            <div class="span-8">
+                <div class="dept-footer-section first">
+                    <div class="dept-footer-container contact">
+                        <h2 class="dept-footer-heading h4">Contact Us</h2>
+                    </div>
+                    <p><a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a></p>
+                    <address>
+                        250 Education Sciences Bldg<br>
+                        56 East River Road<br>
+                        Minneapolis, MN 55455<br>
+                        P: 612-624-6083 | F: 612-624-8241<br>
+                    </address>
+                    <p>Contact form | Directory</p>{# TODO where should these link? #}
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="dept-footer-section last">
+                    <div class="dept-footer-container campus">
+                        <h2 class="dept-footer-heading h4">Visit Campus</h2>
+                    </div>
+                    <div class="dept-footer-campus-container">
+                        <p><a href="http://umn.edu/"><img class="university-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-uofm-black-and-white.svg" alt="University of Minnesota wordmark."></a></p>
+                        <ul id="footerlinks" class="no-bullet">
+                            <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
+                            <li><a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a></li>
+                            <li><a href="https://admissions.tc.umn.edu/visit/">Schedule a tour</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

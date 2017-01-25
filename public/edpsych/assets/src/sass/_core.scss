@@ -124,6 +124,10 @@ img {
     clear: none;
 }
 
+.university-wordmark {
+    width: 100%;
+}
+
 /// Consistent padding for wordmarks
 .wordmark-container {
     padding: 11px 0 0;
@@ -303,14 +307,15 @@ a {
     }
 }
 
-#deptfooter {
-    border-top: 1px $base-light-grey solid;
+#dept-footer {
+    background-color: $base-light-grey;
+}
+
+.dept-footer-section {
+    padding: 2em 2em 2em 16%;
 }
 
 #footerlinks {
-    float: right;
-    text-align: right;
-
     a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
@@ -318,6 +323,21 @@ a {
             }
         }
     }
+}
+
+.dept-footer-container {
+    @include transform(rotate(-90deg));
+    left: -65px;
+    position: absolute;
+    top: 115px;
+}
+
+.dept-footer-heading {
+    text-transform: uppercase;
+}
+
+.dept-footer-campus-container {
+    padding-top: 26px;
 }
 
 /// These aren't necessarily breakpoints defined around devices, but rather,
@@ -340,6 +360,12 @@ a {
 @media all and (min-width: 768px) {
     body {
         font-size: 18px;
+    }
+
+    .dept-footer-container {
+        &.campus {
+            left: -80px;
+        }
     }
 
     .half {
@@ -404,6 +430,17 @@ a {
                 // loop.
                 $offset: $offset - .5;
             }
+        }
+    }
+
+    .dept-footer-section {
+        &.first {
+            border-right: 18px solid $base-white;
+            padding-left: 28%;
+        }
+
+        &.last {
+            padding-right: 0;
         }
     }
 }

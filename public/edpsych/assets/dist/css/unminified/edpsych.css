@@ -496,7 +496,6 @@ html {
 
 #umnfoot {
   background-color: #fff;
-  border-top: 1px #ccc solid;
   clear: both;
   color: #333;
   display: block;
@@ -1039,6 +1038,10 @@ img.mobile-hide {
   clear: none;
 }
 
+.university-wordmark {
+  width: 100%;
+}
+
 .wordmark-container {
   padding: 11px 0 0;
 }
@@ -1365,13 +1368,12 @@ a.button:hover {
   text-align: center;
 }
 
-#deptfooter {
-  border-top: 1px #e2e2e2 solid;
+#dept-footer {
+  background-color: #e2e2e2;
 }
 
-#footerlinks {
-  float: right;
-  text-align: right;
+.dept-footer-section {
+  padding: 2em 2em 2em 16%;
 }
 
 #footerlinks a:link {
@@ -1390,6 +1392,25 @@ a.button:hover {
   color: #333;
 }
 
+.dept-footer-container {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  left: -65px;
+  position: absolute;
+  top: 115px;
+}
+
+.dept-footer-heading {
+  text-transform: uppercase;
+}
+
+.dept-footer-campus-container {
+  padding-top: 26px;
+}
+
 @media all and (min-width: 321px) {
   .nav-container {
     position: absolute;
@@ -1406,6 +1427,9 @@ a.button:hover {
 @media all and (min-width: 768px) {
   body {
     font-size: 18px;
+  }
+  .dept-footer-container.campus {
+    left: -80px;
   }
   .half {
     float: left;
@@ -1694,6 +1718,13 @@ a.button:hover {
   }
   .span-12.feature {
     margin-left: 0%;
+  }
+  .dept-footer-section.first {
+    border-right: 18px solid #fff;
+    padding-left: 28%;
+  }
+  .dept-footer-section.last {
+    padding-right: 0;
   }
 }
 
