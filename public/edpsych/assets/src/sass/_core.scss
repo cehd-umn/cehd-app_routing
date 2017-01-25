@@ -344,6 +344,10 @@ a {
 
     .half {
         @include span-columns(6);
+
+        &.feature {
+            @include span-columns(12);
+        }
     }
 
     /// @todo remove any redundant properties
@@ -427,10 +431,10 @@ a {
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;
-        }
 
-        &.no-margin-top {
-            margin-top: 0;
+            &.no-margin-top {
+                margin-top: 0;
+            }
         }
     }
 
@@ -472,6 +476,7 @@ a {
         @include span-columns(6);
 
         &.feature {
+            @include span-columns(6);
             @include shift(3);
         }
     }

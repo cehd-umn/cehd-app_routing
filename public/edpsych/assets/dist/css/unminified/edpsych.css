@@ -1416,6 +1416,15 @@ a.button:hover {
   .half:last-child {
     margin-right: 0;
   }
+  .half.feature {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 100%;
+  }
+  .half.feature:last-child {
+    margin-right: 0;
+  }
   h1, .h1 {
     font-family: 'Montserrat', Verdana, Geneva, sans-serif;
     font-size: 48px;
@@ -1708,37 +1717,37 @@ a.button:hover {
   h1, .h1 {
     text-align: left;
   }
-  .no-margin-top {
+  h1.no-margin-top, .h1.no-margin-top {
     margin-top: 0;
   }
   h2, .h2 {
     text-align: left;
   }
-  .no-margin-top {
+  h2.no-margin-top, .h2.no-margin-top {
     margin-top: 0;
   }
   h3, .h3 {
     text-align: left;
   }
-  .no-margin-top {
+  h3.no-margin-top, .h3.no-margin-top {
     margin-top: 0;
   }
   h4, .h4 {
     text-align: left;
   }
-  .no-margin-top {
+  h4.no-margin-top, .h4.no-margin-top {
     margin-top: 0;
   }
   h5, .h5 {
     text-align: left;
   }
-  .no-margin-top {
+  h5.no-margin-top, .h5.no-margin-top {
     margin-top: 0;
   }
   h6, .h6 {
     text-align: left;
   }
-  .no-margin-top {
+  h6.no-margin-top, .h6.no-margin-top {
     margin-top: 0;
   }
   .reverse-span-1 {
@@ -1891,7 +1900,14 @@ a.button:hover {
     margin-right: 0;
   }
   .half.feature {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 47.63771%;
     margin-left: 26.18114%;
+  }
+  .half.feature:last-child {
+    margin-right: 0;
   }
   .third {
     float: left;
@@ -2396,16 +2412,20 @@ input[type="reset"]:focus {
   width: 2em;
 }
 
-.home-images {
-  display: flex;
+.home-images figure {
+  display: block;
+}
+
+.home-images figure img {
+  width: 100%;
 }
 
 .home-image figcaption {
   background-color: rgba(0, 0, 0, 0.4);
-  bottom: 3px;
+  bottom: 0;
   color: #fff;
-  font-size: 2.5em;
-  height: 100px;
+  font-size: 1em;
+  height: auto;
   left: 0;
   padding: .5em 2em;
   position: absolute;
@@ -2428,8 +2448,7 @@ input[type="reset"]:focus {
 .large-image-container {
   clear: none;
   float: left;
-  margin-right: 10px;
-  width: 988px;
+  width: 100%;
 }
 
 .large-image-container::after {
@@ -2438,13 +2457,7 @@ input[type="reset"]:focus {
 }
 
 .small-image-container {
-  clear: none;
-  flex: 1;
-  float: right;
-}
-
-.small-image-container img {
-  width: 100%;
+  display: none;
 }
 
 h2 small.clear.home {
@@ -2465,4 +2478,34 @@ dd.event-data {
 
 dd.event-link {
   margin-left: 0;
+}
+
+@media all and (min-width: 768px) {
+  .home-image figcaption {
+    bottom: 3px;
+    font-size: 2.5em;
+    height: 100px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .small-image-container {
+    clear: none;
+    display: inline-block;
+    flex: 1;
+    float: right;
+  }
+  .small-image-container img {
+    width: 100%;
+  }
+  .large-image-container {
+    flex: 2.45;
+    margin-right: 10px;
+  }
+  .home-images {
+    display: flex;
+  }
+  .home-images figure {
+    display: block;
+  }
 }
