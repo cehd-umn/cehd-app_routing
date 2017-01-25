@@ -31,7 +31,7 @@
         "use strict";
         var http_client = new HTTPClient();
         var search = new Search("{{ config.base_url }}");
-        var start = 0;
+        var start = 10;
 
         $(".more-results-link").on("click", function(event) {
             event.preventDefault();
@@ -59,6 +59,7 @@
                 var renderer = new Renderer();
                 renderer.init(template_params);
                 renderer.render(true);
+                start = start + 10;
             });
         });
     })();
