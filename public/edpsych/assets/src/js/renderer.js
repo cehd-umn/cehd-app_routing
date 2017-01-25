@@ -17,14 +17,24 @@ var Renderer = function () {
     };
 
     // TODO improve performance by making this async? https://mozilla.github.io/nunjucks/api.html#asynchronous-support
-    this.render = function() {
-        this.settings.$target_element.html(
-            nunjucks.render(this.settings.template_name,
-                {
-                    data: this.settings.data
-                }
-            )
-        );
+    this.render = function(append) {
+        if (!append) {
+            this.settings.$target_element.html(
+                nunjucks.render(this.settings.template_name,
+                    {
+                        data: this.settings.data
+                    }
+                )
+            );
+        } else {
+            this.settings.$target_element.append(
+                nunjucks.render(this.settings.template_name,
+                    {
+                        data: this.settings.data
+                    }
+                )
+            );
+        }
     };
 
     this._mergeOptions = function(params) {

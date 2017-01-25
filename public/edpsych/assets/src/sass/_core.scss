@@ -524,6 +524,10 @@ a {
     border: 1px solid $base-light-grey;
     padding: .55em;
     width: 88%;
+
+    &:focus {
+        background: $base-white;
+    }
 }
 
 #search-page-submit {

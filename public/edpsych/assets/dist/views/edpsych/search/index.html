@@ -1,0 +1,6 @@
+{% for result_level, result_set in data.results %}
+    {% for result in result_set.results %}
+        <dt><a href="{{ result.link }}">{{ result.title|safe }}</a></dt>
+        <dd>{{ result.description|safe }}{{ result|dump }}</dd>
+    {% endfor %}
+{% endfor %}

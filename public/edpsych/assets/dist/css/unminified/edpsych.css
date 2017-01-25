@@ -1954,6 +1954,10 @@ a.button:hover {
   width: 88%;
 }
 
+#search-page-query-input:focus {
+  background: #fff;
+}
+
 #search-page-submit {
   border-radius: 0;
   font-family: fontello;

@@ -55,38 +55,6 @@ class BaseResponse extends \Klein\Response
         $this->redirect($this->htmlFilenameToURI($uri), 301)->send();
     }
 
-    public function getSearchResponse($query, $site, $client, $num=10)
-    {
-        $base_url = "http://google.umn.edu/search";
-        $client_query_data = [
-            'query' => [
-                'q' => $query,
-                'as_sitesearch' => $site,
-                'num' => $num,
-            ]
-        ];
-        return $client->request('GET', $base_url, $client_query_data);
-    }
-
-    // @todo This method is specific to Google XML objects, change the name?
-    public function getSearchResultsFromXMLObject($obj)
-    {
-        $results = [];
-        $i = 0;
-
-        foreach ($obj->RES->R as $result_set)
-        {
-            $results[$i] = [
-                "title" => $result_set->T,
-                "description" => $result_set->S,
-                "link" => $result_set->U,
-            ];
-            $i++;
-        }
-
-        return $results;
-    }
-
     public function getNewsfeedArrayFromXML($xml)
     {
         $results = [];

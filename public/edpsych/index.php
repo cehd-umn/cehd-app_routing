@@ -15,6 +15,7 @@ require_once BASE_PATH . 'cehd/app/helpers/Navigation.php';
 require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
 require_once BASE_PATH . 'cehd/app/Config/Config.php';
+require_once BASE_PATH . 'cehd/app/Search/Search.php';
 
 /**
  * Instantiate a new instance of Klein. I'm calling it `$router` because I like
@@ -120,6 +121,13 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $http_client = $bootstrap_helper::bootstrap_http_client([]);
         return $http_client;
     });
+
+    /**
+     * Register the Search class to handle Google Search Appliance requests
+     */
+    $app->register('search_client', function() {
+        return new \CEHD\App\Search\Search();
+    });
 });
 
 /**
@@ -151,43 +159,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
     $router->respond('GET', '/search/', function($request, $response, $service, $app) {
         $query_data = $request->params();
-
-        if (array_key_exists('q', $query_data))
-        {
-            $sites = [
-                "primary" => [
-                    "name" => "Educational Psychology",
-                    "url" => "www.cehd.umn.edu/edpsych",
-                ],
-                "secondary" => [
-                    "name" => "College of Education + Human Development",
-                    "url" => "www.cehd.umn.edu",
-                ],
-                "tertiary" => [
-                    "name" => "University of Minnesota",
-                    "url" => "www.umn.edu",
-                ]
-            ];
-
-            $results = [];
-
-            foreach ($sites as $result_level => $site)
-            {
-                $client_response = $response->getSearchResponse(
-                        $query_data["q"],
-                        $site["url"],
-                        $app->http_client
-                );
-
-                $xml_obj = $response->xmlStrToObject($client_response->getBody());
-
-                $results[$result_level] = [
-                    "name" => $site["name"],
-                    "results" => $response->getSearchResultsFromXMLObject($xml_obj),
-                ];
-            };
-        };
-
+        $results = $app->search_client->get($query_data);
         $template_data = [
             "results" => $results,
             "query" => $query_data["q"],
@@ -344,16 +316,8 @@ $router->with($global_config['base_url'], function() use ($router) {
         $router->with('/search', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 $query_data = $request->params();
-
-                if (array_key_exists('q', $query_data) && array_key_exists('site', $query_data))
-                {
-                    $client_response = $response->getSearchResponse(
-                        $query_data["q"],
-                        $query_data["site"],
-                        $app->http_client);
-
-                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
-                };
+                $results = $app->search_client->get($query_data);
+                $response->sendJSONResponse(json_encode($results));
             });
         });
 
