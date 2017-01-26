@@ -6,7 +6,7 @@
     </div>
 {% endif %}
 <div class="span-9">
-<p>{{ data.person.degrees }}</p>
+<p>{{ data.person.degrees|safe }}</p>
 <p>
     {{ data.person.addr1 }}<br>
     {{ data.person.addr2 }}<br>
