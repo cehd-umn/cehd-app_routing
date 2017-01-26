@@ -1,13 +1,24 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "edpsych/macros/news-feed.html" as newsfeed %}
-{%- set page_title = "Counseling &amp; Student Personnel Psychology" %}
+{%- set page_title = "Counseling & student personnel psychology" %}
 {%- block title %}{{ page_title }}{% endblock %}
 {%- block main_content %}
 <div class="row">
     <div class="container">
       <section>
-        <h2 class="h1">Counseling &amp; student personnel psychology</h2>
+        <h2 class="h1">{{ page_title }}</h2>
             <section>
+              <div class="half">
+                <div class="whole">
+                <h3 class="no-margin-top">Keep dancing</h3>
+                  <div class="whole">
+                    <img src="{{ config.asset_base }}/dist/images/Programs/cspp/kirsten_lind_seal_feature.jpg" alt="Kirsten Lind Seal in her office">
+                      <p>After 25 years of performing everything from modern dance to stand-up comedy, Kirsten Lind Seal began teaching ballet to teenage girls. "These girls needed women in their lives&mdash;women who weren't their moms," she says. It was then that Lind Seal decided to go back to school. <a
+                      href="http://connect.cehd.umn.edu/keep-dancing/">Read
+                      more.</a></p>
+                  </div>
+              </div>
+            </div>
             <div class="half">
               <div class="whole">
                   <h3 class="no-margin-top">Help others grow academically and professionally</h3>
@@ -18,23 +29,20 @@
                       <li>College and student personnel counselor</li>
                       <li>Mental health professional in a community agency</li>
                     </ul>
-                  {#-
-                    This places the html the JavaScript is expecting for
-                    rendering the list of news items, including the fancy loader
-                  -#}
-                  {{ newsfeed.container() }}
               </div>
             </div>
-            <div class="half">
-              <div class="whole">
-              <h3 class="no-margin-top">Keep dancing</h3>
-                <div class="whole">
-                  <img src="{{ config.asset_base }}/dist/images/Programs/cspp/kirsten_lind_seal_feature.jpg" alt="Kirsten Lind Seal in her office">
-                    <p>After 25 years of performing everything from modern dance to stand-up comedy, Kirsten Lind Seal began teaching ballet to teenage girls. "These girls needed women in their lives&mdash;women who weren't their moms," she says. It was then that Lind Seal decided to go back to school. <a
-                    href="http://connect.cehd.umn.edu/keep-dancing/">Read
-                    more.</a></p>
-                </div>
-            </div>
+      </section>
+      <section>
+        <div class="half right divider">
+          {#-
+            This places the html the JavaScript is expecting for
+            rendering the list of news items, including the fancy loader
+          -#}
+          {{ newsfeed.container() }}
+        </div>
+        <div class="half">
+          <h3>Dates &amp; deadlines</h3>
+        </div>
       </section>
         <section>
           <p class="text-center"><a href="{{ config.base_url }}/future-students/cspp/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
@@ -128,7 +136,7 @@
                     <h5 class="no-margin-top"><a href="http://www.cehd.umn.edu/EdPsych/people/Faculty/McConnell.html">Scott McConnell</a>
                       <small class="clear h6">Program coordinator &amp; clinical training director</small>
                     </h5>
-                    <p><a href="mailto:smcconne@umn.edu">Email | </a><a href="http://www.cehd.umn.edu/edpsych/research/labs/mcconnell.html">Lab</a></p>
+                    <p><a href="mailto:smcconne@umn.edu">Email | </a><a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a></p>
                     <ul>
                       <li>Development of preschool-aged children, including the role of parent-child interactions</li>
                       <li>Evidence-based practices in schools, counseling, and mental health settings</li>

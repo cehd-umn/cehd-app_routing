@@ -1,31 +1,11 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Foundations of Education" %}
+{% set page_title = "Psychological foundations of education" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="h1">Psychological foundations of education</h2>
+        <h2 class="h1">{{ page_title }}</h2>
         <section>
-          <div class="half">
-            <div class="whole">
-              <h3 class="no-margin-top">Understand the way people think, learn, and teach</h3>
-                <p>As a student in the program, you’ll study the psychological processes critical to education. Research in our program focuses on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan. You'll use this knowledge to develop better educational processes and procedures for schools and other educational agencies, businesses, human and social service organizations, health care providers, government agencies, and more.</p>
-            </div>
-            <div class="whole">
-                {#-
-                  This places the html the JavaScript is expecting for
-                  rendering the list of news items, including the fancy loader
-
-                  In this case we're passing in all the arguments:
-
-                  * heading_text
-                  * h_tag
-                  * container_id
-                  * heading_classes
-                -#}
-                {{ newsfeed.container("Latest news", "h3", "news-container", "no-margin-top") }}
-            </div>
-          </div>
         <div class="half">
           <div class="whole">
             <h3 class="no-margin-top">Video games for the greater good</h3>
@@ -35,8 +15,41 @@
             <p>Like many 14-year-olds, Nic VanMeerten liked to play video games. Unlike most kids his age, he took things a step further. He graduated from the University of Minnesota with a bachelor’s degree in psychology, and is currently investigating how people learn in video games and how this information can be used for the greater good—to make learning fun.</p>
           </div>
         </div>
+        <div class="half">
+          <div class="whole">
+            <h3 class="no-margin-top">Understand the way people think, learn, and teach</h3>
+              <p>As a student in the program, you’ll study the psychological processes critical to education. Research in our program focuses on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan. You'll use this knowledge to develop better educational processes and procedures for schools and other educational agencies, businesses, human and social service organizations, health care providers, government agencies, and more.</p>
+              <h4>Careers</h4>
+                <ul>
+                  <li>Faculty (Ph.D only)</li>
+                  <li>Research scientists at universities and companies</li>
+                  <li>Government agencies</li>
+                  <li>Other educational settings (e.g., K-12 school research offices)</li>
+                  <li>Human and social service organizations</li>
+                  <li>Health care organization evaluator/researcher</li>
+                  <li>Research and development centers</li>
+                </ul>
+          </div>
       </section>
       <section>
+        <div class="half right divider">
+        {#-
+          This places the html the JavaScript is expecting for
+          rendering the list of news items, including the fancy loader
+
+          In this case we're passing in all the arguments:
+
+          * heading_text
+          * h_tag
+          * container_id
+          * heading_classes
+        -#}
+        {{ newsfeed.container("Latest news", "h3", "news-container", "no-margin-top") }}
+      </div>
+        <div class="half">
+          <h3>Dates &amp; deadlines</h3>
+        </div>
+    </div>
       <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
       </section>
     </div>
@@ -59,26 +72,26 @@
       <div class="row">
         <div class="container">
       <section>
-        <h3 class="text-center">Programs &amp; Degrees</h3>
+        <h3 class="text-center">Programs &amp; degrees</h3>
             <div class="half">
               <h4>Graduate</h4>
                 <p>Masters and Ph.D. students choose between two areas of emphasis:
-                <p><a href="http://www.cehd.umn.edu/EdPsych/Programs/Foundations/learning.html">Learning and cognition / educational technology (M.A., Ph.D.)</a></p>
+                <p><a href="{{ config.base_url }}/programs/foundations/learning/">Learning and cognition / educational technology (M.A., Ph.D.)</a></p>
                   <ul>
                     <li>Study how people think and learn</li>
                     <li>Research how people learn with technology and design research-based technologies to improve learning</li>
                   </ul>
                 </p>
-                <p><a href="http://www.cehd.umn.edu/EdPsych/Programs/Foundations/social-psych.html">Social psychological and developmental processes (M.A., Ph.D)</a>
+                <p><a href="{{ config.base_url }}/programs/foundations/social-psych/">Social psychological and developmental processes (M.A., Ph.D)</a>
                   </br>Study how social processes contribute to the success of schools and other educational organizations
               </p>
               </div>
         <div class="half">
           <h4>Professional</h4>
-              <p><a href="http://www.cehd.umn.edu/EdPsych/Programs/Foundations/certificate/Talent.html">Talent Development and Gifted Education Certificate</a>
+              <p><a href="{{ config.base_url }}/programs/foundations/talent/">Talent Development and Gifted Education Certificate</a>
                 </br>Develop, implement, and supervise programs to teach gifted and talented students in K-12 and postsecondary schools and other settings
               </p>
-              <p><a href="http://www.cehd.umn.edu/EdPsych/Programs/Foundations/5135.html">EPSY 5135&#58;  Human relations workshop</a></p>
+              <p><a href="{{ config.base_url }}/programs/foundations/5135/">EPSY 5135&#58;  Human relations workshop</a></p>
                 <ul>
                   <li>Four credit course approved to meet the Minnesota Department of Education requirement for licensure</li>
                   <li>Includes simulation activities, curriculum writing, and supervised practice in basic human relations skills emphasizing social psychological principles involved in stereotyping and prejudice and their implications for educational practice</li>

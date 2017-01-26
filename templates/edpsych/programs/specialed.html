@@ -7,14 +7,6 @@
     <div class="container">
         <h2 class="h1">Special education</h2>
             <section>
-              <div class="half">
-                  <h3 class="no-margin-top">Seeking the origins of autism</h3>
-                  <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jason_Wolff_feature.jpg" alt="Jason Wolff in his office">
-                  <p>Assistant professor, Jason Wolff leverages the power of
-                  brain-imaging data to determine the biological origins of autism. <a
-                  href="http://www.cehd.umn.edu/people/profiles/Wolff/">Read
-                  more.</a></p>
-              </div>
                 <div class="half">
                     <h3 class="no-margin-top">Help all students get the support they need to succeed</h3>
                     <p>Improve outcomes for individuals who require specialized
@@ -25,30 +17,31 @@
                     families in diverse contexts, and to have a lasting impact
                     on teacher education, leadership, and policy. Watch videos
                     on our research in special education.</p>
+                      {#-
+                      This places the html the JavaScript is expecting for rendering the
+                      list of news items, including the fancy loader
+                      -#}
+                      {{ newsfeed.container() }}
+                        <h3>Dates &amp; deadlines</h3>
+                </div>
+                <div class="half">
+                    <h3 class="no-margin-top">Seeking the origins of autism</h3>
+                    <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jason_Wolff_feature.jpg" alt="Jason Wolff in his office">
+                    <p>Assistant professor, Jason Wolff leverages the power of
+                    brain-imaging data to determine the biological origins of autism. <a
+                    href="http://www.cehd.umn.edu/people/profiles/Wolff/">Read
+                    more.</a></p>
+                </div>
+                </section>
+                <section>
+                  <div class="half right divider">
+                      <p class="pull-quote">#8 Special Education Program by <em>U.S. News &amp; World Report</em></p>
+                  </div>
+                  <div class="half">
+                      <p class="pull-quote">#6 Top 20 Most Innovative Master's
+                      in Special Education Degrees by <em>Masters in Special Education Program Guide</em></p>
                 </div>
               </section>
-              <section>
-                <div class="half">
-                {#-
-                This places the html the JavaScript is expecting for rendering the
-                list of news items, including the fancy loader
-                -#}
-                {{ newsfeed.container() }}
-                </div>
-                <div class="half">
-                  <h3>Dates &amp; deadlines</h3>
-                </div>
-            </section>
-        <section>
-          <div class="half right divider">
-              <p class="pull-quote">#8 Special Education Program by <em>U.S. News &amp; World Report</em></p>
-            </div>
-            <div class="half">
-              <p class="pull-quote">#6 Top 20 Most Innovative Master's
-              in Special Education Degrees by <em>Masters in Special Education Program Guide</em></p>
-            </div>
-          </div>
-        </section>
     </div>
 </div>
 <div class="row emphasis subtle">
@@ -60,7 +53,7 @@
             <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply (M.Ed.)</a></p>
         </div>
         <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/programs/" class="button center">Apply &#47; transfer (B.S.)</a>
+            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" class="button center">Apply &#47; transfer (B.S.)</a>
         </div>
     </div>
 </div>
@@ -70,12 +63,12 @@
       <h3 class="text-center">Programs &amp; degrees</h3>
             <div class="third">
                 <h5>Graduate degrees</h5>
-                <h4 class="h6"><a href="http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/PhD.html">Doctor of philosophy (Ph.D.)</a></h4>
+                <h4 class="h6"><a href="{{ config.base_url }}/programs/specialed/phd/">Doctor of philosophy (Ph.D.)</a></h4>
                 <p>Conduct research in special education and train other researchers and special educators.</p>
-                <h4 class="h6"><a href="http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/masters.html">Master's of Arts (M.A.)</a></h4>
+                <h4 class="h6"><a href="{{ config.base_url }}/programs/specialed/masters/">Master's of Arts (M.A.)</a></h4>
                 <p>Conduct research and work toward your Ph.D.</p>
                 <h5>Teaching degrees</h5>
-                <h6><a href="http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/SpEd-MEd-teacherlicensure.html">Master's of Education/licensure (M.Ed.)</a></h6>
+                <h6><a href="{{ config.base_url }}/programs/specialed/masters/">Master's of Education/licensure (M.Ed.)</a></h6>
                 <p>Earn your degree wand teaching license in four years. Upon graduation, you'll be certified to teach students iwth mild-moderate disabilities in K-12 and 18-21 transition programs.</p>
                 <h6><a href="http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/SpEd-BS.html">Bachelor's of Science (B.S.) with Academic Behavioral Strategist (ABS) licensure</a></h6>
                 <p>Earn your degree and teaching license in four years. Uopon graduation, you'll be certified to teach students with mild-moderate disabilities in K-12 and 18-21 transition programs</p>

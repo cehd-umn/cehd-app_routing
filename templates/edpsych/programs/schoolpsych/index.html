@@ -1,10 +1,10 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "School Psychology" %}
+{% set page_title = "School psychology" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>School psychology</h2>
+        <h2>{{ page_title }}</h2>
         <section>
         <div class="half"><p><iframe src="https://player.vimeo.com/video/140834612" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </p></div>
@@ -33,13 +33,13 @@
                 <h3>Inspire positive change through critical thinking</h3>
                 <p>Our program is designed to prepare scientist-practitioners who are change agents and critical thinkers knowledgeable in the (a) theoretical and empirical foundations of psychology, (b) research methods, statistics, and application, and (c) research-based prevention, intervention, consultation, and assessment within multitier systems to support. All students engage in rigorous research— be it original empirical investigations or research syntheses— reflecting quality design, analysis, and writing that can contribute to the school psychology knowledge base.</p>
               <ul>
-                <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/focus.html">More information on program goals and competencies</a></li>
-                <li><a href="">View the University of Minnesota's School Psychology Diversity Statement</a>.</li>
+                <li><a href="{{ config.base_url }}/programs/schoolpsych/focus/">More information on program goals and competencies</a></li>
+                <li><a href="{{ config.base_url }}/programs/schoolpsych/diversity/">View the University of Minnesota's School Psychology Diversity Statement</a>.</li>
               </ul>
           </div>
   </section>
   <section>
-    <div class="half">
+    <div class="half right divider">
         {#-
         This places the html the JavaScript is expecting for rendering the list
         of news items, including the fancy loader
@@ -87,31 +87,31 @@
 <div class="row">
     <div class="container">
         <div class="feature half">
-                <h3>School psychologists:
+                <h3 class="text-center">School psychologists:
                 <br>
                 in-demand and well-compensated</h3>
                 <ul>
                 <li>Expected employment growth: 11% between 2012 and 2022*</li>
                 <li>Mean salary (full-time, school-based practitioner): $64,000-$71,000**</li>
                 <li>Mean salary (university faculty): $77,800**</li>
-                <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/outcomes.html">Student Admissions, Outcomes and Other Data</a></li>
+                <li><a href="{{ config.base_url }}/programs/schoolpsych/outcomes/">Student Admissions, Outcomes and Other Data</a></li>
             </ul>
     </div>
             </section>
             <section>
-            <div class="feature half">
-            <h3>Careers, programs & degrees</h3>
+            <div class="twothirds feature">
+            <h3 class="text-center">Careers, programs & degrees</h3>
             <div class="third right divider"><h4>Careers</h4>
             <h5 class="h6">Specialist-level school psychologists:</h5> <p>Work in pre-school and elementary and secondary schools</p>
             <p>Learn about fellowships available to M.A./specialist students</p>
-    <p><strong>Doctoral-level school psychologists:</strong>Work in universities (as faculty), mental health agencies, research centers and think tanks, clinical settings, state departments of education, and independent practices.</p>
+            <p><strong>Doctoral-level school psychologists:</strong> Work in universities (as faculty), mental health agencies, research centers and think tanks, clinical settings, state departments of education, and independent practices.</p>
             </div>
-            <div class="twothird">
-            <h4>Programs & degrees</h4>
-            <p>Coursework for both degrees includes a year-long internship. Choose between two degree options:</p>
-            <p><a href="{{ config.base_url }}/programs/schoolpsych/master/">M.A. &amp; Specialist Certificate (S.C.) in Education and School Psychological Services (60 credits):</a></br>You’ll be eligible to receive your state and national school psychologist credential to work with students in schools.</p>
-            <p><a href="{{ config.base_url }}/programs/schoolpsych/doctor/">Doctorate of Philosophy (Ph.D.) (90 credits):</a>You’ll be eligible to receive your state and national school psychologist credential, and the license to practice psychology. You can become a university faculty member, conduct research, work with students in schools, or work with children and youth in other settings as a licensed psychologist.</p>
-    </div>
+            <div class="twothirds">
+              <h4>Programs & degrees</h4>
+                <p>Coursework for both degrees includes a year-long internship. Choose between two degree options:</p>
+                <p><a href="{{ config.base_url }}/programs/schoolpsych/master/">M.A. &amp; Specialist Certificate (S.C.) in Education and School Psychological Services (60 credits):</a></br>You’ll be eligible to receive your state and national school psychologist credential to work with students in schools.</p>
+                <p><a href="{{ config.base_url }}/programs/schoolpsych/doctor/">Doctorate of Philosophy (Ph.D.) (90 credits):</a>You’ll be eligible to receive your state and national school psychologist credential, and the license to practice psychology. You can become a university faculty member, conduct research, work with students in schools, or work with children and youth in other settings as a licensed psychologist.</p>
+            </div>
             </div>
             </section>
             <section>
@@ -130,7 +130,7 @@
     </ul></div></div>
     <div class="half">
             <div class="span-4"><img src="https://apps.cehd.umn.edu/people/Headshot/CoddingR_2016.jpg" class="mobile-hide" alt="Robin Codding headshot"></div>
-    <div class="span-6"><h5 class="no-margin-top" >Robin Codding</h5>
+    <div class="span-6"><h5 class="no-margin-top" >Robin Codding<small class="clear h6">Acting program coordinator</small></h5>
     <p><a href="mailto:rcodding@umn.edu">Email</a>| <a href="{{ config.base_url }}/research/labs/codding/">Lab</a></p>
     <ul>
                 <li>Prevention and intervention of academic problems</li>
@@ -165,7 +165,7 @@
     <div>
     <div class="half">
             <div class="span-4"><img src="http://apps.cehd.umn.edu/people/Headshot/SullivanA-2011.jpg" class="mobile-hide" alt="Amanda Sullivan headshot"></div>
-    <div class="span-6"><h5 class="no-margin-top">Amanda Sullivan<small class="clear h6">Program coordinator</small></h5>
+    <div class="span-6"><h5 class="no-margin-top">Amanda Sullivan</h5>
     <p><a href="mailto:asulliva@umn.edu">Email</a>| <a href="{{ config.base_url }}/research/labs/sullivan/">Lab</a></p>
     <ul>
                 <li>Screening and progress-monitoring for social, emotional and behavioral challenges</li>
