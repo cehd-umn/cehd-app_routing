@@ -1,0 +1,51 @@
+---
+- section: American Sign Language (ASL)
+  query:
+    param: tg
+    value: 338
+  titles:
+  - x500: jcpenny
+    title: program coordinator
+- section: Counseling & student personnel psychology (CSPP)
+  query:
+    param: tg
+    value: 316
+  titles:
+  - x500: smcconne
+    title: program coordinator & clinical training director
+- section: Psychological foundations of education
+  query:
+    param: tg
+    value: 317
+  titles:
+  - x500: geoff
+    title: department chair
+  - x500: sashank
+    title: program coordinator
+- section: Quantitative methods in education
+  query:
+    param: tg
+    value: 320
+  titles:
+  - x500: lqr6576
+    title: director of graduate studies
+  - x500: harwe001
+    title: acting program coordinator
+- section: School psychology
+  query:
+    param: tg
+    value: 321
+  titles:
+  - x500: rcodding
+    title: acting program coordinator
+- section: Special education
+  query:
+    param: tg
+    value: 315
+  titles:
+  - x500: jmccomas
+    title: associate department chair
+  - x500: mcmas004
+    title: program coordinator
+  - x500: coneill
+    title: field placement coordinator

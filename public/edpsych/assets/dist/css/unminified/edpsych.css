@@ -1376,19 +1376,19 @@ a.button:hover {
   padding: 2em 2em 2em 16%;
 }
 
-#footerlinks a:link {
+footer a:link {
   color: #333;
 }
 
-#footerlinks a:hover {
+footer a:hover {
   color: #333;
 }
 
-#footerlinks a:visited {
+footer a:visited {
   color: #333;
 }
 
-#footerlinks a:active {
+footer a:active {
   color: #333;
 }
 
@@ -2509,6 +2509,11 @@ dd.event-data {
 
 dd.event-link {
   margin-left: 0;
+}
+
+.faculty-headshot {
+  margin-right: 1em;
+  width: 150px;
 }
 
 @media all and (min-width: 768px) {

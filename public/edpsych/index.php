@@ -9,10 +9,12 @@
 const BASE_PATH = __DIR__ . '/../../';
 const BASE_CONFIG_PATH = BASE_PATH . 'cehd/config/app/config.yml';
 const EDPSYCH_CONFIG_PATH = BASE_PATH . 'cehd/config/edpsych/config.yml';
+const EDPSYCH_PEOPLE_PATH = BASE_PATH . 'cehd/config/edpsych/people.yml';
 
 require_once BASE_PATH . 'vendor/autoload.php';
 require_once BASE_PATH . 'cehd/app/helpers/Navigation.php';
 require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
+require_once BASE_PATH . 'cehd/app/helpers/Helper.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
 require_once BASE_PATH . 'cehd/app/Config/Config.php';
 require_once BASE_PATH . 'cehd/app/Search/Search.php';
@@ -120,6 +122,18 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $http_client = $bootstrap_helper::bootstrap_http_client([]);
         return $http_client;
+    });
+
+    // TODO The helper functions we need in the app here should go in the
+    // Helper class below
+    $app->register('bootstrap_helper', function() {
+        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
+        return $bootstrap_helper;
+    });
+
+    $app->register('helpers', function() {
+        $helpers = new \CEHD\Helpers\Helper\Helper;
+        return $helpers;
     });
 
     /**
@@ -335,10 +349,14 @@ $router->with($global_config['base_url'], function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 // TODO add base urls to config
                 $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
-                // TODO make the query string a var so we can have one endpoint
-                $client_query_data = ['query' => ['tg' => '225']];
-                $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
-                $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                $query_data = $request->params();
+
+                if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
+                {
+                    $client_query_data = ['query' => $query_data];
+                    $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                }
             });
 
             /**
@@ -439,7 +457,18 @@ $router->with($global_config['base_url'], function() use ($router) {
      */
     $router->with('/people', function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/people/index.html', ["section" => "people"]);
+            $section_data = $app->bootstrap_helper->load_yaml(EDPSYCH_PEOPLE_PATH);
+
+            foreach ($section_data as $key => $section)
+            {
+                $section_data[$key]["section-hyphenated"] = $app->helpers->hyphenate($section_data[$key]["section"]);
+            };
+
+            $template_vars = [
+                "section" => "people",
+                "section_data" => $section_data,
+            ];
+            echo $app->template->render('edpsych/people/index.html', $template_vars);
         });
 
         $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {

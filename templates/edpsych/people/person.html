@@ -29,6 +29,7 @@
 
         $request.done(function() {
             var results = client.getResults();
+            var renderer = new Renderer();
             var template_params = {
                 'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
                 'template_name': 'person.html',
@@ -37,8 +38,8 @@
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
-            Renderer.init(template_params);
-            Renderer.render();
+            renderer.init(template_params);
+            renderer.render();
         });
     </script>
 {% endblock %}

@@ -1,40 +1,89 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/loader.html" as loader %}
 {% set page_title = "Faculty & Instructors" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="h1">{{ page_title }}</h2>
+        <h2>{{ page_title }}</h2>
         {# This uses a JavaScript template located at:
         app_template/public/edpsych/assets/dist/views/edpsych/people/index.html #}
-        <div id="people-tool-container" aria-live="polite">
-            <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
-        </div>
+        {% for section in section_data %}
+            <div class="half">
+                <div class="people-tool-section-container" aria-live="polite"
+                    data-id="{{ section.query.value }}">
+                    {% set target_element = "people-tool-container-" ~ section.query.value %}
+                    {{ loader.loader(section.section, "h3", target_element) }}
+                </div>
+            </div>
+            {% if loop.index is divisible by(2) %}
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    <script>
-        var params = {
-            url: "{{ config.base_url }}/services/people-tool/",
-            data: {}
-        };
-        var client = new HTTPClient();
-        var $request = client.get(params);
+<script>
+    (function() {
+        var section_data = {{ section_data|json_encode|raw }};
+        var requests = [];
 
-        $request.done(function() {
-            var results = client.getResults();
-            var template_params = {
-                'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
-                'template_name': 'index.html',
-                "$target_element": $("#people-tool-container"),
-                'data': {
-                    people: results.channel.item,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+        function get_params(tg) {
+            return params = {
+                url: "{{ config.base_url }}/services/people-tool/",
+                data: {
+                    tg: tg
                 }
             };
-            Renderer.init(template_params);
-            Renderer.render();
+        }
+
+        function get_id(requests, key) {
+            return requests[key].id
+        }
+
+        function get_client_results(requests, key) {
+            return requests[key].client.results.channel.item;
+        }
+
+        $.each(section_data, function(key, value) {
+            var query_value = this.query.value.toString();
+            var params = get_params(query_value);
+            var client = new HTTPClient();
+            var request = client.get(params);
+            var obj = {
+                client: client,
+                id: query_value,
+                request: request
+            };
+            requests.push(obj);
         });
-    </script>
+
+        $.each(requests, function(k, v) {
+            var request = this.request;
+            request.done(function() {
+                var id = get_id(requests, k);
+                var element_id = "#people-tool-container-" + id;
+                var $target_element = $(element_id);
+                var results = get_client_results(requests, k);
+                var renderer = new Renderer();
+                var template_params = {
+                    'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
+                    'template_name': 'index.html',
+                    "$target_element": $target_element,
+                    'data': {
+                        people: results,
+                        section_data: section_data,
+                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                    }
+                };
+                renderer.init(template_params);
+                renderer.render();
+            });
+        });
+    })();
+</script>
 {% endblock %}

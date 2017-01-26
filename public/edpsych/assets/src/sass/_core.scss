@@ -315,7 +315,7 @@ a {
     padding: 2em 2em 2em 16%;
 }
 
-#footerlinks {
+footer {
     a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
