@@ -350,10 +350,22 @@ $router->with($global_config['base_url'], function() use ($router) {
                 // TODO add base urls to config
                 $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
                 $query_data = $request->params();
+                $query = [];
+
+                // Strip out extraneous query params
+                if (array_key_exists('en', $query_data))
+                {
+                    $query['en'] = $query_data['en'];
+                };
+
+                if (array_key_exists('tg', $query_data))
+                {
+                    $query['tg'] = $query_data['tg'];
+                };
 
                 if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
                 {
-                    $client_query_data = ['query' => $query_data];
+                    $client_query_data = ['query' => $query];
                     $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
                     $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                 }
