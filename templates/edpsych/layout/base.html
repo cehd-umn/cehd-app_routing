@@ -1,7 +1,7 @@
 {% extends "layout/base.html" %}
 {% block css %}<link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
-{% block title_prepend %}{{ config.dept_name }}:{% endblock %}
+{% block title_append %} | {{ config.dept_name|safe }} | University of Minnesota{% endblock %}
 {% block bottom_js %}<script src="{{ config.js_base }}/edpsych.min.js"></script>{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
