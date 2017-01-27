@@ -473,7 +473,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
             foreach ($section_data as $key => $section)
             {
-                $section_data[$key]["section-hyphenated"] = $app->helpers->hyphenate($section_data[$key]["section"]);
+                $section_data[$key]["section_hyphenated"] = $app->helpers->hyphenate($section_data[$key]["section"]);
             };
 
             $template_vars = [

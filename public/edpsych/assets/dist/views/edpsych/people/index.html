@@ -6,7 +6,9 @@
         </a>
         {% for section in data.section_data %}
             {% for title in section.titles %}
-                {% if title.x500 == person.internetId %}
+                {# data.people.section: {{ data.people.section}}
+                title.section: {{ title.section }} #}
+                {% if title.x500 == person.internetId and data.people.section == title.section %}
                     , {{ title.title }}
                 {% endif %}
             {% endfor %}

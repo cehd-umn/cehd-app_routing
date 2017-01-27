@@ -49,6 +49,10 @@
             return requests[key].client.results.channel.item;
         }
 
+        function get_section(section_data, key) {
+            return section_data[key].section;
+        }
+
         $.each(section_data, function(key, value) {
             var query_value = this.query.value.toString();
             var params = get_params(query_value);
@@ -57,7 +61,7 @@
             var obj = {
                 client: client,
                 id: query_value,
-                request: request
+                request: request,
             };
             requests.push(obj);
         });
@@ -66,16 +70,30 @@
             var request = this.request;
             request.done(function() {
                 var id = get_id(requests, k);
+                var section = get_section(section_data, k);
                 var element_id = "#people-tool-container-" + id;
                 var $target_element = $(element_id);
                 var results = get_client_results(requests, k);
+
+                results.section = section;
+
                 var renderer = new Renderer();
+                var template_data = {
+                        people: results,
+                        section: section,
+                        section_data: section_data,
+                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                    };
+
+                console.log(template_data);
+
                 var template_params = {
                     'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
                     'template_name': 'index.html',
                     "$target_element": $target_element,
                     'data': {
                         people: results,
+                        section: section,
                         section_data: section_data,
                         config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                     }
