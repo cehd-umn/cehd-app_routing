@@ -1,9 +1,12 @@
+{% set current_row_index = 0 %}
+{% set row_indexer = cycler(range(data.limit)) %}
 {% if data.events|length > 0 %}
     <dl class="events-listing">
     {% for month, events in data.events %}
-        {% if loop.index0 < data.limit %}
+        {% if current_row_index < data.limit %}
         <dt class="events-title h4 light no-margin-top">{{ month }}</dt>
         {% for event in events %}
+            {% set current_row_index = row_indexer.next() %}
             <dd class="event-data">
                 <dl class="event-listing">
                     <dt class="event-title h3 light">{{ event.day }}:</dt>
