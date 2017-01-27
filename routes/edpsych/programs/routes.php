@@ -160,6 +160,10 @@ $router->with('/programs', function() use ($router) {
             $response->redirect($app->site_config['base_url'] . '/programs/specialed/certificate/autism/', 301)->send();
         });
 
+        $router->respond('GET', 'SpecialEd/certificate/autism-registration.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/specialed/certificate/autism/registration/', 301)->send();
+        });
+
         $routes = [
             "abs-licensure",
             "asd",
@@ -189,15 +193,22 @@ $router->with('/programs', function() use ($router) {
                 });
             });
 
-            $router->with('/certificate', function() use ($router) {
-                $router->respond('GET', '/autism/', function($request, $response, $service, $app) {
-                    echo $app->template->render('edpsych/programs/specialed/autism.html', ["section" => "programs-degrees"]);
-                });
-            });
-        }
+        };
 
         $router->respond('GET', '/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->with('/certificate', function() use ($router) {
+            $router->with('/autism', function() use ($router) {
+                $router->respond('GET', '/', function($request, $response, $service, $app) {
+                    echo $app->template->render('edpsych/programs/specialed/autism/index.html', ["section" => "programs-degrees"]);
+                });
+
+                $router->respond('GET', '/registration/', function($request, $response, $service, $app) {
+                    echo $app->template->render('edpsych/programs/specialed/autism/registration.html', ["section" => "programs-degrees"]);
+                });
+            });
         });
     });
 
