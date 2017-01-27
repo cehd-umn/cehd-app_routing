@@ -202,11 +202,7 @@ $router->with('/programs', function() use ($router) {
         $router->with('/certificate', function() use ($router) {
             $router->with('/autism', function() use ($router) {
                 $router->respond('GET', '/', function($request, $response, $service, $app) {
-                    echo $app->template->render('edpsych/programs/specialed/autism/index.html', ["section" => "programs-degrees"]);
-                });
-
-                $router->respond('GET', '/registration/', function($request, $response, $service, $app) {
-                    echo $app->template->render('edpsych/programs/specialed/autism/registration.html', ["section" => "programs-degrees"]);
+                    echo $app->template->render('edpsych/programs/specialed/certificate/autism/index.html', ["section" => "programs-degrees"]);
                 });
             });
         });
