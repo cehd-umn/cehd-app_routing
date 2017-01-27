@@ -1,4 +1,6 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
+{%- import "edpsych/macros/loader.html" as loader -%}
 {% set page_title = "Psychological foundations of education" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -44,10 +46,14 @@
           * container_id
           * heading_classes
         -#}
-        {{ newsfeed.container("Latest news", "h3", "news-container", "no-margin-top") }}
+        {{ loader.loader("Latest news", "h3", "news-container", "no-margin-top") }}
       </div>
         <div class="half">
-          <h3>Dates &amp; deadlines</h3>
+          {{ loader.loader(
+            "Dates & deadlines",
+            "h3",
+            "events-container"
+          ) }}
         </div>
     </div>
       <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
@@ -210,5 +216,15 @@
 {% endblock %}
 {% import "edpsych/macros/news-feed.html" as newsfeed %}
 {%- block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/departments/educational-psychology/psychological-foundations-of-education/feed/") }}
+    {{ newsfeed.news_feed_js(
+        "category/departments/educational-psychology/psychological-foundations-of-education/feed/"
+    ) }}
+
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+       353
+    ) }}
 {%- endblock -%}

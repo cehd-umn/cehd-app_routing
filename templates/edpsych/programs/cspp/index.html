@@ -1,5 +1,7 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
+{%- import "edpsych/macros/loader.html" as loader -%}
 {%- set page_title = "Counseling & student personnel psychology" %}
 {%- block title %}{{ page_title }}{% endblock %}
 {%- block main_content %}
@@ -38,10 +40,14 @@
             This places the html the JavaScript is expecting for
             rendering the list of news items, including the fancy loader
           -#}
-          {{ newsfeed.container() }}
+          {{ loader.loader() }}
         </div>
         <div class="half">
-          <h3>Dates &amp; deadlines</h3>
+          {{ loader.loader(
+            "Dates & deadlines",
+            "h3",
+            "events-container"
+          ) }}
         </div>
       </section>
         <section>
@@ -191,5 +197,15 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/") }}
+    {{ newsfeed.news_feed_js(
+        "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/"
+    ) }}
+
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+       351
+    ) }}
 {% endblock %}

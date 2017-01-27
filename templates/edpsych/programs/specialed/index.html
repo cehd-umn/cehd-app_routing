@@ -1,5 +1,7 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
+{%- import "edpsych/macros/loader.html" as loader -%}
 {% set page_title = "Special Education" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -17,12 +19,16 @@
                     families in diverse contexts, and to have a lasting impact
                     on teacher education, leadership, and policy. Watch videos
                     on our research in special education.</p>
-                      {#-
-                      This places the html the JavaScript is expecting for rendering the
-                      list of news items, including the fancy loader
-                      -#}
-                      {{ newsfeed.container() }}
-                        <h3>Dates &amp; deadlines</h3>
+                        {#-
+                        This places the html the JavaScript is expecting for rendering the
+                        list of news items, including the fancy loader
+                        -#}
+                        {{ loader.loader() }}
+                        {{ loader.loader(
+                            "Dates & deadlines",
+                            "h3",
+                            "events-container"
+                        ) }}
                 </div>
                 <div class="half">
                     <h3 class="no-margin-top">Seeking the origins of autism</h3>
@@ -422,5 +428,15 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/departments/educational-psychology/special-education/feed/") }}
+    {{ newsfeed.news_feed_js(
+        "category/departments/educational-psychology/special-education/feed/"
+    ) }}
+
+    {#-
+        Events feed
+        * the first value passed in is for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+       350
+    ) }}
 {% endblock %}
