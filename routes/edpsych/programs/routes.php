@@ -129,6 +129,7 @@ $router->with('/programs', function() use ($router) {
         $html_filenames = [
             "videos.html",
             "SpEd-BS.html",
+            "SpEd-MEd-teacherlicensure.html",
             "PhD.html",
             "masters.html",
             "ABS-licensure.html",
@@ -171,6 +172,7 @@ $router->with('/programs', function() use ($router) {
             "masters",
             "phd",
             "sped-bs",
+            "sped-med-teacherlicensure",
             "videos",
         ];
 
