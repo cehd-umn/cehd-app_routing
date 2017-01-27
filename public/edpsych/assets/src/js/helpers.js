@@ -7,9 +7,6 @@ var Helpers = {
         var event_data = {};
 
         if (parseInt(events["@attributes"].totalCount) > 0) {
-            // events come back in chronological order so reverse the array
-            events.event.reverse();
-
             $.each(events.event, function() {
                 "use strict";
                 var event_date = moment(this.dateISO);
@@ -31,6 +28,10 @@ var Helpers = {
             });
         }
         return event_data;
+    },
+
+    feedPathToLinkPath: function(feed_path) {
+        return feed_path.replace("feed/", "");
     }
 };
 

@@ -1,4 +1,11 @@
-{%- macro events_feed_js(target_element_selector="#events-container", template_name="index.html", limit=4) -%}
+{%- macro events_feed_js(
+    t=129,
+    limit=4,
+    target_element_selector="#events-container",
+    template_name="index.html",
+    q=6,
+    r=3
+    ) -%}
 <script>
     (function() {
         "use strict";
@@ -6,9 +13,10 @@
         var params = {
             url: base_url,
             data: {
-                "q": "6",
-                "r": "3",
-                "t": "129",
+                "q": "{{ q }}",
+                "r": "{{ r }}",
+                "t": "{{ t }}",
+                "x": "{{ limit }}",
             }
         };
         var client = new HTTPClient();

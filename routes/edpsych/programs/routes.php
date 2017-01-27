@@ -194,7 +194,7 @@ $router->with('/programs', function() use ($router) {
         };
 
         $router->respond('GET', '/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/specialed.html', ["section" => "programs-degrees"]);
+            echo $app->template->render('edpsych/programs/specialed/index.html', ["section" => "programs-degrees"]);
         });
 
         $router->with('/certificate', function() use ($router) {

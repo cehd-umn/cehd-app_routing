@@ -1,4 +1,7 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
+{%- import "edpsych/macros/news-feed.html" as newsfeed %}
+{%- import "edpsych/macros/loader.html" as loader -%}
 {% set page_title = "Alumni" %}
 {% block title %}{{ page_title }}{% endblock %}
 
@@ -24,31 +27,25 @@
         </article>
         <div class="asides dynamic-content">
             <article class="third">
-                <h3>Alumni in the news</h3>
-                <div id="alumni-news-container" aria-live="polite">
-                    <div class="loader small">
-                        <div class="loader-figure small"></div>
-                        <p class="loader-label">Loading&hellip;</p>
-                    </div>
-                </div>
+            {{ loader.loader(
+                "Alumni in the news",
+                "h3",
+                "alumni-news-container"
+                ) }}
             </article>
             <article class="third">
-                <h3>Department news</h3>
-                <div id="dept-news-container">
-                    <div class="loader small">
-                        <div class="loader-figure small"></div>
-                        <p class="loader-label">Loading&hellip;</p>
-                    </div>
-                </div>
+            {{ loader.loader(
+                "Department news",
+                "h3",
+                "dept-news-container"
+                ) }}
             </article>
             <article class="third">
-                <h3>Calendar</h3>
-                <div id="calendar-container">
-                    <div class="loader small">
-                        <div class="loader-figure small"></div>
-                        <p class="loader-label">Loading&hellip;</p>
-                    </div>
-                </div>
+            {{ loader.loader(
+                "Calendar",
+                "h3",
+                "events-container"
+                ) }}
             </article>
         </div>
         <article>
@@ -172,96 +169,24 @@
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    <script>
-        /**
-         * Dept. News
-         */
-        var news_base_url = "{{ config.base_url }}/services/news/feed/";
-        var dept_params = {
-            url: news_base_url,
-            data: {
-                "feed-path": "category/alumni,educational-psychology/feed"
-            }
-        };
-        var dept_client = new HTTPClient();
-        var $dept_request = dept_client.get(dept_params);
+    {#- Alumni news -#}
+    {{ newsfeed.news_feed_js(
+        "category/alumni-educational-psychology/feed",
+        "#alumni-news-container"
+    ) }}
 
-        $dept_request.done(function() {
-            var results = dept_client.getResults();
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "index.html",
-                "$target_element": $("#alumni-news-container"),
-                "data": {
-                    news: results,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-            Renderer.init(template_params);
-            Renderer.render();
-        });
+    {#- Dept news -#}
+    {{ newsfeed.news_feed_js(
+        "category/departments/department-news-no-alumni/feed",
+        "#dept-news-container"
+    ) }}
 
-        /**
-         * Alumni news
-         */
-        var alum_params = {
-            url: news_base_url,
-            data: {
-                "feed-path": "category/departments/educational-psychology/feed"
-            }
-        };
-        var alum_client = new HTTPClient();
-        var $alum_request = alum_client.get(alum_params);
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+        255
+    ) }}
 
-        $alum_request.done(function() {
-            var results = alum_client.getResults();
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
-                "template_name": "index.html",
-                "$target_element": $("#dept-news-container"),
-                "data": {
-                    news: results,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-            Renderer.init(template_params);
-            Renderer.render();
-        });
-
-        /**
-         * Events calendar
-         */
-        var events_base_url = "{{ config.base_url }}/services/events/feed/";
-        var events_params = {
-            url: events_base_url,
-            data: {
-                "q": "6",
-                "r": "3",
-                "t": "129",
-            }
-        };
-        var events_client = new HTTPClient();
-        var $events_request = events_client.get(events_params);
-
-        $events_request.done(function() {
-            var results = events_client.getResults();
-            var $target_element = $("#calendar-container");
-            var events = Helpers.parseEvents(results);
-            var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
-                "template_name": "alumni.html",
-                "$target_element": $target_element,
-                "data": {
-                    events: events,
-                    limit: 3,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-
-            Renderer.init(template_params);
-            Renderer.render();
-        });
-    </script>
 {% endblock %}
