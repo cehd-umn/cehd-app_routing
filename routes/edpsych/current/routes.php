@@ -40,8 +40,14 @@ $router->with('/current', function() use ($router) {
         echo $app->template->render('edpsych/current/index.html', ["section" => "current"]);
     });
 
-    $router->respond('GET', '/schoolpsych/spsa/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/current/schoolpsych/spsa.html', ["section" => "current"]);
+    $router->with('/school-psychology', function() use ($router) {
+
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/current/school-psychology/index.html', ["section" => "current"]);
+        });
+        $router->respond('GET', '/spsa/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/current/school-psychology/spsa.html', ["section" => "current"]);
+        });
     });
 
     $router->with('/psych-foundations', function() use ($router) {
@@ -70,10 +76,6 @@ $router->with('/current', function() use ($router) {
 
     $router->respond('GET', '/oral-prelim/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/current/oral-prelim.html', ["section" => "current"]);
-    });
-
-    $router->respond('GET', '/school-psychology/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/current/school-psychology.html', ["section" => "current"]);
     });
 
     $router->with('/qme', function() use ($router) {
