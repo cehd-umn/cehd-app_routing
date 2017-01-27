@@ -13,8 +13,7 @@ gulp.task("default", function() {
     runSequence(
         "javascript",
         "sass-minified-task",
-        "sass-expanded-task",
-        "copy-views"
+        "sass-expanded-task"
     );
 });
 
@@ -41,11 +40,6 @@ gulp.task("javascript", function () {
     .pipe(rename("js/edpsych.min.js"))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./public/edpsych/assets/dist"));
-});
-
-gulp.task("copy-views", function() {
-    return gulp.src("./public/edpsych/assets/src/views/**/*.html")
-    .pipe(gulp.dest("./public/edpsych/assets/dist/views"));
 });
 
 gulp.task("sass-minified-task", function() {

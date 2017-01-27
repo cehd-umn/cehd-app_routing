@@ -1,8 +1,18 @@
 <ul class="no-bullet">
 {% for news_item in data.news %}
+    {%- if news_item.link_override -%}
+        {%- set article_link = news_item.link_override -%}
+    {%- else -%}
+        {%- set article_link = news_item.link -%}
+    {%- endif -%}
+    {%- if news_item.title_override -%}
+        {%- set article_title = news_item.title_override -%}
+    {%- else -%}
+        {%- set article_title = news_item.title -%}
+    {%- endif -%}
     {% if loop.index0 < data.limit %}
         <li>
-            <a href="{{ news_item.link }}">{{ news_item.title }}</a>
+            <a href="{{ article_link }}">{{ article_title }}</a>
         </li>
     {% endif %}
 {% endfor %}

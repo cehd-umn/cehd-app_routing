@@ -35,13 +35,3 @@
     })();
 </script>
 {%- endmacro -%}
-
-{%- macro container(heading_text="Latest news", h_tag="h3", container_id="news-container", heading_classes="") -%}
-<{{ h_tag }} class="{{ heading_classes }}">{{ heading_text }}</{{ h_tag }}>
-<div id="{{ container_id }}">
-    <div class="loader small">
-        <div class="loader-figure small"></div>
-        <p class="loader-label">Loading&hellip;</p>
-    </div>
-</div>
-{%- endmacro -%}
