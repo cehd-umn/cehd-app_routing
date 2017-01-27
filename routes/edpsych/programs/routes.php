@@ -99,10 +99,6 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/schoolpsych/index.html', ["section" => "programs-degrees"]);
         });
 
-        $router->respond('GET', '/students/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/schoolpsych/students.html', ["section" => "programs-degrees"]);
-        });
-
         $router->respond('GET', '/focus/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/schoolpsych/focus.html', ["section" => "programs-degrees"]);
         });
