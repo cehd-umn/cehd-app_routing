@@ -161,7 +161,7 @@ $router->with('/programs', function() use ($router) {
         });
 
         $router->respond('GET', 'SpecialEd/certificate/autism-registration.html', function($request, $response, $service, $app) {
-            $response->redirect($app->site_config['base_url'] . '/programs/specialed/certificate/autism/registration/', 301)->send();
+            $response->redirect($app->site_config['base_url'] . '/current/special-ed/autism-certificate/', 301)->send();
         });
 
         $routes = [
