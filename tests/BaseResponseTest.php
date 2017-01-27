@@ -46,6 +46,7 @@ class BaseResponseTest extends TestCase
         $this->assertArrayHasKey('title', $converted[0]);
         $this->assertArrayHasKey('description', $converted[0]);
         $this->assertArrayHasKey('thumbnail', $converted[0]);
+        $this->assertArrayHasKey('teaser', $converted[0]);
 
         $json = json_encode($converted);
         $this->assertTrue(is_string($json));

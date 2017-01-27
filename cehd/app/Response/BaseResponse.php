@@ -61,18 +61,34 @@ class BaseResponse extends \Klein\Response
         $xml->registerXPathNamespace('ns',
           'http://purl.org/rss/1.0/modules/content/');
 
-        $thumbnails = $xml->xpath("//content:thumbnail");
-        $i = 0;
-
         foreach ($xml->channel->item as $node)
         {
+            $thumbnail = $node->xpath("content:thumbnail");
+            $teaser = $node->xpath("content:teaser");
+            $internal_title = $node->xpath("content:titleinternal");
+            $link_override = $node->xpath("content:webpage");
+
+            if (!$teaser) {
+                $teaser[0] = null;
+            }
+
+            if (!$internal_title) {
+                $internal_title[0] = null;
+            }
+
+            if (!$link_override) {
+                $link_override[0] = null;
+            }
+
             array_push($results, [
                 "title" => (string) $node->title,
                 "description" => (string) $node->description,
-                "thumbnail" => (string) $thumbnails[$i],
+                "link" => (string) $node->link,
+                "thumbnail" => (string) $thumbnail[0],
+                "teaser" => (string) $teaser[0],
+                "title_override" => (string) $internal_title[0],
+                "link_override" => (string) $link_override[0],
             ]);
-
-            $i++;
         }
         return $results;
     }
