@@ -2545,6 +2545,28 @@ dd.event-link {
   text-align: center;
 }
 
+.google-sheet {
+  height: 410px;
+  width: 100%;
+}
+
+.google-sheet.program-costs {
+  height: 290px;
+}
+
+.google-sheet.internships {
+  height: 885px;
+}
+
+.google-sheet.attrition {
+  height: 440px;
+}
+
+.google-sheet.licensure {
+  height: 250px;
+  margin-top: 2em;
+}
+
 @media all and (min-width: 768px) {
   .home-image figcaption {
     bottom: 3px;

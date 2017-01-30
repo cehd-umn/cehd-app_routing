@@ -148,6 +148,28 @@ dd {
     text-align: center;
 }
 
+.google-sheet {
+    height: 410px;
+    width: 100%;
+
+    &.program-costs {
+        height: 290px;
+    }
+
+    &.internships {
+        height: 885px;
+    }
+
+    &.attrition {
+        height: 440px;
+    }
+
+    &.licensure {
+        height: 250px;
+        margin-top: 2em;
+    }
+}
+
 @media all and (min-width: 768px) {
     .home-image {
 
