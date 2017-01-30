@@ -167,8 +167,28 @@ $router->with($global_config['base_url'], function() use ($router) {
         }
     });
 
-    $router->respond('GET', '/contact/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/contact.html', []);
+    $router->with('/contact', function() use ($router) {
+        /**
+         * Redirects
+         */
+        $router->respond('GET', '/contact.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/contact/', 301)->send();
+        });
+
+        $router->respond('GET', '/contact-confirmation.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/contact/confirmation/', 301)->send();
+        });
+
+        /**
+         * Routes
+         */
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/contact/index.html', []);
+        });
+
+        $router->respond('GET', '/confirmation/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/contact/confirmation.html', []);
+        });
     });
 
     $router->respond('GET', '/search/', function($request, $response, $service, $app) {
