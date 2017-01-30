@@ -56,5 +56,9 @@
             </div>
         </footer>
         {% block bottom_js %}{% endblock %}
+        {# Don't load Google analytics in dev environments #}
+        {% if config.is_prod or config.is_test %}
+            {% include 'includes/google-analytics.html' %}
+        {% endif %}
     </body>
 </html>

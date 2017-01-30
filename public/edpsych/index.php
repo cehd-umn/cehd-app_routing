@@ -16,7 +16,7 @@ require_once BASE_PATH . 'cehd/app/helpers/Navigation.php';
 require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/helpers/Helper.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
-require_once BASE_PATH . 'cehd/app/Config/Config.php';
+// require_once BASE_PATH . 'cehd/app/Config/Config.php';
 require_once BASE_PATH . 'cehd/app/Search/Search.php';
 
 /**

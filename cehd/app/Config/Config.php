@@ -62,6 +62,28 @@ class Config
     }
 
     /**
+     * Convenience method for checking if the current environment is test
+     *
+     * @return boolean
+     * @uses Config::_get_environment to determine server environment
+     */
+    private function _is_test()
+    {
+        return $this->_get_environment() === "test";
+    }
+
+    /**
+     * Convenience method for checking if the current environment is development
+     *
+     * @return boolean
+     * @uses Config::_get_environment to determine server environment
+     */
+    private function _is_dev()
+    {
+        return $this->_get_environment() === "development";
+    }
+
+    /**
      * Loads YAML files using the provide path
      *
      * @param string $file_path the path to a YAML file
@@ -85,6 +107,8 @@ class Config
      * @return Array of config key value pairs, merged from all the individual files
      * @uses Config::_get_environment to determine serve environment
      * @uses Config::_is_prod to set the is_prod array element value
+     * @uses Config::_is_test to set the is_test array element value
+     * @uses Config::_is_dev to set the is_dev array element value
      * @uses Config::_load_from_yaml to parse YAML into an array
      */
     public function load($config_files)
@@ -93,6 +117,8 @@ class Config
         $environment_config = [
             "environment" => $this->_get_environment(),
             "is_prod" => $this->_is_prod(),
+            "is_test" => $this->_is_test(),
+            "is_dev" => $this->_is_dev(),
         ];
 
         foreach ($config_files as $key => $config_file)
