@@ -53,9 +53,22 @@
         font-size: 1em;
         height: auto;
         left: 0;
-        padding: .5em 2em;
         position: absolute;
         width: 100%;
+
+        a {
+            // scss-lint:disable SelectorDepth
+            // scss-lint:disable NestingDepth
+            display: block;
+            padding: .5em 2em;
+
+            @each $pseudo-class, $color in $link-pseudo-classes {
+                &:#{$pseudo-class} {
+                    color: $base-white;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     &.small {

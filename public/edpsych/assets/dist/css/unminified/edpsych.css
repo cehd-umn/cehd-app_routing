@@ -2458,9 +2458,33 @@ input[type="reset"]:focus {
   font-size: 1em;
   height: auto;
   left: 0;
-  padding: .5em 2em;
   position: absolute;
   width: 100%;
+}
+
+.home-image figcaption a {
+  display: block;
+  padding: .5em 2em;
+}
+
+.home-image figcaption a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-image figcaption a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-image figcaption a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-image figcaption a:active {
+  color: #fff;
+  text-decoration: none;
 }
 
 .home-image.small.bottom {
