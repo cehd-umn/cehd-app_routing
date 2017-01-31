@@ -1,0 +1,3 @@
+{%- macro add_tracking(command, hit_type, category, action, label) -%}
+ data-ga-command="{{ command }}" data-ga-hit-type="{{ hit_type }}" data-ga-category="{{ category }}" data-ga-action="{{ action }}" data-ga-label="{{ label }}"
+{%- endmacro -%}
