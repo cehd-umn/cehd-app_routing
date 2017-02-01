@@ -1,26 +1,61 @@
 {% set fullName = data.person.firstName + " " + data.person.lastName %}
-<h2>{{ fullName }}</h2>
-{% if data.person.headshotAddr != "[object Object]" %}
-    <div class="span-3 faculty-headshot">
-        <p><img src="{{ data.person.headshotAddr }}" alt="{{ fullName }} headshot"></p>
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            <div class="half right divider">
+                <h2>{{ fullName }}
+                    <small class="clear">{{ data.person.workingTitle }}</small>
+                </h2>
+            </div>
+            <div class="half">
+                <p>
+                    {% if data.person.addr1|is_string %}
+                        {{ data.person.addr1 }}<br>
+                    {% endif %}
+                    {% if data.person.addr2|is_string %}
+                        {{ data.person.addr2 }}<br>
+                    {% endif %}
+                    {% if data.person.addr3|is_string %}
+                        {{ data.person.addr3 }}<br>
+                    {% endif %}
+                    {% if data.person.addr4|is_string %}
+                        {{ data.person.addr4 }}<br>
+                    {% endif %}
+                    {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
+                </p>
+                <p>{{ data.person.phone }}<br>
+                    <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
+                </p>
+                <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+            </div><!-- end half -->
+        </div><!-- end twothird -->
+    </div><!-- end container -->
+</div><!-- end row -->
+<div class="row emphasis">
+    <div class="container">
+        <div class="feature twothird">
+            <p class="pull-quote">Pull quote to go here</p>
+            <div class="span-3">
+                {% if data.person.headshotAddr|is_string %}
+                    <p class="no-margin-top"><img src="{{ data.person.headshotAddr }}" alt="{{ fullName }} headshot"></p>
+                {% endif %}
+            </div>
+            <div class="span-9">
+                <h3 class="no-margin-top">Areas of interest</h3>
+                <p>{{ data.person.areasOfInterest|areas_of_interest_to_obj }}</p>
+            </div>
+        </div><!-- end feature.twothird -->
+    </div><!-- end container -->
+</div><!-- end row.emphasis -->
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            <h3>Research</h3>
+            {% if data.person.briefBio|is_string %}
+                <p>{{ data.person.briefBio|safe }}</p>
+            {% endif %}
+            <h3>Selected publications</h3>
+            <p>Selected publications to go here.</p>
+        </div>
     </div>
-{% endif %}
-<div class="span-9">
-<p>{{ data.person.degrees|safe }}</p>
-<p>
-    {{ data.person.addr1 }}<br>
-    {{ data.person.addr2 }}<br>
-    {{ data.person.addr3 }}<br>
-    {% if data.person.addr4 != "[object Object]" %}
-        {{ data.person.addr4 }}<br>
-    {% endif %}
-    {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
-</p>
-<p>{{ data.person.phone }}<br>
-<a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
-</p>
-<p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
-{% if data.person.briefBio != "[object Object]" %}
-    <p>{{ data.person.briefBio|safe }}</p>
-{% endif %}
 </div>

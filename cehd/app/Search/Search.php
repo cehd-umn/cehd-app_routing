@@ -3,8 +3,9 @@
 namespace CEHD\App\Search;
 require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
+require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
-class Search
+class Search extends \CEHD\App\XML\XML
 {
     private $_sites = [
         "primary" => [
@@ -21,15 +22,7 @@ class Search
         ]
     ];
 
-    private $_http_client;
-
     private $_base_url = "http://google.umn.edu/search";
-
-    function __construct()
-    {
-        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
-        $this->_http_client = $bootstrap_helper::bootstrap_http_client([]);
-    }
 
     private function _validateQueryParams($params)
     {
@@ -64,14 +57,6 @@ class Search
         }
 
         return 10;
-    }
-
-    private function _xmlStringToObject($xml_string)
-    {
-        return simplexml_load_string(
-            $xml_string,
-            null,
-            LIBXML_NOCDATA);
     }
 
     private function _getSearchResultsFromXMLObject($obj)

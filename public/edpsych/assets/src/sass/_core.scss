@@ -212,10 +212,6 @@ img {
         margin: 3em auto;
     }
 
-    &.no-margin-top {
-        margin-top: 0;
-    }
-
     &:focus,
     &:hover {
         background: $cehd-charcoal none;
@@ -338,6 +334,10 @@ footer {
 
 .dept-footer-campus-container {
     padding-top: 26px;
+}
+
+.no-margin-top {
+    margin-top: 0;
 }
 
 /// These aren't necessarily breakpoints defined around devices, but rather,
@@ -468,10 +468,6 @@ footer {
     @each $heading, $size in $heading-map-desktop {
         #{$heading}, .#{$heading} {
             text-align: left;
-
-            &.no-margin-top {
-                margin-top: 0;
-            }
         }
     }
 
