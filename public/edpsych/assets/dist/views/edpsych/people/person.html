@@ -42,7 +42,7 @@
             </div>
             <div class="span-9">
                 <h3 class="no-margin-top">Areas of interest</h3>
-                <p>{{ data.person.areasOfInterest|areas_of_interest_to_obj }}</p>
+                <p>{{ data.person.areasOfInterest|strip_attributes }}</p>
             </div>
         </div><!-- end feature.twothird -->
     </div><!-- end container -->
@@ -55,7 +55,9 @@
                 <p>{{ data.person.briefBio|safe }}</p>
             {% endif %}
             <h3>Selected publications</h3>
-            <p>Selected publications to go here.</p>
+            {% if data.person.briefBio|is_string %}
+                <p>{{ data.person.publications|safe }}</p>
+            {% endif %}
         </div>
     </div>
 </div>

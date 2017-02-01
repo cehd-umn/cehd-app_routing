@@ -25,10 +25,6 @@ var Renderer = function () {
         this.env.addFilter("is_string", function(obj) {
             return typeof obj === "string";
         });
-
-        this.env.addFilter("areas_of_interest_to_obj", function(str) {
-            return str.split("\n");
-        });
     };
 
     // TODO improve performance by making this async? https://mozilla.github.io/nunjucks/api.html#asynchronous-support
