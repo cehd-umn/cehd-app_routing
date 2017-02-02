@@ -1268,10 +1268,6 @@ small.normal {
   margin: 3em auto;
 }
 
-.button.no-margin-top {
-  margin-top: 0;
-}
-
 .button:focus, .button:hover {
   background: #555 none;
   border: 0.15em solid #fff;
@@ -1411,6 +1407,10 @@ footer a:active {
 
 .dept-footer-campus-container {
   padding-top: 26px;
+}
+
+.no-margin-top {
+  margin-top: 0;
 }
 
 @media all and (min-width: 321px) {
@@ -1750,38 +1750,20 @@ footer a:active {
   h1, .h1 {
     text-align: left;
   }
-  h1.no-margin-top, .h1.no-margin-top {
-    margin-top: 0;
-  }
   h2, .h2 {
     text-align: left;
-  }
-  h2.no-margin-top, .h2.no-margin-top {
-    margin-top: 0;
   }
   h3, .h3 {
     text-align: left;
   }
-  h3.no-margin-top, .h3.no-margin-top {
-    margin-top: 0;
-  }
   h4, .h4 {
     text-align: left;
-  }
-  h4.no-margin-top, .h4.no-margin-top {
-    margin-top: 0;
   }
   h5, .h5 {
     text-align: left;
   }
-  h5.no-margin-top, .h5.no-margin-top {
-    margin-top: 0;
-  }
   h6, .h6 {
     text-align: left;
-  }
-  h6.no-margin-top, .h6.no-margin-top {
-    margin-top: 0;
   }
   .reverse-span-1 {
     float: right;
