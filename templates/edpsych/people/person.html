@@ -13,7 +13,9 @@ People Tool asynchronous.
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    <script>
+<script>
+    (function() {
+        "use strict";
         var params = {
             url: "{{ config.base_url }}/services/people-tool/person/",
             data: {
@@ -31,11 +33,13 @@ People Tool asynchronous.
                 'template_name': 'person.html',
                 'data': {
                     person: results.channel.item,
+                    extra_content: {{ extra_content|json_encode|raw }},
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
             renderer.init(template_params);
             renderer.render();
         });
-    </script>
+    })();
+</script>
 {% endblock %}

@@ -9,15 +9,14 @@
 const BASE_PATH = __DIR__ . '/../../';
 const BASE_CONFIG_PATH = BASE_PATH . 'cehd/config/app/config.yml';
 const EDPSYCH_CONFIG_PATH = BASE_PATH . 'cehd/config/edpsych/config.yml';
-const EDPSYCH_PEOPLE_PATH = BASE_PATH . 'cehd/config/edpsych/people.yml';
 
 require_once BASE_PATH . 'vendor/autoload.php';
 require_once BASE_PATH . 'cehd/app/helpers/Navigation.php';
 require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/helpers/Helper.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
-// require_once BASE_PATH . 'cehd/app/Config/Config.php';
 require_once BASE_PATH . 'cehd/app/Search/Search.php';
+require_once BASE_PATH . 'cehd/app/Dict/Dict.php';
 
 /**
  * Instantiate a new instance of Klein. I'm calling it `$router` because I like
@@ -489,7 +488,8 @@ $router->with($global_config['base_url'], function() use ($router) {
      */
     $router->with('/people', function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
-            $section_data = $app->bootstrap_helper->load_yaml(EDPSYCH_PEOPLE_PATH);
+            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people.yml';
+            $section_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
 
             foreach ($section_data as $key => $section)
             {
@@ -504,9 +504,15 @@ $router->with($global_config['base_url'], function() use ($router) {
         });
 
         $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {
+            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people_extra_content.yml';
+            $yaml_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
+            $extra_content_data = new \CEHD\App\Dict\Dict($yaml_data);
+            $extra_content = $extra_content_data->get($request->internetId);
+
             $template_vars = [
                 "section" => "people",
                 "internet_id" => $request->internetId,
+                "extra_content" => $extra_content,
             ];
             echo $app->template->render('edpsych/people/person.html', $template_vars);
         });

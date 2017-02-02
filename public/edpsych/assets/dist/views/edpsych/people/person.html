@@ -4,7 +4,11 @@
         <div class="feature twothird">
             <div class="half right divider">
                 <h2>{{ fullName }}
-                    <small class="clear">{{ data.person.workingTitle }}</small>
+                    <small class="clear">
+                    {% if data.person.workingTitle|is_string %}
+                        {{ data.person.workingTitle }}
+                    {% endif %}
+                    </small>
                 </h2>
             </div>
             <div class="half">
@@ -21,12 +25,19 @@
                     {% if data.person.addr4|is_string %}
                         {{ data.person.addr4 }}<br>
                     {% endif %}
-                    {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
+                    {% if data.person.city|is_string %}
+                        {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
+                    {% endif %}
                 </p>
-                <p>{{ data.person.phone }}<br>
+                <p>
+                    {% if data.person.phone|is_string %}
+                    {{ data.person.phone }}<br>
+                    {% endif %}
                     <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
                 </p>
-                <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+                {% if data.person.curriculumVitaeAddr|is_string %}
+                    <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+                {% endif %}
             </div><!-- end half -->
         </div><!-- end twothird -->
     </div><!-- end container -->
@@ -34,15 +45,21 @@
 <div class="row emphasis">
     <div class="container">
         <div class="feature twothird">
-            <p class="pull-quote">Pull quote to go here</p>
+            {% if data.extra_content.content %}
+              <p class="pull-quote">&ldquo;{{ data.extra_content.content }}&rdquo;</p>
+            {% elif data.extra_content.video_embed_code %}
+                {{ data.extra_content.video_embed_code|safe }}
+            {% endif %}
             <div class="span-3">
-                {% if data.person.headshotAddr|is_string %}
+                {% if data.person.headshotAddr|is_string and data.person.areasOfInterest|is_string and not data.extra_content.video_embed_code %}
                     <p class="no-margin-top"><img src="{{ data.person.headshotAddr }}" alt="{{ fullName }} headshot"></p>
                 {% endif %}
             </div>
             <div class="span-9">
+            {% if data.person.areasOfInterest|is_string %}
                 <h3 class="no-margin-top">Areas of interest</h3>
-                <p>{{ data.person.areasOfInterest|strip_attributes }}</p>
+                <p>{{ data.person.areasOfInterest }}</p>
+            {% endif %}
             </div>
         </div><!-- end feature.twothird -->
     </div><!-- end container -->
@@ -50,13 +67,19 @@
 <div class="row">
     <div class="container">
         <div class="feature twothird">
-            <h3>Research</h3>
             {% if data.person.briefBio|is_string %}
-                <p>{{ data.person.briefBio|safe }}</p>
+            <h3>
+              {% if data.extra_content.category == "faculty" %}
+                Research
+              {% else %}
+                Work
+              {% endif %}
+            </h3>
+            <p>{{ data.person.briefBio|safe }}</p>
             {% endif %}
+            {% if data.person.publications|is_string and data.person.publications != "<ol><li></li></ol>" %}
             <h3>Selected publications</h3>
-            {% if data.person.briefBio|is_string %}
-                <p>{{ data.person.publications|safe }}</p>
+            <p>{{ data.person.publications|safe }}</p>
             {% endif %}
         </div>
     </div>

@@ -21,6 +21,7 @@ class SearchTest extends TestCase
     * @param array  $parameters Array of parameters to pass into method.
     * @link https://jtreminio.com/2013/03/unit-testing-tutorial-part-3-testing-protected-private-methods-coverage-reports-and-crap/
     *
+    * @todo Create a BaseTest class for this method
     * @return mixed Method return.
     */
     public function invokeMethod(&$object, $methodName, array $parameters = array())
