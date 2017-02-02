@@ -1,17 +1,17 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Current" %}
+{% set page_title = "Current Students" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>Current students</h2>
+        <h2>{{ page_title }}</h2>
         <section>
         <div class="twothird">
           <p>Welcome to the Educational Psychology graduate program. Below are several links that will be useful to you as you begin and continue your graduate studies.</p>
           <ul>
             <li><a href="{{ config.base_url }}/current/handbook/">Educational Psychology Handbook</a></li>
             <li><a href="{{ config.asset_base }}/dist/documents/current/Preparing for EPSY 8251-8261.docx">Preparing for EPSY 8251/8261</a></li>
-            <li>Forms</li>
+            <li><a href="{{ config.base_url }}/forms/">Forms</a></li>
             <li><a href="http://www.grad.umn.edu/students">Graduate School</a></li>
             <li><a href="https://sites.google.com/a/umn.edu/e47eb18e/home">Council of Graduate Students (COGS)</a></li>
           </ul>
