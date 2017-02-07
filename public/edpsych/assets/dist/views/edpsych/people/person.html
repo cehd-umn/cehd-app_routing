@@ -85,6 +85,14 @@
               {% endfor %}
               </ol>
             {% endif %}
+            {% if data.person.presentations %}
+              <h3>Selected presentations</h3>
+              <ol class="profile-list">
+              {% for presentation in data.person.presentations.presentation %}
+                  <li>{{ presentation|strip_html_attributes|safe }}</li>
+              {% endfor %}
+              </ol>
+            {% endif %}
         </div>
     </div>
 </div>
