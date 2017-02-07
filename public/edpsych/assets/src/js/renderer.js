@@ -25,6 +25,10 @@ var Renderer = function () {
         this.env.addFilter("is_string", function(obj) {
             return typeof obj === "string";
         });
+
+        this.env.addFilter("strip_html_attributes", function(str) {
+            return str.replace(/<\s*(\w+).*?>/, "<$1>");
+        });
     };
 
     // TODO improve performance by making this async? https://mozilla.github.io/nunjucks/api.html#asynchronous-support

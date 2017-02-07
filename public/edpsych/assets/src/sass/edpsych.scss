@@ -170,6 +170,13 @@ dd {
     }
 }
 
+ol {
+    &.profile-list {
+       list-style: none; 
+       text-indent: -2.5em;
+    }
+}
+
 @media all and (min-width: 768px) {
     .home-image {
 

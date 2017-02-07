@@ -77,9 +77,13 @@
             </h3>
             <p>{{ data.person.briefBio|safe }}</p>
             {% endif %}
-            {% if data.person.publications|is_string and data.person.publications != "<ol><li></li></ol>" %}
-            <h3>Selected publications</h3>
-            <p>{{ data.person.publications|safe }}</p>
+            {% if data.person.publications %}
+              <h3>Selected publications</h3>
+              <ol class="profile-list">
+              {% for publication in data.person.publications.publication %}
+                  <li>{{ publication|strip_html_attributes|safe }}</li>
+              {% endfor %}
+              </ol>
             {% endif %}
         </div>
     </div>

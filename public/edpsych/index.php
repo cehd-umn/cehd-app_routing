@@ -394,7 +394,7 @@ $router->with($global_config['base_url'], function() use ($router) {
              */
             $router->respond('GET', '/person/', function($request, $response, $service, $app) {
                 $query_data = $request->params();
-                $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
+                $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
 
                 if (array_key_exists('internetId', $query_data)) {
                     $client_query_data = ['query' => [
