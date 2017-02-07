@@ -4,58 +4,70 @@
     param: tg
     value: 338
   titles:
-  - x500: jcpenny
-    section: American Sign Language (ASL)
-    title: program coordinator
+    - x500: jcpenny
+      section: American Sign Language (ASL)
+      title: program coordinator
 - section: Counseling & student personnel psychology (CSPP)
   query:
     param: tg
     value: 316
   titles:
-  - x500: smcconne
-    section: Counseling & student personnel psychology (CSPP)
-    title: program coordinator & clinical training director
+    - x500: smcconne
+      section: Counseling & student personnel psychology (CSPP)
+      title: program coordinator & clinical training director
 - section: Psychological foundations of education
   query:
     param: tg
     value: 317
   titles:
-  - x500: geoff
-    section: Psychological foundations of education
-    title: department chair
-  - x500: sashank
-    section: Psychological foundations of education
-    title: program coordinator
+    - x500: geoff
+      section: Psychological foundations of education
+      title: department chair
+    - x500: sashank
+      section: Psychological foundations of education
+      title: program coordinator
 - section: Quantitative methods in education
   query:
     param: tg
     value: 320
   titles:
-  - x500: lqr6576
-    section: Quantitative methods in education
-    title: director of graduate studies
-  - x500: harwe001
-    section: Quantitative methods in education
-    title: acting program coordinator
+    - x500: lqr6576
+      section: Quantitative methods in education
+      title: director of graduate studies
+    - x500: harwe001
+      section: Quantitative methods in education
+      title: acting program coordinator
 - section: School psychology
   query:
     param: tg
     value: 321
   titles:
-  - x500: rcodding
-    section: School psychology
-    title: acting program coordinator
+    - x500: rcodding
+      section: School psychology
+      title: acting program coordinator
 - section: Special education
   query:
     param: tg
     value: 315
   titles:
-  - x500: jmccomas
-    section: Special education
-    title: associate department chair
-  - x500: mcmas004
-    section: Special education
-    title: program coordinator
-  - x500: coneill
-    section: Special education
-    title: field placement coordinator
+    - x500: jmccomas
+      section: Special education
+      title: associate department chair
+    - x500: mcmas004
+      section: Special education
+      title: program coordinator
+    - x500: coneill
+      section: Special education
+      title: field placement coordinator
+- section: Emeritus faculty
+  query:
+    param: tg
+    value: 344
+- section: College readiness consortium
+  query:
+    param: tg
+    value: 347
+- section: Administrative staff
+  query:
+    param: tg
+    value: 348
