@@ -58,7 +58,7 @@
             <div class="span-9">
             {% if data.person.areasOfInterest|is_string %}
                 <h3 class="no-margin-top">Areas of interest</h3>
-                <p>{{ data.person.areasOfInterest }}</p>
+                <p>{{ data.person.areasOfInterest|safe }}</p>
             {% endif %}
             </div>
         </div><!-- end feature.twothird -->
