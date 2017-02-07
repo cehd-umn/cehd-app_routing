@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b826d982b6231ffce7d5e4418dc5a8b",
-    "content-hash": "35d06651890bcb5c703fa8577d13169a",
+    "hash": "82de4c36fe63de738c1a11f827422758",
+    "content-hash": "17f011d5496c72899cff8322298a7e49",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -332,6 +332,45 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-11-18 21:05:29"
+        },
+        {
+            "name": "thoma127/dict",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/truetone/Dict.git",
+                "reference": "05d67580f8fe65494811011c40d5b708f6df282a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/truetone/Dict/zipball/05d67580f8fe65494811011c40d5b708f6df282a",
+                "reference": "05d67580f8fe65494811011c40d5b708f6df282a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UMN\\CEHD\\Dict\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL 3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Tony Thomas",
+                    "email": "thoma127@umn.edu"
+                }
+            ],
+            "description": "A simple PHP class for Python dictionary-like functionality.",
+            "time": "2017-02-07 01:22:18"
         },
         {
             "name": "twig/twig",

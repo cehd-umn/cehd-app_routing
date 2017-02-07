@@ -45,8 +45,8 @@
 <div class="row emphasis">
     <div class="container">
         <div class="feature twothird">
-            {% if data.extra_content.content %}
-              <p class="pull-quote">&ldquo;{{ data.extra_content.content }}&rdquo;</p>
+            {% if data.extra_content.quote %}
+              <p class="pull-quote">&ldquo;{{ data.extra_content.quote }}&rdquo;</p>
             {% elif data.extra_content.video_embed_code %}
                 {{ data.extra_content.video_embed_code|safe }}
             {% endif %}

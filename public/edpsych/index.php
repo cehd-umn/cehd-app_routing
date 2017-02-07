@@ -16,7 +16,6 @@ require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/helpers/Helper.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
 require_once BASE_PATH . 'cehd/app/Search/Search.php';
-require_once BASE_PATH . 'cehd/app/Dict/Dict.php';
 
 /**
  * Instantiate a new instance of Klein. I'm calling it `$router` because I like
@@ -506,7 +505,7 @@ $router->with($global_config['base_url'], function() use ($router) {
         $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {
             $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people_extra_content.yml';
             $yaml_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
-            $extra_content_data = new \CEHD\App\Dict\Dict($yaml_data);
+            $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
             $extra_content = $extra_content_data->get($request->internetId);
 
             $template_vars = [

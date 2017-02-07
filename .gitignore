@@ -6,6 +6,7 @@ cache
 vendor
 .htaccess
 completer.hist
+tags
 
 # exclusions
 !cache/Readme.md
