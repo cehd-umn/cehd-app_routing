@@ -85,8 +85,6 @@
                         config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                     };
 
-                console.log(template_data);
-
                 var template_params = {
                     'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
                     'template_name': 'index.html',
