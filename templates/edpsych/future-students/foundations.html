@@ -1,11 +1,11 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "edpsych/macros/ga-tracking.html" as analytics -%}
-{% set page_title = "Foundations" %}
+{% set page_title = "Admissions: Psychological Foundations of Education M.A. & Ph.D." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">Admissions: Psychological Foundations of Education M.A. &amp; Ph.D.</h2>
+        <h2 class="text-center">{{ page_title }}</h2>
 <section>
         <div class="half">
         <h3>Admissions requirements</h3>
@@ -68,7 +68,7 @@
   <h4 id="appfee" class="text-center">Application fee</h4>
     <p><a href= "http://www.grad.umn.edu/admissions-application-instructions/application-fee">Visit the Graduate School website for more information</a></p>
   <h4 id="progapp" class="text-center">Program application</h4>
-    <p><a href="http&#58; //www.cehd.umn.edu/EdPsych/forms/SpEd_ShortDeptApplication.doc">Download the program application</a></p>
+    <p><a href="{{ config.asset_base }}/dist/documents/future/PsyF_Program_Application.doc">Download the program application</a></p>
     <p>Complete the program application form and upload it in the Program Supplementary Information section of the ApplyYourself online application under 'Graduate Program Additional Application.</p>
   <h4 id="transcripts" class="text-center">Transcripts</h4>
       <p>Unofficial transcripts or academic records should be uploaded directly to the online application. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>

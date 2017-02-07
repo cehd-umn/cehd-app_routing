@@ -1,10 +1,10 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "School Psych" %}
+{% set page_title = "Admissions: School Psychology Ph.D. & M.A./S.C." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">Admissions: School Psychology Ph.D. &amp; M.A./S.C.</h2>
+        <h2 class="text-center">{{ page_title }}</h2>
 <section>
         <div class="half">
         <h3>Admissions requirements</h3>
@@ -127,7 +127,7 @@
         <h4 class="text-center">Extenuating circumstances statement</h4>
           <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores.</p>
         <h4 class="text-center">Program supplementary information - PRIDES Fellowship</h4>
-          <p>Submitting a PRIDES Statement of Interest is optional. Students applying to the specialist program may concurrently apply for one of five <a href="http://www.cehd.umn.edu/edpsych/FutureStudents/pridefellow.html">Project PRIDES Fellowships</a>.</p>
+          <p>Submitting a PRIDES Statement of Interest is optional. Students applying to the specialist program may concurrently apply for one of five <a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">Project PRIDES Fellowships</a>.</p>
           <p>In one page or less (single-spaced), describe the following: (1) interests in MTSS and evidence-based practice, and serving high-need children with or at risk for disabilities, and (2) proposed specialty area(s).</p>
           <p>Upload the essay in the "Program Supplementary Information" section under "Description of Research or Work Experience", in ApplyYourself.</p>
         <h4 class="text-center">Program supplementary information&ndash;upload &#35;1</h4>
@@ -146,7 +146,7 @@
           <h3 class="text-center">Funding</h3>
           <p>
             <ul>
-              <li><a href="http://www.cehd.umn.edu/EdPsych/FutureStudents/pridefellow.html">School Psychology fellowships for M.A./Specialist students</a></li>
+              <li><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">School Psychology fellowships for M.A./Specialist students</a></li>
               <li><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">College of Education and Human Development funding</a></li>
               <li><a href="http://www.grad.umn.edu/funding-tuition/fellowshipsandgrants">Graduate School fellowships</a></li>
               <li><a href="https://diversity.umn.edu/gradeducation/dove">Diversity of Views and Experiences (DOVE) Fellowship</a></li>

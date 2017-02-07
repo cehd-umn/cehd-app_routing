@@ -1,10 +1,10 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Diversity &amp; Inclusion" %}
-{% block title %}Diversity &amp; Inclusion{% endblock %}
+{% set page_title = "Diversity & Inclusion" %}
+{% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>Diversity &amp; Inclusion</h2>
+        <h2>{{ page_title }}</h2>
           <section>
             <div class="half right divider">
               <h3>Who we are</h3>
@@ -18,7 +18,7 @@
         <section>
         <div class="feature half">
         <h3 class="text-center">Our research supporting diversity &amp; inclusion</h3>
-        <p>We are uniquely positioned as an applied social science program within the College of Education and Human Development to address issues that underlie education and human development across the lifespan. Specifically, many of our researchers are working to find ways to close achievement gaps or educational outcomes and disparities by improving how we identify and serve students who need additional supports in order to succeed in schools. <a href="http://www.cehd.umn.edu/EdPsych/research/topics/achievementgap.html">Learn more about our research on achievement gaps.</a></p>
+        <p>We are uniquely positioned as an applied social science program within the College of Education and Human Development to address issues that underlie education and human development across the lifespan. Specifically, many of our researchers are working to find ways to close achievement gaps or educational outcomes and disparities by improving how we identify and serve students who need additional supports in order to succeed in schools. <a href="{{ config.base_url }}/research/topics/achievementgap/">Learn more about our research on achievement gaps.</a></p>
       </div>
     </section>
   </div>

@@ -1,10 +1,10 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "CSPP" %}
+{% set page_title = "Admissions: Counseling & Student Personnel Psychology M.A." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">Admissions: Counseling &amp; Student Personnel Psychology M.A.</h2>
+        <h2 class="text-center">{{ page_title }}</h2>
 <section>
         <div class="half">
         <h3>Admissions requirements</h3>
@@ -68,7 +68,7 @@
     <p><a href= "https://www.grad.umn.edu/admissions-application-instructions/application-fee">Visit the Graduate School website for more information</a></p>
   <h4 id="progapp" class="text-center">Program application</h4>
     <p>(Required only if you've previously taken a course for graduate credit. See form for details.)</p>
-    <p>Complete the <a href="">Graduate Program Additional Application</a>; upload it to ApplyYourself.</p>
+    <p>Complete the <a href="{{ config.asset_base }}/dist/documents/future/AdditionalApplication.doc">Graduate Program Additional Application</a>; upload it to ApplyYourself.</p>
   <h4 id="transcripts" class="text-center">Transcripts</h4>
     <p><a href="http://www.grad.umn.edu/admissions/transcript-uploads">Upload your unofficial transcript</a> to ApplyYourself. If you are recommended for admission, you will need to <a href="http://www.grad.umn.edu/admissions/ga-mailing-address">provide an official transcript</a> (sent to us by mail directly from the institution). An official, certified (signature and seal) English translation should be attached if the transcript is not in English.</p>
   <h4 id="letters" class="text-center">Letters of recommendation</h4>
