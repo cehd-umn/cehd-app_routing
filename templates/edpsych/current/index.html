@@ -1,12 +1,19 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Current Students" %}
+{% set page_title = "Current students" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
         <h2>{{ page_title }}</h2>
         <section>
-        <div class="twothird">
+          <div class="half">
+            <figure>
+              <img src="{{ config.asset_base }}/dist/images/Current/PedBridge.jpg" alt="Pedestrian Bridge.">
+              <figcaption>Students visit on the pedestrian bridge that connects the Education Sciences building to the other side of the Mississippi River.</figcaption>
+            </figure>
+          </div>
+        <div class="half">
+          <h3>General graduate student resources</h3>
           <p>Welcome to the Educational Psychology graduate program. Below are several links that will be useful to you as you begin and continue your graduate studies.</p>
           <ul>
             <li><a href="{{ config.base_url }}/current/handbook/">Educational Psychology Handbook</a></li>
@@ -15,17 +22,18 @@
             <li><a href="http://www.grad.umn.edu/students">Graduate School</a></li>
             <li><a href="https://sites.google.com/a/umn.edu/e47eb18e/home">Council of Graduate Students (COGS)</a></li>
           </ul>
-        </div>
-        <div class="third">
-          <figure>
-            <img src="{{ config.asset_base }}/dist/images/Current/PedBridge.jpg" alt="Pedestrian Bridge.">
-            <figcaption>Students visit on the pedestrian bridge that connects the Education Sciences building to the other side of the Mississippi River.</figcaption>
-          </figure>
-        </div>
       </section>
       <section>
-        <div class="twothird">
-          <h3>For students: searching &amp; signing up for classes</h3>
+        <div class="half">
+          <h3>Student resources by program</h3>
+            <p><a href="{{ config.base_url }}/current/cspp/">Counseling & student personnel psychology</a></p>
+            <p><a href="{{ config.base_url }}/current/foundations/">Psychological foundations of education</a></p>
+            <p><a href="{{ config.base_url }}/current/qme/">Quantitative methods in education</a></p>
+            <p><a href="{{ config.base_url }}/current/school-psychology/">School psychology</a></p>
+            <p><a href="{{ config.base_url }}/current/special-ed/">Special education</a></p>
+        </div>
+        <div class="half">
+          <h3>Searching &amp; signing up for classes</h3>
             <p><strong>Go to MyU > Academics > Enrollment Tools > Course Catalog	>	EPSY</strong></p>
             <p>This tool provides course information that includes: course details, enrollment information, short description &amp; class sections. Please utilize this tool when you are searching for or signing up for classes each semester.</p>
             <p>Questions? <a href="{{ config.base_url }}/people/">Contact your program coordinator.</a></p>
