@@ -172,8 +172,15 @@ dd {
 
 ol {
     &.profile-list {
-       list-style: none; 
+       list-style: none;
        text-indent: -2.5em;
+    }
+}
+
+@for $ems from 30 through 50 {
+    $em-value: $ems / 100;
+    .less-margin-bottom-#{$ems} {
+        margin-bottom: 1em * $em-value;
     }
 }
 
@@ -186,6 +193,22 @@ ol {
             height: 100px;
         }
     }
+
+    @each $heading, $size in $heading-map-mobile {
+        #{$heading}, .#{$heading} {
+            &.heading-profile {
+                font-size: $size;
+
+                small {
+                    &.#{$heading} {
+                        font-size: $size;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
 
 @media all and (min-width: 1025px) {

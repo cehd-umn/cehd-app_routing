@@ -2556,11 +2556,131 @@ ol.profile-list {
   text-indent: -2.5em;
 }
 
+.less-margin-bottom-30 {
+  margin-bottom: 0.3em;
+}
+
+.less-margin-bottom-31 {
+  margin-bottom: 0.31em;
+}
+
+.less-margin-bottom-32 {
+  margin-bottom: 0.32em;
+}
+
+.less-margin-bottom-33 {
+  margin-bottom: 0.33em;
+}
+
+.less-margin-bottom-34 {
+  margin-bottom: 0.34em;
+}
+
+.less-margin-bottom-35 {
+  margin-bottom: 0.35em;
+}
+
+.less-margin-bottom-36 {
+  margin-bottom: 0.36em;
+}
+
+.less-margin-bottom-37 {
+  margin-bottom: 0.37em;
+}
+
+.less-margin-bottom-38 {
+  margin-bottom: 0.38em;
+}
+
+.less-margin-bottom-39 {
+  margin-bottom: 0.39em;
+}
+
+.less-margin-bottom-40 {
+  margin-bottom: 0.4em;
+}
+
+.less-margin-bottom-41 {
+  margin-bottom: 0.41em;
+}
+
+.less-margin-bottom-42 {
+  margin-bottom: 0.42em;
+}
+
+.less-margin-bottom-43 {
+  margin-bottom: 0.43em;
+}
+
+.less-margin-bottom-44 {
+  margin-bottom: 0.44em;
+}
+
+.less-margin-bottom-45 {
+  margin-bottom: 0.45em;
+}
+
+.less-margin-bottom-46 {
+  margin-bottom: 0.46em;
+}
+
+.less-margin-bottom-47 {
+  margin-bottom: 0.47em;
+}
+
+.less-margin-bottom-48 {
+  margin-bottom: 0.48em;
+}
+
+.less-margin-bottom-49 {
+  margin-bottom: 0.49em;
+}
+
+.less-margin-bottom-50 {
+  margin-bottom: 0.5em;
+}
+
 @media all and (min-width: 768px) {
   .home-image figcaption {
     bottom: 3px;
     font-size: 2.5em;
     height: 100px;
+  }
+  h1.heading-profile, .h1.heading-profile {
+    font-size: 36px;
+  }
+  h1.heading-profile small.h1, .h1.heading-profile small.h1 {
+    font-size: 36px;
+  }
+  h2.heading-profile, .h2.heading-profile {
+    font-size: 36px;
+  }
+  h2.heading-profile small.h2, .h2.heading-profile small.h2 {
+    font-size: 36px;
+  }
+  h3.heading-profile, .h3.heading-profile {
+    font-size: 24px;
+  }
+  h3.heading-profile small.h3, .h3.heading-profile small.h3 {
+    font-size: 24px;
+  }
+  h4.heading-profile, .h4.heading-profile {
+    font-size: 18px;
+  }
+  h4.heading-profile small.h4, .h4.heading-profile small.h4 {
+    font-size: 18px;
+  }
+  h5.heading-profile, .h5.heading-profile {
+    font-size: 16px;
+  }
+  h5.heading-profile small.h5, .h5.heading-profile small.h5 {
+    font-size: 16px;
+  }
+  h6.heading-profile, .h6.heading-profile {
+    font-size: 16px;
+  }
+  h6.heading-profile small.h6, .h6.heading-profile small.h6 {
+    font-size: 16px;
   }
 }
 
