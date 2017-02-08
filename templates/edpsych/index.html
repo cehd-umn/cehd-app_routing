@@ -122,9 +122,14 @@
 <div class="row">
     <div class="container">
         <div class="twothird">
-            {#- This places the html the JavaScript is expecting for rendering
-            the list of news items, including the fancy loader -#}
-            {{ loader.loader("News & announcements") }}
+            <div>
+                {#- This places the html the JavaScript is expecting for rendering
+                the list of news items, including the fancy loader -#}
+                {{ loader.loader("News & announcements") }}
+            </div>
+            <aside>
+                <p><a href="http://news.cehd.umn.edu/category/departments/educational-psychology/">More news</a></p>
+            </aside>
         </div><!-- end twothird -->
         <div class="third">
             {{ loader.loader(
@@ -132,6 +137,9 @@
                 "h3",
                 "events-container"
                 ) }}
+            <aside>
+                <p><a href="http://www.cehd.umn.edu/events/">More events</a></p>
+            </aside>
         </div><!-- end third -->
     </div><!-- end container -->
 </div><!-- end row -->
