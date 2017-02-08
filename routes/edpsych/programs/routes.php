@@ -212,12 +212,44 @@ $router->with('/programs', function() use ($router) {
         });
 
         $router->with('/funding', function() use ($router) {
+            $html_filenames = [
+                "Merwin.html",
+                "Yackel.html",
+                "policies.html",
+                "GA.html",
+            ];
+
+            foreach ($html_filenames as $name)
+            {
+                $router->with('/' . $name, function() use ($router) {
+                    $router->respond('GET', '*', function($request, $response, $service, $app) {
+                        $response->redirectToURI($request->uri());
+                    });
+                });
+            }
+
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/foundations/funding/index.html', ["section" => "programs-degrees"]);
             });
 
             $router->respond('GET', '/psyf-assistantships/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/foundations/funding/psyf-assistantships.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/merwin/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/merwin.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/yackel/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/yackel.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/policies/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/policies.html', ["section" => "programs-degrees"]);
+            });
+
+            $router->respond('GET', '/ga/', function($request, $response, $service, $app) {
+                echo $app->template->render('edpsych/programs/foundations/funding/ga.html', ["section" => "programs-degrees"]);
             });
         });
 
