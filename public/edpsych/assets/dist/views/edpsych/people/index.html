@@ -2,16 +2,14 @@
 <ul class="no-bullet">
 {% for person in data.people %}
     <li>
-        <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">
-            {{ person.firstName }} {{ person.lastName }}
-        </a>
-        {% for section in data.section_data %}
-            {% for title in section.titles %}
-                {% if title.x500 == person.internetId and data.people.section == title.section %}
+        <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">{{ person.firstName }} {{ person.lastName }}</a>
+        {%- for section in data.section_data -%}
+            {%- for title in section.titles -%}
+                {%- if title.x500 == person.internetId and data.people.section == title.section -%}
                     , {{ title.title }}
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endfor -%}
     </li>
 {% endfor %}
 </ul>
