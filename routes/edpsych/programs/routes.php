@@ -138,6 +138,8 @@ $router->with('/programs', function() use ($router) {
             "dd-licensure.html",
             "esce-licensure.html",
             "ld-licensure.html",
+            "prelim-study.html",
+            "license.html",
         ];
 
         foreach ($html_filenames as $name)
@@ -174,6 +176,8 @@ $router->with('/programs', function() use ($router) {
             "sped-bs",
             "sped-med-teacherlicensure",
             "videos",
+            "prelim-study",
+            "license",
         ];
 
         foreach ($routes as $route)
