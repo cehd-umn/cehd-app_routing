@@ -489,7 +489,7 @@ $router->with($global_config['base_url'], function() use ($router) {
      */
     $router->with('/people', function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
-            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people.yml';
+            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people/index.yml';
             $section_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
 
             foreach ($section_data as $key => $section)
@@ -505,7 +505,7 @@ $router->with($global_config['base_url'], function() use ($router) {
         });
 
         $router->respond('GET', '/[:internetId]/', function($request, $response, $service, $app) {
-            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people_extra_content.yml';
+            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people/extra_content.yml';
             $yaml_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
             $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
             $extra_content = $extra_content_data->get($request->internetId);
