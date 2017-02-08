@@ -15,6 +15,49 @@ $router->with('/research', function() use ($router) {
         echo $app->template->render('edpsych/research/index.html', ["section" => "research"]);
     });
 
+    $html_filenames = [
+        "family-academy.html",
+        "ready-to-succeed.html",
+        "pnrc.html",
+        "500-under-five.html",
+        "fresh-garden.html",
+        "ggg.html",
+    ];
+
+    // @todo this should be a method since we do it all over the place
+    foreach ($html_filenames as $name)
+    {
+        $router->with('/' . $name, function() use ($router) {
+            $router->respond('GET', '*', function($request, $response, $service, $app) {
+                $response->redirectToURI($request->uri());
+            });
+        });
+    }
+
+    $routes = [
+        "family-academy",
+        "ready-to-succeed",
+        "pnrc",
+        "500-under-five",
+        "fresh-garden",
+        "ggg",
+    ];
+
+    foreach ($routes as $route)
+    {
+        $router->with('/' . $route, function() use ($router) {
+            $router->respond('GET', '/', function($request, $response, $service, $app) {
+                // Get the template name based on the uri
+                $file_path = 'edpsych/research/';
+                $template_name = $response->templateNameFromURI($request->uri());
+                $template_path = $file_path . $template_name;
+
+                // render the template
+                echo $app->template->render($template_path, ["section" => "research"]);
+            });
+        });
+    }
+
     $router->with('/labs', function() use ($router) {
         $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/research/labs/', 301)->send();
