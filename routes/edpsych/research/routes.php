@@ -211,4 +211,40 @@ $router->with('/research', function() use ($router) {
     $router->respond('GET', '/student-dissertations/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/research/student-dissertations.html', ["section" => "research"]);
     });
+
+   $router->with('/resources', function() use ($router) {
+        $html_filenames = [
+            "RBS-EC.html",
+        ];
+
+        // @todo this should be a method since we do it all over the place
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+
+        $routes = [
+            "rbs-ec",
+        ];
+
+        foreach ($routes as $route)
+        {
+            $router->with('/' . $route, function() use ($router) {
+                // @todo make this anonymous callback an object to handle these
+                $router->respond('GET', '/', function($request, $response, $service, $app) {
+                    // Get the template name based on the uri
+                    $file_path = 'edpsych/research/resources/';
+                    $template_name = $response->templateNameFromURI($request->uri());
+                    $template_path = $file_path . $template_name;
+
+                    // render the template
+                    echo $app->template->render($template_path, ["section" => "research"]);
+                });
+            });
+        }
+    });
 });
