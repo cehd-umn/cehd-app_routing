@@ -98,9 +98,9 @@ $router->with('/current', function() use ($router) {
             echo $app->template->render('edpsych/current/special-ed/student-teaching-practicum.html', ["section" => "current"]);
         });
 
-		$router->respond('GET', '/autism-certificate/', function($request, $response, $service, $app) {
-			echo $app->template->render('edpsych/current/special-ed/autism-certificate.html', ["section" => "programs-degrees"]);
-		});
+        $router->respond('GET', '/autism-certificate/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/current/special-ed/autism-certificate.html', ["section" => "programs-degrees"]);
+        });
     });
 
     $router->with('/handbook', function() use ($router) {
