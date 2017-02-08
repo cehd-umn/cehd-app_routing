@@ -46,6 +46,7 @@
         $request.done(function() {
             var results = client.getResults();
             var $target_element = $("#programs-container");
+            var renderer = new Renderer();
 
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/edpsych/programs/",
@@ -57,8 +58,8 @@
                 }
             };
 
-            Renderer.init(template_params);
-            Renderer.render();
+            renderer.init(template_params);
+            renderer.render();
         });
     </script>
 {% endblock %}
