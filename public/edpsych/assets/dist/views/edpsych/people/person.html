@@ -1,9 +1,8 @@
-{% set fullName = data.person.firstName + " " + data.person.lastName %}
 <div class="row">
     <div class="container">
         <div class="feature twothird">
             <div class="half right divider">
-                <h2>{{ fullName }}
+                <h2>{{ data.person.nameFirstLast }}
                     <small class="clear">
                     {% if data.person.workingTitle|is_string %}
                         {{ data.person.workingTitle }}
@@ -13,17 +12,17 @@
             </div>
             <div class="half">
                 <p>
-                    {% if data.person.addr1|is_string %}
-                        {{ data.person.addr1 }}<br>
+                    {% if data.person.address_1 %}
+                        {{ data.person.address_1 }}<br>
                     {% endif %}
-                    {% if data.person.addr2|is_string %}
-                        {{ data.person.addr2 }}<br>
+                    {% if data.person.address_2 %}
+                        {{ data.person.address_2 }}<br>
                     {% endif %}
-                    {% if data.person.addr3|is_string %}
-                        {{ data.person.addr3 }}<br>
+                    {% if data.person.address_3 %}
+                        {{ data.person.address_3 }}<br>
                     {% endif %}
-                    {% if data.person.addr4|is_string %}
-                        {{ data.person.addr4 }}<br>
+                    {% if data.person.address_4 %}
+                        {{ data.person.address_4 }}<br>
                     {% endif %}
                     {% if data.person.city|is_string %}
                         {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
@@ -35,6 +34,10 @@
                     {% endif %}
                     <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
                 </p>
+                {% if data.person.officeHours|is_string %}
+                    <h3 class="h5">Office hours</h3>
+                    <p>{{ data.person.officeHours|safe }}</p>
+                {% endif %}
                 {% if data.person.curriculumVitaeAddr|is_string %}
                     <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
                 {% endif %}
@@ -51,8 +54,8 @@
                 {{ data.extra_content.video_embed_code|safe }}
             {% endif %}
             <div class="span-3">
-                {% if data.person.headshotAddr|is_string and data.person.areasOfInterest|is_string and not data.extra_content.video_embed_code %}
-                    <p class="no-margin-top"><img src="{{ data.person.headshotAddr }}" alt="{{ fullName }} headshot"></p>
+                {% if data.person.headshotAddress|is_string and data.person.areasOfInterest|is_string and not data.extra_content.video_embed_code %}
+                    <p class="no-margin-top"><img src="{{ data.person.headshotAddress }}" alt="{{ data.person.nameFirstLast }} headshot"></p>
                 {% endif %}
             </div>
             <div class="span-9">
@@ -67,6 +70,10 @@
 <div class="row">
     <div class="container">
         <div class="feature twothird">
+            {% if data.person.degrees %}
+                <h3 class="h5">Degrees</h3>
+                <p>{{ data.person.degrees|safe }}</p>
+            {% endif %}
             {% if data.person.briefBio|is_string %}
             <h3>
               {% if data.extra_content.category == "faculty" %}
@@ -77,19 +84,19 @@
             </h3>
             <p>{{ data.person.briefBio|safe }}</p>
             {% endif %}
-            {% if data.person.publications %}
+            {% if data.person.publications|length %}
               <h3>Selected publications</h3>
-              <ol class="profile-list">
-              {% for publication in data.person.publications.publication %}
-                  <li>{{ publication|strip_html_attributes|safe }}</li>
-              {% endfor %}
-              </ol>
+                <ol class="profile-list">
+                {% for publication in data.person.publications %}
+                    <li>{{ publication|strip_style_attributes|safe }}</li>
+                {% endfor %}
+                </ol>
             {% endif %}
-            {% if data.person.presentations %}
+            {% if data.person.presentations|length %}
               <h3>Selected presentations</h3>
               <ol class="profile-list">
-              {% for presentation in data.person.presentations.presentation %}
-                  <li>{{ presentation|strip_html_attributes|safe }}</li>
+              {% for presentation in data.person.presentations %}
+                <li>{{ presentation|strip_style_attributes|safe }}</li>
               {% endfor %}
               </ol>
             {% endif %}

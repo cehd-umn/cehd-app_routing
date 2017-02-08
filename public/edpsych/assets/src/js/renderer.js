@@ -26,8 +26,8 @@ var Renderer = function () {
             return typeof obj === "string";
         });
 
-        this.env.addFilter("strip_html_attributes", function(str) {
-            return str.replace(/<\s*(\w+).*?>/, "<$1>");
+        this.env.addFilter("strip_style_attributes", function(str) {
+            return str.replace(/style=(".*?"|'.*?'|[^"'][^\s]*)/g, "");
         });
     };
 

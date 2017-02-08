@@ -16,6 +16,7 @@ require_once BASE_PATH . 'cehd/app/helpers/Bootstrap.php';
 require_once BASE_PATH . 'cehd/app/helpers/Helper.php';
 require_once BASE_PATH . 'cehd/app/Response/BaseResponse.php';
 require_once BASE_PATH . 'cehd/app/Search/Search.php';
+require_once BASE_PATH . 'cehd/app/People/People.php';
 
 /**
  * Instantiate a new instance of Klein. I'm calling it `$router` because I like
@@ -402,7 +403,8 @@ $router->with($global_config['base_url'], function() use ($router) {
                         ]
                     ]];
                     $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
-                    $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+                    $person = new \CEHD\App\People\Person($client_response->getBody());
+                    $response->sendJSONResponse($person->toJSON());
                 }
             });
         });

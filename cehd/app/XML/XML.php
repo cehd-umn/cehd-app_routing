@@ -21,4 +21,9 @@ class XML
             null,
             LIBXML_NOCDATA);
     }
+
+    public function toJSON()
+    {
+        return json_encode($this, true);
+    }
 }
