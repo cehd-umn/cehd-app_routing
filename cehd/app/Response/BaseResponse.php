@@ -43,7 +43,7 @@ class BaseResponse extends \Klein\Response
         return strtolower(array_pop($path_array)) . '.html';
     }
 
-    // @todo this should probably be a request method
+    // @todo use Helper::stripDotHtml method instead
     public function htmlFilenameToURI($uri)
     {
         // strip .html (last 5 characters)
@@ -91,5 +91,9 @@ class BaseResponse extends \Klein\Response
             ]);
         }
         return $results;
+    }
+
+    public function peopleRedirect()
+    {
     }
 }
