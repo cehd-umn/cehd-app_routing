@@ -2504,19 +2504,31 @@ h2 small.clear.home {
 }
 
 dl.events-listing, dl.event-listing {
+  display: table;
   margin: 0;
 }
 
+dl dl {
+  display: table-row;
+  padding-bottom: 1em;
+}
+
 dt.event-title {
+  display: table-cell;
   margin-bottom: 0;
+  padding-right: .5em;
+  vertical-align: middle;
 }
 
 dd.event-data {
+  display: table-row;
   margin-left: 0;
 }
 
 dd.event-link {
+  display: table-cell;
   margin-left: 0;
+  vertical-align: middle;
 }
 
 .faculty-headshot {

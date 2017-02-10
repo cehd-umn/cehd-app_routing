@@ -33,8 +33,6 @@
 // home page
 
 .home-images {
-    // display: flex;
-
     figure {
         display: block;
 
@@ -116,23 +114,35 @@ h2 small {
 dl {
     &.events-listing,
     &.event-listing {
+        display: table;
         margin: 0;
+    }
+
+    dl {
+        display: table-row;
+        padding-bottom: 1em;
     }
 }
 
 dt {
     &.event-title {
+        display: table-cell;
         margin-bottom: 0;
+        padding-right: .5em;
+        vertical-align: middle;
     }
 }
 
 dd {
     &.event-data {
+        display: table-row;
         margin-left: 0;
     }
 
     &.event-link {
+        display: table-cell;
         margin-left: 0;
+        vertical-align: middle;
     }
 }
 
@@ -172,13 +182,14 @@ dd {
 
 ol {
     &.profile-list {
-       list-style: none;
-       text-indent: -2.5em;
+        list-style: none;
+        text-indent: -2.5em;
     }
 }
 
 @for $ems from 30 through 50 {
     $em-value: $ems / 100;
+
     .less-margin-bottom-#{$ems} {
         margin-bottom: 1em * $em-value;
     }
@@ -199,6 +210,7 @@ ol {
             &.heading-profile {
                 font-size: $size;
 
+                // scss-lint:disable NestingDepth
                 small {
                     &.#{$heading} {
                         font-size: $size;
