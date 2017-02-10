@@ -2530,12 +2530,12 @@ dd.event-link {
 }
 
 .google-sheet {
-  height: 410px;
+  height: 460px;
   width: 100%;
 }
 
 .google-sheet.program-costs {
-  height: 290px;
+  height: 420px;
 }
 
 .google-sheet.internships {
