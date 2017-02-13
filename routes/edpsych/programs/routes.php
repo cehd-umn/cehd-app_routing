@@ -11,15 +11,15 @@ $router->with('/programs', function() use ($router) {
     });
 
     $router->respond('GET', '/asl/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/asl.html', ["section" => "programs-degrees"]);
+        echo $app->template->render('edpsych/programs/asl/index.html', ["section" => "programs-degrees"]);
     });
 
     $router->respond('GET', '/asl/faq/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/asl-faq.html', ["section" => "programs-degrees"]);
+        echo $app->template->render('edpsych/programs/asl/faq.html', ["section" => "programs-degrees"]);
     });
 
     $router->respond('GET', '/asl/placement-assessment/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/programs/asl-placement-assessment.html', ["section" => "programs-degrees"]);
+        echo $app->template->render('edpsych/programs/asl/placement-assessment.html', ["section" => "programs-degrees"]);
     });
 
     $router->respond('GET', '/courses/[asl|qme|psyf:course]/', function($request, $response, $service, $app) {
