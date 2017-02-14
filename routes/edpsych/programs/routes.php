@@ -25,14 +25,24 @@ $router->with('/programs', function() use ($router) {
     $router->respond('GET', '/courses/[asl|qme|psyf:course]/', function($request, $response, $service, $app) {
         // values for the "p" query parameter in the JavaScript request
         $p_params = [
-            "asl" => "EPSY_ASL",
-            "qme" => "EPSY_PSE",
-            "psyf" => "EPSY_PSYF",
+            "asl" => [
+                "p" => "EPSY_ASL",
+                "title" => "American Sign Language",
+            ],
+            "qme" => [
+                "p" => "EPSY_PSE",
+                "title" => "Quantitative Methods in Education",
+            ],
+            "psyf" => [
+                "p" => "EPSY_PSYF",
+                "title" => "Psychological Foundations of Education",
+            ],
         ];
         $course = $request->param('course');
         $template_vars = [
             "section" => "programs-degrees",
-            "p_param" => $p_params[$course],
+            "p_param" => $p_params[$course]["p"],
+            "title_text" => $p_params[$course]["title"],
         ];
 
         echo $app->template->render('edpsych/programs/courses/course.html', $template_vars);
