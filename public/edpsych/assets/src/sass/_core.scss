@@ -158,6 +158,10 @@ img {
             font-family: Lato, Verdana, Geneva, sans-serif;
             font-weight: normal;
         }
+
+        &.no-margin-top {
+            margin-top: 0;
+        }
     }
 
 }

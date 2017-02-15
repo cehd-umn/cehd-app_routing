@@ -1068,6 +1068,10 @@ h1.light, .h1.light {
   font-weight: normal;
 }
 
+h1.no-margin-top, .h1.no-margin-top {
+  margin-top: 0;
+}
+
 h2, .h2 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 36px;
@@ -1078,6 +1082,10 @@ h2, .h2 {
 h2.light, .h2.light {
   font-family: Lato, Verdana, Geneva, sans-serif;
   font-weight: normal;
+}
+
+h2.no-margin-top, .h2.no-margin-top {
+  margin-top: 0;
 }
 
 h3, .h3 {
@@ -1092,6 +1100,10 @@ h3.light, .h3.light {
   font-weight: normal;
 }
 
+h3.no-margin-top, .h3.no-margin-top {
+  margin-top: 0;
+}
+
 h4, .h4 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 18px;
@@ -1102,6 +1114,10 @@ h4, .h4 {
 h4.light, .h4.light {
   font-family: Lato, Verdana, Geneva, sans-serif;
   font-weight: normal;
+}
+
+h4.no-margin-top, .h4.no-margin-top {
+  margin-top: 0;
 }
 
 h5, .h5 {
@@ -1116,6 +1132,10 @@ h5.light, .h5.light {
   font-weight: normal;
 }
 
+h5.no-margin-top, .h5.no-margin-top {
+  margin-top: 0;
+}
+
 h6, .h6 {
   font-family: 'Montserrat', Verdana, Geneva, sans-serif;
   font-size: 16px;
@@ -1126,6 +1146,10 @@ h6, .h6 {
 h6.light, .h6.light {
   font-family: Lato, Verdana, Geneva, sans-serif;
   font-weight: normal;
+}
+
+h6.no-margin-top, .h6.no-margin-top {
+  margin-top: 0;
 }
 
 h1 small {

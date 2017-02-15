@@ -2,7 +2,7 @@
 /**
  * Programs Redirects
  */
-$router->with('/[P|p]rograms', function() use ($router) {
+$router->with('/Programs', function() use ($router) {
     $router->respond('GET', '[/|/minor/|/ASL/]', function($request, $response, $service, $app) {
         $response->redirectToLowercaseURI($request->uri());
     });
