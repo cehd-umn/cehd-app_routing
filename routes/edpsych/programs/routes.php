@@ -172,6 +172,27 @@ $router->with('/programs', function() use ($router) {
     });
 
     $router->with('/foundations', function() use ($router) {
+
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/index.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/learning/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/learning.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/social-psych/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/social-psych.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/talent/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/talent.html', ["section" => "programs-degrees"]);
+        });
+
+        $router->respond('GET', '/5135/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/5135.html', ["section" => "programs-degrees"]);
+        });
+
         $router->with('/funding', function() use ($router) {
             $router->respond('GET', '/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/foundations/funding/index.html', ["section" => "programs-degrees"]);
@@ -196,22 +217,6 @@ $router->with('/programs', function() use ($router) {
             $router->respond('GET', '/ga/', function($request, $response, $service, $app) {
                 echo $app->template->render('edpsych/programs/foundations/funding/ga.html', ["section" => "programs-degrees"]);
             });
-        });
-
-        $router->respond('GET', '/learning/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/learning.html', ["section" => "programs-degrees"]);
-        });
-
-        $router->respond('GET', '/social-psych/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/social-psych.html', ["section" => "programs-degrees"]);
-        });
-
-        $router->respond('GET', '/talent/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/talent.html', ["section" => "programs-degrees"]);
-        });
-
-        $router->respond('GET', '/5135/', function($request, $response, $service, $app) {
-            echo $app->template->render('edpsych/programs/foundations/5135.html', ["section" => "programs-degrees"]);
         });
     }); // end programs/foundations
 
