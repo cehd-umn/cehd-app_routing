@@ -1,12 +1,24 @@
 <?php
 
 
-$router->with('/current', function() use ($router) {
+$router->with('/Current', function() use ($router) {
     /**
      * Redirects
      */
+    $router->respond('GET', '/', function($request, $response, $service, $app) {
+        $response->redirectToLowercaseURI($request->uri());
+    });
+
+    $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/current/', 301)->send();
+    });
+
     $router->respond('GET', '/CSPP.html', function($request, $response, $service, $app) {
         $response->redirect($app->site_config['base_url'] . '/current/cspp/', 301)->send();
+    });
+
+    $router->respond('GET', '/handbook/default.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/current/', 301)->send();
     });
 
     $router->respond('GET', '/Foundations.html', function($request, $response, $service, $app) {
@@ -29,10 +41,12 @@ $router->with('/current', function() use ($router) {
         $response->redirect($app->site_config['base_url'] . '/current/special-ed/', 301)->send();
     });
 
-    $router->respond('GET', '/SpecEdStudentTeaching_practicum/SpecialEd - recruitment - practicum.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/current/student-teaching-practicum/', 301)->send();
+    $router->respond('GET', '/SpecEdStudentTeaching_practicum/SpecialEd%20-%20recruitment%20-%20practicum.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/current/special-ed/student-teaching-practicum/', 301)->send();
     });
+});
 
+$router->with('/current', function() use ($router) {
     /**
      * Routes
      */

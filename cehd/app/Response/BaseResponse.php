@@ -55,6 +55,11 @@ class BaseResponse extends \Klein\Response
         $this->redirect($this->htmlFilenameToURI($uri), 301)->send();
     }
 
+    public function redirectToLowercaseURI($uri)
+    {
+        $this->redirect(strtolower($uri), 301)->send();
+    }
+
     public function getNewsfeedArrayFromXML($xml)
     {
         $results = [];

@@ -148,8 +148,36 @@ $router->respond(function($request, $response, $service, $app) use ($router) {
  */
 $router->with($global_config['base_url'], function() use ($router) {
     /**
+     * Add a trailing slash if it's missing except for /services requests or
+     * .html uris which should either 404 or have a redirect set up
+     */
+    $router->respond('GET', '*', function($request, $response, $service, $app) {
+        $uri = $request->uri();
+
+        if (!strpos($uri, "services"))
+        {
+            // grab the last character in the uri to see if it's a slash
+            $last = substr($uri, -1);
+
+            // grab the last 4 characters to see if it's "html". Anything ending in
+            // .html is likely to need a specific redirect
+            $html = substr($uri, -4);
+
+            if ($last !== "/" && $html !== "html")
+            {
+                $redirect_uri = $uri . "/";
+                $response->redirect($redirect_uri, 301)->send();
+            }
+        }
+    });
+
+    /**
      * Ed Psych Home
      */
+    $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/', 301)->send();
+    });
+
     $router->respond('GET', '/', function($request, $response, $service, $app) {
         echo $app->template->render('edpsych/index.html', []);
     });
@@ -166,18 +194,19 @@ $router->with($global_config['base_url'], function() use ($router) {
         }
     });
 
-    $router->with('/contact', function() use ($router) {
-        /**
-         * Redirects
-         */
-        $router->respond('GET', '/contact.html', function($request, $response, $service, $app) {
+    $router->with('/contact.html', function() use ($router) {
+        $router->respond('GET', '*', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/contact/', 301)->send();
         });
+    });
 
-        $router->respond('GET', '/contact-confirmation.html', function($request, $response, $service, $app) {
+    $router->with('/contact-confirmation.html', function() use ($router) {
+        $router->respond('GET', '*', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/contact/confirmation/', 301)->send();
         });
+    });
 
+    $router->with('/contact', function() use ($router) {
         /**
          * Routes
          */
@@ -204,11 +233,21 @@ $router->with($global_config['base_url'], function() use ($router) {
     /**
      * About
      */
+    $router->with('/About', function() use ($router) {
+        $router->respond('GET', '*', function($request, $response, $service, $app) {
+            $response->redirectToLowercaseURI($request->uri());
+        });
+    });
+
     $router->with('/about', function() use ($router) {
         /**
          * Redirects
          * TODO Figure out a more programmatic way to manage these redirects
          */
+        $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/about/', 301)->send();
+        });
+
         $router->respond('GET', '/diversity-inclusion.html', function($request, $response, $service, $app) {
             $response->redirect($app->site_config['base_url'] . '/about/diversity-inclusion/', 301)->send();
         });
@@ -228,6 +267,12 @@ $router->with($global_config['base_url'], function() use ($router) {
     /**
      * Alumni
      */
+    $router->with('/Alumni', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            $response->redirectToLowercaseURI($request->uri());
+        });
+    });
+
     $router->with('/alumni', function() use ($router) {
         $router->respond('GET', '/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/alumni/index.html', []);
@@ -241,7 +286,7 @@ $router->with($global_config['base_url'], function() use ($router) {
     /*
      * Future Students
      */
-    $router->with('/future-students', function() use ($router) {
+    $router->with('/FutureStudents', function() use ($router) {
         /**
          * Redirects
          */
@@ -269,6 +314,21 @@ $router->with($global_config['base_url'], function() use ($router) {
             $response->redirect($app->site_config['base_url'] . '/future-students/special-ed-med/', 301)->send();
         });
 
+        $router->respond('GET', '/pridefellow.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/pride-fellow/', 301)->send();
+        });
+
+        $router->respond('GET', '/master.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/master/', 301)->send();
+        });
+
+        $router->respond('GET', '/doctor.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/doctor/', 301)->send();
+        });
+
+    });
+
+    $router->with('/future-students', function() use ($router) {
         /**
          * Routes
          */
@@ -304,6 +364,7 @@ $router->with($global_config['base_url'], function() use ($router) {
     /**
      * Current Students
      */
+    require_once BASE_PATH . 'routes/edpsych/current/redirects.php';
     require_once BASE_PATH . 'routes/edpsych/current/routes.php';
 
     /**
@@ -488,6 +549,10 @@ $router->with($global_config['base_url'], function() use ($router) {
      * People
      */
     $router->with('/people', function() use ($router) {
+        $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/people/', 301)->send();
+        });
+
         $router->respond('GET', '/', function($request, $response, $service, $app) {
             $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people/index.yml';
             $section_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
@@ -563,6 +628,7 @@ $router->with($global_config['base_url'], function() use ($router) {
     /**
      * Programs
      */
+    require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';
     require_once BASE_PATH . 'routes/edpsych/programs/routes.php';
 
     /**
