@@ -128,6 +128,12 @@ class Config
 
         $config = array_merge($config, $environment_config);
 
+        // @todo this can go away completely post-launch
+        if ($this->_is_dev())
+        {
+            $config['base_url'] = "/edpsych";
+        }
+
         return $config;
     }
 }
