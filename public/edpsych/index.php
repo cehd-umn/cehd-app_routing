@@ -152,7 +152,18 @@ $router->with($global_config['base_url'], function() use ($router) {
      * .html uris which should either 404 or have a redirect set up
      */
     $router->respond('GET', '*', function($request, $response, $service, $app) {
-        $uri = $request->uri();
+        $uri_components = explode("?", $request->uri());
+
+        $uri = $uri_components[0];
+
+        if (count($uri_components) > 1)
+        {
+            $query_str = $uri_components[1];
+        }
+        else
+        {
+            $query_str = "";
+        }
 
         if (!strpos($uri, "services"))
         {
@@ -165,7 +176,8 @@ $router->with($global_config['base_url'], function() use ($router) {
 
             if ($last !== "/" && $html !== "html")
             {
-                $redirect_uri = $uri . "/";
+                $with_slash = $uri . "/";
+                $redirect_uri = $uri . "/" . $query_str;
                 $response->redirect($redirect_uri, 301)->send();
             }
         }
