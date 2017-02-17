@@ -6,4 +6,7 @@
             <!-- <exclude>/path/to/exclude</exclude> -->
         </testsuite>
     </testsuites>
+    <php>
+        <server name="SERVER_NAME" value="drydock.cehd.umn.edu"/>
+    </php>
 </phpunit>
