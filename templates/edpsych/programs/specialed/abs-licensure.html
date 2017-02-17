@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Academic Behavioral Strategist (A.B.S.) teaching licensure & M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
@@ -22,7 +23,7 @@
       </div>
     </section>
       <section>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedABS") }} class="button center">How to apply</a></p>
       </section>
       <section>
       <div class="half">
@@ -43,32 +44,32 @@
     </div>
   </section>
   <section>
-    <div class="twothirds feature">
-      <h3 class="text center">Licensure requirements</h3>
-      <p>According to MN State licensing requirements, you will need to add an advanced license within 5 years of receiving the ABS. Thus, once enrolled in our program, you are strongly encouraged to choose an area of moderate-severe disabilities to add to your ABS (listed below). Depending on the license you choose, an advisor will work with you to select specific certain Electives referenced in the University Catalog link above.</p>
-      <h4>Autism Spectrum Disorder (ASD) (12 credits)</h4>
-      <ul>
-        <li>EPSY 5632 – Module 2: Evidence-Based Methods for Augmentative and Alternative Communication Assessment and Intervention (2cr)</li>
-        <li>EPSY 5633 – Module 3: Speech Generating Devices and High-Tech AAC (1cr)</li>
-        <li>EPSY 5661 – Introduction to Autism Spectrum Disorders (3cr)</li>
-        <li>EPSY 5663 – Assessment and Intervention for Individuals with Autism Spectrum Disorders (3cr)</li>
-        <li>EPSY 5702 – Practicum in Autism Spectrum Disorders (3cr)</li>
-      </ul>
-      <h4>Developmental disabilities (12 credits)</h4>
-      <ul>
-        <li>EPSY 5621 – Assessment and Instructional Design for Students with Developmental Disabilities (3cr)</li>
-        <li>EPSY 5622 – Programs and Curricula for Students with Developmental Disabilities (3cr)</li>
-        <li>EPSY 5624 – Biomedical and Physical Impairments of Students with Developmental Disabilities (2cr)</li>
-        <li>EPSY 5636 – Sensory Impairments of Students with Developmental Disabilities (2cr)</li>
-        <li>EPSY 5706 – Practicum in Moderate/Severe Developmental Disabilities (2cr) or EPsy 5755/6 – Student Teaching: Developmental Disabilities (6cr)</li>
-      </ul>
-      <h4>Learning disabilities (12 credits)</h4>
-      <ul>
-        <li>EPSY 5627 – Seminar: Advanced Issues in Learning Disabilities (3cr)</li>
-        <li>EPSY 5628 – Characteristics of Moderate/Severe Learning Disabilities (3cr)</li>
-        <li>EPSY 5629 – Strategic Instructional Methods for Students Academically At-Risk (3cr)</li>
-        <li>EPSY 5707 – Practicum in Moderate/Severe Learning Disabilities (3cr) or EPsy 5752 – Student Teaching: Learning Disabilities (6cr)</li>
-      </ul>
+      <div class="twothirds feature">
+        <h3 class="text center">Licensure requirements</h3>
+          <p>According to MN State licensing requirements, you will need to add an advanced license within 5 years of receiving the ABS. Thus, once enrolled in our program, you are strongly encouraged to choose an area of moderate-severe disabilities to add to your ABS (listed below). Depending on the license you choose, an advisor will work with you to select specific certain Electives referenced in the University Catalog link above.</p>
+            <h4>Autism Spectrum Disorder (ASD) (12 credits)</h4>
+              <ul>
+                <li>EPSY 5632 – Module 2: Evidence-Based Methods for Augmentative and Alternative Communication Assessment and Intervention (2cr)</li>
+                <li>EPSY 5633 – Module 3: Speech Generating Devices and High-Tech AAC (1cr)</li>
+                <li>EPSY 5661 – Introduction to Autism Spectrum Disorders (3cr)</li>
+                <li>EPSY 5663 – Assessment and Intervention for Individuals with Autism Spectrum Disorders (3cr)</li>
+                <li>EPSY 5702 – Practicum in Autism Spectrum Disorders (3cr)</li>
+            </ul>
+          <h4>Developmental disabilities (12 credits)</h4>
+            <ul>
+              <li>EPSY 5621 – Assessment and Instructional Design for Students with Developmental Disabilities (3cr)</li>
+              <li>EPSY 5622 – Programs and Curricula for Students with Developmental Disabilities (3cr)</li>
+              <li>EPSY 5624 – Biomedical and Physical Impairments of Students with Developmental Disabilities (2cr)</li>
+              <li>EPSY 5636 – Sensory Impairments of Students with Developmental Disabilities (2cr)</li>
+              <li>EPSY 5706 – Practicum in Moderate/Severe Developmental Disabilities (2cr) or EPsy 5755/6 – Student Teaching: Developmental Disabilities (6cr)</li>
+            </ul>
+        <h4>Learning disabilities (12 credits)</h4>
+          <ul>
+            <li>EPSY 5627 – Seminar: Advanced Issues in Learning Disabilities (3cr)</li>
+            <li>EPSY 5628 – Characteristics of Moderate/Severe Learning Disabilities (3cr)</li>
+            <li>EPSY 5629 – Strategic Instructional Methods for Students Academically At-Risk (3cr)</li>
+            <li>EPSY 5707 – Practicum in Moderate/Severe Learning Disabilities (3cr) or EPsy 5752 – Student Teaching: Learning Disabilities (6cr)</li>
+          </ul>
       <h3 class="text-center">License exam requirements</h3>
       <p><a href="http://www.cehd.umn.edu/graduate/licensing/default.html">Minnesota Teacher Licensure Exam (MTLE) Requirements</a></p>
       </div>

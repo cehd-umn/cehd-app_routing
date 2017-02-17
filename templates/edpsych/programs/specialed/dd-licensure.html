@@ -1,11 +1,12 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Developmental disabilities teaching licensure & M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="text-center">Developmental disabilities<br />teaching licensure &amp; M.Ed.</h2>
+        <h2 class="text-center">Developmental disabilities (D.D.)</br>teaching licensure &amp; M.Ed.</h2>
         <div class="twothirds feature">
           <h3 class="text-center">Help solve learning challenges for students<br />with developmental disabilities</h3>
           <p>In the developmental disabilities program, you'll receive the training you need to teach students, kindergarten through grade 12, with developmental disabilities. You'll leave the program with your license and the skills you need to help solve the challenges of learning for students with developmental disabilities and their families.</p>
@@ -21,7 +22,7 @@
     </section>
     <section>
         <div>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "speddd") }} class="button center">How to apply</a></p>
         </div>
   </section>
   <section>

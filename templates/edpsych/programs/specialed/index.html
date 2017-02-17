@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {%- import "edpsych/macros/news-feed.html" as newsfeed %}
 {%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
 {%- import "edpsych/macros/loader.html" as loader -%}
@@ -10,11 +11,10 @@
         <h2 class="h1">{{ page_title }}</h2>
             <section>
               <div class="half">
-                  <h3 class="no-margin-top">Seeking the origins of autism</h3>
+                  <h3 class="no-margin-top">Wolff part of team identifying autism biomarkers in infancy</h3>
                   <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jason_Wolff_feature.jpg" alt="Jason Wolff in his office">
-                  <p>Assistant professor, Jason Wolff leverages the power of
-                  brain-imaging data to determine the biological origins of autism. <a
-                  href="http://www.cehd.umn.edu/people/profiles/Wolff/">Read
+                  <p>In a first-of-its-kind study, a national team of researchers, including assistant professor Jason Wolff, used MRIs, brain measurements and a computer algorithm to accurately predict autism before symptoms set in. <a
+                  href="http://news.cehd.umn.edu/wolff-elison-part-of-team-identifying-autism-biomarkers-in-infancy/">Read
                   more.</a></p>
               </div>
                 <div class="half">
@@ -59,13 +59,13 @@
 <div class="row emphasis subtle">
     <div class="container">
         <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" class="button center">How to apply (M.A.&#47;Ph.D.)</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedphdmamain") }} class="button center">How to apply (M.A.&#47;Ph.D.)</a></p>
         </div>
         <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply (M.Ed.)</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedmedmain") }} class="button center">How to apply (M.Ed.)</a></p>
         </div>
         <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" class="button center">Apply &#47; transfer (B.S.)</a>
+            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedbsmain") }}class="button center">Apply &#47; transfer (B.S.)</a>
         </div>
     </div>
 </div>
@@ -81,9 +81,9 @@
                 <p>Conduct research and work toward your Ph.D.</p>
                 <h5>Teaching degrees</h5>
                 <h6><a href="{{ config.base_url }}/programs/specialed/sped-med-teacherlicensure/">Master's of Education/licensure (M.Ed.)</a></h6>
-                <p>Earn your degree wand teaching license in four years. Upon graduation, you'll be certified to teach students iwth mild-moderate disabilities in K-12 and 18-21 transition programs.</p>
+                <p>Become licensed to teach individuals with disabilities from birth to age 21.</p>
                 <h6><a href="{{ config.base_url }}/programs/specialed/sped-bs/">Bachelor's of Science (B.S.) with Academic Behavioral Strategist (ABS) licensure</a></h6>
-                <p>Earn your degree and teaching license in four years. Uopon graduation, you'll be certified to teach students with mild-moderate disabilities in K-12 and 18-21 transition programs</p>
+                <p>Earn your degree and teaching license in four years. Upon graduation, you'll be certified to teach students with mild-moderate disabilities in K-12 and 18-21 transition programs</p>
             </div>
             <div class="third">
                 <h5>Teaching licensures</h5>
@@ -134,7 +134,7 @@
                 <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Kyle_Wagner_headshot.jpg" class="mobile-hide" alt="Kyle Wagner headshot">
             </div>
             <div class="twothird">
-                <h4 class="no-margin-top">Kyle Wagner<small class="clear h5">Ph.D. student</small></h4>
+                <h4 class="no-margin-top">Kyle Wagner<small class="clear h5">Ph.D. student | <a href="mailto:wagn0524@umn.edu">wagn0524@umn.edu</a></small></h4>
                 <p><strong>Interests:</strong> Increasing efficiency and
                 effectiveness of academic interventions; passing current research
                 and best practice on to practitioners.</p>
@@ -158,8 +158,7 @@
             <div class="half">
                 <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/CavenJ.jpg" class="mobile-hide" alt="Janet Caven headshot"></div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jcaven/">Janet Caven</a></h4>
-                        <p><a href="mailto:jcaven@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jcaven/">Janet Caven</a> <small class="clear h5"><a href="mailto:jcaven@umn.edu">jcaven@umn.edu</a></small></h4>
                     <ul>
                         <li>Language and literacy development in learners who are Deaf or Hard of Hearing</li>
                         <li>Effective teaching preparation to meet the needs of diverse learners using differentiated instruction and assessment</li>
@@ -171,8 +170,7 @@
                     <img src="http://apps.cehd.umn.edu/people/Headshot/EdwardsDave.jpg" class="mobile-hide" alt="Dave Edwards headshot">
                 </div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/edwar375/">Dave Edwards</a></h4>
-                    <p><a href="mailto:edwar375@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/edwar375/">Dave Edwards</a> <small class="clear h6"><a href="mailto:edwar375@umn.edu">edwar375@umn.edu</a></small></h4>
                     <ul>
                         <li>Establishing systems to promote collaboration between staff members working in self-contained EBD classrooms</li>
                         <li>Alternative pathways to special education teacher licensure</li>
@@ -188,7 +186,7 @@
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/vpfleury/">Veronica Fleury</a><small class="clear h6">Autism Spectrum Disorder licensure &amp; M.Ed. coordinator</small></h4>
-                    <p><a href="mailto:vpfleury@umn.edu">Email</a></p>
+                    <p></p><a href="mailto:vpfleury@umn.edu">vpfleury@umn.edu</a></p>
                     <ul>
                         <li>Examine how core characteristics of ASD inhibit or promote students’ ability to participate in classroom activities</li>
                         <li>Identify and develop instructional strategies to address early academic and social-communication difficulties for young children with ASD</li>
@@ -201,7 +199,7 @@
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/dgolos/">Debbie Golos</a>
                         <small class="clear h6">Deaf/Hard of Hearing licensure &amp; M.Ed. coordinator</small></h4>
-                        <p><a href="mailto:dgolos@umn.edu">Email</a></p>
+                        <p><a href="mailto:dgolos@umn.edu">dgolos@umn.edu</a></p>
                     <ul>
                         <li>Developing and evaluating the effects of educational media in ASL on young deaf and hearing children's language and literacy skills</li>
                         <li>Examining the portrayal of deafness in media and literature from a cultural perspective and it's effects on children's identity development</li>
@@ -217,7 +215,7 @@
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/shupp/">Susan Hupp</a><small class="clear h6">Developmental disabilities licensure &amp; M.Ed. coordinator</small></h4>
-                    <p><a href="mailto:shupp@umn.edu">Email</a></p>
+                    <p><a href="mailto:shupp@umn.edu">shupp@umn.edu</a></p>
                     <ul>
                         <li>Examine cognitive development of students with severe disabilities, including deaf-blind education</li>
                         <li>Examine mastery motivation of children with and without disabilities and of various cultures</li>
@@ -232,7 +230,7 @@
               </div>
               <div class="span-9">
                 <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jiten001/">Asha Jitendra</a></h4>
-                  <p><a href="mailto:jiten001@umn.edu">Email</a></p>
+                  <p><a href="mailto:jiten001@umn.edu">jiten001@umn.edu</a></p>
                   <p>Evaluate the variables that impact children's ability to succeed in school-related tasks, including:</p>
                     <ul>
                       <li>Materials analysis</li>
@@ -248,11 +246,11 @@
               </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/chaf0032/">LeAnne Johnson</a><small class="clear h6">Early childhood special education licensure &amp; M.Ed. coordinator</small></h4>
-                    <p><a href="mailto:chaf0032@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/johnson/">Lab</a></p>
+                    <p><a href="mailto:chaf0032@umn.edu">chaf0032@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/johnson/">Lab</a></p>
                     <ul>
                       <li>Motivating and engaging adults in the adoption and implementation of interventions that improve the quality and quantity of learning opportunities available to young children with challenging behavior</li>
                       <li>Closing the research to practice gap and speeding the adoption of new innovations into practice by improving professional development systems</li>
-                      <li>Enhancing data driven,precision oriented, problem solving through new tools for monitoring children’s development and response to intervention</li>
+                      <li>Enhancing data driven, precision oriented, problem solving through new tools for monitoring children’s development and response to intervention</li>
                       <li>Evaluating the effectiveness of interventions addressing the social and communication needs of young children with Autism and emotional/behavioral disorders</li>
                     </ul>
                   </div>
@@ -262,8 +260,13 @@
                   <img src="http://apps.cehd.umn.edu/people/Headshot/kunkel-amy.jpg" class="mobile-hide" alt="Amy Kunkel headshot">
                 </div>
                 <div class="span-9">
-                  <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/hear0045/">Amy Kunkel</a></h4>
-                  <p><a href="mailto:hear0045@umn.edu">Email</a>
+                  <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/hear0045/">Amy Kunkel</a><small class="clear h5">Special education B.S. &amp; ABS licensure advisor</small></h4>
+                  <p><a href="mailto:hear0045@umn.edu">hear0045@umn.edu</a>
+                    <ul>
+                      <li>Response to intervention</li>
+                      <li>Computer-assisted instruction</li>
+                      <li>Meta-analysis of educational research</li>
+                    </ul>
                 </div>
             </div>
           </section>
@@ -273,8 +276,8 @@
                   <img src="http://apps.cehd.umn.edu/people/Headshot/McComas-2015.jpg" class="mobile-hide" alt="Jennifer McComas headshot">
                 </div>
                 <div class="span-9">
-                  <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jmccomas/">Jennifer McComas</a><small class="clear h6">Associate department chair, head emotional behavioral disorders licensure &amp; M.Ed. program</small></h4>
-                    <p><a href="mailto:jmccomas@umn.edu">Email</a></p>
+                  <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jmccomas/">Jennifer McComas</a><small class="clear h6">Associate department chair, emotional behavioral disorders licensure &amp; M.Ed. coordinator</small></h4>
+                    <p><a href="mailto:jmccomas@umn.edu">jmccomas@umn.edu</a></p>
                     <ul>
                       <li>Functional analysis of problem behavior in educational and residential settings</li>
                       <li>Basic behavioral processes maintaining desirable and undesirable behavior, such as schedules of reinforcement, stimulus control, and establishing operations</li>
@@ -289,7 +292,7 @@
                   </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/smcconne/">Scott McConnell</a></h4>
-                    <p><a href="mailto:smcconne@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a></p>
+                    <p><a href="mailto:smcconne@umn.edu">smcconne@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a></p>
                     <ul>
                       <li>Skills and competencies that enable pre-school aged children to learn and participate in school and other settings</li>
                       <li>Design, evaluation, and application of:</li>
@@ -307,7 +310,7 @@
                   </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mcmas004/">Kristen McMaster</a><small class="clear h6">Program coordinator</small></h4>
-                      <p><a href="mailto:mcmas004@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/mcmaster/">Lab</a></p>
+                      <p><a href="mailto:mcmas004@umn.edu">mcmas004@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/mcmaster/">Lab</a></p>
                       <p>Create conditions for successful response to intervention of academically diverse learners by:</p>
                       <ul>
                         <li>Promoting teachers’ use of data-based decision-making and evidence-based instruction</li>
@@ -321,7 +324,12 @@
                     </div>
                     <div class="span-9">
                       <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/coneill/">Charissa O'Neill</a><small class="clear h6">Field placement coordinator</small></h4>
-                      <p><a href="mailto:coneill@umn.edu">Email</a> | <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUpPUXFpUy1qZ3BBfGRlZmF1bHR8Nzk1MDc1Mjc1MmY4N2Y1NzQyYTg4ZTgyOGVlMTBhNzc">Make an appointment</a></p>
+                      <p><a href="mailto:coneill@umn.edu">coneill@umn.edu</a> | <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUpPUXFpUy1qZ3BBfGRlZmF1bHR8Nzk1MDc1Mjc1MmY4N2Y1NzQyYTg4ZTgyOGVlMTBhNzc">Make an appointment</a></p>
+                      <ul>
+                        <li>Diversity in teacher preparation programs</li>
+                        <li>Early intervention</li>
+                        <li>Inclusive classrooms</li>
+                      </ul>
                     </div>
                   </div>
                 </section>
@@ -332,7 +340,7 @@
                   </div>
                       <div class="span-9">
                         <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/pierc204/">Becca Pierce</a><small class="clear h6">ABS licensure &amp; M.Ed. coordinator</small></small></h4>
-                        <p><a href="mailto:pierc204@umn.edu">Email</a></p>
+                        <p><a href="mailto:pierc204@umn.edu">pierc204@umn.edu</a></p>
                         <ul>
                           <li>Using the Internet as a venue of professional development for in-service teachers</li>
                           <li>Using curriculum-based measures to inform educational programming</li>
@@ -345,7 +353,7 @@
                       </div>
                       <div class="span-9">
                           <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/harr0115/">Christine Peper</a></h5>
-                          <p><a href="mailto:harr0115@umn.edu">Email</a></p>
+                          <p><a href="mailto:harr0115@umn.edu">harr0115@umn.edu</a></p>
                           <ul>
                             <li>Transition planning and programming</li>
                             <li>Self-determination</li>
@@ -362,8 +370,8 @@
                           <img src="https://apps.cehd.umn.edu/People/Headshot/SeifertK-2005.jpg" class="mobile-hide" alt="Kathy Seifert headshot">
                         </div>
                         <div class="span-9">
-                          <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/seif0074/">Kathy Seifert</a><small class="clear h6">Learning disabilities licensure &amp; M.Ed. program coordinator</small></h4>
-                            <p><a href="mailto:seif0074@umn.edu">Email</a></p>
+                          <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/seif0074/">Kathy Seifert</a><small class="clear h6">Learning disabilities licensure &amp; M.Ed. coordinator</small></h4>
+                            <p><a href="mailto:seif0074@umn.edu">seif0074@umn.edu</a></p>
                             <ul>
                               <li>Adult literacy</li>
                               <li>Effective teacher preparation</li>
@@ -376,7 +384,7 @@
                       </div>
                           <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/symon007/">Frank Symons</a><small class="clear h6">CEHD Associate Dean for Research and Policy</small></h4>
-                            <p><a href="mailto:symon007@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/symons/">Lab</a></p>
+                            <p><a href="mailto:symon007@umn.edu">symon007@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/symons/">Lab</a></p>
                             <ul>
                               <li>Development, assessment, and treatment of severe problem behavior among children and adults with neurodevelopmental and emotional/behavioral disorders</li>
                               <li>Bio-behavior analysis of self-injurious behavior</li>
@@ -393,7 +401,7 @@
                           </div>
                           <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/rvukovic/">Rose Vukovic</a><small class="clear h6">Director of undergraduate studies</small></h4>
-                              <p><a href="mailto:rvukovic@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/vukovic/">Lab</a></p>
+                              <p><a href="mailto:rvukovic@umn.edu">rvukovic@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/vukovic/">Lab</a></p>
                                 <ul>
                                   <li>Learning disorders</li>
                                   <li>At-risk learners</li>
@@ -409,7 +417,7 @@
                            </div>
                            <div class="span-9">
                              <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jjwolff/">Jason Wolff</a><small class="clear h6">Autism Spectrum Disorder certificate coordinator</small></h4>
-                               <p><a href="mailto:jjwolff@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/wolff/">Lab</a></p>
+                               <p><a href="mailto:jjwolff@umn.edu">jjwolff@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/wolff/">Lab</a></p>
                                <ul>
                                  <li>Early brain and behavioral development in children with autism spectrum disorder</li>
                                  <li>Restricted and repetitive behaviors associated with autism and other developmental disabilities</li>

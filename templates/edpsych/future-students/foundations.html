@@ -1,11 +1,11 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "edpsych/macros/ga-tracking.html" as analytics -%}
-{% set page_title = "Admissions: Psychological Foundations of Education M.A. & Ph.D." %}
+{% set page_title = "Admissions: Psychological foundations of education M.A. & Ph.D." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">{{ page_title }}</h2>
+        <h2>Admissions: psychological foundations of <br />education M.A. & Ph.D.</h2>
 <section>
         <div class="half">
         <h3>Admissions requirements</h3>
@@ -38,20 +38,20 @@
 </div>
 </section>
 <section>
-<div class="row emphasis">
-    <div class="container">
+<div class="row">
+    <div class="emphasis">
             <p class="pull-quote">&ldquo;I joined the Educational Psychology department because it offered an applied study of psychology along with a focus on real-world issues. The faculty are leaders in their fields, and they provide an exceptional learning environment, in both the classroom and research labs.&rdquo;</p>
-    </div>
     <div class="twothirds feature margin-2">
             <div class="third">
-              <img src="http://www.cehd.umn.edu/EdPsych/Programs/Foundations/images/Anthony-Schulzetenberg.jpg" class="mobile-hide" alt="Anthony Schulzetenberg headshot">
+              <img src="{{ config.asset_base }}/dist/images/future-students/Anthony_Schuzetenberg_headshot.jpg" class="mobile-hide" alt="Anthony Schulzetenberg headshot">
             </div>
       <div class="twothird">
-                <h4 class="no-margin-top">Anthony Schulzetenberg<small class="clear h5">Ph.D. student</small></h4>
+                <h4 class="no-margin-top">Anthony Schulzetenberg<small class="clear h5">Ph.D. student | <a href="mailto:schu2856@umn.edu">schu2856@umn.edu</a></small></h4>
             <p><strong>Interests&#58; </strong> Personal qualities and stereotype threats that may inhibit success in adults, how social psychological interventions can promote healthy self-concepts and interrupt damaging recursive cycles that perpetuate negative stereotypes</p>
               <p><strong>Work&#58; </strong> Anthony owned a small business for 10 years, where he worked with a wide array of professionals in a health setting. He was awarded a national grant he currently uses to better understand the internal struggles in learning and comprehension, particularly within underrepresented college students. Through psychology and research, he is working to narrow the achievement gap in colleges across the country.</p>
       </div>
         </div>
+</div>
 </div>
 </section>
 <section>
@@ -60,7 +60,7 @@
     <div class="feature twothirds">
 <h3 class="text-center">How to apply</h3>
     <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Psych Foundations Application Page") }} class="button center no-margin-top">Start your application on ApplyYourself</a></p>
-<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Psych Foundations Application Page") }}>ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http&#58; //www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
+<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Psych Foundations Application Page") }}>ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
 <h4 id="gradapp" class="text-center">Graduate school application</h4>
 <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Languages, Awards &amp; Activities, Employment/Residence Information, Financial Support, Applicant Statement #1 (Statement of Interest), Program Supplementary Information and Recommendations.</p>
 <p><strong>Optional fields&#58;  </strong>All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
@@ -79,10 +79,10 @@
     <p>You must input the names and contact information for each recommendation provider in ApplyYourself.</p>
   <h4 id="GRE" class="text-center">Graduate Record Examination (GRE) scores</h4>
     <p>The GRE (General) is required for all applicants and must have been taken within five years of date of application. Due to the length of processing time all applicants should take the GRE test no later than the October testing date to meet the December application deadline. Be sure to request that ETS send your scores to the University of Minnesota Graduate School (using institution code 6874).</p>
-    <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/gre/">Get more information about the GRE or see if the Graduate School has received your official scores</a></p>
+    <p><a href="http://www.grad.umn.edu/admissions/application_instructions/gre/">Get more information about the GRE or see if the Graduate School has received your official scores</a></p>
   <h4 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h4>
     <p>Students whose native language is not English are required to submit English Language proficiency scores.</p>
-    <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
+    <p><a href="http://www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
   <h4 id="persstmt" class="text-center">Applicant statement #1 - personal statement</h4>
     <p>Upload a statement (not to exceed three double-spaced pages) to your application, outlining your interests and professional goals. This statement is an integral part of your application and will be weighted heavily in its evaluation. You should include, minimally, the following points&#58; </p>
     <ul>
@@ -125,15 +125,15 @@
           <h4 class="text-center">Graduate assistantships</h4>
             <p>Get paid to work as a teaching assistant, graduate instructor or research assistant. Graduate assistantships are available through the department, College of Education and Human Development, and the University.</p>
             <ul>
-              <li><a href="{{ config.base_url }}/programs/foundations/Funding/Yackel.html">John P. Yackel/Pearson Graduate Internship</a></li>
-              <li><a href="{{ config.base_url }}/Programs/Foundations/Funding/Merwin.html">Jack Merwin Graduate Assistantship</a></li>
+              <li><a href="{{ config.base_url }}/programs/foundations/funding/yackel/">John P. Yackel/Pearson Graduate Internship</a></li>
+              <li><a href="{{ config.base_url }}/programs/foundations/funding/merwin/">Jack Merwin Graduate Assistantship</a></li>
               <li><a href="http://humanresources.umn.edu/find-job/graduate-assistant-jobs">All University of Minnesota graduate assistantships</a></li>
             </ul>
             <p><em>Note: Spring, summer, and fall (March deadline) applicants will be less likely to receive graduate assistantships than students who meet the Dec. 1 deadline.</em></p>
           <h4 class="text-center">Financial aid</h4>
-            <p><a href="http&#58; //www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
+            <p><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
           <h4 class="text-center">Scholarships</h4>
-            <p><a href="http&#58; //www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
+            <p><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
                 </section>
               </div>
 </div>

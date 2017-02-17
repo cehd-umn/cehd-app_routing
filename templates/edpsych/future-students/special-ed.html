@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Admissions: Special education M.A. & Ph.D." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -27,8 +28,8 @@
     <h4>December&ndash;January&#58;  review process</h4>
     <p>The admissions committee considers a variety of factors including your prior academic achievement, GRE scores, relevant employment and life experiences, personal statement, letters of recommendation, and compatibility of your clinical and research interests with those of the program and faculty. Although interviews are not required, you may be called by the program for more information.</p>
     <h4>December&ndash;January&#58;  admissions decisions</h4>
-    <p>All applications are reviewed during December and January for entrance the following Fall Semester. For updates on the status of your application, visit <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" onclick="trackOutboundLink('https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD')">ApplyYourself</a> or send an email to the program.</p>
-    <p>The Office of Graduate Admission completes a final review of your materials.  You will receive your official admission decision via the email address provided on th <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" onclick="trackOutboundLink('https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD')">ApplyYourself</a>  online application.</p>
+    <p>All applications are reviewed during December and January for entrance the following Fall Semester. For updates on the status of your application, visit <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MA PhD Application Page") }} >ApplyYourself</a> or send an email to the program.</p>
+    <p>The Office of Graduate Admission completes a final review of your materials.  You will receive your official admission decision via the email address provided on th <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MA PhD Application Page") } }>ApplyYourself</a>  online application.</p>
 </div>
 </section>
 <section>
@@ -38,10 +39,10 @@
     </div>
     <div class="twothirds feature margin-2">
             <div class="third">
-              <img src="http://www.cehd.umn.edu/edpsych/programs/specialed/images/Kelsey-Young.jpg" class="mobile-hide" alt="Kelsey Young headshot">
+              <img src="{{ config.asset_base }}/dist/images/future-students/Kelsey_Young_headshot.jpg" class="mobile-hide" alt="Kelsey Young headshot">
             </div>
       <div class="twothird">
-                <h4 class="no-margin-top">Kelsey Young<small class="clear h5">Ph.D. student</small>                </h4>
+                <h4 class="no-margin-top">Kelsey Young<small class="clear h5">Ph.D. student | <a href="mailto:youn0949@umn.edu">youn0949@umn.edu</a></small></h4>
             <p><strong>Interests&#58; </strong> Early identification of autism, including&#58;  biobehavioral markers, assessments, diagnostics</p>
               <p><strong>Work&#58; </strong> Early intervention for preschoolers with autism</p>
       </div>
@@ -54,30 +55,30 @@
 <section>
   <div class="feature twothirds">
 <h3 class="text-center">How to apply</h3>
-    <p class="text-center"><a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
-<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD">ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http&#58; //www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
+    <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MA PhD Application Page") }}   class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
+<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD">ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
 <h4 id="gradapp" class="text-center">Graduate school application</h4>
 <p>Choose &ldquo;Ed-Psych Special Education-M.A.&rdquo; or &ldquo;Ed-Psych-Special Education Ph.D.&rdquo; as your proposed major and degree objective.</p>
 <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Languages, Awards & Activities, Employment/Residence Information, Financial Support, Applicant Statement #1 (Statement of Interest), Program Supplementary     Information  and Recommendations.</p>
 <p><strong>Optional fields&#58;  </strong>All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
   <h4 id="appfee" class="text-center">Application fee</h4>
-    <p><a href= "http&#58; //www.grad.umn.edu/admissions/application_instructions/fee/">Visit the Graduate School website for more information</a></p>
+    <p><a href= "http://www.grad.umn.edu/admissions/application_instructions/fee/">Visit the Graduate School website for more information</a></p>
   <h4 id="progapp" class="text-center">Program application</h4>
-    <p><a href="http&#58; //www.cehd.umn.edu/EdPsych/forms/SpEd_ShortDeptApplication.doc">Download the program application</a></p>
+    <p><a href="http://www.cehd.umn.edu/EdPsych/forms/SpEd_ShortDeptApplication.doc">Download the program application</a></p>
     <p>Complete the program application form and upload it in the Program Supplementary Information section of the ApplyYourself online application under 'Graduate Program Additional Application.</p>
   <h4 id="transcripts" class="text-center">Transcripts</h4>
       <p>Unofficial transcripts or academic records should be uploaded directly to the online application. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
       <p>If you are admitted, the University will then request official copies of this material.</p>
-      <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/">More information about transcripts and credentials</a></p>
+      <p><a href="http://www.grad.umn.edu/admissions/application_instructions/">More information about transcripts and credentials</a></p>
   <h4 id="letters" class="text-center">Letters of recommendation</h4>
     <p>Three letters of recommendation are required. Recommendations should be from professors or others who are able to comment on your educational and professional goals and potential.</p>
     <p>You must input the names and contact information for each recommendation provider in ApplyYourself.</p>
   <h4 id="GRE" class="text-center">Graduate Record Examination (GRE) scores</h4>
     <p>The GRE (General) is required for all applicants and must have been taken within five years of date of application. Due to the length of processing time all applicants should take the GRE test no later than the October testing date to meet the December application deadline. Be sure to request that ETS send your scores to the University of Minnesota Graduate School (using institution code 6874).</p>
-    <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/gre/">Get more information about the GRE or see if the Graduate School has received your official scores</a></p>
+    <p><a href="http://www.grad.umn.edu/admissions/application_instructions/gre/">Get more information about the GRE or see if the Graduate School has received your official scores</a></p>
   <h4 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h4>
     <p>Students whose native language is not English are required to submit English Language proficiency scores.</p>
-    <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
+    <p><a href="http://www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
   <h4 id="persstmt" class="text-center">Applicant statement #1 - personal statement</h4>
     <p>Upload a statement (not to exceed three double-spaced pages) to your application, outlining your interests and professional goals. This statement is an integral part of your application and will be weighted heavily in its evaluation. You should include, minimally, the following points&#58; </p>
     <ul>
@@ -116,12 +117,12 @@
           <h4 class="text-center">Fellowships &amp; awards</h4>
             <p>Submit your application materials by Dec. 1, and you’ll automatically be considered for Graduate School fellowships and departmental awards based on scholastic achievement. Notification of awards will be sent in March.</p>
           <h4 class="text-center">National Center for Leadership in Intensive Intervention (NCLii)</h4>
-            <p><a href="http&#58; //nclii.org/">The National Center for Leadership in Intensive Intervention (NCLii)</a>, a new consortium funded by the Office of Special Education Programs (OSEP), will prepare special education leaders to become experts in research on intensive intervention for students with disabilities who have persistent and severe academic (e.g., reading and math) and behavioral difficulties. The project is currently recruiting applicants to begin doctoral study in special education in Fall 2016.</p>
+            <p><a href="http://nclii.org/">The National Center for Leadership in Intensive Intervention (NCLii)</a>, a new consortium funded by the Office of Special Education Programs (OSEP), will prepare special education leaders to become experts in research on intensive intervention for students with disabilities who have persistent and severe academic (e.g., reading and math) and behavioral difficulties. The project is currently recruiting applicants to begin doctoral study in special education in Fall 2016.</p>
             <p><strong>Contact&#58; </strong> <a href="mailto&#58; symon007@umn.edu">Frank Symons</a>, associate dean for research and policy, College of Education and Human Development</p>
           <h4 class="text-center">Financial aid</h4>
-            <p><a href="http&#58; //www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
+            <p><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
           <h4 class="text-center">Scholarships</h4>
-            <p><a href="http&#58; //www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
+            <p><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
           </div>
         </section>
 </div>

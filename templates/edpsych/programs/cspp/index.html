@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {%- import "edpsych/macros/news-feed.html" as newsfeed %}
 {%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
 {%- import "edpsych/macros/loader.html" as loader -%}
@@ -51,10 +52,10 @@
         </div>
       </section>
         <section>
-          <p class="text-center"><a href="{{ config.base_url }}/future-students/cspp/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
+          <p class="text-center"><a href="{{ config.base_url }}/future-students/cspp/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "CSPPmain") }} class="button center">How to apply</a></p>
         </section>
     <section>
-      <h3 class="text-center">Coursework &amp; Related licensures</h3>
+      <h3 class="text-center">Coursework &amp; related licensures</h3>
           <div class="twothird">
             <h4>Coursework</h4>
               <p>The CSPP M.A. is a two-year, full-time program. You’ll study individual, group, and family counseling, research and evaluation, counseling theory, human growth and development, diagnostic assessment, social and cultural foundations, ethics, and career development.</p>
@@ -93,7 +94,7 @@
                 <img src="{{ config.asset_base }}/dist/images/Programs/cspp/Tony_Minaglia_headshot.jpg" alt="Tony Minaglia headshot">
             </div>
             <div class="twothird">
-                <h4 class="no-margin-top">Tony Minaglia<small class="clear h5">M.A. student</small></h4>
+                <h4 class="no-margin-top">Tony Minaglia<small class="clear h6">M.A. student | <a href="mailt:minag001@umn.edu">minag001@umn.edu</a></small></h4>
                 <p><strong>Interests:</strong>  How school counselors can improve their competencies around the achievement gap; promotion of equity among all students</p>
                 <p><strong>Practicum/internship</strong> Tony ran groups in a psychiatric rehabilitation center for adults, aided low-income, homeless individuals, worked as a support specialist in a pre-K, and ran the school-age program that developed students' social emotional learning, “solution room teacher” in an elementary school.</p>
             </div>
@@ -107,8 +108,7 @@
             <div class="half">
                 <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BergerC-2016.jpg" class="mobile-hide" alt="Carolyn Berger headshot"></div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/caberger/">Carolyn Berger</a></h4>
-                        <p><a href="mailto:caberger@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/caberger/">Carolyn Berger</a> <small class="clear h6"><a href="mailto:caberger@umn.edu">caberger@umn.edu</a></small></h4>
                     <ul>
                         <li>College and career readiness</li>
                         <li>Evidence-based practices</li>
@@ -122,8 +122,7 @@
                     <img src="http://apps.cehd.umn.edu/people/Headshot/HowardK-2016.jpg" class="mobile-hide" alt="Kelli Howard headshot">
                 </div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top" ><a href="{{ config.base_url }}/people/howar473/">Kelli Howard</a></h4>
-                    <p><a href="mailto:howar473@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top" ><a href="{{ config.base_url }}/people/howar473/">Kelli Howard</a><small class="clear h6"><a href="mailto:howar473@umn.edu">howar473@umn.edu</a></small></h4>
                     <ul>
                         <li>Counseling process and outcome</li>
                         <li>Student development</li>
@@ -142,7 +141,7 @@
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/smcconne/">Scott McConnell</a>
                       <small class="clear h6">Program coordinator &amp; clinical training director</small>
                     </h4>
-                    <p><a href="mailto:smcconne@umn.edu">Email | </a><a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a></p>
+                  <p><a href="mailto:smcconne@umn.edu">smcconne@umn.edu | </a><a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a></p>
                     <ul>
                       <li>Development of preschool-aged children, including the role of parent-child interactions</li>
                       <li>Evidence-based practices in schools, counseling, and mental health settings</li>
@@ -152,8 +151,7 @@
             <div class="half">
                 <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/OhrtmanMarguerite-2016.jpg" class="mobile-hide" alt="Marguerite Ohrtman headshot"></div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mohrtman/">Marguerite Ohrtman</a></h4>
-                        <p><a href="mailto:mohrtman@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mohrtman/">Marguerite Ohrtman</a><small class="clear h6"><a href="mailto:mohrtman@umn.edu">mohrtman@umn.edu</a></small></h4>            <ul>
                         <ul>
                             <li>Working with at-risk students and their families</li>
                             <li>Multicultural counseling education</li>
@@ -169,8 +167,7 @@
                     <img src="https://apps.cehd.umn.edu/people/Headshot/skovholtt.jpg" class="mobile-hide" alt="Thomas Skovholt headshot">
                 </div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/skovh001/">Thomas Skovholt</a></h4>
-                    <p><a href="mailto:skovh001@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/skovh001/">Thomas Skovholt</a><small class="clear h6"><a href="mailto:skovh001@umn.edu">skovh001@umn.edu</a></small></h4>
                     <ul>
                         <li>Resiliency development and burnout prevention</li>
                         <li>Struggles of the novice practitioner, clinical supervision</li>
@@ -181,8 +178,7 @@
             <div class="half">
                 <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/TurnerS-2005.jpg" class="mobile-hide" alt="Sherri Turner headshot"></div>
                 <div class="span-9">
-                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/turne047/">Sherri Turner</a></h4>
-                        <p><a href="mailto:turne047@umn.edu">Email</a></p>
+                    <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/turne047/">Sherri Turner</a><small class="clear h6"><a href="mailto:turne047@umn.edu">turne047@umn.edu</a></small></h4>
                         <ul>
                             <li>Methods and factors that facilitate the career development</li>
                             <li>Transition to work of minorities and adolescents</li>
