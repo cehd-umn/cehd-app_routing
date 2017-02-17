@@ -6,6 +6,7 @@ require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 
 use Klein;
+use UMN\CEHD\Dict;
 
 /**
  * Custom App class
@@ -34,18 +35,35 @@ class App extends \Klein\App
         $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->yaml_file_paths = $yaml_file_paths;
         $this->config = $this->_setConfig();
+        $this->nav_items = $this->_setNav();
     }
 
     protected function _setConfig()
     {
-        return $this->bootstrap_helpers->bootstrap_config($this->yaml_file_paths["configs"]);
+        // merge the contents of the yaml configs
+        $config =  new Dict\Dict(
+            $this->bootstrap_helpers->bootstrap_config(
+                $this->yaml_file_paths["configs"]
+            )
+        );
+
+        // build a few more in
+        $config->asset_base = $this->_setSubBasePath($config, "base_url", "/assets");
+        $config->asset_base = $this->_setSubBasePath($config, "asset_base", "/dist/views");
+        return $config->toArray();
+    }
+
+    // $config_obj should be a Dict instance
+    protected function _setSubBasePath($config_obj, $base_key, $new_sub_base_key)
+    {
+        return $config_obj->get($base_key) ? $config_obj->$base_key . $new_sub_base_key : $new_sub_base_key;
     }
 
     protected function _setNav()
     {
-        $nav_helper = new CEHD\Helpers\Navigation\Navigation();
+        $nav_helper = new \CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($this->yaml_file_paths["nav"]);
-        $this->nav_items = $nav_helper->get_nav();
+        return $nav_helper->get_nav();
     }
 
     protected function _configureRouter()
