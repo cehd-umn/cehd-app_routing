@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Special education Ph.D." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
@@ -20,7 +21,7 @@
 <div class="row">
     <div class="container">
         <div>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedphd") }} class="button center">How to apply</a></p>
         </div>
     </div>
 </div>

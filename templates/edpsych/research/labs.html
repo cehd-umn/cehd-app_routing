@@ -1,51 +1,65 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Research labs" %}
+{% set page_title = "Research labs & projects" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
         <h2 class="h1">{{ page_title }}</h2>
-        <div class="third">
-          <h3>A-L</h3>
+          <section>
+            <div class="third">
+              <h3>A-J</h3>
+                <ul>
+                  <li><a href="{{ config.base_url }}/research/labs/christ/">Theodore J. Christ Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/codding/">Robin Codding Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/svarma/">Cognitive Architecture Lab</a></li>
+                  <li><a href="http://www.cehd.umn.edu/edpsych/dbi-tlc/">Database Instruction in Early Writing (DBI-TLC)</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/yussen/">The Development of Narrative Thinking Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/family-academy/">Family Academy: infants and toddlers</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/fleury/">Veronica Fleury Research Lab</a></li>
+                  <li><a href="http://research.cehd.umn.edu/First-World/">First in the World Grant</a></li>
+                  <li><a href="http://cehd.umn.edu/EdPsych/globalsignature">Global Signature Program</a></li>
+                  <li><a href="http://cehd.umn.edu/edpsych/igdi">IGDILab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/johnson/">LeAnne Johnson Research/Lab</a></li>
+                </ul>
+            </div>
+            <div class="third">
+              <h3>K-R</h3>
+                <ul>
+                  <li><a href="{{ config.base_url }}/research/labs/maruyama/">Geoffrey Maruyama Research Lab</a></li>
+                  <li><a href="http://www.cehd.umn.edu/EdPsych/MARS/Default.html">MARS: Mathematical Reasoning Strategies</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/mcconnell/">Scott McConnell Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/mcmaster/">Kristen McMaster Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/miller/">Faith Miller Research Lab</a></li>
+                  <li><a href="http://www.cehd.umn.edu/EdPsych/ReadingLab/default.html">Reading Comprehension Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/kendeou/">Reading &amp; Language Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/ready-to-succeed/">Ready to Succeed!</a></li>
+                  <li><a href="http://www.cehd.umn.edu/EdPsych/RIPS/default.html">Research Institute for Problem Solving (RIPS)</a></li>
+            </div>
+            <div class="third">
+              <h3>S-Z</h3>
+                <ul>
+                  <li><a href="{{ config.base_url }}/research/labs/kohli/">Simulation Lab for Longitudinal Data Research</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/sullivan/">Amanda Sullivan Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/symons/">Frank Symons Research/Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/kvarma/">STEM Thinking, Reasoning &amp; Learning Lab</a></li>
+                  <li><a href="http://www.cehd.umn.edu/edpsych/telci/default.html">Technology-Based Early Language Comprehension Intervention (TeLCI)</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/tennyson/">Robert D. Tennyson Research/Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/bart/">Thinking Skills Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/vukovic/">Rose Vukovic Research Lab</a></li>
+                  <li><a href="{{ config.base_url }}/research/labs/wolff/">Jason Wolff Research Lab</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+        <div class="whole twothirds feature">
+          <h3 class="text-center">Past projects</h3>
             <ul>
-              <li><a href="{{ config.base_url }}/research/labs/christ/">Theodore J. Christ Research/Lab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/codding/">Robin Codding Research/Lab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/svarma/">Cognitive Architecture Lab</a></li>
-              <li><a href="http://www.cehd.umn.edu/edpsych/dbi-tlc/">Database Instruction in Early Writing (DBI-TLC)</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/yussen/">The Development of Narrative Thinking Lab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/fleury/">Veronica Fleury Research/Lab</a></li>
-              <li><a href="http://research.cehd.umn.edu/First-World/">First in the World Grant</a></li>
-              <li><a href="http://cehd.umn.edu/EdPsych/globalsignature">Global Signature Program</a></li>
-              <li><a href="http://cehd.umn.edu/edpsych/igdi">IGDILab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/johnson/">LeAnne Johnson Research/Lab</a></li>
+              <li><a href="{{ config.base_url }}/research/pnrc/">Creating Scientific Infrastructure for Promise Neighborhoods</a></li>
+              <li><a href="{{ config.base_url }}/research/500-under-five/">500 Under Five</a></li>
+              <li><a href="{{ config.base_url }}/research/ggg/">Get it, Got it, Go!</a></li>
+              <li><a href="{{ config.base_url }}/research/fresh-garden/">The Fresh Start Garden Project</a></li>
             </ul>
-        </div>
-        <div class="third">
-          <h3>M-S</h3>
-          <ul>
-            <li><a href="{{ config.base_url }}/research/labs/maruyama/">Geoffrey Maruyama Research/Lab</a></li>
-            <li><a href="http://www.cehd.umn.edu/EdPsych/MARS/Default.html">MARS: Mathematical Reasoning Strategies</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/mcconnell/">Scott McConnell Research/Lab</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/mcmaster/">Kristen McMaster Research/Lab</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/miller/">Faith Miller Research/Lab</a></li>
-            <li><a href="http://www.cehd.umn.edu/EdPsych/ReadingLab/default.html">Reading Comprehension Lab</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/kendeou/">Reading &amp; Language Lab</a></li>
-            <li><a href="http://www.cehd.umn.edu/EdPsych/RIPS/default.html">Research Institute for Problem Solving (RIPS)</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/kohli/">Simulation Lab for Longitudinal Data Research</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/sullivan/">Amanda Sullivan Research/Lab</a></li>
-            <li><a href="{{ config.base_url }}/research/labs/symons/">Frank Symons Research/Lab</a></li>
-        </div>
-        <div class="third">
-          <h3>T-Z</h3>
-            <ul>
-              <li><a href="{{ config.base_url }}/research/labs/tennyson/">Robert D. Tennyson Research/Lab</li>
-              <li><a href="{{ config.base_url }}/research/labs/kvarma/">STEM Thinking, Reasoning &amp; Learning Lab</li>
-              <li><a href="http://www.cehd.umn.edu/edpsych/telci/default.html">Technology-Based Early Language Comprehension Intervention (TeLCI)</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/bart/">Thinking Skills Lab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/vukovic/">Rose Vukovic Research/Lab</a></li>
-              <li><a href="{{ config.base_url }}/research/labs/wolff/">Jason Wolff Research/Lab</a></li>
-            </ul>
-        </div>
+          </div>
+      </section>
     </div>
-</div>
 {% endblock %}

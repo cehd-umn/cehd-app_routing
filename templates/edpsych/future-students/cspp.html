@@ -1,5 +1,6 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Admissions: Counseling & Student Personnel Psychology M.A." %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
+{% set page_title = "Admissions: counseling & student personnel psychology M.A." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
@@ -42,10 +43,10 @@
       <p class="pull-quote">&quot;I joined the CSPP program because I want to be a school counselor and knew CSPP could provide the experience I need to do so.&quot;</p>
           <div class="twothirds feature margin-2">
               <div class="third">
-                  <img src="http://www.cehd.umn.edu/EdPsych/Programs/CSPP/images/Mary-Katy-Steinbach.jpg" class="mobile-hide" alt="Mary Katy Steinbach headshot">
+                  <img src="{{ config.asset_base }}/dist/images/future-students/Mary_Katy_Steinbach_headshot.jpg" class="mobile-hide" alt="Mary Katy Steinbach headshot">
               </div>
               <div class="twothird">
-                <h4 class="no-margin-top">Mary Katy Steinbach<small class="clear h5">M.A. student</small></h4>
+                <h4 class="no-margin-top">Mary Katy Steinbach<small class="clear h5">M.A. student | <a href="mailto:jenki422@umn.edu">jenki422@umn.edu</a></small></h4>
                     <p><strong>Interests&#58;</strong> School counseling, at-risk youth</p>
                     <p><strong>Work&#58;</strong>Mary spent the 2014-2015 school year volunteering as a kindergarten-focused Minnesota Reading Corps tutor at The Heights Community School in East St. Paul. This experience helped her realize the need for school counselors and opened her eyes to the joys of working in a school. She will begin her practicum at Obama Elementary School in St. Paul during the 2016-2017 school year.</p>
                 </div>
@@ -59,8 +60,8 @@
 <section>
   <div class="feature twothirds">
 <h3 class="text-center">How to apply</h3>
-    <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
-<p><strong>Submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD">ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
+    <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "CSPP Application Page") }} class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
+<p><strong>Submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "CSPP Application Page") }} >ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
 <h4 id="gradapp" class="text-center">Graduate school application</h4>
 <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Languages, Awards &amp; Activities, Employment/Residence Information, Financial Support, Applicant Statement #1 (Personal Statement), Program Supplementary Information and Recommendations.</p>
 <p><strong>Optional fields&#58;  </strong>All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
@@ -131,13 +132,13 @@
         <h3 class="text-center">Funding</h3>
           <h4 class="text-center">Scholarships</h4>
             <ul>
-              <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/CSPP/Hansen.html">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
-              <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/CSPP/Sullivan.html">The Melissa Sullivan Endowed Internship / Practicum with Children &amp; Families</a></li>
+              <li><a href="{{ config.base_url }}/programs/cspp/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
+              <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship / Practicum with Children &amp; Families</a></li>
               <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid &amp; Scholarships</a></li>
             </ul>
           </div>
           <h4 class="text-center">Financial aid</h4>
-            <p class="text-center"><a href="http&#58; //www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
+            <p class="text-center"><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
           </div>
           </section>
 </div>

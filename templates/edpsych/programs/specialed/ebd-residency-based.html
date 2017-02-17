@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Residency based emotional & behavioral disorders teaching licensure & M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
@@ -8,7 +9,7 @@
         <h2 class="text-center">{{ page_title }}</h2>
         <div class="twothirds">
         <h3 class="no-margin-top">Become licensed to teach students with EBD while working as a paraprofessional in an EBD classroom</h3>
-        <p>Candidates will complete a nonconventional residency-based program that will incorporate on-line and traditional classroom instruction with residency-based coaching in classrooms that serve students with severe emotional and behavioral disorders (EBD). You will leave the program not only an excellent teacher prepared for a job working with students with severe EBD, but also a leader prepared to implement the most effective evidence-based practices and promote the success of your students.</p><p><strong>To apply, you must be employed by one of our partner school districts and include a written recommendation from the district with your application.</strong></p>
+        <p>Candidates will complete a nonconventional residency-based program that will incorporate on-line and traditional classroom instruction with residency-based coaching in classrooms that serve students with severe emotional and behavioral disorders (EBD). You will leave the program not only an excellent teacher prepared for a job working with students with severe EBD, but also a leader prepared to implement the most effective evidence-based practices and promote the success of your students.</p><p><strong>To apply, you must be employed as a paraprofessional in a level III of IV classroom by one of our partner school districts and include a written recommendation from the district with your application.</strong></p>
         </div>
         <div class="third">
           <figure>
@@ -34,7 +35,7 @@
 <div class="row">
     <div class="container">
         <div>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedebd") }} class="button center">How to apply</a></p>
         </div>
     </div>
 </div>

@@ -1,11 +1,12 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Learning & cognition/educational technology M.A. & Ph.D." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
     <section>
-      <h2>{{ page_title }}</h2>
+      <h2>Learning &amp; cognition/</br>educational technology M.A. & Ph.D.</h2>
         <div class="half">
           <h3 class="no-margin-top">Make improvements in education through psychology, science, and technology</h3>
             <p>As a student in the program, you’ll study the psychological processes critical to education. Research in our program focuses on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan. You'll use this knowledge to develop better educational processes and procedures for schools and other educational agencies, businesses, human and social service organizations, health care providers, government agencies, and more.</p>
@@ -13,12 +14,12 @@
       <div class="half">
         <fig>
           <img src="{{ config.asset_base }}/dist/images/Programs/foundations/sashank_teaching.jpg" alt="Sashank Varma teaching">
-          <figcaption>Dr. Sashank Varma teaches Ph.D. students in the Education Sciences Building.</figcaption>
+          <figcaption>Dr. Sashank Varma teaches Ph.D. students in the <a href="http://campusmaps.umn.edu/education-sciences-building">Education Sciences Building</a>.</figcaption>
         </fig>
       </div>
     </section>
         <section>
-        <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
+        <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "foundationslearnmain") }} class="button center">How to apply</a></p>
         </section>
         <section>
             <div class="span-4">
@@ -73,13 +74,13 @@
 <section>
 <div class="row emphasis margin-top-1">
   <div class="container">
-      <p class="pull-quote">“I joined the department for the opportunity to pursue my interests and to get top-quality research training and mentorship.”</p>
+      <p class="pull-quote">&quot;I joined the department for the opportunity to pursue my interests and to get top-quality research training and mentorship.&quot;</p>
         <div class="twothirds feature margin-2">
             <div class="third">
                 <img src="{{ config.asset_base }}/dist/images/Programs/foundations/Reese_Butterfuss_headshot.jpg" class="mobile hide" alt="Reese Butterfuss headshot">
             </div>
             <div class="twothird">
-                <h4 class="no-margin-top">Reese Butterfuss</h4>
+                <h4 class="no-margin-top">Reese Butterfuss <small class="clear h6"><a href="mailto:butte069@umn.edu">butte069@umn.edu</a></small></h4>
                   <p><strong>Interests:</strong> Knowledge revision and learning in the context of reading</p>
                   <p><strong>Work:</strong> Reese's past work research on reading assessment and academic interventions. Currently, his work explores the individual differences in knowledge revision.</p>
             </div>
@@ -96,8 +97,7 @@
           <div class="half">
               <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BartB-2003.jpg" class="mobile-hide" alt="William M. Bart headshot"></div>
               <div class="span-9">
-                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/bartx001/">William M. Bart</a></h5>
-                      <p><a href="mailto:bartx001@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/bart/">Lab</a></p>
+                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/bartx001/">William M. Bart</a><small class="clear h6"><a href="mailto:bartx001@umn.edu">bartx001@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/bart/">Lab</a></small></h5>
                   <ul>
                       <li>Relationships among cognition, instruction, and testing</li>
                       <li>Gifted and talented education</li>
@@ -110,8 +110,7 @@
                   <img src="https://apps.cehd.umn.edu/people/Headshot/kendeou_2.jpg" class="mobile-hide" alt="Panayiota Andrea Kendeou headshot">
               </div>
               <div class="span-9">
-                  <h5 class="no-margin-top" ><a href="{{ config.base_url }}/people/kend0040/">Panayiota Andrea Kendeou</a></h5>
-                  <p><a href="mailto:kend0040@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/kendeou/">Lab</a></p>
+                  <h5 class="no-margin-top" ><a href="{{ config.base_url }}/people/kend0040/">Panayiota Andrea Kendeou</a><small class="clear h6"><a href="mailto:kend0040@umn.edu">kend0040@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/kendeou/">Lab</a></small></h5>
                   <ul>
                       <li>Cognitive processes in reading comprehension</li>
                       <li>Change of pre-existing beliefs and misconceptions</li>
@@ -126,9 +125,7 @@
                   <img src="http://apps.cehd.umn.edu/people/Headshot/TennysonR-2009.jpg" class="mobile-hide" alt="Robert D. Tennyson headshot">
               </div>
               <div class="span-9">
-                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/rtenny/">Robert D. Tennyson</a>
-                  </h5>
-                  <p><a href="mailto:rtenny@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/tennyson/">Lab</a></p>
+                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/rtenny/">Robert D. Tennyson</a><small class="clear h6"><a href="mailto:rtenny@umn.edu">rtenny@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/tennyson/">Lab</a></small></h5>
                   <ul>
                     <li>Cognitive processes in reading comprehension</li>
                     <li>Change of pre-existing beliefs and misconceptions</li>
@@ -141,8 +138,7 @@
                 <img src="http://apps.cehd.umn.edu/people/Headshot/VarmaK.jpg" class="mobile-hide" alt="Keisha Varma" />
               </div>
               <div class="span-9">
-                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/keisha/">Keisha Varma</a></h5>
-                      <p><a href="mailto:keisha@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/kvarma/">Lab</a></p>
+                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/keisha/">Keisha Varma</a><small class="clear h6"><a href="mailto:keisha@umn.edu">keisha@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/kvarma/">Lab</a></small></h5>
                       <ul>
                           <li>Cognitive processes in science learning</li>
                           <li>Scientific visualizations and student learning outcomes</li>
@@ -160,7 +156,7 @@
                   <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/sashank/">Sashank Varma</a>
                     <small class="clear h6">Program coordinator</small>
                   </h5>
-                  <p><a href="mailto:sashank@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/svarma/">Lab</a></p>
+                  <p><a href="mailto:sashank@umn.edu">sashank@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/svarma/">Lab</a></p>
                   <ul>
                       <li>Understanding of abstract mathematical concepts</li>
                       <li>Long-term memory and language understanding</li>
@@ -171,8 +167,7 @@
           <div class="half">
               <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/YussenS_2015.jpg" class="mobile-hide" alt="Steve Yussen headshot"></div>
               <div class="span-9">
-                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/syussen/">Steve Yussen</a></h5>
-                      <p><a href="mailto:syussen@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/yussen/"> | Lab</a></p>
+                  <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/syussen/">Steve Yussen</a><small class="clear h6"><a href="mailto:syussen@umn.edu">syussen@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/yussen/">Lab</a></small></h5>
                       <ul>
                           <li>Memory and comprehension of stories</li>
                           <li>Narrative exchanges between children and parents (e.g., storybook reading, reminiscence)</li>

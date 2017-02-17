@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
 {%- import "edpsych/macros/loader.html" as loader -%}
 {% set page_title = "Quantitative Methods in Education" %}
@@ -51,24 +52,41 @@
               </div>
             </div>
                 <section>
-                  <p class="text-center"><a href="{{ config.base_url }}/future-students/qme/" onclick="ga('send', 'event', 'how to apply', 'click', 'SPmain');" class="button center">How to apply</a></p>
+                  <p class="text-center"><a href="{{ config.base_url }}/future-students/qme/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "qmemain") }} class="button center">How to apply</a></p>
                   <div class="row emphasis margin-top-1">
                       <div class="container">
-                          <p class="pull-quote">&quot;Statistics is a really powerful tool for solving educational and social problems. A blend of theory-based and technical classes and ample opportunities for applied research were the main reasons joined the QME program.&quot;</p>
+                          <p class="pull-quote">&quot;Statistics is a really powerful tool for solving educational and social problems. A blend of theory-based and technical classes and ample opportunities for applied research were the main reasons I joined the QME program.&quot;</p>
                           <div class="twothirds feature margin-2">
                             <div class="third">
                                 <img src="{{ config.asset_base }}/dist/images/Programs/qme/youngsoon_kang_headshot.jpg" alt="Youngsoon Kang headshot">
                             </div>
                             <div class="twothird">
-                                <h4 class="no-margin-top">Youngsoon Kang<small class="clear h5">Ph.D. student</small></h4>
+                                <h4 class="no-margin-top">Youngsoon Kang<small class="clear h5">Ph.D. student | <a href="mailto:kangx373@umn.edu">kangx373@umn.edu</a></small></h4>
                                 <p><strong>Interests:</strong>  Profile analysis, educational aspiration of American Indian students, multidimensional factors impacting school violence</p>
                                 <p><strong>Work:</strong> Youngsoon is working on a theoretical paper regarding profile analysis, which aims to show how the two statistics, level and pattern, serve as meaningful predictors under difficult conditions. In addition, she examines youth development construct scores and higher non-response rates, to develop Native American students’ profiles assets and predict their educational aspirations.</p>
                             </div>
                         </div>
                       </div>
-                </div>
+                    </div>
+                  </section>
             <div class="row">
               <div class="container">
+                  <section>
+                          <h3 class="text-center">Degrees &amp; coursework</h3>
+                            <div class="half">
+                              <h4>Areas of emphasis</h4>
+                                <p>Your curriculum requirements will depend on the degree (M.A. or Ph.D.) and area of emphasis you choose.</p>
+                                <p><strong>Measurement - </strong>Theory and methods of measuring important variables in education, including: achievement, attitude, and specialized cognitive and noncognitive variables</p>
+                                <p><strong><a href="{{ config.base_url }}/programs/qme/stats-intro/">Statistics education</a>-</strong> Understanding of statistics education and skills needed to conduct research applied to the teaching and learning of statistics</p>
+                                <p><strong>Program evaluation -</strong>Effectiveness of educational programs and education-related human services using a variety of quantitative and qualitative techniques</p>
+                            </div>
+                            <div class="half">
+                              <p><strong>Statistics -</strong>The development and study of statistical theories and methods of data analysis that support and enhance efforts to understand the complex interplay between educational processes and student, family, school and community factors with the goal of improving educational outcomes such as student achievement</p>
+                              <h4>Curriculum</h4>
+                                <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7541">M.A. curriculum (30-34 credits)</a></p>
+                                <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7542">Ph.D. curriculum (72 credits)</a></p>
+                            </div>
+                    </section>
                 <h3 class="text-center">Faculty &amp; staff</h3>
                 <section>
                   <div class="half">
@@ -77,7 +95,7 @@
                     <div class="span-9">
                         <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/lqr6576/">Ernest Davenport</a><small class="clear normal">Director of graduate studies</small></h4>
 
-                            <p><a href="mailto:lqr6576@umn.edu">Email</a></p>
+                            <p><a href="mailto:lqr6576@umn.edu">lqr6576@umn.edu</a></p>
                         <ul>
                             <li>Correlates of academic achievement (especially related to mathematics)</li>
                             <li>Mathematical artifacts of statistical procedures</li>
@@ -90,7 +108,7 @@
                     </div>
                     <div class="span-9">
                         <h4 class="h5 no-margin-top" ><a href="{{ config.base_url }}/people/mld/">Mark Davison</a><small class="clear normal">American Guidance Service, Inc./John P. Yackel Professorship in Educational Assessment &amp; Measurement</small></h4>
-                        <p><a href="mailto:mld@umn.edu">Email</a></p>
+                        <p><a href="mailto:mld@umn.edu">mld@umn.edu</a></p>
                         <ul>
                             <li>Educational measurement</li>
                             <li>Scaling (particularly multidimensional scaling)</li>
@@ -105,7 +123,7 @@
                         <img src="http://apps.cehd.umn.edu/people/Headshot/delMasR_2016.jpg" class="mobile-hide" alt="Robert delMas headshot"></div>
                       <div class="span-9">
                           <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/delma001/">Robert delMas</a><small class="clear normal">CEHD Distinguished Teaching Award</small></h4>
-                              <p><a href="mailto:delma001@umn.edu">Email</a></p>
+                              <p><a href="mailto:delma001@umn.edu">delma001@umn.edu</a></p>
                           <ul>
                               <li>Effects of activity-based approaches to teaching</li>
                           </ul>
@@ -116,8 +134,7 @@
                         <img src="http://apps.cehd.umn.edu/people/Headshot/fryelizabeth-2016.jpg" class="mobile-hide" alt="Elizabeth Fry headshot">
                       </div>
                     <div class="span-9">
-                        <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/fryxx069/">Elizabeth Fry</a></h4>
-                            <p><a href="mailto:fryxx069@umn.edu">Email</a></p>
+                        <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/fryxx069/">Elizabeth Fry</a><small class="clear h6"><a href="mailto:fryxx069@umn.edu">fryxx069@umn.edu</a></small></h4>
                             <ul>
                               <li>Teaching and learning of statistics</li>
                               <li>Assessment development</li>
@@ -133,7 +150,7 @@
                           <img src="http://apps.cehd.umn.edu/people/Headshot/HarwellM-2004.jpg" class="mobile-hide" alt="Michael Harwell headshot"></div>
                         <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/harwe001/">Michael Harwell</a><small class="clear normal">Acting program coordinator, CEHD Distinguished Teaching Award</small></h4>
-                                <p><a href="mailto:harwe001@umn.edu">Email</a></p>
+                                <p><a href="mailto:harwe001@umn.edu">harwe001@umn.edu</a></p>
                             <ul>
                                 <li>Meta-analytic effect sizes and tests that extract information from a pool of studies beyond traditional measures</li>
                                 <li>The role and impact of conceptual and empirical models for socioeconomic status (SES)</li>
@@ -146,8 +163,7 @@
                           <img src="http://apps.cehd.umn.edu/people/Headshot/KohliN-2012-Pref-B.jpg" class="mobile-hide" alt="Nidhi Kohli headshot">
                         </div>
                       <div class="span-9">
-                          <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/nkohli/">Nidhi Kohli</a></h4>
-                              <p><a href="mailto:nkohli@umn.edu">Email | </a><a href="http://www.cehd.umn.edu/EdPsych/research/labs/kohli.html">Lab</a></p>
+                          <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/nkohli/">Nidhi Kohli</a> <small class="clear h6"><a href="mailto:nkohli@umn.edu">kohli@umn.edu</a> | <a href="http://www.cehd.umn.edu/EdPsych/research/labs/kohli.html">Lab</a></small></h4>
                               <ul>
                                 <li>Structural equation models</li>
                                 <li>Finite mixture model</li>
@@ -163,7 +179,7 @@
                             <img src="http://apps.cehd.umn.edu/people/Headshot/LawrenzF-2002.jpg" class="mobile-hide" alt="Frances Lawrenz headshot"></div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/lawrenz/">Frances Lawrenz</a><small class="clear normal">Associate vice president for research, University of Minnesota</small></h4>
-                                  <p><a href="mailto:lawrenz@umn.edu">Email</a></p>
+                                  <p><a href="mailto:lawrenz@umn.edu">lawrenz@umn.edu</a></p>
                               <ul>
                                   <li>Science and mathematics program evaluation</li>
                                   <li>Assessment instrument development</li>
@@ -178,7 +194,7 @@
                           </div>
                         <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mcrdz/">Michael Rodriguez</a><small class="clear normal">Campbell Leadership Chair in Education and Human Development, co-founding director of Educational Equity Resource Center</small></h4>
-                                <p><a href="mailto:mcrdz9@umn.edu">Email</a></p>
+                                <p><a href="mailto:mcrdz9@umn.edu">mcrdz9@umn.edu</a></p>
                                 <ul>
                                   <li>Psychometric properties of tests</li>
                                   <li>Effects of item formats</li>
@@ -192,19 +208,18 @@
                       <section class="margin-top-1">
                         <div class="half">
                             <div class="span-3">
-                              <img src="http://apps.cehd.umn.edu/people/Headshot/ZiefflerA-2009.jpg" class="mobile-hide" alt="Andy Zieffler headshot"></div>
+                              <img src="http://apps.cehd.umn.edu/people/Headshot/ZiefflerA-2009.jpg" class="mobile-hide" alt="Andy Zieffler headshot">
+                            </div>
                             <div class="span-9">
-                                <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/zief0002/">Andy Zieffler</a></h4>
-                                    <p><a href="mailto:zief0002@umn.edu">Email</a></p>
+                                <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/zief0002/">Andy Zieffler</a> <small class="clear h6"><a href="mailto:zief0002@umn.edu">zief0002@umn.edu</a></small></h4>
                                 <ul>
                                     <li>Teaching and learning of statistics</li>
                                     <li>Measurement and assessment of statistics education research</li>
                                     <li>Statistical computing and integration of computing into statistics curriculum</li>
                                 </ul>
                             </div>
-                        </div>
+                      </div>
                       </section>
-    </div>
 </div>
 {% endblock %}
 {% import "edpsych/macros/news-feed.html" as newsfeed %}

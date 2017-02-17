@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Special education B.S. & ABS licensure" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
@@ -21,10 +22,10 @@
       <div class="row emphasis subtle">
           <div class="container">
             <div class="half">
-                <p class="text-center"><a href="http://www.cehd.umn.edu/undergraduate/transfer/apply-outside-umn.html" class="button center">Transfer to the program</a></p>
+                <p class="text-center"><a href="http://www.cehd.umn.edu/undergraduate/transfer/apply-outside-umn.html" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped BS transfer") }} class="button center">Transfer to the program</a></p>
             </div>
             <div class="half">
-                <p class="text-center"><a href="http://www.cehd.umn.edu/undergraduate/admissions.html" class="button center">Apply as a freshman</a></p>
+                <p class="text-center"><a href="http://www.cehd.umn.edu/undergraduate/admissions.html" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped BS apply as freshman") }}  class="button center">Apply as a freshman</a></p>
               </div>
           </div>
       </div>
