@@ -4,20 +4,19 @@ namespace CEHD\App\App;
 require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
+require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
 
 use Klein;
 use UMN\CEHD\Dict;
 
 /**
- * Custom App class
+ * Custom BaseApp class
  */
-class App extends \Klein\App
+class BaseApp extends \Klein\App
 {
     protected $base_path;
 
     protected $yaml_file_paths;
-
-    // public $base_config_path;
 
     public $router;
 
@@ -27,15 +26,66 @@ class App extends \Klein\App
 
     public $nav_items;
 
+    public $copyright_yr;
+
     function __construct($yaml_file_paths)
     {
         $this->base_path = __DIR__ . '/../../';
-        // $this->base_config_path = $this->base_path . 'cehd/config/app/config.yml';
         $this->router = new Klein\Klein(null, $this);
         $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->yaml_file_paths = $yaml_file_paths;
         $this->config = $this->_setConfig();
         $this->nav_items = $this->_setNav();
+        $this->copyright_yr = date("Y");
+
+        $this->register('template', function() {
+            $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
+            $twig->addGlobal('config', $this->config);
+            $twig->addGlobal('nav_open', $this->config["nav_open"]);
+            return $twig;
+        });
+
+        $this->register('http_client', function() {
+            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+            return $http_client;
+        });
+
+        $this->register('helpers', function() {
+            $helpers = new \CEHD\Helpers\Helper\Helper;
+            return $helpers;
+        });
+
+        $this->router->respond('GET', '*', function($request, $response, $service, $app) {
+            $uri_components = explode("?", $request->uri());
+
+            $uri = $uri_components[0];
+
+            if (count($uri_components) > 1)
+            {
+                $query_str = $uri_components[1];
+            }
+            else
+            {
+                $query_str = "";
+            }
+
+            if (!strpos($uri, "services"))
+            {
+                // grab the last character in the uri to see if it's a slash
+                $last = substr($uri, -1);
+
+                // grab the last 4 characters to see if it's "html". Anything ending in
+                // .html is likely to need a specific redirect
+                $html = substr($uri, -4);
+
+                if ($last !== "/" && $html !== "html")
+                {
+                    $with_slash = $uri . "/";
+                    $redirect_uri = $uri . "/" . $query_str;
+                    $response->redirect($redirect_uri, 301)->send();
+                }
+            }
+        });
     }
 
     protected function _setConfig()
@@ -49,14 +99,22 @@ class App extends \Klein\App
 
         // build a few more in
         $config->asset_base = $this->_setSubBasePath($config, "base_url", "/assets");
-        $config->asset_base = $this->_setSubBasePath($config, "asset_base", "/dist/views");
+        $config->nunjucks_view_base = $this->_setSubBasePath($config, "asset_base", "/dist/views");
+        $config->css_base = $this->_setSubBasePath($config, "asset_base", "/dist/css");
+        $config->js_base = $this->_setSubBasePath($config, "asset_base", "/dist/js");
+        $config->nav_open = false;
+
+        // Check for main nav state
+        if (array_key_exists('cehd-navOpen', $_COOKIE)) {
+            $config->nav_open = $_COOKIE['cehd-navOpen'];
+        }
         return $config->toArray();
     }
 
     // $config_obj should be a Dict instance
-    protected function _setSubBasePath($config_obj, $base_key, $new_sub_base_key)
+    protected function _setSubBasePath($config_obj, $base_key, $new_sub_path)
     {
-        return $config_obj->get($base_key) ? $config_obj->$base_key . $new_sub_base_key : $new_sub_base_key;
+        return $config_obj->get($base_key) ? $config_obj->$base_key . $new_sub_path : $new_sub_path;
     }
 
     protected function _setNav()
@@ -64,49 +122,5 @@ class App extends \Klein\App
         $nav_helper = new \CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($this->yaml_file_paths["nav"]);
         return $nav_helper->get_nav();
-    }
-
-    protected function _configureRouter()
-    {
-
-    }
-
-    protected function _configureApp()
-    {
-        /**
-        * Register Twig as the template engine for the app
-        */
-        $this->register('template', function() {
-            // Set up nav from yaml file
-
-            // // Set up configuration variables for Twig
-            // $asset_base = $this->config['base_url'] . '/assets';
-            // $nunjucks_view_base = $asset_base . '/dist/views';
-            // $css_base = $asset_base . '/dist/css';
-            // $js_base = $asset_base . '/dist/js';
-            // $cehd_edpsych_nav_open = false;
-            // $twig = $bootstrap_helper::bootstrap_twig($this->config['debug']);
-            // $twig_config = [
-            //     'asset_base' => $asset_base,
-            //     'base_url' => $this->config['base_url'],
-            //     'copyright_year' => date('Y'),
-            //     'css_base' => $css_base,
-            //     'dept_name' => $this->config['dept_name'],
-            //     'js_base' => $js_base,
-            //     'nunjucks_view_base' => $nunjucks_view_base,
-            //     'nav_items' => $nav_helper->get_nav(),
-            //     'site_config' => $this->config,
-            // ];
-
-            // // Check for main nav state
-            // if (array_key_exists('cehd-edpsych-navOpen', $_COOKIE)) {
-            //     $cehd_edpsych_nav_open = $_COOKIE['cehd-edpsych-navOpen'];
-            // }
-
-            // // Add global variables to Twig
-            // $twig->addGlobal('config', $twig_config);
-            // $twig->addGlobal('cehd_edpsych_nav_open', $cehd_edpsych_nav_open);
-            // return $twig;
-        });
     }
 }
