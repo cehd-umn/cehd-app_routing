@@ -15,6 +15,7 @@ class Bootstrap
             'cache' => BASE_PATH . 'cache', // Look here if vars don't show up
             'debug' => $debug,
             'autoescape' => true,
+            'auto_reload' => true,
         ));
 
         if ($debug)
