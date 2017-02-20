@@ -206,12 +206,22 @@ $router->with($global_config['base_url'], function() use ($router) {
      * Examples
      * Only loads if $_SERVER['SERVER_NAME'] contains "scotch" or "drydock"
      */
-    $router->respond('GET', '/examples/', function($request, $response, $service, $app) {
-        // Only expose this route if not in production
-        if (!$app->site_config['is_prod'])
-        {
-            echo $app->template->render('edpsych/examples/index.html', []);
-        }
+    $router->with('/examples', function() use ($router) {
+        $router->respond('GET', '/', function($request, $response, $service, $app) {
+            // Only expose this route if not in production
+            if (!$app->site_config['is_prod'])
+            {
+                echo $app->template->render('edpsych/examples/index.html', []);
+            }
+        });
+
+        $router->respond('GET', '/macros/', function($request, $response, $service, $app) {
+            // Only expose this route if not in production
+            if (!$app->site_config['is_prod'])
+            {
+                echo $app->template->render('edpsych/examples/macros.html', []);
+            }
+        });
     });
 
     $router->with('/contact.html', function() use ($router) {
