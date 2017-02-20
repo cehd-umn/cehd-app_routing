@@ -79,6 +79,10 @@ $router->with('/Programs', function() use ($router) {
         $response->redirect($app->site_config['base_url'] . '/programs/foundations/social-psych/', 301)->send();
     });
 
+    $router->respond('GET', '/Foundations/certificate/talent.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/programs/foundations/talent/', 301)->send();
+    });
+
     $router->respond('GET', '/Foundations/certificate/Talent.html', function($request, $response, $service, $app) {
         $response->redirect($app->site_config['base_url'] . '/programs/foundations/talent/', 301)->send();
     });
@@ -149,6 +153,10 @@ $router->with('/Programs', function() use ($router) {
 
     $router->respond('GET', '/SchoolPsych/master.html', function($request, $response, $service, $app) {
         $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/master/', 301)->send();
+    });
+
+    $router->respond('GET', '/SchoolPsych/doctor.html', function($request, $response, $service, $app) {
+        $response->redirect($app->site_config['base_url'] . '/programs/schoolpsych/doctor/', 301)->send();
     });
 
     $router->respond('GET', '/SchoolPsych/SPSA.html', function($request, $response, $service, $app) {
