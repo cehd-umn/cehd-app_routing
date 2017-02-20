@@ -1,0 +1,24 @@
+---
+- with: "/"
+  route: "/"
+  method: GET
+  callback: function_name
+  template: index.html
+  template_data:
+    - section: home
+- with: "/about"
+  route:
+    - with: "/"
+      route: "/"
+      method: GET
+      callback: function_name
+      template: "about/index.html"
+      template_data:
+        - section: about
+    - with: "/diversity"
+      route: "/"
+      method: GET
+      callback: function_name
+      template: "about/diversity.html"
+      template_data:
+        - section: about

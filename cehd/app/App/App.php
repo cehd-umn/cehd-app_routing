@@ -18,6 +18,8 @@ class BaseApp extends \Klein\App
 
     protected $yaml_file_paths;
 
+    protected $routes;
+
     public $router;
 
     public $config;
@@ -86,6 +88,16 @@ class BaseApp extends \Klein\App
                 }
             }
         });
+
+        $this->routes =  new Dict\Dict(
+            $this->bootstrap_helpers->load_yaml(
+                $this->yaml_file_paths["routes"])
+        );
+
+        foreach($this->routes as $route => $route_info)
+        {
+            $this->router->respond('GET', $route, $this->_loadStaticTemplate);
+        }
     }
 
     protected function _setConfig()
@@ -122,5 +134,18 @@ class BaseApp extends \Klein\App
         $nav_helper = new \CEHD\Helpers\Navigation\Navigation();
         $nav_helper->set_nav($this->yaml_file_paths["nav"]);
         return $nav_helper->get_nav();
+    }
+
+    protected function _loadStaticTemplate(
+        $request, $response, $service, $app)
+    {
+        $route_info = $this->routes->get($request->uri());
+        if ($route_info)
+        {
+            echo $app->template->render(
+                $route_info["template"],
+                $route_info["template_data"]
+            );
+        };
     }
 }
