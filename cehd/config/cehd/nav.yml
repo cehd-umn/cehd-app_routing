@@ -1,0 +1,12 @@
+---
+- name: Home
+  href: /
+  section: home
+- name: Alumni
+  href: /alumni/
+- name: About
+  href: /about/
+  section: about
+  subnav:
+    - name: Diversity & Inclusion
+      href: /about/diversity-inclusion/
