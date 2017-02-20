@@ -1,0 +1,101 @@
+{% extends "edpsych/layout/section.html" %}
+{% set page_title = "Ed Psych Code Examples: Macros" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        samp, code {
+            font-family: monospace;
+        }
+
+        samp {
+            background: #f0f0f0;
+            color: #79111a;
+            font-family: monospace;
+        }
+
+        code {
+            display: block;
+            padding: 1em;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .grid-example {
+            background: #f0f0f0;
+        }
+    </style>
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="feature half margin-top-2">
+            <p>Our templating system (Twig) has some nice features to help with
+            repetitive tasks on pages.</p>
+            <p><a
+            href="http://twig.sensiolabs.org/doc/1.x/templates.html#macros">Twig
+            macros</a> can help alleviate the pain of repetitive code across
+            pages and prevent errors by keeping things consistent.</p>
+
+            <h2>Google Analytics Click Tracking</h2>
+
+            <p>The macro for tracking click events will make it easier to
+            consistently track events&mdash;including links to other sites.</p>
+
+            <h3>Step One: Include the macro</h3>
+
+            <p>You have to include the macro to be able to use it. Macros are
+            organized in <code>app_routing/templates/edpsych/macros</code></p>
+
+            <p>Make sure you put it at the top, preferably just after the "extends" declaration at the top:</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="twig">{%- raw -%}
+{% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+{% endraw %}</code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="feature half margin-top-2">
+            <h3>Step Two: Use the macro</h3>
+            <p>In the past we've included code like this for click tracking:</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="html">&lt;a href=&quot;/link&quot; onclick=&quot;ga('send', 'event', 'how to apply', 'click', 'csppmain');&quot;&gt;Link&lt;/a&gt;</code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="feature half margin-top-2">
+            <p>That's a bad practice for two reasons:</p>
+            <ol>
+                <li>It violates separation of concerns by mixing JavaScript in with the HTML</li>
+                <li>It will never be executed on a page that leaves the website</li>
+            </ol>
+
+            <p>This site has JavaScript included in it on every page that is set up
+            to work with the code that the GA tracking macro inserts.</p>
+
+            <p>Using the macro follows a very similar pattern, but looks like this instead:
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="html">{%- raw -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endraw %}</code></pre>
+    </div>
+</div>
+{% endblock %}

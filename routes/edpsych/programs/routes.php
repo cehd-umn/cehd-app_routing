@@ -2,6 +2,36 @@
 /**
  * PROGRAMS AND DEGREES Routes
  */
+$router->with('/programs/Foundations', function() use ($router) {
+    $router->respond('GET', '*', function($request, $response, $service, $app) {
+        /**
+            This is really hacky, but since past URLs were case insensitive, we
+            have to match first against "Programs" (with uppercase P) and
+            redirect to where the Foundations url (with uppercase F) redirect
+            will hit and go to the right place. This is just one reason why we
+            shouldn't have case insensitive URLs.
+        */
+        $replace_location = strpos($request->uri(), "programs");
+        $new_uri = substr_replace($request->uri(), "P", $replace_location, 1);
+        $response->redirect($new_uri, 301)->send();
+    });
+});
+
+$router->with('/programs/SchoolPsych', function() use ($router) {
+    $router->respond('GET', '*', function($request, $response, $service, $app) {
+        /**
+            This is really hacky, but since past URLs were case insensitive, we
+            have to match first against "Programs" (with uppercase P) and
+            redirect to where the Foundations url (with uppercase F) redirect
+            will hit and go to the right place. This is just one reason why we
+            shouldn't have case insensitive URLs.
+        */
+        $replace_location = strpos($request->uri(), "programs");
+        $new_uri = substr_replace($request->uri(), "P", $replace_location, 1);
+        $response->redirect($new_uri, 301)->send();
+    });
+});
+
 $router->with('/programs', function() use ($router) {
     // Redirects are in their own file
     require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';

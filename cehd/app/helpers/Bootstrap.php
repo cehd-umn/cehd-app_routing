@@ -13,6 +13,7 @@ class Bootstrap
         $loader = new \Twig_Loader_Filesystem(BASE_PATH . 'templates');
         $twig = new \Twig_Environment($loader, array(
             'cache' => BASE_PATH . 'cache', // Look here if vars don't show up
+            'auto_reload' => true, // this setting forces the templates to recompile if they are modified
             'debug' => $debug,
             'autoescape' => true,
             'auto_reload' => true,
