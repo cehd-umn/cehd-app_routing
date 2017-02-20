@@ -147,7 +147,7 @@ $router->with("/EdPsych", function() use ($router)
 {
     $router->respond('GET', '*', function($request, $response, $service, $app) {
         $new_uri = substr_replace($request->uri(), "edpsych", 1, 7);
-		$response->redirect($new_uri, 301)->send();
+        $response->redirect($new_uri, 301)->send();
     });
 });
 
