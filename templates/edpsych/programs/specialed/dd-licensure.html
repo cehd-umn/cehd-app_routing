@@ -1,11 +1,12 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Developmental disabilities teaching licensure & M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block heading_1 %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="text-center">Developmental disabilities<br />teaching licensure &amp; M.Ed.</h2>
+        <h2 class="text-center">Developmental disabilities (D.D.)</br>teaching licensure &amp; M.Ed.</h2>
         <div class="twothirds feature">
           <h3 class="text-center">Help solve learning challenges for students<br />with developmental disabilities</h3>
           <p>In the developmental disabilities program, you'll receive the training you need to teach students, kindergarten through grade 12, with developmental disabilities. You'll leave the program with your license and the skills you need to help solve the challenges of learning for students with developmental disabilities and their families.</p>
@@ -21,7 +22,7 @@
     </section>
     <section>
         <div>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "speddd") }} class="button center">How to apply</a></p>
         </div>
   </section>
   <section>
@@ -49,7 +50,7 @@
               </div>
               <div class="span-9">
                   <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/shupp/">Susan Hupp</a><small class="clear h6">Developmental disabilities licensure &amp; M.Ed. coordinator</small></h4>
-                  <p><a href="mailto:shupp@umn.edu">Email</a></p>
+                  <p><a href="mailto:shupp@umn.edu">shupp@umn.edu</a></p>
                   <ul>
                       <li>Examine cognitive development of students with severe disabilities, including deaf-blind education</li>
                       <li>Examine mastery motivation of children with and without disabilities and of various cultures</li>
@@ -64,7 +65,7 @@
              </div>
              <div class="span-9">
                <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mcmas004/">Kristen McMaster</a><small class="clear h6">Special education program coordinator</small></h4>
-                 <p><a href="mailto:mcmas004@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/mcmaster/">Lab</a></p>
+                 <p><a href="mailto:mcmas004@umn.edu">mcmas004@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/mcmaster/">Lab</a></p>
                  <p>Create conditions for successful response to intervention of academically diverse learners by:</p>
                  <ul>
                    <li>Promoting teachers’ use of data-based decision-making and evidence-based instruction</li>
@@ -79,8 +80,7 @@
                 <img src="http://apps.cehd.umn.edu/people/Headshot/PeperChristine-2013.jpg" class="mobile-hide" alt="Christine Peper headshot">
             </div>
             <div class="span-9">
-                <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/harr0115/">Christine Peper</a></h5>
-                <p><a href="mailto:harr0115@umn.edu">Email</a></p>
+                <h5 class="no-margin-top"><a href="{{ config.base_url }}/people/harr0115/">Christine Peper</a><small class="clear h6"><a href="mailto:harr0115@umn.edu">harr0115@umn.edu</a></small></h5>
                 <ul>
                   <li>Transition planning and programming</li>
                   <li>Self-determination</li>
@@ -99,8 +99,8 @@
         <div class="twothird feature">
         <div class="half">
         <h4>Program contact</h4>
-        <p><a href="http://www.cehd.umn.edu/EdPsych/people/Staff/Vegell.html">Alicia Vegell</a>, program staff special education</p>
-        <p><a href="mailto:acvegell@umn.edu">Email</a></p>
+        <p><a href="{{ config.base_url }}/people/acvegell/">Alicia Vegell</a>, program staff special education</p>
+        <p><a href="mailto:acvegell@umn.edu">acvegell@umn.edu</a></p>
         <p>612-626-0367</p>
         </div>
         <div class="half">

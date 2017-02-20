@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Autism Spectrum Disorder (ASD)
 teaching licensure & M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -24,7 +25,7 @@ teaching licensure & M.Ed." %}
             </div>
         </section>
         <section>
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" class="button center">How to apply</a></p>
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedMEd") }} class="button center">How to apply</a></p>
         </section>
         <section>
           <div class="twothirds">
@@ -35,7 +36,7 @@ teaching licensure & M.Ed." %}
               <h4>License exam requirements</h4>
               <p><a href="http://www.cehd.umn.edu/graduate/licensing/default.html">Minnesota Teacher Licensure Exam (MTLE) Requirements</a></p>
               <h4>Related certificate</h4>
-              <p><a href="http://www.cehd.umn.edu/EdPsych/programs/SpecialEd/certificate/Autism.html">Autism Spectrum Disorders Certificate Program</a></p>
+              <p><a href="{{ config.base_url }}/programs/specialed/certificate/autism/">Autism Spectrum Disorders Certificate Program</a></p>
           </div>
           <div class="third">
             <h3>Careers</h3>
@@ -56,7 +57,7 @@ teaching licensure & M.Ed." %}
               </div>
               <div class="span-9">
                   <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/vpfleury/">Veronica Fleury</a><small class="clear h6">Autism Spectrum Disorder licensure &amp; M.Ed. coordinator</small></h4>
-                  <p><a href="mailto:vpfleury@umn.edu">Email</a></p>
+                  <p><a href="mailto:vpfleury@umn.edu">vpfleury@umn.edu</a></p>
                   <ul>
                       <li>Examine how core characteristics of ASD inhibit or promote students’ ability to participate in classroom activities</li>
                       <li>Identify and develop instructional strategies to address early academic and social-communication difficulties for young children with ASD</li>
@@ -69,8 +70,7 @@ teaching licensure & M.Ed." %}
                <img src="https://apps.cehd.umn.edu/people/Headshot/WolffJason-2014.jpg" class="mobile-hide" alt="Jason Wolff headshot">
              </div>
              <div class="span-9">
-               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jjwolff/">Jason Wolff</a></h4>
-                 <p><a href="mailto:jjwolff@umn.edu">Email</a> | <a href="{{ config.base_url }}/research/labs/wolff/">Lab</a></p>
+               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jjwolff/">Jason Wolff</a><small class="clear h6"><a href="mailto:jjwolff@umn.edu">jjwolff@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/wolff/">Lab</a></small></h4>
                  <ul>
                    <li>Early brain and behavioral development in children with autism spectrum disorder</li>
                    <li>Restricted and repetitive behaviors associated with autism and other developmental disabilities</li>
@@ -86,19 +86,24 @@ teaching licensure & M.Ed." %}
     <div class="container">
         <h3 class="text-center">Contacts</h3>
         <div class="twothird feature">
-        <div class="half">
+        <div class="third">
+          <h4>Program advisor</h4>
+          <p><a href="{{ config.base_url }}/people/coneill/">Charissa O'Neill</a></p>
+          <p><a href="mailto:coneill@umn.edu">coneill@umn.edu</a></p>
+          <p><a href="https://calendar.google.com/calendar/selfsched?sstoken=UUpPUXFpUy1qZ3BBfGRlZmF1bHR8Nzk1MDc1Mjc1MmY4N2Y1NzQyYTg4ZTgyOGVlMTBhNzc">Make an appointment</a></p>
+          <p>612-626-7638</p>
+        </div>
+        <div class="third">
         <h4>Program contact</h4>
-        <p><a href="http://www.cehd.umn.edu/EdPsych/people/Staff/Vegell.html">Alicia Vegell</a>, program staff special education</p>
-        <p><a href="mailto:acvegell@umn.edu">Email</a></p>
+        <p><a href="{{ config.base_url }}/people/acvegell/">Alicia Vegell</a>, program staff special education</p>
+        <p><a href="mailto:acvegell@umn.edu">acvegell@umn.edu</a></p>
         <p>612-626-0367</p>
         </div>
-        <div class="half">
+        <div class="third">
         <h4>University contacts</h4>
         <p><a href="https://diversity.umn.edu/disability/">Disability Services</a></p>
         <p>612-626-1333</p>
-        <p><a href="https://www.revisor.mn.gov/rules/?id=8710.5400">*Minnesota Department of Education</a></p>
-        <p><a href="http://www.ldonline.org/about/partners/njcld/archives">**National Joint Committee on Learning Disabilities</a></p>
-        </div>
+       </div>
       </div>
     </div>
 </div>

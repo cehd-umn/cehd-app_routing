@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Admissions: School Psychology Ph.D. & M.A./S.C." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -37,7 +38,7 @@
           <p>MELAB: 80</p>
         </ul>
         <h4>Number of students accepted</h4>
-        <p>About one half of the students admitted each year are for the <a href="http://www.cehd.umn.edu/EdPsych/programs/SchoolPsych/doctor.html">Ph.D. degree</a> and the other half for the <a href="http://www.cehd.umn.edu/EdPsych/programs/SchoolPsych/master.html">M.A./Specialist degree</a>. Approximately 30% of Ph.D. applicants were admitted for fall 2016.</p>
+        <p>About one half of the students admitted each year are for the <a href="{{ config.base_url }}/programs/schoolpsych/doctor/">Ph.D. degree</a> and the other half for the <a href="{{ config.base_url }}/programs/schoolpsych/master/">M.A./Specialist degree</a>. Approximately 30% of Ph.D. applicants were admitted for fall 2016.</p>
         <h4>Additional student admissions, outcomes and other data</h4>
         <p>Get more information to help you make an informed decision about entering the program on the Student Admissions, Outcomes and Other Data page</p>
 </div>
@@ -49,7 +50,7 @@
     <p>The admissions committee considers a variety of factors including your prior academic achievement, GRE scores, relevant employment and life experiences, personal statement, letters of recommendation, and compatibility of your clinical and research interests with those of the program and faculty.</p>
     <h4>January Admissions decisions</h4>
     <p>Interviews typically occur at the beginning of January. The date on which you will hear back from the program will vary based on the volume of applications received.</p>
-    <p>Applicants who are recommended for admission by the program will receive a letter from School Psychology indicating our decision. The Graduate Admissions Office will then make a final review of your documents and will inform you of the final decision via the email address you provided on your <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD">ApplyYourself</a> online application.</p>
+    <p>Applicants who are recommended for admission by the program will receive a letter from School Psychology indicating our decision. The Graduate Admissions Office will then make a final review of your documents and will inform you of the final decision via the email address you provided on your <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }}>ApplyYourself</a> online application.</p>
 </div>
 </section>
 <div class="row emphasis margin-top-1">
@@ -58,10 +59,10 @@
     </div>
     <div class="twothirds feature margin-2">
             <div class="third">
-              <img src="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/images/Rebecca-Edmunds.jpg" class="mobile-hide" alt="Rebecca Edmunds headshot">
+              <img src="{{ config.asset_base }}/dist/images/future-students/Rebecca_Edmunds_headshot.jpg" class="mobile-hide" alt="Rebecca Edmunds headshot">
             </div>
     <div class="twothird">
-                <h4 class="no-margin-top">Rebecca Edmunds</h4>
+                <h4 class="no-margin-top">Rebecca Edmunds<small class="clear h5"><a href="mailto:edmun050@umn.edu">edmun050@umn.edu</a></small></h4>
             <p><strong>Interests&#58; </strong> How academic enablers (i.e. motivation and engagement) support student learning in mathematics and the fidelity of implementation as interventions are applied to new contexts</p>
               <p><strong>Work&#58; </strong> Prior to entering graduate school, Rebecca worked for an out-of-school time organization, ACES, to support fourth through eighth grade students in the Twin Cities. She previously served with AmeriCorps at Farnsworth Aerospace Magnet, a preK-8 STEM magnet in the St. Paul public school district. Currently, Rebecca is working with Dr. Codding on the development of a math intervention and at CAREI on the <a href="http://www.cehd.umn.edu/carei/assembly/">District Assembly project</a>.</p>
     </div>
@@ -72,8 +73,8 @@
       <h3 class="text-center">How to apply</h3>
       <section>
         <div class="feature twothirds">
-        <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" class="button center no-margin-top">Start your application on</br> ApplyYourself</a></p>
-        <p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD">ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
+        <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }}  class="button center no-margin-top">Start your application on</br> ApplyYourself</a></p>
+        <p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }} >ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
         <h4 id="gradapp" class="text-center">Graduate school application</h4>
         <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Test Information-Self Reported, Languages, Employment/Residence Information, Financial Support, Legal agent/privacy statement, Applicant Statement 1 (Statement of Interest), Resume/CV, Graduate Program Supplemental Application, Upload 2 (Critical Issue Essay), Transcripts and Recommendations.</p>
         <p><strong>Optional fields&#58;  </strong>Awards &amp; Activities, Applicant Statement #2 (Diversity), Extenuating Circumstances Statement; are optional, but will be taken into consideration if submitted.</p>

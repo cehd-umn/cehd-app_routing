@@ -1,4 +1,5 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Admissions: Special education M.Ed." %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -13,7 +14,6 @@
           <li>Undergraduate GPA of at least 2.8 on a 4.0 scale</li>
           <li><a href="#gradapp">Graduate school application</a></li>
           <li><a href="#appfee">Application fee</a></li>
-          <li><a href="#progapp">Program application</a></li>
           <li><a href="#transcripts">Transcripts</a></li>
           <li><a href="#letters">Two letters of recommendation</a></li>
           <li><a href="#nonnativeeng">International applicants only: TOEFL, ITS, etc. test scores</a></li>
@@ -34,7 +34,7 @@
       <p>The admissions committee considers a variety of factors including your prior academic achievement, relevant employment and life experiences, personal statement, and letters of recommendation.</p>
     <h4>Admissions decisions</h4>
       <p>All complete applications for the following summer or fall semester are typically reviewed 6-8 weeks after the March 1 deadline. For updates on the status of your application, visit <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD">ApplyYourself</a> or send an email to the program.</p>
-      <p>The Office of Graduate Admission completes a final review of your materials.  You will receive your official admission decision via the email address provided on th <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" onclick="trackOutboundLink('https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD')">ApplyYourself</a>  online application.</p>
+      <p>The Office of Graduate Admission completes a final review of your materials. You will receive your official admission decision via the email address provided on the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MEd Application Page") }} >ApplyYourself</a>  online application.</p>
 </div>
 </section>
   <div class="row emphasis margin-top-1">
@@ -43,10 +43,10 @@
 
           <div class="twothirds feature margin-2">
               <div class="third">
-                  <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Jeff_Chhay_headshot.jpg" class="mobile-hide" alt="Jeffrey Chhay headshot">
+                  <img src="{{ config.asset_base }}/dist/images/future-students/Jeff_Chhay_headshot.jpg" class="mobile-hide" alt="Jeffrey Chhay headshot">
               </div>
               <div class="twothird">
-                  <h4 class="no-margin-top">Jeffrey Chhay<small class="clear h5">M.Ed. student</small></h4>
+                  <h4 class="no-margin-top">Jeffrey Chhay<small class="clear h5">M.Ed. student | <a href="mailto:chhay002@umn.edu">chhay002@umn.edu</a></small></h4>
                   <p><strong>Interests:</strong> Interested in engaging kids in curriculum who have experienced crises.</p>
                   <p><strong>Future plans:</strong> Jeff is interested in teaching kids with emotional behavior disabilities how to read and write. He grew up receiving special education services as an EBD student himself.</p>
               </div>
@@ -59,8 +59,8 @@
     <div class="feature twothirds">
 <section>
 <h3 class="text-center">How to apply</h3>
-    <p class="text-center"><a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
-<p class="text-center"><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https&#58; //app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD">ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http&#58; //www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
+    <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MEd Application Page") }} class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
+<p class="text-center"><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp&#63;id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "Sped MEd Application Page") }}>ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
 <h4 id="gradapp" class="text-center">Graduate school application</h4>
 <p>Choose the appropriate major/degree objective from the drop-down menu based on the statement below that best describes your situation:</p>
   <ul>
@@ -79,18 +79,18 @@
 <p>*ABS applicants please choose an add-on area you would like to complete as part of your ABS program.</p>
 <p>Please tell us how you heard about the program by selecting an option from the drop down menu.</p>
   <h4 id="appfee" class="text-center">Application fee</h4>
-    <p><a href= "http&#58; //www.grad.umn.edu/admissions/application_instructions/fee/">Visit the Graduate School website for more information</a></p>
+    <p><a href= "http://www.grad.umn.edu/admissions/application_instructions/fee/">Visit the Graduate School website for more information</a></p>
   <h4 id="transcripts" class="text-center">Transcripts</h4>
       <p>Unofficial transcripts or academic records should be uploaded directly to the online application. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
       <p>If you are admitted, the University will then request official copies of this material.</p>
-      <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/">More information about transcripts and credentials</a></p>
+      <p><a href="http://www.grad.umn.edu/admissions/application_instructions/">More information about transcripts and credentials</a></p>
   <h4 id="letters" class="text-center">Letters of recommendation</h4>
     <p>Two letters of recommendation are required. Recommendations should be from professors or others who are able to comment on your educational and professional goals and potential.</p>
     <p>You must input the names and contact information for each recommendation provider in ApplyYourself.</p>
     <p><strong>Applicants to the residency based emotional &amp; behavioral disorders licensure (M.Ed.):</strong> You must be employed by one of our partner school districts and include, as one of your letters of recommendation, a recommendation from your district.</p>
   <h4 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h4>
     <p>Students whose native language is not English are required to submit English Language proficiency scores.</p>
-    <p><a href="http&#58; //www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
+    <p><a href="http://www.grad.umn.edu/admissions/application_instructions/toefl/">More information on English Language test scores</a></p>
   <h4 id="persstmt" class="text-center">Applicant statement #1 - personal statement</h4>
     <p>Upload a statement (not to exceed two double-spaced pages) to your application. The statement should describe your professional goals and any experiences you have had that have influenced your professional goals. This statement is an integral part of your application and will be weighted heavily in its evaluation.</p>
   <h4 id="resumecv" class="text-center">Resume</h4>
