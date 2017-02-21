@@ -30,7 +30,7 @@ gulp.task("cehd-inline-sass-task", function() {
     return gulp.src("./public/assets/src/sass/inline/inline.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(sourcemaps.write("./maps"))
+    .pipe(sourcemaps.write("assets/maps"))
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
