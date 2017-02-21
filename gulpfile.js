@@ -24,6 +24,31 @@ gulp.task("cehd-sass-task", function() {
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
+gulp.task("cehd-javascript", function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: [
+        "./public/edpsych/assets/src/js/edpsych.js",
+        "./public/edpsych/assets/src/js/http_client.js",
+        "./public/edpsych/assets/src/js/renderer.js",
+        "./public/edpsych/assets/src/js/helpers.js",
+        "./public/edpsych/assets/src/js/search_client.js",
+    ],
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source("./public/edpsych/assets/src/js/edpsych.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on("error", gutil.log)
+    .pipe(rename("js/edpsych.min.js"))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./public/edpsych/assets/dist"));
+});
+
 // CEHD watch task
 gulp.task("watch", function() {
     gulp.watch(
@@ -33,10 +58,10 @@ gulp.task("watch", function() {
         ]
     );
 
-    // gulp.watch(
-    //     "./public/cehd/assets/src/js/**/*.js",
-    //     ["javascript"]
-    // );
+    gulp.watch(
+        "./public/assets/src/js/**/*.js",
+        ["cehd-javascript"]
+    );
 });
 
 // Ed Psych

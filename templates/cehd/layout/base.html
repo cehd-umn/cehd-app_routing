@@ -2,7 +2,7 @@
 {% block css %}<link href="{{ config.css_base }}/minified/cehd.css" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | University of Minnesota{% endblock %}
-{% block bottom_js %}{% endblock %}
+{% block bottom_js %}<script src="{{ config.js_base }}/cehd.min.js"></script>{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 <style>
