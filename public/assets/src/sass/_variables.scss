@@ -1,0 +1,25 @@
+@import "colors";
+
+// $heading-map-desktop: (h1: 48px, h2: 36px, h3: 30px, h4: 24px, h5: 20px, h6: 18px);
+// $heading-map-mobile: (h1: 36px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
+$heading-map-desktop: (h1: 48px, h2: 48px, h3: 30px, h4: 24px, h5: 20px, h6: 18px);
+$heading-map-mobile:  (h1: 36px, h2: 36px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
+$subheading-map-desktop: (h1: 36px, h2: 36px, h3: 30px, h4: 24px, h5: 20px, h6: 18px);
+$subheading-map-mobile: (h1: 30px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 14px);
+
+$core-layout-padding-default: 2em;
+$core-layout-padding-small-screen: 1em;
+$core-layout-padding-large-screen: 3em;
+
+$loader-size-lg: 64px;
+$loader-size-sm: 32px;
+$loader-animation-duration: 1.15s;
+
+// Form hack settings
+$fh-textarea-height: 200px;
+$fh-textarea-width: 800px;
+$fh-textarea-max-width: 100%;
+
+// Handy link pseudo-class list
+
+$link-pseudo-classes: (link: $link-base, hover: $link-base-hover, visited: $link-base-visited, active: $link-base-active);

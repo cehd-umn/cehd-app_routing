@@ -9,15 +9,45 @@ var source = require("vinyl-source-stream");
 var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 
+// CEHD
 gulp.task("default", function() {
     runSequence(
-        "javascript",
-        "sass-minified-task",
-        "sass-expanded-task"
+        "cehd-sass-task"
     );
 });
 
-gulp.task("javascript", function () {
+gulp.task("cehd-sass-task", function() {
+    return gulp.src("./public/assets/src/sass/cehd.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
+// CEHD watch task
+gulp.task("watch", function() {
+    gulp.watch(
+        "./public/assets/src/sass/**/*.scss",
+        [
+            "cehd-sass-task",
+        ]
+    );
+
+    // gulp.watch(
+    //     "./public/cehd/assets/src/js/**/*.js",
+    //     ["javascript"]
+    // );
+});
+
+// Ed Psych
+gulp.task("edpsych", function() {
+    runSequence(
+        "edpsych-javascript",
+        "edpsych-sass-minified-task"
+    );
+});
+
+gulp.task("edpsych-javascript", function () {
   // set up the browserify instance on a task basis
   var b = browserify({
     entries: [
@@ -42,7 +72,7 @@ gulp.task("javascript", function () {
     .pipe(gulp.dest("./public/edpsych/assets/dist"));
 });
 
-gulp.task("sass-minified-task", function() {
+gulp.task("edpsych-sass-minified-task", function() {
     return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
@@ -50,14 +80,8 @@ gulp.task("sass-minified-task", function() {
     .pipe(gulp.dest("./public/edpsych/assets/dist/css/minified/"));
 });
 
-gulp.task("sass-expanded-task", function() {
-    return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
-    .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
-    .pipe(gulp.dest("./public/edpsych/assets/dist/css/unminified/"));
-});
-
-// Watch task
-gulp.task("watch", function() {
+// Ed Psych watch task
+gulp.task("watch-edpsych", function() {
     gulp.watch(
         "./public/edpsych/assets/src/sass/**/*.scss",
         [
@@ -69,10 +93,5 @@ gulp.task("watch", function() {
     gulp.watch(
         "./public/edpsych/assets/src/js/**/*.js",
         ["javascript"]
-    );
-
-    gulp.watch(
-        "./public/edpsych/assets/src/views/**/*.html",
-        ["copy-views"]
     );
 });

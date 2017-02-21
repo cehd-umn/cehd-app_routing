@@ -1,0 +1,69 @@
+// Base styles
+$base-white: #fff;
+$base-black: #000;
+$base-light-grey: #e2e2e2;
+$base-grey: #c0c0c0;
+$base-medium-grey: #999;
+$base-dark-grey: #808080;
+$base-charcoal: #666;
+$base-blue: #09f;
+$base-light-blue: #d9edf7;
+$base-medium-blue: #3a87ad;
+$base-dark-blue: #2d6987;
+$base-red: #f00;
+$base-dark-red: #7a0019;
+$base-green: #008000;
+
+// UMN Colors
+$umn-maroon: #7a0019;
+$umn-gold: #fc3;
+$umn-secondary-gold: #ffde7a;
+$umn-light-grey: #eee;
+$umn-medium-grey: #ccc;
+$umn-dark-grey: #777;
+$umn-charcoal: #333;
+$umn-light-grey-foreground: #d5d6d2;
+
+// States (error, success, etc.)
+
+$warning-light-orange: #fbeed5;
+$warning-light-yellow: #fcf8e3;
+$warning-text-yellow: #c09853;
+$warning-text-dark-yellow: #a47e3c;
+
+$error-text-red: #b94a48;
+$error-light-red: #f2dede;
+$error-medium-red: #eed3d7;
+$error-text-dark-red: #953b39;
+
+$success-light-green: #dff0d8;
+$success-text-green: #468847;
+$success-medium-green: #d6e9c6;
+$success-text-dark-green: #356635;
+
+$text-shadow-rgba: rgba(255, 255, 255, .5);
+
+// Links
+
+$link-base: #005d9a;
+$link-base-active: $link-base;
+$link-base-hover: $link-base;
+$link-base-visited: $link-base;
+
+// nav
+$nav-background-color: rgba(247, 247, 247, .95);
+$box-shadow-rgba: rgba(0, 0, 0, .15);
+
+// CEHD
+$cehd-tertiary-gold: #ffec99;
+$cehd-charcoal: #555;
+$cehd-light-grey: rgb(239, 239, 238);
+
+// Search
+
+$search-primary-blue: rgb(64, 116, 173);
+$search-secondary-blue: rgb(15, 63, 89);
+$search-tertiary-maroon: rgb(122, 0, 25);
+
+// Home
+$home-figcaption-background-color: rgba(0, 0, 0, .4);
