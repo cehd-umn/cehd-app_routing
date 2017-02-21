@@ -52,12 +52,11 @@
 </style>
 {% endblock %}
 {% block section_wordmark %}
-    <a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a>
     <nav id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
         <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
         <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</span></button>
         <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
-        {% for nav_item in config.nav_items %}
+        {% for nav_item in nav_items %}
             {% set has_sub = nav_item.subnav %}
             <li role="treeitem" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
                 <a href="{{ config.base_url }}{{ nav_item.href }}" tabindex="0">{{ nav_item.name }}</a>
@@ -95,9 +94,13 @@
                     <div class="dept-footer-container contact">
                         <h2 class="dept-footer-heading h4">Contact Us</h2>
                     </div>
-                    <p><a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a></p>
+                    <p><a href="{{config.base_url}}/"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
                     <address>
-                    Address goes here
+                    <p><a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
+                        612-626-9252<br>
+                        104 Burton Hall<br>
+                        178 Pillsbury Dr. S.E.<br>
+                        Minneapolis, MN 55455
                     </address>
                     <p><a href="{{config.base_url}}/contact/">Contact form</a> | <a href="http://www.cehd.umn.edu/directory/">Directory</a></p>
                 </div>

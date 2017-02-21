@@ -44,6 +44,7 @@ class BaseApp extends \Klein\App
             $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
             $twig->addGlobal('config', $this->config);
             $twig->addGlobal('nav_open', $this->config["nav_open"]);
+            $twig->addGlobal('nav_items', $this->nav_items);
             return $twig;
         });
 

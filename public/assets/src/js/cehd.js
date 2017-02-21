@@ -7,7 +7,7 @@ var $open_button = $("#menuicon-wrapper");
 var $close_button = $("#navhide");
 var $nav = $("#main-nav");
 var $links = $nav.find("a");
-var cookie_namespace = "cehd-edpsych";
+var cookie_namespace = "cehd-cehd";
 var cookie_name = cookie_namespace + "-navOpen";
 var cookie_options = {
     path: "/"
