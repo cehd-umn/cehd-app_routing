@@ -2,13 +2,12 @@
 
 namespace CEHD\App\Routes\StaticRoutes;
 
-require_once __DIR__ . "../app/App/App.php";
+require_once __DIR__ . "/../../cehd/app/App/App.php";
 
-// @todo write these yaml files
-$base_app_config  = __DIR__ . "../../config/app/config.yml";
-$cehd_app_config  = __DIR__ . "../../config/cehd/config.yml";
-$nav_yaml_file    = __DIR__ . "../../config/cehd/nav.yml";
-$routes_yaml_file = __DIR__ . "../../config/cehd/routes.yml";
+$base_app_config  = __DIR__ . "/../../cehd/config/app/config.yml";
+$cehd_app_config  = __DIR__ . "/../../cehd/config/cehd/config.yml";
+$nav_yaml_file    = __DIR__ . "/../../cehd/config/cehd/nav.yml";
+$routes_yaml_file = __DIR__ . "/../../cehd/config/cehd/routes.yml";
 
 
 $yaml_file_paths = [

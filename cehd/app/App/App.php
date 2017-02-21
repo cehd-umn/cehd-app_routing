@@ -96,7 +96,12 @@ class BaseApp extends \Klein\App
 
         foreach($this->routes as $route => $route_info)
         {
-            $this->router->respond('GET', $route, $this->_loadStaticTemplate);
+            $this->router->respond('GET', $route, function(
+                $request, $response, $service, $app)
+            {
+                echo $this->_loadStaticTemplate(
+                    $request, $response, $service, $app);
+            });
         }
     }
 
@@ -142,7 +147,7 @@ class BaseApp extends \Klein\App
         $route_info = $this->routes->get($request->uri());
         if ($route_info)
         {
-            echo $app->template->render(
+            return $app->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
             );
