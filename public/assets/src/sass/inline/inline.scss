@@ -6,8 +6,9 @@
 ///
 /// CSS Reset
 
-@import "bourbon/bourbon";
-@import "colors";
+@import "../bourbon/bourbon";
+@import "../colors";
+@import "../variables";
 
 a,
 abbr,
@@ -349,3 +350,5 @@ figcaption {
 figure {
     display: inline-block;
 }
+
+@import "umn-hf";

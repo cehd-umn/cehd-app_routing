@@ -13,12 +13,21 @@ var uglify = require("gulp-uglify");
 gulp.task("default", function() {
     runSequence(
         "cehd-sass-task",
+        "cehd-inline-sass-task",
         "cehd-javascript"
     );
 });
 
 gulp.task("cehd-sass-task", function() {
     return gulp.src("./public/assets/src/sass/cehd.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
+gulp.task("cehd-inline-sass-task", function() {
+    return gulp.src("./public/assets/src/sass/inline/inline.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
     .pipe(sourcemaps.write("./maps"))
@@ -56,6 +65,7 @@ gulp.task("watch", function() {
         "./public/assets/src/sass/**/*.scss",
         [
             "cehd-sass-task",
+            "cehd-inline-sass-task",
         ]
     );
 
