@@ -16,7 +16,7 @@ class BaseApp extends \Klein\App
 {
     protected $base_path;
 
-    protected $yaml_file_paths;
+    protected $file_paths;
 
     protected $routes;
 
@@ -30,12 +30,14 @@ class BaseApp extends \Klein\App
 
     public $copyright_yr;
 
-    function __construct($yaml_file_paths)
+    public $inline_styles;
+
+    function __construct($file_paths)
     {
         $this->base_path = __DIR__ . '/../../';
         $this->router = new Klein\Klein(null, $this);
         $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
-        $this->yaml_file_paths = $yaml_file_paths;
+        $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
@@ -45,6 +47,7 @@ class BaseApp extends \Klein\App
             $twig->addGlobal('config', $this->config);
             $twig->addGlobal('nav_open', $this->config["nav_open"]);
             $twig->addGlobal('nav_items', $this->nav_items);
+            $twig->addGlobal('inline_styles', $this->inline_styles);
             return $twig;
         });
 
@@ -92,7 +95,7 @@ class BaseApp extends \Klein\App
 
         $this->routes =  new Dict\Dict(
             $this->bootstrap_helpers->load_yaml(
-                $this->yaml_file_paths["routes"])
+                $this->file_paths["routes"])
         );
 
         foreach($this->routes as $route => $route_info)
@@ -104,6 +107,8 @@ class BaseApp extends \Klein\App
                     $request, $response, $service, $app);
             });
         }
+
+        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
     }
 
     protected function _setConfig()
@@ -111,7 +116,7 @@ class BaseApp extends \Klein\App
         // merge the contents of the yaml configs
         $config =  new Dict\Dict(
             $this->bootstrap_helpers->bootstrap_config(
-                $this->yaml_file_paths["configs"]
+                $this->file_paths["configs"]
             )
         );
 
@@ -138,7 +143,7 @@ class BaseApp extends \Klein\App
     protected function _setNav()
     {
         $nav_helper = new \CEHD\Helpers\Navigation\Navigation();
-        $nav_helper->set_nav($this->yaml_file_paths["nav"]);
+        $nav_helper->set_nav($this->file_paths["nav"]);
         return $nav_helper->get_nav();
     }
 
