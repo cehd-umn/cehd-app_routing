@@ -5,7 +5,8 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="h1">{{ page_title }}</h2>
+      <h2 class="h1">{{ page_title }}</h2>
+      <div class="half">
         <h3>Our mission</h3>
         <p>The Department of Educational Psychology provides training in the
         cognitive, emotional, and social learning processes that underlie education
@@ -18,13 +19,13 @@
         href="{{ config.base_url }}/programs/schoolpsych/">school psychology</a>,
         and <a href="{{ config.base_url }}/programs/specialed/">special
         education</a>.</p>
-
         <p>Faculty and students provide leadership and consultation to the state,
         nation, and international community. The department's scholarship and
         teaching enhance professional practice in schools and universities,
         community mental health agencies, business and industrial organizations,
         early childhood programs, and government agencies.</p>
-
+      </div>
+      <div class="half">
         <h3>Our location</h3>
         <p>Located on the East Bank campus, the <a
         href="http://campusmaps.umn.edu/education-sciences-building">Education
@@ -44,6 +45,7 @@
         Garage</a> and the <a
         href="https://campusmaps.umn.edu/fourth-street-parking-ramp">4th Street
         Ramp</a>.</p>
+      </div>
     </div>
 </div>
 {% endblock %}

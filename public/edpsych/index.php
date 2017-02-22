@@ -617,19 +617,31 @@ $router->with($global_config['base_url'], function() use ($router) {
         /**
          * Faculty redirects
          */
+
+        // @todo turn this into a method that can be reused
+        function faculty_redirect($request, $response, $service, $app)
+        {
+            $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people/redirects.yml';
+            $redirect_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
+            $redirects = new \UMN\CEHD\Dict\Dict($redirect_data["faculty"]);
+            $uri = $request->uri();
+            $file_name = ucfirst($app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri)));
+            $new_path = $redirects->get($file_name);
+            if ($new_path)
+            {
+                $response->redirect($app->site_config['base_url'] . '/people/' . $new_path . '/', 301)->send();
+            }
+        };
+
         $router->with('/Faculty', function() use ($router) {
-            // @todo turn this into a method that can be reused
             $router->respond('GET', '*', function($request, $response, $service, $app) {
-                $yaml_file_path = BASE_PATH . 'cehd/config/edpsych/people/redirects.yml';
-                $redirect_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
-                $redirects = new \UMN\CEHD\Dict\Dict($redirect_data["faculty"]);
-                $uri = $request->uri();
-                $file_name = $app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri));
-                $new_path = $redirects->get($file_name);
-                if ($new_path)
-                {
-                    $response->redirect($app->site_config['base_url'] . '/people/' . $new_path . '/', 301)->send();
-                }
+                faculty_redirect($request, $response, $service, $app);
+            });
+        });
+
+        $router->with('/faculty', function() use ($router) {
+            $router->respond('GET', '*', function($request, $response, $service, $app) {
+                faculty_redirect($request, $response, $service, $app);
             });
         });
 
