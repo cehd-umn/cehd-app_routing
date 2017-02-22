@@ -184,8 +184,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
             if ($last !== "/" && $html !== "html")
             {
-                $with_slash = $uri . "/";
-                $redirect_uri = $uri . "/" . $query_str;
+                $redirect_uri = $uri . "/?" . $query_str;
                 $response->redirect($redirect_uri, 301)->send();
             }
         }
