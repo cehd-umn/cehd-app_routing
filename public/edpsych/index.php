@@ -166,7 +166,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
         if (count($uri_components) > 1)
         {
-            $query_str = $uri_components[1];
+            $query_str = "?" . $uri_components[1];
         }
         else
         {
@@ -184,7 +184,7 @@ $router->with($global_config['base_url'], function() use ($router) {
 
             if ($last !== "/" && $html !== "html")
             {
-                $redirect_uri = $uri . "/?" . $query_str;
+                $redirect_uri = $uri . "/" . $query_str;
                 $response->redirect($redirect_uri, 301)->send();
             }
         }
