@@ -1,0 +1,96 @@
+---
+/:
+    method: GET
+    template: edpsych/index.html
+    template_data:
+        section: home
+/about/:
+    method: GET
+    template: edpsych/about/index.html
+    template_data:
+        section: about
+/about/diversity/:
+    method: GET
+    template: edpsych/about/diversity.html
+    template_data:
+        section: about
+/alumni/:
+    method: GET
+    template: edpsych/alumni/index.html
+    template_data:
+        section: alumni
+/alumni/information/:
+    method: GET
+    template: edpsych/alumni/information.html
+    template_data:
+        section: alumni
+/contact/:
+    method: GET
+    template: edpsych/contact/index.html
+    template_data:
+        section: null
+/contact/confirmation/:
+    method: GET
+    template: edpsych/contact/confirmation.html
+    template_data:
+        section: null
+/current/:
+    method: GET
+    template: edpsych/current/index.html
+    template_data:
+        section: current
+/current/school-psychology/:
+    method: GET
+    template: edpsych/current/school-psychology/index.html
+    template_data:
+        section: current
+/current/school-psychology/spsa/:
+    method: GET
+    template: edpsych/current/school-psychology/spsa.html
+    template_data:
+        section: current
+/current/school-psychology/psych-foundations/prelim/:
+    method: GET
+    template: edpsych/current/school-psychology/psych-foundations/prelim.html
+    template_data:
+        section: current
+/current/school-psychology/psych-foundations/funding/:
+    method: GET
+    template: edpsych/current/school-psychology/psych-foundations/prelim.html
+    template_data:
+        section: current
+/future-students/:
+    method: GET
+    template: edpsych/future-students/index.html
+    template_data:
+        section: future-students
+/future-students/cspp/:
+    method: GET
+    template: edpsych/future-students/cspp.html
+    template_data:
+        section: future-students
+/future-students/foundations/:
+    method: GET
+    template: edpsych/future-students/foundations.html
+    template_data:
+        section: future-students
+/future-students/qme/:
+    method: GET
+    template: edpsych/future-students/qme.html
+    template_data:
+        section: future-students
+/future-students/school-psych/:
+    method: GET
+    template: edpsych/future-students/school-psych.html
+    template_data:
+        section: future-students
+/future-students/special-ed/:
+    method: GET
+    template: edpsych/future-students/special-ed.html
+    template_data:
+        section: future-students
+/future-students/special-ed-med/:
+    method: GET
+    template: edpsych/future-students/special-ed-med.html
+    template_data:
+        section: future-students

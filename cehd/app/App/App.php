@@ -68,7 +68,7 @@ class BaseApp extends \Klein\App
 
             if (count($uri_components) > 1)
             {
-                $query_str = $uri_components[1];
+                $query_str = "?" . $uri_components[1];
             }
             else
             {
@@ -86,7 +86,6 @@ class BaseApp extends \Klein\App
 
                 if ($last !== "/" && $html !== "html")
                 {
-                    $with_slash = $uri . "/";
                     $redirect_uri = $uri . "/" . $query_str;
                     $response->redirect($redirect_uri, 301)->send();
                 }
