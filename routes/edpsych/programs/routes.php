@@ -167,6 +167,7 @@ $router->with('/programs', function() use ($router) {
             "masters.html",
             "abs-licensure.html",
             "asd.html",
+            "ASD.html",
             "dhh-licensure.html",
             "dd-licensure.html",
             "esce-licensure.html",
