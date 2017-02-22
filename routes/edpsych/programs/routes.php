@@ -153,6 +153,23 @@ $router->with('/programs', function() use ($router) {
         });
     }); // end schoolpsych section
 
+    // Redirects for *this* camelcase version,i.e., programs/SpecialEd/ as opposed to Programs/SpecialEd
+    $router->with('/SpecialEd', function() use ($router) {
+        $html_filenames = [
+            "SpEd-MEd-teacherlicensure.html",
+            "DHH-licensure.html",
+        ];
+
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+    });
+
     $router->with('/specialed', function() use ($router) {
         // More redirects
 
@@ -162,6 +179,7 @@ $router->with('/programs', function() use ($router) {
             "default.html",
             "videos.html",
             "sped-bs.html",
+            "SpEd-BS.html",
             "sped-med-teacherlicensure.html",
             "phd.html",
             "masters.html",
