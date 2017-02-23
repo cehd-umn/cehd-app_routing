@@ -200,6 +200,8 @@ $router->with('/Programs', function() use ($router) {
             $response->redirectToLowercaseURI($request->uri());
         });
 
+        // If this ever needs to change, make sure you at least review the same
+        // list in routes/edpsych/programs/routes.php
         $html_filenames = [
             "default.html",
             "videos.html",

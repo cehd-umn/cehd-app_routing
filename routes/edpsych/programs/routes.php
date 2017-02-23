@@ -153,7 +153,69 @@ $router->with('/programs', function() use ($router) {
         });
     }); // end schoolpsych section
 
+    // Redirects for *this* camelcase version,i.e., programs/SpecialEd/ as opposed to Programs/SpecialEd
+    $router->with('/SpecialEd', function() use ($router) {
+        $html_filenames = [
+            "SpEd-MEd-teacherlicensure.html",
+            "DHH-licensure.html",
+        ];
+
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+    });
+
     $router->with('/specialed', function() use ($router) {
+        // More redirects
+
+        // If this ever needs to change, make sure you at least review the same
+        // list in routes/edpsych/programs/redirects.php
+        $html_filenames = [
+            "default.html",
+            "videos.html",
+            "sped-bs.html",
+            "SpEd-BS.html",
+            "sped-med-teacherlicensure.html",
+            "phd.html",
+            "masters.html",
+            "abs-licensure.html",
+            "asd.html",
+            "ASD.html",
+            "dhh-licensure.html",
+            "dd-licensure.html",
+            "esce-licensure.html",
+            "ld-licensure.html",
+            "prelim-study.html",
+            "license.html",
+        ];
+
+        foreach ($html_filenames as $name)
+        {
+            $router->with('/' . $name, function() use ($router) {
+                $router->respond('GET', '*', function($request, $response, $service, $app) {
+                    $response->redirectToURI($request->uri());
+                });
+            });
+        }
+
+        $router->respond('get', '/ebd-residency-based/default.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/specialed/ebd-residency-based/', 301)->send();
+        });
+
+        $router->respond('get', '/certificate/autism.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/programs/specialed/certificate/autism/', 301)->send();
+        });
+
+        $router->respond('get', '/certificate/autism-registration.html', function($request, $response, $service, $app) {
+            $response->redirect($app->site_config['base_url'] . '/current/special-ed/autism-certificate/', 301)->send();
+        });
+
+        // Actual routes
         $routes = [
             "abs-licensure",
             "asd",
