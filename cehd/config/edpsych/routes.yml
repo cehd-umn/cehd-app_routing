@@ -7,7 +7,7 @@
     template: edpsych/about/index.html
     template_data:
         section: about
-/edpsych/about/diversity/:
+/edpsych/about/diversity-inclusion/:
     template: edpsych/about/diversity.html
     template_data:
         section: about
@@ -79,12 +79,12 @@
     template: edpsych/current/school-psychology/spsa.html
     template_data:
         section: current
-/edpsych/current/school-psychology/psych-foundations/prelim/:
-    template: edpsych/current/school-psychology/psych-foundations/prelim.html
+/edpsych/current/psych-foundations/prelim/:
+    template: edpsych/current/psych-foundations/prelim.html
     template_data:
         section: current
-/edpsych/current/school-psychology/psych-foundations/funding/:
-    template: edpsych/current/school-psychology/psych-foundations/prelim.html
+/edpsych/current/psych-foundations/funding/:
+    template: edpsych/current/psych-foundations/prelim.html
     template_data:
         section: current
 /edpsych/future-students/:
@@ -143,10 +143,6 @@
     template: edpsych/programs/cspp/index.html
     template_data:
         section: programs-degrees
-/edpsych/programs/curriculum/:
-    template: edpsych/programs/curriculum.html
-    template_data:
-        section: programs-degrees
 /edpsych/programs/cspp/hansen/:
     template: edpsych/programs/cspp/hansen.html
     template_data:
@@ -155,12 +151,60 @@
     template: edpsych/programs/cspp/sullivan.html
     template_data:
         section: programs-degrees
+/edpsych/programs/foundations/:
+    template: edpsych/programs/foundations/index.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/5135/:
+    template: edpsych/programs/foundations/5135.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/:
+    template: edpsych/programs/foundations/funding/index.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/ga/:
+    template: edpsych/programs/foundations/funding/ga.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/merwin/:
+    template: edpsych/programs/foundations/funding/merwin.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/policies/:
+    template: edpsych/programs/foundations/funding/policies.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/psyf-assistantships/:
+    template: edpsych/programs/foundations/funding/psyf-assistantships.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/funding/yackel/:
+    template: edpsych/programs/foundations/funding/yackel.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/learning/:
+    template: edpsych/programs/foundations/learning.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/social-psych/:
+    template: edpsych/programs/foundations/social-psych.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/foundations/talent/:
+    template: edpsych/programs/foundations/talent.html
+    template_data:
+        section: programs-degrees
 /edpsych/programs/graduate-minor/:
     template: edpsych/programs/graduate-minor.html
     template_data:
         section: programs-degrees
 /edpsych/programs/minor/:
     template: edpsych/programs/minor.html
+    template_data:
+        section: programs-degrees
+/edpsych/programs/minor/curriculum/:
+    template: edpsych/programs/minor/curriculum.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/:
@@ -241,50 +285,6 @@
         section: programs-degrees
 /edpsych/programs/specialed/esce-licensure/:
     template: edpsych/programs/specialed/esce-licensure.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/:
-    template: edpsych/programs/foundations/index.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/5135/:
-    template: edpsych/programs/foundations/5135.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/:
-    template: edpsych/programs/foundations/funding/index.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/ga/:
-    template: edpsych/programs/foundations/funding/ga.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/merwin/:
-    template: edpsych/programs/foundations/funding/merwin.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/policies/:
-    template: edpsych/programs/foundations/funding/policies.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/psyf-assistantships/:
-    template: edpsych/programs/foundations/funding/psyf-assistantships.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/funding/yackel/:
-    template: edpsych/programs/foundations/funding/yackel.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/learning/:
-    template: edpsych/programs/foundations/learning.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/social-psych/:
-    template: edpsych/programs/foundations/social-psych.html
-    template_data:
-        section: programs-degrees
-/edpsych/programs/specialed/foundations/talent/:
-    template: edpsych/programs/foundations/talent.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/ld-licensure/:
@@ -407,8 +407,8 @@
     template: edpsych/research/labs/tennyson.html
     template_data:
         section: research
-/edpsych/research/labs/yukovic/:
-    template: edpsych/research/labs/yukovic.html
+/edpsych/research/labs/vukovic/:
+    template: edpsych/research/labs/vukovic.html
     template_data:
         section: research
 /edpsych/research/labs/wolff/:
@@ -451,8 +451,8 @@
     template: edpsych/research/topics/behavioral-social.html
     template_data:
         section: research
-/edpsych/research/topics/instructional-intervention/:
-    template: edpsych/research/topics/instructional-intervention.html
+/edpsych/research/topics/instruction-intervention/:
+    template: edpsych/research/topics/instruction-intervention.html
     template_data:
         section: research
 /edpsych/research/topics/language-literacy-reading/:
