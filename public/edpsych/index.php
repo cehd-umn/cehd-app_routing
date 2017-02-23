@@ -632,8 +632,17 @@ $router->with($global_config['base_url'], function() use ($router) {
             $redirect_data = $app->bootstrap_helper->load_yaml($yaml_file_path);
             $redirects = new \UMN\CEHD\Dict\Dict($redirect_data["faculty"]);
             $uri = $request->uri();
-            $file_name = ucfirst($app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri)));
+            $file_name = $app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri));
+            // $file_name = ucfirst($app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri)));
             $new_path = $redirects->get($file_name);
+
+            if (!$new_path)
+            {
+                // Try the uppercase version
+                $file_name = ucfirst($app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri)));
+                $new_path = $redirects->get($file_name);
+            }
+
             if ($new_path)
             {
                 $response->redirect($app->site_config['base_url'] . '/people/' . $new_path . '/', 301)->send();
