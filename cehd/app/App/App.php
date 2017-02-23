@@ -5,6 +5,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
 
 use Klein;
 use UMN\CEHD\Dict;
@@ -19,6 +20,8 @@ class BaseApp extends \Klein\App
     protected $file_paths;
 
     protected $routes;
+
+    public $search_client;
 
     public $router;
 
@@ -91,6 +94,8 @@ class BaseApp extends \Klein\App
                 }
             }
         });
+
+        $this->search_client = new \CEHD\App\Search\Search();
 
         $this->routes =  new Dict\Dict(
             $this->bootstrap_helpers->load_yaml(

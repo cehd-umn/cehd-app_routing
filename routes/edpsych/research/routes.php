@@ -35,12 +35,12 @@ $router->with('/research', function() use ($router) {
     }
 
     $routes = [
-        "family-academy",
-        "ready-to-succeed",
-        "pnrc",
         "500-under-five",
+        "family-academy",
         "fresh-garden",
         "ggg",
+        "pnrc",
+        "ready-to-succeed",
     ];
 
     foreach ($routes as $route)
@@ -103,22 +103,22 @@ $router->with('/research', function() use ($router) {
             'bart',
             'christ',
             'codding',
-            'svarma',
-            'yussen',
             'fleury',
             'johnson',
+            'kendeou',
+            'kohli',
             'kvarma',
             'maruyama',
             'mcconnell',
             'mcmaster',
             'miller',
-            'kendeou',
-            'kohli',
             'sullivan',
+            'svarma',
             'symons',
             'tennyson',
             'vukovic',
             'wolff',
+            'yussen',
         ];
 
         foreach ($routes as $route)
@@ -170,8 +170,7 @@ $router->with('/research', function() use ($router) {
          * Routes
          */
         $router->respond('GET', '/', function($request, $response, $service, $app) {
-            // @todo rename this topics/index.html
-            echo $app->template->render('edpsych/research/topics.html', ["section" => "research"]);
+            echo $app->template->render('edpsych/research/topics/index.html', ["section" => "research"]);
         });
 
         $topics = [
