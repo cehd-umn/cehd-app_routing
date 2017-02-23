@@ -281,6 +281,10 @@ $router->with('/programs', function() use ($router) {
             echo $app->template->render('edpsych/programs/foundations/talent.html', ["section" => "programs-degrees"]);
         });
 
+        $router->respond('GET', '/talent/requirements/', function($request, $response, $service, $app) {
+            echo $app->template->render('edpsych/programs/foundations/talent-requirements.html', ["section" => "programs-degrees"]);
+        });
+
         $router->respond('GET', '/5135/', function($request, $response, $service, $app) {
             echo $app->template->render('edpsych/programs/foundations/5135.html', ["section" => "programs-degrees"]);
         });
