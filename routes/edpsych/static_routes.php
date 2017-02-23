@@ -1,14 +1,15 @@
 <?php
 
-namespace CEHD\App\Routes\StaticRoutes;
+namespace CEHD\App\Routes\EdPsychStaticRoutes;
 
 require_once __DIR__ . "/../../cehd/app/App/App.php";
 
-$base_app_config    = __DIR__ . "/../../cehd/config/app/config.yml";
-$edpsych_app_config = __DIR__ . "/../../cehd/config/edpsych/config.yml";
-$nav_yaml_file      = __DIR__ . "/../../cehd/config/edpsych/nav.yml";
-$routes_yaml_file   = __DIR__ . "/../../cehd/config/edpsych/routes.yml";
-$inline_styles_file = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
+$base_app_config     = __DIR__ . "/../../cehd/config/app/config.yml";
+$edpsych_app_config  = __DIR__ . "/../../cehd/config/edpsych/config.yml";
+$nav_yaml_file       = __DIR__ . "/../../cehd/config/edpsych/nav.yml";
+$routes_yaml_file    = __DIR__ . "/../../cehd/config/edpsych/routes.yml";
+$redirects_yaml_file = __DIR__ . "/../../cehd/config/edpsych/redirects.yml";
+$inline_styles_file  = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
 
 
 $yaml_file_paths = [
@@ -18,6 +19,7 @@ $yaml_file_paths = [
     ],
     "nav" => $nav_yaml_file,
     "routes" => $routes_yaml_file,
+    "redirects" => $redirects_yaml_file,
     "inline_styles" => $inline_styles_file,
 ];
 

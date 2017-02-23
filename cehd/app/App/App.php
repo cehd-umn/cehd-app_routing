@@ -35,6 +35,8 @@ class BaseApp extends \Klein\App
 
     public $inline_styles;
 
+    public $redirects;
+
     function __construct($file_paths)
     {
         $this->base_path = __DIR__ . '/../../';
@@ -102,6 +104,24 @@ class BaseApp extends \Klein\App
                 $this->file_paths["routes"])
         );
 
+        // load the redirects from the yaml file provided or set and empty Dict object
+        $this->redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
+
+        foreach($this->redirects as $old_route => $new_route)
+        {
+            $this->router->respond("GET", $old_route, function(
+                $request, $response, $service, $app)
+            {
+                $redirect_route = $this->redirects->get($request->uri());
+                echo $request->uri();
+
+                if ($redirect_route)
+                {
+                    $response->redirect($redirect_route, 301)->send();
+                }
+            });
+        }
+
         foreach($this->routes as $route => $route_info)
         {
             $this->router->respond('GET', $route, function(
@@ -113,6 +133,35 @@ class BaseApp extends \Klein\App
         }
 
         $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
+    }
+
+    // $data should be an array
+    protected function _loadDict($data)
+    {
+        return new Dict\Dict($data);
+    }
+
+    // @todo this need a better name
+    protected function _setPropertFromYAML($file_path, $as_dict=true)
+    {
+        try
+        {
+            $data_array = $this->bootstrap_helpers->load_yaml($file_path);
+            if ($as_dict)
+            {
+                return $this->_loadDict($data_array);
+            }
+
+            return $data_array;
+        }
+        catch (Exception $e)
+        {
+            echo "Problem loading YAML file: " .
+                "File path: " . $file_path . "\n" .
+                $e->getMessage() . "\n";
+        }
+
+        return [];
     }
 
     protected function _setConfig()
