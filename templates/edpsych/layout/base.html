@@ -57,7 +57,7 @@
         <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
         <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</span></button>
         <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
-        {% for nav_item in config.nav_items %}
+        {% for nav_item in nav_items %}
             {% set has_sub = nav_item.subnav %}
             <li role="treeitem" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
                 <a href="{{ config.base_url }}{{ nav_item.href }}" tabindex="0">{{ nav_item.name }}</a>

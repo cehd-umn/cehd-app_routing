@@ -55,6 +55,7 @@ $app->router->respond('GET', '/edpsych/contact-confirmation.html', function($req
 $app->router->respond('GET', '/edpsych/search/', function($request, $response, $service, $app) {
     $query_data = $request->params();
     $results = $app->search_client->get($query_data);
+    $query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
     $template_data = [
         "results" => $results,
         "query" => $query_data["q"],
