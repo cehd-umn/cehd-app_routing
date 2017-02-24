@@ -13,7 +13,6 @@ require_once __DIR__ . "/../../routes/edpsych/static_routes.php";
 require_once __DIR__ . '/../../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../../cehd/app/People/People.php';
 // @todo patch up these redirects or rewrite them
-// require_once __DIR__ . '/../../routes/edpsych/current/redirects.php';
 // require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';
 
 // @todo instantiate and Ed Psych app instance and define these there
@@ -226,59 +225,6 @@ $app->router->with('/edpsych/people', function() use ($app) {
             "extra_content" => $extra_content,
         ];
         echo $app->template->render('edpsych/people/person.html', $template_vars);
-    });
-
-
-    /**
-     * Faculty redirects
-     */
-
-    // @todo turn this into a method that can be reused
-    function faculty_redirect($request, $response, $service, $app)
-    {
-        $yaml_file_path = __DIR__ . '/../../cehd/config/edpsych/people/redirects.yml';
-        $redirect_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
-        $redirects = new \UMN\CEHD\Dict\Dict($redirect_data["faculty"]);
-        $uri = $request->uri();
-        $file_name = ucfirst($app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri)));
-        $new_path = $redirects->get($file_name);
-        if ($new_path)
-        {
-            $response->redirect($app->config['base_url'] . '/people/' . $new_path . '/', 301)->send();
-        }
-    };
-
-    $app->router->with('/Faculty', function() use ($app) {
-        $app->router->respond('GET', '*', function($request, $response, $service, $app) {
-            faculty_redirect($request, $response, $service, $app);
-        });
-    });
-
-    $app->router->with('/faculty', function() use ($app) {
-        $app->router->respond('GET', '*', function($request, $response, $service, $app) {
-            faculty_redirect($request, $response, $service, $app);
-        });
-    });
-
-    /**
-     * Staff redirects
-     */
-    $app->router->with('/Staff', function() use ($app) {
-        /**
-         * Redirects
-         */
-        $app->router->respond('GET', '*', function($request, $response, $service, $app) {
-            $yaml_file_path = __DIR__ . '/../../cehd/config/edpsych/people/redirects.yml';
-            $redirect_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
-            $redirects = new \UMN\CEHD\Dict\Dict($redirect_data["staff"]);
-            $uri = $request->uri();
-            $file_name = $app->helpers->getLastFromPath($app->helpers->stripDotHtml($uri));
-            $new_path = $redirects->get($file_name);
-            if ($new_path)
-            {
-                $response->redirect($app->config['base_url'] . '/people/' . $new_path . '/', 301)->send();
-            }
-        });
     });
 });
 

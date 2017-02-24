@@ -3,29 +3,29 @@
  * Programs Redirects
  */
 $router->with('/Programs', function() use ($router) {
-    $router->respond('GET', '[/|/minor/|/ASL/]', function($request, $response, $service, $app) {
-        $response->redirectToLowercaseURI($request->uri());
-    });
+    // $router->respond('GET', '[/|/minor/|/ASL/]', function($request, $response, $service, $app) {
+    //     $response->redirectToLowercaseURI($request->uri());
+    // });
 
-    $router->respond('GET', '/minor/default.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/programs/minor/', 301)->send();
-    });
+    // $router->respond('GET', '/minor/default.html', function($request, $response, $service, $app) {
+    //     $response->redirect($app->site_config['base_url'] . '/programs/minor/', 301)->send();
+    // });
 
-    $router->respond('GET', '/ASL/default.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/programs/asl/', 301)->send();
-    });
+    // $router->respond('GET', '/ASL/default.html', function($request, $response, $service, $app) {
+    //     $response->redirect($app->site_config['base_url'] . '/programs/asl/', 301)->send();
+    // });
 
-    $router->respond('GET', '/ASL/faq.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/programs/asl/faq/', 301)->send();
-    });
+    // $router->respond('GET', '/ASL/faq.html', function($request, $response, $service, $app) {
+    //     $response->redirect($app->site_config['base_url'] . '/programs/asl/faq/', 301)->send();
+    // });
 
-    $router->respond('GET', '/ASL/ASL-Placement-Assessment.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/programs/asl/placement-assessment/', 301)->send();
-    });
+    // $router->respond('GET', '/ASL/ASL-Placement-Assessment.html', function($request, $response, $service, $app) {
+    //     $response->redirect($app->site_config['base_url'] . '/programs/asl/placement-assessment/', 301)->send();
+    // });
 
-    $router->respond('GET', '/Courses/ASL.html', function($request, $response, $service, $app) {
-        $response->redirect($app->site_config['base_url'] . '/programs/courses/asl/', 301)->send();
-    });
+    // $router->respond('GET', '/Courses/ASL.html', function($request, $response, $service, $app) {
+    //     $response->redirect($app->site_config['base_url'] . '/programs/courses/asl/', 301)->send();
+    // });
 
     $router->respond('GET', '/Courses/PsyF.html', function($request, $response, $service, $app) {
         $response->redirect($app->site_config['base_url'] . '/programs/courses/psyf/', 301)->send();
