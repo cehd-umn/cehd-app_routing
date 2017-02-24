@@ -16,18 +16,7 @@ require_once __DIR__ . '/../../cehd/app/People/People.php';
 // require_once __DIR__ . '/../../routes/edpsych/current/redirects.php';
 // require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';
 
-$app->router->with("/EdPsych", function() use ($app)
-{
-    $app->router->respond('GET', '*', function($request, $response, $service, $app) {
-        $new_uri = substr_replace($request->uri(), "edpsych", 1, 7);
-        $response->redirect($new_uri, 301)->send();
-    });
-});
-
-$app->router->respond('GET', '/edpsych/default.html', function($request, $response, $service, $app) {
-    $response->redirect('/edpsych/', 301)->send();
-});
-
+// @todo instantiate and Ed Psych app instance and define these there
 $app->router->respond('GET', '/edpsych/examples/', function($request, $response, $service, $app) {
     // Only expose this route if not in production
     if (!$app->config['is_prod'])
@@ -44,14 +33,6 @@ $app->router->respond('GET', '/edpsych/examples/macros/', function($request, $re
     }
 });
 
-$app->router->respond('GET', '/edpsych/contact.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/contact/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/contact-confirmation.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/contact/confirmation/', 301)->send();
-});
-
 $app->router->respond('GET', '/edpsych/search/', function($request, $response, $service, $app) {
     $query_data = $request->params();
     $results = $app->search_client->get($query_data);
@@ -64,72 +45,11 @@ $app->router->respond('GET', '/edpsych/search/', function($request, $response, $
     echo $app->template->render('edpsych/search.html', $template_data);
 });
 
-$app->router->respond('GET', '/edpsych/About/', function($request, $response, $service, $app) {
-    $response->redirectToLowercaseURI($request->uri());
-});
-
-$app->router->respond('GET', '/edpsych/about/default.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/about/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/about/diversity-inclusion.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/about/diversity-inclusion/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/Alumni/', function($request, $response, $service, $app) {
-    $response->redirectToLowercaseURI($request->uri());
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/CSPP.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/cspp/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/Foundations.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/foundations/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/QME.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/qme/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/schoolpsych.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/school-psych/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/SpecialEd.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/special-ed/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/SpEd-MEd.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/future-students/special-ed-med/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/pridefellow.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/programs/schoolpsych/pride-fellow/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/master.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/programs/schoolpsych/master/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/FutureStudents/doctor.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/programs/schoolpsych/doctor/', 301)->send();
-});
-
-
-$app->router->respond('GET', '/edpsych/forms/default.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/forms/', 301)->send();
-});
-
-$app->router->respond('GET', '/edpsych/giving.html', function($request, $response, $service, $app) {
-    $response->redirect($app->config['base_url'] . '/giving/', 301)->send();
-});
-
 /**
-    * Services
-    * TODO Make these services their own thing
-    * TODO return 404's if query params are not valid
-    */
+* Services
+* TODO Make these services their own thing
+* TODO return 404's if query params are not valid
+*/
 $app->router->with('/edpsych/services', function() use ($app) {
     /**
         * Search
