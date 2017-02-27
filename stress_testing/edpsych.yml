@@ -1,0 +1,34 @@
+---
+config:
+    target: "http://drydock.cehd.umn.edu/edpsych"
+    phases:
+        - duration: 60
+          arrivalRate: 10
+          rampTo: 30
+    defaults:
+        headers:
+            x-drydock-stress-testing-user: thoma127
+scenarios:
+    - flow:
+          - get:
+                url: "/"
+          - get:
+                url: "/about/"
+          - get:
+                url: "/about/diversity-inclusion/"
+          - get:
+                url: "/alumni/"
+          - get:
+                url: "/alumni/information/"
+          - get:
+                url: "/contact/"
+          - get:
+                url: "/current/"
+          - get:
+                url: "/current/cspp/"
+          - get:
+                url: "/current/cspp/handbooks/"
+          - get:
+                url: "/current/foundations/"
+          - get:
+                url: "/people/"
