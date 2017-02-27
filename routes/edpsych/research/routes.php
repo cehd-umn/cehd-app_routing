@@ -6,57 +6,57 @@ $router->with('/research', function() use ($router) {
     /**
      * Redirects
      */
-    require_once BASE_PATH . 'routes/edpsych/research/redirects.php';
+    // require_once BASE_PATH . 'routes/edpsych/research/redirects.php';
 
-    /**
-     * Routes
-     */
-    $router->respond('GET', '/', function($request, $response, $service, $app) {
-        echo $app->template->render('edpsych/research/index.html', ["section" => "research"]);
-    });
+    // /**
+    //  * Routes
+    //  */
+    // $router->respond('GET', '/', function($request, $response, $service, $app) {
+    //     echo $app->template->render('edpsych/research/index.html', ["section" => "research"]);
+    // });
 
-    $html_filenames = [
-        "family-academy.html",
-        "ready-to-succeed.html",
-        "pnrc.html",
-        "500-under-five.html",
-        "fresh-garden.html",
-        "ggg.html",
-    ];
+    // $html_filenames = [
+    //     "family-academy.html",
+    //     "ready-to-succeed.html",
+    //     "pnrc.html",
+    //     "500-under-five.html",
+    //     "fresh-garden.html",
+    //     "ggg.html",
+    // ];
 
-    // @todo this should be a method since we do it all over the place
-    foreach ($html_filenames as $name)
-    {
-        $router->with('/' . $name, function() use ($router) {
-            $router->respond('GET', '*', function($request, $response, $service, $app) {
-                $response->redirectToURI($request->uri());
-            });
-        });
-    }
+    // // @todo this should be a method since we do it all over the place
+    // foreach ($html_filenames as $name)
+    // {
+    //     $router->with('/' . $name, function() use ($router) {
+    //         $router->respond('GET', '*', function($request, $response, $service, $app) {
+    //             $response->redirectToURI($request->uri());
+    //         });
+    //     });
+    // }
 
-    $routes = [
-        "500-under-five",
-        "family-academy",
-        "fresh-garden",
-        "ggg",
-        "pnrc",
-        "ready-to-succeed",
-    ];
+    // $routes = [
+    //     "500-under-five",
+    //     "family-academy",
+    //     "fresh-garden",
+    //     "ggg",
+    //     "pnrc",
+    //     "ready-to-succeed",
+    // ];
 
-    foreach ($routes as $route)
-    {
-        $router->with('/' . $route, function() use ($router) {
-            $router->respond('GET', '/', function($request, $response, $service, $app) {
-                // Get the template name based on the uri
-                $file_path = 'edpsych/research/';
-                $template_name = $response->templateNameFromURI($request->uri());
-                $template_path = $file_path . $template_name;
+    // foreach ($routes as $route)
+    // {
+    //     $router->with('/' . $route, function() use ($router) {
+    //         $router->respond('GET', '/', function($request, $response, $service, $app) {
+    //             // Get the template name based on the uri
+    //             $file_path = 'edpsych/research/';
+    //             $template_name = $response->templateNameFromURI($request->uri());
+    //             $template_path = $file_path . $template_name;
 
-                // render the template
-                echo $app->template->render($template_path, ["section" => "research"]);
-            });
-        });
-    }
+    //             // render the template
+    //             echo $app->template->render($template_path, ["section" => "research"]);
+    //         });
+    //     });
+    // }
 
     $router->with('/labs', function() use ($router) {
         $router->respond('GET', '/default.html', function($request, $response, $service, $app) {
@@ -67,22 +67,22 @@ $router->with('/research', function() use ($router) {
             'bart.html',
             'christ.html',
             'codding.html',
-            'svarma.html',
-            'yussen.html',
             'fleury.html',
             'johnson.html',
+            'kendeou.html',
+            'kohli.html',
             'kvarma.html',
             'maruyama.html',
             'mcconnell.html',
-            'McMaster.html',
+            'mcmaster.html',
             'miller.html',
-            'kendeou.html',
-            'kohli.html',
             'sullivan.html',
-            'Symons.html',
+            'svarma.html',
+            'symons.html',
             'tennyson.html',
-            'Vukovic.html',
-            'Wolff.html',
+            'vukovic.html',
+            'wolff.html',
+            'yussen.html',
         ];
 
         foreach ($html_filenames as $name)

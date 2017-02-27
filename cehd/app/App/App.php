@@ -112,8 +112,8 @@ class BaseApp extends \Klein\App
             $this->router->respond("GET", $old_route, function(
                 $request, $response, $service, $app)
             {
-                $redirect_route = $this->redirects->get($request->uri());
-                echo $request->uri();
+                $redirect_route = $this->redirects->get(
+                    strtolower($request->uri()));
 
                 if ($redirect_route)
                 {
