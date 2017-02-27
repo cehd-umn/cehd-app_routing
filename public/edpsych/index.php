@@ -12,8 +12,6 @@
 require_once __DIR__ . "/../../routes/edpsych/static_routes.php";
 require_once __DIR__ . '/../../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../../cehd/app/People/People.php';
-// @todo patch up these redirects or rewrite them
-// require_once BASE_PATH . 'routes/edpsych/programs/redirects.php';
 
 // @todo instantiate and Ed Psych app instance and define these there
 $app->router->respond('GET', '/edpsych/examples/', function($request, $response, $service, $app) {
