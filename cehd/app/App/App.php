@@ -13,7 +13,7 @@ use UMN\CEHD\Dict;
 /**
  * Custom BaseApp class
  */
-class BaseApp extends \Klein\App
+class BaseApp
 {
     protected $base_path;
 
@@ -37,6 +37,14 @@ class BaseApp extends \Klein\App
 
     public $redirects;
 
+    public $redirects_camelcase;
+
+    public $http_client; // make this protected after moving routes that use it
+
+    public $template;
+
+    public $helpers;
+
     function __construct($file_paths)
     {
         $this->base_path = __DIR__ . '/../../';
@@ -47,24 +55,15 @@ class BaseApp extends \Klein\App
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
 
-        $this->register('template', function() {
-            $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
-            $twig->addGlobal('config', $this->config);
-            $twig->addGlobal('nav_open', $this->config["nav_open"]);
-            $twig->addGlobal('nav_items', $this->nav_items);
-            $twig->addGlobal('inline_styles', $this->inline_styles);
-            return $twig;
-        });
+        $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
+        $twig->addGlobal('config', $this->config);
+        $twig->addGlobal('nav_items', $this->nav_items);
+        $twig->addGlobal('inline_styles', $this->inline_styles);
+        $this->template = $twig;
 
-        $this->register('http_client', function() {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-            return $http_client;
-        });
+        $this->http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
 
-        $this->register('helpers', function() {
-            $helpers = new \CEHD\Helpers\Helper\Helper;
-            return $helpers;
-        });
+        $this->helpers = new \CEHD\Helpers\Helper\Helper;
 
         $this->router->respond('GET', '*', function($request, $response, $service, $app) {
             $uri_components = explode("?", $request->uri());
@@ -107,13 +106,37 @@ class BaseApp extends \Klein\App
         // load the redirects from the yaml file provided or set and empty Dict object
         $this->redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
 
+        $this->redirects_camelcase = array_key_exists("redirects_camelcase", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects_camelcase"]) : $this->_loadDict([]);
+
+        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
+
         foreach($this->redirects as $old_route => $new_route)
         {
             $this->router->respond("GET", $old_route, function(
                 $request, $response, $service, $app)
             {
+                // Most redirects will match a key that is the lowercase
+                // version of the URI.
                 $redirect_route = $this->redirects->get(
                     strtolower($request->uri()));
+
+                if ($redirect_route)
+                {
+                    $response->redirect($redirect_route, 301)->send();
+                }
+            });
+        }
+
+        foreach($this->redirects_camelcase as $old_route => $new_route)
+        {
+            $this->router->respond("GET", $old_route, function(
+                $request, $response, $service, $app)
+            {
+                // Some routes need to be checked using camelCase or PascalCase
+                // routes because their lowercase versions match existing
+                // routes
+                $redirect_route = $this->redirects_camelcase->get(
+                    $request->uri());
 
                 if ($redirect_route)
                 {
@@ -131,8 +154,6 @@ class BaseApp extends \Klein\App
                     $request, $response, $service, $app);
             });
         }
-
-        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
     }
 
     // $data should be an array
