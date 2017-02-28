@@ -2,15 +2,37 @@
 namespace CEHD\App\EdPsych;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
+require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
 
 class EdPsychApp extends \CEHD\App\App\BaseApp
 {
     public $nav_open = false;
 
+    private $_search_client;
+
+    private $_sites;
+
     // @todo move routes in public/edpsych/index.php here
     function __construct($file_paths)
     {
         parent::__construct($file_paths);
+
+        $this->_sites = [
+                "primary" => [
+                    "name" => "Educational Psychology",
+                    "url" => "www.cehd.umn.edu/edpsych/",
+                ],
+                "secondary" => [
+                    "name" => "College of Education + Human Development",
+                    "url" => "www.cehd.umn.edu",
+                ],
+                "tertiary" => [
+                    "name" => "University of Minnesota",
+                    "url" => "www.umn.edu",
+                ]
+            ];
+
+        $this->_search_client = new \CEHD\App\Search\Search($this->_sites);
 
         // Check for main nav state
         if (array_key_exists('cehd-edpsych-navOpen', $_COOKIE)) {
@@ -37,8 +59,13 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
         $this->router->respond('GET', '/edpsych/search/', function($request, $response, $service, $app) {
             $query_data = $request->params();
-            $results = $app->search_client->get($query_data);
-            $query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+            $search_client_query_data = [
+                "q" => $search_query,
+                "sites" => ["primary", "secondary", "tertiary"],
+            ];
+
+            $results = $app->_search_client->get($search_client_query_data);
             $template_data = [
                 "results" => $results,
                 "query" => $query_data["q"],
