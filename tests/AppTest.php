@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../cehd/app/App/App.php';
 require_once __DIR__ . '/../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
@@ -34,6 +35,9 @@ class AppTest extends TestCase
 
         // helper is an instance of \CEHD\Helpers\Helper
         $this->assertInstanceOf(\CEHD\Helpers\Helper\Helper::class, $this->appInstance->helpers);
+
+        // response is an instance of \CEHD\App\BaseResponse
+        $this->assertInstanceOf(\CEHD\App\Response\BaseResponse::class, $this->appInstance->response);
 
         // the config is properly set
         $this->assertTrue($this->appInstance->config['debug']);
