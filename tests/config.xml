@@ -1,9 +1,7 @@
 <phpunit>
     <testsuites>
-        <testsuite name="Config">
-            <directory>/tests/*Test.php files</directory>
-            <!-- <file>/tests/MyTest.php</file> -->
-            <!-- <exclude>/path/to/exclude</exclude> -->
+        <testsuite name="CEHD">
+            <directory suffix='.php'>./tests</directory>
         </testsuite>
     </testsuites>
     <php>
