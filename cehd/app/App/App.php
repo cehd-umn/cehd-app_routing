@@ -5,6 +5,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
 
 use Klein;
 use UMN\CEHD\Dict;
@@ -40,6 +41,8 @@ class BaseApp
 
     public $helpers;
 
+    public $response;
+
     function __construct($file_paths)
     {
         $this->base_path = __DIR__ . '/../../';
@@ -55,6 +58,8 @@ class BaseApp
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
         $this->template = $twig;
+
+        $this->response = new \CEHD\App\Response\BaseResponse();
 
         $this->helpers = new \CEHD\Helpers\Helper\Helper;
 
