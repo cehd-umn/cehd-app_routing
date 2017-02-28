@@ -2,9 +2,10 @@
 namespace CEHD\App\Services;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
-require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
+require_once __DIR__ . '/../../../cehd/app/People/People.php';
 require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
+require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
+require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 
 use Klein;
 

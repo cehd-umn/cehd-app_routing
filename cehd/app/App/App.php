@@ -5,7 +5,6 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
-require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
 
 use Klein;
 use UMN\CEHD\Dict;
@@ -20,8 +19,6 @@ class BaseApp
     protected $file_paths;
 
     protected $routes;
-
-    public $search_client;
 
     public $router;
 
@@ -38,8 +35,6 @@ class BaseApp
     public $redirects;
 
     public $redirects_camelcase;
-
-    public $http_client; // make this protected after moving routes that use it
 
     public $template;
 
@@ -61,11 +56,7 @@ class BaseApp
         $twig->addGlobal('inline_styles', $this->inline_styles);
         $this->template = $twig;
 
-        $this->http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-
         $this->helpers = new \CEHD\Helpers\Helper\Helper;
-
-        $this->search_client = new \CEHD\App\Search\Search();
 
         $this->routes =  new Dict\Dict(
             $this->bootstrap_helpers->load_yaml(
