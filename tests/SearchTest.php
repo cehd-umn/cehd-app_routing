@@ -10,7 +10,18 @@ class SearchTest extends TestCase
 
     protected function setUp()
     {
-        $this->search = new \CEHD\App\Search\Search();
+        $this->search = new \CEHD\App\Search\Search(
+            [
+                "primary" => [
+                    "name" => "College of Education + Human Development",
+                    "url" => "www.cehd.umn.edu",
+                ],
+                "secondary" => [
+                    "name" => "University of Minnesota",
+                    "url" => "www.umn.edu",
+                ]
+            ]
+        );
     }
 
     /**
@@ -88,7 +99,8 @@ class SearchTest extends TestCase
         $results = $this->search->get($query_params);
         $this->assertTrue(is_array($results));
         $this->assertEquals(
-            $results['primary']['name'], "Educational Psychology");
+            $results['primary']['name'],
+            "College of Education + Human Development");
         $this->assertEquals(count($results['primary']['results']), 10);
     }
 

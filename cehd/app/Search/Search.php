@@ -7,22 +7,15 @@ require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
 class Search extends \CEHD\App\XML\XML
 {
-    private $_sites = [
-        "primary" => [
-            "name" => "Educational Psychology",
-            "url" => "www.cehd.umn.edu/edpsych",
-        ],
-        "secondary" => [
-            "name" => "College of Education + Human Development",
-            "url" => "www.cehd.umn.edu",
-        ],
-        "tertiary" => [
-            "name" => "University of Minnesota",
-            "url" => "www.umn.edu",
-        ]
-    ];
+    private $_sites;
 
     private $_base_url = "http://google.umn.edu/search";
+
+    function __construct($sites)
+    {
+        parent::__construct();
+        $this->_sites = $sites;
+    }
 
     private function _validateQueryParams($params)
     {
@@ -46,7 +39,7 @@ class Search extends \CEHD\App\XML\XML
             return $params['sites'];
         }
 
-        return ["primary", "secondary", "tertiary"];
+        return ["primary", "secondary"];
     }
 
     private function _getNum($params)

@@ -65,6 +65,20 @@ class BaseApp
 
         $this->helpers = new \CEHD\Helpers\Helper\Helper;
 
+        $this->search_client = new \CEHD\App\Search\Search();
+
+        $this->routes =  new Dict\Dict(
+            $this->bootstrap_helpers->load_yaml(
+                $this->file_paths["routes"])
+        );
+
+        // load the redirects from the yaml file provided or set and empty Dict object
+        $this->redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
+
+        $this->redirects_camelcase = array_key_exists("redirects_camelcase", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects_camelcase"]) : $this->_loadDict([]);
+
+        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
+
         $this->router->respond('GET', '*', function($request, $response, $service, $app) {
             $uri_components = explode("?", $request->uri());
 
@@ -95,20 +109,6 @@ class BaseApp
                 }
             }
         });
-
-        $this->search_client = new \CEHD\App\Search\Search();
-
-        $this->routes =  new Dict\Dict(
-            $this->bootstrap_helpers->load_yaml(
-                $this->file_paths["routes"])
-        );
-
-        // load the redirects from the yaml file provided or set and empty Dict object
-        $this->redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
-
-        $this->redirects_camelcase = array_key_exists("redirects_camelcase", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects_camelcase"]) : $this->_loadDict([]);
-
-        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
 
         foreach($this->redirects as $old_route => $new_route)
         {
