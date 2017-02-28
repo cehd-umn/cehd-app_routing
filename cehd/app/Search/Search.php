@@ -39,7 +39,7 @@ class Search extends \CEHD\App\XML\XML
             return $params['sites'];
         }
 
-        return ["primary", "secondary"];
+        return ["primary"];
     }
 
     private function _getNum($params)

@@ -11,19 +11,23 @@ use Klein;
 
 class Services
 {
-    private $http_client; // make this protected after moving routes that use it
+    private $_http_client; // make this protected after moving routes that use it
 
-    private $search_client;
+    private $_search_client;
+
+    private $_base_url;
 
     public $response;
 
-    function __construct()
+    function __construct($base_url="/")
     {
         $bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
 
-        $this->http_client = $bootstrap_helpers->bootstrap_http_client([]);
+        $this->_http_client = $bootstrap_helpers->bootstrap_http_client([]);
 
-        $this->search_client = new \CEHD\App\Search\Search(
+        $this->_base_url = $base_url;
+
+        $this->_search_client = new \CEHD\App\Search\Search(
             [
                 "primary" => [
                     "name" => "College of Education + Human Development",
@@ -40,14 +44,14 @@ class Services
 
         $this->router = new Klein\Klein(null, $this);
 
-        $this->router->with('/services', function() {
+        $this->router->with($this->_base_url . '/services', function() {
             /**
              * Search
              */
             $this->router->with('/search', function() {
                 $this->router->respond('GET', '/', function($request, $response, $service, $app) {
                     $query_data = $request->params();
-                    $results = $app->search_client->get($query_data);
+                    $results = $app->_search_client->get($query_data);
                     $response->sendJSONResponse(json_encode($results));
                 });
             });
@@ -81,7 +85,7 @@ class Services
                     if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
                     {
                         $client_query_data = ['query' => $query];
-                        $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                        $client_response = $app->_http_client->request('GET', $base_url, $client_query_data);
                         $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                     }
                 });
@@ -98,7 +102,7 @@ class Services
                             'id' => $query_data['internetId'
                             ]
                         ]];
-                        $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                        $client_response = $app->_http_client->request('GET', $base_url, $client_query_data);
                         $person = new \CEHD\App\People\Person($client_response->getBody());
                         $response->sendJSONResponse($person->toJSON());
                     }
@@ -118,7 +122,7 @@ class Services
                     if (array_key_exists('feed-path', $query_data))
                     {
                         $request_url = $base_url . $query_data['feed-path'];
-                        $client_response = $app->http_client->request('GET', $request_url);
+                        $client_response = $app->_http_client->request('GET', $request_url);
                         $xml = $client_response->getBody();
                         $xml_obj = $response->xmlStrToObject($xml);
                         $result_array = $response->getNewsfeedArrayFromXML($xml_obj);
@@ -147,7 +151,7 @@ class Services
                             'q' => $query_data['q'],
                             ]
                         ];
-                        $client_response = $app->http_client->request('GET',$base_url, $client_query_data);
+                        $client_response = $app->_http_client->request('GET',$base_url, $client_query_data);
                         $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                     }
                 });
@@ -175,7 +179,7 @@ class Services
 
                     if (!empty($client_query_data))
                     {
-                        $client_response = $app->http_client->request('GET', $base_url, $client_query_data);
+                        $client_response = $app->_http_client->request('GET', $base_url, $client_query_data);
                         $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
                     }
                 });
