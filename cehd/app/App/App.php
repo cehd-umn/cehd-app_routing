@@ -52,6 +52,7 @@ class BaseApp
         $this->config = $this->_setConfig();
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
+        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
 
         $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
         $twig->addGlobal('config', $this->config);
@@ -72,8 +73,6 @@ class BaseApp
         $this->redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
 
         $this->redirects_camelcase = array_key_exists("redirects_camelcase", $this->file_paths) ? $this->_setPropertFromYAML($this->file_paths["redirects_camelcase"]) : $this->_loadDict([]);
-
-        $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
 
         $this->router->respond('GET', '*', function($request, $response, $service, $app) {
             $uri_components = explode("?", $request->uri());
