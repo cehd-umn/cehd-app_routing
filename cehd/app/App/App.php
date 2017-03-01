@@ -209,42 +209,29 @@ class BaseApp
                     $response->redirect($redirect_uri, 301)->send();
                 }
             }
-        });
 
-        // Loops through the redirects and redirects on a match
-        foreach($this->_redirects as $old_route => $new_route)
-        {
-            $this->router->respond("GET", $old_route, function(
-                $request, $response, $service, $app)
+            // Most redirects will match a key that is the lowercase version of
+            // the URI.
+            $redirect_route = $this->_redirects->get(
+                strtolower($request->uri()));
+
+            if ($redirect_route)
             {
-                // Most redirects will match a key that is the lowercase
-                // version of the URI.
-                $redirect_route = $this->_redirects->get(
-                    strtolower($request->uri()));
-
-                if ($redirect_route)
-                {
-                    $response->redirect($redirect_route, 301)->send();
-                }
-            });
-        }
-
-        // Some redirects need to be checked using camelCase or PascalCase
-        // routes because their lowercase versions match existing routes
-        foreach($this->_redirects_camelcase as $old_route => $new_route)
-        {
-            $this->router->respond("GET", $old_route, function(
-                $request, $response, $service, $app)
+                $response->redirect($redirect_route, 301)->send();
+            }
+            else
             {
+                // Some redirects need to be checked using camelCase or
+                // PascalCase routes because their lowercase versions match
+                // existing routes
                 $redirect_route = $this->_redirects_camelcase->get(
                     $request->uri());
-
                 if ($redirect_route)
                 {
                     $response->redirect($redirect_route, 301)->send();
                 }
-            });
-        }
+            }
+        });
 
         // Finally, we get to the actual routes
         foreach($this->_routes as $route => $route_info)
