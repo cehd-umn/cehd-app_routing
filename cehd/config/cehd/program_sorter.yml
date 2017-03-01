@@ -1,391 +1,479 @@
 ---
 Adult Education*:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Certificate
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
         - Disability and Aging
         - Recreation, Health, and Wellbeing
+        - Teaching, Learning, and Schools
 Adult Education (undergraduate certificate):
+    description: Expand your knowledge of how to teach and develop adults. This certificate is popular with human resource development majors.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - text: Undergraduate Certificate
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+    categories: null
 Adult Literacy:
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/olpd/grad-programs/ABE/requirements.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/lit-cert.html
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
         - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Advance Practices in Second Language Teaching:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Certificate
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/AdvancedSecondLanguageTeaching.html
     categories:
+        - Languages, Culture, and International
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Applied psychology in educational and community settings (APECS):
+    description: Gain experience working with children and youth in educational settings.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/EdPsych/Programs/minor/default.html
     categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Arts in Education:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/artsined.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Art.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Art.html
     categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Languages, Culture, and International
 Autism:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism.html
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
         - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Autism Spectrum Disorders (undergrad and grad certificate):
+    description: Prepare to work with children and youth with autism spectrum disorders by learning methods of assessment, intervention, and treatment evaluation.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Certificate
+          href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
     categories:
         - Teaching, Learning, and Schools
         - Community and Leadership
         - Disability and Aging
         - Recreation, Health, and Wellbeing
 Business and Marketing Education:
+    description: Courses in sales and marketing prepare you for careers in a variety of organizations, from Fortune 500 companies and entrepreneurial startups to nonprofit management.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/OLPD/undergrad-programs/BME/default.html
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
-        - Disability and Aging
+        - Families, Youth, and Children
         - Recreation, Health, and Wellbeing
 Child Psychology:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
         - Disability and Aging
+        - Families, Youth, and Children
         - Recreation, Health, and Wellbeing
-Clinical Physiology and Movement Science:
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
+Clinical Physiology and Movement Science:
+    description: null
+    links:
+        - text: Graduate Minor
+          href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+        - text: Graduate Certificate
+          href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+    categories:
         - Recreation, Health, and Wellbeing
 Coaching (Minor and Certificate):
+    description: If you're interested in pursuing sport management or teacher licensure, this certificate gives you a foundation for developing your coaching skills.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/kin/current/coaching.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/kin/current/coaching.html
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
         - Recreation, Health, and Wellbeing
+        - Teaching, Learning, and Schools
 Comparative International Development Education:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/OLPD/grad-programs/CIDE/ma.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/OLPD/grad-programs/CIDE/phd.html
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Languages, Culture, and International
 Counseling and Student Personnel Psychology:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/edpsych/programs/cspp/
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
         - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Teaching, Learning, and Schools
 Couple and Family Therapy:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/FSoS/programs/phd-cft.asp
     categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Families, Youth, and Children
+        - Languages, Culture, and International
 Culture and Teaching:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/CAT.html
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Languages, Culture, and International
+        - Teaching, Learning, and Schools
 Disability Policy and Services:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/OLPD/grad-programs/EPL/disabilitycert.html
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
         - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Dual Language and Immersion Education:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
     categories:
+        - Languages, Culture, and International
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Early Childhood Education Foundations:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
     categories:
+        - Families, Youth, and Children
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Early Childhood Education (M.Ed.):
+    description: Study children's development from birth to age eight, a time of rapid development and change. Prepare for a teaching career or careers in social service agencies and nonprofit organizations.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - text: Teaching
+          href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+        - text: Masters
+          href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+    categories: null
 Education Policy and Leadership:
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+    description: null
+    links: null
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Teaching, Learning, and Schools
 Elementary Education Foundations:
+    description: Become a remarkable educator with frequent classroom placements in Twin Cities schools. This major prepares you for our one-year, combined initial teaching license and master of education program.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ElementaryEducationFoundations.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/Elementary.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Elementary.html
     categories:
+        - Families, Youth, and Children
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Elementary Education (M.Ed.):
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+    description: null
+    links: null
+    categories: null
 English as a Second Language/Teaching English as Second Language:
+    description: Earn a minor/certificate in ESL that prepares you to teach abroad and is recognized worldwide.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
     categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Languages, Culture, and International
 English Education:
+    description: null
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/English.html
     categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Evaluation Studies:
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+    description: null
+    links: null
     categories:
-        - Teaching, Learning, and Schools
         - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+        - Evaluation and Methods
 Family and Community Engagement (minor):
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+    description: Beginning fall 2017
+    links: null
+    categories: null
 Family Education*:
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+    description: null
+    links: null
     categories:
+        - Families, Youth, and Children
+        - Languages, Culture, and International
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
 Family Financial Studies (minor):
-    links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
-    categories:
-        - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
-        - Recreation, Health, and Wellbeing
+    description: Beginning fall 2017
+    links: null
+    categories: null
 Family Science:
+    description: null
+    links: null
+    categories:
+        - Disability and Aging
+        - Families, Youth, and Children
+        - Languages, Culture, and International
+Family Social Science:
+    description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work.
     links:
-        - title: Undergraduate Certificate
-          link: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
-        - title: Masters
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
-        - title: Graduate Certificate
-          link: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/FSoS/programs/undergrad.asp
+    categories:
+        - Disability and Aging
+        - Families, Youth, and Children
+        - Languages, Culture, and International
+Family Social Science (minor):
+    description: Further your understanding of couple relationships, family systems, and diversity.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
+    categories:
+        - Families, Youth, and Children
+        - Languages, Culture, and International
+        - Disability and Aging
+Family Therapy (minor):
+    description: Beginning fall 2017
+    links: null
+    categories: null
+Family Violence Prevention:
+    description: Expand your knowledge of preventing family violence through this minor in the School of Social Work.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
+    categories:
+        - Families, Youth, and Children
+Higher Education:
+    description: null
+    links: null
+    categories:
+        - Evaluation and Methods
+        - Teaching, Learning, and Schools
+Human Resource Development:
+    description: Learn how to develop people and teams in the workplace. Complete an internship and prepare to work in a variety of public and private organizations.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/default.html
+    categories:
+        - Community and Leadership
+Human Resource Development (certificate):
+    description: Gain an understanding of human resource development, training, and organizational development.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/certificate.html
+    categories:
+        - Community and Leadership
+K-12 Technology Integration:
+    description: null
+    links: null
     categories:
         - Teaching, Learning, and Schools
-        - Community and Leadership
-        - Disability and Aging
+Kinesiology:
+    description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/kin/current/undergrad/kin.html
+    categories:
+        - Languages, Culture, and International
         - Recreation, Health, and Wellbeing
+Leadership:
+    description: Prepare for real-life leadership opportunities by examining leadership from several perspectives.
+    links:
+        text: Undergraduate Minor
+        href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
+    categories: null
+        - Community and Leadership
+Leadership in Education:
+    description: null
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
+    categories:
+        - Community and Leadership
+        - Teaching, Learning, and Schools
+Learning Technologies:
+    description: null
+    links: null
+    categories:
+        - Community and Leadership
+        - Languages, Culture, and International
+        - Teaching, Learning, and Schools
+Literacy Education:
+    description: null
+    links: null
+    categories: null
+Math Education:
+    description: null
+    links: null
+    categories: null
+Multicultural Teaching and Learning:
+    description: null
+    links: null
+    categories: null
+Multimedia Design and Development:
+    description: null
+    links: null
+    categories: null
+Online Learning:
+    description: null
+    links: null
+    categories: null
+Outdoor Recreation and Education:
+    description: null
+    links: null
+    categories: null
+Parent Education:
+    description: null
+    links: null
+    categories: null
+PK-12 Administrative Licensure:
+    description: null
+    links: null
+    categories: null
+Professional Development:
+    description: null
+    links: null
+    categories: null
+Program Evaluation:
+    description: null
+    links: null
+    categories: null
+Psychological Foundations of Education:
+    description: null
+    links: null
+    categories: null
+Quantitative Methods in Education:
+    description: null
+    links: null
+    categories: null
+Racial Justice in Urban Schooling:
+    description: null
+    links: null
+    categories: null
+Recreation Administration:
+    description: null
+    links: null
+    categories: null
+School Psychology:
+    description: null
+    links: null
+    categories: null
+Science Education:
+    description: null
+    links: null
+    categories: null
+Science, Technology, Engineering, and Math (STEM) Education:
+    description: null
+    links: null
+    categories: null
+Second Language Education:
+    description: null
+    links: null
+    categories: null
+Social Justice:
+    description: null
+    links: null
+    categories: null
+Social Studies Education:
+    description: null
+    links: null
+    categories: null
+Social Work:
+    description: null
+    links: null
+    categories: null
+Special Education:
+    description: null
+    links: null
+    categories: null
+Special Education M.Ed.:
+    description: null
+    links: null
+    categories: null
+Sport Management:
+    description: null
+    links: null
+    categories: null
+Sport Management (minor):
+    description: null
+    links: null
+    categories: null
+Sport/Exercise Science:
+    description: null
+    links: null
+    categories: null
+Talent Development and Gifted Education:
+    description: null
+    links: null
+    categories: null
+Teaching Writing and Critical Literacy:
+    description: null
+    links: null
+    categories: null
+Undergraduate Multicultural Teaching and Learning:
+    description: null
+    links: null
+    categories: null
+Work and Human Resources Education:
+    description: null
+    links: null
+    categories: null
+Youth Development Leadership:
+    description: null
+    links: null
+    categories: null
+Youth Studies:
+    description: null
+    links: null
+    categories: null
+Youth Studies (minor):
+    description: null
+    links: null
+    categories: null
