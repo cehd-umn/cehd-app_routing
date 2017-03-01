@@ -3,6 +3,7 @@ namespace CEHD\App\EdPsych;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
 require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
+require_once __DIR__ . '/../../../cehd/app/People/People.php';
 
 class EdPsychApp extends \CEHD\App\App\BaseApp
 {
