@@ -8,15 +8,16 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 {
     public $nav_open = false;
 
-    protected $_search_client;
+    private $_search_client;
+
+    private $_sites;
 
     // @todo move routes in public/edpsych/index.php here
     function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
-        $this->_search_client = new \CEHD\App\Search\Search(
-            [
+        $this->_sites = [
                 "primary" => [
                     "name" => "Educational Psychology",
                     "url" => "www.cehd.umn.edu/edpsych/",
@@ -29,8 +30,9 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                     "name" => "University of Minnesota",
                     "url" => "www.umn.edu",
                 ]
-            ]
-        );
+            ];
+
+        $this->_search_client = new \CEHD\App\Search\Search($this->_sites);
 
         // Check for main nav state
         if (array_key_exists('cehd-edpsych-navOpen', $_COOKIE)) {
@@ -57,14 +59,13 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
         $this->router->respond('GET', '/edpsych/search/', function($request, $response, $service, $app) {
             $query_data = $request->params();
-            $query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-
-            $client_query_data = [
-                "q" => $query,
+            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+            $search_client_query_data = [
+                "q" => $search_query,
                 "sites" => ["primary", "secondary", "tertiary"],
             ];
 
-            $results = $app->_search_client->get($client_query_data);
+            $results = $app->_search_client->get($search_client_query_data);
             $template_data = [
                 "results" => $results,
                 "query" => $query_data["q"],
@@ -111,31 +112,32 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 echo $app->template->render('edpsych/people/person.html', $template_vars);
             });
 
-            $this->router->respond('GET', '/edpsych/programs/courses/[asl|qme|psyf:course]/', function($request, $response, $service, $app) {
-                // values for the "p" query parameter in the JavaScript request
-                $p_params = [
-                    "asl" => [
-                        "p" => "EPSY_ASL",
-                        "title" => "American Sign Language",
-                    ],
-                    "qme" => [
-                        "p" => "EPSY_PSE",
-                        "title" => "Quantitative Methods in Education",
-                    ],
-                    "psyf" => [
-                        "p" => "EPSY_PSYF",
-                        "title" => "Psychological Foundations of Education",
-                    ],
-                ];
-                $course = $request->param('course');
-                $template_vars = [
-                    "section" => "programs-degrees",
-                    "p_param" => $p_params[$course]["p"],
-                    "title_text" => $p_params[$course]["title"],
-                ];
+        });
 
-                echo $app->template->render('edpsych/programs/courses/course.html', $template_vars);
-            });
+        $this->router->respond('GET', '/edpsych/programs/courses/[asl|qme|psyf:course]/', function($request, $response, $service, $app) {
+            // values for the "p" query parameter in the JavaScript request
+            $p_params = [
+                "asl" => [
+                    "p" => "EPSY_ASL",
+                    "title" => "American Sign Language",
+                ],
+                "qme" => [
+                    "p" => "EPSY_PSE",
+                    "title" => "Quantitative Methods in Education",
+                ],
+                "psyf" => [
+                    "p" => "EPSY_PSYF",
+                    "title" => "Psychological Foundations of Education",
+                ],
+            ];
+            $course = $request->param('course');
+            $template_vars = [
+                "section" => "programs-degrees",
+                "p_param" => $p_params[$course]["p"],
+                "title_text" => $p_params[$course]["title"],
+            ];
+
+            echo $app->template->render('edpsych/programs/courses/course.html', $template_vars);
         });
     }
 }
