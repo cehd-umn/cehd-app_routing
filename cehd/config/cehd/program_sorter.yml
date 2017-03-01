@@ -3,11 +3,11 @@ Adult Education*:
     description: null
     links:
         - text: Undergraduate Certificate
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
         - text: Masters
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/med-ps.html
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/certificate.html
     categories:
         - Community and Leadership
         - Disability and Aging
@@ -17,20 +17,20 @@ Adult Education (undergraduate certificate):
     description: Expand your knowledge of how to teach and develop adults. This certificate is popular with human resource development majors.
     links:
         - text: Undergraduate Certificate
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
         - text: Masters
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/med-ps.html
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/certificate.html
     categories: null
 Adult Literacy:
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
         - text: Teaching
-          href: http://www.cehd.umn.edu/olpd/grad-programs/ABE/requirements.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/abe/requirements.html
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/lit-cert.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/lit-cert.html
     categories:
         - Community and Leadership
         - Disability and Aging
@@ -38,11 +38,11 @@ Advance Practices in Second Language Teaching:
     description: null
     links:
         - text: Undergraduate Certificate
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
         - text: Masters
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/med-ps.html
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/AdvancedSecondLanguageTeaching.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/certificates/advancedsecondlanguageteaching.html
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
@@ -50,18 +50,18 @@ Applied psychology in educational and community settings (APECS):
     description: Gain experience working with children and youth in educational settings.
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/EdPsych/Programs/minor/default.html
+          href: http://www.cehd.umn.edu/edpsych/programs/minor/
     categories:
         - Teaching, Learning, and Schools
 Arts in Education:
     description: null
     links:
         - text: Teaching
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/artsined.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/artsined.html
         - text: Masters
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Art.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/medprofessional/art.html
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Art.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/art.html
     categories:
         - Teaching, Learning, and Schools
         - Languages, Culture, and International
@@ -69,20 +69,20 @@ Autism:
     description: null
     links:
         - text: Teaching
-          href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/asd/
         - text: Masters
-          href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/asd/
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism.html
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     categories:
         - Disability and Aging
 Autism Spectrum Disorders (undergrad and grad certificate):
     description: Prepare to work with children and youth with autism spectrum disorders by learning methods of assessment, intervention, and treatment evaluation.
     links:
         - text: Undergraduate Certificate
-          href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     categories:
         - Teaching, Learning, and Schools
         - Community and Leadership
@@ -92,7 +92,7 @@ Business and Marketing Education:
     description: Courses in sales and marketing prepare you for careers in a variety of organizations, from Fortune 500 companies and entrepreneurial startups to nonprofit management.
     links:
         - text: Undergraduate Major
-          href: http://www.cehd.umn.edu/OLPD/undergrad-programs/BME/default.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/bme/
     categories:
         - Community and Leadership
         - Families, Youth, and Children
@@ -101,7 +101,7 @@ Child Psychology:
     description: null
     links:
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
+          href: http://www.cehd.umn.edu/icd/programs/cpsy/graduate/
     categories:
         - Disability and Aging
         - Families, Youth, and Children
@@ -130,9 +130,9 @@ Comparative International Development Education:
     description: null
     links:
         - text: Masters
-          href: http://www.cehd.umn.edu/OLPD/grad-programs/CIDE/ma.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/cide/ma.html
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/OLPD/grad-programs/CIDE/phd.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/cide/phd.html
     categories:
         - Languages, Culture, and International
 Counseling and Student Personnel Psychology:
@@ -141,7 +141,7 @@ Counseling and Student Personnel Psychology:
         - text: Masters
           href: http://www.cehd.umn.edu/edpsych/programs/cspp/
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/certificate.html
     categories:
         - Disability and Aging
         - Teaching, Learning, and Schools
@@ -149,7 +149,7 @@ Couple and Family Therapy:
     description: null
     links:
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/FSoS/programs/phd-cft.asp
+          href: http://www.cehd.umn.edu/fsos/programs/phd-cft.asp
     categories:
         - Families, Youth, and Children
         - Languages, Culture, and International
@@ -157,7 +157,7 @@ Culture and Teaching:
     description: null
     links:
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/CAT.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/cat.html
     categories:
         - Community and Leadership
         - Languages, Culture, and International
@@ -166,7 +166,7 @@ Disability Policy and Services:
     description: null
     links:
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/OLPD/grad-programs/EPL/disabilitycert.html
+          href: http://www.cehd.umn.edu/olpd/grad-programs/epl/disabilitycert.html
     categories:
         - Community and Leadership
         - Disability and Aging
@@ -174,7 +174,7 @@ Dual Language and Immersion Education:
     description: null
     links:
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/certificates/immersion.html
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
@@ -182,7 +182,7 @@ Early Childhood Education Foundations:
     description: null
     links:
         - text: Undergraduate Major
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
     categories:
         - Families, Youth, and Children
         - Teaching, Learning, and Schools
@@ -190,9 +190,9 @@ Early Childhood Education (M.Ed.):
     description: Study children's development from birth to age eight, a time of rapid development and change. Prepare for a teaching career or careers in social service agencies and nonprofit organizations.
     links:
         - text: Teaching
-          href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+          href: http://www.cehd.umn.edu/icd/programs/ece/graduate/
         - text: Masters
-          href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+          href: http://www.cehd.umn.edu/icd/programs/ece/graduate/
     categories: null
 Education Policy and Leadership:
     description: null
@@ -204,11 +204,11 @@ Elementary Education Foundations:
     description: Become a remarkable educator with frequent classroom placements in Twin Cities schools. This major prepares you for our one-year, combined initial teaching license and master of education program.
     links:
         - text: Undergraduate Major
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ElementaryEducationFoundations.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/undergrad/elementaryeducationfoundations.html
         - text: Teaching
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/Elementary.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/elementary.html
         - text: Ph.D.
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Elementary.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/elementary.html
     categories:
         - Families, Youth, and Children
         - Teaching, Learning, and Schools
@@ -220,9 +220,9 @@ English as a Second Language/Teaching English as Second Language:
     description: Earn a minor/certificate in ESL that prepares you to teach abroad and is recognized worldwide.
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/undergrad/eslminorteslcertificate.html
         - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/undergrad/eslminorteslcertificate.html
     categories:
         - Teaching, Learning, and Schools
         - Languages, Culture, and International
@@ -230,7 +230,7 @@ English Education:
     description: null
     links:
         - text: Teaching
-          href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/English.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/english.html
     categories:
         - Teaching, Learning, and Schools
 Evaluation Studies:
@@ -265,7 +265,7 @@ Family Social Science:
     description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work.
     links:
         - text: Undergraduate Major
-          href: http://www.cehd.umn.edu/FSoS/programs/undergrad.asp
+          href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp
     categories:
         - Disability and Aging
         - Families, Youth, and Children
@@ -287,7 +287,7 @@ Family Violence Prevention:
     description: Expand your knowledge of preventing family violence through this minor in the School of Social Work.
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
+          href: http://www.cehd.umn.edu/ssw/undergraduate/minors.html
     categories:
         - Families, Youth, and Children
 Higher Education:
@@ -300,14 +300,14 @@ Human Resource Development:
     description: Learn how to develop people and teams in the workplace. Complete an internship and prepare to work in a variety of public and private organizations.
     links:
         - text: Undergraduate Major
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/default.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/hrd/
     categories:
         - Community and Leadership
 Human Resource Development (certificate):
     description: Gain an understanding of human resource development, training, and organizational development.
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/certificate.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/hrd/certificate.html
     categories:
         - Community and Leadership
 K-12 Technology Integration:
@@ -327,14 +327,14 @@ Leadership:
     description: Prepare for real-life leadership opportunities by examining leadership from several perspectives.
     links:
         text: Undergraduate Minor
-        href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
+        href: http://www.cehd.umn.edu/olpd/undergrad-programs/leadership/
     categories: null
         - Community and Leadership
 Leadership in Education:
     description: null
     links:
         - text: Undergraduate Minor
-          href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/leadership/
     categories:
         - Community and Leadership
         - Teaching, Learning, and Schools
@@ -348,15 +348,21 @@ Learning Technologies:
 Literacy Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Languages, Culture, and International
+        - Teaching, Learning, and Schools
 Math Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Teaching, Learning, and Schools
 Multicultural Teaching and Learning:
     description: null
     links: null
-    categories: null
+    categories:
+        - Languages, Culture, and International
+        - Community and Leadership
+        - Teaching, Learning, and Schools
 Multimedia Design and Development:
     description: null
     links: null
@@ -366,17 +372,25 @@ Online Learning:
     links: null
     categories: null
 Outdoor Recreation and Education:
-    description: null
-    links: null
-    categories: null
+    description: An experiential program that can be completed through international and U.S. travel opportunities.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/kin/current/undergrad/rec.html
+    categories:
+        - Recreation, Health, and Wellbeing
+        - Teaching, Learning, and Schools
 Parent Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Families, Youth, and Children
+        - Teaching, Learning, and Schools
 PK-12 Administrative Licensure:
     description: null
     links: null
-    categories: null
+    categories:
+        - Community and Leadership
+        - Teaching, Learning, and Schools
 Professional Development:
     description: null
     links: null
@@ -384,96 +398,150 @@ Professional Development:
 Program Evaluation:
     description: null
     links: null
-    categories: null
+    categories:
+        - Evaluation and Methods
 Psychological Foundations of Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Teaching, Learning, and Schools
 Quantitative Methods in Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Evaluation and Methods
+        - Teaching, Learning, and Schools
 Racial Justice in Urban Schooling:
-    description: null
+    description: Beginning fall 2017
     links: null
     categories: null
 Recreation Administration:
-    description: null
-    links: null
-    categories: null
+    description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/kin/current/undergrad/rec.html
+    categories:
+        - Recreation, Health, and Wellbeing
 School Psychology:
     description: null
-    links: null
-    categories: null
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/edpsych/programs/minor/
+    categories:
+        - Families, Youth, and Children
+        - Teaching, Learning, and Schools
 Science Education:
-    description: null
+    description: Focus on teaching chemistry, earth science, general science, life science, or physics
     links: null
-    categories: null
+    categories:
+        - Teaching, Learning, and Schools
 Science, Technology, Engineering, and Math (STEM) Education:
     description: null
-    links: null
-    categories: null
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/stem.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/stem.html
+    categories:
+        - Teaching, Learning, and Schools
 Second Language Education:
-    description: null
+    description: Focus on teaching Arabic, Chinese, ESL, French, German, Hebrew, Italian, Japanese, Latin, Norwegian, Ojibwe, Polish, Russian, Spanish, or Swedish
     links: null
-    categories: null
+    categories:
+        - Languages, Culture, and International
+        - Teaching, Learning, and Schools
 Social Justice:
-    description: null
-    links: null
-    categories: null
+    description: Examine how to create socially just communities through this minor in the School of Social Work.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/ssw/undergraduate/minors.html
+    categories:
+        - Community and Leadership
 Social Studies Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Languages, Culture, and International
+        - Teaching, Learning, and Schools
 Social Work:
     description: null
     links: null
-    categories: null
+    categories:
+        - Community and Leadership
+        - Disability and Aging
+        - Evaluation and Methods
+        - Families, Youth, and Children
+        - Languages, Culture, and International
 Special Education:
-    description: null
-    links: null
-    categories: null
+    description: Earn your degree and teaching license in four years. Preare to teach students with mild-moderate disabilities in grade K through age 21.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
+    categories:
+        - Disability and Aging
+        - Teaching, Learning, and Schools
 Special Education M.Ed.:
     description: null
     links: null
     categories: null
 Sport Management:
-    description: null
-    links: null
-    categories: null
+    description: Learn the business of sports and prepare for careers in areas such as marketing and promotions and event and facilities management.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/kin/current/undergrad/smgt.html
+    categories:
+        - Community and Leadership
+        - Recreation, Health, and Wellbeing
 Sport Management (minor):
-    description: null
-    links: null
-    categories: null
+    description: Discover the business aspects of the sport industry by learning about common business, marketing, management, social, and ethical principles.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/kin/current/undergrad/smgt.html#minor
+    categories:
+        - Recreation, Health, and Wellbeing
 Sport/Exercise Science:
     description: null
     links: null
-    categories: null
+    categories:
+        - Recreation, Health, and Wellbeing
 Talent Development and Gifted Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Teaching, Learning, and Schools
 Teaching Writing and Critical Literacy:
     description: null
     links: null
-    categories: null
+    categories:
+        - Teaching, Learning, and Schools
+        - Languages, Culture, and International
 Undergraduate Multicultural Teaching and Learning:
     description: null
     links: null
-    categories: null
+    categories:
+        - Community and Leadership
+        - Teaching, Learning, and Schools
 Work and Human Resources Education:
     description: null
     links: null
-    categories: null
+    categories:
+        - Community and Leadership
+        - Teaching, Learning, and Schools
 Youth Development Leadership:
     description: null
     links: null
     categories: null
 Youth Studies:
-    description: null
-    links: null
-    categories: null
+    description: Make a difference in young people's lives. Prepare for careers working with youth in a variety of settings or pursue graduate work in social work, education, or public policy.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/ssw/undergraduate/yost.html
+    categories:
+        - Families, Youth, and Children
 Youth Studies (minor):
-    description: null
-    links: null
-    categories: null
+    description: Understand the everyday lives of youth and how to work with them through this minor in the School of Social Work.
+    links:
+        - text: Undergraduate Minor
+          href: http://www.cehd.umn.edu/ssw/undergraduate/minors.html
+    categories:
+        - Families, Youth, and Children
