@@ -232,10 +232,9 @@ class BaseApp
                 }
             }
 
-            // Finally we check for a matching route.
-            // $route = $this->_routes->get($request->uri());
         });
 
+        // Finally we check for a matching route.
         foreach ($this->_routes as $route => $route_info)
         {
             if ($route)
