@@ -217,6 +217,10 @@
     template: edpsych/programs/foundations/talent.html
     template_data:
         section: programs-degrees
+/edpsych/programs/foundations/talent/requirements/:
+    template: edpsych/programs/foundations/talent-requirements.html
+    template_data:
+        section: programs-degrees
 /edpsych/programs/graduate-minor/:
     template: edpsych/programs/graduate-minor.html
     template_data:

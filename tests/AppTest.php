@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/../cehd/app/App/App.php';
 require_once __DIR__ . '/../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
-// use Klein;
 
 class AppTest extends TestCase
 {
@@ -15,11 +15,13 @@ class AppTest extends TestCase
     {
         $appConfigFilePath = __DIR__ . '/fixtures/config/app-config.yml';
         $navFilePath =       __DIR__ . '/fixtures/nav.yml';
+        $routesFilePath =    __DIR__ . '/fixtures/routes.yml';
         $this->appInstance = new \CEHD\App\App\BaseApp([
             "configs" => [
                 $appConfigFilePath,
             ],
             "nav" => $navFilePath,
+            "routes" => $routesFilePath,
         ]);
     }
 
@@ -31,11 +33,11 @@ class AppTest extends TestCase
         // template is an instance of Twig
         $this->assertInstanceOf(\Twig_Environment::class, $this->appInstance->template);
 
-        // http_client is an instance of Guzzle
-        $this->assertInstanceOf(\GuzzleHttp\Client::class, $this->appInstance->http_client);
-
         // helper is an instance of \CEHD\Helpers\Helper
         $this->assertInstanceOf(\CEHD\Helpers\Helper\Helper::class, $this->appInstance->helpers);
+
+        // response is an instance of \CEHD\App\BaseResponse
+        $this->assertInstanceOf(\CEHD\App\Response\BaseResponse::class, $this->appInstance->response);
 
         // the config is properly set
         $this->assertTrue($this->appInstance->config['debug']);
@@ -66,14 +68,16 @@ class AppTest extends TestCase
     public function testAlternateConfig()
     {
         $appConfigFilePath = __DIR__ . '/fixtures/config/app-config.yml';
-        $yaConfigFilePath = __DIR__ . '/fixtures/config/ya-config.yml';
-        $navFilePath =       __DIR__ . '/fixtures/nav.yml';
+        $yaConfigFilePath  = __DIR__ . '/fixtures/config/ya-config.yml';
+        $navFilePath       = __DIR__ . '/fixtures/nav.yml';
+        $routesFilePath    = __DIR__ . '/fixtures/routes.yml';
         $this->appInstance = new \CEHD\App\App\BaseApp([
             "configs" => [
                 $appConfigFilePath,
                 $yaConfigFilePath,
             ],
             "nav" => $navFilePath,
+            "routes" => $routesFilePath,
         ]);
 
         $this->assertEquals("/new/base/assets", $this->appInstance->config['asset_base']);
