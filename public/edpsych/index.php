@@ -6,6 +6,6 @@
  * @version 0.1.0
  */
 
-require_once __DIR__ . "/../../routes/edpsych/static_routes.php";
+require_once __DIR__ . "/../../routes/edpsych/routes.php";
 
 $app->router->dispatch(null, $app->response);
