@@ -2,7 +2,7 @@
 
 namespace CEHD\App\Routes\StaticRoutes;
 
-require_once __DIR__ . "/../../cehd/app/App/App.php";
+require_once __DIR__ . "/../../cehd/app/CEHD/CEHDApp.php";
 
 $base_app_config    = __DIR__ . "/../../cehd/config/app/config.yml";
 $cehd_app_config    = __DIR__ . "/../../cehd/config/cehd/config.yml";
@@ -21,4 +21,12 @@ $yaml_file_paths = [
     "inline_styles" => $inline_styles_file,
 ];
 
-$app = new \CEHD\App\App\BaseApp($yaml_file_paths);
+$app = new \CEHD\App\CEHD\CEHDApp($yaml_file_paths);
+
+$app->router->respond('GET', '/search/', [$app, 'searchRoute']);
+
+// Services
+$app->router->with('/services', function() use ($app)
+{
+    $app->router->respond('GET', '/search/', [$app, 'searchEndpointRoute']);
+});
