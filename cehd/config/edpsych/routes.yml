@@ -1,6 +1,6 @@
 ---
 # Use spaces and 4-space indentation. Tab indentation will break this file.
-# Also the indentation structure here is *very important*. This will also break
+# Also the indentation structure here is #very important#. This will also break
 # if things aren't indented with the same pattern. Finally, it's a good idea to
 # install a YAML linter to help catch duplicate keys. (Routes are keys in this
 # case.)
@@ -18,9 +18,25 @@
 # /edpsych/reg-pg/
 # /edpsych/RegistrationPage/
 #
-# ************************************
-# ** This system is case-sensitive! **
-# ************************************
+# Try to organize your templates in a way that matches the route. Main section
+# templates should be named index.html
+#
+# Examples:
+#
+# route: /edpsych/about/
+# template: edpsych/about/index.html
+#
+# route: /edpsych/really/long/nested/route/
+# template: edpsych/really/long/nested/route/index.html
+#
+# route: /edpsych/really/long/nested/route/sub-section/
+# template: edpsych/really/long/nested/route/sub-section.html
+#
+# Be judicious. The goal is to make templates easy to find.
+#
+####################################
+## This system is case-sensitive! ##
+####################################
 /edpsych/:
     template: edpsych/index.html
     template_data:
