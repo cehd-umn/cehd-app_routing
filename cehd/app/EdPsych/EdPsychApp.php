@@ -69,6 +69,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         echo $app->_renderTemplate('edpsych/search.html', $template_data);
     }
 
+    // @todo remove all these endpoints and point Ed Psych stuff to college-level ones
     public function searchEndpointHandler($request, $response, $service, $app)
     {
         $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
