@@ -204,7 +204,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             ],
         ];
         $course = $request->param('course');
-        $template_vars = [
+        $template_data = [
             "section" => "programs-degrees",
             "p_param" => $p_params[$course]["p"],
             "title_text" => $p_params[$course]["title"],
@@ -223,12 +223,12 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             $section_data[$key]["section_hyphenated"] = $app->helpers->hyphenate($section_data[$key]["section"]);
         };
 
-        $template_vars = [
+        $template_data = [
             "section" => "people",
             "section_data" => $section_data,
         ];
 
-        echo $app->_renderTemplate('edpsych/people/index.html', $template_vars);
+        echo $app->_renderTemplate('edpsych/people/index.html', $template_data);
     }
 
     public function personPageHandler($request, $response, $service, $app)
@@ -238,11 +238,11 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
         $extra_content = $extra_content_data->get($request->internetId);
 
-        $template_vars = [
+        $template_data = [
             "section" => "people",
             "internet_id" => $request->internetId,
             "extra_content" => $extra_content,
         ];
-        echo $app->_renderTemplate('edpsych/people/person.html', $template_vars);
+        echo $app->_renderTemplate('edpsych/people/person.html', $template_data);
     }
 }
