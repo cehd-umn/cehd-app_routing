@@ -371,4 +371,9 @@ class BaseApp
             );
         };
     }
+
+    protected function _renderTemplate($template_path, $template_data)
+    {
+        return $this->template->render($template_path, $template_data);
+    }
 }
