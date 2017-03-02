@@ -170,81 +170,77 @@ class BaseApp
         $this->_redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
         $this->_redirects_camelcase = array_key_exists("redirects_camelcase", $this->file_paths) ? $this->_setFromYAML($this->file_paths["redirects_camelcase"]) : $this->_loadDict([]);
 
-        // Adds a trailing slash if it's missing
-        // preserves query params if they exist
-        // runs on *every* request
-        $this->router->respond('GET', '*', function($request, $response, $service, $app) {
+        $this->router->respond('GET', null, [$this, 'genericResponseHandler']);
 
-            // split the uri into the url and the query params
-            $uri_components = explode("?", $request->uri());
+        // Finally, we get to the actual routes
+        foreach($this->_routes as $route => $route_info)
+        {
+            $this->router->respond(
+                'GET', $route, [$this, 'renderStaticTemplate']);
+        }
+    }
+
+    // Handles *all* requests
+    // Adds a trailing slash if it's missing
+    // preserves query params if they exist
+    // runs on *every* request
+    public function genericResponseHandler(
+        $request, $response, $service, $app)
+    {
+        // split the uri into the url and the query params
+        $uri_components = explode("?", $request->uri());
 
 
-            // the first element in the new array will be the uri
-            $uri = $uri_components[0];
+        // the first element in the new array will be the uri
+        $uri = $uri_components[0];
 
-            if (count($uri_components) > 1)
+        if (count($uri_components) > 1)
+        {
+            // preserve the query string
+            $query_str = "?" . $uri_components[1];
+        }
+        else
+        {
+            $query_str = "";
+        }
+
+        // Don't do this for services
+        if (!strpos($uri, "services"))
+        {
+            // grab the last character in the uri to see if it's a slash
+            $last = substr($uri, -1);
+
+            // grab the last 4 characters to see if it's "html". Anything ending in
+            // .html is likely to need a specific redirect
+            $html = substr($uri, -4);
+
+            if ($last !== "/" && $html !== "html")
             {
-                // preserve the query string
-                $query_str = "?" . $uri_components[1];
+                // put it all back together and redirect
+                $redirect_uri = $uri . "/" . $query_str;
+                $response->redirect($redirect_uri, 301)->send();
             }
-            else
-            {
-                $query_str = "";
-            }
+        }
 
-            // Don't do this for services
-            if (!strpos($uri, "services"))
-            {
-                // grab the last character in the uri to see if it's a slash
-                $last = substr($uri, -1);
+        // Most redirects will match a key that is the lowercase version of
+        // the URI.
+        $redirect_route = $this->_redirects->get(
+            strtolower($request->uri()));
 
-                // grab the last 4 characters to see if it's "html". Anything ending in
-                // .html is likely to need a specific redirect
-                $html = substr($uri, -4);
-
-                if ($last !== "/" && $html !== "html")
-                {
-                    // put it all back together and redirect
-                    $redirect_uri = $uri . "/" . $query_str;
-                    $response->redirect($redirect_uri, 301)->send();
-                }
-            }
-
-            // Most redirects will match a key that is the lowercase version of
-            // the URI.
-            $redirect_route = $this->_redirects->get(
-                strtolower($request->uri()));
-
+        if ($redirect_route)
+        {
+            $response->redirect($redirect_route, 301)->send();
+        }
+        else
+        {
+            // Some redirects need to be checked using camelCase or
+            // PascalCase routes because their lowercase versions match
+            // existing routes
+            $redirect_route = $this->_redirects_camelcase->get(
+                $request->uri());
             if ($redirect_route)
             {
                 $response->redirect($redirect_route, 301)->send();
-            }
-            else
-            {
-                // Some redirects need to be checked using camelCase or
-                // PascalCase routes because their lowercase versions match
-                // existing routes
-                $redirect_route = $this->_redirects_camelcase->get(
-                    $request->uri());
-                if ($redirect_route)
-                {
-                    $response->redirect($redirect_route, 301)->send();
-                }
-            }
-
-        });
-
-        // Finally we check for a matching route.
-        foreach ($this->_routes as $route => $route_info)
-        {
-            if ($route)
-            {
-                $this->router->respond('GET', $route, function(
-                    $request, $response, $service, $app)
-                {
-                    echo $this->_loadStaticTemplate(
-                        $request, $response, $service, $app);
-                });
             }
         }
     }
@@ -363,16 +359,23 @@ class BaseApp
      * @return string - rendered template if the URI matches a route key or
      *         null if not
      */
-    protected function _loadStaticTemplate(
+    public function renderStaticTemplate(
         $request, $response, $service, $app)
     {
-        $route_info = $this->_routes->get($request->uri());
+        // strip query params
+        $path = explode("?", $request->uri());
+        $route_info = $this->_routes->get($path[0]);
         if ($route_info)
         {
-            return $app->template->render(
+            echo $app->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
             );
         };
+    }
+
+    protected function _renderTemplate($template_path, $template_data)
+    {
+        return $this->template->render($template_path, $template_data);
     }
 }
