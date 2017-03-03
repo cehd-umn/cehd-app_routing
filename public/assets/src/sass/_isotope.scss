@@ -1,0 +1,24 @@
+.isotope-container {
+    //display: flex;
+}
+
+.isotope-item,
+.isotope-sizer {
+    width: 25%;
+}
+
+.isotope-item {
+    // border: 1px solid $base-light-grey;
+    // display: flex;
+    padding: 1em;
+
+    &:hover {
+        background-color: $base-light-grey;
+    }
+}
+
+.isotope-button {
+    display: inline-block;
+    height: auto;
+    min-height: 3.5em;
+}

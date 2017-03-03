@@ -1,8 +1,9 @@
 "use strict";
 
 var $ = require("jquery");
+var jquerybridget = require("jquery-bridget");
+var isotope = require("isotope-layout");
 var cookies = require("js-cookie");
-
 var $open_button = $("#menuicon-wrapper");
 var $close_button = $("#navhide");
 var $nav = $("#main-nav");
@@ -50,6 +51,22 @@ $tracking_elements.on("click", function(event) {
             location.href = href;
         },
     400);
+});
+
+jquerybridget("isotope", isotope, $ );
+
+// now you can use $().isotope()
+
+var $isotope = $(".isotope-container");
+
+$isotope.isotope({
+    itemSelector: ".isotope-item",
+    layoutMode: "fitRows"
+});
+
+$(".filter-button-group").on( "click", "button", function() {
+    var filterValue = $(this).data("filter");
+    $isotope.isotope({ filter: filterValue });
 });
 
 window.$ = $;

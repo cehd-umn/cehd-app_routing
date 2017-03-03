@@ -49,7 +49,3 @@
   template: cehd/about/diversity.html
   template_data:
     - section: about
-/programs/:
-  template: cehd/programs/index.html
-  template_data:
-    - section: programs

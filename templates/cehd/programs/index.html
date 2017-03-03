@@ -5,6 +5,47 @@
 <div class="row">
     <div class="container">
         <h1>Program Sorter</h1>
+        <div class="button-group filter-button-group twothird feature">
+            <button class="isotope-button" data-filter="*">show all</button>
+            {% for category_class, category in categories %}
+                <button class="isotope-button" data-filter=".{{ category_class }}">{{ category }}</button>
+            {% endfor %}
+        </div>
+        <div class="isotope-container">
+            <div class="isotope-sizer"></div>
+            {% for program_title, program in program_data %}
+            <div class="isotope-item{%- if loop.index is divisible by(2) %} odd{% endif %}
+                {%- if program.categories_hyphenated -%}
+                    {%- for category_class in program.categories_hyphenated -%}
+                       {{ " " }}{{ category_class }}
+                    {%- endfor -%}
+                {%- endif -%}
+                ">
+                <h2 class="h4">{{ program_title }}</h2>
+                {% if program.description %}
+                {{ program.description }}
+                {% endif %}
+                {% if program.links %}
+                <h2 class="h6">Links</h2>
+                <ul>
+                    {% for link in program.links %}
+                    <li><a href="{{ link.href }}">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if program.categories %}
+                <h2 class="h6">Categories</h2>
+                    <ul>
+                    {% for category in program.categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
 {% endblock %}

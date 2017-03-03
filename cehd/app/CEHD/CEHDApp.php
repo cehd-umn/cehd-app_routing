@@ -32,9 +32,34 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal('cehd_cehd_nav_open', $this->nav_open);
     }
 
-    protected function _renderTemplate($template_path, $template_data)
+    public function programsPageHandler($request, $response, $service, $app)
     {
-        return $this->template->render($template_path, $template_data);
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
+        $program_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
+        $categories = [];
+
+        foreach ($program_data as $program_index => $program)
+        {
+            $program["categories_hyphenated"] = [];
+
+            if ($program["categories"])
+            {
+                foreach ($program["categories"] as $category_index => $category)
+                {
+                    $hyphenated = $app->helpers->hyphenate($category);
+                    $program_data[$program_index]["categories_hyphenated"][$category_index] = $hyphenated;
+                    $categories[$hyphenated] = $category;
+                }
+            }
+        }
+
+        $template_data = [
+            "section" => "programs",
+            "program_data" => $program_data,
+            "categories" => $categories,
+            "program_data_json" => json_encode($program_data),
+        ];
+        echo $app->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
