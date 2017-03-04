@@ -27,6 +27,8 @@ $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
 $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
+$app->router->respond('GET', '/sitemap.xml', [$app, 'sitemapHandler']);
+
 // Services
 // @todo move all services endpoints here
 $app->router->with('/services', function() use ($app)

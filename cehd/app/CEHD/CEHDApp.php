@@ -198,4 +198,14 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
         }
     }
+
+    public function sitemapHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/routes.yml';
+        $route_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
+        $template_data = [
+            "sitemap_data" => $route_data,
+        ];
+        echo $app->_renderTemplate('cehd/sitemap.xml', $template_data);
+    }
 }

@@ -212,9 +212,9 @@ class BaseApp
 
             // grab the last 4 characters to see if it's "html". Anything ending in
             // .html is likely to need a specific redirect
-            $html = substr($uri, -4);
+            $file_extension = substr($uri, -4);
 
-            if ($last !== "/" && $html !== "html")
+            if ($last !== "/" && !in_array($file_extension, ["html", ".xml"]))
             {
                 // put it all back together and redirect
                 $redirect_uri = $uri . "/" . $query_str;
