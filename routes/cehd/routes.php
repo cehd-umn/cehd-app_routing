@@ -30,13 +30,15 @@ $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 $app->router->respond('GET', '/sitemap.xml', [$app, 'sitemapHandler']);
 
 // Services
-// @todo move all services endpoints here
 $app->router->with('/services', function() use ($app)
 {
     $app->router->respond('GET', '/search/', [$app, 'searchEndpointHandler']);
 
     $app->router->with('/people-tool', function() use ($app) {
+        // returns a JSON list of people by tag combination
         $app->router->respond('GET', '/', [$app, 'peopleEndpointHandler']);
+
+        // returns JSON data for a single person based on their internet id (X.500)
         $app->router->respond('GET', '/person/', [$app, 'personEndpointHandler']);
     });
 
