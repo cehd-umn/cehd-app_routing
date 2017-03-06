@@ -1,12 +1,132 @@
 ---
-- name: Home
-  href: /
-  section: home
-- name: Alumni
-  href: /alumni/
-- name: About
-  href: /about/
+- name: Academics
+  href: "#"
+  section: academics
+  subsection:
+    - name: Majors, Degrees & Programs
+      href: "#"
+      subsection:
+        - name: Study Abroad
+          href: "#"
+        - name: Online Courses
+          href: "#"
+    - name: Teacher Education
+      href: "#"
+      subsection:
+        - name: Programs and Licensure
+          href: "#"
+        - name: School Partnerships
+          href: "#"
+        - name: Workshops and Trainings
+          href: "#"
+        - name: Assessment and Accreditation
+          href: "#"
+    - name: Undergraduate Studies
+      href: "#"
+      subsection:
+        - name: Visit and Apply
+          href: "#"
+        - name: Transfer to CEHD
+          href: "#"
+        - name: Outcomes
+          href: "#"
+        - name: Costs, Aid & Scholarships
+          href: "#"
+        - name: First Year Experience
+          href: "#"
+        - name: Newly Admitted Students
+          href: "#"
+        - name: Academic Advising
+          href: "#"
+        - name: Get Involved
+          href: "#"
+        - name: TRIO Programs
+          href: "#"
+    - name: Graduate Studies
+      href: "#"
+      subsection:
+        - name: Grad Experience Blog
+          href: "#"
+        - name: Community
+          href: "#"
+        - name: Funding
+          href: "#"
+        - name: Wellness & Support
+          href: "#"
+        - name: Career & Leadership
+          href: "#"
+    - name: Tuition & Financial Aid
+      href: "#"
+      subsection:
+        - name: Undergraduate Scholarships
+          href: "#"
+        - name: Graduate Assistantships, Fellowships & Aid
+          href: "#"
+    - name: Career Services
+      href: "#"
+      subsection:
+        - name: Careers By Degree
+          href: "#"
+        - name: Create Your Resume
+          href: "#"
+        - name: Find a Job or Internship
+          href: "#"
+        - name: Prepare for Grad School
+          href: "#"
+        - name: Hire a CEHD Student or Graduate
+          href: "#"
+        - name: Services for Graduate Students
+          href: "#"
+    - name: Graduation
+      href: "#"
+      subsection:
+        - name: Commencement
+          href: "#"
+- name: Research
+  href: "#"
+  section: research
+- name: Diversity & Inclusion
+  href: "#"
+  section: diversity-inclusion
+- name: News & Events
+  href: "#"
+  subsection:
+    - name: Find an Expert
+      href: "#"
+    - name: Connect Magazine
+      href: "#"
+    - name: Media Requests
+      href: "#"
+    - name: Featured Expert
+      href: "#"
+    - name: Events
+      href: "#"
+  section: news-events
+- name: Giving
+  href: "#"
+  section: giving
+- name: Alumni (& friends)
+  href: "#"
+  section: alumni
+  subsection:
+    - name: Membership & Benefits
+      href: "#"
+      subsection:
+        - name: Meet the Board
+          href: "#"
+    - name: Awards & Scholarships
+      href: "#"
+      subsection:
+        - name: CEHD Rising Alumni
+          href: "#"
+        - name: Distinguished Alumni Awards
+          href: "#"
+        - name: College & University Awards
+          href: "#"
+    - name: News & Notes
+      href: "#"
+    - name: Contact Us
+      href: "#"
+- name: About Us
+  href: "#"
   section: about
-  subnav:
-    - name: Diversity & Inclusion
-      href: /about/diversity-inclusion/
