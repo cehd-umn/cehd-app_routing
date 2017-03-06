@@ -42,12 +42,12 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     public function examplesPageHandler($request, $response, $service, $app)
     {
-        echo $app->template->render('edpsych/examples/index.html', []);
+        echo $this->template->render('edpsych/examples/index.html', []);
     }
 
     public function examplesMacrosPageHandler($request, $response, $service, $app)
     {
-        echo $app->template->render('edpsych/examples/macros.html', []);
+        echo $this->template->render('edpsych/examples/macros.html', []);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
@@ -66,7 +66,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "results" => $results,
             "query" => $query_data["q"],
         ];
-        echo $app->_renderTemplate('edpsych/search.html', $template_data);
+        echo $this->_renderTemplate('edpsych/search.html', $template_data);
     }
 
     // @todo remove all these endpoints and point Ed Psych stuff to college-level ones
@@ -210,17 +210,17 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "title_text" => $p_params[$course]["title"],
         ];
 
-        echo $app->_renderTemplate('edpsych/programs/courses/course.html', $template_data);
+        echo $this->_renderTemplate('edpsych/programs/courses/course.html', $template_data);
     }
 
     public function peoplePageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/edpsych/people/index.yml';
-        $section_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
+        $section_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
 
         foreach ($section_data as $key => $section)
         {
-            $section_data[$key]["section_hyphenated"] = $app->helpers->hyphenate($section_data[$key]["section"]);
+            $section_data[$key]["section_hyphenated"] = $this->helpers->hyphenate($section_data[$key]["section"]);
         };
 
         $template_data = [
@@ -228,13 +228,13 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "section_data" => $section_data,
         ];
 
-        echo $app->_renderTemplate('edpsych/people/index.html', $template_data);
+        echo $this->_renderTemplate('edpsych/people/index.html', $template_data);
     }
 
     public function personPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/edpsych/people/extra_content.yml';
-        $yaml_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
+        $yaml_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
         $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
         $extra_content = $extra_content_data->get($request->internetId);
 
@@ -243,6 +243,6 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "internet_id" => $request->internetId,
             "extra_content" => $extra_content,
         ];
-        echo $app->_renderTemplate('edpsych/people/person.html', $template_data);
+        echo $this->_renderTemplate('edpsych/people/person.html', $template_data);
     }
 }
