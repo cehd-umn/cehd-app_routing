@@ -27,7 +27,8 @@ $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
 $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
-$app->router->respond('GET', '/sitemap.xml', [$app, 'sitemapHandler']);
+// temporarily disabled until we can sort this out. (See handler comment)
+// $app->router->respond('GET', '/sitemap.xml', [$app, 'sitemapHandler']);
 
 // Services
 $app->router->with('/services', function() use ($app)
