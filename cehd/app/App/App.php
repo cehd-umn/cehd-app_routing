@@ -145,7 +145,7 @@ class BaseApp
      */
     function __construct($file_paths)
     {
-        $this->router = new Klein\Klein(null, $this);
+        $this->router = new Klein\Klein();
         $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
@@ -367,7 +367,7 @@ class BaseApp
         $route_info = $this->_routes->get($path[0]);
         if ($route_info)
         {
-            echo $app->template->render(
+            echo $this->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
             );

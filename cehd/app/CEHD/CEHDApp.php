@@ -35,7 +35,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function programsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $program_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
+        $program_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
         $categories = [];
 
         foreach ($program_data as $program_index => $program)
@@ -46,7 +46,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 foreach ($program["categories"] as $category_index => $category)
                 {
-                    $hyphenated = $app->helpers->hyphenate($category);
+                    $hyphenated = $this->helpers->hyphenate($category);
                     $program_data[$program_index]["categories_hyphenated"][$category_index] = $hyphenated;
                     $categories[$hyphenated] = $category;
                 }
@@ -59,7 +59,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "categories" => $categories,
             "program_data_json" => json_encode($program_data),
         ];
-        echo $app->_renderTemplate('cehd/programs/index.html', $template_data);
+        echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
@@ -80,7 +80,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "query" => $query_data["q"],
         ];
 
-        echo $app->_renderTemplate('cehd/search/index.html', $template_data);
+        echo $this->_renderTemplate('cehd/search/index.html', $template_data);
     }
 
     public function searchEndpointHandler($request, $response, $service, $app)
