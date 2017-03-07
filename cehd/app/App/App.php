@@ -145,7 +145,7 @@ class BaseApp
      */
     function __construct($file_paths)
     {
-        $this->router = new Klein\Klein(null, $this);
+        $this->router = new Klein\Klein();
         $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
@@ -212,9 +212,9 @@ class BaseApp
 
             // grab the last 4 characters to see if it's "html". Anything ending in
             // .html is likely to need a specific redirect
-            $html = substr($uri, -4);
+            $file_extension = substr($uri, -4);
 
-            if ($last !== "/" && $html !== "html")
+            if ($last !== "/" && !in_array($file_extension, ["html", ".xml"]))
             {
                 // put it all back together and redirect
                 $redirect_uri = $uri . "/" . $query_str;
@@ -367,7 +367,7 @@ class BaseApp
         $route_info = $this->_routes->get($path[0]);
         if ($route_info)
         {
-            echo $app->template->render(
+            echo $this->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
             );
