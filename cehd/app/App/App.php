@@ -365,13 +365,27 @@ class BaseApp
         // strip query params
         $path = explode("?", $request->uri());
         $route_info = $this->_routes->get($path[0]);
-        if ($route_info)
+        if ($this->_routeIsLive($route_info))
         {
             echo $this->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
             );
         };
+    }
+
+    /**
+     * Evaluates whether or or not a route should go live or return a 404;
+     * Routes will always be live if not in production. When in production it
+     * will only go live if the route info has publish: true;
+     *
+     * @param mixed - route info array from the routes.yml file, null if
+     *        $this->_routes->get doesn't find a match
+     * @return boolean
+     */
+    protected function _routeIsLive($route_info)
+    {
+        return $route_info && ($route_info["publish"] || !$this->config["is_prod"]);
     }
 
     protected function _renderTemplate($template_path, $template_data)

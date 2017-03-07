@@ -1,493 +1,616 @@
 ---
 /edpsych/:
+    publish: true
     template: edpsych/index.html
     template_data:
         section: home
 /edpsych/about/:
+    publish: true
     template: edpsych/about/index.html
     template_data:
         section: about
 /edpsych/about/diversity-inclusion/:
+    publish: true
     template: edpsych/about/diversity.html
     template_data:
         section: about
 /edpsych/alumni/:
+    publish: true
     template: edpsych/alumni/index.html
     template_data:
         section: alumni
 /edpsych/alumni/information/:
+    publish: true
     template: edpsych/alumni/information.html
     template_data:
         section: alumni
 /edpsych/contact/:
+    publish: true
     template: edpsych/contact/index.html
     template_data:
         section: null
 /edpsych/contact/confirmation/:
+    publish: true
     template: edpsych/contact/confirmation.html
     template_data:
         section: null
 /edpsych/current/:
+    publish: true
     template: edpsych/current/index.html
     template_data:
         section: current
 /edpsych/current/cspp/:
+    publish: true
     template: edpsych/current/cspp/index.html
     template_data:
         section: current
 /edpsych/current/cspp/handbooks/:
+    publish: true
     template: edpsych/current/cspp/handbooks/index.html
     template_data:
         section: current
 /edpsych/current/foundations/:
+    publish: true
     template: edpsych/current/foundations.html
     template_data:
         section: current
 /edpsych/current/handbook/:
+    publish: true
     template: edpsych/current/handbook/index.html
     template_data:
         section: current
 /edpsych/current/oral-prelim/:
+    publish: true
     template: edpsych/current/oral-prelim.html
     template_data:
         section: current
 /edpsych/current/qme/:
+    publish: true
     template: edpsych/current/qme/index.html
     template_data:
         section: current
 /edpsych/current/qme/handbook/:
+    publish: true
     template: edpsych/current/qme/handbook.html
     template_data:
         section: current
 /edpsych/current/special-ed/:
+    publish: true
     template: edpsych/current/qme/index.html
     template_data:
         section: current
 /edpsych/current/special-ed/student-teaching-practicum/:
+    publish: true
     template: edpsych/current/special-ed/student-teaching-practicum.html
     template_data:
         section: current
 /edpsych/current/special-ed/autism-certificate/:
+    publish: true
     template: edpsych/current/special-ed/autism-certificate.html
     template_data:
         section: current
 /edpsych/current/school-psychology/:
+    publish: true
     template: edpsych/current/school-psychology/index.html
     template_data:
         section: current
 /edpsych/current/school-psychology/spsa/:
+    publish: true
     template: edpsych/current/school-psychology/spsa.html
     template_data:
         section: current
 /edpsych/current/psych-foundations/prelim/:
+    publish: true
     template: edpsych/current/psych-foundations/prelim.html
     template_data:
         section: current
 /edpsych/current/psych-foundations/funding/:
+    publish: true
     template: edpsych/current/psych-foundations/prelim.html
     template_data:
         section: current
 /edpsych/future-students/:
+    publish: true
     template: edpsych/future-students/index.html
     template_data:
         section: future-students
 /edpsych/future-students/cspp/:
+    publish: true
     template: edpsych/future-students/cspp.html
     template_data:
         section: future-students
 /edpsych/future-students/foundations/:
+    publish: true
     template: edpsych/future-students/foundations.html
     template_data:
         section: future-students
 /edpsych/future-students/qme/:
+    publish: true
     template: edpsych/future-students/qme.html
     template_data:
         section: future-students
 /edpsych/future-students/school-psych/:
+    publish: true
     template: edpsych/future-students/school-psych.html
     template_data:
         section: future-students
 /edpsych/future-students/special-ed/:
+    publish: true
     template: edpsych/future-students/special-ed.html
     template_data:
         section: future-students
 /edpsych/future-students/special-ed-med/:
+    publish: true
     template: edpsych/future-students/special-ed-med.html
     template_data:
         section: future-students
 /edpsych/forms/:
+    publish: true
     template: edpsych/forms/index.html
     template_data:
         section: forms
 /edpsych/giving/:
+    publish: true
     template: edpsych/giving/index.html
     template_data:
         section: giving
 /edpsych/programs/:
+    publish: true
     template: edpsych/programs/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/asl/:
+    publish: true
     template: edpsych/programs/asl/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/asl/faq/:
+    publish: true
     template: edpsych/programs/asl/faq.html
     template_data:
         section: programs-degrees
 /edpsych/programs/asl/placement-assessment/:
+    publish: true
     template: edpsych/programs/asl/placement-assessment.html
     template_data:
         section: programs-degrees
 /edpsych/programs/cspp/:
+    publish: true
     template: edpsych/programs/cspp/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/cspp/hansen/:
+    publish: true
     template: edpsych/programs/cspp/hansen.html
     template_data:
         section: programs-degrees
 /edpsych/programs/cspp/sullivan/:
+    publish: true
     template: edpsych/programs/cspp/sullivan.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/:
+    publish: true
     template: edpsych/programs/foundations/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/5135/:
+    publish: true
     template: edpsych/programs/foundations/5135.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/:
+    publish: true
     template: edpsych/programs/foundations/funding/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/ga/:
+    publish: true
     template: edpsych/programs/foundations/funding/ga.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/merwin/:
+    publish: true
     template: edpsych/programs/foundations/funding/merwin.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/policies/:
+    publish: true
     template: edpsych/programs/foundations/funding/policies.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/psyf-assistantships/:
+    publish: true
     template: edpsych/programs/foundations/funding/psyf-assistantships.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/funding/yackel/:
+    publish: true
     template: edpsych/programs/foundations/funding/yackel.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/learning/:
+    publish: true
     template: edpsych/programs/foundations/learning.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/social-psych/:
+    publish: true
     template: edpsych/programs/foundations/social-psych.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/talent/:
+    publish: true
     template: edpsych/programs/foundations/talent.html
     template_data:
         section: programs-degrees
 /edpsych/programs/foundations/talent/requirements/:
+    publish: true
     template: edpsych/programs/foundations/talent-requirements.html
     template_data:
         section: programs-degrees
 /edpsych/programs/graduate-minor/:
+    publish: true
     template: edpsych/programs/graduate-minor.html
     template_data:
         section: programs-degrees
 /edpsych/programs/minor/:
+    publish: true
     template: edpsych/programs/minor.html
     template_data:
         section: programs-degrees
 /edpsych/programs/minor/curriculum/:
+    publish: true
     template: edpsych/programs/minor/curriculum.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/:
+    publish: true
     template: edpsych/programs/qme/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/job-placement/:
+    publish: true
     template: edpsych/programs/qme/job-placement.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/minor/:
+    publish: true
     template: edpsych/programs/qme/minor.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/stats-ed-courses/:
+    publish: true
     template: edpsych/programs/qme/stats-ed-courses.html
     template_data:
         section: programs-degrees
 /edpsych/programs/qme/stats-intro/:
+    publish: true
     template: edpsych/programs/qme/stats-intro.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/:
+    publish: true
     template: edpsych/programs/schoolpsych/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/focus/:
+    publish: true
     template: edpsych/programs/schoolpsych/focus.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/diversity/:
+    publish: true
     template: edpsych/programs/schoolpsych/diversity.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/doctor/:
+    publish: true
     template: edpsych/programs/schoolpsych/doctor.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/master/:
+    publish: true
     template: edpsych/programs/schoolpsych/master.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/outcomes/:
+    publish: true
     template: edpsych/programs/schoolpsych/outcomes.html
     template_data:
         section: programs-degrees
 /edpsych/programs/schoolpsych/pride-fellow/:
+    publish: true
     template: edpsych/programs/schoolpsych/pride-fellow.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/:
+    publish: true
     template: edpsych/programs/specialed/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/abs-licensure/:
+    publish: true
     template: edpsych/programs/specialed/abs-licensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/asd/:
+    publish: true
     template: edpsych/programs/specialed/asd.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/certificate/autism/:
+    publish: true
     template: edpsych/programs/specialed/certificate/autism/index.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/dd-licensure/:
+    publish: true
     template: edpsych/programs/specialed/dd-licensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/dhh-licensure/:
+    publish: true
     template: edpsych/programs/specialed/dhh-licensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/ebd-residency-based/:
+    publish: true
     template: edpsych/programs/specialed/ebd-residency-based.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/esce-licensure/:
+    publish: true
     template: edpsych/programs/specialed/esce-licensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/ld-licensure/:
+    publish: true
     template: edpsych/programs/specialed/ld-licensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/masters/:
+    publish: true
     template: edpsych/programs/specialed/masters.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/phd/:
+    publish: true
     template: edpsych/programs/specialed/phd.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/sped-bs/:
+    publish: true
     template: edpsych/programs/specialed/sped-bs.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/sped-med-teacherlicensure/:
+    publish: true
     template: edpsych/programs/specialed/sped-med-teacherlicensure.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/videos/:
+    publish: true
     template: edpsych/programs/specialed/videos.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/prelim-study/:
+    publish: true
     template: edpsych/programs/specialed/prelim-study.html
     template_data:
         section: programs-degrees
 /edpsych/programs/specialed/license/:
+    publish: true
     template: edpsych/programs/specialed/license.html
     template_data:
         section: programs-degrees
 /edpsych/research/:
+    publish: true
     template: edpsych/research/index.html
     template_data:
         section: research
 /edpsych/research/500-under-five/:
+    publish: true
     template: edpsych/research/500-under-five.html
     template_data:
         section: research
 /edpsych/research/family-academy/:
+    publish: true
     template: edpsych/research/family-academy.html
     template_data:
         section: research
 /edpsych/research/fresh-garden/:
+    publish: true
     template: edpsych/research/fresh-garden.html
     template_data:
         section: research
 /edpsych/research/ggg/:
+    publish: true
     template: edpsych/research/ggg.html
     template_data:
         section: research
 /edpsych/research/labs/:
+    publish: true
     template: edpsych/research/labs/index.html
     template_data:
         section: research
 /edpsych/research/labs/bart/:
+    publish: true
     template: edpsych/research/labs/bart.html
     template_data:
         section: research
 /edpsych/research/labs/christ/:
+    publish: true
     template: edpsych/research/labs/christ.html
     template_data:
         section: research
 /edpsych/research/labs/codding/:
+    publish: true
     template: edpsych/research/labs/codding.html
     template_data:
         section: research
 /edpsych/research/labs/fleury/:
+    publish: true
     template: edpsych/research/labs/fleury.html
     template_data:
         section: research
 /edpsych/research/labs/johnson/:
+    publish: true
     template: edpsych/research/labs/johnson.html
     template_data:
         section: research
 /edpsych/research/labs/kendeou/:
+    publish: true
     template: edpsych/research/labs/kendeou.html
     template_data:
         section: research
 /edpsych/research/labs/kohli/:
+    publish: true
     template: edpsych/research/labs/kohli.html
     template_data:
         section: research
 /edpsych/research/labs/kvarma/:
+    publish: true
     template: edpsych/research/labs/kvarma.html
     template_data:
         section: research
 /edpsych/research/labs/maruyama/:
+    publish: true
     template: edpsych/research/labs/maruyama.html
     template_data:
         section: research
 /edpsych/research/labs/mcconnell/:
+    publish: true
     template: edpsych/research/labs/mcconnell.html
     template_data:
         section: research
 /edpsych/research/labs/mcmaster/:
+    publish: true
     template: edpsych/research/labs/mcmaster.html
     template_data:
         section: research
 /edpsych/research/labs/miller/:
+    publish: true
     template: edpsych/research/labs/miller.html
     template_data:
         section: research
 /edpsych/research/labs/sullivan/:
+    publish: true
     template: edpsych/research/labs/sullivan.html
     template_data:
         section: research
 /edpsych/research/labs/svarma/:
+    publish: true
     template: edpsych/research/labs/svarma.html
     template_data:
         section: research
 /edpsych/research/labs/symons/:
+    publish: true
     template: edpsych/research/labs/symons.html
     template_data:
         section: research
 /edpsych/research/labs/tennyson/:
+    publish: true
     template: edpsych/research/labs/tennyson.html
     template_data:
         section: research
 /edpsych/research/labs/vukovic/:
+    publish: true
     template: edpsych/research/labs/vukovic.html
     template_data:
         section: research
 /edpsych/research/labs/wolff/:
+    publish: true
     template: edpsych/research/labs/wolff.html
     template_data:
         section: research
 /edpsych/research/labs/yussen/:
+    publish: true
     template: edpsych/research/labs/yussen.html
     template_data:
         section: research
 /edpsych/research/pnrc/:
+    publish: true
     template: edpsych/research/pnrc.html
     template_data:
         section: research
 /edpsych/research/ready-to-succeed/:
+    publish: true
     template: edpsych/research/ready-to-succeed.html
     template_data:
         section: research
 /edpsych/research/resources/rbs-ec/:
+    publish: true
     template: edpsych/research/resources/rbs-ec.html
     template_data:
         section: research
 /edpsych/research/student-dissertations/:
+    publish: true
     template: edpsych/research/student-dissertations.html
     template_data:
         section: research
 /edpsych/research/topics/:
+    publish: true
     template: edpsych/research/topics/index.html
     template_data:
         section: research
 /edpsych/research/topics/achievementgap/:
+    publish: true
     template: edpsych/research/topics/achievementgap.html
     template_data:
         section: research
 /edpsych/research/topics/autism/:
+    publish: true
     template: edpsych/research/topics/autism.html
     template_data:
         section: research
 /edpsych/research/topics/behavioral-social/:
+    publish: true
     template: edpsych/research/topics/behavioral-social.html
     template_data:
         section: research
 /edpsych/research/topics/instruction-intervention/:
+    publish: true
     template: edpsych/research/topics/instruction-intervention.html
     template_data:
         section: research
 /edpsych/research/topics/language-literacy-reading/:
+    publish: true
     template: edpsych/research/topics/language-literacy-reading.html
     template_data:
         section: research
 /edpsych/research/topics/mathematical-thinking/:
+    publish: true
     template: edpsych/research/topics/mathematical-thinking.html
     template_data:
         section: research
 /edpsych/research/topics/neurobehavioral-methods/:
+    publish: true
     template: edpsych/research/topics/neurobehavioral-methods.html
     template_data:
         section: research
 /edpsych/research/topics/prevention/:
+    publish: true
     template: edpsych/research/topics/prevention.html
     template_data:
         section: research
 /edpsych/research/topics/professional-development/:
+    publish: true
     template: edpsych/research/topics/professional-development.html
     template_data:
         section: research
 /edpsych/research/topics/progress/:
+    publish: true
     template: edpsych/research/topics/progress.html
     template_data:
         section: research
 /edpsych/research/topics/statistical-techniques/:
+    publish: true
     template: edpsych/research/topics/statistical-techniques.html
     template_data:
         section: research
 /edpsych/research/topics/test-and-measures/:
+    publish: true
     template: edpsych/research/topics/test-and-measures.html
     template_data:
         section: research
