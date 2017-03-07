@@ -39,13 +39,16 @@
 ####################################
 /:
   template: cehd/index.html
+  publish: true
   template_data:
     - section: home
 /about/:
+  publish: true
   template: cehd/about/index.html
   template_data:
     - section: about
 /about/diversity/:
+  publish: true
   template: cehd/about/diversity.html
   template_data:
     - section: about
