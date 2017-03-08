@@ -58,12 +58,12 @@ nav {
         }
     }
 
-    .nav,
-    .nav-inline {
-        li {
-            // text-transform: uppercase;
-        }
-    }
+    // .nav,
+    // .nav-inline {
+    //     li {
+    //         // text-transform: uppercase;
+    //     }
+    // }
 
     .nav {
 
@@ -94,13 +94,11 @@ nav {
     }
 
     .top-level {
-        // border-bottom: 1px solid $base-black;
         border-left: 1px solid $base-black;
-        // border-top: 1px solid $base-black;
         display: inline-block;
         padding-left: .5em;
         padding-right: .5em;
-        width: 191px;
+        width: calc((100% - 3em) / 7);
 
         &.first {
             border-left: 0;
@@ -136,17 +134,17 @@ nav {
 }
 
 // Override the width of these three sections by 1px to make the nav stretch the full width
-$section-map: (
-    diversity-inclusion: 192,
-    news-events: 192,
-    alumni: 192,
-);
-
-@each $section, $width in $section-map {
-    #top-level-#{$section} {
-        width: #{$width}px;
-    }
-}
+// $section-map: (
+//     diversity-inclusion: 192,
+//     news-events: 192,
+//     alumni: 192,
+// );
+//
+// @each $section, $width in $section-map {
+//     #top-level-#{$section} {
+//         width: #{$width}px;
+//     }
+// }
 
 .navbar {
     padding: 0;
@@ -171,8 +169,7 @@ $section-map: (
     border: transparent;
     display: none;
     left: 0;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: 10px 2em 20px;
     position: fixed;
     top: 170px;
     width: 100vw;

@@ -11,8 +11,10 @@ Adult Education*:
     categories:
         - Community and Leadership
         - Disability and Aging
+        - Graduate Certificate
         - Recreation, Health, and Wellbeing
         - Teaching, Learning, and Schools
+        - Undergraduate Certificate
 Adult Education (undergraduate certificate):
     description: Expand your knowledge of how to teach and develop adults. This certificate is popular with human resource development majors.
     links:
@@ -22,7 +24,10 @@ Adult Education (undergraduate certificate):
           href: http://www.cehd.umn.edu/olpd/grad-programs/aded/med-ps.html
         - text: Graduate Certificate
           href: http://www.cehd.umn.edu/olpd/grad-programs/aded/certificate.html
-    categories: null
+    categories:
+        - Graduate Certificate
+        - Masters
+        - Undergraduate Certificate
 Adult Literacy:
     links:
         - text: Undergraduate Minor
@@ -34,6 +39,9 @@ Adult Literacy:
     categories:
         - Community and Leadership
         - Disability and Aging
+        - Graduate Certificate
+        - Teaching
+        - Undergraduate Minor
 Advance Practices in Second Language Teaching:
     description: null
     links:

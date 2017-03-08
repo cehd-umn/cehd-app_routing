@@ -27,7 +27,7 @@ $tracking_elements.on("click", function(event) {
     400);
 });
 
-jquerybridget("isotope", isotope, $ );
+jquerybridget("isotope", isotope, $);
 
 // now you can use $().isotope()
 
@@ -38,9 +38,44 @@ $isotope.isotope({
     layoutMode: "fitRows"
 });
 
-$(".filter-button-group").on( "click", "button", function() {
-    var filterValue = $(this).data("filter");
-    $isotope.isotope({ filter: filterValue });
+var $category_checkboxes = $(".isotope-select");
+
+function filter_cards($filters) {
+    var filters = "";
+
+    $filters.each(function() {
+        var $filter = $(this);
+
+        if ($filter.is(":checked")) {
+            filters += $filter.data("filter");
+        }
+    });
+
+    $isotope.isotope({ filter: filters });
+}
+
+$category_checkboxes.on("change", function(e) {
+    var $filter = $(this);
+    var filterValue = $filter.data("filter");
+    var $filters = $(".isotope-select:checked");
+
+    // @todo make "show all" checked if no boxes are checked
+    if (filterValue === "*") {
+        // uncheck all the filters
+        $filters.prop("checked", false);
+
+        // check this one
+        $(e.target).prop("checked", true);
+
+        // filter on "*" (show everything)
+        $isotope.isotope({ filter: filterValue });
+    } else if ($filters.length > 0) {
+        filter_cards($filters);
+    } else {
+        $(".category-select").prop("checked", false);
+        $("#show-all-categories").prop("checked", true);
+        $isotope.isotope({ filter: "*" });
+    }
 });
 
 window.$ = $;

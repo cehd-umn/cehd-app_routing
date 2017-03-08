@@ -57,12 +57,12 @@
 {% endblock %}
 {% block nav %}
 <div class="meganav-container row">
-    <nav>
+    <nav class="container">
         <ul class="nav navbar-nav">
           {%- for top_level_item in nav_items -%}
             <li class="top-level{%-
                 if top_level_item.subsection -%}
-                   {{ " " }} dropdown mega-dropdown
+                   {{ " " }}dropdown mega-dropdown
                 {%- endif -%}
                 {%- if loop.first -%}
                     {{ " " }}first
@@ -78,42 +78,38 @@
             </a>
             {%- if top_level_item.subsection -%}
               <div class="dropdown-menu">
-                <div class="container">
-                    <div class="row">
-                        <ul class="span-3 margin-top nav">
-                        {%- for sub_nav_item in top_level_item.subsection %}
-                            <li class="dropdown-header">
-                                <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
-                                {%- if sub_nav_item.subsection %}
-                                <ul>
-                                    {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
-                                    <li>
-                                        <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
-                                    </li>
-                                    {%- endfor -%}
-                                </ul><!-- // sub sub nav -->
-                                {%- endif -%}
-                            </li><!-- // dropdown header -->
-                        {%- if loop.index == 3 -%}
-                        {# close the column and start a new one #}
-                          </ul>
-                          <ul class="span-3 margin-top">
-                            {%- endif -%}
-                        {%- endfor -%}
-                        </ul><!-- // sub nav column-->
-                        <div class="span-6">
-                            <figure>
-                                <img src ="/assets/dist/images/hero-image.jpg" alt="Hero image">
-                                <figcaption>Hero image</figcaption>
-                            </figure>
-                            <p class="hero-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aenean mattis dapibus mi, et facilisis lacus
-                            aliquam sed. Mauris dignissim pulvinar vestibulum. Cum
-                            sociis natoque penatibus et magnis dis parturient
-                            montes, nascetur ridiculus mus.</p>
-                        </div><!-- // hero img column -->
-                    </div><!-- // row -->
-                </div><!-- // container -->
+                <ul class="span-3 margin-top nav">
+                {%- for sub_nav_item in top_level_item.subsection %}
+                    <li class="dropdown-header">
+                        <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
+                        {%- if sub_nav_item.subsection %}
+                        <ul>
+                            {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
+                            <li>
+                                <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
+                            </li>
+                            {%- endfor -%}
+                        </ul><!-- // sub sub nav -->
+                        {%- endif -%}
+                    </li><!-- // dropdown header -->
+                {%- if loop.index == 3 -%}
+                {# close the column and start a new one #}
+                    </ul>
+                    <ul class="span-3 margin-top">
+                    {%- endif -%}
+                {%- endfor -%}
+                </ul><!-- // sub nav column-->
+                <div class="span-6">
+                    <figure>
+                        <img src ="/assets/dist/images/hero-image.jpg" alt="Hero image">
+                        <figcaption>Hero image</figcaption>
+                    </figure>
+                    <p class="hero-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aenean mattis dapibus mi, et facilisis lacus
+                    aliquam sed. Mauris dignissim pulvinar vestibulum. Cum
+                    sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus.</p>
+                </div><!-- // hero img column -->
             </div><!-- // dropdown-menu -->
             {%- endif -%}
         </li><!-- // top-level nav item -->

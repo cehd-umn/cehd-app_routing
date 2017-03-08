@@ -15,3 +15,36 @@
     top: 0;
     z-index: -998;
 }
+
+.category-container {
+    background-color: $base-light-grey;
+    padding: 0 1em;
+}
+
+.category-filter-container {
+    max-height: 0;
+    overflow: hidden;
+    transition-duration: .5s;
+    transition-property: max-height;
+    transition-timing-function: ease-out;
+
+    &.open {
+        max-height: 500px;
+    }
+}
+
+.multi-select {
+    display: block;
+
+    &::after {
+        border-left: .3em solid transparent;
+        border-right: .3em solid transparent;
+        border-top: .3em solid;
+        content: "";
+        display: inline-block;
+        height: 0;
+        margin-left: .3em;
+        vertical-align: middle;
+        width: 0;
+    }
+}

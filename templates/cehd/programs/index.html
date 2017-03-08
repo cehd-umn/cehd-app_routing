@@ -6,46 +6,103 @@
     <div class="container">
         <h1>Program Sorter</h1>
         <div class="button-group filter-button-group twothird feature">
-            <button class="isotope-button" data-filter="*">show all</button>
-            {% for category_class, category in categories %}
-                <button class="isotope-button" data-filter=".{{ category_class }}">{{ category }}</button>
-            {% endfor %}
-        </div>
-        <div class="isotope-container">
+            <div class="half category-container">
+                <p><a class="multi-select" href="">By Category</a></p>
+                <form action="">
+                    <div class="category-filter-container">
+                        <ul class="category-filters">
+                            <li class="category-filter">
+                                <input type="checkbox" name="show-all-categories" id="show-all-categories" class="isotope-select" data-filter="*">
+                                    <label for="show-all-categories">Show all</label>
+                                </input>
+                            </li>
+                        {% for category_class, category in categories %}
+                            <li class="category-filter">
+                                <input type="checkbox" id="{{ category_class }}-filter" class="isotope-select category-select" data-filter=".{{ category_class }}">
+                                    <label for="{{ category_class }}-filter">{{ category }}</label>
+                                </input>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div><!-- / category-filter-container -->
+                </form>
+            </div><!-- / half -->
+            <div class="half category-container">
+                <p><a class="multi-select" href="">By Degree</a></p>
+                <form action="">
+                    <div class="category-filter-container">
+                        <ul class="category-filters">
+                            <li class="category-filter">
+                                <input type="checkbox" name="show-all-categories" id="show-all-categories" class="isotope-select" data-filter="*">
+                                    <label for="show-all-categories">Show all</label>
+                                </input>
+                            </li>
+                        {% for degree_class, degree in degrees %}
+                            <li class="category-filter">
+                                <input type="checkbox" id="{{ degree_class }}-filter" class="isotope-select category-select" data-filter=".{{ degree_class }}">
+                                    <label for="{{ degree_class }}-filter">{{ degree }}</label>
+                                </input>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div><!-- / category-filter-container -->
+                </form>
+            </div><!-- / half -->
+        </div><!-- button-group -->
+    </div><!-- / container -->
+</div><!-- / row -->
+<div class="row">
+    <div class="container">
+        <div class="isotope-container margin-top-2">
             <div class="isotope-sizer"></div>
             {% for program_title, program in program_data %}
-            <div class="isotope-item{%- if loop.index is divisible by(2) %} odd{% endif %}
-                {%- if program.categories_hyphenated -%}
-                    {%- for category_class in program.categories_hyphenated -%}
-                       {{ " " }}{{ category_class }}
-                    {%- endfor -%}
-                {%- endif -%}
-                ">
-                <h2 class="h4">{{ program_title }}</h2>
-                {% if program.description %}
-                {{ program.description }}
-                {% endif %}
-                {% if program.links %}
-                <h2 class="h6">Links</h2>
-                <ul>
-                    {% for link in program.links %}
-                    <li><a href="{{ link.href }}">{{ link.text }}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                {% if program.categories %}
-                <h2 class="h6">Categories</h2>
+                <div class="isotope-item{%- if loop.index is divisible by(2) %} odd{% endif %}
+                    {%- if program.categories_hyphenated -%}
+                        {%- for category_class in program.categories_hyphenated -%}
+                        {{ " " }}{{ category_class }}
+                        {%- endfor -%}
+                    {%- endif -%}
+                    ">
+                    <h2 class="h4">{{ program_title }}</h2>
+                    {% if program.description %}
+                    {{ program.description }}
+                    {% endif %}
+                    {% if program.links %}
+                    <h2 class="h6">Links</h2>
                     <ul>
-                    {% for category in program.categories %}
-                    <li>{{ category }}</li>
-                    {% endfor %}
+                        {% for link in program.links %}
+                        <li><a href="{{ link.href }}">{{ link.text }}</a></li>
+                        {% endfor %}
                     </ul>
-                {% endif %}
-            </div>
+                    {% endif %}
+                    {% if program.categories %}
+                    <h2 class="h6">Categories</h2>
+                        <ul>
+                        {% for category in program.categories %}
+                        <li>{{ category }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div><!-- / isotope-item -->
             {% endfor %}
-        </div>
-    </div>
-</div>
+        </div><!-- / isotope-container -->
+    </div><!-- / container -->
+</div><!-- / row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
+<script>
+    $(function() {
+        "use strict";
+        var $select_button = $(".multi-select");
+        var $filter_group_container = $(".category-filter-container");
+        var $filter_group = $filter_group_container.find(".filter-button-group");
+        var $category_filters = $filter_group_container.find(".category-filter");
+
+        $select_button.on("click", function(e) {
+            e.preventDefault();
+            var $button = $(this);
+            $filter_group_container.toggleClass("open");
+        });
+    });
+</script>
 {% endblock %}
