@@ -3,614 +3,737 @@
     publish: true
     template: edpsych/index.html
     template_data:
+        meta_description: "At the University of Minnesota, we're preparing the next generation of educational psychologists, researchers and scientist-practitioners, with degrees in psychological foundations of education, quantitative methods in education, counseling psychology, school psychology, and special education."
         section: home
 /edpsych/about/:
     publish: true
     template: edpsych/about/index.html
     template_data:
+        meta_description: "The Department of Educational Psychology provides training in the cognitive, emotional, and social learning processes that underlie education and human development across the lifespan, including: the psychological foundations of education, quantitative methods in education, the practice and science of counseling psychology, school psychology, and special education."
         section: about
 /edpsych/about/diversity-inclusion/:
     publish: true
     template: edpsych/about/diversity.html
     template_data:
+        meta_description: "The Department of Educational Psychology is a vibrant and diverse community of scholars. Our graduate students represent over 17 different countries creating a globally diverse discourse on the cognitive, emotional, and social learning processes that underlie education and human development across the lifespan."
         section: about
 /edpsych/alumni/:
     publish: true
     template: edpsych/alumni/index.html
     template_data:
+        meta_description: "Stay connected with news and events happening in the department of educational psychology."
         section: alumni
 /edpsych/alumni/information/:
     publish: true
     template: edpsych/alumni/information.html
     template_data:
+        meta_description: null
         section: alumni
 /edpsych/contact/:
     publish: true
     template: edpsych/contact/index.html
     template_data:
+        meta_description: "Contact us. Phone: 612-624-6083. 250 Education Sciences Bldg, 56 East River Road Minneapolis, MN 55455"
         section: null
 /edpsych/contact/confirmation/:
     publish: true
     template: edpsych/contact/confirmation.html
     template_data:
+        meta_description: null
         section: null
 /edpsych/current/:
     publish: true
     template: edpsych/current/index.html
     template_data:
+        meta_description: "Find the resources you need to ease your graduate studies."
         section: current
 /edpsych/current/cspp/:
     publish: true
     template: edpsych/current/cspp/index.html
     template_data:
+        meta_description: "Find the resources you need to complete your degree in counseling and student personnel psychology."
         section: current
 /edpsych/current/cspp/handbooks/:
     publish: true
     template: edpsych/current/cspp/handbooks/index.html
     template_data:
+        meta_description: "Get resources for your counseling and student personnel psychology program and practicum."
         section: current
 /edpsych/current/foundations/:
     publish: true
     template: edpsych/current/foundations.html
     template_data:
+        meta_description: "Find the resources you need to complete your degree in psychological foundations of education."
         section: current
 /edpsych/current/handbook/:
     publish: true
     template: edpsych/current/handbook/index.html
     template_data:
+        meta_description: "The Educational Psychology student handbook offers a variety of resources to guide your education experience."
         section: current
 /edpsych/current/oral-prelim/:
     publish: true
     template: edpsych/current/oral-prelim.html
     template_data:
-        section: current
-/edpsych/current/qme/:
-    publish: true
-    template: edpsych/current/qme/index.html
-    template_data:
-        section: current
-/edpsych/current/qme/handbook/:
-    publish: true
-    template: edpsych/current/qme/handbook.html
-    template_data:
-        section: current
-/edpsych/current/special-ed/:
-    publish: true
-    template: edpsych/current/qme/index.html
-    template_data:
-        section: current
-/edpsych/current/special-ed/student-teaching-practicum/:
-    publish: true
-    template: edpsych/current/special-ed/student-teaching-practicum.html
-    template_data:
-        section: current
-/edpsych/current/special-ed/autism-certificate/:
-    publish: true
-    template: edpsych/current/special-ed/autism-certificate.html
-    template_data:
-        section: current
-/edpsych/current/school-psychology/:
-    publish: true
-    template: edpsych/current/school-psychology/index.html
-    template_data:
-        section: current
-/edpsych/current/school-psychology/spsa/:
-    publish: true
-    template: edpsych/current/school-psychology/spsa.html
-    template_data:
+        meta_description: "After succesfully meeting the written prelim requirements and completing the majority of your coursework, take the oral preliminary examination."
         section: current
 /edpsych/current/psych-foundations/prelim/:
     publish: true
     template: edpsych/current/psych-foundations/prelim.html
     template_data:
+        meta_description: "Find information on the written preliminary examination all educational psychology doctoral students are required to pass."
         section: current
 /edpsych/current/psych-foundations/funding/:
     publish: true
     template: edpsych/current/psych-foundations/prelim.html
     template_data:
+        meta_description: null
         section: current
+/edpsych/current/qme/:
+    publish: true
+    template: edpsych/current/qme/index.html
+    template_data:
+        meta_description: "Find the resources you need to complete your degree in quantitative methods in education."
+        section: current
+/edpsych/current/qme/handbook/:
+    publish: true
+    template: edpsych/current/qme/handbook.html
+    template_data:
+        meta_description: "Get resources to help you complete your degree in quantitative methods in education."
+        section: current
+/edpsych/current/school-psychology/:
+    publish: true
+    template: edpsych/current/school-psychology/index.html
+    template_data:
+        meta_description: "Find the resources you need to complete your degree in school psychology."
+        section: current
+/edpsych/current/school-psychology/spsa/:
+    publish: true
+    template: edpsych/current/school-psychology/spsa.html
+    template_data:
+        meta_description: "The University of Minnesota School Psychology Student Association (SPSA) promotes student involvement in the program and in the field of school psychology. Join us for professional development in a fun, relaxed atmosphere."
+        section: current
+/edpsych/current/special-ed/:
+    publish: true
+    template: edpsych/current/qme/index.html
+    template_data:
+        meta_description: "Find the resources you need to complete your degree in special education."
+        section: current
+/edpsych/current/special-ed/student-teaching-practicum/:
+    publish: true
+    template: edpsych/current/special-ed/student-teaching-practicum.html
+    template_data:
+        meta_description: "Getting to know nearby public schools will help you request a practicum or student teaching placement and, later on, with your job search."
+        section: current
+/edpsych/current/special-ed/autism-certificate/:
+    publish: true
+    template: edpsych/current/special-ed/autism-certificate.html
+    template_data:
+        meta_description: "Register for your certificate in Autism Spectrum Disorder."
+        section: current
+/edpsych/forms/:
+    publish: true
+    template: edpsych/forms/index.html
+    template_data:
+        meta_description: "Find forms on travel, funding, thesis credits, prelim registration, and more."
+        section: forms
 /edpsych/future-students/:
     publish: true
     template: edpsych/future-students/index.html
     template_data:
+        meta_description: null
         section: future-students
 /edpsych/future-students/cspp/:
     publish: true
     template: edpsych/future-students/cspp.html
     template_data:
+        meta_description: "Learn how to apply for your M.A. in counseling & student personnel psychology."
         section: future-students
 /edpsych/future-students/foundations/:
     publish: true
     template: edpsych/future-students/foundations.html
     template_data:
+        meta_description: "Learn how to apply for your M.A. or Ph.D. in psychological foundations of education."
         section: future-students
 /edpsych/future-students/qme/:
     publish: true
     template: edpsych/future-students/qme.html
     template_data:
+        meta_description: "Learn how to apply for your M.A. or Ph.D. in quantitative methods in education."
         section: future-students
 /edpsych/future-students/school-psych/:
     publish: true
     template: edpsych/future-students/school-psych.html
     template_data:
-        section: future-students
-/edpsych/future-students/special-ed/:
-    publish: true
-    template: edpsych/future-students/special-ed.html
-    template_data:
+        meta_description: "Learn about the admissions process in becoming part of our school psychology Ph.D or M.A./S.C. programs."
         section: future-students
 /edpsych/future-students/special-ed-med/:
     publish: true
     template: edpsych/future-students/special-ed-med.html
     template_data:
+        meta_description: "Earn your M.Ed. in special education. Find out more about the application process, important dates to know, and your admission status."
         section: future-students
-/edpsych/forms/:
+/edpsych/future-students/special-ed/:
     publish: true
-    template: edpsych/forms/index.html
+    template: edpsych/future-students/special-ed.html
     template_data:
-        section: forms
+        meta_description: "Earn your M.A. or Ph.D. in special education. Important dates and requirements regarding your admission."
+        section: future-students
 /edpsych/giving/:
     publish: true
     template: edpsych/giving/index.html
     template_data:
+        meta_description: "Your generous support of the Department of Educational Psychology is more critical than ever. Help us retain the very best scholars and students and give our faculty develop cutting edge, research-driven practices in school psychology, special education, evaluation and measurement, and counseling psychology."
         section: giving
 /edpsych/programs/:
     publish: true
     template: edpsych/programs/index.html
     template_data:
+        meta_description: "The Department of Educational Psychology offers graduate and undergraduate programs and degrees. Check us out if you're interested in studying counseling and student personnel psychology, psychological foundations of education, quantitative methods in education, school psychology, special education, and American Sign Language."
         section: programs-degrees
 /edpsych/programs/asl/:
     publish: true
     template: edpsych/programs/asl/index.html
     template_data:
+        meta_description: "Learn American Sign Language (ASL), one of the fastest growing languages in the United States, while gaining valuable communications skills and meeting your second language requirement."
         section: programs-degrees
 /edpsych/programs/asl/faq/:
     publish: true
     template: edpsych/programs/asl/faq.html
     template_data:
+        meta_description: "Find out more about our American Sign Language (ASL) program through this guide of frequently asked questions."
         section: programs-degrees
 /edpsych/programs/asl/placement-assessment/:
     publish: true
     template: edpsych/programs/asl/placement-assessment.html
     template_data:
+        meta_description: "A guide for students taking ASL placement tests and registering for classes."
         section: programs-degrees
 /edpsych/programs/cspp/:
     publish: true
     template: edpsych/programs/cspp/index.html
     template_data:
+        meta_description: "View brief descriptions of the courses offered for a degree in psychological foundations of education."
         section: programs-degrees
 /edpsych/programs/cspp/hansen/:
     publish: true
     template: edpsych/programs/cspp/hansen.html
     template_data:
+        meta_description: "The BORN FREE Scholarship of $1,000 will be awarded to a graduate student who is working in the field of career development through CSPP."
         section: programs-degrees
 /edpsych/programs/cspp/sullivan/:
     publish: true
     template: edpsych/programs/cspp/sullivan.html
     template_data:
+        meta_description: "The Sullivan family established the endowment in honor of Melissa and to encourage the training of students to work with children and families. The student selected will receive $10,000 during the academic year."
         section: programs-degrees
 /edpsych/programs/foundations/:
     publish: true
     template: edpsych/programs/foundations/index.html
     template_data:
+        meta_description: "Understand the way people think, learn, and teach with a degree in psychological foundations of education. Our program focuses on learning and cognition, educational technology and social psychological and developmental processes."
         section: programs-degrees
 /edpsych/programs/foundations/5135/:
     publish: true
     template: edpsych/programs/foundations/5135.html
     template_data:
+        meta_description: "This course meets the requirement for licensure by the Minnesota Department of Education and includes simulation activities, curriculum writing, and supervised practice in basic human relations skills."
         section: programs-degrees
 /edpsych/programs/foundations/funding/:
     publish: true
     template: edpsych/programs/foundations/funding/index.html
     template_data:
+        meta_description: "Finance your degree in psychological foundations of education. A variety of resources (fellowships, grants, scholarships, assistantships, etc.) are available. Learn more."
         section: programs-degrees
 /edpsych/programs/foundations/funding/ga/:
     publish: true
     template: edpsych/programs/foundations/funding/ga.html
     template_data:
+        meta_description: "Our psychological foundations of education and quantitative methods in education programs offer graduate assistantships for current graduate students."
         section: programs-degrees
 /edpsych/programs/foundations/funding/merwin/:
     publish: true
     template: edpsych/programs/foundations/funding/merwin.html
     template_data:
+        meta_description: "Professor Jack Merwin, former dean of the College of Education and Chair of the Department of Educational Psychology, has established a special endowment to support graduate students in educational measurement and evaluation."
         section: programs-degrees
 /edpsych/programs/foundations/funding/policies/:
     publish: true
     template: edpsych/programs/foundations/funding/policies.html
     template_data:
+        meta_description: "Learn more about the policies regarding employment of teaching assistants in our psychological foundations of education or quantitative methods in education programs."
         section: programs-degrees
 /edpsych/programs/foundations/funding/psyf-assistantships/:
     publish: true
     template: edpsych/programs/foundations/funding/psyf-assistantships.html
     template_data:
+        meta_description: "There are various assistantships offered in psychological foundations of education and quantitative methods in education (QME). Assistantships are competitive and the number of positions each year is limited."
         section: programs-degrees
 /edpsych/programs/foundations/funding/yackel/:
     publish: true
     template: edpsych/programs/foundations/funding/yackel.html
     template_data:
+        meta_description: "Pearson and the Department of Educational Psychology are proud to announce the John P. Yackel/Pearson Graduate Internship."
         section: programs-degrees
 /edpsych/programs/foundations/learning/:
     publish: true
     template: edpsych/programs/foundations/learning.html
     template_data:
+        meta_description: "Make improvements in education through psychology, science, and technology. As a student in the program, you’ll study the psychological processes critical to education."
         section: programs-degrees
 /edpsych/programs/foundations/social-psych/:
     publish: true
     template: edpsych/programs/foundations/social-psych.html
     template_data:
+        meta_description: "Inspire positive social change by studying human relationships and growth. As a Ph.D. or M.A. student, you’ll study the social and social developmental processes experienced across the lifespan, with a primary focus on processes during the years of schooling."
         section: programs-degrees
 /edpsych/programs/foundations/talent/:
     publish: true
     template: edpsych/programs/foundations/talent.html
     template_data:
+        meta_description: "This program will prepare you to encourage and develop human talents in areas of academic, artistic and athletic skills (cognitive, affective and psychomotor skills) and other skills."
         section: programs-degrees
 /edpsych/programs/foundations/talent/requirements/:
     publish: true
     template: edpsych/programs/foundations/talent-requirements.html
     template_data:
+        meta_description: null
         section: programs-degrees
 /edpsych/programs/graduate-minor/:
     publish: true
     template: edpsych/programs/graduate-minor.html
     template_data:
+        meta_description: "The Department of Educational Psychology's graduate minor is for M.A. and Ph.D. students pursuing graduate degrees outside the department of educational psychology who are interested in a minor in educational psychology."
         section: programs-degrees
 /edpsych/programs/minor/:
     publish: true
     template: edpsych/programs/minor.html
     template_data:
+        meta_description: "Enrich your major and boost your future career with an undergraduate minor in applied psychology in educational and community settings."
         section: programs-degrees
 /edpsych/programs/minor/curriculum/:
     publish: true
     template: edpsych/programs/minor/curriculum.html
     template_data:
+        meta_description: "Set your undergraduate degree apart from the rest. These courses, along with other requirements, will help you earn a minor in Applied Psychology in Educational and Community Settings (APECS)."
         section: programs-degrees
 /edpsych/programs/qme/:
     publish: true
     template: edpsych/programs/qme/index.html
     template_data:
+        meta_description: "Our quantitative methods in education program allows students and researchers to discover solutions to issues in educational research, assessment, and program evaluation using measurement, evaluation, and statistics."
         section: programs-degrees
 /edpsych/programs/qme/job-placement/:
     publish: true
     template: edpsych/programs/qme/job-placement.html
     template_data:
+        meta_description: "Our QME graduates find jobs in a number of industries, including: test publishing firms, teaching and research at colleges and universities, research and evaluation centers, public school systems, state departments of instruction, and private industry."
         section: programs-degrees
 /edpsych/programs/qme/minor/:
     publish: true
     template: edpsych/programs/qme/minor.html
     template_data:
+        meta_description: "Earn your graduate minor in educational psychology with an emphasis in quantitative methods in education. Coursework emphasizes both the theory underlying various methodologies and their correct application and interpretation of results."
         section: programs-degrees
 /edpsych/programs/qme/stats-ed-courses/:
     publish: true
     template: edpsych/programs/qme/stats-ed-courses.html
     template_data:
+        meta_description: null
         section: programs-degrees
 /edpsych/programs/qme/stats-intro/:
     publish: true
     template: edpsych/programs/qme/stats-intro.html
     template_data:
+        meta_description: "As a student in the statistics education concentration in our quantitative methods in education program, you’ll train for a career in statistics education as well as methodological competencies in statistics, measurement, and evaluation."
         section: programs-degrees
 /edpsych/programs/schoolpsych/:
     publish: true
     template: edpsych/programs/schoolpsych/index.html
     template_data:
-        section: programs-degrees
-/edpsych/programs/schoolpsych/focus/:
-    publish: true
-    template: edpsych/programs/schoolpsych/focus.html
-    template_data:
+        meta_description: "Study school psychology and create educational environments where students, families and school staff feel safe, welcome and supported."
         section: programs-degrees
 /edpsych/programs/schoolpsych/diversity/:
     publish: true
     template: edpsych/programs/schoolpsych/diversity.html
     template_data:
+        meta_description: "Our mission concerns the fundamental rights, dignity, and worth of all people, and our goal is to achieve a climate that honors and respects all individuals . In order to create such a climate, the program promotes cultural mindfulness and self-reflection, and encourages students to seek knowledge on topics related to diversity."
         section: programs-degrees
 /edpsych/programs/schoolpsych/doctor/:
     publish: true
     template: edpsych/programs/schoolpsych/doctor.html
     template_data:
+        meta_description: "Accredited by APA and approved by NASP/NCATE, the doctoral program in school psychology prepares you to become a leader in the field of school psychology."
+        section: programs-degrees
+/edpsych/programs/schoolpsych/focus/:
+    publish: true
+    template: edpsych/programs/schoolpsych/focus.html
+    template_data:
+        meta_description: "The School Psychology faculty accept two broad aims of school psychological practice: (1) improving student competence and (2) building the capacity of systems to address the needs of children and youth. To this end, the program draws on competencies outlined by the American Psychological Association (APA) and further informed by guiding principles in school psychology (Ysseldyke et al., 2006)."
         section: programs-degrees
 /edpsych/programs/schoolpsych/master/:
     publish: true
     template: edpsych/programs/schoolpsych/master.html
     template_data:
+        meta_description: "Earn your M.A. and Specialist Certificate in school psychology. Upon graduation, you’ll be eligible to receive your state and national school psychologist credential to work with students in schools to help them succeed academically, socially, emotionally, and behaviorally."
         section: programs-degrees
 /edpsych/programs/schoolpsych/outcomes/:
     publish: true
     template: edpsych/programs/schoolpsych/outcomes.html
     template_data:
+        meta_description: "Find out more about admissions, outcomes, and other data from our school psychology program applicants."
         section: programs-degrees
 /edpsych/programs/schoolpsych/pride-fellow/:
     publish: true
     template: edpsych/programs/schoolpsych/pride-fellow.html
     template_data:
+        meta_description: "The school psychology program at the University of Minnesota has five Project PRIDE fellowships available to students enrolling in the Master’s/Specialist Certificate track for Fall 2017."
         section: programs-degrees
 /edpsych/programs/specialed/:
     publish: true
     template: edpsych/programs/specialed/index.html
     template_data:
+        meta_description: "Our special education program helps students gain the skills they need to improve outcomes for individuals who require specialized support--through meaningful research and practice."
         section: programs-degrees
 /edpsych/programs/specialed/abs-licensure/:
     publish: true
     template: edpsych/programs/specialed/abs-licensure.html
     template_data:
+        meta_description: "Become certified to teach students with mild to moderate disabilities and specialize in one area of moderate to severe with your A.B.S. teaching licensure and M.Ed."
         section: programs-degrees
 /edpsych/programs/specialed/asd/:
     publish: true
     template: edpsych/programs/specialed/asd.html
     template_data:
+        meta_description: "Specialize in meeting the needs of students with autism spectrum disorders."
         section: programs-degrees
 /edpsych/programs/specialed/certificate/autism/:
     publish: true
     template: edpsych/programs/specialed/certificate/autism/index.html
     template_data:
+        meta_description: "Meet the growing demand for professionals in this field. Students in our ASD certificate program are trained to assist children and youth with ASD and their families."
         section: programs-degrees
 /edpsych/programs/specialed/dd-licensure/:
     publish: true
     template: edpsych/programs/specialed/dd-licensure.html
     template_data:
+        meta_description: "Help solve learning challenges for students with developmental disabilities."
         section: programs-degrees
 /edpsych/programs/specialed/dhh-licensure/:
     publish: true
     template: edpsych/programs/specialed/dhh-licensure.html
     template_data:
+        meta_description: "Our Deaf/Hard of Hearing program prepares you with the needed training to effectively teach students, birth through grade 12, with varying degrees of hearing."
         section: programs-degrees
 /edpsych/programs/specialed/ebd-residency-based/:
     publish: true
     template: edpsych/programs/specialed/ebd-residency-based.html
     template_data:
+        meta_description: "Become licensed to teach students with EBD while working as a paraprofessional in an EBD classroom. Applicants must be employed as a paraprofessional in a level III or IV classroom by one of our partner school districts and include a written recommendation from the district with your application."
         section: programs-degrees
 /edpsych/programs/specialed/esce-licensure/:
     publish: true
     template: edpsych/programs/specialed/esce-licensure.html
     template_data:
+        meta_description: "Help young children with developmental delays and disabilities succeed."
         section: programs-degrees
 /edpsych/programs/specialed/ld-licensure/:
     publish: true
     template: edpsych/programs/specialed/ld-licensure.html
     template_data:
+        meta_description: "Help students with learning disabilities achieve more."
         section: programs-degrees
 /edpsych/programs/specialed/masters/:
     publish: true
     template: edpsych/programs/specialed/masters.html
     template_data:
+        meta_description: "As an M.A. student in the special education program, you'll be trained to find solutions to problems that help individuals with disabilities learn and grow. Many of our special education M.A. students go on to earn their Ph.D. in special education."
         section: programs-degrees
 /edpsych/programs/specialed/phd/:
     publish: true
     template: edpsych/programs/specialed/phd.html
     template_data:
+        meta_description: "As a Ph.D. student in the special education program, you'll receive the training to find solutions to problems that help individuals with disabilities learn and grow. The program’s rigorous coursework and faculty-guided experiences will prepare you for a leadership role in special education."
         section: programs-degrees
 /edpsych/programs/specialed/sped-bs/:
     publish: true
     template: edpsych/programs/specialed/sped-bs.html
     template_data:
+        meta_description: "Earn your degree and teaching license in four years. Become an expert at meeting students’ needs by providing individualized instruction to students with disabilities in grade K through age 21."
         section: programs-degrees
 /edpsych/programs/specialed/sped-med-teacherlicensure/:
     publish: true
     template: edpsych/programs/specialed/sped-med-teacherlicensure.html
     template_data:
+        meta_description: "Teach special education for young people birth through age 21."
         section: programs-degrees
 /edpsych/programs/specialed/videos/:
     publish: true
     template: edpsych/programs/specialed/videos.html
     template_data:
+        meta_description: null
         section: programs-degrees
 /edpsych/programs/specialed/prelim-study/:
     publish: true
     template: edpsych/programs/specialed/prelim-study.html
     template_data:
+        meta_description: null
         section: programs-degrees
 /edpsych/programs/specialed/license/:
     publish: true
     template: edpsych/programs/specialed/license.html
     template_data:
+        meta_description: null
         section: programs-degrees
 /edpsych/research/:
     publish: true
     template: edpsych/research/index.html
     template_data:
+        meta_description: "Catch up on the latest research news at the Department of Educational Psychology at the University of Minnesota."
         section: research
 /edpsych/research/500-under-five/:
     publish: true
     template: edpsych/research/500-under-five.html
     template_data:
+        meta_description: "Five Hundred under 5 (FHu5) began in 2006 as a place-based and collaborative initiative to promote school readiness in north Minneapolis."
         section: research
 /edpsych/research/family-academy/:
     publish: true
     template: edpsych/research/family-academy.html
     template_data:
+        meta_description: "Family Academy is a parent education and empowerment program for families with children aged 0-3. Its purpose is to start early by empowering parents to get their kids ready for kindergarten and on the pathway to college and life-long success."
         section: research
 /edpsych/research/fresh-garden/:
     publish: true
     template: edpsych/research/fresh-garden.html
     template_data:
+        meta_description: "The Fresh Start Garden program is a community-led garden and cooking program for preschool-aged children, their adult caregivers, and older youth from North Minneapolis."
         section: research
 /edpsych/research/ggg/:
     publish: true
     template: edpsych/research/ggg.html
     template_data:
+        meta_description: "The Get It, Got It, Go! project developed a website that provided informational materials, assessments, and database-driven systems to help educators, parents, and others."
         section: research
 /edpsych/research/labs/:
     publish: true
     template: edpsych/research/labs/index.html
     template_data:
+        meta_description: "At the Department of Educational Psychology, we're focused on innovating in our field. Students, researchers and faculty join together to find solutions to the achievement gap, test measurements, autism, and much more."
         section: research
 /edpsych/research/labs/bart/:
     publish: true
     template: edpsych/research/labs/bart.html
     template_data:
+        meta_description: "The Thinking Skills lab, led by Dr. Bart, focuses on cognitive abilities associated with chess cognition, creativity amoung school-aged students, as well as the cognitive effects of online instruction and chess training on seniors."
         section: research
 /edpsych/research/labs/christ/:
     publish: true
     template: edpsych/research/labs/christ.html
     template_data:
+        meta_description: "Dr. Christ's research lab focuses on innovation as it applies to cloud-based assessment and interventions."
         section: research
 /edpsych/research/labs/codding/:
     publish: true
     template: edpsych/research/labs/codding.html
     template_data:
+        meta_description: "Dr. Codding's research lab focuses on prevention and intervenetion of academic problems, data-based instructional decision making, and the implementation of evidence-based practices in schools."
         section: research
 /edpsych/research/labs/fleury/:
     publish: true
     template: edpsych/research/labs/fleury.html
     template_data:
+        meta_description: "Dr. Fleury's research lab examines how core characteristics of ASD inhibit or promote students’ ability to participate in classroom activities."
         section: research
 /edpsych/research/labs/johnson/:
     publish: true
     template: edpsych/research/labs/johnson.html
     template_data:
+        meta_description: "Dr. Johnson's research lab examines ways to motivate and engage adults in decision making, leading to interventions that effectively imporve learning opportunities available to young children who engage in challenging behavior. It evaluates the efficacy of interventions addressing the social and communication needs of young children with Autism and Emotional/Behavioral Disorders."
         section: research
 /edpsych/research/labs/kendeou/:
     publish: true
     template: edpsych/research/labs/kendeou.html
     template_data:
+        meta_description: "The Reading & Language lab, led by Dr. Kendeou, concerns the relations amongst language and memory, with a focus on understanding and improving learning during reading."
         section: research
 /edpsych/research/labs/kohli/:
     publish: true
     template: edpsych/research/labs/kohli.html
     template_data:
+        meta_description: "The simulation lab for longitudinal data research lab, led by Dr. Kohli, strives to move educational statistics literature foward and provide researchers the guidance to use methods to address important questions in education, psychology, and human development."
         section: research
 /edpsych/research/labs/kvarma/:
     publish: true
     template: edpsych/research/labs/kvarma.html
     template_data:
+        meta_description: "The STEM Thinking, Reasoning & Learning lab, led by Keisha Varma, focuses on understanding cognitive, developmental, and neuroscience underpinnings of STEM thinking and reasoning, particularly science."
         section: research
 /edpsych/research/labs/maruyama/:
     publish: true
     template: edpsych/research/labs/maruyama.html
     template_data:
+        meta_description: "Geoffrey Maruyama's lab focuses on achievement processes in schools and developing effective approaches to address social-emotional needs of elementary and middle school students. Current projects of this lab include the Social Emotional Development Lab and the First in the World Grant."
         section: research
 /edpsych/research/labs/mcconnell/:
     publish: true
     template: edpsych/research/labs/mcconnell.html
     template_data:
+        meta_description: "Scott McConnell's lab focuses on skills and competencies that enable pre-school aged children to learn and participate in school and other settings, particularly for children with disabilities and other factors that might otherwise be at risk."
         section: research
 /edpsych/research/labs/mcmaster/:
     publish: true
     template: edpsych/research/labs/mcmaster.html
     template_data:
+        meta_description: "Dr. McMaster's lab focuses on creating conditions for successful response to intervention of academically diverse learners."
         section: research
 /edpsych/research/labs/miller/:
     publish: true
     template: edpsych/research/labs/miller.html
     template_data:
+        meta_description: "Dr. Miller's lab focuses on progress-monitoring for social, emotional and behavioral challenges; behavioral assessment and intervention; school mental health; and the identification and adoption of evidence-based practices in schools."
         section: research
 /edpsych/research/labs/sullivan/:
     publish: true
     template: edpsych/research/labs/sullivan.html
     template_data:
+        meta_description: "Dr. Sullivan's research lab focuses on the education and health disparities affecting students with special needs, special education policy and services, and the psychoeducational services for diverse learners."
         section: research
 /edpsych/research/labs/svarma/:
     publish: true
     template: edpsych/research/labs/svarma.html
     template_data:
+        meta_description: "The cognitive architecture lab, led by Sashank Varma, takes a multidisciplinary approach to the fundamental mechanisms that support high-level cognition."
         section: research
 /edpsych/research/labs/symons/:
     publish: true
     template: edpsych/research/labs/symons.html
     template_data:
+        meta_description: "Dr. Symons' research lab aims to gain greater understanding of the severe behavior problems of children and adults with special needs, primarily those with developmental disabilities and emotional or behavioral disorders."
         section: research
 /edpsych/research/labs/tennyson/:
     publish: true
     template: edpsych/research/labs/tennyson.html
     template_data:
+        meta_description: "Robert Tennyson's lab focuses on the use of iPads in elementary schools, technology features for math and reading, achievement gains with technology tools (standardized tests), and educational gaming and simulations to improve problem solving and decision making."
         section: research
 /edpsych/research/labs/vukovic/:
     publish: true
     template: edpsych/research/labs/vukovic.html
     template_data:
+        meta_description: "Dr. Vukovic's research lab focuses on increasing the educational and psychological well-being of students at-risk for negative life outcomes, especially in underserved or marginalized populations."
         section: research
 /edpsych/research/labs/wolff/:
     publish: true
     template: edpsych/research/labs/wolff.html
     template_data:
+        meta_description: "Dr. Wolff's reserach lab focuses on early brain and behavioral development in children with autism spectrum disorder and restricted and repetitive behaviors associated with autism and other developmental disabilities."
         section: research
 /edpsych/research/labs/yussen/:
     publish: true
     template: edpsych/research/labs/yussen.html
     template_data:
+        meta_description: "The development of narrative thinking lab, led by Steve Yussen, focuses on memory and comprehension of stories, narrative exchanges between children and parents, and the role of culture on narrative storytelling and memory."
         section: research
 /edpsych/research/pnrc/:
     publish: true
     template: edpsych/research/pnrc.html
     template_data:
+        meta_description: "This project is working to create the infrastructure to begin research on comprehensive preventive interventions in the nation’s highest poverty neighborhoods."
         section: research
 /edpsych/research/ready-to-succeed/:
     publish: true
     template: edpsych/research/ready-to-succeed.html
     template_data:
+        meta_description: "Ready to Succeed! is a UROC project in partnership with CEED and Northside Achievement Zone (NAZ). The goal is to promote kindergarten readiness through family-focused curriculum as part of the NAZ pipeline of family support provided by the NAZ Family Academy curricular offerings."
         section: research
 /edpsych/research/resources/rbs-ec/:
     publish: true
     template: edpsych/research/resources/rbs-ec.html
     template_data:
+        meta_description: "Our students are driven to be experts in their field. Find examples of recent student research topics in counseling and student personnel psychology, psychological foundations of education, quantitative methods in education, school psychology, and special education."
         section: research
 /edpsych/research/student-dissertations/:
     publish: true
     template: edpsych/research/student-dissertations.html
     template_data:
+        meta_description: "At the Department of Educational Psychology, we're focused on innovating in our field. Students, researchers and faculty join together to find solutions to the achievement gap, test measurements, autism, and much more."
         section: research
 /edpsych/research/topics/:
     publish: true
     template: edpsych/research/topics/index.html
     template_data:
+        meta_description: null
         section: research
 /edpsych/research/topics/achievementgap/:
     publish: true
     template: edpsych/research/topics/achievementgap.html
     template_data:
+        meta_description: "Our researchers study educational outcomes and disparities and strive to improve how we identify and serve students who need additional supports in order to succeed in schools."
         section: research
 /edpsych/research/topics/autism/:
     publish: true
     template: edpsych/research/topics/autism.html
     template_data:
+        meta_description: "Our reserachers work to identifying, preventing, and developing interventions related to Autism Spectrum Disorder."
         section: research
 /edpsych/research/topics/behavioral-social/:
     publish: true
     template: edpsych/research/topics/behavioral-social.html
     template_data:
+        meta_description: "Our researchers determine sources of and develop solutions to behavioral and social difficulties."
         section: research
 /edpsych/research/topics/instruction-intervention/:
     publish: true
     template: edpsych/research/topics/instruction-intervention.html
     template_data:
+        meta_description: "Our researchers develop and evaluate assessments, data systems, and interventions to provide support and services to at-risk learners that are implemented in community- and school-wide ways."
         section: research
 /edpsych/research/topics/language-literacy-reading/:
     publish: true
     template: edpsych/research/topics/language-literacy-reading.html
     template_data:
+        meta_description: "Our researchers investigate how children learn to communicate and read from an early age."
         section: research
 /edpsych/research/topics/mathematical-thinking/:
     publish: true
     template: edpsych/research/topics/mathematical-thinking.html
     template_data:
+        meta_description: "Our researchers investigate how people understand mathematics, how to identify individuals who are exceptional or at-risk for difficulties, and how best to teach mathematics."
         section: research
 /edpsych/research/topics/neurobehavioral-methods/:
     publish: true
     template: edpsych/research/topics/neurobehavioral-methods.html
     template_data:
+        meta_description: "We study the human brain in a controlled lab setting in order to better understand the way people think, learn, develop, and behave."
         section: research
 /edpsych/research/topics/prevention/:
     publish: true
     template: edpsych/research/topics/prevention.html
     template_data:
+        meta_description: "Our researchers develop and evaluate assessments, data systems, and interventions in order to provide services to at-risk learners to prevent negative academic, behavioral, and social outcomes."
         section: research
 /edpsych/research/topics/professional-development/:
     publish: true
     template: edpsych/research/topics/professional-development.html
     template_data:
+        meta_description: "Our researchers develop models that support practitioners' and caregivers' implementation and evaluate evidence-based practices."
         section: research
 /edpsych/research/topics/progress/:
     publish: true
     template: edpsych/research/topics/progress.html
     template_data:
+        meta_description: "Our researchers develop tools for monitoring and analyzing academic and behavioral progress in order to determine effectiveness of interventions to meet the needs of learners."
         section: research
 /edpsych/research/topics/statistical-techniques/:
     publish: true
     template: edpsych/research/topics/statistical-techniques.html
     template_data:
+        meta_description: "Our quantitative methods in education researchers use statistics to change the way we look at how people learn."
         section: research
 /edpsych/research/topics/test-and-measures/:
     publish: true
     template: edpsych/research/topics/test-and-measures.html
     template_data:
+        meta_description: "Our faculty and researchers develop and improve tests and tools to better assess learning."
         section: research

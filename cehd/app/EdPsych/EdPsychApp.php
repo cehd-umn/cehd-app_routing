@@ -186,27 +186,32 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    // @todo roll this into routes.yml
     public function programsCoursePageHandler($request, $response, $service, $app)
     {
         // values for the "p" query parameter in the JavaScript request
         $p_params = [
             "asl" => [
+                "meta_description" => "Our ASL program offers a variety of courses to meet and fulfill your language requirement.",
                 "p" => "EPSY_ASL",
                 "title" => "American Sign Language",
             ],
             "qme" => [
+                "meta_description" => "View brief descriptions of the courses offered for a degree in quantitative methods in education.",
                 "p" => "EPSY_PSE",
                 "title" => "Quantitative Methods in Education",
             ],
             "psyf" => [
+                "meta_description" => "View brief descriptions of the courses offered for a degree in psychological foundations of education.",
                 "p" => "EPSY_PSYF",
                 "title" => "Psychological Foundations of Education",
             ],
         ];
         $course = $request->param('course');
         $template_data = [
-            "section" => "programs-degrees",
+            "meta_description" => $p_params[$course]["meta_description"],
             "p_param" => $p_params[$course]["p"],
+            "section" => "programs-degrees",
             "title_text" => $p_params[$course]["title"],
         ];
 
@@ -224,6 +229,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         };
 
         $template_data = [
+            "meta_description" => "Come learn from top researchers and scientist practitioners in learning and cognition, educational technologies, social psychological and developmental processes, quantitative methods in education, school psychology, counseling and student personnel psychology, and special education.",
             "section" => "people",
             "section_data" => $section_data,
         ];
