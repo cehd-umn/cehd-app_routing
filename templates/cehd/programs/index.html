@@ -12,8 +12,8 @@
                     <div class="category-filter-container categories">
                         <ul class="category-filters">
                             <li class="category-filter">
-                                <input type="radio" checked name="category-button-group" id="show-all-categories" class="isotope-select is-show-all" data-filter=".category" data-siblings=".category">
-                                    <label for="show-all-categories">Show all</label>
+                                <input type="radio" checked name="category-button-group" id="no-category-filter" class="isotope-select" data-filter="">
+                                    <label for="no-category-filter">No category filter</label>
                                 </input>
                             </li>
                         {% for category_class, category in categories %}
@@ -32,9 +32,9 @@
                 <form action="">
                     <div class="category-filter-container degrees">
                         <ul class="category-filters">
-                            <li class="category-filter">
-                                <input type="radio" name="degree-button-group" checked id="show-all-degrees" class="isotope-select is-show-all" data-filter=".degree" data-siblings=".degree-select">
-                                    <label for="show-all-degrees">Show all</label>
+                            <li class="degree-filter">
+                                <input type="radio" checked name="degree-button-group" id="no-degree-filter" class="isotope-select" data-filter="">
+                                    <label for="no-degree-filter">No degree filter</label>
                                 </input>
                             </li>
                         {% for degree_class, degree in degrees %}

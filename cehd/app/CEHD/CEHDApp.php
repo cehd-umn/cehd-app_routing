@@ -39,24 +39,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $categories = [];
         $degrees = [];
 
-        // $degree_names = [
-        //     "Graduate Certificate",
-        //     "Graduate Minor",
-        //     "Masters",
-        //     "Ph.D.",
-        //     "Teaching",
-        //     "Undergraduate Certificate",
-        //     "Undergraduate Major",
-        //     "Undergraduate Minor",
-        // ];
-
-
-        //foreach ($degree_names as $degree)
-        //{
-        //    $hyphenated = $this->helpers->hyphenate($degree);
-        //    $degrees[$hyphenated] = $degree;
-        //}
-
         // @todo this whole block is not DRY
         foreach ($program_data as $program_index => $program)
         {
@@ -68,7 +50,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 foreach ($program["categories"] as $category_index => $category)
                 {
                     $hyphenated = $this->helpers->hyphenate($category);
-                    $program_data[$program_index]["categories_hyphenated"][$category_index] = $hyphenated;
+                    array_push($program_data[$program_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
             }
@@ -78,7 +60,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 foreach ($program["degrees"] as $degree_index => $degree)
                 {
                     $hyphenated = $this->helpers->hyphenate($degree);
-                    $program_data[$program_index]["degrees_hyphenated"][$degree_index] = $hyphenated;
+                    array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
                     $degrees[$hyphenated] = $degree;
                 }
             }
