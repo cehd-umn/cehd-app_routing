@@ -392,4 +392,30 @@ class BaseApp
     {
         return $this->template->render($template_path, $template_data);
     }
+
+    /**
+     * Takes an array of human-readable names and gives them a key with the
+     * hyphenated version of the name
+     *
+     * @param array - names
+     * @param boolean - sort
+     * @return array
+     */
+    public function nameToHyphenatedKey($names, $sort=true)
+    {
+        $new_names = [];
+        foreach ($names as $idx => $name)
+        {
+            $hyphenated = $this->helpers->hyphenate($name);
+            $new_names[$hyphenated] = $name;
+        }
+
+        if ($sort)
+        {
+            sort($new_names);
+            return $new_names;
+        }
+
+        return $new_names;
+    }
 }

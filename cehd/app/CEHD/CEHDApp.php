@@ -37,28 +37,31 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
         $program_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
         $categories = [];
-        $degree_names = [
-            "Undergraduate Major",
-            "Undergraduate Minor",
-            "Undergraduate Certificate",
-            "Teaching",
-            "Masters",
-            "Ph.D.",
-            "Graduate Minor",
-            "Graduate Certificate",
-        ];
-
         $degrees = [];
 
-        foreach ($degree_names as $degree)
-        {
-            $hyphenated = $this->helpers->hyphenate($degree);
-            $degrees[$hyphenated] = $degree;
-        }
+        // $degree_names = [
+        //     "Graduate Certificate",
+        //     "Graduate Minor",
+        //     "Masters",
+        //     "Ph.D.",
+        //     "Teaching",
+        //     "Undergraduate Certificate",
+        //     "Undergraduate Major",
+        //     "Undergraduate Minor",
+        // ];
 
+
+        //foreach ($degree_names as $degree)
+        //{
+        //    $hyphenated = $this->helpers->hyphenate($degree);
+        //    $degrees[$hyphenated] = $degree;
+        //}
+
+        // @todo this whole block is not DRY
         foreach ($program_data as $program_index => $program)
         {
-            $program["categories_hyphenated"] = [];
+            $program_data[$program_index]["categories_hyphenated"] = [];
+            $program_data[$program_index]["degrees_hyphenated"] = [];
 
             if ($program["categories"])
             {
@@ -69,7 +72,20 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     $categories[$hyphenated] = $category;
                 }
             }
+
+            if ($program["degrees"])
+            {
+                foreach ($program["degrees"] as $degree_index => $degree)
+                {
+                    $hyphenated = $this->helpers->hyphenate($degree);
+                    $program_data[$program_index]["degrees_hyphenated"][$degree_index] = $hyphenated;
+                    $degrees[$hyphenated] = $degree;
+                }
+            }
         }
+
+        asort($categories);
+        asort($degrees);
 
         $template_data = [
             "section" => "programs",
@@ -78,6 +94,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "degrees" => $degrees,
             "program_data_json" => json_encode($program_data),
         ];
+
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 

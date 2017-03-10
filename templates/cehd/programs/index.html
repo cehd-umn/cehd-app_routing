@@ -5,20 +5,20 @@
 <div class="row">
     <div class="container">
         <h1>Program Sorter</h1>
-        <div class="button-group filter-button-group twothird feature">
+        <div class="button-group filter-button-group">
             <div class="half category-container">
-                <p><a class="multi-select" href="">By Category</a></p>
+                <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
                 <form action="">
-                    <div class="category-filter-container">
+                    <div class="category-filter-container categories">
                         <ul class="category-filters">
                             <li class="category-filter">
-                                <input type="checkbox" name="show-all-categories" id="show-all-categories" class="isotope-select" data-filter="*">
+                                <input type="radio" checked name="category-button-group" id="show-all-categories" class="isotope-select is-show-all" data-filter=".category" data-siblings=".category">
                                     <label for="show-all-categories">Show all</label>
                                 </input>
                             </li>
                         {% for category_class, category in categories %}
                             <li class="category-filter">
-                                <input type="checkbox" id="{{ category_class }}-filter" class="isotope-select category-select" data-filter=".{{ category_class }}">
+                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".category-{{ category_class }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
@@ -28,18 +28,18 @@
                 </form>
             </div><!-- / half -->
             <div class="half category-container">
-                <p><a class="multi-select" href="">By Degree</a></p>
+                <p><a class="multi-select" href="" data-target=".degrees">By Degree</a></p>
                 <form action="">
-                    <div class="category-filter-container">
+                    <div class="category-filter-container degrees">
                         <ul class="category-filters">
                             <li class="category-filter">
-                                <input type="checkbox" name="show-all-categories" id="show-all-categories" class="isotope-select" data-filter="*">
-                                    <label for="show-all-categories">Show all</label>
+                                <input type="radio" name="degree-button-group" checked id="show-all-degrees" class="isotope-select is-show-all" data-filter=".degree" data-siblings=".degree-select">
+                                    <label for="show-all-degrees">Show all</label>
                                 </input>
                             </li>
                         {% for degree_class, degree in degrees %}
                             <li class="category-filter">
-                                <input type="checkbox" id="{{ degree_class }}-filter" class="isotope-select category-select" data-filter=".{{ degree_class }}">
+                                <input type="radio" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".degree-{{ degree_class }}">
                                     <label for="{{ degree_class }}-filter">{{ degree }}</label>
                                 </input>
                             </li>
@@ -56,11 +56,18 @@
         <div class="isotope-container margin-top-2">
             <div class="isotope-sizer"></div>
             {% for program_title, program in program_data %}
-                <div class="isotope-item{%- if loop.index is divisible by(2) %} odd{% endif %}
+                <div class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
                     {%- if program.categories_hyphenated -%}
                         {%- for category_class in program.categories_hyphenated -%}
-                        {{ " " }}{{ category_class }}
+                        {{ " category-" }}{{ category_class }}
                         {%- endfor -%}
+                        {{- " category" -}}
+                    {%- endif -%}
+                    {%- if program.degrees_hyphenated -%}
+                        {%- for degree_class in program.degrees_hyphenated -%}
+                        {{- " degree-" }}{{ degree_class -}}
+                        {%- endfor -%}
+                        {{- " degree" -}}
                     {%- endif -%}
                     ">
                     <h2 class="h4">{{ program_title }}</h2>
@@ -94,13 +101,16 @@
     $(function() {
         "use strict";
         var $select_button = $(".multi-select");
-        var $filter_group_container = $(".category-filter-container");
-        var $filter_group = $filter_group_container.find(".filter-button-group");
-        var $category_filters = $filter_group_container.find(".category-filter");
+        var isotope_params = {
+            itemSelector: ".isotope-item",
+            layoutMode: "fitRows"
+        }
+        var filters = new FilterManager(".isotope-container", ".isotope-select", isotope_params);
 
         $select_button.on("click", function(e) {
             e.preventDefault();
             var $button = $(this);
+            var $filter_group_container = $($button.data("target"));
             $filter_group_container.toggleClass("open");
         });
     });

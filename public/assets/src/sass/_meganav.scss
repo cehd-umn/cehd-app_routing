@@ -98,7 +98,7 @@ nav {
         display: inline-block;
         padding-left: .5em;
         padding-right: .5em;
-        width: calc((100% - 3em) / 7);
+        width: calc(100% / 7);
 
         &.first {
             border-left: 0;

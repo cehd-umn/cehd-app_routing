@@ -29,53 +29,54 @@ $tracking_elements.on("click", function(event) {
 
 jquerybridget("isotope", isotope, $);
 
-// now you can use $().isotope()
+var FilterManager = function(card_container_selector, input_selector, isotope_params) {
+    var self = this;
+    this.input_selector = input_selector;
+    this.$cards = $(card_container_selector);
+    this.$inputs = $(input_selector);
+    // @todo set this selector as a param
+    this.$showAllCategoriesCheckbox = $("#show-all-categories");
+    // @todo set this selector as a param
+    this.$showAllDegreesCheckbox = $("#show-all-degrees");
+    // @todo set this selector as a param
+    this.$showAllCheckbox = $("#show-all");
 
-var $isotope = $(".isotope-container");
+    this.$showAlls = $(".is-show-all");
 
-$isotope.isotope({
-    itemSelector: ".isotope-item",
-    layoutMode: "fitRows"
-});
+    this.$cards.isotope(isotope_params);
 
-var $category_checkboxes = $(".isotope-select");
+    this.filterCards = function ($inputs) {
+        var filters = "";
 
-function filter_cards($filters) {
-    var filters = "";
+        $inputs.each(function() {
+            var $filter = $(this);
+            var filter_value = $filter.data("filter");
+            filters += filter_value;
+        });
 
-    $filters.each(function() {
-        var $filter = $(this);
+        this.$cards.isotope({ filter: filters });
+    };
 
-        if ($filter.is(":checked")) {
-            filters += $filter.data("filter");
-        }
+    this.getSelected = function(selector) {
+        return $(selector + ":checked");
+    };
+
+    this.getCategoriesSelected = function() {
+        // @todo set this selector as a param
+        return this.getSelected(".category-select");
+    };
+
+    this.getDegreesSelected = function() {
+        // @todo set this selector as a param
+        return this.getSelected(".degree-select");
+    };
+
+    // change handler should only handle filtering and not ui state if possible
+    this.$inputs.on("change", function() {
+        var $filters = self.getSelected(".isotope-select");
+        self.filterCards($filters);
     });
-
-    $isotope.isotope({ filter: filters });
-}
-
-$category_checkboxes.on("change", function(e) {
-    var $filter = $(this);
-    var filterValue = $filter.data("filter");
-    var $filters = $(".isotope-select:checked");
-
-    // @todo make "show all" checked if no boxes are checked
-    if (filterValue === "*") {
-        // uncheck all the filters
-        $filters.prop("checked", false);
-
-        // check this one
-        $(e.target).prop("checked", true);
-
-        // filter on "*" (show everything)
-        $isotope.isotope({ filter: filterValue });
-    } else if ($filters.length > 0) {
-        filter_cards($filters);
-    } else {
-        $(".category-select").prop("checked", false);
-        $("#show-all-categories").prop("checked", true);
-        $isotope.isotope({ filter: "*" });
-    }
-});
+};
 
 window.$ = $;
+window.FilterManager = FilterManager;
