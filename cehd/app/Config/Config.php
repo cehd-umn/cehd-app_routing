@@ -33,7 +33,6 @@ class Config
     {
         $server_name = $_SERVER['SERVER_NAME'];
         $possible_environments = [
-            "fred" => "production",
             "www" => "production",
             "scotch" => "development",
             "backstage" => "test",
@@ -48,8 +47,8 @@ class Config
             }
         }
 
-        return "production";
-
+        // default to test for local environments that use a local ip address
+        return "test";
     }
 
     /**
@@ -129,13 +128,6 @@ class Config
         }
 
         $config = array_merge($config, $environment_config);
-
-        // @todo this can go away completely post-launch
-        // if ($this->_is_dev())
-        // {
-        //     $config['base_url'] = "/edpsych";
-        // }
-
         return $config;
     }
 }

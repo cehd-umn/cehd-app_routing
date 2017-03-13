@@ -73,14 +73,6 @@ class ConfigTest extends TestCase
         $this->assertEquals($result['environment'], 'test');
     }
 
-    public function testConfigEnvironmentIsProdOnFred()
-    {
-        $_SERVER['SERVER_NAME'] = "fred.cehd.umn.edu";
-        $result = $this->configObj->load([$this->appConfigFilePath]);
-        $this->assertTrue($result['is_prod']);
-        $this->assertEquals("production", $result['environment']);
-    }
-
     public function testConfigEnvironmentIsProdOnWWW()
     {
         $_SERVER['SERVER_NAME'] = "www.cehd.umn.edu";
