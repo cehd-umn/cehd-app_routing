@@ -41,16 +41,6 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal('cehd_edpsych_nav_open', $this->nav_open);
     }
 
-    public function examplesPageHandler($request, $response, $service, $app)
-    {
-        echo $this->template->render('edpsych/examples/index.html', []);
-    }
-
-    public function examplesMacrosPageHandler($request, $response, $service, $app)
-    {
-        echo $this->template->render('edpsych/examples/macros.html', []);
-    }
-
     public function searchPageHandler($request, $response, $service, $app)
     {
         // Lazily load the search client so it's not loaded on unrelated

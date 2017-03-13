@@ -43,13 +43,6 @@ $app->router->with('/edpsych/people', function() use ($app)
         [$app, 'personPageHandler']);
 });
 
-// Don't load example routes in production
-if (!$app->config['is_prod'])
-{
-    $app->router->respond('GET', '/edpsych/examples/', [$app, "examplesPageHandler"]);
-    $app->router->respond('GET', '/edpsych/examples/macros/', [$app, "examplesMacrosPageHandler"]);
-}
-
 // Services endpoints
 $app->router->with('/edpsych/services', function() use ($app)
 {

@@ -1,36 +1,6 @@
-{% extends "edpsych/layout/section.html" %}
+{% extends "edpsych/layout/documentation.html" %}
 {% set page_title = "Ed Psych Code Examples" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block heading_1 %}{{ page_title }}{% endblock %}
-{% block extra_css %}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        samp, code {
-            font-family: monospace;
-        }
-
-        samp {
-            background: #f0f0f0;
-            color: #79111a;
-            font-family: monospace;
-        }
-
-        code {
-            display: block;
-            padding: 1em;
-        }
-
-        pre {
-            margin: 0;
-        }
-
-        .grid-example {
-            background: #f0f0f0;
-        }
-    </style>
-{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
@@ -43,6 +13,7 @@
             <h3>See Also</h3>
             <ul>
                 <li><a href="macros/">Macros</a></li>
+                <li><a href="routes/">Setting up routes and templates</a></li>
             </ul>
             <p>The Ed Psych site has several custom CSS classes to make it easy to generate
             pages that match their designs. Most of the time you should be able to use a
