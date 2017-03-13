@@ -40,6 +40,7 @@
     "moment": "^2.17.1",
     "npm": "^4.3.0",
     "nunjucks": "^3.0.0",
+    "query-string": "^4.3.2",
     "video.js": "^5.17.0",
     "videojs-background": "git://github.com/truetone/videojs-Background.git#npm-fix"
   }

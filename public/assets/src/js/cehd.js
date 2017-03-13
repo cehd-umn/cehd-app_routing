@@ -1,6 +1,7 @@
 "use strict";
 
 var $ = require("jquery");
+var queryString = require("query-string");
 var isotope = require("isotope-layout");
 var jquerybridget = require("jquery-bridget");
 var $tracking_elements = $("[data-ga-command]");
@@ -29,52 +30,100 @@ $tracking_elements.on("click", function(event) {
 
 jquerybridget("isotope", isotope, $);
 
+var HistoryManager = function() {
+    this.makeQueryString = function(params_data) {
+        var query = "?";
+        var params = $.param(params_data);
+        return query + params;
+    };
+
+    this.makeURL = function(params_data) {
+        var query_str = this.makeQueryString(params_data);
+        return window.location.pathname + query_str;
+    };
+
+    this.cssClassesToArray = function(classes) {
+        return classes.split(".");
+    };
+
+    this.cssClassesToParams = function(classes) {
+        var values = this.cssClassesToArray(classes);
+        var results = [];
+
+        $.each(values, function(k, v) {
+            if (v.length > 0) {
+                results.push({
+                    name: "filters",
+                    value: v
+                });
+            }
+        });
+
+        return results;
+    };
+
+    this.pushState =function(url) {
+        history.pushState(null, null, url);
+    };
+};
+
+// @todo keep track of these filters are query params and load them on page load
 var FilterManager = function(card_container_selector, input_selector, isotope_params) {
     var self = this;
-    this.input_selector = input_selector;
+
+    this.historyManager = new HistoryManager();
     this.$cards = $(card_container_selector);
     this.$inputs = $(input_selector);
-    // @todo set this selector as a param
-    this.$showAllCategoriesCheckbox = $("#show-all-categories");
-    // @todo set this selector as a param
-    this.$showAllDegreesCheckbox = $("#show-all-degrees");
-    // @todo set this selector as a param
-    this.$showAllCheckbox = $("#show-all");
 
-    this.$showAlls = $(".is-show-all");
-
+    // Instantiate isotope
     this.$cards.isotope(isotope_params);
 
-    this.filterCards = function ($inputs) {
-        var filters = "";
+    this.filterCards = function (filters) {
+        this.$cards.isotope({ filter: filters });
+    };
 
+    this.formClassStr = function($inputs) {
+        var class_str = "";
         $inputs.each(function() {
             var $filter = $(this);
             var filter_value = $filter.data("filter");
-            filters += filter_value;
+            class_str += filter_value;
         });
-
-        this.$cards.isotope({ filter: filters });
+        return class_str;
     };
 
     this.getSelected = function(selector) {
         return $(selector + ":checked");
     };
 
-    this.getCategoriesSelected = function() {
-        // @todo set this selector as a param
-        return this.getSelected(".category-select");
+    this.loadQueryParams = function() {
+        var search = window.location.search;
+        var query_data = queryString.parse(search);
+        var filters = "";
+
+        if (typeof query_data.filters !== "undefined" && query_data.filters.length > 0) {
+            filters = query_data.filters.join(".");
+            filters = "." + filters;
+        }
+        return filters;
     };
 
-    this.getDegreesSelected = function() {
-        // @todo set this selector as a param
-        return this.getSelected(".degree-select");
+    this.onPageLoad = function() {
+        var filters = this.loadQueryParams();
+
+        if (filters.length > 0) {
+            this.$cards.isotope({ filter: filters });
+        }
     };
 
-    // change handler should only handle filtering and not ui state if possible
     this.$inputs.on("change", function() {
         var $filters = self.getSelected(".isotope-select");
-        self.filterCards($filters);
+        var filters = self.formClassStr($filters);
+        var params_data = self.historyManager.cssClassesToParams(filters);
+        var url = self.historyManager.makeURL(params_data);
+
+        self.historyManager.pushState(url);
+        self.filterCards(filters);
     });
 };
 

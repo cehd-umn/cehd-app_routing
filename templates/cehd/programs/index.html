@@ -18,7 +18,7 @@
                             </li>
                         {% for category_class, category in categories %}
                             <li class="category-filter">
-                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".category-{{ category_class }}">
+                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
@@ -39,7 +39,7 @@
                             </li>
                         {% for degree_class, degree in degrees %}
                             <li class="category-filter">
-                                <input type="radio" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".degree-{{ degree_class }}">
+                                <input type="radio" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}">
                                     <label for="{{ degree_class }}-filter">{{ degree }}</label>
                                 </input>
                             </li>
@@ -59,13 +59,13 @@
                 <div class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
                     {%- if program.categories_hyphenated -%}
                         {%- for category_class in program.categories_hyphenated -%}
-                        {{ " category-" }}{{ category_class }}
+                        {{ " " }}{{ category_class }}
                         {%- endfor -%}
                         {{- " category" -}}
                     {%- endif -%}
                     {%- if program.degrees_hyphenated -%}
                         {%- for degree_class in program.degrees_hyphenated -%}
-                        {{- " degree-" }}{{ degree_class -}}
+                        {{- " " }}{{ degree_class -}}
                         {%- endfor -%}
                         {{- " degree" -}}
                     {%- endif -%}
@@ -105,7 +105,10 @@
             itemSelector: ".isotope-item",
             layoutMode: "fitRows"
         }
-        var filters = new FilterManager(".isotope-container", ".isotope-select", isotope_params);
+        var filterManager = new FilterManager(".isotope-container", ".isotope-select", isotope_params);
+
+        // reads query params and filterManager on them
+        filterManager.onPageLoad();
 
         $select_button.on("click", function(e) {
             e.preventDefault();
