@@ -48,7 +48,7 @@ class ConfigTest extends TestCase
     public function testConfigEnvironmentIsDevelopment()
     {
         $result = $this->configObj->load([$this->appConfigFilePath]);
-        $this->assertEquals($result['environment'], 'development');
+        $this->assertEquals("development", $result['environment']);
     }
 
     public function testConfigEnvironmentIsNotProd()
@@ -63,6 +63,30 @@ class ConfigTest extends TestCase
         $result = $this->configObj->load([$this->appConfigFilePath]);
         $this->assertFalse($result['is_prod']);
         $this->assertEquals($result['environment'], 'test');
+    }
+
+    public function testConfigEnvironmentIsTestOnBackstage()
+    {
+        $_SERVER['SERVER_NAME'] = "backstage.cehd.umn.edu";
+        $result = $this->configObj->load([$this->appConfigFilePath]);
+        $this->assertFalse($result['is_prod']);
+        $this->assertEquals($result['environment'], 'test');
+    }
+
+    public function testConfigEnvironmentIsProdOnFred()
+    {
+        $_SERVER['SERVER_NAME'] = "fred.cehd.umn.edu";
+        $result = $this->configObj->load([$this->appConfigFilePath]);
+        $this->assertTrue($result['is_prod']);
+        $this->assertEquals("production", $result['environment']);
+    }
+
+    public function testConfigEnvironmentIsProdOnWWW()
+    {
+        $_SERVER['SERVER_NAME'] = "www.cehd.umn.edu";
+        $result = $this->configObj->load([$this->appConfigFilePath]);
+        $this->assertTrue($result['is_prod']);
+        $this->assertEquals("production", $result['environment']);
     }
 
     public function testConfigCorrectlySetsDebug()
