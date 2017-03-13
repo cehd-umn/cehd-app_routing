@@ -28,17 +28,18 @@ class Config
      * local dev, test for production environment
      *
      * @return string
-     * @TODO This works for now but could be more robust. E.g., include localhost
      */
     private function _get_environment()
     {
         $server_name = $_SERVER['SERVER_NAME'];
         $possible_environments = [
-            "development" => "scotch",
-            "test" => "drydock",
+            "www" => "production",
+            "scotch" => "development",
+            "backstage" => "test",
+            "drydock" => "test",
         ];
 
-        foreach ($possible_environments as $env_name => $env_substr)
+        foreach ($possible_environments as $env_substr => $env_name)
         {
             if (strpos($server_name, $env_substr) !== false)
             {
@@ -46,8 +47,8 @@ class Config
             }
         }
 
-        return "production";
-
+        // default to test for local environments that use a local ip address
+        return "test";
     }
 
     /**
@@ -127,13 +128,6 @@ class Config
         }
 
         $config = array_merge($config, $environment_config);
-
-        // @todo this can go away completely post-launch
-        // if ($this->_is_dev())
-        // {
-        //     $config['base_url'] = "/edpsych";
-        // }
-
         return $config;
     }
 }
