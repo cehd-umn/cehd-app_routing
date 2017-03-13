@@ -37,12 +37,16 @@
 ####################################
 ## This system is case-sensitive! ##
 ####################################
+
+# Home page
 /edpsych/:
     publish: true
     template: edpsych/index.html
     template_data:
         meta_description: "At the University of Minnesota, we're preparing the next generation of educational psychologists, researchers and scientist-practitioners, with degrees in psychological foundations of education, quantitative methods in education, counseling psychology, school psychology, and special education."
         section: home
+
+# About
 /edpsych/about/:
     publish: true
     template: edpsych/about/index.html
@@ -55,6 +59,8 @@
     template_data:
         meta_description: "The Department of Educational Psychology is a vibrant and diverse community of scholars. Our graduate students represent over 17 different countries creating a globally diverse discourse on the cognitive, emotional, and social learning processes that underlie education and human development across the lifespan."
         section: about
+
+# Alumni
 /edpsych/alumni/:
     publish: true
     template: edpsych/alumni/index.html
@@ -67,6 +73,8 @@
     template_data:
         meta_description: null
         section: alumni
+
+# Contact
 /edpsych/contact/:
     publish: true
     template: edpsych/contact/index.html
@@ -79,6 +87,8 @@
     template_data:
         meta_description: null
         section: null
+
+# Current
 /edpsych/current/:
     publish: true
     template: edpsych/current/index.html
@@ -169,12 +179,36 @@
     template_data:
         meta_description: "Register for your certificate in Autism Spectrum Disorder."
         section: current
+
+# Examples section (note: keep publish "false" for these")
+/edpsych/examples/:
+    publish: false
+    template: edpsych/examples/index.html
+    template_data:
+        meta_description: null
+        section: null
+/edpsych/examples/macros/:
+    publish: false
+    template: edpsych/examples/macros.html
+    template_data:
+        meta_description: null
+        section: null
+/edpsych/examples/routes/:
+    publish: false
+    template: edpsych/examples/routes.html
+    template_data:
+        meta_description: null
+        section: null
+
+# Forms section
 /edpsych/forms/:
     publish: true
     template: edpsych/forms/index.html
     template_data:
         meta_description: "Find forms on travel, funding, thesis credits, prelim registration, and more."
         section: forms
+
+# Future students
 /edpsych/future-students/:
     publish: true
     template: edpsych/future-students/index.html
@@ -217,12 +251,16 @@
     template_data:
         meta_description: "Earn your M.A. or Ph.D. in special education. Important dates and requirements regarding your admission."
         section: future-students
+
+# Giving
 /edpsych/giving/:
     publish: true
     template: edpsych/giving/index.html
     template_data:
         meta_description: "Your generous support of the Department of Educational Psychology is more critical than ever. Help us retain the very best scholars and students and give our faculty develop cutting edge, research-driven practices in school psychology, special education, evaluation and measurement, and counseling psychology."
         section: giving
+
+# Programs
 /edpsych/programs/:
     publish: true
     template: edpsych/programs/index.html
@@ -523,6 +561,8 @@
     template_data:
         meta_description: null
         section: programs-degrees
+
+# Research
 /edpsych/research/:
     publish: true
     template: edpsych/research/index.html
