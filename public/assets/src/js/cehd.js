@@ -67,11 +67,18 @@ var HistoryManager = function() {
     };
 };
 
+var FilterUIManager = function() {
+    this.setChecked = function(element_selector) {
+        $(element_selector).prop("checked", true);
+    };
+};
+
 // @todo keep track of these filters are query params and load them on page load
 var FilterManager = function(card_container_selector, input_selector, isotope_params) {
     var self = this;
 
     this.historyManager = new HistoryManager();
+    this.uiManager = new FilterUIManager();
     this.$cards = $(card_container_selector);
     this.$inputs = $(input_selector);
 
@@ -96,9 +103,13 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
         return $(selector + ":checked");
     };
 
-    this.loadQueryParams = function() {
+    this.getQueryData = function() {
         var search = window.location.search;
-        var query_data = queryString.parse(search);
+        return queryString.parse(search);
+    };
+
+    this.loadQueryParams = function() {
+        var query_data = this.getQueryData();
         var filters = "";
 
         if (typeof query_data.filters !== "undefined" && query_data.filters.length > 0) {
@@ -110,9 +121,16 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
 
     this.onPageLoad = function() {
         var filters = this.loadQueryParams();
+        var query_data = this.getQueryData();
+        var self = this;
 
         if (filters.length > 0) {
             this.$cards.isotope({ filter: filters });
+
+            $.each(query_data.filters, function(k, v) {
+                var element_selector = "#" + v + "-filter";
+                self.uiManager.setChecked(element_selector);
+            });
         }
     };
 
