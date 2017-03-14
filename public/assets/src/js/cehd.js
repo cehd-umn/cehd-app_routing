@@ -105,7 +105,16 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
 
     this.getQueryData = function() {
         var search = window.location.search;
-        return queryString.parse(search);
+        var query_data = queryString.parse(search);
+
+        // Make sure filters are always an array
+        if (query_data.filters && query_data.filters.constructor !== Array) {
+            var cached_filter = query_data.filters;
+            query_data.filters = [];
+            query_data.filters.push(cached_filter);
+        }
+
+        return query_data;
     };
 
     this.loadQueryParams = function() {

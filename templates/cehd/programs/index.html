@@ -2,6 +2,7 @@
 {% set page_title = "College of Education + Human Development" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{#- @todo create a "sorter" template with common code from this and topics page -#}
 <div class="row">
     <div class="container">
         <h1>Program Sorter</h1>
@@ -109,6 +110,10 @@
 
         // reads query params and filterManager on them
         filterManager.onPageLoad();
+
+        window.onpopstate = function() {
+            filterManager.onPageLoad();
+        };
 
         $select_button.on("click", function(e) {
             e.preventDefault();

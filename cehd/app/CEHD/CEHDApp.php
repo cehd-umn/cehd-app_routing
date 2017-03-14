@@ -80,6 +80,39 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 
+    public function topicsPageHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
+        $topic_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
+        $categories = [];
+
+        foreach ($topic_data as $topic_index => $topic)
+        {
+            $topic_data[$topic_index]["categories_hyphenated"] = [];
+
+            if ($topic["categories"])
+            {
+                foreach ($topic["categories"] as $category_index => $category)
+                {
+                    $hyphenated = $this->helpers->hyphenate($category);
+                    array_push($topic_data[$topic_index]["categories_hyphenated"], $hyphenated);
+                    $categories[$hyphenated] = $category;
+                }
+            }
+        }
+
+        asort($categories);
+
+        $template_data = [
+            "section" => "topics",
+            "topic_data" => $topic_data,
+            "categories" => $categories,
+            "topic_data_json" => json_encode($topic_data),
+        ];
+
+        echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
+    }
+
     public function searchPageHandler($request, $response, $service, $app)
     {
         // Lazily load the search client so it's not loaded on unrelated
@@ -216,25 +249,4 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
         }
     }
-
-    // @xxx Is this a good idea if we can't map the whole site?
-    // public function sitemapHandler($request, $response, $service, $app)
-    // {
-    //     $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/routes.yml';
-    //     $route_data = $app->bootstrap_helpers->load_yaml($yaml_file_path);
-
-    //     // Add routes that aren't in routes.yml here. The route should be the key.
-    //     $custom_routes = [
-    //         "/programs/" => "Programs",
-    //     ];
-
-    //     // Merge the route arrays
-    //     $sitemap_data = array_merge($route_data, $custom_routes);
-
-    //     // Send them to template
-    //     $template_data = [
-    //         "sitemap_data" => $sitemap_data,
-    //     ];
-    //     echo $app->_renderTemplate('cehd/sitemap.xml', $template_data);
-    // }
 }
