@@ -211,7 +211,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     public function peoplePageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/edpsych/people/index.yml';
-        $section_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
+        $section_data = $this->helpers->loadYaml($yaml_file_path);
 
         foreach ($section_data as $key => $section)
         {
@@ -230,7 +230,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     public function personPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/edpsych/people/extra_content.yml';
-        $yaml_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
+        $yaml_data = $this->helpers->loadYaml($yaml_file_path);
         $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
         $extra_content = $extra_content_data->get($request->internetId);
 
