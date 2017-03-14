@@ -162,7 +162,7 @@ class BaseApp
         $this->response = new \CEHD\App\Response\BaseResponse();
         $this->helpers = new \CEHD\Helpers\Helper\Helper;
         $this->_routes =  new Dict\Dict(
-            $this->bootstrap_helpers->load_yaml(
+            $this->helpers->loadYaml(
                 $this->file_paths["routes"])
         );
 
@@ -267,7 +267,7 @@ class BaseApp
     {
         try
         {
-            $data_array = $this->bootstrap_helpers->load_yaml($file_path);
+            $data_array = $this->helpers->loadYaml($file_path);
             if ($as_dict)
             {
                 return $this->_loadDict($data_array);

@@ -1,6 +1,9 @@
 <?php
 namespace CEHD\Helpers\Helper;
 
+const BASE_PATH = __DIR__ . '/../../../';
+require_once BASE_PATH . 'vendor/autoload.php';
+
 class Helper {
     public static function hyphenate($str, array $noStrip = [])
     {
@@ -42,5 +45,11 @@ class Helper {
         }
 
         return $uri;
+    }
+
+    static function loadYaml($file_path)
+    {
+        $yaml = new \Symfony\Component\Yaml\Yaml;
+        return $yaml::parse(file_get_contents($file_path));
     }
 }
