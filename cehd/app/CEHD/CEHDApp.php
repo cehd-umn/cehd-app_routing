@@ -35,7 +35,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function programsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $program_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
+        $program_data = $this->helpers->loadYaml($yaml_file_path);
         $categories = [];
         $degrees = [];
 
@@ -83,7 +83,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function topicsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $topic_data = $this->bootstrap_helpers->load_yaml($yaml_file_path);
+        $topic_data = $this->helpers->loadYaml($yaml_file_path);
         $categories = [];
 
         foreach ($topic_data as $topic_index => $topic)
