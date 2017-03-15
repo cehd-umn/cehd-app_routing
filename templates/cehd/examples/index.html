@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="macros/">Macros</a></li>
                 <li><a href="routes/">Setting up routes and templates</a></li>
+                <li><a href="divider/">Column divider</a></li>
             </ul>
             <p>The Ed Psych site has several custom CSS classes to make it easy to generate
             pages that match their designs. Most of the time you should be able to use a
@@ -51,7 +52,7 @@
 
             <h2 class="toc">Other Blocks</h2>
 
-            <h2><samp>main_content</samp></h2>
+            <h3><samp>main_content</samp></h3>
 
             <p>Use the <samp>main_content</samp> block for the content of the page.</p>
 
@@ -63,7 +64,7 @@
 {% endblock %}
     {% endraw %}</code></pre>
 
-            <h2><samp>title_prepend</samp> and <samp>title_append</samp></h2>
+            <h3><samp>title_prepend</samp> and <samp>title_append</samp></h3>
 
             <p><samp>title_prepend</samp> allows us to prepend the same thing to
             multiple page titles. E.g., every page title can be prepended with
@@ -72,7 +73,7 @@
             <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
             for appending, obviously.
 
-            <h2><samp>meta_content</samp></h2>
+            <h3><samp>meta_content</samp></h3>
 
             <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
             can insert a <samp>meta_content</samp> block on a template to populate a
@@ -90,7 +91,7 @@
         </div>
 
         <div class="half feature">
-            <h2><samp>extra_css</samp></h2>
+            <h3><samp>extra_css</samp></h3>
 
             <p>If you need to create a brand new style that you can't find here,
             there's <a
@@ -124,7 +125,7 @@
 
             <p>Hopefully that will help with using the department name in a consistent way.</p>
 
-            <h2>Setting Your Own Variables</h2>
+            <h3>Setting Your Own Variables</h3>
 
             <p>If you find that you're repeating yourself, you can define <a
             href="http://twig.sensiolabs.org/doc/templates.html#variables">a
@@ -172,18 +173,11 @@
         </div>
 
         <div class="half feature margin-top-3">
-            <h2 class="toc">Heading Tags</h2>
-
-            <p>To maintain a consistent document structure, it's a good idea to try to
-            only have one <samp>&lt;h1&gt;</samp> tag on the page. Since the
-            <samp>&lt;h1&gt;</samp> tag is already used, start your content  with an
-            <samp>&lt;h2&gt;</samp> instead. <emphasis>Remember, headings are for
-            structure, not presentation.</emphasis></p>
-
             <h2>Heading Classes</h2>
 
-            <p>In order to maintain a <emphasis>visual</emphasis> hierarchy, headings
-            have matching CSS classes to control their sizes. For example:</p>
+            <p>In order to maintain a <emphasis>visual</emphasis> hierarchy,
+            headings have matching CSS classes to control their sizes. For
+            example:</p>
 
             <pre><code>
 &lt;h2&gt;This is what an &lt;h2&gt; would look like&lt;/h2&gt;
@@ -191,9 +185,9 @@
 &lt;h2 class=&quot;h2&quot;&gt;This is an &lt;h2&gt; with the .h2 class&lt;/h2&gt;
             </code></pre>
 
+            <h1 class="no-toc">This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
             <h2 class="no-toc">This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
-            <h2 class="no-toc">This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
-            <h2 class="h2 no-toc">This is an <samp>&lt;h2&gt;</samp> with the <samp>.h2</samp> class</h2>
+            <h1 class="h2 no-toc">This is an <samp>&lt;h1&gt;</samp> with the <samp>.h2</samp> class</h1>
 
             <p>This provides control over the <emphasis>styles</emphasis> while
             maintaining good document structure.</p>
@@ -203,36 +197,34 @@
             <pre><code>
 &lt;h1&gt;Heading 1&lt;/h1&gt;
 &lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;h2&gt;Heading 3&lt;/h2&gt;
-&lt;h3&gt;Heading 4&lt;/h3&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
 &lt;h5&gt;Heading 5&lt;/h5&gt;
 &lt;h6&gt;Heading 6&lt;/h6&gt;
                 </code></pre>
 
             <pre><code>
-&lt;h2 class=&quot;h1&quot;&gt;h2 with .h1 class&lt;/h2&gt;
-&lt;h2 class=&quot;h2&quot;&gt;h2 with .h2 class&lt;/h2&gt;
-&lt;h2 class=&quot;h2&quot;&gt;h2 with .h2 class&lt;/h2&gt;
-&lt;h2 class=&quot;h3&quot;&gt;h2 with .h3 class&lt;/h2&gt;
-&lt;h2 class=&quot;h5&quot;&gt;h2 with .h5 class&lt;/h2&gt;
-&lt;h2 class=&quot;h6&quot;&gt;h2 with .h6 class&lt;/h2&gt;
+&lt;h2 class=&quot;h1&quot;&gt;h2 with &lt;samp&gt;.h1&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h3&quot;&gt;h2 with &lt;samp&gt;.h3&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h4&quot;&gt;h2 with &lt;samp&gt;.h4&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h5&quot;&gt;h2 with &lt;samp&gt;.h5&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h6&quot;&gt;h2 with &lt;samp&gt;.h6&lt;/samp&gt; class&lt;/h2&gt;
             </code></pre>
 
             <div class="half">
-                <h2 class="h2">Default Heading Sizes</h2>
+                <h2>Default Heading Sizes</h2>
                 <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3 class="no-toc">Heading 3</h3>
+                <h2 class="no-toc">Heading 2</h2>
+                <h3>Heading 3</h3>
                 <h4>Heading 4</h4>
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
             </div>
             <div class="half">
-                <h3 class="h2">h2 With Classes</h3>
+                <h2 class="h2">h2 With Classes</h2>
                 <h2 class="h1">h2 with <samp>.h1</samp> class</h2>
-                <h2 class="h2">h2 with <samp>.h2</samp> class</h2>
-                <h2 class="h2">h2 with <samp>.h2</samp> class</h2>
                 <h2 class="h3">h2 with <samp>.h3</samp> class</h2>
+                <h2 class="h4">h2 with <samp>.h4</samp> class</h2>
                 <h2 class="h5">h2 with <samp>.h5</samp> class</h2>
                 <h2 class="h6">h2 with <samp>.h6</samp> class</h2>
             </div>
@@ -650,99 +642,6 @@ kept forgetting which was correct.) --&gt;
             <h2>Fancy Centered Button With Hover Effect</h2>
             <pre><code>&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
             <p class="text-center"><a href="" class="button center">How to apply</a></p>
-
-            <h2>Column Divider</h2>
-            <pre><code>
-&lt;div&gt;
-    &lt;span class=&quot;divider one-third&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;third&quot;&gt;
-        &lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high
-        level overviews. Iterative approaches to corporate strategy foster
-        collaborative thinking to further the overall value proposition.
-        Organically grow the holistic world view of disruptive innovation via
-        workplace diversity and empowerment.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;twothirds&quot;&gt;
-        &lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high
-        level overviews. Iterative approaches to corporate strategy foster
-        collaborative thinking to further the overall value proposition.
-        Organically grow the holistic world view of disruptive innovation via
-        workplace diversity and empowerment.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-            </code></pre>
-            <div>
-                <span class="divider one-third"></span>
-                <div class="third">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-                <div class="twothirds">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-            </div>
-
-            <div>
-                <span class="divider two-third"></span>
-                <div class="twothirds">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-                <div class="third">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-            </div>
-
-            <div>
-                <span class="divider one-fourth"></span>
-                <div class="span-3">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-                <div class="span-9">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-            </div>
-
-            <div>
-                <span class="divider three-fourth"></span>
-                <div class="span-9">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-                <div class="span-3">
-                    <p>Leverage agile frameworks to provide a robust synopsis for high
-                    level overviews. Iterative approaches to corporate strategy foster
-                    collaborative thinking to further the overall value proposition.
-                    Organically grow the holistic world view of disruptive innovation via
-                    workplace diversity and empowerment.</p>
-                </div>
-            </div>
-
 
             <h2>An image with caption</h2>
             <p>This uses the <samp>figure</samp> and <samp>figcaption</samp>

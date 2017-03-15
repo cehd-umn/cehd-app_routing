@@ -48,6 +48,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/divider/:
+  publish: false
+  template: cehd/examples/divider.html
+  template_data:
+    meta_description: null
+    section: null
 /examples/macros/:
   publish: false
   template: cehd/examples/macros.html
