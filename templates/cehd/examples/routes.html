@@ -1,0 +1,185 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Ed Psych Code Examples: Setting up routes and templates" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>{{ page_title }}</h2>
+
+        <div class="half feature">
+            <p>Setting up a new page consists of two steps:</p>
+            <ol>
+                <li>Defining a "route" and some related information</li>
+                <li>Creating a template for the route</li>
+            </ol>
+
+            <h3>Defining routes</h3>
+            <p>The routes for most pages are defined in
+            <samp>app_routing/config/edpsych/routes.yml</samp>. (We'll cover the
+            pages that <em>aren't</em> there later.)</p>
+
+            <p>A typical route looks like this:</p>
+            <pre><code class="yaml">
+/edpsych/examples/:
+    publish: true
+    template: edpsych/examples/index.html
+    template_data:
+        meta_description: "Short description goes here."
+        section: "nav-section"
+            </code></pre>
+
+            <p>Let's take one line at a time.</p>
+
+            <h4>The route</h4>
+
+            <pre><code class="yaml">
+/edpsych/examples/:
+            </code></pre>
+
+            <p>This corresponds to what comes after <samp>www.cehd.umn.edu</samp>.
+            So in this case we'll get:
+            <samp>www.cehd.umn.edu/edpsych/examples/</samp>.
+
+            <h4>The publish setting</h4>
+            <p>This will prevent new routes (and pages) from going live if set
+            to <samp>false</samp>. These routes (and pages) will still be
+            visible on Drydock. Once a page is ready, change <samp>false</samp>
+            to <samp>true</samp>.</p>
+
+            <pre><code class="yaml">
+/edpsych/examples/:
+    publish: true
+            </code></pre>
+
+            <h4>The template</h4>
+            <p>This is the path to the template file within the
+            <samp>app_routing/templates</samp> directory.</p>
+            <pre><code class="yaml">
+/edpsych/examples/:
+    publish: true
+    template: edpsych/examples/index.html
+            </code></pre>
+
+            <h4>Template data</h4>
+
+            <p>This is some extra information the template can use. In this
+            example, we're providing some context for how the navigation is
+            rendered (<samp>section</samp>) and a short description that gets
+            inserted in the <samp>head</samp> element of the page.</p>
+
+            <pre><code class="yaml">
+/edpsych/examples/:
+    publish: true
+    template: edpsych/examples/index.html
+    template_data:
+        meta_description: "Short description goes here."
+        section: "nav-section"
+            </code></pre>
+
+            <h3>Rules and guidelines for using YAML</h3>
+            <p><em>The formatting of this (and all) yaml files is very
+            important.</em></p> <p>The information in this file is converted
+            into data by the application. The structure of the data and it's
+            relationships are defined by <em>very specific indentation</em>. In
+            order to maintain consistent structure, please follow these rules
+            and guidelines:</p>
+
+            <h4>Rule: indent your additions exactly like the other information in the file</h4>
+
+            <p>That means indent using <em>spaces</em> and using the same pattern you see here:</p>
+
+            <pre><code class="yaml">
+/edpsych/examples/: # no indentation
+
+    # the next three lines should be indented 4 spaces
+....publish: true
+....template: edpsych/examples/index.html
+....template_data:
+
+.......# the next two lines should be indented 8 spaces
+.......meta_description: "Short description goes here."
+.......section: "nav-section"
+            </code></pre>
+
+            <p>This is by far the most important rule. <em>Mixing indentation
+            can have catastrophic consequences for other pages on the
+            site</em>.</p>
+
+            <h4>Rule: routes are case-sensitive</h4>
+
+            <p>If you define a route as <samp>/about/</samp>, linking to it
+            like <samp>/About/</samp> (capital-A) <em>will not work</em>. Even
+            though it's not intuitive <samp>a</samp> and <samp>A</samp> are
+            <em>two distinct characters</em>. Therefore, <samp>/about/</samp>
+            and <samp>/About/</samp> are considered two distinct routes.</p>
+
+            <h4>Rule: end routes with a "/"</h4>
+
+            <p>This system is configured to redirect urls missing an ending
+            slash (<samp>/</samp>) to a route that does. For example, If
+            someone goes to <samp>www.cehd.umn.edu/edpsych</samp> (no
+            <samp>/</samp> at the end), they will be redirected to
+            <samp>www.cehd.umn.edu/edpsych/</samp> (<samp>/</samp> at the
+            end).</p>
+
+            <p><em>Always define your routes with an ending slash like in the
+            examples above</em>.</p>
+
+            <h4>Guideline: use lowercase routes with unabbreviated hyphenated words</h4>
+
+            <p>Mixes of uppercase and lowercase letters in routes <em>will
+            work</em>, but to avoid confusion and keep things consistent,
+            please make your routes all lowercase. It's also a good idea to
+            avoid abbreviated words.</p>
+
+            <h5>Good</h5>
+
+            <p><samp>/edpsych/this/is/a/registration/page/<br>
+            /edpsych/registration-page/</samp></p>
+
+            <h5>Not so good</h5>
+
+            <p><samp>/edpsych/reg-pg/</samp></p>
+
+            <p>While the above abbreviation may make sense to you, it might not
+            be obvious to others.</p>
+
+            <p><samp>/edpsych/RegistrationPage/</samp></p>
+
+            <p>As noted above, routes are case-sensitive. A PascalCase route
+            like this might seem intuitive, but it will be hard to remember
+            later if characters should he upper or lowercase. Try to stick with
+            the guideline of lowercase routes.</p>
+
+            <h4>Guideline: try to keep routes in alphabetical order</h4>
+
+            <p>Keeping routes in alphabetical order will make it easier for
+            others to find where routes are defined.</p>
+
+            <p>For example, <samp>/about/</samp> and routes within that section
+            should come before <samp>/current/</samp>.</p>
+
+            <h4>Guideline: try to organize your templates in a way that matches the route</h4>
+
+            <p>Also, templates for the main page of a section should be named <samp>index.html</samp>.<p>
+
+            <pre><code class="yaml">
+/edpsych/examples/:
+    publish: true
+    template: edpsych/examples/index.html
+    template_data:
+        meta_description: "Short description goes here."
+        section: "nav-section"
+            </code></pre>
+
+            <p>In the above example, "examples" is a <em>section</em>, i.e., it
+            has related pages within it. Therefore we name the main examples
+            template <samp>index.html</samp>.</p>
+
+            <p>Also, the template is in <samp>edpsych/examples/</samp>, making
+            it easier to find because it's similar to the route.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

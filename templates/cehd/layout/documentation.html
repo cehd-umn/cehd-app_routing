@@ -1,0 +1,31 @@
+{% extends "cehd/layout/base.html" %}
+{% block extra_css %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        samp, code {
+            font-family: monospace;
+        }
+
+        samp {
+            background: #f0f0f0;
+            color: #79111a;
+            font-family: monospace;
+        }
+
+        code {
+            display: block;
+            padding: 1em;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .grid-example {
+            background: #f0f0f0;
+        }
+    </style>
+{% endblock %}
+

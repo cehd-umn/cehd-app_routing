@@ -503,8 +503,64 @@ footer {
     }
 
     .divider {
-        &.right {
-            border-right: 1px solid $base-black;
+        background-color: $base-black;
+        height: 80%;
+        left: calc(50%);
+        position: absolute;
+        top: 10%;
+        width: 1px;
+
+        // these percentages were all eyeballed and may need adjusting
+        &.one-third {
+            left: calc(32.55%);
+        }
+
+        &.two-third {
+            left: calc(67.4%);
+        }
+
+        &.one-fourth {
+            left: calc(24%);
+        }
+
+        &.three-fourth,
+        &.three-fourths {
+            left: calc(76.2%);
+        }
+
+        &.height-100 {
+            height: 100%;
+            top: 0;
+        }
+
+        &.height-90 {
+            height: 90%;
+            top: 5%;
+        }
+
+        &.height-70 {
+            height: 70%;
+            top: 15%;
+        }
+
+        &.height-60 {
+            height: 60%;
+            top: 20%;
+        }
+
+        &.height-50 {
+            height: 50%;
+            top: 25%;
+        }
+
+        &.height-40 {
+            height: 40%;
+            top: 30%;
+        }
+
+        &.height-30 {
+            height: 30%;
+            top: 35%;
         }
     }
 
