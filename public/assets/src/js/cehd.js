@@ -5,6 +5,7 @@ var queryString = require("query-string");
 var isotope = require("isotope-layout");
 var jquerybridget = require("jquery-bridget");
 var $tracking_elements = $("[data-ga-command]");
+var elasticlunr = require("elasticlunr");
 
 // TODO load modules and scope them within an app. I.e., App.Renderer, App.Client
 
@@ -73,14 +74,64 @@ var FilterUIManager = function() {
     };
 };
 
-// @todo keep track of these filters are query params and load them on page load
-var FilterManager = function(card_container_selector, input_selector, isotope_params) {
+var search_setup = function(elements_selector) {
+    var $elements = $(elements_selector);
+
+    var search = elasticlunr(function() {
+        this.addField("title");
+        this.addField("description");
+        this.addField("categories");
+        this.setRef("id");
+    });
+
+    $elements.each(function(index, element) {
+
+        var $element = $(element);
+        var title = $element.find(".title").text();
+        var description = $element.find(".description").text();
+        var categories = $element.data("categories");
+        var id = $element.attr("id");
+        var doc = {
+            id: id,
+            title: title,
+            description: description,
+            categories: categories
+        };
+
+        search.addDoc(doc);
+    });
+
+    return search;
+};
+
+var FilterManager = function(card_container_selector, filter_input_selector, search_input_selector, isotope_params) {
     var self = this;
 
     this.historyManager = new HistoryManager();
     this.uiManager = new FilterUIManager();
     this.$cards = $(card_container_selector);
-    this.$inputs = $(input_selector);
+    this.$filter_inputs = $(filter_input_selector);
+    this.search = search_setup(isotope_params.itemSelector);
+    this.$search_input = $(search_input_selector);
+
+    this.$search_input.on("keyup", function() {
+        var search_value = $(this).val();
+        var search_result = self.search.search(search_value, {expand: true});
+
+        $(".full-text-search-result").removeClass("full-text-search-result");
+
+        $.each(search_result, function() {
+            var id = this.ref;
+            var selector = "#" + id;
+            $(selector).addClass("full-text-search-result");
+        });
+
+        if (search_value.length > 0) {
+            self.filterCards(".full-text-search-result");
+        } else {
+            self.filterCards("*");
+        }
+    });
 
     // Instantiate isotope
     this.$cards.isotope(isotope_params);
@@ -89,9 +140,9 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
         this.$cards.isotope({ filter: filters });
     };
 
-    this.formClassStr = function($inputs) {
+    this.formClassStr = function($filter_inputs) {
         var class_str = "";
-        $inputs.each(function() {
+        $filter_inputs.each(function() {
             var $filter = $(this);
             var filter_value = $filter.data("filter");
             class_str += filter_value;
@@ -128,6 +179,7 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
         return filters;
     };
 
+    // @xxx this needs a better name
     this.onPageLoad = function() {
         var filters = this.loadQueryParams();
         var query_data = this.getQueryData();
@@ -143,7 +195,7 @@ var FilterManager = function(card_container_selector, input_selector, isotope_pa
         }
     };
 
-    this.$inputs.on("change", function() {
+    this.$filter_inputs.on("change", function() {
         var $filters = self.getSelected(".isotope-select");
         var filters = self.formClassStr($filters);
         var params_data = self.historyManager.cssClassesToParams(filters);

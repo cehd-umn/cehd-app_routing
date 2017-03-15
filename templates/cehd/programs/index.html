@@ -6,6 +6,7 @@
 <div class="row">
     <div class="container">
         <h1>Program Sorter</h1>
+        <input type="text" id="full-text-search-input" placeholder="Search here or choose a category below">
         <div class="button-group filter-button-group">
             <div class="half category-container">
                 <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
@@ -57,26 +58,30 @@
         <div class="isotope-container margin-top-2">
             <div class="isotope-sizer"></div>
             {% for program_title, program in program_data %}
-                <div class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
+                <div id="isotope-item-{{ loop.index }}" class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
                     {%- if program.categories_hyphenated -%}
-                        {%- for category_class in program.categories_hyphenated -%}
-                        {{ " " }}{{ category_class }}
-                        {%- endfor -%}
-                        {{- " category" -}}
+                      {{ " " }}{{- program.categories_hyphenated|join(" ") -}}
+                      {{- " category" -}}
                     {%- endif -%}
                     {%- if program.degrees_hyphenated -%}
-                        {%- for degree_class in program.degrees_hyphenated -%}
-                        {{- " " }}{{ degree_class -}}
-                        {%- endfor -%}
-                        {{- " degree" -}}
+                      {{ " " }}{{- program.degrees_hyphenated|join(" ") -}}
+                      {{- " degree" -}}
                     {%- endif -%}
-                    ">
-                    <h2 class="h4">{{ program_title }}</h2>
+                    "{#- close the class= quote -#}
+                    {%- if program.categories -%}
+                      {{ " " }}data-categories="{{- program.categories|join(" ") }}
+                      {%- if program.degrees -%}
+                        {{ " " }}{{- program.degrees|join(" ") }}
+                      {%- endif -%}
+                      "{#- close the data-categories= quote -#}
+                    {%- endif -%}
+                    >{#- close the tag -#}
+                    <h2 class="h4 title">{{ program_title }}</h2>
                     {% if program.description %}
-                    {{ program.description }}
+                      <p class="description">{{ program.description }}</p>
                     {% endif %}
                     {% if program.links %}
-                    <h2 class="h6">Links</h2>
+                    <h3 class="h6">Links</h3>
                     <ul>
                         {% for link in program.links %}
                         <li><a href="{{ link.href }}">{{ link.text }}</a></li>
@@ -84,10 +89,11 @@
                     </ul>
                     {% endif %}
                     {% if program.categories %}
-                    <h2 class="h6">Categories</h2>
+                    <h3 class="h6">Categories</h3>
                         <ul>
                         {% for category in program.categories %}
-                        <li>{{ category }}</li>
+                          {#- todo add degree info here and to search -#}
+                          <li class="category-item">{{ category }}</li>
                         {% endfor %}
                         </ul>
                     {% endif %}
@@ -105,8 +111,8 @@
         var isotope_params = {
             itemSelector: ".isotope-item",
             layoutMode: "fitRows"
-        }
-        var filterManager = new FilterManager(".isotope-container", ".isotope-select", isotope_params);
+        };
+        var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
 
         // reads query params and filterManager on them
         filterManager.onPageLoad();
