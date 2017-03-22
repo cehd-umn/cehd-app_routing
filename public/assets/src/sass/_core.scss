@@ -281,6 +281,16 @@ img {
 
         top: 1em;
     }
+
+    &.simple {
+        border: 0;
+        padding: .5em 1.5em;
+
+        &.green {
+            background-color: $cehd-green-button-background;
+            color: $base-white;
+        }
+    }
 }
 
 a {
@@ -659,4 +669,8 @@ footer {
 
 input[type="radio"] {
     margin-left: 2px;
+}
+
+.to-upper {
+    text-transform: uppercase;
 }
