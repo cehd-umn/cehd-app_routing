@@ -152,17 +152,16 @@ q {
     &::before,
     &::after {
         content: "";
-        /// @todo The second one always wins. Why two?
-        // scss-lint:disable DuplicateProperty
-        content: none;
     }
 }
 
 blockquote {
+    clear: both;
     display: block;
     font-style: italic;
     margin: 10px 40px;
     padding: 0;
+    position: relative;
 
     &::before,
     &::after {
@@ -353,6 +352,13 @@ figure {
 
 .row {
     z-index: 1;
+}
+
+@font-face {
+    font-family: 'Macondo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Macondo'), local('Macondo-Regular'), url(https://fonts.gstatic.com/s/macondo/v5/wijdXSTMZhcyWspsnqogsw.ttf) format('truetype');
 }
 
 @import "umn-hf";

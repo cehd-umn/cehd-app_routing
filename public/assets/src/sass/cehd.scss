@@ -107,3 +107,31 @@ $corner-border-spacing: 5px;
         width: 20px;
     }
 }
+
+blockquote {
+    &.quote-wrap {
+        font-style: inherit;
+        quotes: "“" "”" "‘" "’";
+
+        &::after,
+        &::before {
+            // display: block;
+            font-family: Macondo, sans-serif;
+            font-size: 80px;
+            line-height: .1em;
+            position: absolute;
+        }
+
+        &::after {
+            bottom: -.3em;
+            content: close-quote;
+            right: .2em;
+        }
+
+        &::before {
+            content: open-quote;
+            left: -.5em;
+            top: .35em;
+        }
+    }
+}
