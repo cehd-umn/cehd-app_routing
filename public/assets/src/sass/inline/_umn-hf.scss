@@ -47,19 +47,19 @@
     z-index: 2;
 
     a {
-        color: $umn-light-grey;
+        color: $umn-light-grey-background;
         font-family: 'Raleway', sans-serif;
         font-size: 14px;
         text-decoration: none;
 
         &:hover {
-            color: $umn-light-grey;
+            color: $umn-light-grey-background;
             text-decoration: underline;
         }
 
         &:active,
         &:visited {
-            color: $umn-light-grey;
+            color: $umn-light-grey-background;
             text-decoration: none;
         }
     }
@@ -118,7 +118,7 @@
     background-color: $base-white;
     border: 0;
     border-radius: 0;
-    color: $umn-dark-grey;
+    color: $umn-dark-grey-foreground;
     display: inline;
     font-size: .85em;
     height: 18px;
@@ -145,7 +145,7 @@
 #umnfoot {
     background-color: $base-white;
     clear: both;
-    color: $umn-charcoal;
+    color: $umn-dark-grey-foreground;
     display: block;
     font-size: .8em;
     margin-top: 3em;

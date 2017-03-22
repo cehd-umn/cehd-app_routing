@@ -25,6 +25,31 @@ img {
     }
 }
 
+.emphasis {
+    background-color: $cehd-tertiary-gold;
+    padding: 2em;
+
+    &.subtle {
+        background-color: $cehd-light-grey;
+
+        .button {
+            border-color: $base-white;
+        }
+    }
+
+    &.cool {
+        background-color: $umn-light-blue-background;
+    }
+}
+
+.outer-bg-right {
+    background: linear-gradient(90deg, $base-white 80%, $umn-light-blue-background 20%);
+}
+
+.inner-bg-right {
+    background: linear-gradient(90deg, $base-white 14.69%, $umn-light-blue-background 14.69%);
+}
+
 @for $margin from 1 through 4 {
     .margin-top-#{ $margin } {
         margin-top: #{ $margin }em;
@@ -97,6 +122,7 @@ img {
 .twothird,
 .twothirds {
     clear: none;
+    min-height: 1px;
 }
 
 .whole {
@@ -262,7 +288,7 @@ a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             @if $pseudo-class != hover {
                 &:#{$pseudo-class} {
-                    color: $umn-charcoal;
+                    color: $umn-dark-grey-foreground;
                 }
             }
         }
@@ -318,7 +344,7 @@ footer {
     a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
-                color: $umn-charcoal;
+                color: $umn-dark-grey-foreground;
             }
         }
     }
@@ -347,13 +373,6 @@ footer {
 /// they're defined based on where things break in the *design*.
 ///
 /// @todo better organize these media breakpoints
-@media all and (min-width: 321px) {
-    // .nav-container {
-    //     position: absolute;
-    //     top: 75px;
-    // }
-}
-
 @media all and (max-width: 620px) {
     .wordmark-svg {
         float: left;

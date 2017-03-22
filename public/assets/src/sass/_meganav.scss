@@ -9,8 +9,8 @@
 }
 
 .nav-container {
-    padding-left: 0;
-    padding-right: 0;
+    overflow: hidden;
+    padding: 0 0 2em;
 
     &.nav-inline-container {
         padding-right: 0;
@@ -25,6 +25,7 @@ nav {
     a {
         color: $base-charcoal;
         display: block;
+        font-family: Raleway, sans-serif;
         text-decoration: none;
 
         &:visited {
@@ -151,7 +152,9 @@ nav {
 }
 
 .meganav-container {
+    box-shadow: 3px 3px 2px 0 $box-shadow-rgba;
     margin-top: 1em;
+    padding-bottom: 1em;
     z-index: 1000;
 }
 

@@ -435,6 +435,62 @@ kept forgetting which was correct.) --&gt;
 </div>
 <div class="row">
     <div class="container">
+        <h2>Blue backgrounds</h2>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code>
+&lt;div class=&quot;row emphasis cool&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with blue background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row emphasis cool margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with blue background</p>
+        </div>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code>
+&lt;div class=&quot;row outer-bg-right&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;inner-bg-right emphasis cool&quot;&gt;
+            &lt;div class=&quot;third&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;twothird&quot;&gt;A two-third column with a 80% width blue background&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row outer-bg-right margin-top-1">
+    <div class="container">
+        <div class="inner-bg-right emphasis cool">
+            <div class="third"></div>
+            <div class="twothird">A two-third column with a 80% width blue background</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
         <div class="half feature margin-top-3">
             <h2 class="toc">12-column Grid</h2>
             <p>Some times you may need more granular control over column widths. There
@@ -635,15 +691,15 @@ kept forgetting which was correct.) --&gt;
         <div class="twothirds feature margin-top-3">
             <h2 class="toc">Other Styles</h2>
 
-            <h2>Centering Text</h2>
+            <h3>Centering Text</h3>
             <pre><code>&lt;h3 class=&quot;text-center&quot;&gt;This heading will be centered&lt;/h3&gt;</code></pre>
             <h3 class="text-center">This heading will be centered</h3>
 
-            <h2>Fancy Centered Button With Hover Effect</h2>
+            <h3>Fancy Centered Button With Hover Effect</h3>
             <pre><code>&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
             <p class="text-center"><a href="" class="button center">How to apply</a></p>
 
-            <h2>An image with caption</h2>
+            <h3>An image with caption</h3>
             <p>This uses the <samp>figure</samp> and <samp>figcaption</samp>
             elements.</p>
             <pre><code>
@@ -660,7 +716,7 @@ kept forgetting which was correct.) --&gt;
             </div>
 
             <hr>
-            <h2 class="margin-top-2">Aligning the top of a heading with an image</h2>
+            <h3 class="margin-top-2">Aligning the top of a heading with an image</h3>
             <div>
                 <div class="half">
                     <img src="{{ config.asset_base }}/dist/images/Research/Tayler_Loiselle_headshot.jpg" alt="Tayler Loiselle headshot.">
@@ -681,7 +737,7 @@ kept forgetting which was correct.) --&gt;
     from a heading so it aligns with the top of an image.&lt;/p&gt;
 &lt;/div&gt;
         </code></pre>
-        <h2>Adding top margin</h2>
+        <h3>Adding top margin</h3>
         <div class="span-12">
                 <pre><code>
 &lt;div&gt;
@@ -724,7 +780,7 @@ kept forgetting which was correct.) --&gt;
             </div>
 
             <div class="span-12">
-                <h2>Smaller text</h2>
+                <h3>Smaller text</h3>
                 <p>Use the <samp>&lt;small&gt;</samp> element.</p>
 
                 <pre><code>
@@ -752,7 +808,7 @@ billions.&lt;/small&gt;&lt;/p&gt;
             billions upon billions upon billions upon billions upon
             billions.</small></p>
 
-            <h2>Sub headings</h2>
+            <h3>Sub headings</h3>
 
             <div class="span-12">
                 <pre><code>
@@ -771,20 +827,20 @@ billions.&lt;/small&gt;&lt;/p&gt;
             </div>
             <div class="span-12 margin-top-1">
                 <pre><code>
-&lt;h2&gt;Heading 2 &lt;small class=&quot;clear&quot;&gt;smaller text&lt;/small&gt;&lt;/h2&gt;
-&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h3&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
-&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h4&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
-&lt;h2&gt;Heading 2 &lt;small class=&quot;clear h6&quot;&gt;even smaller text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear&quot;&gt;smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h3&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h4&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h6&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
                 </code></pre>
             </div>
             <div class="span-12 margin-top-1">
-                <h2>Heading 2 <small class="clear">smaller text</small></h2>
-                <h2>Heading 2 <small class="clear h3">even smaller text</small></h2>
-                <h2>Heading 2 <small class="clear h4">even smaller text</small></h2>
-                <h2>Heading 2 <small class="clear h6">even smaller text</small></h2>
+                <h3>Heading 2 <small class="clear">smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h3">even smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h4">even smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h6">even smaller text</small></h3>
             </div>
 
-            <h2>Hiding images for mobile</h2>
+            <h3>Hiding images for mobile</h3>
             <p>Use the <samp>.mobile-hide</samp> class.</p>
             <div class="span-12 margin-top-1">
                 <pre><code>
@@ -793,6 +849,19 @@ billions.&lt;/small&gt;&lt;/p&gt;
             </div>
             <div class="span-12 margin-top-1">
                 <img src="{{ config.asset_base }}/dist/images/Research/Tayler_Loiselle_headshot.jpg" class="mobile-hide" alt="Tayler Loiselle headshot.">
+            </div>
+
+            <div class="span-12 margin-top-1">
+                <h3>Red text for important information</h3>
+                <p>Use the <samp>.text-notice</samp> class.</p>
+                <div class="span-12 margin-top-1">
+                    <pre><code>
+    &lt;p class=&quot;text-notice&quot;&gt;Here is some text that is important.&lt;/p&gt;
+                    </code></pre>
+                </div>
+                <div class="span-12 margin-top-1">
+                    <p class="text-notice">Here is some text that is important.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -809,7 +878,7 @@ billions.&lt;/small&gt;&lt;/p&gt;
         $main_headings.each(function(idx, element) {
             var nav_obj = {};
             var $heading = $(this);
-            var $subheadings = $heading.siblings('h2').filter(function() {
+            var $subheadings = $heading.siblings('h3').filter(function() {
                 return !$(this).hasClass('no-toc');
             });
             var heading_id = 'toc-' + idx;
