@@ -1,5 +1,9 @@
 .isotope-container {
-    //display: flex;
+    &:hover {
+        .isotope-item:not(:hover) {
+            opacity: .5;
+        }
+    }
 }
 
 .isotope-item,
@@ -8,12 +12,10 @@
 }
 
 .isotope-item {
-    // border: 1px solid $base-light-grey;
-    // display: flex;
     padding: 1em;
 
     &:hover {
-        background-color: $base-light-grey;
+        background-color: $umn-light-gold;
     }
 }
 

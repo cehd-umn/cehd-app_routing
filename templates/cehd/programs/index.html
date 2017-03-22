@@ -81,21 +81,11 @@
                       <p class="description">{{ program.description }}</p>
                     {% endif %}
                     {% if program.links %}
-                    <h3 class="h6">Links</h3>
-                    <ul>
+                    <ul class="no-bullet">
                         {% for link in program.links %}
                         <li><a href="{{ link.href }}">{{ link.text }}</a></li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
-                    {% if program.categories %}
-                    <h3 class="h6">Categories</h3>
-                        <ul>
-                        {% for category in program.categories %}
-                          {#- todo add degree info here and to search -#}
-                          <li class="category-item">{{ category }}</li>
-                        {% endfor %}
-                        </ul>
                     {% endif %}
                 </div><!-- / isotope-item -->
             {% endfor %}
