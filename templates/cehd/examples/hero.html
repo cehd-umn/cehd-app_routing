@@ -1,13 +1,52 @@
 {% extends "cehd/layout/documentation.html" %}
 {% set page_title = "CEHD Code Examples: Hero Image" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block heading_1 %}{{ page_title }}{% endblock %}
 {% block hero_image %}
-<img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>A gift from the Bentson Foundation supports<br>
+                future teachers in two pathbreaking residency programs</p>
+        </div>
+        <div class="third">
+            <p><a href="" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
 {% endblock %}
 {% block main_content %}
-<div class="row">
+<div class="row has-hero-image">
     <div class="container">
+        <h1>{{ page_title }}</h1>
+        <p>Below is all the template and HTML code to create this page.</p>
+        <pre><code>{% raw %}
+{% extends &quot;cehd/layout/base.html&quot; %}
+{% set page_title = &quot;CEHD Code Examples: Hero Image&quot; %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+&lt;div class=&quot;hero-image-container&quot;&gt;
+    &lt;img class=&quot;hero-image&quot; src=&quot;/assets/dist/images/giving/hero.jpg&quot; alt=&quot;A man in a classroom where he does his residency.&quot;&gt;
+    &lt;div class=&quot;hero-overlay&quot;&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;A gift from the Bentson Foundation supports&lt;br&gt;
+                future teachers in two pathbreaking residency programs&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;&lt;a href=&quot;&quot; class=&quot;to-upper button clear&quot;&gt;Read more&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endblock %}
+{% block main_content %}
+&lt;div class=&quot;row has-hero-image&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;{{ page_title }}&lt;/h1&gt;
+        &lt;p&gt;Below is all the template and HTML code to create this page.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endblock %}{% endraw %}
+        </code></pre>
     </div>
 </div>
 {% endblock %}

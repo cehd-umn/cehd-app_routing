@@ -291,6 +291,23 @@ img {
             color: $base-white;
         }
     }
+
+    &.clear {
+        background: transparent;
+        border: 1px solid $base-white;
+        color: $base-white;
+        padding: 1em;
+        text-shadow: none;
+
+        &:focus,
+        &:hover {
+            background: transparent;
+            border: 1px solid $base-white;
+            text-decoration: none;
+        }
+
+    }
+
 }
 
 a {
@@ -301,6 +318,10 @@ a {
                     color: $umn-dark-grey-foreground;
                 }
             }
+        }
+
+        &.clear {
+            color: $base-white;
         }
 
         &:hover {
