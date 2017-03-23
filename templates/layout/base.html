@@ -35,14 +35,16 @@
                     </div><!-- /#umnh-searchbox -->
                 </div>
             </div><!-- /#umnheader -->
-            <div class="container">
-                <div class="hero-image-container">{% block hero_image %}{% endblock %}</div>
-                <div class="section-header-container" id="wordmark-wrapper">
-                    <div class="wordmark-container-right wordmark-container half">
-                        <a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
-                    </div>
-                    <div class="wordmark-container-left wordmark-container half">
-                        {% block section_wordmark %}{% endblock %}
+            {% block hero_image %}{% endblock %}
+            <div class="section-header-container">
+                <div class="container">
+                    <div id="wordmark-wrapper">
+                        <div class="wordmark-container-right wordmark-container half">
+                            <a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
+                        </div>
+                        <div class="wordmark-container-left wordmark-container half">
+                            {% block section_wordmark %}{% endblock %}
+                        </div>
                     </div>
                 </div>
             </div>

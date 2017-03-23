@@ -110,8 +110,6 @@ nav {
 
         &:hover {
             a {
-                // background-color: #def2ff;
-
                 border-top: 5px solid #def2ff;
                 color: #004978;
                 text-decoration: none;
@@ -133,8 +131,8 @@ nav {
 
 .meganav-container {
     box-shadow: 3px 3px 2px 0 $box-shadow-rgba;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding-bottom: .8em;
+    padding-top: .8em;
     z-index: 1000;
 }
 
