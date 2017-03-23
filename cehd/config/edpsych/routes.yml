@@ -124,7 +124,7 @@
         section: current
 /edpsych/current/special-ed/:
     publish: true
-    template: edpsych/current/qme/index.html
+    template: edpsych/current/special-ed/index.html
     template_data:
         meta_description: "Find the resources you need to complete your degree in special education."
         section: current
