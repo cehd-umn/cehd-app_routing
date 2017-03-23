@@ -5,6 +5,7 @@
 {% block bottom_js %}<script src="{{ config.js_base }}/cehd.min.js"></script>{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+{# todo: add these font-face styles to inline.scss #}
 <style>
 @font-face {
   font-family: 'Lato';
@@ -57,6 +58,7 @@
 {% endblock %}
 {% block nav %}
 <div class="meganav-container row">
+    <div class="hero-image-container">{% block hero_image %}{% endblock %}</div>
     <nav class="container">
         <ul class="nav navbar-nav">
           {%- for top_level_item in nav_items -%}

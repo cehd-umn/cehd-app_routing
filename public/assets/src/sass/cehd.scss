@@ -135,14 +135,13 @@ blockquote {
     }
 }
 
-.fill-yellow {
-    fill: $umn-gold;
+.hero-image-container {
+    position: absolute;
+    width: 100px;
+}
 
-    &.dark {
-        fill: $umn-dark-gold;
-    }
-
-    &.light {
-        fill: $umn-light-gold;
-    }
+.hero-image {
+    display: block;
+    width: 100%;
+    z-index: 0;
 }

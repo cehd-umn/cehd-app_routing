@@ -776,6 +776,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/hero/:
+  publish: false
+  template: cehd/examples/hero.html
+  template_data:
+    meta_description: null
+    section: null
 /examples/macros/:
   publish: false
   template: cehd/examples/macros.html
