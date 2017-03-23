@@ -115,7 +115,6 @@ blockquote {
 
         &::after,
         &::before {
-            // display: block;
             font-family: Macondo, sans-serif;
             font-size: 80px;
             line-height: .1em;
@@ -133,5 +132,17 @@ blockquote {
             left: -.5em;
             top: .35em;
         }
+    }
+}
+
+.fill-yellow {
+    fill: $umn-gold;
+
+    &.dark {
+        fill: $umn-dark-gold;
+    }
+
+    &.light {
+        fill: $umn-light-gold;
     }
 }
