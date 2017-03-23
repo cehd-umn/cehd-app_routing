@@ -37,36 +37,6 @@
 ####################################
 ## This system is case-sensitive! ##
 ####################################
-
-# These routes are going to conflict once I merge this file. Put these in their
-# alphabetical spot after merging.
-#
-# Examples section (note: keep publish "false" for these")
-/examples/:
-  publish: false
-  template: cehd/examples/index.html
-  template_data:
-    meta_description: null
-    section: null
-/examples/divider/:
-  publish: false
-  template: cehd/examples/divider.html
-  template_data:
-    meta_description: null
-    section: null
-/examples/macros/:
-  publish: false
-  template: cehd/examples/macros.html
-  template_data:
-    meta_description: null
-    section: null
-/examples/routes/:
-  publish: false
-  template: cehd/examples/routes.html
-  template_data:
-    meta_description: null
-    section: null
-
 /:
   template: cehd/index.html
   publish: true
@@ -792,6 +762,33 @@
   template: cehd/direct/index.html
   template_data:
     - section: direct
+
+# Examples section (note: keep publish "false" for these")
+/examples/:
+  publish: false
+  template: cehd/examples/index.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/divider/:
+  publish: false
+  template: cehd/examples/divider.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/macros/:
+  publish: false
+  template: cehd/examples/macros.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/routes/:
+  publish: false
+  template: cehd/examples/routes.html
+  template_data:
+    meta_description: null
+    section: null
+
 /reads/:
   publish: true
   template: cehd/reads/index.html
