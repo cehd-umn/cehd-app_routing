@@ -1,13 +1,22 @@
 {% extends "cehd/layout/documentation.html" %}
 {% set page_title = "CEHD Code Examples: Hero Image" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block heading_1 %}{{ page_title }}{% endblock %}
 {% block hero_image %}
 <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
+<div class="hero-overlay">
+    <div class="twothird">
+        <p>A gift from the Bentson Foundation supports<br>
+            future teachers in two pathbreaking residency programs</p>
+    </div>
+    <div class="third">
+        <p><a href="" class="to-upper button clear">Read more</a></p>
+    </div>
+</div>
 {% endblock %}
 {% block main_content %}
-<div class="row">
+<div class="row has-hero-image">
     <div class="container">
+        <h1>{{ page_title }}</h1>
     </div>
 </div>
 {% endblock %}

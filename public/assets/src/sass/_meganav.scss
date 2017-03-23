@@ -59,13 +59,6 @@ nav {
         }
     }
 
-    // .nav,
-    // .nav-inline {
-    //     li {
-    //         // text-transform: uppercase;
-    //     }
-    // }
-
     .nav {
 
         li {
@@ -134,27 +127,14 @@ nav {
     }
 }
 
-// Override the width of these three sections by 1px to make the nav stretch the full width
-// $section-map: (
-//     diversity-inclusion: 192,
-//     news-events: 192,
-//     alumni: 192,
-// );
-//
-// @each $section, $width in $section-map {
-//     #top-level-#{$section} {
-//         width: #{$width}px;
-//     }
-// }
-
 .navbar {
     padding: 0;
 }
 
 .meganav-container {
     box-shadow: 3px 3px 2px 0 $box-shadow-rgba;
-    margin-top: 1em;
     padding-bottom: 1em;
+    padding-top: 1em;
     z-index: 1000;
 }
 
