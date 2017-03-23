@@ -492,6 +492,276 @@
   template: cehd/alumni/rising/2016/wilkinson.html
   template_data:
     - section: alumni
+/career/:
+  publish: true
+  template: cehd/career/index.html
+  template_data:
+    - section: career
+/career/alumni/:
+  publish: true
+  template: cehd/career/alumni.html
+  template_data:
+    - section: career
+/career/assessment/:
+  publish: true
+  template: cehd/career/assessment.html
+  template_data:
+    - section: career
+/career/explore/:
+  publish: true
+  template: cehd/career/explore.html
+  template_data:
+    - section: career
+/career/hours/:
+  publish: true
+  template: cehd/career/hours.html
+  template_data:
+    - section: career
+/career/research/:
+  publish: true
+  template: cehd/career/research.html
+  template_data:
+    - section: career
+/career/staff/:
+  publish: true
+  template: cehd/career/staff.html
+  template_data:
+    - section: career
+/career/volunteer/:
+  publish: true
+  template: cehd/career/volunteer.html
+  template_data:
+    - section: career
+/career/workshops/:
+  publish: true
+  template: cehd/career/workshops.html
+  template_data:
+    - section: career
+/career/degrees/:
+  publish: true
+  template: cehd/career/degrees/index.html
+  template_data:
+    - section: career
+/career/degrees/majors/:
+  publish: true
+  template: cehd/career/degrees/majors/index.html
+  template_data:
+    - section: career
+/career/degrees/majors/business-marketing-ed/:
+  publish: true
+  template: cehd/career/degrees/majors/business-marketing-ed.html
+  template_data:
+    - section: career
+/career/degrees/majors/early-childhood-ed/:
+  publish: true
+  template: cehd/career/degrees/majors/early-childhood-ed.html
+  template_data:
+    - section: career
+/career/degrees/majors/elementary-ed/:
+  publish: true
+  template: cehd/career/degrees/majors/elementary-ed.html
+  template_data:
+    - section: career
+/career/degrees/majors/family-social-science/:
+  publish: true
+  template: cehd/career/degrees/majors/family-social-science.html
+  template_data:
+    - section: career
+/career/degrees/majors/graduates-careers/:
+  publish: true
+  template: cehd/career/degrees/majors/graduates-careers.html
+  template_data:
+    - section: career
+/career/degrees/majors/human-resource-dev/:
+  publish: true
+  template: cehd/career/degrees/majors/human-resource-dev.html
+  template_data:
+    - section: career
+/career/degrees/majors/kinesiology/:
+  publish: true
+  template: cehd/career/degrees/majors/kinesiology.html
+  template_data:
+    - section: career
+/career/degrees/majors/rec-park-leisure/:
+  publish: true
+  template: cehd/career/degrees/majors/rec-park-leisure.html
+  template_data:
+    - section: career
+/career/degrees/majors/sped/:
+  publish: true
+  template: cehd/career/degrees/majors/sped.html
+  template_data:
+    - section: career
+/career/degrees/majors/sport-mgmt/:
+  publish: true
+  template: cehd/career/degrees/majors/sport-mgmt.html
+  template_data:
+    - section: career
+/career/degrees/majors/youth-studies/:
+  publish: true
+  template: cehd/career/degrees/majors/youth-studies.html
+  template_data:
+    - section: career
+/career/employers/:
+  publish: true
+  template: cehd/career/employers/index.html
+  template_data:
+    - section: career
+/career/employers/tips/:
+  publish: true
+  template: cehd/career/employers/tips.html
+  template_data:
+    - section: career
+/career/events/:
+  publish: true
+  template: cehd/career/events/index.html
+  template_data:
+    - section: career
+/career/events/career-fairs/:
+  publish: true
+  template: cehd/career/events/career-fairs.html
+  template_data:
+    - section: career
+/career/grad-school/:
+  publish: true
+  template: cehd/career/grad-school/index.html
+  template_data:
+    - section: career
+/career/grad-school/prepare/:
+  publish: true
+  template: cehd/career/grad-school/prepare.html
+  template_data:
+    - section: career
+/career/interships/:
+  publish: true
+  template: cehd/career/interships/index.html
+  template_data:
+    - section: career
+/career/interships/credit-funding/:
+  publish: true
+  template: cehd/career/interships/credit-funding.html
+  template_data:
+    - section: career
+/career/interview/:
+  publish: true
+  template: cehd/career/interview/index.html
+  template_data:
+    - section: career
+/career/interview/questions/:
+  publish: true
+  template: cehd/career/interview/questions.html
+  template_data:
+    - section: career
+/career/networking/:
+  publish: true
+  template: cehd/career/networking/index.html
+  template_data:
+    - section: career
+/career/networking/informational/:
+  publish: true
+  template: cehd/career/networking/informational.html
+  template_data:
+    - section: career
+/career/networking/opportunities/:
+  publish: true
+  template: cehd/career/networking/opportunities.html
+  template_data:
+    - section: career
+/career/networking/social/:
+  publish: true
+  template: cehd/career/networking/social.html
+  template_data:
+    - section: career
+/career/resumes/:
+  publish: true
+  template: cehd/career/resumes/index.html
+  template_data:
+    - section: career
+/career/resumes/cover-letters/:
+  publish: true
+  template: cehd/career/resumes/cover-letters.html
+  template_data:
+    - section: career
+/career/resumes/cv/:
+  publish: true
+  template: cehd/career/resumes/cv.html
+  template_data:
+    - section: career
+/career/resumes/negotiation/:
+  publish: true
+  template: cehd/career/resumes/negotiation.html
+  template_data:
+    - section: career
+/career/resumes/portfolios/:
+  publish: true
+  template: cehd/career/resumes/portfolios.html
+  template_data:
+    - section: career
+/career/search/:
+  publish: true
+  template: cehd/career/search/index.html
+  template_data:
+    - section: career
+/career/search/strategies/:
+  publish: true
+  template: cehd/career/search/strategies.html
+  template_data:
+    - section: career
+/career/teacher/:
+  publish: true
+  template: cehd/career/teacher/index.html
+  template_data:
+    - section: career
+/career/teacher/alternatives/:
+  publish: true
+  template: cehd/career/teacher/alternatives.html
+  template_data:
+    - section: career
+/career/teacher/career-fair/:
+  publish: true
+  template: cehd/career/teacher/career-fair.html
+  template_data:
+    - section: career
+/career/teacher/international/:
+  publish: true
+  template: cehd/career/teacher/international.html
+  template_data:
+    - section: career
+/career/teacher/interviews/:
+  publish: true
+  template: cehd/career/teacher/interviews.html
+  template_data:
+    - section: career
+/career/teacher/marketability/:
+  publish: true
+  template: cehd/career/teacher/marketability.html
+  template_data:
+    - section: career
+/career/teacher/out-of-state/:
+  publish: true
+  template: cehd/career/teacher/out-of-state.html
+  template_data:
+    - section: career
+/career/teacher/sites/:
+  publish: true
+  template: cehd/career/teacher/sites.html
+  template_data:
+    - section: career
+/career/teacher/success/:
+  publish: true
+  template: cehd/career/teacher/success.html
+  template_data:
+    - section: career
+/career/teacher/teach-minn/:
+  publish: true
+  template: cehd/career/teacher/teach-minn.html
+  template_data:
+    - section: career
+/direct/:
+  publish: true
+  template: cehd/direct/index.html
+  template_data:
+    - section: direct
 /reads/:
   publish: true
   template: cehd/reads/index.html
@@ -1432,9 +1702,9 @@
   template: cehd/undergraduate/faculty.html
   template_data:
     - section: undergraduate
-/undergraduate/freshman/:
+/undergraduate/freshmen/:
   publish: true
-  template: cehd/undergraduate/freshman.html
+  template: cehd/undergraduate/freshmen.html
   template_data:
     - section: undergraduate
 /undergraduate/fye/:

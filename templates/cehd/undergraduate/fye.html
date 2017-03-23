@@ -1,11 +1,39 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "First Year Experience" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>First Year Experience (FYE)</h1>
+		<p>The First Year Experience is a unique curriculum that all freshmen in CEHD are a part of, designed to build community and help you transition from high school into college. FYE’s rigorous and innovative curriculum includes two semesters:  a First- Year Inquiry course in the fall and Learning Communities in the spring. FYE courses help you reach your four-year graduation goals, support the completion of U of M’s liberal education requirements, and meet prerequisites for the majors in CEHD. <br />
+	    </p>
+		<h2>Highlights:</h2>
+		  <ul>
+  		  <li>Small class sizes </li>
+  		  <li>Adviser appointments embedded into coursework </li>
+  		  <li> One-on-one writing conferences</li>
+  		  <li>Collaborative iPad projects</li>
+  		  <li>Service learning and community engagement</li>
+  		  <li>Faculty who research best practices in teaching and learning </li>
+  		  <li>Multiple perspectives and subjects<br /></li>
+      </ul>
+    <h2>First Year Inquiry (FYI)</h2>
+	    <p>In the fall semester, you’ll enroll in the First-Year Inquiry course, a discussion-based class with a seminar atmosphere focused on developing your reading, critical thinking, and academic writing skills.</p>
+		    <p>The FYI class addresses the shared inquiry:  “Can one person make a difference?” by discussing a common book. The fall 2016 book is <em>Just Mercy</em> by Bryan Stevenson, and you will examine the book through additional readings, writings, and a collaborative iPad project. The book’s author also visits campus in the fall for a public presentation and discussion. Find out more on the <a href="http://www.cehd.umn.edu/reads/">CEHD Reads website</a>. </p>
+      <h3>FYI Faculty</h3>
+      <!--#include virtual="/attributes/rssParser/Functions.asp"-->
+      <%
+        GetRSSFeed "http://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?tg=310","/attributes/XSLT/Directory-FYE.xslt","My Error Message"
+      %>
+    <h2>Learning Communities (LC)</h2>
+	     <p>In the spring semester, you’ll enroll in a learning community, two separate classes that are linked by shared themes. You will create connections in your academics and work closely with fellow students and faculty. Learning communities are also designed to help you transition into your second year and major. </p>
+    <h3>LC Faculty</h3>
+    <%
+      GetRSSFeed "http://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?tg=311","/attributes/XSLT/Directory-FYE.xslt","My Error Message"
+    %>
+
+    <h2>President's Emerging Scholars </h2>
+	     <p>CEHD students in the <a href="http://prezscholars.umn.edu/">President's Emerging Scholars program</a>, including students selected for the <a href="http://www.cehd.umn.edu/trio/">TRIO Student Support Services program</a>, participate in CEHD's first-year curriculum.</p><br />
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

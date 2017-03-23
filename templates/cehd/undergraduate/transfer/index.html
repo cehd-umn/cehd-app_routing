@@ -1,11 +1,45 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Undergraduate Transfer Admissions" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>Transfer Admissions </h1>
+
+    <div class="rplain xc-blue">
+    <h2>Information Sessions</h2>
+  		<p class="last"><strong><a href="/undergraduate/info-sessions/">Sign up for  an information session </a></strong>to  learn more about our majors, understand the application
+  		process, and have your questions answered. </p>
+          </div>
+
+    <h2>Application Deadlines</h2>
+          <p><strong>Spring semester deadline - Priority: October 1 / Final: December 1 </strong> </p>
+          <p><strong>Fall semester deadline - Priority: March 1 / </strong> <strong>Final: June 1</strong>        </p>
+          <p><strong>Majors which will be full with applications complete by the Mar 1 deadline:</strong></p>
+        <ul>
+          <li>Business and Marketing Education</li>
+          <li>Elementary Education Foundations</li>
+          <li>Kinesiology</li>
+        </ul>
+          <p>Applications must be submitted by these&nbsp;deadlines to be given full
+  		consideration for admission. CEHD is committed to providing a comfortable, inclusive, and respectful environment for all members of our communities.  If you need accommodations, in the admission process, please contact CEHD Student Services, <a href="mailto:cehdtrfr@umn.edu">cehdtrfr@umn.edu</a> or 612-625-3339.
+  		</p>
+    <h2>Drop-in hours</h2>
+  		<p>Stop by our drop-in hours to get your questions answered. Check
+  		in at the front desk in 360 Education Sciences Building.</p>
+
+    <div id="DropInFeed">
+      [NEEDS A FEED]
+  		<script type="text/javascript">
+  			getRssFeed("DropInFeed","https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?code=Drop-in","/attributes/XSLT/InfoSession-List-Dropins-2015-06-18.xslt","Sorry, the Info-Session feed is temporarily down.")
+  		</script></div>
+    <h2>Contact</h2>
+  		<p><a href="Beck/default.html">Sheri Beck</a>, Prospective
+  		Transfer Student Adviser &amp; Transfer Admissions Coordinator<br />
+  		CEHD Student Services <br />
+  		To schedule an appointment, call 612-625-3339; current U of M students may <a href="http://sheribeck.appointments.umn.edu/ ">make an appointment online. </a><br />
+  Email: <a href="mailto:sbeck@umn.edu"> sbeck@umn.edu</a></p>
+
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

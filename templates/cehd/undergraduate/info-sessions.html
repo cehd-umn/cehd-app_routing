@@ -1,0 +1,27 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Transfer Information Sessions" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Information Sessions For Transfer Admissions</h1>
+    <p>Please come to a transfer information session!</p>
+    <ul>
+      <li>Explore admission requirements for CEHD majors. </li>
+      <li>Find out what the admissions team looks for in your application. </li>
+      <li>Learn about the steps to submitting your application. </li>
+      <li>Discover resources for course planning. </li>
+      <li>Get your questions answered.</li>
+      </ul>
+    <h2>Sign up for an upcoming information session</h2>
+    [NEED A FEED]
+    <div id="InfoFeed-UG">
+    <!-- If you want the tabs back just switch the XSLT to: InfoSession-ListAll-Tabs.xslt
+      2011-04-20 JFA -->
+    <script type="text/javascript">
+      getRssFeed("InfoFeed-UG","https://apps.cehd.umn.edu/Students/Infosession/Admin/RSSFeed.aspx?code=TA-NonEd","/attributes/XSLT/InfoSession-ListHack-2011-04-20.xslt","Sorry, the Info-Session feed is temporarily down.")
+    </script>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
