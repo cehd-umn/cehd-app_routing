@@ -1,11 +1,26 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>Career Services Events</h1>
+    <p>Prepare for career and employer events with these <a href="career-fairs.html">helpful tips</a>. </p>
+    		<div id="CalEventList">
+    		<script type="text/javascript">
+    			getRssFeed("CalEventList","http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&r=3&q=6&t=231","/attributes/XSLT/Events-CareerAll.xslt","My Error Message")
+    		</script>
+    		</div>
+    		<!-- #EndEditable --></div>
+    		<div id="features"><!-- #BeginEditable "Features" -->
+    	<div id="news" class="plain xc-green"><h2>News</h2>
+    <div id="CareerNewsFeed">
+    		<script type="text/javascript">
+    			getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message")
+    		</script>
+    		 </div>
+
+    		</div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
