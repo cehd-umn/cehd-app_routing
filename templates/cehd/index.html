@@ -90,42 +90,46 @@
 <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
 <script src="/assets/dist/js/lib/videojs-background.min.js"></script>
 <script>
-    var player = videojs('bg-video', {loop: false});
+    var videojs_options = {
+        loop: false,
+        preload: "auto"
+    };
+    var player = videojs("bg-video", videojs_options);
     player.ready(function() {
         var idx = 0;
         var playlist = [
             {
                 sources: [
                     {
-                        src: '/assets/dist/video/home-01.mp4',
-                        type: 'video/mp4'
+                        src: "/assets/dist/video/home-01.mp4",
+                        type: "video/mp4"
                     }
                 ],
-                poster: 'http://media.w3.org/2010/05/sintel/poster.png'
+                poster: "http://media.w3.org/2010/05/sintel/poster.png"
             },
             {
                 sources: [
                     {
-                        src: '/assets/dist/video/home-02.mp4',
-                        type: 'video/mp4'
+                        src: "/assets/dist/video/home-02.mp4",
+                        type: "video/mp4"
                     }
                 ],
-                poster: 'http://media.w3.org/2010/05/bunny/poster.png'
+                poster: "http://media.w3.org/2010/05/bunny/poster.png"
             },
             {
                 sources: [
                     {
-                        src: '/assets/dist/video/home-03.mp4',
-                        type: 'video/mp4'
+                        src: "/assets/dist/video/home-03.mp4",
+                        type: "video/mp4"
                     }
                 ],
-                poster: 'http://www.videojs.com/img/poster.jpg'
+                poster: "http://www.videojs.com/img/poster.jpg"
             },
             {
                 sources: [
                     {
-                        src: '/assets/dist/video/home-04.mp4',
-                        type: 'video/mp4'
+                        src: "/assets/dist/video/home-04.mp4",
+                        type: "video/mp4"
                     }
                 ]
             }
@@ -134,7 +138,7 @@
         // Activate background video plugin
         this.Background();
 
-        this.on('ended', function() {
+        this.on("ended", function() {
 
             // Update the index
             if (idx < 3) {
