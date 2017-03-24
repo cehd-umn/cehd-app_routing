@@ -21,7 +21,7 @@
             <h3>Step One: Include the macro</h3>
 
             <p>You have to include the macro to be able to use it. Macros are
-            organized in <code>app_routing/templates/edpsych/macros</code></p>
+            organized in <code>app_routing/templates/macros</code></p>
 
             <p>Make sure you put it at the top, preferably just after the "extends" declaration at the top:</p>
         </div>
@@ -31,7 +31,7 @@
     <div class="container">
         <pre><code class="twig">{%- raw -%}
 {% extends "edpsych/layout/section.html" %}
-{%- import "edpsych/macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% endraw %}</code></pre>
     </div>
 </div>
