@@ -1,0 +1,32 @@
+{#- This macro does not yet work correctly -#}
+{%- macro start_div(classes="") -%}
+    <div class="{% if classes %}{{ classes }}{% endif %}">
+{%- endmacro -%}
+
+{%- macro end_div() -%}</div>{%- endmacro -%}
+
+{%- macro start_row(extra_classes="") %}{% import _self as row -%}
+    {%- set classes = "row " + extra_classes -%}
+    {{ row.start_div(classes) }}
+{%- endmacro -%}
+
+{%- macro start_container(extra_classes="") %}{% import _self as container -%}
+    {%- set classes = "container " + extra_classes -%}
+    {{ container.start_div(classes) }}
+{%- endmacro -%}
+
+{%- macro end_container() %}{% import _self as container -%}
+    {{ container.end_div() }}
+{%- endmacro -%}
+
+{%- macro end_row() %}{% import _self as row -%}
+    {{ row.end_div() }}
+{%- endmacro -%}
+
+{%- macro start_row_and_container(row_classes="", container_classes="") -%}{% import _self as container -%}
+    {{ container.start_row(row_classes) }}{{ container.start_container(container_classes) }}
+{%- endmacro -%}
+
+{%- macro end_row_and_container() %}{% import _self as row -%}
+    {{ row.end_div() }}{{ row.end_div() }}
+{%- endmacro -%}
