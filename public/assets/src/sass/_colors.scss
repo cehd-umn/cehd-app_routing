@@ -13,6 +13,7 @@ $base-dark-blue: #2d6987;
 $base-red: #f00;
 $base-dark-red: #7a0019;
 $base-green: #008000;
+$base-translucent-white: rgba(255, 255, 255, .7);
 
 // UMN Colors
 // maroons
@@ -80,7 +81,7 @@ $link-base-visited: $link-base;
 
 // nav
 $nav-background-color: rgba(247, 247, 247, .95);
-$nav-translucent-white: rgba(255, 255, 255, .7);
+$nav-translucent-white: $base-translucent-white;
 $nav-hover-border-top-color: #def2ff;
 $nav-hover-color: #004978;
 $box-shadow-rgba: rgba(0, 0, 0, .15);
@@ -98,3 +99,6 @@ $cehd-hero-image-overlay-rgba: rgba(0, 0, 0, .4);
 $search-primary-blue: rgb(64, 116, 173);
 $search-secondary-blue: rgb(15, 63, 89);
 $search-tertiary-maroon: rgb(122, 0, 25);
+
+// Program Sorter
+$sorter-translucent-white: rgba(255, 255, 255, .9);
