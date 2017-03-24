@@ -156,6 +156,12 @@ img {
 
         &.light {
             font-family: Lato, Verdana, Geneva, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        &.normal {
+            font-family: Lato, Verdana, Geneva, sans-serif;
             font-weight: normal;
         }
 
@@ -191,6 +197,7 @@ img {
 
         &.light {
             font-family: Lato, Verdana, Geneva, sans-serif;
+            font-size: 16px;
             font-weight: normal;
         }
     }

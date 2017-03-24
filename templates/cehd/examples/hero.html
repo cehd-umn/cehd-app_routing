@@ -1,4 +1,5 @@
 {% extends "cehd/layout/documentation.html" %}
+{%- import "macros/row.html" as row -%}
 {% set page_title = "CEHD Code Examples: Hero Image" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block hero_image %}
@@ -47,6 +48,29 @@
 &lt;/div&gt;
 {% endblock %}{% endraw %}
         </code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <p>Note that we have to put the code for the hero image in a
+        <samp>hero_image</samp> block.</p>
+
+        <p>Next, the image should be wrapped in a div with the
+        <samp>hero-image-container</samp> class. This will ensure that it's
+        positioned correctly on the page.</p>
+
+        <p>The overlay text should be wrapped in a div with the
+        <samp>hero-overlay</samp> class. That will position it and give the
+        text the correct color and size.</p>
+
+        <p>Within the <samp>hero-overlay</samp> you can use whichever column
+        classes you wish. In general a <samp>twothird</samp>/<samp>third</samp>
+        combination seems to work well.</p>
+
+        <p>Finally, any <samp>a</samp> tag with <samp>button</samp> and
+        <samp>clear</samp> classes will give the link the proper styles and
+        position. The <samp>to-upper</samp> class is optional. It transforms
+        the text to all uppercase.</p>
     </div>
 </div>
 {% endblock %}
