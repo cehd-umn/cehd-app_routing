@@ -80,15 +80,28 @@ nav {
 }
 
 .dropdown-menu {
+    background: $nav-translucent-white;
+    border: transparent;
+    display: none;
+    left: 0;
+    padding: 10px 2em 20px;
+    position: fixed;
+    top: 162px;
+    width: 100vw;
+
+    ul {
+        display: block;
+
+        &.margin-top {
+            margin-top: 20px;
+        }
+    }
+
     a {
         &:visited {
             color: $base-black;
         }
 
-    }
-
-    ul {
-        display: block;
     }
 }
 
@@ -146,25 +159,6 @@ nav {
         }
     }
 
-}
-
-.dropdown-menu {
-    background: $nav-translucent-white;
-    border: transparent;
-    display: none;
-    left: 0;
-    padding: 10px 2em 20px;
-    position: fixed;
-    top: 170px;
-    width: 100vw;
-    // z-index: 1000;
-
-    ul {
-
-        &.margin-top {
-            margin-top: 20px;
-        }
-    }
 }
 
 .dropdown-toggle {

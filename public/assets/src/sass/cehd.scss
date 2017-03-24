@@ -32,11 +32,15 @@
 }
 
 .category-filter-container {
+    background-color: $sorter-translucent-white;
     max-height: 0;
     overflow: hidden;
+    padding: 0 1em;
+    position: absolute;
     transition-duration: .5s;
     transition-property: max-height;
     transition-timing-function: ease-out;
+    z-index: 1;
 
     &.open {
         max-height: 500px;
@@ -185,6 +189,10 @@ blockquote {
 .row {
     &.has-hero-image {
         margin-top: 400px;
+    }
+
+    &.isotope {
+        z-index: -1;
     }
 }
 
