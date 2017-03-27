@@ -20,7 +20,7 @@ class Job
 
 class Person extends \CEHD\App\XML\XML
 {
-    public $count;
+    // public $count;
 
     public $internetId;
 
@@ -88,12 +88,6 @@ class Person extends \CEHD\App\XML\XML
 
     function __construct($person)
     {
-        //$xml = $this->_xmlStringToObject($xml_string);
-
-        //$person = $xml->person;
-
-        $this->count =               (int) $person->count;
-
         $this->name =                $this->_get($person->name);
 
         $this->internetId =          $this->_get($person->internetId);
@@ -102,7 +96,7 @@ class Person extends \CEHD\App\XML\XML
 
         $this->middleName =          $this->_get($person->middleName);
 
-        $this->lastName =            (string) $person->lastName;
+        $this->lastName =            $this->_get($person->lastName);
 
         $this->nameSuffix =          $this->_get($person->nameSuffix);
 
@@ -234,5 +228,9 @@ class People extends \CEHD\App\XML\XML
         {
             array_push($this->people, new Person($person));
         }
+    }
+
+    public function get_count() {
+        return count($this->people);
     }
 }

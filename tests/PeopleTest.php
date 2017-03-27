@@ -30,7 +30,7 @@ class PeopleTest extends TestCase
 
     public function testCreate()
     {
-        $this->assertEquals(1, $this->people_obj_multiple_presentations->people[0]->count);
+        $this->assertEquals(1, $this->people_obj_multiple_presentations->get_count());
     }
 
     public function testPresentationIsArray()
