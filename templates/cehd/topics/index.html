@@ -5,6 +5,9 @@
 <div class="row">
     <div class="container">
         <h1>Topics</h1>
+        <div class="half feature">
+            <input type="text" id="full-text-search-input" placeholder="Search here or choose a category below">
+        </div>
         <div class="button-group filter-button-group">
             <div class="half feature category-container">
                 <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
@@ -30,38 +33,31 @@
         </div><!-- button-group -->
     </div><!-- / container -->
 </div><!-- / row -->
-<div class="row">
+<div class="row isotope">
     <div class="container">
         <div class="isotope-container margin-top-2">
             <div class="isotope-sizer"></div>
             {% for topic_title, topic in topic_data %}
-                <div class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
+                <div id="isotope-item-{{ loop.index }}" class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
                     {%- if topic.categories_hyphenated -%}
-                        {%- for category_class in topic.categories_hyphenated -%}
-                        {{ " " }}{{ category_class }}
-                        {%- endfor -%}
-                        {{- " category" -}}
+                      {{ " " }}{{- topic.categories_hyphenated|join(" ") -}}
+                      {{- " category" -}}
+                    {%- endif -%}"{#- close the class= quote -#}
+                    {%- if topic.categories -%}
+                      {{ " " }}data-categories="{{- topic.categories|join(" ") }}
+                      "{#- close the data-categories= quote -#}
                     {%- endif -%}
-                    ">
-                    <h2 class="h4">{{ topic_title }}</h2>
-                    {% if topic.description %}
-                    {{ topic.description }}
-                    {% endif %}
+                    >{#- close the tag -#}
+                    <h2 class="h4 title">{{ topic_title }}</h2>
+                    {# {% if topic.description %}
+                      <p class="description">{{ topic.description }}</p>
+                    {% endif %} #}
                     {% if topic.links %}
-                    <h2 class="h6">Links</h2>
-                    <ul>
+                    <ul class="no-bullet">
                         {% for link in topic.links %}
                         <li><a href="{{ link.href }}">{{ link.text }}</a></li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
-                    {% if topic.categories %}
-                    <h2 class="h6">Categories</h2>
-                        <ul>
-                        {% for category in topic.categories %}
-                          <li>{{ category }}</li>
-                        {% endfor %}
-                        </ul>
                     {% endif %}
                 </div><!-- / isotope-item -->
             {% endfor %}
@@ -78,7 +74,7 @@
             itemSelector: ".isotope-item",
             layoutMode: "fitRows"
         }
-        var filterManager = new FilterManager(".isotope-container", ".isotope-select", isotope_params);
+        var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
 
         // reads query params and filterManager on them
         filterManager.onPageLoad();
