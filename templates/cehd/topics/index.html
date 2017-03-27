@@ -87,7 +87,7 @@
             var id = request_obj.request.id;
             var element_id = "#people-container" + id;
             var $target_element = $(element_id);
-            var results = request_obj.client.results.channel.item;
+            var results = request_obj.client.results;
             var renderer = new Renderer();
             var template_data = {
                     people: results,
