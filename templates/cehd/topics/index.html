@@ -52,13 +52,7 @@
                     {# {% if topic.description %}
                       <p class="description">{{ topic.description }}</p>
                     {% endif %} #}
-                    {% if topic.links %}
-                    <ul class="no-bullet">
-                        {% for link in topic.links %}
-                        <li><a href="{{ link.href }}">{{ link.text }}</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
+                    <div id="people-container-{{ topic.tag }}"></div>
                 </div><!-- / isotope-item -->
             {% endfor %}
         </div><!-- / isotope-container -->
@@ -74,10 +68,51 @@
             itemSelector: ".isotope-item",
             layoutMode: "fitRows"
         }
-        var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
+        var topic_data = {{ topic_data_json|raw }};
+        var requests = [];
+        var params = {
+            url: "/edpsych/services/people-tool/",
+            data: {
+                en: 54
+            }
+        };
+        var client = new HTTPClient();
+        var request = client.get(params);
+        var request_obj = {
+            client: client,
+            request: request,
+        };
 
-        // reads query params and filterManager on them
-        filterManager.onPageLoad();
+        request_obj.request.done(function(k, v) {
+            var id = request_obj.request.id;
+            var element_id = "#people-container" + id;
+            var $target_element = $(element_id);
+            var results = request_obj.client.results.channel.item;
+            var renderer = new Renderer();
+            var template_data = {
+                    people: results,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                };
+
+            var template_params = {
+                'template_path': '/assets/dist/views/cehd/people/',
+                'template_name': 'index.html',
+                "$target_element": $target_element,
+                'data': {
+                    people: results,
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            renderer.init(template_params);
+            renderer.render();
+
+            console.log(results);
+        }).then(function() {
+            var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
+
+            // reads query params and filters on them
+            filterManager.onPageLoad();
+        });
 
         window.onpopstate = function() {
             filterManager.onPageLoad();
@@ -89,6 +124,7 @@
             var $filter_group_container = $($button.data("target"));
             $filter_group_container.toggleClass("open");
         });
+
     });
 </script>
 {% endblock %}
