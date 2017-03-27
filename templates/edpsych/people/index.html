@@ -46,7 +46,7 @@
         }
 
         function get_client_results(requests, key) {
-            return requests[key].client.results.channel.item;
+            return requests[key].client.results;
         }
 
         function get_section(section_data, key) {
@@ -63,6 +63,7 @@
                 id: query_value,
                 request: request,
             };
+
             requests.push(obj);
         });
 

@@ -86,11 +86,11 @@ class Person extends \CEHD\App\XML\XML
 
     public $presentations;
 
-    function __construct($xml_string)
+    function __construct($person)
     {
-        $xml = $this->_xmlStringToObject($xml_string);
+        //$xml = $this->_xmlStringToObject($xml_string);
 
-        $person = $xml->person;
+        //$person = $xml->person;
 
         $this->count =               (int) $person->count;
 
@@ -219,5 +219,20 @@ class Person extends \CEHD\App\XML\XML
         }
 
         return $works;
+    }
+}
+
+class People extends \CEHD\App\XML\XML
+{
+    public $people = [];
+
+    function __construct($xml_string)
+    {
+        $xml = $this->_xmlStringToObject($xml_string);
+
+        foreach($xml->person as $person)
+        {
+            array_push($this->people, new Person($person));
+        }
     }
 }
