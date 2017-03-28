@@ -26,6 +26,10 @@ protected $people_obj_multiple_presentations;
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/people_tag.xml');
 
         $this->people_multiple_from_tag = new \CEHD\App\People\People($xmlStr);
+
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/person_christ.xml');
+
+        $this->people_christ = new \CEHD\App\People\People($xmlStr);
     }
 
     public function testCreate()
@@ -70,5 +74,10 @@ protected $people_obj_multiple_presentations;
         $this->assertEquals("EdPsych", $this->people_multiple_from_tag->people[0]->tagGroups[0]->abbreviation);
         $this->assertEquals("38", $this->people_multiple_from_tag->people[0]->tagGroups[0]->id);
         $this->assertEquals("en", $this->people_multiple_from_tag->people[0]->tagGroups[0]->query_key);
+    }
+
+    public function testChrist()
+    {
+        $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
     }
 }
