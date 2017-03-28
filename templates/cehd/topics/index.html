@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "College of Education + Human Development" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -35,27 +36,16 @@
 </div><!-- / row -->
 <div class="row isotope">
     <div class="container">
-        <div class="isotope-container margin-top-2">
-            <div class="isotope-sizer"></div>
-            {% for topic_title, topic in topic_data %}
-                <div id="isotope-item-{{ loop.index }}" class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
-                    {%- if topic.categories_hyphenated -%}
-                      {{ " " }}{{- topic.categories_hyphenated|join(" ") -}}
-                      {{- " category" -}}
-                    {%- endif -%}"{#- close the class= quote -#}
-                    {%- if topic.categories -%}
-                      {{ " " }}data-categories="{{- topic.categories|join(" ") }}
-                      "{#- close the data-categories= quote -#}
-                    {%- endif -%}
-                    >{#- close the tag -#}
-                    <h2 class="h4 title">{{ topic_title }}</h2>
-                    {# {% if topic.description %}
-                      <p class="description">{{ topic.description }}</p>
-                    {% endif %} #}
-                    <div id="people-container-{{ topic.tag }}"></div>
-                </div><!-- / isotope-item -->
-            {% endfor %}
-        </div><!-- / isotope-container -->
+        {{ loader.loader(
+            null,
+            null,
+            "isotope-topics-container",
+            null,
+            "large",
+            null,
+            "isotope-container margin-top-2",
+            false
+        ) }}
     </div><!-- / container -->
 </div><!-- / row -->
 {% endblock %}
@@ -69,7 +59,6 @@
             layoutMode: "fitRows"
         }
         var topic_data = {{ topic_data_json|raw }};
-        var requests = [];
         var params = {
             url: "/edpsych/services/people-tool/",
             data: {
@@ -83,30 +72,41 @@
             request: request,
         };
 
-        request_obj.request.done(function(k, v) {
-            var id = request_obj.request.id;
-            var element_id = "#people-container" + id;
-            var $target_element = $(element_id);
-            var results = request_obj.client.results;
+        function set_people(people) {
+            $.each(topic_data, function(tidx, topic) {
+                topic_data[tidx].people = [];
+
+                $.each(people, function(pidx, person) {
+                    $.each(person.tags, function(ptidx, tag) {
+                        if (tag.id == topic.tag_id) {
+                            topic_data[tidx].people.push(person);
+                        }
+                    });
+                });
+            });
+        };
+
+        request_obj.request.done(function() {
+            var element_selector = ".isotope-container";
+            var $target_element = $(element_selector);
+            var people = request_obj.client.results;
             var renderer = new Renderer();
-            var template_data = {
-                    people: results,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                };
+
+            set_people(people);
 
             var template_params = {
-                'template_path': '/assets/dist/views/cehd/people/',
-                'template_name': 'index.html',
+                "template_path": "/assets/dist/views/cehd/people/",
+                "template_name": "index.html",
                 "$target_element": $target_element,
-                'data': {
-                    people: results,
+                "data": {
+                    topics: topic_data,
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
+
             renderer.init(template_params);
             renderer.render();
 
-            console.log(results);
         }).then(function() {
             var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
 

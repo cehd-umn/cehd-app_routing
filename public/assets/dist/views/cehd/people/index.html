@@ -1,13 +1,31 @@
-{% if data.people %}
-<ul class="no-bullet">
-{% for person in data.people %}
-    <li>
-        {% if person.internetId|is_string %}
-          <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">{{ person.firstName }} {{ person.lastName }}</a>
-        {% else %}
-          {{ person.firstName }} {{ person.lastName }}
-        {% endif %}
-    </li>
+<div class="isotope-sizer"></div>
+{% for topic_title, topic in data.topics %}
+    <div id="isotope-item-{{ loop.index }}" class="isotope-item
+        {%- if topic.categories_hyphenated -%}
+            {{ " " }}{{- topic.categories_hyphenated|join(" ") -}}
+            {{- " category" -}}
+        {%- endif -%}"{#- close the class= quote -#}
+        {%- if topic.categories -%}
+            {{ " " }}data-categories="{{- topic.categories|join(" ") }}
+            "{#- close the data-categories= quote -#}
+        {%- endif -%}
+        >{#- close the tag -#}
+        <h2 class="h4 title">{{ topic_title }}</h2>
+        {# {% if topic.description %}
+            <p class="description">{{ topic.description }}</p>
+        {% endif %} #}
+        <div id="people-container-{{ topic.tag_id }}" data-tag-id="{{ topic.tag_id }}">
+            <ul class="no-bullet">
+            {% for person in topic.people %}
+                <li>{{ topic_data.tag_id }} {{ tag.id }}
+                    {% if person.internetId|is_string %}
+                        <a href="{{ data.config.base_url }}/directory/{{ person.internetId }}/">{{ person.firstName }} {{ person.lastName }}</a>
+                    {% else %}
+                        {{ person.firstName }} {{ person.lastName }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div><!-- / isotope-item -->
 {% endfor %}
-</ul>
-{% endif %}
