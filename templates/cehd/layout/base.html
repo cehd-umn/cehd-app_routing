@@ -57,67 +57,72 @@
 {% block section_wordmark %}
 {% endblock %}
 {% block nav %}
-<div class="meganav-container section-header-container row">
-    <nav class="container">
-        <ul class="nav navbar-nav">
-          {%- for top_level_item in nav_items -%}
-            <li class="top-level{%-
-                if top_level_item.subsection -%}
-                   {{ " " }}dropdown mega-dropdown
-                {%- endif -%}
-                {%- if loop.first -%}
-                    {{ " " }}first
-                {%- endif -%}" id="top-level-{{ top_level_item.section }}">
-                <a href="#" class="
-                  {%- if top_level_item.subsection -%}
-                    dropdown-toggle
-                  {%- endif %}" data-toggle="dropdown">
-                    {{ top_level_item.name }}
-                {%- if top_level_item.subsection -%}
-                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                {%- endif -%}
-            </a>
-            {%- if top_level_item.subsection -%}
-              <div class="dropdown-menu">
-                <ul class="span-3 margin-top nav">
-                {%- for sub_nav_item in top_level_item.subsection %}
-                    <li class="dropdown-header">
-                        <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
-                        {%- if sub_nav_item.subsection %}
-                        <ul>
-                            {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
-                            <li>
-                                <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
-                            </li>
-                            {%- endfor -%}
-                        </ul><!-- // sub sub nav -->
-                        {%- endif -%}
-                    </li><!-- // dropdown header -->
-                {%- if loop.index == 3 -%}
-                {# close the column and start a new one #}
-                    </ul>
-                    <ul class="span-3 margin-top">
+<div class="section-header-container row">
+    <div class="meganav-container">
+        <button class="nav-toggle">Menu</button>
+        <nav class="container">
+            <ul class="nav navbar-nav">
+            {%- for top_level_item in nav_items -%}
+                <li class="top-level{%-
+                    if top_level_item.subsection -%}
+                    {{ " " }}dropdown mega-dropdown
                     {%- endif -%}
-                {%- endfor -%}
-                </ul><!-- // sub nav column-->
-                <div class="span-6">
-                    <figure>
-                        <img src ="/assets/dist/images/hero-image.jpg" alt="Hero image">
-                        <figcaption>Hero image</figcaption>
-                    </figure>
-                    <p class="hero-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Aenean mattis dapibus mi, et facilisis lacus
-                    aliquam sed. Mauris dignissim pulvinar vestibulum. Cum
-                    sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus.</p>
-                </div><!-- // hero img column -->
-            </div><!-- // dropdown-menu -->
-            {%- endif -%}
-        </li><!-- // top-level nav item -->
-        {%- endfor -%}
-        </ul>
-    </nav>
-</div>
+                    {%- if loop.first -%}
+                        {{ " " }}first
+                    {%- endif -%}" id="top-level-{{ top_level_item.section }}">
+                    <a href="#" class="
+                    {%- if top_level_item.subsection -%}
+                        dropdown-toggle
+                    {%- endif %}" data-toggle="dropdown">
+                        {{ top_level_item.name }}
+                    {%- if top_level_item.subsection -%}
+                        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                    {%- endif -%}
+                </a>
+                {%- if top_level_item.subsection -%}
+                <div class="dropdown-menu">
+                    <ul class="span-3 margin-top nav">
+                    {%- for sub_nav_item in top_level_item.subsection %}
+                        <li class="dropdown-header">
+                            <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
+                            {%- if sub_nav_item.subsection %}
+                            <ul>
+                                {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
+                                <li>
+                                    <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
+                                </li>
+                                {%- endfor -%}
+                            </ul><!-- // sub sub nav -->
+                            {%- endif -%}
+                        </li><!-- // dropdown header -->
+                    {%- if loop.index == 3 -%}
+                        {#- close the column and start a new one -#}
+                        </ul>
+                        <ul class="span-3 margin-top">
+                        {%- endif -%}
+                    {%- endfor -%}
+                    </ul><!-- // sub nav column-->
+                    <div class="span-6">
+                        <div class="main-nav-hero-image-container">
+                            <figure>
+                                <img src ="/assets/dist/images/hero-image.jpg" alt="Hero image">
+                                <figcaption>Hero image</figcaption>
+                            </figure>
+                            <p class="main-nav-hero-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Aenean mattis dapibus mi, et facilisis lacus
+                            aliquam sed. Mauris dignissim pulvinar vestibulum. Cum
+                            sociis natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus.</p>
+                        </div><!-- // hero img container -->
+                    </div><!-- // hero img column -->
+                </div><!-- // dropdown-menu -->
+                {%- endif -%}
+            </li><!-- // top-level nav item -->
+            {%- endfor -%}
+            </ul>
+        </nav>
+    </div><!-- meganav-container -->
+</div><!-- // row -->
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">
@@ -130,15 +135,15 @@
                     </div>
                     <p><a href="{{config.base_url}}/"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
                     <address>
-                    <p><a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
+                        <a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
                         612-626-9252<br>
                         104 Burton Hall<br>
                         178 Pillsbury Dr. S.E.<br>
                         Minneapolis, MN 55455<br>
                         612-626-9252 | <a href="mailto:cehd@umn.edu">cehd@umn.edu</a>
                     </address>
-                    
-                    <p><a href="http://www.cehd.umn.edu/directory/">College Directory</a></p>
+
+                    <p><a href="/directory/">College Directory</a></p>
                 </div>
             </div>
             <div class="span-4">

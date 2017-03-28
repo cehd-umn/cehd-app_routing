@@ -29,6 +29,11 @@ $tracking_elements.on("click", function(event) {
     400);
 });
 
+$(".nav-toggle").on("click touch", function() {
+    var $nav = $("nav");
+    $nav.toggleClass("open");
+});
+
 jquerybridget("isotope", isotope, $);
 
 var HistoryManager = function() {
