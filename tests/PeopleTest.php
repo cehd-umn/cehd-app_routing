@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class PeopleTest extends TestCase
 {
-    protected $people_obj_multiple_presentations;
+protected $people_obj_multiple_presentations;
 
     protected $people_obj_single_presentation;
 
@@ -48,5 +48,27 @@ class PeopleTest extends TestCase
 
     public function testMultiplePeople() {
         $this->assertEquals(10, count($this->people_multiple_from_tag->people));
+    }
+
+    public function testJobs()
+    {
+        $this->assertEquals(3, count($this->people_multiple_from_tag->people[0]->jobs));
+        $this->assertEquals("Associate Professor", $this->people_multiple_from_tag->people[0]->jobs[0]->description);
+        $this->assertEquals("Codding,Robin Susan", $this->people_multiple_from_tag->people[0]->name);
+    }
+
+    public function testTags()
+    {
+        $this->assertEquals("Directory", $this->people_multiple_from_tag->people[0]->tags[0]->description);
+        $this->assertEquals("225", $this->people_multiple_from_tag->people[0]->tags[0]->id);
+        $this->assertEquals("tg", $this->people_multiple_from_tag->people[0]->tags[0]->query_key);
+    }
+
+    public function testTagGroups()
+    {
+        $this->assertEquals("Educational Psychology", $this->people_multiple_from_tag->people[0]->tagGroups[0]->description);
+        $this->assertEquals("EdPsych", $this->people_multiple_from_tag->people[0]->tagGroups[0]->abbreviation);
+        $this->assertEquals("38", $this->people_multiple_from_tag->people[0]->tagGroups[0]->id);
+        $this->assertEquals("en", $this->people_multiple_from_tag->people[0]->tagGroups[0]->query_key);
     }
 }
