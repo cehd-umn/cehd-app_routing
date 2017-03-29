@@ -10,6 +10,8 @@ class XML
 
     function __construct()
     {
+        // @todo while putting an http client here is sometimes convenient,
+        // it's probably not good design
         $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->_http_client = $bootstrap_helper::bootstrap_http_client([]);
     }
@@ -20,6 +22,24 @@ class XML
             $xml_string,
             null,
             LIBXML_NOCDATA);
+    }
+
+    // @xxx Some of these convenience methods are probably broad enough to be
+    // abstracted further to a parent BaseClass
+    public function toString($property)
+    {
+        return trim((string) $property);
+    }
+
+    public function get($obj)
+    {
+        $stringified = $this->toString($obj);
+        return !empty($stringified) ? $stringified : null;
+    }
+
+    public function isIterable($obj)
+    {
+        return is_array($obj) || $obj instanceof \Traversable;
     }
 
     public function toJSON()

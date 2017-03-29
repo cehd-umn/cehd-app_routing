@@ -70,7 +70,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     public function peopleEndpointHandler($request, $response, $service, $app)
     {
-        $base_url =  'https://apps.cehd.umn.edu/people/admin/RSSFeed.aspx';
+        $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
         $query_data = $request->params();
         $query = [];
 
@@ -90,10 +90,12 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
             $client_query_data = ['query' => $query];
             $client_response = $http_client->request('GET', $base_url, $client_query_data);
-            $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+            $people_obj = new \CEHD\App\People\People($client_response->getBody());
+            $response->sendJSONResponse(json_encode($people_obj->people));
         }
     }
 
+    // @todo this method should go in a BaseApp class
     public function personEndpointHandler($request, $response, $service, $app)
     {
         $query_data = $request->params();
@@ -107,8 +109,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 ]
             ]];
             $client_response = $http_client->request('GET', $base_url, $client_query_data);
-            $person = new \CEHD\App\People\Person($client_response->getBody());
-            $response->sendJSONResponse($person->toJSON());
+            $people_obj = new \CEHD\App\People\People($client_response->getBody());
+            $response->sendJSONResponse($people_obj->people[0]->toJSON());
         }
     }
 

@@ -3,6 +3,24 @@
 namespace CEHD\App\People;
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
+class BaseTag
+{
+    public $id;
+    public $name;
+    public $description;
+}
+
+class Tag extends BaseTag
+{
+    public $query_key = "tg";
+}
+
+class TagGroup extends BaseTag
+{
+    public $query_key = "en";
+    public $abbreviation;
+}
+
 class Job
 {
     public $deptId;
@@ -20,26 +38,6 @@ class Job
 
 class Person extends \CEHD\App\XML\XML
 {
-    public $count;
-
-    public $internetId;
-
-    public $name;
-
-    public $firstName;
-
-    public $middleName;
-
-    public $lastName;
-
-    public $nameSuffix;
-
-    public $nameFirstLast;
-
-    public $phone;
-
-    public $fax;
-
     public $address_1;
 
     public $address_2;
@@ -48,111 +46,129 @@ class Person extends \CEHD\App\XML\XML
 
     public $address_4;
 
-    public $city;
-
-    public $state;
-
-    public $zip;
-
-    public $jobs;
-
-    public $workingTitle;
-
     public $areasOfInterest;
-
-    public $degrees;
-
-    public $officeHours;
-
-    public $headShot;
-
-    public $webPage;
-
-    public $curriculumVitaeAddr;
-
-    public $twitterName;
-
-    public $expertise;
 
     public $briefBio;
 
-    public $fullBio;
+    public $city;
+
+    public $curriculumVitaeAddr;
 
     public $dateDisplay;
 
     public $dateISO;
 
-    public $publications;
+    public $degrees;
+
+    public $expertise;
+
+    public $fax;
+
+    public $firstName;
+
+    public $fullBio;
+
+    public $headShot;
+
+    public $internetId;
+
+    public $jobs = [];
+
+    public $lastName;
+
+    public $middleName;
+
+    public $name;
+
+    public $nameFirstLast;
+
+    public $nameSuffix;
+
+    public $officeHours;
+
+    public $phone;
 
     public $presentations;
 
-    function __construct($xml_string)
+    public $publications;
+
+    public $state;
+
+    public $tags = [];
+
+    public $tagGroups = [];
+
+    public $twitterName;
+
+    public $webPage;
+
+    public $workingTitle;
+
+    public $zip;
+
+    function __construct($person)
     {
-        $xml = $this->_xmlStringToObject($xml_string);
+        $this->name =                $this->get($person->name);
 
-        $person = $xml->person;
+        $this->internetId =          $this->get($person->internetId);
 
-        $this->count =               (int) $person->count;
+        $this->firstName =           $this->get($person->firstName);
 
-        $this->name =                $this->_get($person->name);
+        $this->middleName =          $this->get($person->middleName);
 
-        $this->internetId =          $this->_get($person->internetId);
+        $this->lastName =            $this->get($person->lastName);
 
-        $this->firstName =           $this->_get($person->firstName);
-
-        $this->middleName =          $this->_get($person->middleName);
-
-        $this->lastName =            (string) $person->lastName;
-
-        $this->nameSuffix =          $this->_get($person->nameSuffix);
+        $this->nameSuffix =          $this->get($person->nameSuffix);
 
         $this->nameFirstLast =       $this->firstName . " " . $this->lastName;
 
-        $this->phone =               $this->_get($person->phone);
+        $this->phone =               $this->get($person->phone);
 
-        $this->fax =                 $this->_get($person->fax);
+        $this->fax =                 $this->get($person->fax);
 
-        $this->address_1 =           $this->_get($person->addr1);
+        $this->address_1 =           $this->get($person->addr1);
 
-        $this->address_2 =           $this->_get($person->addr2);
+        $this->address_2 =           $this->get($person->addr2);
 
-        $this->address_3 =           $this->_get($person->addr3);
+        $this->address_3 =           $this->get($person->addr3);
 
-        $this->address_4 =           $this->_get($person->addr4);
+        $this->address_4 =           $this->get($person->addr4);
 
-        $this->city =                $this->_get($person->city);
+        $this->city =                $this->get($person->city);
 
-        $this->state =               $this->_get($person->state);
+        $this->state =               $this->get($person->state);
 
-        $this->zip =                 $this->_get($person->zip);
+        $this->zip =                 $this->get($person->zip);
 
-        $this->jobs =                $this->_setJobs($person->jobs);
+        $this->workingTitle =        $this->get($person->workingTitle);
 
-        $this->workingTitle =        $this->_get($person->workingTitle);
+        $this->areasOfInterest =     $this->get($person->areasOfInterest);
 
-        $this->areasOfInterest =     $this->_get($person->areasOfInterest);
+        $this->degrees =             $this->get($person->degrees);
 
-        $this->degrees =             $this->_get($person->degrees);
+        $this->officeHours =         $this->get($person->officeHours);
 
-        $this->officeHours =         $this->_get($person->officeHours);
+        $this->headshotAddress =     $this->get($person->headshotAddr);
 
-        $this->headshotAddress =     $this->_get($person->headshotAddr);
+        $this->webPage =             $this->get($person->webPage);
 
-        $this->webPage =             $this->_get($person->webPage);
+        $this->curriculumVitaeAddr = $this->get($person->curriculumVitaeAddr);
 
-        $this->curriculumVitaeAddr = $this->_get($person->curriculumVitaeAddr);
+        $this->tags =                $this->_setTagData($person->tags, "tag");
 
-        $this->twitterName =         $this->_get($person->twitterName);
+        $this->tagGroups =           $this->_setTagData($person->tagGroups, "tagGroup");
 
-        $this->expertise =           $this->_get($person->expertise);
+        $this->twitterName =         $this->get($person->twitterName);
 
-        $this->briefBio =            $this->_get($person->briefBio);
+        $this->expertise =           $this->get($person->expertise);
 
-        $this->fullBio =             $this->_get($person->fullBio);
+        $this->briefBio =            $this->get($person->briefBio);
 
-        $this->dateDisplay =         $this->_get($person->dateDisplay);
+        $this->fullBio =             $this->get($person->fullBio);
 
-        $this->dateISO =             $this->_get($person->dateISO);
+        $this->dateDisplay =         $this->get($person->dateDisplay);
+
+        $this->dateISO =             $this->get($person->dateISO);
 
         $this->publications =        $this->_setWorks(
                                         $person->publications,
@@ -163,45 +179,68 @@ class Person extends \CEHD\App\XML\XML
                                         $person->presentations,
                                         'presentation'
                                      );
+
+        $this->_setJobs($person->jobs);
+    }
+
+    private function _setTagData($tagData, $nodeName)
+    {
+        $objects = [];
+
+        foreach($tagData->$nodeName as $tagData)
+        {
+            $qualified_class_name = __NAMESPACE__ . "\\" . ucfirst($nodeName);
+            $class = new $qualified_class_name;
+
+            foreach($tagData->attributes() as $property_name => $property_value)
+            {
+                if (strpos($property_name, "Id"))
+                {
+                    $property_name = "id";
+                }
+
+                if (strpos($property_name, "Descr"))
+                {
+                    $property_name = "description";
+                }
+
+                if (strpos($property_name, "Abbr"))
+                {
+                    $property_name = "abbreviation";
+                }
+
+                if (property_exists($class, $property_name))
+                {
+                    $class->$property_name = $this->toString($property_value);
+                }
+            }
+            array_push($objects, $class);
+        }
+        return $objects;
     }
 
     private function _setJobs($jobsData)
     {
-        $jobs = [];
-
-        foreach($jobsData as $jobData)
+        foreach($jobsData->job as $jobData)
         {
             $job = new Job();
 
-            $job->deptId               = trim((string) $jobData->deptId);
-            $job->deptIdDescription    = trim((string) $jobData->deptIdDescription);
-            $job->status               = trim((string) $jobData->jobStatus);
-            $job->description          = trim((string) $jobData->jobCodeDescr);
-            $job->umZDeptId            = trim((string) $jobData->umZDeptId);
-            $job->umZDeptIdDescription = trim((string) $jobData->umZDeptIdDescription);
+            $job->deptId               = $this->toString($jobData->deptId);
+            $job->deptIdDescription    = $this->toString($jobData->deptIdDescription);
+            $job->status               = $this->toString($jobData->jobStatus);
+            $job->description          = $this->toString($jobData->jobCodeDescr);
+            $job->umZDeptId            = $this->toString($jobData->umZDeptId);
+            $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescription);
 
-            array_push($jobs, $job);
+            array_push($this->jobs, $job);
         }
-
-        return $jobs;
-    }
-
-    private function _get($obj)
-    {
-        $stringified = trim((string) $obj);
-        return !empty($stringified) ? $stringified : null;
-    }
-
-    private function _isIterable($obj)
-    {
-        return is_array($obj) || $obj instanceof \Traversable;
     }
 
     private function _setWorks($worksData, $name)
     {
         $works = [];
 
-        if ($this->_isIterable($worksData))
+        if ($this->isIterable($worksData))
         {
             foreach($worksData->{$name} as $workData)
             {
@@ -219,5 +258,24 @@ class Person extends \CEHD\App\XML\XML
         }
 
         return $works;
+    }
+}
+
+class People extends \CEHD\App\XML\XML
+{
+    public $people = [];
+
+    function __construct($xml_string)
+    {
+        $xml = $this->_xmlStringToObject($xml_string);
+
+        foreach($xml->person as $person)
+        {
+            array_push($this->people, new Person($person));
+        }
+    }
+
+    public function get_count() {
+        return count($this->people);
     }
 }
