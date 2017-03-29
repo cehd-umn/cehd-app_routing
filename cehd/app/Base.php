@@ -6,6 +6,13 @@ require_once __DIR__ . "/../../cehd/app/Config/Config.php";
 
 class BaseClass
 {
+    protected $_errors = [];
+
+    protected function _clearErrors()
+    {
+        $this->_errors = [];
+    }
+
     /**
      * Handles Twig setup
      * @param boolean $debug - debug mode for Twig
@@ -160,7 +167,7 @@ class BaseClass
             if ($error->file) {
                 $msg .= "\n  File: $error->file";
             }
-            
+
             array_push($error_msgs, $msg);
         }
 

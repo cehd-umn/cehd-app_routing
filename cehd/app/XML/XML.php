@@ -33,6 +33,9 @@ class XML extends \CEHD\App\BaseClass
             $doc = simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
             if (!$doc)
             {
+                $xml_errors = libxml_get_errors();
+
+                $this->_errors = $this->parseXMLErrors($xml_errors);
                 return false;
             }
         }
