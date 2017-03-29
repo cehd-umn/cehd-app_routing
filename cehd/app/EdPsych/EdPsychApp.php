@@ -87,7 +87,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
         if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrapHTTPClient([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => $query];
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $people_obj = new \CEHD\App\People\People($client_response->getBody());
@@ -102,7 +102,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
         if (array_key_exists("internetId", $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrapHTTPClient([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => [
                 "id" => $query_data["internetId"
                 ]
@@ -119,7 +119,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $query_data = $request->params();
         if (array_key_exists("feed-path", $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrapHTTPClient([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $request_url = $base_url . $query_data["feed-path"];
             $client_response = $http_client->request("GET", $request_url);
             $xml = $client_response->getBody();
@@ -137,7 +137,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         if (array_key_exists("r", $query_data) &&
                 array_key_exists("t", $query_data) &&
                 array_key_exists("q", $query_data)) {
-            $http_client = $this->bootstrap_helpers->bootstrapHTTPClient([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => [
                 "r" => $query_data["r"],
                 "t" => $query_data["t"],
@@ -171,7 +171,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
         if (!empty($client_query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrapHTTPClient([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
         }
@@ -212,11 +212,11 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     public function peoplePageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . "/../../../cehd/config/edpsych/people/index.yml";
-        $section_data = $this->helpers->loadYaml($yaml_file_path);
+        $section_data = $this->loadYaml($yaml_file_path);
 
         foreach ($section_data as $key => $section)
         {
-            $section_data[$key]["section_hyphenated"] = $this->helpers->hyphenate($section_data[$key]["section"]);
+            $section_data[$key]["section_hyphenated"] = $this->hyphenate($section_data[$key]["section"]);
         };
 
         $template_data = [
@@ -231,7 +231,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     public function personPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . "/../../../cehd/config/edpsych/people/extra_content.yml";
-        $yaml_data = $this->helpers->loadYaml($yaml_file_path);
+        $yaml_data = $this->loadYaml($yaml_file_path);
         $extra_content_data = new \UMN\CEHD\Dict\Dict($yaml_data);
         $extra_content = $extra_content_data->get($request->internetId);
 

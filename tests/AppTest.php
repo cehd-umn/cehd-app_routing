@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__ . '/../cehd/app/App/App.php';
-require_once __DIR__ . '/../cehd/app/helpers/Helper.php';
 require_once __DIR__ . '/../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -32,9 +31,6 @@ class AppTest extends TestCase
 
         // template is an instance of Twig
         $this->assertInstanceOf(\Twig_Environment::class, $this->appInstance->template);
-
-        // helper is an instance of \CEHD\Helpers\Helper
-        $this->assertInstanceOf(\CEHD\Helpers\Helper\Helper::class, $this->appInstance->helpers);
 
         // response is an instance of \CEHD\App\BaseResponse
         $this->assertInstanceOf(\CEHD\App\Response\BaseResponse::class, $this->appInstance->response);
@@ -81,5 +77,43 @@ class AppTest extends TestCase
         ]);
 
         $this->assertEquals("/new/base/assets", $this->appInstance->config['asset_base']);
+    }
+
+    public function testHyphenate()
+    {
+        $hyphenated = $this->appInstance->hyphenate("This is a title with parentheses (parenthetical)");
+        $expected_result = "this-is-a-title-with-parentheses-parenthetical";
+        $this->assertEquals($expected_result, $hyphenated);
+    }
+
+    public function testStripDotHtml()
+    {
+        $stripped = $this->appInstance->stripDotHtml("HtmlFile.html");
+        $expected_result = "HtmlFile";
+        $this->assertEquals($expected_result, $stripped);
+
+        $lowercase_result = $this->appInstance->stripDotHtml("HtmlFile.html", true);
+        $expected_result = "htmlfile";
+        $this->assertEquals($expected_result, $lowercase_result);
+
+        $expected_result = "HtmlFilePath/";
+        $no_dot_html_result = $this->appInstance->stripDotHtml($expected_result, true);
+        $this->assertEquals($expected_result, $no_dot_html_result);
+    }
+
+    public function testPathToArray()
+    {
+        $path = "/edpsych-twig/people/";
+        $path_array = $this->appInstance->pathToArray($path);
+        $this->assertTrue(is_array($path_array));
+        $this->assertEquals("2", count($path_array));
+    }
+
+    public function testGetLastFromPath()
+    {
+        $path = "/edpsych-twig/people/";
+        $expected_result = "people";
+        $actual_result = $this->appInstance->getLastFromPath($path);
+        $this->assertEquals($expected_result, $actual_result);
     }
 }

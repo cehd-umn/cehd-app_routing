@@ -48,4 +48,77 @@ class BaseClass
         $config = new \CEHD\App\Config\Config;
         return $config->load($yaml_file_paths);
     }
+
+    /**
+     * Convenience method for hyphenating phrases
+     * @param string $str - a short phrase
+     * @return string - a hyphenated version of the phrase
+     */
+    public function hyphenate($str, array $noStrip = [])
+    {
+        // http://www.mendoweb.be/blog/php-convert-string-to-hyphenated-string/
+        // non-alpha and non-numeric characters become spaces
+        $str = preg_replace('/[^a-z0-9' . implode("", $noStrip) . ']+/i', ' ', $str);
+        $str = trim($str);
+        $str = str_replace(" ", "-", $str);
+        $str = strtolower($str);
+
+        return $str;
+    }
+
+    /**
+     * Converts a file path to an array of its components
+     * @param string $path - a path separated by "/"
+     * @return array - the path components
+     */
+    public function pathToArray($path)
+    {
+        $path = ltrim($path, "/");
+        $path = rtrim($path, "/");
+        return explode("/", $path);
+    }
+
+    /**
+     * Gets the last word in a path
+     * @param string $path - a path separated by "/"
+     * @return string - the last word in the path
+     */
+    public function getLastFromPath($path)
+    {
+        $path_array = $this->pathToArray($path);
+        return array_pop($path_array);
+    }
+
+    /**
+     * Strips ".html" off the end of a path
+     * @param string $uri - a path separated by "/"
+     * @return string - the last word in the path
+     */
+    public function stripDotHtml($uri, $lowercase=false)
+    {
+        if (strrpos($uri, ".html") > 0)
+        {
+            // strip .html (last 5 characters)
+            $stripped = substr($uri, 0, -5);
+
+            if ($lowercase)
+            {
+                $stripped = strtolower($stripped);
+            }
+            return $stripped;
+        }
+
+        return $uri;
+    }
+
+    /**
+     * Parses a YAML file into an associative array
+     * @param string $file_path - a valid file path
+     * @return array - an associative array of the data in the YAML file
+     */
+    public function loadYaml($file_path)
+    {
+        $yaml = new \Symfony\Component\Yaml\Yaml;
+        return $yaml::parse(file_get_contents($file_path));
+    }
 }

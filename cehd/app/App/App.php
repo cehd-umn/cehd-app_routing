@@ -16,7 +16,6 @@ namespace CEHD\App\App;
 
 require_once __DIR__ . '/../../../cehd/app/Base.php';
 require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
 require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
@@ -110,14 +109,6 @@ class BaseApp extends \CEHD\App\BaseClass
     public $template;
 
     /**
-     * More generic helpers
-     *
-     * @todo Merge Bootstrap and Helper class
-     * @type Helper
-     */
-    public $helpers;
-
-    /**
      * Response class
      *
      * @type Klein\Response
@@ -152,11 +143,8 @@ class BaseApp extends \CEHD\App\BaseClass
         $this->template = $twig;
 
         $this->response = new \CEHD\App\Response\BaseResponse();
-        $this->helpers = new \CEHD\Helpers\Helper\Helper;
         $this->_routes =  new Dict\Dict(
-            $this->helpers->loadYaml(
-                $this->file_paths["routes"])
-        );
+            $this->loadYaml($this->file_paths["routes"]));
 
         // load the redirects from the yaml file provided or set and empty Dict object
         $this->_redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
@@ -259,7 +247,7 @@ class BaseApp extends \CEHD\App\BaseClass
     {
         try
         {
-            $data_array = $this->helpers->loadYaml($file_path);
+            $data_array = $this->loadYaml($file_path);
             if ($as_dict)
             {
                 return $this->_loadDict($data_array);
