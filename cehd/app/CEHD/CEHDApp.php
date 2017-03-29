@@ -35,7 +35,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function programsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $program_data = $this->helpers->loadYaml($yaml_file_path);
+        $program_data = $this->loadYaml($yaml_file_path);
         $categories = [];
         $degrees = [];
 
@@ -49,7 +49,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 foreach ($program["categories"] as $category_index => $category)
                 {
-                    $hyphenated = $this->helpers->hyphenate($category);
+                    $hyphenated = $this->hyphenate($category);
                     array_push($program_data[$program_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
@@ -61,7 +61,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 foreach ($program["degrees"] as $degree_index => $degree)
                 {
-                    $hyphenated = $this->helpers->hyphenate($degree);
+                    $hyphenated = $this->hyphenate($degree);
                     array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
                     $degrees[$hyphenated] = $degree;
                 }
@@ -87,7 +87,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function topicsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $topic_data = $this->helpers->loadYaml($yaml_file_path);
+        $topic_data = $this->loadYaml($yaml_file_path);
         $categories = [];
 
         foreach ($topic_data as $topic_index => $topic)
@@ -98,7 +98,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 foreach ($topic["categories"] as $category_index => $category)
                 {
-                    $hyphenated = $this->helpers->hyphenate($category);
+                    $hyphenated = $this->hyphenate($category);
                     array_push($topic_data[$topic_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
@@ -165,7 +165,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => $query];
             $client_response = $http_client->request('GET', $base_url, $client_query_data);
             $people_obj = new \CEHD\App\People\People($client_response->getBody());
@@ -181,7 +181,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         if (array_key_exists('internetId', $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => [
                 'id' => $query_data['internetId'
                 ]
@@ -190,21 +190,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $people_obj = new \CEHD\App\People\People($client_response->getBody());
             $response->sendJSONResponse($people_obj->people[0]->toJSON());
         }
-
-        // $query_data = $request->params();
-        // $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
-
-        // if (array_key_exists('internetId', $query_data))
-        // {
-        //     $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-        //     $client_query_data = ['query' => [
-        //         'id' => $query_data['internetId']
-        //     ]];
-        //     $client_response = $http_client->request('GET', $base_url, $client_query_data);
-        //     echo $client_response->getBody();
-        //     // $people_obj = new \CEHD\App\People\People($client_response->getBody());
-        //     // $response->sendJSONResponse($people_obj->people[0]->toJSON());
-        // }
     }
 
     public function newsFeedEndpointHandler($request, $response, $service, $app)
@@ -213,7 +198,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $query_data = $request->params();
         if (array_key_exists('feed-path', $query_data))
         {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+            $http_client = $this->bootstrapHTTPClient([]);
             $request_url = $base_url . $query_data['feed-path'];
             $client_response = $http_client->request('GET', $request_url);
             $xml = $client_response->getBody();

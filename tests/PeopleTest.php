@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class PeopleTest extends TestCase
 {
-protected $people_obj_multiple_presentations;
+    protected $people_obj_multiple_presentations;
 
     protected $people_obj_single_presentation;
 
@@ -79,5 +79,13 @@ protected $people_obj_multiple_presentations;
     public function testChrist()
     {
         $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
+    }
+
+    public function testInvalidXML()
+    {
+        $this->expectException(Exception::class);
+        $xmlStr = "<xml><open></xml>";
+        $people_instance = new \CEHD\App\People\People($xmlStr);
+        $this->assertEquals(0, count($people_instance->people));
     }
 }

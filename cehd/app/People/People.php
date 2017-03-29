@@ -267,11 +267,24 @@ class People extends \CEHD\App\XML\XML
 
     function __construct($xml_string)
     {
-        $xml = $this->_xmlStringToObject($xml_string);
-
-        foreach($xml->person as $person)
+        if ($this->validateXML($xml_string))
         {
-            array_push($this->people, new Person($person));
+            $xml = $this->_xmlStringToObject($xml_string);
+
+            foreach($xml->person as $person)
+            {
+                array_push($this->people, new Person($person));
+            }
+        }
+
+        else
+        {
+            foreach($this->_errors as $msg)
+            {
+                throw new \Exception($msg);
+            }
+
+            $this->_clearErrors();
         }
     }
 
