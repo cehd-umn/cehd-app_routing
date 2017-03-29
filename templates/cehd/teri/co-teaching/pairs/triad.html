@@ -1,11 +1,529 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "The Student Teaching Triad" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>The Student Teaching Triad</h1>
+    <p>In student teaching, a cooperating teacher and a university
+    supervisor support the development of a teacher candidate.&nbsp; These three
+    individuals form a triad. </p>
+    <p>Each member of the triad has particular roles that provide the
+    foundation for a successful student teaching experience. Because the
+    triad works together it is important to know the responsibilities and
+    expectations for each member. </p>
+    <p>For information on building rapport in a triad please see:</p>
+    <ul>
+            <li><strong>
+            <a href="Resources/Welcoming%20your%20TC.pdf">Welcoming your Teacher Candidate</a>
+            </strong>(PDF)</li>
+            <li><strong>
+            <a href="Resources/The%20Roles%20of%20the%20Triad.pdf">
+            The Roles Of The Triad</a> </strong>(PDF)</li>
+            <li><strong><a href="Resources/StagesOfConcern.pdf">Stages Of Concern for Teacher Candidates</a></strong>
+            (PDF) </li>
+    </ul>
+    <div class="LineBreak"> </div>
+    <p>The following relationship building activities are designed to help
+    you get to know your co-teaching partner better.</p>
+    <h2>What values are most important to you and why ?</h2>
+    <p>You are to work as a cooperating teacher and teacher candidate pair. Each of you will take turns to:</p>
+    <ol class="style1">
+            <li>Reflect on what values are most important to you and
+            what they mean to you</li>
+            <li>Then sort available value options by dragging and dropping them into
+    three dropboxes: <strong>Very important</strong>,<strong> Somewhat
+    important</strong>, and <strong>Not
+    important</strong>. </li>
+    </ol>
+    <p>The results of your selection will be displayed to you side by side. Discuss with your partner what&nbsp;
+    values you chose, why you selected it, and
+    what you have learned about yourself during this exercise. What did you
+    learn about each other?</p>
+    <p>&nbsp;</p>
+
+    <!-- Activity 3 -->
+
+    <div class="container" id="self-test-3">
+      <div id="value-cards-slides" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="active item">
+            <div class="ct">
+              <div class="row">
+                <h3>Round 1: Cooperating Teacher</h3>
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Problem Solving</li>
+                    <li>Simplicity</li>
+                    <li>Sincerity</li>
+                    <li>Punctuality</li>
+                    <li>Self Improvement</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Routine</li>
+                    <li>Feedback</li>
+                    <li>Power</li>
+                    <li>Arts</li>
+                    <li>Safety</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Service (to others)</li>
+                    <li>Wisdom</li>
+                    <li>Challenge</li>
+                    <li>Clear Expectations</li>
+                    <li>Variety</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Comfort</li>
+                    <li>Change</li>
+                    <li>Leisure</li>
+                    <li>Health</li>
+                    <li>Independence</li>
+                  </ul>
+                </div>
+
+              </div> <!-- end .row -->
+
+              <div class="row">
+                <div class="span4">
+                  <h3>Very Important</h3>
+                  <ul class="value-cards sorted" id="ct-most-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+                <div class="span4">
+                  <h3>Somewhat Important</h3>
+                  <ul class="value-cards sorted" id="ct-somewhat-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+                <div class="span4">
+                  <h3>Not Important</h3>
+                  <ul class="value-cards sorted" id="ct-not-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+              </div> <!-- end .row -->
+
+              <div class="row">
+                <div class="span12">
+                  <a href="#" class="done-sorting btn btn-primary btn-large pull-right">
+                    Cooperating Teacher Done Sorting
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                </div>
+              </div> <!-- end .row -->
+
+            </div> <!-- end .ct -->
+          </div> <!-- end .active.item -->
+
+
+          <div class="item">
+            <div class="tc">
+
+              <div class="row">
+                <h3>Round 2: Teacher Candidate</h3>
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Problem Solving</li>
+                    <li>Simplicity</li>
+                    <li>Sincerity</li>
+                    <li>Punctuality</li>
+                    <li>Self Improvement</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Routine</li>
+                    <li>Feedback</li>
+                    <li>Power</li>
+                    <li>Arts</li>
+                    <li>Safety</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Service (to others)</li>
+                    <li>Wisdom</li>
+                    <li>Challenge</li>
+                    <li>Clear Expectations</li>
+                    <li>Variety</li>
+                  </ul>
+                </div>
+
+
+                <div class="span3">
+                  <ul class="value-cards unsorted">
+                    <li class="empty-text"><em>Empty</em></li>
+                    <li>Comfort</li>
+                    <li>Change</li>
+                    <li>Leisure</li>
+                    <li>Health</li>
+                    <li>Independence</li>
+                  </ul>
+                </div>
+
+              </div> <!-- end .row -->
+
+              <div class="row">
+                <div class="span4">
+                  <h3>Very Important</h3>
+                  <ul class="value-cards sorted" id="tc-most-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+                <div class="span4">
+                  <h3>Somewhat Important</h3>
+                  <ul class="value-cards sorted" id="tc-somewhat-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+                <div class="span4">
+                  <h3>Not Important</h3>
+                  <ul class="value-cards sorted" id="tc-not-important">
+                    <li class="empty-text"><em>Empty</em></li>
+                  </ul>
+                </div>
+
+              </div> <!-- end .row -->
+
+              <div class="row">
+                <div class="span12">
+                  <a href="#" class="step-backwards btn btn-large pull-left">
+                    <i class="icon-chevron-left"></i>
+                    Back to Cooperating Teacher Sorting
+                  </a>
+
+
+                  <a href="#" class="done-sorting btn btn-primary btn-large pull-right">
+                    Teacher Candidate Done Sorting
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                </div>
+              </div> <!-- end .row -->
+
+            </div> <!-- end .tc -->
+          </div> <!-- end .item -->
+
+
+          <div class="item">
+            <div class="row">
+              <h3>Round 3: Discuss</h3>
+
+              <div class="span4 offset2">
+                <h4>CT's Very Important Values</h4>
+                <ul class="value-cards sorted" id="ct-most-important-final">
+
+                </ul>
+              </div>
+
+              <div class="span4">
+                <h4>TC's Very Important Values</h4>
+                <ul class="value-cards sorted" id="tc-most-important-final">
+
+                </ul>
+              </div>
+
+            </div> <!-- end .row -->
+
+            <div class="row">
+              <div class="span12">
+                <a href="#" class="step-backwards btn btn-large pull-left">
+                  <i class="icon-chevron-left"></i>
+                  Back to Teacher Candidate Sorting
+                </a>
+
+              </div>
+            </div> <!-- end .row -->
+
+
+
+          </div> <!-- end .item -->
+
+
+        </div> <!-- end .carousel-inner -->
+
+      </div> <!-- end .carousel.slide -->
+
+    </div><!-- end #self-test-3.container -->
+    <!-- End Activity 3 -->
+
+
+    <div class="LineBreak"> </div>
+    <h2>
+    What are your perceptions about student behaviors and attitudes? </h2>
+    <p>This tool is designed to help you compare your perceptions about
+    appropriate and inappropriate student behaviors in the classroom.&nbsp;
+    Please discuss similarities and differences in your perceptions using
+    guiding questions below. </p>
+
+    <!-- Activity 4 -->
+    <div class="container" id="self-test-4">
+      <div class="carousel slide" id="acceptability-slides">
+        <div class="carousel-inner">
+
+
+          <div class="active item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student arrives late to class.
+                </div>
+              </div> <!-- end .span8.offset2 -->
+            </div> <!-- end .row -->
+          </div> <!-- end .active.item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student does not complete homework.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student frequently misses school the day of test or major assignment
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student often requests help or approval of work in progress
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student is inattentive (talking, doing another task, sleeping).
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student hits or shoves another student.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student uses profanity or inappropriate language.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student argues with or is rude to teacher.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student verbally/sexually harasses another student.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student makes frequent requests to leave the room.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student hums, sub-vocalizes, tabs pencil, etc.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student frequently requests extra credit or special consideration.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student does not participate in classroom activities.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student throws pencils/paper wads, shoots rubber bands.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student makes irrelevant comments or gives silly answers.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student interrupts others.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student comes to class without paper, book, pencil, etc.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student whines or tattles on other students.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+          <div class="item">
+            <div class="row">
+              <div class="span8 offset2">
+                <div class="scenario">
+                  Student's work from home exceeds quality or work in class.
+                </div>
+              </div> <!-- end .span8.offset2-->
+            </div> <!-- end .row -->
+          </div> <!-- end .item -->
+
+
+        </div> <!-- end .carousel-inner -->
+
+        <a class="carousel-control left" href="#acceptability-slides" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#acceptability-slides" data-slide="next">&rsaquo;</a>
+      </div> <!-- end .cousel.slide -->
+      <div class="row">
+        <div class="span12">
+          <div class="acceptability-scale">
+            <div class="acceptable">
+              Acceptable
+            </div>
+            <div class="unacceptable">
+              Unacceptable
+            </div>
+          </div>
+        </div> <!-- end .span12 -->
+      </div> <!-- end .row -->
+    </div> <!-- end #self-test-4 -->
+    <!-- End Activity 4 -->
+
+    <ul>
+            <li>What is your
+    rationale for the degree of acceptance/tolerance you have for different
+    behaviors? </li>
+            <li>How does this affect your rapport with and regard
+            for students?</li>
+            <li>What behaviors do you demonstrate to promote success for
+    students?</li>
+            <li>What behaviors do you demonstrate to compromise success?</li>
+            <li>Do some of those behaviors appear to be opposite of
+            your co-teacher?</li>
+    </ul>
+
+    <p class="next-page"><a href="Collaboration.html">Next:
+    Communication and Collaboration</a></p>
+      <!--webbot bot="Include" U-Include="../../attributes/Includes/TERI-copyright.html" TAG="BODY" startspan -->
+<div class="excerpt">
+<p class="caption">&copy; 2012, St. Cloud State University. Used with permission by the University of Minnesota-Twin Cities’ Educator Development &amp; Research Center (EDRC) for the TERI Network</p>
+</div>
+<!--webbot bot="Include" i-checksum="46155" endspan -->
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

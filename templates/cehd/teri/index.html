@@ -1,11 +1,29 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Teacher Education Redesign Initiative | CEHD " %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>Teacher Education Redesign Initiative (TERI)</h1>
+		<p>The Teacher Education Redesign Initiative (TERI) is a re-envisioning of the teacher education programs in the College of Education and Human Development (CEHD) at the University of Minnesota. As the premiere public research institution in the state, the University is uniquely positioned to improve teacher effectiveness by connecting ongoing research to teacher education. Each year, CEHD prepares between 250 – 300 new teachers across 20 licensure areas, and is one of fourteen higher education partners working within the <a href="http://www.bushfoundation.org/education/network-excellence-teaching-next">Bush Foundation&rsquo;s Network for Excellence in Teaching (NExT)</a>. TERI is lead by teacher education faculty and staff from across the college, and engages <a href="partnerships">school district partnerships in the Minnesota P – 12 Community</a>. </p>
+
+
+        <ul>
+        <li><a href="ourwork.html">Read more about our work and the essential ideas of TERI.</a></li>
+        <li><a href="partnerships">Learn about our school partners</a></li>
+        <li><a href="co-teaching/default.html">Training workshops for co-teaching</a></li>
+        </ul>
+
+<h2>Recent TERI News</h2>
+
+    <script type="text/javascript">
+        getRssFeed("BlogFeed","http://news.cehd.umn.edu/category/teri/feed/","/attributes/XSLT/News-WP-TERI-HP.xslt","Derp. The TERI feed is busted. Sorry about that, we hope to have it fixed soon.")
+        </script>
+    <div id="BlogFeed">
+
+
+        </div>
+
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
