@@ -29,6 +29,8 @@ $app->router->respond('GET', '/topics/', [$app, 'topicsPageHandler']);
 
 $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
+$app->router->respond('GET', '/directory/[:internetId]/', [$app, 'personPageHandler']);
+
 // Services
 $app->router->with('/services', function() use ($app)
 {

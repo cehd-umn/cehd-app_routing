@@ -95,6 +95,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    // @todo this method should go in a BaseApp class
     public function personEndpointHandler($request, $response, $service, $app)
     {
         $query_data = $request->params();

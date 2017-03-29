@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            <span class="divider one-half"></span>
+            <div class="half right">
+                <h2 class="heading-profile">{{ data.person.nameFirstLast }}
+                    <small class="clear h4">
+                    {% if data.person.workingTitle|is_string %}
+                        {{ data.person.workingTitle }}
+                    {% endif %}
+                    </small>
+                </h2>
+            </div>
+            <div class="half">
+                <p>
+                    {% if data.person.address_1 %}
+                        {{ data.person.address_1 }}<br>
+                    {% endif %}
+                    {% if data.person.address_2 %}
+                        {{ data.person.address_2 }}<br>
+                    {% endif %}
+                    {% if data.person.address_3 %}
+                        {{ data.person.address_3 }}<br>
+                    {% endif %}
+                    {% if data.person.address_4 %}
+                        {{ data.person.address_4 }}<br>
+                    {% endif %}
+                    {% if data.person.city|is_string %}
+                        {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
+                    {% endif %}
+                </p>
+                <p>
+                    {% if data.person.phone|is_string %}
+                    {{ data.person.phone }}<br>
+                    {% endif %}
+                    <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
+                </p>
+                {% if data.person.officeHours|is_string %}
+                    <h3 class="h5">Office hours</h3>
+                    <p>{{ data.person.officeHours|safe }}</p>
+                {% endif %}
+                {% if data.person.curriculumVitaeAddr|is_string %}
+                    <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+                {% endif %}
+            </div><!-- end half -->
+        </div><!-- end twothird -->
+    </div><!-- end container -->
+</div><!-- end row -->
+<div class="row emphasis">
+    <div class="container">
+        <div class="feature twothird">
+            <div class="span-3">
+                {% if data.person.headshotAddress|is_string and data.person.areasOfInterest|is_string %}
+                    <p class="no-margin-top"><img src="{{ data.person.headshotAddress }}" alt="{{ data.person.nameFirstLast }} headshot"></p>
+                {% endif %}
+            </div>
+            <div class="span-9">
+            {% if data.person.areasOfInterest|is_string %}
+                <h3 class="no-margin-top">Areas of interest</h3>
+                <p>{{ data.person.areasOfInterest|safe }}</p>
+            {% endif %}
+            </div>
+        </div><!-- end feature.twothird -->
+    </div><!-- end container -->
+</div><!-- end row.emphasis -->
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            {% if data.person.degrees %}
+                <h3 class="h5">Degrees</h3>
+                <p>{{ data.person.degrees|safe }}</p>
+            {% endif %}
+            {% if data.person.briefBio|is_string %}
+            <h3>Research</h3>
+            <p>{{ data.person.briefBio|safe }}</p>
+            {% endif %}
+            {% if data.person.publications|length %}
+              <h3>Selected publications</h3>
+                <ol class="profile-list">
+                {% for publication in data.person.publications %}
+                    <li>{{ publication|strip_style_attributes|safe }}</li>
+                {% endfor %}
+                </ol>
+            {% endif %}
+            {% if data.person.presentations|length %}
+              <h3>Selected presentations</h3>
+              <ol class="profile-list">
+              {% for presentation in data.person.presentations %}
+                <li>{{ presentation|strip_style_attributes|safe }}</li>
+              {% endfor %}
+              </ol>
+            {% endif %}
+        </div><!-- end feature.twothird -->
+    </div><!-- end container -->
+</div><!-- end row.emphasis -->
