@@ -23,33 +23,6 @@ class XML extends \CEHD\App\BaseClass
         }
     }
 
-    protected function _parseXMLError($error)
-    {
-        $msg = str_repeat('-', $error->column) . "^\n";
-
-        switch ($error->level) {
-            case LIBXML_ERR_WARNING:
-                $msg .= "Warning " . $error->code . ": ";
-                break;
-            case LIBXML_ERR_ERROR:
-                $msg .= "Error " . $error->code . ": ";
-                break;
-            case LIBXML_ERR_FATAL:
-                $msg .= "Fatal Error " . $error->code .": ";
-                break;
-        }
-
-        $msg .= trim($error->message) .
-               "\n  Line: $error->line" .
-               "\n  Column: $error->column";
-
-        if ($error->file) {
-            $msg .= "\n  File: $error->file";
-        }
-
-        return $msg;
-    }
-
     public function validateXML($xml_string)
     {
         libxml_use_internal_errors(true);
@@ -64,25 +37,21 @@ class XML extends \CEHD\App\BaseClass
             }
         }
 
+        libxml_clear_errors();
+
         return true;
     }
 
-    // @xxx Some of these convenience methods are probably broad enough to be
-    // abstracted further to a parent BaseClass
     public function toString($property)
     {
         return trim((string) $property);
     }
 
-    public function get($obj)
+    // @todo rename this and create a new get method that is Dict-like
+    public function get($property)
     {
-        $stringified = $this->toString($obj);
+        $stringified = $this->toString($property);
         return !empty($stringified) ? $stringified : null;
-    }
-
-    public function isIterable($obj)
-    {
-        return is_array($obj) || $obj instanceof \Traversable;
     }
 
     public function toJSON()

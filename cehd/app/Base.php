@@ -132,4 +132,38 @@ class BaseClass
     {
         return is_array($obj) || is_object($obj) || $obj instanceof \Traversable;
     }
+
+    public function parseXMLErrors($errors)
+    {
+        $error_msgs = [];
+
+        foreach($errors as $error)
+        {
+            $msg = str_repeat('-', $error->column) . "^\n";
+
+            switch ($error->level) {
+                case LIBXML_ERR_WARNING:
+                    $msg .= "Warning " . $error->code . ": ";
+                    break;
+                case LIBXML_ERR_ERROR:
+                    $msg .= "Error " . $error->code . ": ";
+                    break;
+                case LIBXML_ERR_FATAL:
+                    $msg .= "Fatal Error " . $error->code .": ";
+                    break;
+            }
+
+            $msg .= trim($error->message) .
+                "\n  Line: $error->line" .
+                "\n  Column: $error->column";
+
+            if ($error->file) {
+                $msg .= "\n  File: $error->file";
+            }
+            
+            array_push($error_msgs, $msg);
+        }
+
+        return $error_msgs;
+    }
 }

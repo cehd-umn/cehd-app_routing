@@ -140,4 +140,24 @@ class AppTest extends TestCase
         $this->assertTrue($this->appInstance->isIterable([1, 2, 3]));
         $this->assertTrue($this->appInstance->isIterable($classInstance));
     }
+
+    public function testParseXMLErrors()
+    {
+        $errors = null;
+        libxml_use_internal_errors(true);
+
+        $invalidXMLStr = "<xml><open></xml>";
+
+        // produce an XML parsing error
+        $doc = simplexml_load_string($invalidXMLStr, null, LIBXML_NOCDATA);
+        $errors = libxml_get_errors();
+        libxml_clear_errors();
+
+        $results = $this->appInstance->parseXMLErrors($errors);
+        $this->assertTrue(is_array($results));
+        $this->assertFalse(empty($errors));
+        $this->assertEquals(2, count($results));
+
+        $this->assertTrue(strpos($results[0], "Opening and ending tag mismatch") > 0);
+    }
 }
