@@ -121,4 +121,15 @@ class BaseClass
         $yaml = new \Symfony\Component\Yaml\Yaml;
         return $yaml::parse(file_get_contents($file_path));
     }
+
+    /**
+     * Tests whether something is iterable, i.e., it's OK to use it in a
+     * foreach loop
+     * @param mixed $obj - the thing to test
+     * @return boolean - whether the thing is iterable
+     */
+    public function isIterable($obj)
+    {
+        return is_array($obj) || is_object($obj) || $obj instanceof \Traversable;
+    }
 }
