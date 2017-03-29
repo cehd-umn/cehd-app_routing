@@ -2,7 +2,6 @@
 
 namespace CEHD\App\Search;
 require_once __DIR__ . '/../../../vendor/autoload.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
 class Search extends \CEHD\App\XML\XML

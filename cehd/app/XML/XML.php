@@ -1,10 +1,10 @@
 <?php
 
 namespace CEHD\App\XML;
-require_once __DIR__ . '/../../../vendor/autoload.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
+require_once __DIR__ . "/../../../cehd/app/Base.php";
+require_once __DIR__ . "/../../../vendor/autoload.php";
 
-class XML
+class XML extends \CEHD\App\BaseClass
 {
     protected $_http_client;
 
@@ -12,16 +12,59 @@ class XML
     {
         // @todo while putting an http client here is sometimes convenient,
         // it's probably not good design
-        $bootstrap_helper = new \CEHD\Helpers\Bootstrap\Bootstrap;
-        $this->_http_client = $bootstrap_helper::bootstrap_http_client([]);
+        $this->_http_client = $this->bootstrapHTTPClient([]);
     }
 
     protected function _xmlStringToObject($xml_string)
     {
-        return simplexml_load_string(
-            $xml_string,
-            null,
-            LIBXML_NOCDATA);
+        if ($this->validateXML($xml_string))
+        {
+            return simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
+        }
+    }
+
+    protected function _parseXMLError($error)
+    {
+        $msg = str_repeat('-', $error->column) . "^\n";
+
+        switch ($error->level) {
+            case LIBXML_ERR_WARNING:
+                $msg .= "Warning " . $error->code . ": ";
+                break;
+            case LIBXML_ERR_ERROR:
+                $msg .= "Error " . $error->code . ": ";
+                break;
+            case LIBXML_ERR_FATAL:
+                $msg .= "Fatal Error " . $error->code .": ";
+                break;
+        }
+
+        $msg .= trim($error->message) .
+               "\n  Line: $error->line" .
+               "\n  Column: $error->column";
+
+        if ($error->file) {
+            $msg .= "\n  File: $error->file";
+        }
+
+        return $msg;
+    }
+
+    public function validateXML($xml_string)
+    {
+        libxml_use_internal_errors(true);
+        if (trim($xml_string) === "")
+        {
+            return false;
+        } else {
+            $doc = simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
+            if (!$doc)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // @xxx Some of these convenience methods are probably broad enough to be

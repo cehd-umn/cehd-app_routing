@@ -80,4 +80,11 @@ protected $people_obj_multiple_presentations;
     {
         $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
     }
+
+    // public function testValidator()
+    // {
+    //     $xmlStr = "Server 500 error";
+    //     $obj = new \CEHD\App\People\People($xmlStr);
+    //     // $this->assertEquals(false,
+    // }
 }

@@ -14,11 +14,11 @@
  */
 namespace CEHD\App\App;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Bootstrap.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../../../cehd/app/Base.php';
 require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
+require_once __DIR__ . '/../../../cehd/app/helpers/Helper.php';
+require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
+require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use Klein;
 use UMN\CEHD\Dict;
@@ -33,7 +33,7 @@ use UMN\CEHD\Dict;
  *
  * @example routes/cehd/static_routes.php
  */
-class BaseApp
+class BaseApp extends \CEHD\App\BaseClass
 {
     /**
      * Class properties
@@ -80,13 +80,6 @@ class BaseApp
      * @type Dict
      */
     public $config;
-
-    /**
-     * Generic helper methods
-     *
-     * @type Bootstrap
-     */
-    public $bootstrap_helpers;
 
     /**
      * Navigation items
@@ -146,14 +139,13 @@ class BaseApp
     function __construct($file_paths)
     {
         $this->router = new Klein\Klein();
-        $this->bootstrap_helpers = new \CEHD\Helpers\Bootstrap\Bootstrap;
         $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
         $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
 
-        $twig = $this->bootstrap_helpers->bootstrap_twig($this->config['debug']);
+        $twig = $this->bootstrapTwig($this->config['debug']);
         $twig->addGlobal('config', $this->config);
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
@@ -297,9 +289,7 @@ class BaseApp
     {
         // merge the contents of the yaml configs
         $config =  new Dict\Dict(
-            $this->bootstrap_helpers->bootstrap_config(
-                $this->file_paths["configs"]
-            )
+            $this->bootstrapConfig($this->file_paths["configs"])
         );
 
         // build a few more in
