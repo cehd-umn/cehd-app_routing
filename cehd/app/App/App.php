@@ -16,7 +16,6 @@ namespace CEHD\App\App;
 
 require_once __DIR__ . '/../../../cehd/app/Base.php';
 require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
-require_once __DIR__ . '/../../../cehd/app/helpers/Navigation.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use Klein;
@@ -320,9 +319,7 @@ class BaseApp extends \CEHD\App\BaseClass
      */
     protected function _setNav()
     {
-        $nav_helper = new \CEHD\Helpers\Navigation\Navigation();
-        $nav_helper->set_nav($this->file_paths["nav"]);
-        return $nav_helper->get_nav();
+        return $this->loadYaml($this->file_paths["nav"]);
     }
 
     /**
