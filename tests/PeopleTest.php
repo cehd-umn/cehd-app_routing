@@ -80,4 +80,12 @@ class PeopleTest extends TestCase
     {
         $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
     }
+
+    public function testInvalidXML()
+    {
+        $this->expectException(Exception::class);
+        $xmlStr = "<xml><open></xml>";
+        $people_instance = new \CEHD\App\People\People($xmlStr);
+        $this->assertEquals(0, count($people_instance->people));
+    }
 }
