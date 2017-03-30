@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../cehd/app/People/People.php';
+require_once __DIR__ . '/../cehd/app/XML/People.php';
 
 use PHPUnit\Framework\TestCase;
 

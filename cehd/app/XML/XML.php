@@ -23,6 +23,12 @@ class XML extends \CEHD\App\BaseClass
         }
     }
 
+    // @todo get rid of the protected method in favor of this public one
+    public function xmlStringToObject($xml_string)
+    {
+        return $this->_xmlStringToObject($xml_string);
+    }
+
     public function validateXML($xml_string)
     {
         libxml_use_internal_errors(true);
@@ -50,8 +56,11 @@ class XML extends \CEHD\App\BaseClass
         return trim((string) $property);
     }
 
-    // @todo rename this and create a new get method that is Dict-like
-    public function get($property)
+    // The distinction here from "get" is that "get" can be called directly on
+    // any object created from a class that extends XML. I.e.,
+    // $instance->get("property_name"); This method is meant to work on generic
+    // XML objects created from simplexml_load_string().
+    public function getFromProperty($property)
     {
         $stringified = $this->toString($property);
         return !empty($stringified) ? $stringified : null;
