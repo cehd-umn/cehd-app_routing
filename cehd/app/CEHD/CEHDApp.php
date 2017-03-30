@@ -2,8 +2,9 @@
 namespace CEHD\App\CEHD;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
-require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
-require_once __DIR__ . '/../../../cehd/app/People/People.php';
+require_once __DIR__ . '/../../../cehd/app/XML/News.php';
+require_once __DIR__ . '/../../../cehd/app/XML/People.php';
+require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
@@ -129,7 +130,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "sites" => ["primary", "secondary"],
         ];
 
-        $results = $search_client->get($search_client_query_data);
+        $results = $search_client->getResults($search_client_query_data);
         $template_data = [
             "results" => $results,
             "query" => $query_data["q"],
@@ -142,7 +143,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
-        $results = $search_client->get($query_data);
+        $results = $search_client->getResults($query_data);
         return $response->sendJSONResponse(json_encode($results));
     }
 
@@ -196,16 +197,14 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
-        if (array_key_exists('feed-path', $query_data))
+        if (array_key_exists("feed-path", $query_data))
         {
             $http_client = $this->bootstrapHTTPClient([]);
-            $request_url = $base_url . $query_data['feed-path'];
-            $client_response = $http_client->request('GET', $request_url);
+            $request_url = $base_url . $query_data["feed-path"];
+            $client_response = $http_client->request("GET", $request_url);
             $xml = $client_response->getBody();
-            $xml_obj = $response->xmlStrToObject($xml);
-            $result_array = $response->getNewsfeedArrayFromXML($xml_obj);
-            $json = json_encode($result_array);
-            $response->sendJSONResponse($json);
+            $news = new \CEHD\App\XML\News\News($xml);
+            $response->sendJSONResponse(json_encode($news->stories));
         }
     }
 
