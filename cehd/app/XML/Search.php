@@ -98,7 +98,7 @@ class Search extends \CEHD\App\XML\XML
         return $this->_getSearchResultsFromXMLObject($xml_obj);
     }
 
-    public function get($query_params)
+    public function getResults($query_params)
     {
         $results = [];
 

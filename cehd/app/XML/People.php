@@ -108,67 +108,67 @@ class Person extends \CEHD\App\XML\XML
 
     function __construct($person)
     {
-        $this->name =                $this->get($person->name);
+        $this->name =                $this->getFromProperty($person->name);
 
-        $this->internetId =          $this->get($person->internetId);
+        $this->internetId =          $this->getFromProperty($person->internetId);
 
-        $this->firstName =           $this->get($person->firstName);
+        $this->firstName =           $this->getFromProperty($person->firstName);
 
-        $this->middleName =          $this->get($person->middleName);
+        $this->middleName =          $this->getFromProperty($person->middleName);
 
-        $this->lastName =            $this->get($person->lastName);
+        $this->lastName =            $this->getFromProperty($person->lastName);
 
-        $this->nameSuffix =          $this->get($person->nameSuffix);
+        $this->nameSuffix =          $this->getFromProperty($person->nameSuffix);
 
         $this->nameFirstLast =       $this->firstName . " " . $this->lastName;
 
-        $this->phone =               $this->get($person->phone);
+        $this->phone =               $this->getFromProperty($person->phone);
 
-        $this->fax =                 $this->get($person->fax);
+        $this->fax =                 $this->getFromProperty($person->fax);
 
-        $this->address_1 =           $this->get($person->addr1);
+        $this->address_1 =           $this->getFromProperty($person->addr1);
 
-        $this->address_2 =           $this->get($person->addr2);
+        $this->address_2 =           $this->getFromProperty($person->addr2);
 
-        $this->address_3 =           $this->get($person->addr3);
+        $this->address_3 =           $this->getFromProperty($person->addr3);
 
-        $this->address_4 =           $this->get($person->addr4);
+        $this->address_4 =           $this->getFromProperty($person->addr4);
 
-        $this->city =                $this->get($person->city);
+        $this->city =                $this->getFromProperty($person->city);
 
-        $this->state =               $this->get($person->state);
+        $this->state =               $this->getFromProperty($person->state);
 
-        $this->zip =                 $this->get($person->zip);
+        $this->zip =                 $this->getFromProperty($person->zip);
 
-        $this->workingTitle =        $this->get($person->workingTitle);
+        $this->workingTitle =        $this->getFromProperty($person->workingTitle);
 
-        $this->areasOfInterest =     $this->get($person->areasOfInterest);
+        $this->areasOfInterest =     $this->getFromProperty($person->areasOfInterest);
 
-        $this->degrees =             $this->get($person->degrees);
+        $this->degrees =             $this->getFromProperty($person->degrees);
 
-        $this->officeHours =         $this->get($person->officeHours);
+        $this->officeHours =         $this->getFromProperty($person->officeHours);
 
-        $this->headshotAddress =     $this->get($person->headshotAddr);
+        $this->headshotAddress =     $this->getFromProperty($person->headshotAddr);
 
-        $this->webPage =             $this->get($person->webPage);
+        $this->webPage =             $this->getFromProperty($person->webPage);
 
-        $this->curriculumVitaeAddr = $this->get($person->curriculumVitaeAddr);
+        $this->curriculumVitaeAddr = $this->getFromProperty($person->curriculumVitaeAddr);
 
         $this->tags =                $this->_setTagData($person->tags, "tag");
 
         $this->tagGroups =           $this->_setTagData($person->tagGroups, "tagGroup");
 
-        $this->twitterName =         $this->get($person->twitterName);
+        $this->twitterName =         $this->getFromProperty($person->twitterName);
 
-        $this->expertise =           $this->get($person->expertise);
+        $this->expertise =           $this->getFromProperty($person->expertise);
 
-        $this->briefBio =            $this->get($person->briefBio);
+        $this->briefBio =            $this->getFromProperty($person->briefBio);
 
-        $this->fullBio =             $this->get($person->fullBio);
+        $this->fullBio =             $this->getFromProperty($person->fullBio);
 
-        $this->dateDisplay =         $this->get($person->dateDisplay);
+        $this->dateDisplay =         $this->getFromProperty($person->dateDisplay);
 
-        $this->dateISO =             $this->get($person->dateISO);
+        $this->dateISO =             $this->getFromProperty($person->dateISO);
 
         $this->publications =        $this->_setWorks(
                                         $person->publications,

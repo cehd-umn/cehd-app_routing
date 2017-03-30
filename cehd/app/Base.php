@@ -140,6 +140,11 @@ class BaseClass
         return is_array($obj) || is_object($obj) || $obj instanceof \Traversable;
     }
 
+    /**
+     * Creates errors messages from a simplexml_load_string error object
+     * @param object $errors - error object from simplexml_load_string
+     * @return array - an array of formatted error messages
+     */
     public function parseXMLErrors($errors)
     {
         $error_msgs = [];
@@ -172,5 +177,20 @@ class BaseClass
         }
 
         return $error_msgs;
+    }
+
+    /**
+     * Gets a property value if the property exists; returns $default otherwise
+     * @param string $property_name - the name of the property
+     * @param mixed $default - the default value to return if the property doesn't exist
+     * @return mixed - property value or default if the property doesn't exist
+     */
+    public function get($property_name, $default=null)
+    {
+        if (property_exists($this, $property_name))
+        {
+           return $this->$property_name;
+        }
+        return $default;
     }
 }
