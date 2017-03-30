@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../cehd/app/App/App.php';
-require_once __DIR__ . '/../cehd/app/People/People.php';
+require_once __DIR__ . '/../cehd/app/XML/People.php';
 require_once __DIR__ . '/../cehd/app/Response/BaseResponse.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -157,7 +157,15 @@ class AppTest extends TestCase
         $this->assertTrue(is_array($results));
         $this->assertFalse(empty($errors));
         $this->assertEquals(2, count($results));
-
         $this->assertTrue(strpos($results[0], "Opening and ending tag mismatch") > 0);
+    }
+
+    public function testGet()
+    {
+        $expected = null;
+        $this->assertEquals($expected, $this->appInstance->get("does_not_exist"));
+        $expected = "default";
+        $this->assertEquals($expected, $this->appInstance->get("does_not_exist", "default"));
+        $this->assertTrue(is_array($this->appInstance->get("config")));
     }
 }
