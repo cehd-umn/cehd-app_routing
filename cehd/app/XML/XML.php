@@ -15,18 +15,27 @@ class XML extends \CEHD\App\BaseClass
         $this->_http_client = $this->bootstrapHTTPClient([]);
     }
 
-    protected function _xmlStringToObject($xml_string)
-    {
-        if ($this->validateXML($xml_string))
-        {
-            return simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
-        }
-    }
-
-    // @todo get rid of the protected method in favor of this public one
     public function xmlStringToObject($xml_string)
     {
-        return $this->_xmlStringToObject($xml_string);
+        libxml_use_internal_errors(true);
+        if (trim($xml_string) === "")
+        {
+            return null;
+        } else {
+            $doc = simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
+            if (!$doc)
+            {
+                $xml_errors = libxml_get_errors();
+
+                $errors = $this->parseXMLErrors($xml_errors);
+
+                foreach($errors as $msg)
+                {
+                    throw new \Exception($msg);
+                }
+            }
+            return $doc;
+        }
     }
 
     public function validateXML($xml_string)

@@ -43,19 +43,11 @@ class News extends \CEHD\App\XML\RSS\RSS
 
     function __construct($xml_string)
     {
-        if ($this->validateXML($xml_string))
-        {
-            $xml = $this->xmlStringToObject($xml_string);
-            $this->_setStories($xml);
-        }
-        else
-        {
-            foreach($this->_errors as $msg)
-            {
-                throw new \Exception($msg);
-            }
+        $stories = $this->xmlStringToObject($xml_string);
 
-            $this->_clearErrors();
+        if ($stories)
+        {
+            $this->_setStories($stories);
         }
     }
 

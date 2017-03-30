@@ -92,7 +92,7 @@ class Search extends \CEHD\App\XML\XML
         $client_response = $this->_http_client->request(
             "GET", $this->_base_url, $client_query_data);
 
-        $xml_obj = $this->_xmlStringToObject(
+        $xml_obj = $this->xmlStringToObject(
             $client_response->getBody());
 
         return $this->_getSearchResultsFromXMLObject($xml_obj);
