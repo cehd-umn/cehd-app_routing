@@ -219,20 +219,28 @@ class Person extends \CEHD\App\XML\XML
         return $objects;
     }
 
+    private function _createJob($jobData)
+    {
+        $job = new Job();
+
+        $job->deptId               = $this->toString($jobData->deptId);
+        $job->deptIdDescription    = $this->toString($jobData->deptIdDescription);
+        $job->status               = $this->toString($jobData->jobStatus);
+        $job->description          = $this->toString($jobData->jobCodeDescr);
+        $job->umZDeptId            = $this->toString($jobData->umZDeptId);
+        $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescription);
+        return $job;
+    }
+
     private function _setJobs($jobsData)
     {
-        foreach($jobsData->job as $jobData)
+        if (property_exists($jobsData, "job"))
         {
-            $job = new Job();
 
-            $job->deptId               = $this->toString($jobData->deptId);
-            $job->deptIdDescription    = $this->toString($jobData->deptIdDescription);
-            $job->status               = $this->toString($jobData->jobStatus);
-            $job->description          = $this->toString($jobData->jobCodeDescr);
-            $job->umZDeptId            = $this->toString($jobData->umZDeptId);
-            $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescription);
-
-            array_push($this->jobs, $job);
+            foreach($jobsData->job as $jobData)
+            {
+                array_push($this->jobs, $this->_createJob($jobData));
+            }
         }
     }
 

@@ -35,20 +35,4 @@ class BaseResponseTest extends TestCase
         // There are 10 results
         $this->assertEquals(count($obj->RES->R), 10);
     }
-
-    public function testgetNewsfeedArrayFromXMLObject()
-    {
-        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/newsfeed.xml');
-
-        $obj = $this->response->xmlStrToObject($xmlStr);
-        $converted = $this->response->getNewsfeedArrayFromXML($obj);
-        $this->assertTrue(is_array($converted));
-        $this->assertArrayHasKey('title', $converted[0]);
-        $this->assertArrayHasKey('description', $converted[0]);
-        $this->assertArrayHasKey('thumbnail', $converted[0]);
-        $this->assertArrayHasKey('teaser', $converted[0]);
-
-        $json = json_encode($converted);
-        $this->assertTrue(is_string($json));
-    }
 }
