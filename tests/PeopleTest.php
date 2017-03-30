@@ -88,4 +88,10 @@ class PeopleTest extends TestCase
         $people_instance = new \CEHD\App\People\People($xmlStr);
         $this->assertEquals(0, count($people_instance->people));
     }
+
+    public function testNoJobs()
+    {
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/people_tag_no_jobs.xml');
+        $people = new \CEHD\App\People\People($xmlStr);
+    }
 }
