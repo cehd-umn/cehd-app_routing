@@ -45,11 +45,6 @@ class PeopleTest extends TestCase
         $this->assertEquals(18, count($this->people_obj_multiple_presentations->people[0]->presentations));
     }
 
-    public function testToJSON()
-    {
-        $this->assertTrue(is_string($this->people_obj_single_presentation->people[0]->toJSON()));
-    }
-
     public function testMultiplePeople() {
         $this->assertEquals(10, count($this->people_multiple_from_tag->people));
     }
@@ -79,14 +74,6 @@ class PeopleTest extends TestCase
     public function testChrist()
     {
         $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
-    }
-
-    public function testInvalidXML()
-    {
-        $this->expectException(Exception::class);
-        $xmlStr = "<xml><open></xml>";
-        $people_instance = new \CEHD\App\People\People($xmlStr);
-        $this->assertEquals(0, count($people_instance->people));
     }
 
     public function testNoJobs()

@@ -1,111 +1,351 @@
 <?php
+/**
+ * @author Tony Thomas <thoma127@umn.edu>
+ * @license GPL 3.0
+ * @package CEHD App
+ *
+ * A class for consistently handling XML feeds from the People tool
+ *
+ */
 
 namespace CEHD\App\People;
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
+/**
+ * BaseTag class
+ *
+ * A parent class that contains properties common to tags and tagGroups
+ */
 class BaseTag
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * tag/tagGroup id
+     *
+     * @type string
+     */
     public $id;
+
+    /**
+     * tag/tagGroup name
+     *
+     * @type string
+     */
     public $name;
+
+    /**
+     * tag/tagGroup description
+     *
+     * @type string
+     */
     public $description;
 }
 
+/**
+ * Tag class
+ *
+ * A class for properties unique to tags
+ *
+ * Tags are part of a Person object
+ *
+ * @extends BaseTag
+ */
 class Tag extends BaseTag
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * the name of the People tool query parameter; i.e., tg=38
+     *
+     * @type string
+     */
     public $query_key = "tg";
 }
 
+/**
+ * TagGroup class
+ *
+ * A class for properties unique to tagGroups
+ *
+ * TagGroups are part of a Person object
+ *
+ * @extends BaseTag
+ */
 class TagGroup extends BaseTag
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * the name of the People tool query parameter; i.e., en=38
+     *
+     * @type string
+     */
     public $query_key = "en";
+
+    /**
+     * An abbreviation representing the tagGroup
+     *
+     * @type string
+     */
     public $abbreviation;
 }
 
+/**
+ * Job class
+ *
+ * A class representing faculty jobs
+ *
+ * Jobs are part of a Person object
+ *
+ */
 class Job
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * the internal department id
+     *
+     * @type string
+     */
     public $deptId;
 
+    /**
+     * the internal department description
+     *
+     * @type string
+     */
     public $deptIdDescription;
 
+    /**
+     * Job status
+     *
+     * @type string
+     */
     public $status;
 
+    /**
+     * Job description
+     *
+     * @type string
+     */
     public $description;
 
+    /**
+     * UMN Dept id
+     *
+     * @type string
+     */
     public $umZDeptId;
 
+    /**
+     * UMN Dept description
+     *
+     * @type string
+     */
     public $umZDeptIdDescription;
 }
 
+/**
+ * Person class
+ *
+ * Person objects are meant to be contained in a People object
+ *
+ * @extends XML
+ */
 class Person extends \CEHD\App\XML\XML
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * @type string
+     */
     public $address_1;
 
+    /**
+     * @type string
+     */
     public $address_2;
 
+    /**
+     * @type string
+     */
     public $address_3;
 
+    /**
+     * @type string
+     */
     public $address_4;
 
+    /**
+     * @type string
+     */
     public $areasOfInterest;
 
+    /**
+     * @type string
+     */
     public $briefBio;
 
+    /**
+     * @type string
+     */
     public $city;
 
+    /**
+     * @type string
+     */
     public $curriculumVitaeAddr;
 
+    /**
+     * @type string
+     */
     public $dateDisplay;
 
+    /**
+     * @type string
+     */
     public $dateISO;
 
+    /**
+     * @type string
+     */
     public $degrees;
 
+    /**
+     * @type string
+     */
     public $expertise;
 
+    /**
+     * @type string
+     */
     public $fax;
 
+    /**
+     * @type string
+     */
     public $firstName;
 
+    /**
+     * @type string
+     */
     public $fullBio;
 
+    /**
+     * @type string
+     */
     public $headShot;
 
+    /**
+     * @type string
+     */
     public $internetId;
 
+    /**
+     * @type array
+     */
     public $jobs = [];
 
+    /**
+     * @type string
+     */
     public $lastName;
 
+    /**
+     * @type string
+     */
     public $middleName;
 
+    /**
+     * @type string
+     */
     public $name;
 
+    /**
+     * @type string
+     */
     public $nameFirstLast;
 
+    /**
+     * @type string
+     */
     public $nameSuffix;
 
+    /**
+     * @type string
+     */
     public $officeHours;
 
+    /**
+     * @type string
+     */
     public $phone;
 
+    /**
+     * @type string
+     */
     public $presentations;
 
+    /**
+     * @type string
+     */
     public $publications;
 
+    /**
+     * @type string
+     */
     public $state;
 
+    /**
+     * @type array
+     */
     public $tags = [];
 
+    /**
+     * @type array
+     */
     public $tagGroups = [];
 
+    /**
+     * @type string
+     */
     public $twitterName;
 
+    /**
+     * @type string
+     */
     public $webPage;
 
+    /**
+     * @type string
+     */
     public $workingTitle;
 
+    /**
+     * @type string
+     */
     public $zip;
 
+    /**
+     * Class methods
+     */
+
+    /**
+     * Constructor
+     *
+     * @param obj $person - XML object representing a person
+     */
     function __construct($person)
     {
         $this->name =                $this->getFromProperty($person->name);
@@ -183,6 +423,15 @@ class Person extends \CEHD\App\XML\XML
         $this->_setJobs($person->jobs);
     }
 
+    /**
+     * Sets $this->tags or $this->tagGroups
+     *
+     * The logic for setting either is the same. Properties vary between the
+     * two.
+     *
+     * @param object $tagData - An XML object from an representing a tag or TagGroup
+     * @param string $nodeName - Either "tag" or "tagGroup"
+     */
     private function _setTagData($tagData, $nodeName)
     {
         $objects = [];
@@ -219,6 +468,11 @@ class Person extends \CEHD\App\XML\XML
         return $objects;
     }
 
+    /**
+     * Creates a Job instance
+     *
+     * @param object $jobData - An XML object from an representing a job
+     */
     private function _createJob($jobData)
     {
         $job = new Job();
@@ -232,6 +486,11 @@ class Person extends \CEHD\App\XML\XML
         return $job;
     }
 
+    /**
+     * Sets $this->jobs
+     *
+     * @param object $jobsData - An XML object from an representing jobs
+     */
     private function _setJobs($jobsData)
     {
         if (property_exists($jobsData, "job"))
@@ -244,6 +503,12 @@ class Person extends \CEHD\App\XML\XML
         }
     }
 
+    /**
+     * Sets $this->presentations or $this->publications
+     *
+     * @param object $worksData - An XML object from an representing jobs
+     * @param string $name - Either "presentation" or "publication"
+     */
     private function _setWorks($worksData, $name)
     {
         $works = [];
@@ -269,22 +534,47 @@ class Person extends \CEHD\App\XML\XML
     }
 }
 
+/**
+ * People class
+ *
+ * Typically a People object is instantiated and Person objects are contained
+ * there.
+ *
+ * @example new \CEHD\App\People\People($validXmlStr);
+ */
 class People extends \CEHD\App\XML\XML
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * @type array
+     */
     public $people = [];
 
+    /**
+     * Class methods
+     */
+
+    /**
+     * Constructor
+     *
+     * Sets stories if the XML is valid; Throws exceptions otherwise
+     *
+     * @param str $xml_string - XML
+     */
     function __construct($xml_string)
     {
-        if ($this->validateXML($xml_string))
-        {
-            $xml = $this->_xmlStringToObject($xml_string);
+        $xml = $this->xmlStringToObject($xml_string);
 
+        if ($xml)
+        {
             foreach($xml->person as $person)
             {
                 array_push($this->people, new Person($person));
             }
         }
-
         else
         {
             foreach($this->_errors as $msg)
@@ -296,6 +586,11 @@ class People extends \CEHD\App\XML\XML
         }
     }
 
+    /**
+     * Gets people count
+     *
+     * @return int
+     */
     public function get_count() {
         return count($this->people);
     }
