@@ -54,8 +54,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     array_push($program_data[$program_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
-
-                //$program_data[$program_index]["category_classes"] = join(" ", $program_data[$program_index]["categories_hyphenated"]);
             }
 
             if ($program["degrees"])
@@ -66,8 +64,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
                     $degrees[$hyphenated] = $degree;
                 }
-
-                //$program_data[$program_index]["degree_classes"] = join(" ", $program_data[$program_index]["degrees_hyphenated"]);
             }
         }
 
