@@ -2,9 +2,10 @@
 namespace CEHD\App\EdPsych;
 
 require_once __DIR__ . "/../../../cehd/app/App/App.php";
-require_once __DIR__ . "/../../../cehd/app/XML/Search.php";
-require_once __DIR__ . "/../../../cehd/app/XML/People.php";
+require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
 require_once __DIR__ . "/../../../cehd/app/XML/News.php";
+require_once __DIR__ . "/../../../cehd/app/XML/People.php";
+require_once __DIR__ . "/../../../cehd/app/XML/Search.php";
 
 class EdPsychApp extends \CEHD\App\App\BaseApp
 {
@@ -144,7 +145,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 ]
             ];
             $client_response = $http_client->request("GET",$base_url, $client_query_data);
-            $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+            $events =  new \CEHD\XML\Event\Events($client_response->getBody());
+            $response->sendJSONResponse(json_encode($events->events));
         }
     }
 
