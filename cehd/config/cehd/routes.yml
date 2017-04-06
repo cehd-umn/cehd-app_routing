@@ -37,11 +37,6 @@
 ####################################
 ## This system is case-sensitive! ##
 ####################################
-/:
-  template: cehd/index.html
-  publish: true
-  template_data:
-    - section: home
 /departments-centers/:
   template: cehd/departments-centers.html
   publish: true
@@ -1553,11 +1548,6 @@
 /trio/mcnair/2014/wright/:
   publish: true
   template: cehd/trio/mcnair/2014/wright.html
-  template_data:
-    - section: trio
-/trio/mcnair/2014/tibebu/:
-  publish: true
-  template: cehd/trio/mcnair/2014/tibebu.html
   template_data:
     - section: trio
 /trio/mcnair/2015/abdi/:

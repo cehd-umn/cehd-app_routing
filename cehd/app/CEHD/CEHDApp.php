@@ -34,6 +34,23 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal('cehd_cehd_nav_open', $this->nav_open);
     }
 
+    public function homePageHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/homepage_videos.yml';
+        $video_data = $this->loadYaml($yaml_file_path);
+
+        foreach ($video_data as $key => $video)
+        {
+            $mod_time = filemtime(__DIR__ . "/../../../public" . $video["source"]);
+            $video_data[$key]["mod_time"] = $mod_time ? $mod_time : strtotime("now");
+        }
+
+        $template_data = [
+            "videos" => $video_data,
+        ];
+        echo $this->_renderTemplate('cehd/index.html', $template_data);
+    }
+
     public function programsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
