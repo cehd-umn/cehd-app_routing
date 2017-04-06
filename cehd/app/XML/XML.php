@@ -1,30 +1,46 @@
 <?php
+/**
+ * @author Tony Thomas <thoma127@umn.edu>
+ * @license GPL 3.0
+ * @package CEHD App
+ *
+ * A class for handling XML.
+ *
+ */
 
 namespace CEHD\App\XML;
 require_once __DIR__ . "/../../../cehd/app/Base.php";
 require_once __DIR__ . "/../../../vendor/autoload.php";
 
+/**
+ * XML class
+ *
+ * @extends BaseClass
+ */
 class XML extends \CEHD\App\BaseClass
 {
-    protected $_http_client;
+    /**
+     * Class methods
+     */
 
-    function __construct()
+    /**
+     * Parses an XML string into a SimpleXMLElement object
+     *
+     * @param string $xml
+     * @return object SimpleXMLElement $xml - An object representation of XML
+     */
+    public function xmlStringToObject($xml)
     {
-        // @todo while putting an http client here is sometimes convenient,
-        // it's probably not good design
-        $this->_http_client = $this->bootstrapHTTPClient([]);
-    }
-
-    public function xmlStringToObject($xml_string)
-    {
+        // Make errors internal
         libxml_use_internal_errors(true);
-        if (trim($xml_string) === "")
+        if (trim($xml) === "")
         {
             return null;
         } else {
-            $doc = simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
-            if (!$doc)
+            $obj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
+            if (!$obj)
             {
+                // Throw exceptions of the XML was invalid
                 $xml_errors = libxml_get_errors();
 
                 $errors = $this->parseXMLErrors($xml_errors);
@@ -34,47 +50,40 @@ class XML extends \CEHD\App\BaseClass
                     throw new \Exception($msg);
                 }
             }
-            return $doc;
+            // var_dump($obj);
+            return $obj;
         }
     }
 
-    public function validateXML($xml_string)
-    {
-        libxml_use_internal_errors(true);
-        if (trim($xml_string) === "")
-        {
-            return false;
-        } else {
-            $doc = simplexml_load_string($xml_string, null, LIBXML_NOCDATA);
-            if (!$doc)
-            {
-                $xml_errors = libxml_get_errors();
-
-                $this->_errors = $this->parseXMLErrors($xml_errors);
-                return false;
-            }
-        }
-
-        libxml_clear_errors();
-
-        return true;
-    }
-
+    /**
+     * Casts to string and trims whitespace
+     *
+     * @param mixed $property
+     * @return string
+     */
     public function toString($property)
     {
         return trim((string) $property);
     }
 
-    // The distinction here from "get" is that "get" can be called directly on
-    // any object created from a class that extends XML. I.e.,
-    // $instance->get("property_name"); This method is meant to work on generic
-    // XML objects created from simplexml_load_string().
+    /**
+     * Casts to string and trims whitespace; returns null if the string is
+     * empty
+     *
+     * @param mixed $property
+     * @return mixed string or null
+     */
     public function getFromProperty($property)
     {
         $stringified = $this->toString($property);
         return !empty($stringified) ? $stringified : null;
     }
 
+    /**
+     * Creates a JSON representation of any object using this class
+     *
+     * @return string
+     */
     public function toJSON()
     {
         return json_encode($this, true);

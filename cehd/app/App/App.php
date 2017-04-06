@@ -3,7 +3,6 @@
  * @author Tony Thomas <thoma127@umn.edu>
  * @license GPL 3.0
  * @package CEHD App
- * @version 0.1.0
  *
  * The Base App for maintaining routes and templates for CEHD sites
  *
@@ -29,7 +28,7 @@ use UMN\CEHD\Dict;
  * Instantiate the app by passing in an array containing paths to said YAML
  * files.
  *
- * @example routes/cehd/static_routes.php
+ * @example routes/cehd/routes.php
  */
 class BaseApp extends \CEHD\App\BaseClass
 {
