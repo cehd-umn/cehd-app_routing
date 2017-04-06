@@ -216,4 +216,26 @@ class BaseClass
         }
         return $default;
     }
+
+    /**
+     * Takes an associative array that has real-language keys and builds a new
+     * array with hyphenated keys based on the original keys
+     *
+     * This is well-suited for data in YAML files that have natural language
+     * keys for a list of objects
+     * @param array $original_data
+     * @return array
+     */
+    public function buildHyphenatedKeys($original_data)
+    {
+        $new_data = [];
+
+        foreach ($original_data as $key => $data)
+        {
+            $hyphenated = $this->hyphenate($key);
+            $new_data[$hyphenated] = $data;
+            $new_data[$hyphenated]["keyTitle"] = $key;
+        }
+        return $new_data;
+    }
 }

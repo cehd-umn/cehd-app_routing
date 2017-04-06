@@ -82,22 +82,23 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 
-    public function topicsPageHandler($request, $response, $service, $app)
+    private function _parseTopicData()
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $topic_data = $this->loadYaml($yaml_file_path);
+        $topic_data = $this->buildHyphenatedKeys(
+            $this->loadYaml($yaml_file_path));
         $categories = [];
 
-        foreach ($topic_data as $topic_index => $topic)
+        foreach ($topic_data as $key => $topic)
         {
-            $topic_data[$topic_index]["categories_hyphenated"] = [];
+            $topic_data[$key]["categories_hyphenated"] = [];
 
             if ($topic["categories"])
             {
                 foreach ($topic["categories"] as $category_index => $category)
                 {
                     $hyphenated = $this->hyphenate($category);
-                    array_push($topic_data[$topic_index]["categories_hyphenated"], $hyphenated);
+                    array_push($topic_data[$key]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
             }
@@ -105,14 +106,41 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         asort($categories);
 
+        return [
+            "topics" => $topic_data,
+            "categories" => $categories,
+        ];
+    }
+
+    public function topicsPageHandler($request, $response, $service, $app)
+    {
+        $topics_and_cats = $this->_parseTopicData();
+
         $template_data = [
             "section" => "topics",
-            "topic_data" => $topic_data,
-            "categories" => $categories,
-            "topic_data_json" => json_encode($topic_data),
+            "topic_data" => $topics_and_cats["topics"],
+            "categories" => $topics_and_cats["categories"],
+            "topic_data_json" => json_encode($topics_and_cats["topics"]),
         ];
 
         echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
+    }
+
+    public function topicPageHandler($request, $response, $service, $app)
+    {
+        $topics_and_cats = $this->_parseTopicData();
+        $topics = $topics_and_cats["topics"];
+        $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
+
+        if ($topic_data)
+        {
+            $template_data = [
+                "section" => "topics",
+                "topic_data" => $topic_data,
+                "topic_data_json" => json_encode($topic_data),
+            ];
+            echo $this->_renderTemplate('cehd/topics/topic.html', $template_data);
+        }
     }
 
     public function searchPageHandler($request, $response, $service, $app)

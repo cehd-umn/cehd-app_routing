@@ -1,0 +1,24 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = topic_data.keyTitle %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>{{ page_title }}</h1>
+    <p>{% if topic_data.description %}
+      {{ topic_data.description }}
+    {% else %}
+      This is where you'll find a description for this topic.
+    {% endif %}</p>
+    {% if topic_data.categories %}
+      <h2>Categories</h2>
+      <ul>
+        {% for category in topic_data.categories %}
+          <li>{{ category }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

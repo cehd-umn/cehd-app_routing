@@ -71,48 +71,68 @@
             client: client,
             request: request,
         };
-
-        function set_people(people) {
-            $.each(topic_data, function(tidx, topic) {
-                topic_data[tidx].people = [];
-
-                $.each(people, function(pidx, person) {
-                    $.each(person.tags, function(ptidx, tag) {
-                        if (tag.id == topic.tag_id) {
-                            topic_data[tidx].people.push(person);
-                        }
-                    });
-                });
-            });
+        var element_selector = ".isotope-container";
+        var $target_element = $(element_selector);
+        var renderer = new Renderer();
+        var template_params = {
+            "template_path": "/assets/dist/views/cehd/topics/",
+            "template_name": "index.html",
+            "$target_element": $target_element,
+            "data": {
+                topics: topic_data,
+                config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+            }
         };
+        renderer.init(template_params);
+        renderer.render();
+        var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
 
-        request_obj.request.done(function() {
-            var element_selector = ".isotope-container";
-            var $target_element = $(element_selector);
-            var people = request_obj.client.results;
-            var renderer = new Renderer();
+        // reads query params and filters on them
+        filterManager.onPageLoad();
 
-            set_people(people);
+        // @todo move card rendering back to Twig on the back end
 
-            var template_params = {
-                "template_path": "/assets/dist/views/cehd/people/",
-                "template_name": "index.html",
-                "$target_element": $target_element,
-                "data": {
-                    topics: topic_data,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
+        // function set_people(people) {
+        //     $.each(topic_data, function(tidx, topic) {
+        //         topic_data[tidx].people = [];
 
-            renderer.init(template_params);
-            renderer.render();
+        //         $.each(people, function(pidx, person) {
+        //             $.each(person.tags, function(ptidx, tag) {
+        //                 if (tag.id == topic.tag_id) {
+        //                     topic_data[tidx].people.push(person);
+        //                 }
+        //             });
+        //         });
+        //     });
+        // };
 
-        }).then(function() {
-            var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
+        // request_obj.request.done(function() {
+        //     var element_selector = ".isotope-container";
+        //     var $target_element = $(element_selector);
+        //     var people = request_obj.client.results;
+        //     var renderer = new Renderer();
 
-            // reads query params and filters on them
-            filterManager.onPageLoad();
-        });
+        //     set_people(people);
+
+        //     var template_params = {
+        //         "template_path": "/assets/dist/views/cehd/people/",
+        //         "template_name": "index.html",
+        //         "$target_element": $target_element,
+        //         "data": {
+        //             topics: topic_data,
+        //             config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+        //         }
+        //     };
+
+        //     renderer.init(template_params);
+        //     renderer.render();
+
+        // }).then(function() {
+        //     var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
+
+        //     // reads query params and filters on them
+        //     filterManager.onPageLoad();
+        // });
 
         window.onpopstate = function() {
             filterManager.onPageLoad();

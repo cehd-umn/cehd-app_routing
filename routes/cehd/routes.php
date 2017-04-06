@@ -27,6 +27,8 @@ $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
 $app->router->respond('GET', '/topics/', [$app, 'topicsPageHandler']);
 
+$app->router->respond('GET', '/topics/[:topic]/', [$app, 'topicPageHandler']);
+
 $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
 $app->router->respond('GET', '/directory/[:internetId]/', [$app, 'personPageHandler']);

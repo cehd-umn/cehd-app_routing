@@ -168,4 +168,16 @@ class AppTest extends TestCase
         $this->assertEquals($expected, $this->appInstance->get("does_not_exist", "default"));
         $this->assertTrue(is_array($this->appInstance->get("config")));
     }
+
+    public function testBuildHyphenatedKeys()
+    {
+        $yamlData = $this->appInstance->loadYaml(__DIR__ . '/fixtures/experts.yml');
+        $hyphenatedData = $this->appInstance->buildHyphenatedKeys($yamlData);
+        $expected = "Education Policy K-12";
+        $expected_key = $expected;
+        $expected_hyphenated = $this->appInstance->hyphenate($expected);
+        $this->assertArrayHasKey($expected, $yamlData);
+        $this->assertArrayHasKey($expected_hyphenated, $hyphenatedData);
+        $this->assertEquals($expected, $hyphenatedData[$expected_hyphenated]["keyTitle"]);
+    }
 }
