@@ -1,13 +1,36 @@
 <?php
+/**
+ * @author Tony Thomas <thoma127@umn.edu>
+ * @license GPL 3.0
+ * @package CEHD App
+ * @version 2.1.1
+ *
+ * The Base class to hold common methods
+ */
 
 namespace CEHD\App;
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/../../cehd/app/Config/Config.php";
 
+/**
+ * Base class
+ */
 class BaseClass
 {
+    /**
+     * Class properties
+     */
+
+    /**
+     * Array of file error messages
+     *
+     * @type array
+     */
     protected $_errors = [];
 
+    /**
+     * Clears errors
+     */
     protected function _clearErrors()
     {
         $this->_errors = [];
@@ -64,7 +87,7 @@ class BaseClass
     public function hyphenate($str, array $noStrip = [])
     {
         // http://www.mendoweb.be/blog/php-convert-string-to-hyphenated-string/
-        // non-alpha and non-numeric characters become spaces
+        // non-alpha and non-numeric characters become hyphens
         $str = preg_replace('/[^a-z0-9' . implode("", $noStrip) . ']+/i', ' ', $str);
         $str = trim($str);
         $str = str_replace(" ", "-", $str);
@@ -140,6 +163,11 @@ class BaseClass
         return is_array($obj) || is_object($obj) || $obj instanceof \Traversable;
     }
 
+    /**
+     * Creates errors messages from a simplexml_load_string error object
+     * @param object $errors - error object from simplexml_load_string
+     * @return array - an array of formatted error messages
+     */
     public function parseXMLErrors($errors)
     {
         $error_msgs = [];
@@ -172,5 +200,20 @@ class BaseClass
         }
 
         return $error_msgs;
+    }
+
+    /**
+     * Gets a property value if the property exists; returns $default otherwise
+     * @param string $property_name - the name of the property
+     * @param mixed $default - the default value to return if the property doesn't exist
+     * @return mixed - property value or default if the property doesn't exist
+     */
+    public function get($property_name, $default=null)
+    {
+        if (property_exists($this, $property_name))
+        {
+           return $this->$property_name;
+        }
+        return $default;
     }
 }

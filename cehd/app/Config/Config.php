@@ -7,7 +7,6 @@
  *
  * @author Tony Thomas <thoma127@umn.edu>
  * @license GPL 3.0
- * @version 0.1.0
  */
 
 namespace CEHD\App\Config;

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../cehd/app/People/People.php';
+require_once __DIR__ . '/../cehd/app/XML/People.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,11 +45,6 @@ class PeopleTest extends TestCase
         $this->assertEquals(18, count($this->people_obj_multiple_presentations->people[0]->presentations));
     }
 
-    public function testToJSON()
-    {
-        $this->assertTrue(is_string($this->people_obj_single_presentation->people[0]->toJSON()));
-    }
-
     public function testMultiplePeople() {
         $this->assertEquals(10, count($this->people_multiple_from_tag->people));
     }
@@ -81,11 +76,9 @@ class PeopleTest extends TestCase
         $this->assertEquals("Professor", $this->people_christ->people[0]->jobs[0]->description);
     }
 
-    public function testInvalidXML()
+    public function testNoJobs()
     {
-        $this->expectException(Exception::class);
-        $xmlStr = "<xml><open></xml>";
-        $people_instance = new \CEHD\App\People\People($xmlStr);
-        $this->assertEquals(0, count($people_instance->people));
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/people_tag_no_jobs.xml');
+        $people = new \CEHD\App\People\People($xmlStr);
     }
 }

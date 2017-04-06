@@ -2,8 +2,10 @@
 namespace CEHD\App\CEHD;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
-require_once __DIR__ . '/../../../cehd/app/Search/Search.php';
-require_once __DIR__ . '/../../../cehd/app/People/People.php';
+require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
+require_once __DIR__ . '/../../../cehd/app/XML/News.php';
+require_once __DIR__ . '/../../../cehd/app/XML/People.php';
+require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
@@ -53,8 +55,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     array_push($program_data[$program_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
-
-                //$program_data[$program_index]["category_classes"] = join(" ", $program_data[$program_index]["categories_hyphenated"]);
             }
 
             if ($program["degrees"])
@@ -65,8 +65,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
                     $degrees[$hyphenated] = $degree;
                 }
-
-                //$program_data[$program_index]["degree_classes"] = join(" ", $program_data[$program_index]["degrees_hyphenated"]);
             }
         }
 
@@ -129,7 +127,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "sites" => ["primary", "secondary"],
         ];
 
-        $results = $search_client->get($search_client_query_data);
+        $results = $search_client->getResults($search_client_query_data);
         $template_data = [
             "results" => $results,
             "query" => $query_data["q"],
@@ -142,7 +140,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
-        $results = $search_client->get($query_data);
+        $results = $search_client->getResults($query_data);
         return $response->sendJSONResponse(json_encode($results));
     }
 
@@ -196,35 +194,34 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
-        if (array_key_exists('feed-path', $query_data))
+        if (array_key_exists("feed-path", $query_data))
         {
             $http_client = $this->bootstrapHTTPClient([]);
-            $request_url = $base_url . $query_data['feed-path'];
-            $client_response = $http_client->request('GET', $request_url);
+            $request_url = $base_url . $query_data["feed-path"];
+            $client_response = $http_client->request("GET", $request_url);
             $xml = $client_response->getBody();
-            $xml_obj = $response->xmlStrToObject($xml);
-            $result_array = $response->getNewsfeedArrayFromXML($xml_obj);
-            $json = json_encode($result_array);
-            $response->sendJSONResponse($json);
+            $news = new \CEHD\App\XML\News\News($xml);
+            $response->sendJSONResponse(json_encode($news->stories));
         }
     }
 
     public function eventsFeedEndpointHandler($request, $response, $service, $app)
     {
-        $base_url =  'https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx';
+        $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
         $query_data = $request->params();
-        if (array_key_exists('r', $query_data) &&
-                array_key_exists('t', $query_data) &&
-                array_key_exists('q', $query_data)) {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-            $client_query_data = ['query' => [
-                'r' => $query_data['r'],
-                't' => $query_data['t'],
-                'q' => $query_data['q'],
+        if (array_key_exists("r", $query_data) &&
+                array_key_exists("t", $query_data) &&
+                array_key_exists("q", $query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_query_data = ["query" => [
+                "r" => $query_data["r"],
+                "t" => $query_data["t"],
+                "q" => $query_data["q"],
                 ]
             ];
-            $client_response = $http_client->request('GET',$base_url, $client_query_data);
-            $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $events =  new \CEHD\XML\Event\Events($client_response->getBody());
+            $response->sendJSONResponse(json_encode($events->events));
         }
     }
 

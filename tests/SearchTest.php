@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../cehd/app/Search/Search.php';
+require_once __DIR__ . '/../cehd/app/XML/Search.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -96,7 +96,7 @@ class SearchTest extends TestCase
             'q' => "social work"
         ];
 
-        $results = $this->search->get($query_params);
+        $results = $this->search->getResults($query_params);
         $this->assertTrue(is_array($results));
         $this->assertEquals(
             $results['primary']['name'],
@@ -111,7 +111,7 @@ class SearchTest extends TestCase
             'num' => 3,
         ];
 
-        $results = $this->search->get($query_params);
+        $results = $this->search->getResults($query_params);
         $this->assertEquals(count($results['primary']['results']), 3);
     }
 }
