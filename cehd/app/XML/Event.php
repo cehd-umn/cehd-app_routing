@@ -1,0 +1,249 @@
+<?php
+/**
+ * @author Tony Thomas <thoma127@umn.edu>
+ * @license GPL 3.0
+ * @package CEHD App
+ *
+ * A class for handling Events feeds
+ *
+ */
+
+namespace CEHD\XML\Event;
+require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
+
+/**
+ * Event class
+ *
+ * Event objects are meant to be contained in an Events object
+ *
+ * @extends XML
+ */
+class Event extends \CEHD\App\XML\XML
+{
+    /**
+     * Class properties
+     */
+
+    /**
+     * @type string
+     */
+    public $date;
+
+    /**
+     * @type string
+     */
+    public $dateTimeEnd;
+
+    /**
+     * @type string
+     */
+    public $dateTimeStart;
+
+    /**
+     * @type string
+     */
+    public $description;
+
+    /**
+     * @type string
+     */
+    public $endTime;
+
+    /**
+     * @type string
+     */
+    public $id;
+
+    /**
+     * @type string
+     */
+    public $location;
+
+    /**
+     * @type string
+     */
+    public $locationURL;
+
+    /**
+     * @type string
+     */
+    public $shortDescription;
+
+    /**
+     * @type string
+     */
+    public $startTime;
+
+    /**
+     * @type string
+     */
+    public $title;
+
+    /**
+     * @type string
+     */
+    public $url;
+
+    /**
+     * Class methods
+     */
+
+    /**
+     * Constructor
+     *
+     * @param obj $person - XML object representing a person
+     */
+    function __construct($event)
+    {
+        $this->date = $this->getFromProperty($event->eventDate);
+
+        $this->startTime = $this->getFromProperty($event->startTime);
+
+        $this->endTime = $this->getFromProperty($event->endTime);
+
+        $this->dateTimeEnd = $this->date . " " . $this->endTime;
+
+        $this->dateTimeStart = $this->date . " " . $this->startTime;
+
+        $this->description = $this->getFromProperty($event->extendedDescr);
+
+        $this->id = $this->getFromProperty($event->eventId);
+
+        $this->location = $this->getFromProperty($event->location);
+
+        $this->locationURL = $this->getFromProperty($event->locationURL);
+
+        $this->shortDescription = $this->getFromProperty($event->briefDescr);
+
+        $this->title = $this->getFromProperty($event->title);
+
+        $this->url = $this->getFromProperty($event->link);
+    }
+
+    /**
+     * Returns the numerical day of the event
+     *
+     * @return string
+     */
+    public function day()
+    {
+        return date("j", strtotime($this->date));
+    }
+
+    /**
+     * Returns the numerical month of the event
+     *
+     * @return string
+     */
+    public function month()
+    {
+        return date("n", strtotime($this->date));
+    }
+
+    /**
+     * Returns the full spelling of the month of the event
+     *
+     * @return string
+     */
+    public function fullMonth()
+    {
+        return date("F", strtotime($this->date));
+    }
+
+    /**
+     * Returns the short spelling of the month of the event
+     *
+     * @return string
+     */
+    public function shortMonth()
+    {
+        return date("M", strtotime($this->date));
+    }
+
+    /**
+     * Returns the numerical year of the event
+     *
+     * @return string
+     */
+    public function year()
+    {
+        return date("Y", strtotime($this->date));
+    }
+
+    /**
+     * Returns a Unix timestamp
+     *
+     * @param boolean $end - Whether or not to use the end date
+     * @return string
+     */
+    public function timestamp($end=false)
+    {
+        if ($end)
+        {
+            return strtotime($this->dateTimeEnd);
+        }
+        return strtotime($this->dateTimeStart);
+    }
+}
+
+/**
+ * Events class
+ *
+ * Typically a Events object is instantiated and Event objects are contained
+ * there.
+ *
+ * @example new \CEHD\App\XML\Events($validXmlStr);
+ */
+class Events extends \CEHD\App\XML\XML
+{
+    /**
+     * Class properties
+     */
+
+    /**
+     * @type array
+     */
+    public $events = [];
+
+    /**
+     * Class methods
+     */
+
+    /**
+     * Constructor
+     *
+     * Sets events if the XML is valid
+     *
+     * @param str $xml_string - XML
+     */
+    function __construct($xml_string)
+    {
+        $xml = $this->xmlStringToObject($xml_string);
+
+        if ($xml)
+        {
+            foreach($xml->event as $event)
+            {
+                array_push($this->events, new Event($event));
+            }
+        }
+        else
+        {
+            foreach($this->_errors as $msg)
+            {
+                throw new \Exception($msg);
+            }
+
+            $this->_clearErrors();
+        }
+    }
+
+    /**
+     * Gets event count
+     *
+     * @return int
+     */
+    public function get_count() {
+        return count($this->events);
+    }
+}
