@@ -2,6 +2,7 @@
 namespace CEHD\App\CEHD;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
+require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
@@ -206,20 +207,21 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function eventsFeedEndpointHandler($request, $response, $service, $app)
     {
-        $base_url =  'https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx';
+        $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
         $query_data = $request->params();
-        if (array_key_exists('r', $query_data) &&
-                array_key_exists('t', $query_data) &&
-                array_key_exists('q', $query_data)) {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-            $client_query_data = ['query' => [
-                'r' => $query_data['r'],
-                't' => $query_data['t'],
-                'q' => $query_data['q'],
+        if (array_key_exists("r", $query_data) &&
+                array_key_exists("t", $query_data) &&
+                array_key_exists("q", $query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_query_data = ["query" => [
+                "r" => $query_data["r"],
+                "t" => $query_data["t"],
+                "q" => $query_data["q"],
                 ]
             ];
-            $client_response = $http_client->request('GET',$base_url, $client_query_data);
-            $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
+            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $events =  new \CEHD\XML\Event\Events($client_response->getBody());
+            $response->sendJSONResponse(json_encode($events->events));
         }
     }
 
