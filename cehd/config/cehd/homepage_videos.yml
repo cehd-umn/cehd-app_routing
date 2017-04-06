@@ -1,0 +1,11 @@
+---
+- source: "/assets/dist/video/home-01.mp4"
+  type: "video/mp4"
+- source: "/assets/dist/video/home-02.mp4"
+  type: "video/mp4"
+- source: "/assets/dist/video/home-03.mp4"
+  type: "video/mp4"
+- source: "/assets/dist/video/home-04.mp4"
+  type: "video/mp4"
+- source: "/assets/dist/video/home-05.mp4"
+  type: "video/mp4"
