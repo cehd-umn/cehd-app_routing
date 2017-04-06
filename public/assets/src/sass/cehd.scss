@@ -186,6 +186,15 @@ blockquote {
     }
 }
 
+.circular {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-nav-hero-image-text {
+    font-size: 12px;
+}
+
 .row {
     &.has-hero-image {
         margin-top: 400px;

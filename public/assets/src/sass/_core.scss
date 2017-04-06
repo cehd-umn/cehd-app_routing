@@ -692,6 +692,14 @@ input[type="radio"] {
     margin-left: 2px;
 }
 
+input[type="text"]:focus {
+    border: 1px solid $umn-light-gold;
+
+    &::placeholder {
+        color: transparent;
+    }
+}
+
 .to-upper {
     text-transform: uppercase;
 }
