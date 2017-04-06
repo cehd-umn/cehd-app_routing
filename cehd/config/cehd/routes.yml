@@ -42,6 +42,21 @@
   publish: true
   template_data:
     - section: home
+/departments-centers/:
+  template: cehd/departments-centers.html
+  publish: true
+  template_data:
+    - section: home
+/directory/:
+  template: cehd/directory.html
+  publish: true
+  template_data:
+    - section: home
+/tuition/:
+  template: cehd/tuition.html
+  publish: true
+  template_data:
+    - section: home
 /about/:
   publish: true
   template: cehd/about/index.html
@@ -55,6 +70,11 @@
 /about/accreditation/caep/:
   publish: true
   template: cehd/about/accreditation/caep.html
+  template_data:
+    - section: about
+/about/contact/:
+  publish: true
+  template: cehd/about/contact.html
   template_data:
     - section: about
 /about/dac/:
@@ -547,11 +567,6 @@
   template: cehd/career/degrees/index.html
   template_data:
     - section: career
-/career/degrees/majors/:
-  publish: true
-  template: cehd/career/degrees/majors/index.html
-  template_data:
-    - section: career
 /career/degrees/majors/business-marketing-ed/:
   publish: true
   template: cehd/career/degrees/majors/business-marketing-ed.html
@@ -640,11 +655,6 @@
 /career/internships/:
   publish: true
   template: cehd/career/internships/index.html
-  template_data:
-    - section: career
-/career/internships/credit-funding/:
-  publish: true
-  template: cehd/career/internships/credit-funding.html
   template_data:
     - section: career
 /career/interview/:
@@ -762,6 +772,21 @@
   template: cehd/direct/index.html
   template_data:
     - section: direct
+/diversity/:
+  publish: true
+  template: cehd/diversity/index.html
+  template_data:
+    - section: diversity
+/diversity/engagement/:
+  publish: true
+  template: cehd/diversity/engagement.html
+  template_data:
+    - section: diversity
+/diversity/research/:
+  publish: true
+  template: cehd/diversity/research.html
+  template_data:
+    - section: diversity
 
 # Examples section (note: keep publish "false" for these")
 /examples/:
@@ -795,6 +820,61 @@
     meta_description: null
     section: null
 
+/graduate/:
+  publish: true
+  template: cehd/graduate/index.html
+  template_data:
+    - section: graduate
+/graduate/career/:
+  publish: true
+  template: cehd/graduate/career.html
+  template_data:
+    - section: graduate
+/graduate/funding/:
+  publish: true
+  template: cehd/graduate/funding.html
+  template_data:
+    - section: graduate
+/graduate/support/:
+  publish: true
+  template: cehd/graduate/support.html
+  template_data:
+    - section: graduate
+/policy-breakfast/:
+  publish: true
+  template: cehd/policy-breakfast/index.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/April2013/:
+  publish: true
+  template: cehd/policy-breakfast/April2013.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/Dec2013/:
+  publish: true
+  template: cehd/policy-breakfast/Dec2013.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/Jan2015/:
+  publish: true
+  template: cehd/policy-breakfast/Jan2015.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/May2014/:
+  publish: true
+  template: cehd/policy-breakfast/May2014.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/Oct2015/:
+  publish: true
+  template: cehd/policy-breakfast/Oct2015.html
+  template_data:
+    - section: policy-breakfast
+/policy-breakfast/Sept2016/:
+  publish: true
+  template: cehd/policy-breakfast/Sept2016.html
+  template_data:
+    - section: policy-breakfast
 /reads/:
   publish: true
   template: cehd/reads/index.html
@@ -845,6 +925,51 @@
   template: cehd/reads/previous-books/yang.html
   template_data:
     - section: reads
+/research/:
+  publish: true
+  template: cehd/research/index.html
+  template_data:
+    - section: research
+/research/grantsmanship/:
+  publish: true
+  template: cehd/research/grantsmanship.html
+  template_data:
+    - section: research
+/research/pi/:
+  publish: true
+  template: cehd/research/pi.html
+  template_data:
+    - section: research
+/research/research-day/:
+  publish: true
+  template: cehd/research/research-day.html
+  template_data:
+    - section: research
+/teaching/:
+  publish: true
+  template: cehd/teaching/index.html
+  template_data:
+    - section: teaching
+/teaching/assessment:
+  publish: true
+  template: cehd/teaching/assessment.html
+  template_data:
+    - section: teaching
+/teaching/clinical:
+  publish: true
+  template: cehd/teaching/clinical.html
+  template_data:
+    - section: teaching
+/teaching/license:
+  publish: true
+  template: cehd/teaching/license.html
+  template_data:
+    - section: teaching
+/teaching/trainings:
+  publish: true
+  template: cehd/teaching/trainings.html
+  template_data:
+    - section: teaching
 /teri/:
   publish: true
   template: cehd/teri/index.html
@@ -1780,6 +1905,11 @@
   template: cehd/undergraduate/albecker.html
   template_data:
     - section: undergraduate
+/undergraduate/apply/:
+  publish: true
+  template: cehd/undergraduate/apply.html
+  template_data:
+    - section: undergraduate
 /undergraduate/bellcourt/:
   publish: true
   template: cehd/undergraduate/bellcourt.html
@@ -1803,11 +1933,6 @@
 /undergraduate/contact/:
   publish: true
   template: cehd/undergraduate/contact.html
-  template_data:
-    - section: undergraduate
-/undergraduate/credits/:
-  publish: true
-  template: cehd/undergraduate/credits.html
   template_data:
     - section: undergraduate
 /undergraduate/cuevas/:
@@ -1935,6 +2060,11 @@
   template: cehd/undergraduate/yousef.html
   template_data:
     - section: undergraduate
+/undergraduate/scholarships/:
+  publish: true
+  template: cehd/undergraduate/scholarships/index.html
+  template_data:
+    - section: undergraduate
 /undergraduate/scholarships/alumni/:
   publish: true
   template: cehd/undergraduate/scholarships/alumni.html
@@ -1965,9 +2095,9 @@
   template: cehd/undergraduate/transfer/index.html
   template_data:
     - section: undergraduate
-/undergraduate/transfer/beck/:
+/undergraduate/transfer/contact/:
   publish: true
-  template: cehd/undergraduate/transfer/beck.html
+  template: cehd/undergraduate/transfer/contact.html
   template_data:
     - section: undergraduate
 /undergraduate/transfer/credits/:
