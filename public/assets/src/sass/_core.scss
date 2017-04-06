@@ -286,6 +286,14 @@ img {
         border: 0;
         padding: .5em 1.5em;
 
+        &::after {
+            bottom: 6px;
+        }
+
+        &::before {
+            top: 6px;
+        }
+
         &.green {
             background-color: $cehd-green-button-background;
             color: $base-white;
