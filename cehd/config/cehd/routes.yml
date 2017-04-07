@@ -790,6 +790,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/cheats/:
+  publish: false
+  template: cehd/examples/cheats.html
+  template_data:
+    meta_description: null
+    section: null
 /examples/divider/:
   publish: false
   template: cehd/examples/divider.html
@@ -826,6 +832,16 @@
   template: cehd/graduate/index.html
   template_data:
     - section: graduate
+/graduate/aid/:
+  publish: true
+  template: cehd/graduate/aid.html
+  template_data:
+    - section: graduate
+/graduate/assistantships/:
+  publish: true
+  template: cehd/graduate/assistantships.html
+  template_data:
+    - section: graduate
 /graduate/career/:
   publish: true
   template: cehd/graduate/career.html
@@ -834,6 +850,11 @@
 /graduate/funding/:
   publish: true
   template: cehd/graduate/funding.html
+  template_data:
+    - section: graduate
+/graduate/scholarships/:
+  publish: true
+  template: cehd/graduate/scholarships.html
   template_data:
     - section: graduate
 /graduate/support/:

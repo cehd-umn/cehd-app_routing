@@ -1,0 +1,39 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Cheats" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Cheats</h1>
+    <p>a.k.a Jeffsmanship.</p>
+    <h2>Emphasis rows spanning the WHOLE page</h2>
+  </div><!-- ./container -->
+  <div class="row emphasis margin-top-1">
+    <div class="half feature">
+        <p>Features won't go all the way across if they are in a container div.</p>
+        <p>End the container div before the feature and then start it up again afterwards.</p>
+    </div>
+</div>
+<div class="container">
+  <div class="row emphasis margin-top-1">
+    <div class="half feature">
+        <p>I am in a container</p>
+    </div>
+</div>
+  <h2>That bottom blue box</h2>
+  <p>It's a lot of nested divs!</p>
+  <div class="row emphasis cool">
+    <div class="container">
+        <div class="half feature">
+          <div class="corner-borders-top"></div>
+            <div class="container">
+              <h2 class="text-center">Next steps </h2>
+              <p class="text-center"><a href="/undergraduate/apply/">How to apply</a> | <a href="/undergraduate/scholarships/">Costs and aid</a> | <a href="/undergraduate/contact/">Contact</a></p>
+            </div>
+          <div class="corner-borders-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
