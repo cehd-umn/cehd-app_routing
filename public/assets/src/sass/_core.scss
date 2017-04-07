@@ -25,6 +25,11 @@ img {
     }
 }
 
+.container,
+.row {
+    @include clearfix;
+}
+
 .emphasis {
     background-color: $cehd-tertiary-gold;
     padding: 2em;
@@ -545,11 +550,6 @@ footer {
         float: left;
         margin-top: 4px;
         max-width: 400px;
-    }
-
-    .container,
-    .row {
-        @include clearfix;
     }
 
     .container {
