@@ -102,7 +102,7 @@
             {
                 sources: [
                     {
-                        src: "{{ video.source }}?v={{ video.mod_time }}",
+                        src: "{{ video.source }}{{ video.cachebuster }}",
                         type: "{{ video.type }}"
                     }
                 ],

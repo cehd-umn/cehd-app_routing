@@ -180,4 +180,23 @@ class AppTest extends TestCase
         $this->assertArrayHasKey($expected_hyphenated, $hyphenatedData);
         $this->assertEquals($expected, $hyphenatedData[$expected_hyphenated]["keyTitle"]);
     }
+
+    public function testGetFileModTime()
+    {
+        $mod_time = $this->appInstance->getFileModTime(__DIR__ . "/fixtures/empty.txt");
+        $this->assertEquals(1491590619, $mod_time);
+    }
+
+    public function testCacheBusterQueryString()
+    {
+        $query_string = $this->appInstance->getCacheBusterQueryString(__DIR__ . "/fixtures/empty.txt");
+        $this->assertEquals("?v=1491590619", $query_string);
+    }
+
+    public function testCacheBusterQueryStringTriggersErrorIfNoFile()
+    {
+        // Test that invalid file path triggers an error
+        $this->expectException(PHPUnit_Framework_Error::class);
+        $result = $this->appInstance->getCacheBusterQueryString("/does/not/exist.txt");
+    }
 }

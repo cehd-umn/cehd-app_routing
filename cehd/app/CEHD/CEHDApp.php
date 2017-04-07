@@ -9,7 +9,7 @@ require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
-    public $nav_open = false;
+    // public $nav_open = false;
 
     private $_sites = [
                 "primary" => [
@@ -28,10 +28,18 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         // @todo does the college site need this?
         // Check for main nav state
-        if (array_key_exists('cehd-cehd-navOpen', $_COOKIE)) {
-            $this->nav_open = $_COOKIE['cehd-cehd-navOpen'];
-        }
-        $this->template->addGlobal('cehd_cehd_nav_open', $this->nav_open);
+        // if (array_key_exists("cehd-cehd-navOpen", $_COOKIE)) {
+        //     $this->nav_open = $_COOKIE["cehd-cehd-navOpen"];
+        // }
+        // $this->template->addGlobal("cehd_cehd_nav_open", $this->nav_open);
+        $this->template->addGlobal(
+            "css_cachebuster", 
+            $this->getCacheBusterQueryString(
+                __DIR__ . "/../../../public/assets/dist/css/minified/cehd.css"));
+        $this->template->addGlobal(
+            "js_cachebuster", 
+            $this->getCacheBusterQueryString(
+                __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"));
     }
 
     public function homePageHandler($request, $response, $service, $app)
@@ -41,8 +49,8 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         foreach ($video_data as $key => $video)
         {
-            $mod_time = filemtime(__DIR__ . "/../../../public" . $video["source"]);
-            $video_data[$key]["mod_time"] = $mod_time ? $mod_time : strtotime("now");
+            $file_path = __DIR__ . "/../../../public" . $video["source"];
+            $video_data[$key]["cachebuster"] = $this->getCacheBusterQueryString($file_path);
         }
 
         $template_data = [
