@@ -840,34 +840,34 @@
   template: cehd/policy-breakfast/index.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/April2013/:
+/policy-breakfast/2013-04/:
   publish: true
-  template: cehd/policy-breakfast/April2013.html
+  template: cehd/policy-breakfast/2013-04.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/Dec2013/:
+/policy-breakfast/2013-12/:
   publish: true
-  template: cehd/policy-breakfast/Dec2013.html
+  template: cehd/policy-breakfast/2013-12.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/Jan2015/:
+/policy-breakfast/2014-05/:
   publish: true
-  template: cehd/policy-breakfast/Jan2015.html
+  template: cehd/policy-breakfast/2014-05.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/May2014/:
+/policy-breakfast/2015-01/:
   publish: true
-  template: cehd/policy-breakfast/May2014.html
+  template: cehd/policy-breakfast/2015-01.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/Oct2015/:
+/policy-breakfast/2015-10/:
   publish: true
-  template: cehd/policy-breakfast/Oct2015.html
+  template: cehd/policy-breakfast/2015-10.html
   template_data:
     - section: policy-breakfast
-/policy-breakfast/Sept2016/:
+/policy-breakfast/2016-09/:
   publish: true
-  template: cehd/policy-breakfast/Sept2016.html
+  template: cehd/policy-breakfast/2016-09.html
   template_data:
     - section: policy-breakfast
 /reads/:
