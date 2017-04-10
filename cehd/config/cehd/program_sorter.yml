@@ -18,14 +18,10 @@ Adult Education*:
         - Masters
         - Undergraduate Certificate
 Adult Education (undergraduate certificate):
-    description: Expand your knowledge of how to teach and develop adults. This certificate is popular with human resource development majors.
+    description: Learn how adults gain new forms of knowledge, skills, attitudes, and values.
     links:
         - text: Undergraduate Certificate
           href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
-        - text: Masters
-          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/med-ps.html
-        - text: Graduate Certificate
-          href: http://www.cehd.umn.edu/olpd/grad-programs/aded/certificate.html
     categories: null
     degrees:
         - Graduate Certificate
@@ -61,6 +57,13 @@ Advance Practices in Second Language Teaching:
     degrees:
         - Graduate Certificate
         - Undergraduate Certificate
+Applied Child and Adolescent Development:
+    description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings.
+    links:
+        - text: Masters
+        - href: http://www.cehd.umn.edu/icd/programs/acad/
+    categories: null
+    degrees: null
 Applied psychology in educational and community settings (APECS):
     description: Gain experience working with children and youth in educational settings.
     links:
@@ -71,7 +74,7 @@ Applied psychology in educational and community settings (APECS):
     degrees:
         - Undergraduate Minor
 Arts in Education:
-    description: null
+    description: "Undergraduate: Gain experience working with children and youth in educational settings. Graduate: Learn about the teaching strategies for building knowledge and skills in visual arts, dance, and theatre arts."
     links:
         - text: Teaching
           href: http://www.cehd.umn.edu/ci/academic-programs/teach/artsined.html
@@ -165,7 +168,7 @@ Coaching (Minor and Certificate):
         - Graduate Certificate
         - Undergraduate Minor
 Comparative International Development Education:
-    description: null
+    description: Dive into the spaces connecting education policy and international studies. Our students and researchers examine educational ideas, practices, and systems through a global lens. We look at how cultures, governments, and markets effect our educational philosophies and structures.
     links:
         - text: Masters
           href: http://www.cehd.umn.edu/olpd/grad-programs/cide/ma.html
@@ -177,7 +180,7 @@ Comparative International Development Education:
         - Masters
         - Ph.D.
 Counseling and Student Personnel Psychology:
-    description: null
+    description: Counsel others throughout the lifespan. Become a school counselor and help students develop academically, personally/socially, and in their careers. Study to be a college and student personnel counselor and work in a higher education setting. Or, become a mental health professional and work in a community setting.
     links:
         - text: Masters
           href: http://www.cehd.umn.edu/edpsych/programs/cspp/
@@ -190,7 +193,7 @@ Counseling and Student Personnel Psychology:
         - Graduate Certificate
         - Masters
 Couple and Family Therapy:
-    description: null
+    description: Become a leader in the field of couple/marriage and family therapy (C/MFT) and work systemically with diverse families and communities locally and internationally.
     links:
         - text: Ph.D.
           href: http://www.cehd.umn.edu/fsos/programs/phd-cft.asp
@@ -200,7 +203,7 @@ Couple and Family Therapy:
     degrees:
         - Ph.D.
 Culture and Teaching:
-    description: null
+    description: Study critical issues related to equity, democracy and social justice in education. You will engage in a variety of perspectives and methods in your study of education and schooling across broad social, cultural, and political contexts.
     links:
         - text: Ph.D.
           href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/cat.html
@@ -231,7 +234,7 @@ Dual Language and Immersion Education:
     degrees:
         - Graduate Certificate
 Early Childhood Education Foundations:
-    description: null
+    description: Prepare to be a teacher of young children with a strong foundation in child development theory and research and developmentally appropriate methodology for teaching within the early childhood years (birth – age 8).
     links:
         - text: Undergraduate Major
           href: http://www.cehd.umn.edu/olpd/undergrad-programs/aded/certificate.html
@@ -252,7 +255,7 @@ Early Childhood Education (M.Ed.):
         - Masters
         - Teaching
 Education Policy and Leadership:
-    description: null
+    description: Prepare to work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well prepared to continue their learning and to contribute to their communities.
     links: null
     categories:
         - Community and Leadership
@@ -275,12 +278,12 @@ Elementary Education Foundations:
         - Teaching
         - Undergraduate Major
 Elementary Education (M.Ed.):
-    description: null
+    description: Contribute to the advancement of knowledge so necessary to address the dynamic challenges of contemporary education at the elementary level.
     links: null
     categories: null
     degrees: null
 English as a Second Language/Teaching English as Second Language:
-    description: Earn a minor/certificate in ESL that prepares you to teach abroad and is recognized worldwide.
+    description: Prepare to teach English in higher education to adult speakers of other languages in programs such as accredited intensive English programs, community colleges, and some English writing programs on college and university campuses across the U.S. and around the world.
     links:
         - text: Undergraduate Minor
           href: http://www.cehd.umn.edu/ci/academic-programs/undergrad/eslminorteslcertificate.html
@@ -293,7 +296,7 @@ English as a Second Language/Teaching English as Second Language:
         - Graduate Certificate
         - Undergraduate Minor
 English Education:
-    description: null
+    description: Prepare for teaching in secondary schools and pursue a career in teaching English language arts. We offer a range of courses in Language, Literature, Writing, and teaching English.
     links:
         - text: Teaching
           href: http://www.cehd.umn.edu/ci/academic-programs/teach/english.html
@@ -302,7 +305,7 @@ English Education:
     degrees:
         - Teaching
 Evaluation Studies:
-    description: null
+    description: Examine the techniques and process of program evaluation and policy research. Students gain both qualitative and quantitative methods expertise and useful experiences in the practice of program evaluation and policy studies.
     links: null
     categories:
         - Community and Leadership
@@ -314,7 +317,7 @@ Family and Community Engagement (minor):
     categories: null
     degrees: null
 Family Education*:
-    description: null
+    description: "Undergraduate: Students are prepared to design, deliver, and evaluate educational programs in a variety of settings providing support and education to parents and families. Graduate: Prepare to design, deliver, and evaluate educational programs in a variety of settings that support and educate parents and families."
     links: null
     categories:
         - Families, Youth, and Children
@@ -327,7 +330,7 @@ Family Financial Studies (minor):
     categories: null
     degrees: null
 Family Science:
-    description: null
+    description: Gain a broad knowledge of family theory, family research methods, and family interactions across a lifespan, and engage in independent research related to families.
     links: null
     categories:
         - Disability and Aging
@@ -371,14 +374,14 @@ Family Violence Prevention:
     degrees:
         - Undergraduate Minor
 Higher Education:
-    description: null
+    description: Study the experiences, practices, and decisions of those involved in post-secondary education, as well as on the sociopolitical contexts in which higher education exists.
     links: null
     categories:
         - Evaluation and Methods
         - Teaching, Learning, and Schools
     degrees: null
 Human Resource Development:
-    description: Learn how to develop people and teams in the workplace. Complete an internship and prepare to work in a variety of public and private organizations.
+    description: Study the methods and practices for helping employees develop their personal and organizational skills, knowledge, and abilities.
     links:
         - text: Undergraduate Major
           href: http://www.cehd.umn.edu/olpd/undergrad-programs/hrd/
@@ -402,10 +405,12 @@ K-12 Technology Integration:
         - Teaching, Learning, and Schools
     degrees: null
 Kinesiology:
-    description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness.
+    description: "Undergraduate: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness. Graduate: Study the science of human movement. Kinesiology examines the physiological, biomechanical, and psychological aspects of human motion and activity."
     links:
         - text: Undergraduate Major
           href: http://www.cehd.umn.edu/kin/current/undergrad/kin.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/kin/current/grad/masters.html#smgt
     categories:
         - Languages, Culture, and International
         - Recreation, Health, and Wellbeing
@@ -421,7 +426,7 @@ Leadership:
     degrees:
         - Undergraduate Minor
 Leadership in Education:
-    description: null
+    description: Become an educational leader who fosters continuous learning and improvement. Prepare to advance school-wide and district-wide reforms for coherent educational systems and programs.
     links:
         - text: Undergraduate Minor
           href: http://www.cehd.umn.edu/olpd/undergrad-programs/leadership/
@@ -431,7 +436,7 @@ Leadership in Education:
     degrees:
         - Undergraduate Minor
 Learning Technologies:
-    description: null
+    description: Prepare for research and practice in teaching and learning strategies using multimedia, design, K-12 technology integration, online distance learning and learning analytics. Conduct research and engage in LT-related practice in K-12, higher education, or business settings.
     links: null
     categories:
         - Community and Leadership
@@ -439,20 +444,20 @@ Learning Technologies:
         - Teaching, Learning, and Schools
     degrees: null
 Literacy Education:
-    description: null
+    description: Become a leading scholar in the areas of children’s and adolescent literature, critical literacy, English education, reading, and writing.
     links: null
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
     degrees: null
 Math Education:
-    description: null
+    description: Apply current theory and practice related to access, persistence, and student achievement to successfully address the changing needs of postsecondary education.
     links: null
     categories:
         - Teaching, Learning, and Schools
     degrees: null
 Multicultural Teaching and Learning:
-    description: null
+    description: Apply current theory and practice related to access, persistence, and student achievement to successfully address the changing needs of postsecondary education.
     links: null
     categories:
         - Languages, Culture, and International
@@ -481,38 +486,50 @@ Outdoor Recreation and Education:
         - Undergraduate Minor
 Parent Education:
     description: null
-    links: null
+    links:
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/fsos/programs/cert.asp
     categories:
         - Families, Youth, and Children
         - Teaching, Learning, and Schools
     degrees: null
 PK-12 Administrative Licensure:
-    description: null
-    links: null
+    description: Prepare to be a licensed administrator as a K-12 principal, superintendent, director of special education, or director of community education.
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/olpd/grad-programs/adm-licensure/
     categories:
         - Community and Leadership
         - Teaching, Learning, and Schools
     degrees: null
 Professional Development:
     description: null
-    links: null
+    links:
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/epl/profdev-cert.html
     categories: null
     degrees: null
 Program Evaluation:
     description: null
-    links: null
+    links:
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/es/programeval-cert.html
+        - text: Graduate Minor
+          href: http://www.cehd.umn.edu/olpd/grad-programs/es/programeval-minor.html
     categories:
         - Evaluation and Methods
     degrees: null
 Psychological Foundations of Education:
-    description: null
+    description: Study the psychological processes critical to education, focusing on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan.
     links: null
     categories:
         - Teaching, Learning, and Schools
     degrees: null
 Quantitative Methods in Education:
-    description: null
-    links: null
+    description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics.
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/edpsych/future-students/qme/
     categories:
         - Evaluation and Methods
         - Teaching, Learning, and Schools
@@ -532,23 +549,29 @@ Recreation Administration:
     degrees:
         - Undergraduate Major
 School Psychology:
-    description: null
+    description: Through work in schools settings or research, help students succeed academically, socially, emotionally, and behaviorally.
     links:
         - text: Undergraduate Minor
           href: http://www.cehd.umn.edu/edpsych/programs/minor/
+        - text: Masters
+          href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/master/
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/doctor/
     categories:
         - Families, Youth, and Children
         - Teaching, Learning, and Schools
     degrees:
         - Undergraduate Minor
 Science Education:
-    description: Focus on teaching chemistry, earth science, general science, life science, or physics
-    links: null
+    description: "Undergraduate: Focus on teaching chemistry, earth science, general science, life science, or physics Graduate: Earn a license to teach high-school chemistry, earth + space science, life science, and/or physics. Students can also add a Grades 5-8 license in general science."
+    links:
+        - text: Teaching Licensure
+          href: http://www.cehd.umn.edu/ci/academic-programs/additional/science.html
     categories:
         - Teaching, Learning, and Schools
     degrees: null
 Science, Technology, Engineering, and Math (STEM) Education:
-    description: null
+    description: Become an expert in STEM Education, the integration of science, technology, engineering and mathematics in an interdisciplinary and applied approach.
     links:
         - text: Masters
           href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/stem.html
@@ -560,8 +583,12 @@ Science, Technology, Engineering, and Math (STEM) Education:
         - Masters
         - Ph.D.
 Second Language Education:
-    description: Focus on teaching Arabic, Chinese, ESL, French, German, Hebrew, Italian, Japanese, Latin, Norwegian, Ojibwe, Polish, Russian, Spanish, or Swedish
-    links: null
+    description: "Undergraduate: Focus on teaching Arabic, Chinese, ESL, French, German, Hebrew, Italian, Japanese, Latin, Norwegian, Ojibwe, Polish, Russian, Spanish, or Swedish. Graduate: Combine best practices in teaching and learning through one of fifteen language areas."
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/ci/academic-programs/medprofessional/sle.html
+        - text: Ph.D.
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/sle.html
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
@@ -571,6 +598,10 @@ Social Justice:
     links:
         - text: Undergraduate Minor
           href: http://www.cehd.umn.edu/ssw/undergraduate/minors.html
+        - text: Teaching Licensure
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/socialstudies.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/socialstudies.html
     categories:
         - Community and Leadership
     degrees:
@@ -583,8 +614,10 @@ Social Studies Education:
         - Teaching, Learning, and Schools
     degrees: null
 Social Work:
-    description: null
-    links: null
+    description: Advanced social work practice and leadership, with focus areas of Clinical Mental Health, Community Practice, Families and Children, and Health, Disability and Aging.
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/ssw/graduate/msw.html
     categories:
         - Community and Leadership
         - Disability and Aging
@@ -593,10 +626,12 @@ Social Work:
         - Languages, Culture, and International
     degrees: null
 Special Education:
-    description: Earn your degree and teaching license in four years. Preare to teach students with mild-moderate disabilities in grade K through age 21.
+    description: "Undergraduate: Earn your degree and teaching license in four years. Prepare to teach students with mild-moderate disabilities in grade K through age 21. Graduate: Improve outcomes for individuals who require specialized support to achieve success throughout their lifespan."
     links:
         - text: Undergraduate Major
           href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
+        - text: Graduate Minor
+          href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
     categories:
         - Disability and Aging
         - Teaching, Learning, and Schools
@@ -608,10 +643,12 @@ Special Education M.Ed.:
     categories: null
     degrees: null
 Sport Management:
-    description: Learn the business of sports and prepare for careers in areas such as marketing and promotions and event and facilities management.
+    description: "Undergraduate: Learn the business of sports and prepare for careers in areas such as marketing and promotions and event and facilities management. Graduate: Combine theoretical instruction and practical experience to prepare for leadership success in the sports industry and marketplace."
     links:
         - text: Undergraduate Major
           href: http://www.cehd.umn.edu/kin/current/undergrad/smgt.html
+        - text: Masters
+          href: http://www.cehd.umn.edu/kin/current/grad/masters.html#smgt
     categories:
         - Community and Leadership
         - Recreation, Health, and Wellbeing
@@ -627,41 +664,55 @@ Sport Management (minor):
     degrees:
         - Undergraduate Minor
 Sport/Exercise Science:
-    description: null
-    links: null
+    description: Health-related advanced study with focus tracks in Sport Performance, Athletic Training, and Health Promotion.
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/kin/current/grad/professional.html#exsci
     categories:
         - Recreation, Health, and Wellbeing
     degrees: null
 Talent Development and Gifted Education:
     description: null
-    links: null
+    links:
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/edpsych/programs/foundations/talent/
     categories:
         - Teaching, Learning, and Schools
     degrees: null
 Teaching Writing and Critical Literacy:
     description: null
-    links: null
+    links:
+        - text: Graduate Certificate
+          href: http://www.cehd.umn.edu/ci/academic-programs/certificates/teachingwritingcriticalliteracy.html
     categories:
         - Teaching, Learning, and Schools
         - Languages, Culture, and International
     degrees: null
 Undergraduate Multicultural Teaching and Learning:
     description: null
-    links: null
+    links:
+        - text: Undergraduate Certificate
+          href: http://www.cehd.umn.edu/olpd/grad-programs/hied/certificate.html
     categories:
         - Community and Leadership
         - Teaching, Learning, and Schools
     degrees: null
 Work and Human Resources Education:
     description: null
-    links: null
+    links:
+        - text: Undergraduate Major
+          href: http://www.cehd.umn.edu/olpd/undergrad-programs/hrd/
+        - text: Masters
+          href: http://www.cehd.umn.edu/olpd/grad-programs/whre/med-ps.html
     categories:
         - Community and Leadership
         - Teaching, Learning, and Schools
     degrees: null
 Youth Development Leadership:
-    description: null
-    links: null
+    description: Work with and on behalf of youth, creating space for what’s possible with a grounding in current research as well as hands-on learning.
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/ssw/graduate/ydl.html
     categories: null
     degrees: null
 Youth Studies:
