@@ -74,6 +74,7 @@ nav {
 
     &.active {
         left: 0;
+        overflow: auto;
         transition: ease-in-out .5s;
     }
 
