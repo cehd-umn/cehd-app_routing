@@ -32,14 +32,25 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         //     $this->nav_open = $_COOKIE["cehd-cehd-navOpen"];
         // }
         // $this->template->addGlobal("cehd_cehd_nav_open", $this->nav_open);
+
+        // Add a cachebuster for the css
         $this->template->addGlobal(
-            "css_cachebuster", 
+            "css_cachebuster",
             $this->getCacheBusterQueryString(
                 __DIR__ . "/../../../public/assets/dist/css/minified/cehd.css"));
+
+        // Add a cachebuster for the js
         $this->template->addGlobal(
-            "js_cachebuster", 
+            "js_cachebuster",
             $this->getCacheBusterQueryString(
                 __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"));
+
+        $this->router->onHttpError([$this, 'errorPageHandler']);
+    }
+
+    public function errorPageHandler($code, $router)
+    {
+        echo $this->_renderTemplate('cehd/error/404.html', []);
     }
 
     public function homePageHandler($request, $response, $service, $app)
