@@ -1,5 +1,5 @@
 ---
-# Use spaces and 4-space indentation. Tab indentation will break this file.
+# Use spaces and 2-space indentation. Tab indentation will break this file.
 # Also the indentation structure here is #very important#. This will also break
 # if things aren't indented with the same pattern. Finally, it's a good idea to
 # install a YAML linter to help catch duplicate keys. (Routes are keys in this
