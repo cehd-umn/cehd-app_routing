@@ -238,4 +238,47 @@ class BaseClass
         }
         return $new_data;
     }
+
+    /**
+     * Returns a Unix timestamp of the date and time a file was modified
+     *
+     * @param string - $file_path
+     * @return mixed - int if file path is valid, otherwise false
+     */
+    public function getFileModTime($file_path)
+    {
+        $result = false;
+
+        try
+        {
+            $result = filemtime($file_path);
+        }
+        catch (Exception $e)
+        {
+            echo $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    /**
+     * Returns a query string suitable for cachebusting
+     *
+     * @param string - $file_path
+     * @return string
+     */
+    public function getCacheBusterQueryString($file_path)
+    {
+        $mod_time = $this->getFileModTime($file_path);
+
+        if (!$mod_time)
+        {
+            $msg = "Unable to determine mod time for " . $file_path .
+                ". Using current timestamp which will always brake the " .
+                "cache. Check to make sure your file_path is correct";
+            throw new Exception($msg);
+            $mod_time = strtotime("now");
+        }
+        return "?v=" . $mod_time;
+    }
 }
