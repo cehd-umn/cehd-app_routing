@@ -205,6 +205,13 @@ blockquote {
     }
 }
 
+.emphasis {
+    &.bg-cehd-multi {
+        background-image: url("/assets/dist/images/background-cehd-multicolor.png");
+        background-repeat: repeat;
+    }
+}
+
 #cehd-wordmark {
     border-bottom: 0;
     float: none;
