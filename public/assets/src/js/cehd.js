@@ -68,7 +68,7 @@ var HistoryManager = function() {
         return results;
     };
 
-    this.pushState =function(url) {
+    this.pushState = function(url) {
         history.pushState(null, null, url);
     };
 };
@@ -77,36 +77,12 @@ var FilterUIManager = function() {
     this.setChecked = function(element_selector) {
         $(element_selector).prop("checked", true);
     };
-};
 
-var search_setup = function(elements_selector) {
-    var $elements = $(elements_selector);
-
-    var search = elasticlunr(function() {
-        this.addField("title");
-        this.addField("description");
-        this.addField("categories");
-        this.setRef("id");
-    });
-
-    $elements.each(function(index, element) {
-
-        var $element = $(element);
-        var title = $element.find(".title").text();
-        var description = $element.find(".description").text();
-        var categories = $element.data("categories");
-        var id = $element.attr("id");
-        var doc = {
-            id: id,
-            title: title,
-            description: description,
-            categories: categories
-        };
-
-        search.addDoc(doc);
-    });
-
-    return search;
+    this.setSelectedText = function(selector) {
+        var $selector = $(selector);
+        var $target = $($selector.data("selected-indicator"));
+        $target.text($selector.data("indicator-text"));
+    };
 };
 
 var FilterManager = function(card_container_selector, filter_input_selector, search_input_selector, isotope_params) {
@@ -116,7 +92,6 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
     this.uiManager = new FilterUIManager();
     this.$cards = $(card_container_selector);
     this.$filter_inputs = $(filter_input_selector);
-    this.search = search_setup(isotope_params.itemSelector);
     this.$search_input = $(search_input_selector);
 
     this.$search_input.on("keyup", function() {
@@ -140,6 +115,36 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
 
     // Instantiate isotope
     this.$cards.isotope(isotope_params);
+
+    this.init_search = function(elements_selector) {
+        var $elements = $(elements_selector);
+
+        var search = elasticlunr(function() {
+            this.addField("title");
+            this.addField("description");
+            this.addField("categories");
+            this.setRef("id");
+        });
+
+        $elements.each(function(index, element) {
+
+            var $element = $(element);
+            var title = $element.find(".title").text();
+            var description = $element.find(".description").text();
+            var categories = $element.data("categories");
+            var id = $element.attr("id");
+            var doc = {
+                id: id,
+                title: title,
+                description: description,
+                categories: categories
+            };
+
+            search.addDoc(doc);
+        });
+
+        return search;
+    };
 
     this.filterCards = function (filters) {
         this.$cards.isotope({ filter: filters });
@@ -196,6 +201,7 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
             $.each(query_data.filters, function(k, v) {
                 var element_selector = "#" + v + "-filter";
                 self.uiManager.setChecked(element_selector);
+                self.uiManager.setSelectedText(element_selector);
             });
         }
     };
@@ -208,7 +214,11 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
 
         self.historyManager.pushState(url);
         self.filterCards(filters);
+        self.uiManager.setSelectedText("#" + $(this).attr("id"));
+        $(".open").removeClass("open");
     });
+
+    this.search = this.init_search(isotope_params.itemSelector);
 };
 
 window.$ = $;
