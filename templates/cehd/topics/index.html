@@ -11,7 +11,14 @@
         </div>
         <div class="button-group filter-button-group">
             <div class="half feature category-container">
-                <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
+                <div>
+                    <div class="half">
+                        <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
+                    </div>
+                    <div class="half">
+                        <p><strong>Category selected:</strong> <span id="category-selected">None</p>
+                    </div>
+                </div>
                 <form action="">
                     <div class="category-filter-container categories">
                         <ul class="category-filters">
@@ -22,7 +29,7 @@
                             </li>
                         {% for category_class, category in categories %}
                             <li class="category-filter">
-                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}">
+                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
