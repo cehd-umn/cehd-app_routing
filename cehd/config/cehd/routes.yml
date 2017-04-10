@@ -826,7 +826,6 @@
   template_data:
     meta_description: null
     section: null
-
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
