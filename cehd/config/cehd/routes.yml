@@ -861,6 +861,11 @@
   template: cehd/graduate/support.html
   template_data:
     - section: graduate
+/news/:
+  publish: true
+  template: cehd/news/index.html
+  template_data:
+    - section: news
 /policy-breakfast/:
   publish: true
   template: cehd/policy-breakfast/index.html
