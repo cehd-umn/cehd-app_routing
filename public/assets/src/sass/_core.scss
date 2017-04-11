@@ -48,11 +48,17 @@ img {
 }
 
 .outer-bg-right {
-    background: linear-gradient(90deg, $base-white 80%, $umn-light-blue-background 20%);
+    background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
+
+    &.cool {
+        background: linear-gradient(90deg, $base-white 80%, $umn-light-blue-background 20%);
+    }
 }
 
 .inner-bg-right {
-    background: linear-gradient(90deg, $base-white 14.69%, $umn-light-blue-background 14.69%);
+    &.cool {
+        background: linear-gradient(90deg, $base-white 14.69%, $umn-light-blue-background 14.69%);
+    }
 }
 
 @for $margin from 1 through 4 {
