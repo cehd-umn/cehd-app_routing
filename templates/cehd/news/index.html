@@ -1,40 +1,129 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "News" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .more {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        float: right;
+        margin-top: -10px;
+    }
+    .connect-box {
+        background-color: #f8eab4;
+        width: 300px;
+        padding: 10px 0 10px 10px;
+    opacity: 0.9;
+    height: 400px;
+
+    }
+    .connect-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .connect-issue {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-variant: caps;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+    .connect-articles {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .connect-articles a:hover {
+        font-size: 19px;
+    }
+    .connect-cover {
+        float: right;
+        margin-bottom: 50px;
+    }
+</style>
+{% endblock %}
+
 {% block main_content %}
 <div class="row">
   <div class="container">
     <h1>News and events</h1>
+
+    <div class="row margin-top-1 outer-bg-right emphasis">
+        <div class="container">
+            <div class="inner-bg-right">
+                <div class="half"></div>
+                <div class="half">For the media: Contact Steve Baker at 612-624-3430 or  s-bake@umn.edu to request an interview with any one of our experts. </div>
+            </div>
+        </div>
+    </div>
+
+
 <div class="span-12">
     <div class="half">
     <h2>In the news</h2>
     <iframe src="https://player.vimeo.com/video/208185523" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p><small>In this Fox 9 story, child development expert Jed Elison describes how his team of researchers is using brain scans to predict autism in infants.</small></p>
     <h2>Research indepth</h2>
     <iframe src="https://player.vimeo.com/video/208185448" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p><small>Kinesiology researcher Jürgen Konczak uses a WristBot and virtual reality to help diagnose wrist movement problems and to create training activities to improve lives for people with neurological diseases.</small></p>
     </div>
     <div class="half">
 
     <h2>CEHD news</h2>
-    <p>McComas named CEHD President’s Community Engaged Scholar</p>
-    <p>Hewitt accepts University’s Innovation Award</p>
-    <p>Award-winning book on sport management theory features chapters by Inoue, Kane, and Kihl</p>
+    <p><a href="#">McComas named CEHD President’s Community Engaged Scholar</a></p>
+    <p><a href="#">Hewitt accepts University’s Innovation Award</a></p>
+    <p><a href="#">Award-winning book on sport management theory features chapters by Inoue, Kane, and Kihl</a></p>
+        <p class="more"><a href="#">More CEHD news</a></p>
     <h2>CEHD events</h2>
-    <p>Wednesday, April 12<br />
-        2017 Naomi C. Chase Lecture by Melissa Sweet</p>
-    <p>Tuesday, April 18<br />
-        Adverse Childhood Experiences: Longitudinal Outcomes in Context of Environmental Risk & Intervention
+    <p class="date">Wednesday, April 12</p>
+        <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+    <p class="date">Tuesday, April 18</p>
+        <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of Environmental Risk & Intervention</a>
     </p>
-    <p>Tuesday, April 18<br />
-        Webinar: Autism Spectrum Disorder and the Somali Community of MN
+    <p class="date">Tuesday, April 18</p>
+        <p><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of MN</a><br />
     </p>
+        <p class="more"><a href="#">More CEHD events</a></p>
     </div>
 </div>
+  </div> <!-- ./container -->
+      <div class="container">
 <div class="half feature">
     <h2>Our expertise and knowledge guide</h2>
-    <p>Half-width column that is centered</p>
+    <p><a href="#">With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news, local and national trends, policy issues, and emerging research. </p>
+</div>
+</div>
+<div class="row emphasis bg-cehd-multi">
+    <div class="container">
+
+                <div class="half feature">
+                    <img  class="mobile-hide" src="/assets/images/wordmarks/wordmark-Connect.svg" alt="Connect magazine wordmark">
+                </div>
+
+                    <div class="half">
+                        <img  class="mobile-hide connect-cover" height="400px" src="/assets/images/news/SpSu17_ConnectCover_lg.jpg" alt="Cover image of Connect magazine">
+                    </div>
+
+            <div class="half ">
+                <p class="connect-title">The Power of Play</p>
+                <p class="connect-issue">Spring Summer 2017</p>
+                <ul class="connect-articles no-bullet">
+                    <li><a href="#">The power of play</a></li>
+                    <li><a href="#">Financially capable</a></li>
+                    <li><a href="#">A breath of fresh air</a></li>
+                    <li><a href="#">Debunking misinformation</a></li>
+                    <li><a href="#">What the body is</a></li>
+                    <li><a href="#">Citizens in the classroom</a></li>
+                    <li><a href="#">A force for families</a></li>
+                    <li><a href="#">Giving matters</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-  </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

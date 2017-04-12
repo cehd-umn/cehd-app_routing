@@ -15,11 +15,13 @@
       subsection:
         - name: Programs and Licensure
           href: "#"
-        - name: School Partnerships
+        - name: Clinical Placements
           href: "#"
-        - name: Workshops and Trainings
+        - name: Trainings and Workshops
           href: "#"
         - name: Assessment and Accreditation
+          href: "#"
+        - name: Partnerships and Multiple Pathways to Teaching
           href: "#"
     - name: Undergraduate Studies
       href: "#"
@@ -43,18 +45,16 @@
         - name: TRIO Programs
           href: "#"
     - name: Graduate Studies
-      href: "#"
+      href: "/graduate/"
       subsection:
-        - name: Grad Experience Blog
-          href: "#"
         - name: Community
           href: "#"
         - name: Funding
-          href: "#"
+          href: "/graduate/funding/"
         - name: Wellness & Support
-          href: "#"
+          href: "/graduate/support/"
         - name: Career & Leadership
-          href: "#"
+          href: "/graduate/career/"
     - name: Tuition & Financial Aid
       href: "#"
       subsection:
@@ -83,8 +83,19 @@
         - name: Commencement
           href: "#"
 - name: Research
-  href: "#"
+  href: "/research/"
   section: research
+  subsection:
+    - name: Research Topics
+      href: "/topics/"
+    - name: Research Day
+      href: "/research/research-day/"
+    - name: Grantsmanship
+      href: "/research/grantsmanship/"
+    - name: PI Elligibility
+      href: "/research/pi/"
+    - name: Policy Breakfast Series
+      href: "/policy-breakfast/"
 - name: Diversity & Inclusion
   href: "#"
   section: diversity-inclusion
