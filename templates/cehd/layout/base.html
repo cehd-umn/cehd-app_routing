@@ -70,7 +70,7 @@
                     {%- if loop.first -%}
                         {{ " " }}first
                     {%- endif -%}" id="top-level-{{ top_level_item.section }}">
-                    <a href="#" class="
+                    <a href="{{ top_level_item.href }}" class="
                     {%- if top_level_item.subsection -%}
                         dropdown-toggle
                     {%- endif %}" data-toggle="dropdown">
