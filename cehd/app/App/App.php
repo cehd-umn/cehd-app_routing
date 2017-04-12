@@ -100,6 +100,13 @@ class BaseApp extends \CEHD\App\BaseClass
     public $inline_styles;
 
     /**
+     * Minified SVG styles to inject into inline SVGs
+     *
+     * @type string
+     */
+    public $inline_svg_styles;
+
+    /**
      * Template engine
      *
      * @type Twig
@@ -133,11 +140,13 @@ class BaseApp extends \CEHD\App\BaseClass
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
         $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
+        $this->inline_svg_styles = array_key_exists("inline_svg_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_svg_styles"]) : null;
 
         $twig = $this->bootstrapTwig($this->config['debug']);
         $twig->addGlobal('config', $this->config);
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
+        $twig->addGlobal('inline_svg_styles', $this->inline_svg_styles);
         $this->template = $twig;
 
         $this->response = new \CEHD\App\Response\BaseResponse();

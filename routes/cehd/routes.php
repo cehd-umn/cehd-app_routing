@@ -4,11 +4,12 @@ namespace CEHD\App\Routes\CEHDRoutes;
 
 require_once __DIR__ . "/../../cehd/app/CEHD/CEHDApp.php";
 
-$base_app_config    = __DIR__ . "/../../cehd/config/app/config.yml";
-$cehd_app_config    = __DIR__ . "/../../cehd/config/cehd/config.yml";
-$nav_yaml_file      = __DIR__ . "/../../cehd/config/cehd/nav.yml";
-$routes_yaml_file   = __DIR__ . "/../../cehd/config/cehd/routes.yml";
-$inline_styles_file = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
+$base_app_config        = __DIR__ . "/../../cehd/config/app/config.yml";
+$cehd_app_config        = __DIR__ . "/../../cehd/config/cehd/config.yml";
+$nav_yaml_file          = __DIR__ . "/../../cehd/config/cehd/nav.yml";
+$routes_yaml_file       = __DIR__ . "/../../cehd/config/cehd/routes.yml";
+$inline_styles_file     = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
+$inline_svg_styles_file = __DIR__ . "/../../public/assets/dist/css/minified/svg.css";
 
 
 $yaml_file_paths = [
@@ -19,6 +20,7 @@ $yaml_file_paths = [
     "nav" => $nav_yaml_file,
     "routes" => $routes_yaml_file,
     "inline_styles" => $inline_styles_file,
+    "inline_svg_styles" => $inline_svg_styles_file,
 ];
 
 $app = new \CEHD\App\CEHD\CEHDApp($yaml_file_paths);

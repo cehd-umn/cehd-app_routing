@@ -826,6 +826,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/svg/:
+  publish: false
+  template: cehd/examples/svg.html
+  template_data:
+    meta_description: null
+    section: null
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
