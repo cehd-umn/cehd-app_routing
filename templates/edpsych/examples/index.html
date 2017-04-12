@@ -33,16 +33,16 @@
                 <samp>heading_1</samp> <a
                 href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">blocks</a>.</p>
 
-                <p>Blocks start with <samp>{% raw %}{%{% endraw %}</samp>, the word
-                <samp>block</samp>, and the block name and <samp>{% raw %}%}{% endraw %}</samp>.</p>
+                <p>Blocks start with <samp>{% verbatim %}{%{% endverbatim %}</samp>, the word
+                <samp>block</samp>, and the block name and <samp>{% verbatim %}%}{% endverbatim %}</samp>.</p>
 
-                <p>For example, the "title" block looks like this: <samp>{% raw %}{% block title %}{% endraw %}</samp>.
+                <p>For example, the "title" block looks like this: <samp>{% verbatim %}{% block title %}{% endverbatim %}</samp>.
 
-                <p>Blocks must be closed with <samp>{% raw %}{% endblock %}{% endraw %}</samp>.</p>
+                <p>Blocks must be closed with <samp>{% verbatim %}{% endblock %}{% endverbatim %}</samp>.</p>
 
                 <p>All together now, the <samp>title</samp> and <samp>heading_1</samp> blocks look like this:</p>
 
-                <pre><code class="twig">{%- raw -%}
+                <pre><code class="twig">{%- verbatim -%}
 {# Set the title #}
 {% block title %}
     My Page Title
@@ -52,7 +52,7 @@
 {% block heading_1 %}
     My H1 Text
 {% endblock %}
-{%- endraw -%}</code></pre>
+{%- endverbatim -%}</code></pre>
 
                 <p>The code above will generate this html on the page:</p>
 
@@ -71,11 +71,11 @@
 
             <p>Every template already has this block set up.</p>
 
-            <pre><code>{% raw %}
+            <pre><code>{% verbatim %}
 {% block main_content %}
     Your html content goes here.
 {% endblock %}
-    {% endraw %}</code></pre>
+    {% endverbatim %}</code></pre>
 
             <h3><samp>title_prepend</samp> and <samp>title_append</samp></h3>
 
@@ -92,8 +92,8 @@
             can insert a <samp>meta_content</samp> block on a template to populate a
             <samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
 
-            <pre><code>{% raw %}
-{% meta_content %}This is my page description for search engines to read{% endblock %}{% endraw %}
+            <pre><code>{% verbatim %}
+{% meta_content %}This is my page description for search engines to read{% endblock %}{% endverbatim %}
             </code></pre>
         </div>
 
@@ -112,13 +112,13 @@
             Twig template block</a> for that.</p>
 
             <pre><code>
-{% raw %}{% block extra_css %}
+{% verbatim %}{% block extra_css %}
 &lt;style&gt;
     .special-snowflake {
         color: white;
     }
 &lt;/style&gt;
-{% endblock %}{% endraw %}
+{% endblock %}{% endverbatim %}
             </code></pre>
         </div>
 
@@ -127,12 +127,12 @@
 
             <p>There are a handful of variables set up for use in all templates. You
             can insert variables anywhere using double curly braces: <samp>
-            {% raw %}{{ }}{% endraw %}</samp>.</p>
+            {% verbatim %}{{ }}{% endverbatim %}</samp>.</p>
 
             <p>The department name is probably the one that is most useful. You can
             insert that anywhere by doing this:</p>
 
-            <pre><code>{% raw %}{{ config.dept_name }}{% endraw %}</code></pre>
+            <pre><code>{% verbatim %}{{ config.dept_name }}{% endverbatim %}</code></pre>
 
             <p>Inserting that code will output "{{ config.dept_name }}".</p>
 
@@ -143,7 +143,7 @@
             <p>If you find that you're repeating yourself, you can define <a
             href="http://twig.sensiolabs.org/doc/templates.html#variables">a
             variable</a> using <samp>set</samp>, and insert it anywhere in the template.
-            <pre><code class="twig">{%- raw -%}
+            <pre><code class="twig">{%- verbatim -%}
 {% set page_title = "Alumni" %}{# set the variable #}
 {% block title %}
     {{ page_title }}{# use the page title variable for both the title and h1 #}
@@ -151,12 +151,12 @@
 {% block heading_1 %}
     {{ page_title }}
 {% endblock %}
-{%- endraw -%}</code></pre>
+{%- endverbatim -%}</code></pre>
         </div>
 
         <div class="half feature margin-top-2">
             <p>Put all together a beginning template will look something like this:</p>
-            <pre><code>{% raw %}{# this is important, don't delete it #}
+            <pre><code>{% verbatim %}{# this is important, don't delete it #}
 {% extends "edpsych/layout/section.html" %}
 
 {# Set a variable so we can use the same text for the title element and the h1 element #}
@@ -182,7 +182,7 @@
     &lt;h2&gt;Heading 2&lt;/h2&gt;
 
     &lt;p&gt;This is where my content goes.&lt;/p&gt;
-{% endblock %}{% endraw %}</code></pre>
+{% endblock %}{% endverbatim %}</code></pre>
         </div>
 
         <div class="half feature margin-top-3">
@@ -709,7 +709,7 @@ kept forgetting which was correct.) --&gt;
             elements.</p>
             <pre><code>
 &lt;figure&gt;
-    &lt;img src=&quot;{% raw %}{{ config.asset_base }}{% endraw %}/dist/images/Research/Tayler_Loiselle_headshot.jpg&quot; alt=&quot;Tayler Loiselle headshot.&quot;&gt;
+    &lt;img src=&quot;{% verbatim %}{{ config.asset_base }}{% endverbatim %}/dist/images/Research/Tayler_Loiselle_headshot.jpg&quot; alt=&quot;Tayler Loiselle headshot.&quot;&gt;
     &lt;figcaption&gt;Tayler Loiselle&lt;/figcaption&gt;
 &lt;/figure&gt;
             </code></pre>
@@ -849,7 +849,7 @@ billions.&lt;/small&gt;&lt;/p&gt;
             <p>Use the <samp>.mobile-hide</samp> class.</p>
             <div class="span-12 margin-top-1">
                 <pre><code>
-&lt;img src=&quot;{% raw %}{{ config.asset_base }}{% endraw %}/dist/images/Research/Tayler_Loiselle_headshot.jpg&quot; class=&quot;mobile-hide&quot; alt=&quot;Tayler Loiselle headshot.&quot;&gt;
+&lt;img src=&quot;{% verbatim %}{{ config.asset_base }}{% endverbatim %}/dist/images/Research/Tayler_Loiselle_headshot.jpg&quot; class=&quot;mobile-hide&quot; alt=&quot;Tayler Loiselle headshot.&quot;&gt;
                 </code></pre>
             </div>
             <div class="span-12 margin-top-1">
