@@ -1,0 +1,23 @@
+{% for person in people %}
+    <h2 class="heading-profile">{{ data.person.nameFirstLast }}
+        <small class="clear h4">
+        {% if data.person.workingTitle|is_string %}
+            {{ data.person.workingTitle }}
+        {% endif %}
+        </small>
+    </h2>
+    <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a></dd>
+        <dt>Profile Page</dt>
+        <dd><a href="/directory/{{ data.person.internetId }}/">Visit profile page</a></dd>
+        {% if data.person.headshotAddress|is_string and data.person.areasOfInterest|is_string %}
+            <dt>Headshot</dt>
+            <dd><img src="{{ data.person.headshotAddress }}" alt="{{ data.person.nameFirstLast }} headshot"></dd>
+        {% endif %}
+        {% if data.person.areasOfInterest|is_string %}
+            <dt>Areas of interest</dt>
+            <dd>{{ data.person.areasOfInterest|safe }}</dd>
+        {% endif %}
+    </dl>
+{% endfor %}
