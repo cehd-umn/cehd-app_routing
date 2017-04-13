@@ -14,7 +14,7 @@
         <li><a href="/career/internships/">Landing a great internship </a></li>
         <li><a href="/career/search/">Finding a job</a></li><br>
 
-        <h3 class="h3 span-7">Looking for job and internship postings?</h3>
+        <h2 class="h3">Looking for job and internship postings?</h2>
         <p>Check out <a href="http://goldpass.umn.edu/">GoldPASS</a> and the <a href="http://academics.cehd.umn.edu/career/">career services blog</a></p>
 
       </ul>
@@ -63,20 +63,27 @@
         Fiday, Apr-l 21</p>
     </div>
 </div>
-    <div class="row outer-bg-right">
-      <div class="inner-bg-right emphasis cool">
-        <div class="container">
-          <span class="divider one-third"></span>
-            <div class="third">
-              <div class="span-6">&nbsp;</div>
-              <div class="span-6"><h2>Did<br>you<br>know?</h2></div>
-            </div>
-            <div class="twothirds">
-              <p>86% of spring 2015<br>undergraduate students<br>completed at least<br>one internship</p>
-            </div>
+
+<div class="row outer-bg-right cool">
+    <div class="container">
+        <div class="inner-bg-right emphasis cool">
+            <div class="span-2"><br /></div>
+            <div class="span-10">
+                <div class="span-5">
+              {% set lines = [
+              "86% of spring 2015",
+              "undergraduate students",
+              "completed at least",
+              "one internship",
+              ] %}
+              {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+               </div>
+               <div class="span-7"><br /></div>
           </div>
-        </div>
-    </div>
+      </div>
+  </div>
+</div>
+
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

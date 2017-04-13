@@ -967,6 +967,11 @@
   template: cehd/research/grantsmanship.html
   template_data:
     - section: research
+/research/intl-partnerships/:
+  publish: true
+  template: cehd/research/intl-partnerships.html
+  template_data:
+    - section: research
 /research/pi/:
   publish: true
   template: cehd/research/pi.html
@@ -982,22 +987,22 @@
   template: cehd/teaching/index.html
   template_data:
     - section: teaching
-/teaching/assessment:
+/teaching/assessment/:
   publish: true
   template: cehd/teaching/assessment.html
   template_data:
     - section: teaching
-/teaching/clinical:
+/teaching/clinical/:
   publish: true
   template: cehd/teaching/clinical.html
   template_data:
     - section: teaching
-/teaching/license:
+/teaching/license/:
   publish: true
   template: cehd/teaching/license.html
   template_data:
     - section: teaching
-/teaching/trainings:
+/teaching/trainings/:
   publish: true
   template: cehd/teaching/trainings.html
   template_data:

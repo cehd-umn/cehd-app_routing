@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "About the College" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -26,25 +27,30 @@
     		  <p>The College will advance research, teaching, and community engagement to increase opportunities for all individuals to have a successful start in life and to foster healthy human development, and will provide programs that meet the demands of the 21st century.</p>
         </div>
       </div>
-        <div class="twothird feature">
-          <div class="row emphasis cool">
-            <div class="container">
-              <div class="half feature">
-                <div>
-                  <span class="divider one-third"></span>
-                  <div class="third">
-                      <p class="h1">Did you know?</p>
-                  </div>
-                  <div class="twothirds">
-                      <p>Each year, over <strong>5000</strong> students enroll in our undergraduate and
-                        graduate programs.</p>
-                  </div>
-              </div>
-              </div>
+    </div>
+  </div>
+  <div class="row outer-bg-right cool">
+      <div class="container">
+          <div class="inner-bg-right emphasis cool">
+              <div class="span-2"><br /></div>
+              <div class="span-10">
+                  <div class="span-6">
+                {% set lines = [
+                "Each year, over 5000 students",
+                "enroll in our",
+                "undergraduate and graduate programs.",
+                ] %}
+                {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                 </div>
+                 <div class="span-6"><br /></div>
             </div>
-          </div>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
 
+  <div class="row">
       <div class="twothird feature">
     		<h2 class="text-center">College student profile</h2>
       </div>
@@ -209,9 +215,11 @@
       </div>
       <div class="third">
         <h3>Directory</h3>
-        <p></p>
+        <p>Search box will be here.</p>
+        <p><a href="/directory/">Administrative office directory</a></p>
       </div>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+</div>
 {% endblock %}

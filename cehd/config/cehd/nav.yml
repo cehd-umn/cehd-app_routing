@@ -4,46 +4,46 @@
   section: academics
   subsection:
     - name: Majors, Degrees & Programs
-      href: "#"
+      href: "/programs/"
       subsection:
         - name: Study Abroad
           href: "#"
-        - name: Online Courses
-          href: "#"
     - name: Teacher Education
-      href: "#"
+      href: "/teaching/"
       subsection:
         - name: Programs and Licensure
-          href: "#"
+          href: "/programs/?filters=teaching"
         - name: Clinical Placements
-          href: "#"
+          href: "/teaching/clinical/"
         - name: Trainings and Workshops
-          href: "#"
+          href: "/teaching/trainings/"
         - name: Assessment and Accreditation
-          href: "#"
+          href: "/teaching/assessment/"
         - name: Partnerships and Multiple Pathways to Teaching
-          href: "#"
+          href: "/teaching/partnerships/"
+        - name: DirecTrack to Teaching
+          href: "/direct/"
     - name: Undergraduate Studies
-      href: "#"
+      href: "/undergraduate/"
       subsection:
         - name: Visit and Apply
-          href: "#"
+          href: "/undergraduate/apply/"
         - name: Transfer to CEHD
-          href: "#"
+          href: "/undergraduate/transfer/"
         - name: Outcomes
           href: "#"
         - name: Costs, Aid & Scholarships
-          href: "#"
+          href: "/undergraduate/scholarships/"
         - name: First Year Experience
-          href: "#"
+          href: "/undergraduate/fye/"
         - name: Newly Admitted Students
-          href: "#"
+          href: "/undergraduate/freshmen/"
         - name: Academic Advising
-          href: "#"
+          href: "/undergraduate/advising/"
         - name: Get Involved
-          href: "#"
+          href: "/undergraduate/involvement/"
         - name: TRIO Programs
-          href: "#"
+          href: "/trio/"
     - name: Graduate Studies
       href: "/graduate/"
       subsection:
@@ -56,23 +56,23 @@
         - name: Career & Leadership
           href: "/graduate/career/"
     - name: Tuition & Financial Aid
-      href: "#"
+      href: "/tuition/"
       subsection:
         - name: Undergraduate Scholarships
-          href: "#"
+          href: "/undergraduate/scholarships/"
         - name: Graduate Assistantships, Fellowships & Aid
-          href: "#"
+          href: "/graduate/funding/"
     - name: Career Services
-      href: "#"
+      href: "/career/"
       subsection:
         - name: Careers By Degree
-          href: "#"
+          href: "/career/degrees/"
         - name: Create Your Resume
-          href: "#"
+          href: "/career/resumes/"
         - name: Find a Job or Internship
-          href: "#"
+          href: "/career/internships/"
         - name: Prepare for Grad School
-          href: "#"
+          href: "/career/grad-school/"
         - name: Hire a CEHD Student or Graduate
           href: "#"
         - name: Services for Graduate Students
@@ -82,6 +82,9 @@
       subsection:
         - name: Commencement
           href: "#"
+    - name: Departments and Centers
+      href: "/departments-centers/"
+      subsection:
 - name: Research
   href: "/research/"
   section: research
@@ -92,20 +95,22 @@
       href: "/research/research-day/"
     - name: Grantsmanship
       href: "/research/grantsmanship/"
+    - name: International Partnerships
+      href: "/research/intl-partnerships/"
     - name: PI Elligibility
       href: "/research/pi/"
     - name: Policy Breakfast Series
       href: "/policy-breakfast/"
 - name: Diversity & Inclusion
-  href: "#"
+  href: "/diversity/"
   section: diversity-inclusion
 - name: News & Events
-  href: "#"
+  href: "/news/"
   subsection:
     - name: Find an Expert
-      href: "#"
+      href: "/topics/"
     - name: Connect Magazine
-      href: "#"
+      href: "http://connect.cehd.umn.edu/"
     - name: Media Requests
       href: "#"
     - name: Featured Expert
@@ -117,7 +122,7 @@
   href: "#"
   section: giving
 - name: Alumni
-  href: "#"
+  href: "/alumni/"
   section: alumni
   subsection:
     - name: Membership & Benefits
@@ -129,7 +134,7 @@
       href: "#"
       subsection:
         - name: CEHD Rising Alumni
-          href: "#"
+          href: "/alumni/rising/"
         - name: Distinguished Alumni Awards
           href: "#"
         - name: College & University Awards
@@ -139,5 +144,5 @@
     - name: Contact Us
       href: "#"
 - name: About Us
-  href: "#"
+  href: "/about/"
   section: about

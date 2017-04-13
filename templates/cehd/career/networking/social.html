@@ -2,21 +2,11 @@
 {% set page_title = "Social Networking" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<h1>Social Networking</h1>
-  <script type="text/javascript">
-$(function() {
-  $("#tabs").tabs();
-});
-</script>
-<div id="tabs">
-<ul class="no-bullet">
-  <li><a href="#tabs-1">Online Networking</a></li>
-  <li><a href="#tabs-2">Online Identity</a></li>
+<div class="row">
+  <div class="container">
+    <h1>Social Networking</h1>
 
-  <li><a href="#tabs-3">LinkedIn</a></li>
-  </ul>
-
-<div id="tabs-1">
+  <h2>Online Networking</h2>
   <p>While you can network in person, another great way to make connections is networking online. Online networking allows you to connect with numerous individuals who are interested in gathering and sharing first-hand information and experiences. It is another way to build and connect with your network. Some online networks include:</p>
   <p><a href="http://www.linkedin.com">LinkedIn</a></p>
   <p><a href="http://www.facebook.com">Facebook</a></p>
@@ -25,10 +15,8 @@ $(function() {
    your professional online identity. <a href="http://www.linkedin.com/groups/CEHD-Alumni-Student-Networking-Group-2720034?gid=2720034">Register
    with LinkedIn and join the CEHD Student and Alumni LinkedIn Group</a>. CEHD alumni are an excellent source of information and they are excited
    to connect with current students. </p>
-</div>
 
-<div id="tabs-2">
-<h3>Evaluate</h3>
+<h2>Online Identity - Evaluate</h2>
 <p>The first step in creating a positive online identity is determining what is already out there about you and evaluating the content.</p>
 <h3>Google yourself</h3>
 <ul>
@@ -107,27 +95,28 @@ allows potential employers and recruiters to find you.</p>
       </li>
       <li>Set-up a Google alert. You will receive an e-mail anytime your name is mentioned on the Web, including news sites, video sites, and social networks.</li>
 </ul>
-</div>
 
-<div id="tabs-3">
-
+<h2>LinkedIn</h2>
 <p><a href="https://www.linkedin.com/">LinkedIn</a> is an excellent resource to expand your online professional network. Below are links to videos from LinkedIn that will help you fully utilize the website for networking and your job search.</p>
 <h2>How to Use LinkedIn</h2>
 <ul>
       <li>Create a LinkedIn Profile
         <ul>
-              <li>Upload a professional appropriate photo.</li>
-              <li>Create a smart headline &amp; summary.</li>
-              <li>Add strong recommendations.</li>
-        <li>Add your LinkedIn URL to your email signature line.</li></ul>
+          <li>Upload a professional appropriate photo.</li>
+          <li>Create a smart headline &amp; summary.</li>
+          <li>Add strong recommendations.</li>
+          <li>Add your LinkedIn URL to your email signature line.</li></ul>
+      </li>
         <li>Enhance Your Profile <br />
             <ul>
               <li><a href="http://www.youtube.com/watch?feature=player_embedded&v=B8WZxYFaSmI">Top 5 Profile To-do's</a></li>
               <li><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_BuildingaGreatProfile.pdf">Build a Great Student Profile</a></li>
               <li><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_BuildingYourBrand.pdf">Build Your Personal Brand on LinkedIn</a></li>
               <li><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_TailoringYourProfile.pdf">Tailor Your LinkedIn Profile to Your Goals</a></li>
-              <li><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_CommunicatingonLinkedIn.pdf">Communicate Effectively on LinkedIn</a></li></ul></li>
-</ul>
+              <li><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_CommunicatingonLinkedIn.pdf">Communicate Effectively on LinkedIn</a></li>
+            </ul>
+        </li>
+      </ul>
 <ul>
     <li>Search terms that sound interesting on LinkedIn’s advanced search. (For example: sport management, human resources, social services, etc.)</li>
       <li>Join groups related to any career interest you are considering.</li>
@@ -175,6 +164,6 @@ allows potential employers and recruiters to find you.</p>
 <p>This tools allows you to research your college or university alumni according
 to a specific school, district, or geographic location. </p>
 <p><a href="http://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_AlumniTool.pdf">Using the Alumni Tool to Explore Careers</a></p>
-</div>
-</div>	
+</div> <!-- ./container -->
+</div> <!-- ./row -->
 {% endblock %}
