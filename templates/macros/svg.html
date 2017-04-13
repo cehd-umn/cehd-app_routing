@@ -1,5 +1,5 @@
 {%- macro did_you_know(variables, title, description, text_lines) -%}
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 170" aria-labelledby="title" aria-describedby="title desc" role="img">
     <defs>
         <style>{{ variables.inline_svg_styles|raw }}</style>
     </defs>
@@ -11,35 +11,12 @@
             <tspan x="-3.14" y="48">you</tspan>
             <tspan x="-42.77" y="96">know</tspan>
         </text>
-        <line class="vertical-stroke" x1="128.35" x2="128.35" y2="168.58"/>
-        <text class="text-did-you-know-text" transform="translate(141.01 69.58)">
+        <line class="vertical-stroke" x1="128.35" x2="128.35" y2="170"/>
+        <text class="text-did-you-know-text" transform="translate(141 {{ 170/(text_lines|length) }})">
             {%- set y = 0 -%}
             {%- for line in text_lines -%}
-                {%- set x = 0 -%}
-                {%- if loop.index == 2 -%}
-                    {%- set x = 246.29 -%}
-                {%- endif -%}
-                {%- if loop.index == 1 -%}
-                  {{ line }}
-                {%- elseif loop.index > 1 -%}
-                    <tspan x="{{ x }}" y="{{ y }}">{{ line }}</tspan>
-                    {%- set y = y +  28.8 -%}
-                {%- endif -%}
+                <tspan x="0" y="{{ y }}">{{ line }}</tspan>{% set y = y +  34 -%}
             {%- endfor -%}
-            {#
-            {%- if line_2 -%}
-              <tspan x="246.29" y="0">{{ line_2 }}</tspan>
-            {%- endif -%}
-            {%- if line_3 -%}
-              <tspan x="0" y="28.8">{{ line_3 }}</tspan>
-            {%- endif -%}
-            {%- if line_4 -%}
-              <tspan x="0" y="57.6">{{ line_4 }}</tspan>
-            {%- endif -%}
-            {%- if line_5 -%}
-              <tspan x="0" y="86.4">{{ line_5 }}</tspan>
-            {%- endif -%}
-            #}
         </text>
     </g>
 </svg>
