@@ -6,13 +6,13 @@
     <title>{{ title }}</title>
     <desc>{{ description }}</desc>
     <g id="img">
-        <text class="text-did-you-know-title" transform="translate(42.77 54.58)">
+        <text class="svg-text-title" transform="translate(42.77 54.58)">
             Did
             <tspan x="-3.14" y="48">you</tspan>
             <tspan x="-42.77" y="96">know</tspan>
         </text>
-        <line class="vertical-stroke" x1="128.35" x2="128.35" y2="170"/>
-        <text class="text-did-you-know-text" transform="translate(141 {{ 170/(text_lines|length) }})">
+        <line class="svg-stroke-vertical" x1="128.35" x2="128.35" y2="170"/>
+        <text class="svg-text-text" transform="translate(141 {{ 170/(text_lines|length) }})">
             {%- set y = 0 -%}
             {%- for line in text_lines -%}
                 <tspan x="0" y="{{ y }}">{{ line }}</tspan>{% set y = y +  34 -%}

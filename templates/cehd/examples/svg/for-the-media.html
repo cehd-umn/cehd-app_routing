@@ -1,0 +1,77 @@
+{% extends "cehd/layout/documentation.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "CEHD Code Examples" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>For the media</h2>
+        <div class="half">
+            <h3>Straight Markup from Illustrator</h3>
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590.67 168.58"><defs><style>.cls-1{font-size:48px;font-family:Lato-Bold, Lato;font-weight:700;}.cls-1,.cls-4{fill:#333;}.cls-2{letter-spacing:-0.03em;}.cls-3{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px;}.cls-4{font-size:24px;font-family:Lato-Regular, Lato;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:0em;}.cls-7{letter-spacing:-0.03em;}.cls-8{letter-spacing:-0.03em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:-0.02em;}</style></defs><title>ForTheMedia</title><text class="cls-1" transform="translate(59.25 54.58)"><tspan class="cls-2">F</tspan><tspan x="25.42" y="0">or</tspan><tspan x="0.79" y="48">the</tspan><tspan x="-59.25" y="96">media</tspan></text><line class="cls-3" x1="140.9" x2="140.9" y2="168.58"/><text class="cls-4" transform="translate(153.57 69.58)">Contact St<tspan class="cls-5" x="110.71" y="0">ev</tspan><tspan class="cls-6" x="134.95" y="0">e Ba</tspan><tspan class="cls-7" x="179.85" y="0">k</tspan><tspan x="191.71" y="0" xml:space="preserve">er at 612-624-3430 or  </tspan><tspan x="0" y="28.8">s-ba</tspan><tspan class="cls-8" x="44.33" y="28.8">k</tspan><tspan class="cls-9" x="56.18" y="28.8">e@umn.edu to request an interview </tspan><tspan x="0" y="57.6">with a</tspan><tspan class="cls-10" x="63.62" y="57.6">n</tspan><tspan x="76.58" y="57.6">y one of our </tspan><tspan class="cls-7" x="204.45" y="57.6">e</tspan><tspan x="216.31" y="57.6">xperts. </tspan></text></svg>
+        </div>
+
+        <div class="half">
+            <h3>Less Markup</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590.67 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                <defs>
+                    <style>
+                        <style>{{ inline_svg_styles|raw }}</style>
+                    </style>
+                </defs>
+                <title>For the Media</title>
+                <desc>Contact information for media inquiries.</desc>
+                <text class="svg-text-title" transform="translate(59.25 54.58)">
+                    <tspan>F</tspan>
+                    <tspan x="25.42" y="0">or</tspan>
+                    <tspan x="0.79" y="48">the</tspan>
+                    <tspan x="-59.25" y="96">media</tspan>
+                </text>
+                <line class="svg-stroke-vertical" x1="140.9" x2="140.9" y2="168.58"/>
+                <text class="svg-text-text" transform="translate(153.57 69.58)">Contact Steve Baker at 612-624-3430 or</tspan>
+                    <tspan x="0" y="28.8">s-bake@umn.edu to request an interview</tspan>
+                    <tspan x="0" y="57.6">with any one of our experts.</tspan>
+                </text>
+            </svg>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h3>With another inline svg in the same page</h3>
+        <div class="half">
+            <h4>Right in the template</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                <defs>
+                    <style> {{ inline_svg_styles|raw }}</style>
+                </defs>
+                <title>Did You Know</title>
+                <desc>Did you know graphic with facts about scholarships</desc>
+                <g id="img">
+                    <text class="svg-text-title" transform="translate(42.77 54.58)">
+                        Did
+                        <tspan x="-3.14" y="48">you</tspan>
+                        <tspan x="-42.77" y="96">know</tspan>
+                    </text>
+                    <line class="svg-stroke-vertical" x1="128.35" x2="128.35" y2="168.58"/>
+                    <text class="svg-text-text" transform="translate(141.01 69.58)">
+                        CEHD has scholarships
+                        <tspan x="246.29" y="0">ranging from</tspan>
+                        <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                        <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                    </text>
+                </g>
+            </svg>
+        </div>
+        <div class="half">
+            <h4>As a Twig include</h4>
+            {% include "includes/svg/for-the-media.html" %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="jinja">{% verbatim %}{% include "includes/svg/for-the-media.html" %}{% endverbatim %}</code></pre>
+    </div>
+</div>
+{% endblock %}
