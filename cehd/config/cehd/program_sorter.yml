@@ -665,7 +665,7 @@ Science Education:
     description: "Undergraduate: Focus on teaching chemistry, earth science, general science, life science, or physics Graduate: Earn a license to teach high-school chemistry, earth + space science, life science, and/or physics. Students can also add a Grades 5-8 license in general science."
     links:
         - text: Teaching
-          href: http://www.cehd.umn.edu/ci/academic-programs/additional/science.html
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/science.html
     categories:
         - Teaching, Learning, and Schools
     degrees:
@@ -689,12 +689,15 @@ Second Language Education:
           href: http://www.cehd.umn.edu/ci/academic-programs/medprofessional/sle.html
         - text: Ph.D.
           href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/sle.html
+        - text: Teaching
+          href: http://www.cehd.umn.edu/ci/academic-programs/teach/slesort.html
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
     degrees:
         - Masters
         - Ph.D.
+        - Teaching
 Social Justice:
     description: Examine how to create socially just communities through this minor in the School of Social Work.
     links:
@@ -711,12 +714,15 @@ Social Justice:
 Social Studies Education:
     description: null
     links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/ci/academic-programs/research-degrees/socialstudies.html
         - text: Teaching
           href: http://www.cehd.umn.edu/ci/academic-programs/teach/socialstudies.html
     categories:
         - Languages, Culture, and International
         - Teaching, Learning, and Schools
     degrees:
+        - Masters
         - Teaching
 Social Work:
     description: Advanced social work practice and leadership, with focus areas of Clinical Mental Health, Community Practice, Families and Children, and Health, Disability and Aging.
@@ -744,9 +750,12 @@ Special Education:
         - Undergraduate Major
 Special Education M.Ed.:
     description: null
-    links: null
+    links:
+        - text: Masters
+          href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     categories: null
-    degrees: null
+    degrees:
+        - Masters
 Sport Management:
     description: "Undergraduate: Learn the business of sports and prepare for careers in areas such as marketing and promotions and event and facilities management. Graduate: Combine theoretical instruction and practical experience to prepare for leadership success in the sports industry and marketplace."
     links:
