@@ -1833,99 +1833,114 @@
   template: cehd/trio/mcnair/apply.html
   template_data:
     - section: trio
+/trio/mcnair/mentors/:
+  publish: true
+  template: cehd/trio/mcnair/mentors.html
+  template_data:
+    - section: trio
+/trio/mcnair/open-house/:
+  publish: true
+  template: cehd/trio/mcnair/open-house.html
+  template_data:
+    - section: trio
+/trio/mcnair/resources/:
+  publish: true
+  template: cehd/trio/mcnair/resources.html
+  template_data:
+    - section: trio
 /trio/mcnair/staff/:
   publish: true
   template: cehd/trio/mcnair/staff.html
   template_data:
     - section: trio
-/trio/mcnair/services/:
+/trio/services/:
   publish: true
-  template: cehd/trio/mcnair/services/index.html
+  template: cehd/trio/services/index.html
   template_data:
     - section: trio
-/trio/mcnair/services/academics/:
+/trio/services/academics/:
   publish: true
-  template: cehd/trio/mcnair/services/academics.html
+  template: cehd/trio/services/academics.html
   template_data:
     - section: trio
-/trio/mcnair/services/finances/:
+/trio/services/finances/:
   publish: true
-  template: cehd/trio/mcnair/services/finances.html
+  template: cehd/trio/services/finances.html
   template_data:
     - section: trio
-/trio/mcnair/services/munoz/:
+/trio/services/munoz/:
   publish: true
-  template: cehd/trio/mcnair/services/munoz.html
+  template: cehd/trio/services/munoz.html
   template_data:
     - section: trio
-/trio/mcnair/services/services/:
+/trio/services/services/:
   publish: true
-  template: cehd/trio/mcnair/services/services.html
+  template: cehd/trio/services/services.html
   template_data:
     - section: trio
-/trio/mcnair/services/staff/:
+/trio/services/staff/:
   publish: true
-  template: cehd/trio/mcnair/services/staff.html
+  template: cehd/trio/services/staff.html
   template_data:
     - section: trio
-/trio/mcnair/training/:
+/trio/training/:
   publish: true
-  template: cehd/trio/mcnair/training/index.html
+  template: cehd/trio/training/index.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/:
+/trio/upward-bound/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/index.html
+  template: cehd/trio/upward-bound/index.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/academicyear/:
+/trio/upward-bound/academicyear/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/academicyear.html
+  template: cehd/trio/upward-bound/academicyear.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/apply/:
+/trio/upward-bound/apply/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/apply.html
+  template: cehd/trio/upward-bound/apply.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/events/:
+/trio/upward-bound/events/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/events.html
+  template: cehd/trio/upward-bound/events.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/hollenback/:
+/trio/upward-bound/hollenback/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/hollenback.html
+  template: cehd/trio/upward-bound/hollenback.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/jobs/:
+/trio/upward-bound/jobs/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/jobs.html
+  template: cehd/trio/upward-bound/jobs.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/people/:
+/trio/upward-bound/people/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/people.html
+  template: cehd/trio/upward-bound/people.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/scholarship/:
+/trio/upward-bound/scholarship/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/scholarship.html
+  template: cehd/trio/upward-bound/scholarship.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/summer/:
+/trio/upward-bound/summer/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/summer.html
+  template: cehd/trio/upward-bound/summer.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/wilkinson/:
+/trio/upward-bound/wilkinson/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/wilkinson.html
+  template: cehd/trio/upward-bound/wilkinson.html
   template_data:
     - section: trio
-/trio/mcnair/upward-bound/yang/:
+/trio/upward-bound/yang/:
   publish: true
-  template: cehd/trio/mcnair/upward-bound/yang.html
+  template: cehd/trio/upward-bound/yang.html
   template_data:
     - section: trio
 /undergraduate/:
