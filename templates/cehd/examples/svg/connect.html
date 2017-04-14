@@ -1,0 +1,93 @@
+{% extends "cehd/layout/documentation.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "CEHD Code Examples" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>Connect with us</h2>
+        <div class="half">
+            <h3>Straight Markup from Illustrator</h3>
+
+            <div class="half">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.01 168.58"><defs><style>.cls-1{font-size:48px;fill:#333;font-family:Lato-Bold, Lato;font-weight:700;}.cls-2{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>ConnectWithUs</title><text class="cls-1" transform="translate(0 54.58)">Connect<tspan x="84.33" y="48">with</tspan><tspan x="132.91" y="96">us</tspan></text><line class="cls-2" x1="190.51" x2="190.51" y2="168.58"/></svg>
+            </div>
+            <div class="half">
+                <p>Contact info goes here.</p>
+            </div>
+        </div>
+
+        <div class="half">
+            <h3>Inline with less markup</h3>
+            <div class="half">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.01 168.58">
+                    <defs>
+                        <style>{{ inline_svg_styles|raw }}</style>
+                    </defs>
+                    <title>Connect With Us</title>
+                    <g id="img-connect">
+                        <text class="svg-text-title" transform="translate(0 54.58)">Connect
+                            <tspan x="84.33" y="48">with</tspan>
+                            <tspan x="132.91" y="96">us</tspan>
+                        </text>
+                        <line class="svg-stroke-vertical" x1="190.51" x2="190.51" y2="168.58"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="half">
+                <p>Contact info goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h3>With another inline svg in the same page</h3>
+        <div class="half">
+            <h4>Right in the template</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                <defs>
+                    <style> {{ inline_svg_styles|raw }}</style>
+                </defs>
+                <title>Did You Know</title>
+                <desc>Did you know graphic with facts about scholarships</desc>
+                <g id="img">
+                    <text class="svg-text-title" transform="translate(42.77 54.58)">
+                        Did
+                        <tspan x="-3.14" y="48">you</tspan>
+                        <tspan x="-42.77" y="96">know</tspan>
+                    </text>
+                    <line class="svg-stroke-vertical" x1="128.35" x2="128.35" y2="168.58"/>
+                    <text class="svg-text-text" transform="translate(141.01 69.58)">
+                        CEHD has scholarships
+                        <tspan x="246.29" y="0">ranging from</tspan>
+                        <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                        <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                    </text>
+                </g>
+            </svg>
+        </div>
+        <div class="half">
+            <h4>As a Twig include</h4>
+            <div class="half">
+                {% include "includes/svg/connect.html" %}
+            </div>
+            <div class="half">
+                <p>Contact info goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container margin-top-2">
+        <pre><code class="jinja">
+&lt;div class=&quot;half&quot;&gt;
+    {% verbatim %}{% include &quot;includes/svg/connect.html&quot; %}{% endverbatim %}
+&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;
+    &lt;p&gt;Contact info goes here.&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+{% endblock %}

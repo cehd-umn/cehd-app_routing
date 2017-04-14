@@ -832,6 +832,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/svg/connect/:
+  publish: false
+  template: cehd/examples/svg/connect.html
+  template_data:
+    meta_description: null
+    section: null
 /examples/svg/for-the-media/:
   publish: false
   template: cehd/examples/svg/for-the-media.html
