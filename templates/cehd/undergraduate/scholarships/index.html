@@ -2,6 +2,37 @@
 {% set page_title = "Undergraduate Tuition" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .speaker {
+        font-size: 14px;
+        float: right;
+        margin: 40px 80px 0 0;
+        font-weight: bold;
+            }
+    .quote-wrap{
+        margin-top: 50px;
+    }
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
     <h1 class="text-center">Undergraduate costs, aid and scholarships </h1>
@@ -35,22 +66,31 @@
                 <p>Find information related to cost of attendance, scholarships, and visa information on the <a href="http://admissions.tc.umn.edu/admissioninfo/intl_costs.html">Office of Admissions website</a>.</p>
           </div>
         </div>
+  </div> <!-- ./container -->
   <div class="row emphasis bg-cehd-multi">
     <div class="containter">
-        <div class="third">
-          <img class="circular" src="/assets/images/undergrad/Mendoza-Genesis.jpg" alt="Genesis Mendoza">
-        </div>
+      <div class="third feature">
+          <img class="circular" src="/assets/images/headshots/student-features/Genesis-Mendoza.jpg" alt="photo of Genesis Mendoza">
+      </div>
       <div class="twothird">
             <blockquote class="quote-wrap">Being a first-generation college student means that my family depends on me being successful and having a good career. I definitely appreciate what I have and know what hard work can get me. Knowing that I have this finanaical help truly means a lot.</blockquote>
-            <strong><p align="right">Genesis Mendoza <br/>
+            <p align="right" class="speaker">Genesis Mendoza <br/>
            Business and Marketing Education <br/>
            minor in Youth Studies <br/>
-           Marx Sloane Scholarship recipient <br/></p></strong>
+           Marx Sloane Scholarship recipient <br/></p>
       </div>
     </div>
   </div>
-  <p class="text-center">  <a href="/undergraduate/"> Learn with us </a> | <a href="/undergraduate/apply/">Apply</a> | <a href="/undergraduate/contact/">Contact</a>  </p>
-
-  </div> <!-- ./container -->
+    <div class="span>"><br /></div> <!-- ./row -->
+    <div class="row emphasis cool">
+          <div class="half feature">
+            <div class="corner-borders-top"></div>
+              <div class="container">
+                <h2 class="text-center">Next steps </h2>
+                <p class="text-center"><a href="/undergraduate/apply/">Learn with us</a> | <a href="/undergraduate/scholarships/">Apply</a> | <a href="/undergraduate/contact/">Contact</a></p>
+            </div>
+            <div class="corner-borders-bottom"></div>
+          </div>
+      </div>
 </div> <!-- ./row -->
 {% endblock %}

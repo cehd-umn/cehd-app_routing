@@ -997,9 +997,19 @@
   template: cehd/teaching/clinical.html
   template_data:
     - section: teaching
+/teaching/dual-language/:
+  publish: true
+  template: cehd/teaching/dual-language.html
+  template_data:
+    - section: teaching
 /teaching/license/:
   publish: true
   template: cehd/teaching/license.html
+  template_data:
+    - section: teaching
+/teaching/partnerships/:
+  publish: true
+  template: cehd/teaching/partnerships.html
   template_data:
     - section: teaching
 /teaching/trainings/:
@@ -1107,6 +1117,11 @@
   template: cehd/teri/co-teaching/pairs/triad.html
   template_data:
     - section: teri
+/trio/:
+  publish: true
+  template: cehd/trio/index.html
+  template_data:
+    - section: trio
 /trio/cet/:
   publish: true
   template: cehd/trio/cet/index.html

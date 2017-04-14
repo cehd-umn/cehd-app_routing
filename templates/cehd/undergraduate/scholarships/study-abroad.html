@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Study Abroad Scholarships" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -6,6 +7,7 @@
   <div class="container">
     <h1>Study abroad scholarships</h1>
     <h2>CEHD undergraduate study abroad scholarships</h2>
+    <div class="row">
     <div class="half">
         <p>These are for students participating in an approved University of Minnesota study abroad program. Scholarships are awarded during several terms throughout the academic year.</p>
 
@@ -19,7 +21,6 @@
           <p>Current Deadline: Feb. 22, 2017. This application is for students studying abroad during spring break, May or summer session 2017.</p>
 
           <h2>Alumni Society study abroad scholarship</h2>
-            <div class="">
               <ul>
                 <li>The 2017 application deadline has passed. </li>
                 <li>$2000. Up to three
@@ -38,7 +39,6 @@
                   end of spring semester would not be eligible to receive their
                   scholarship for a study abroad in May session or summer sessions).  </li>
               </ul>
-            </div>
       </div>
       <div class="half">
           <p>Criteria: Open to CEHD undergraduate students who are currently enrolled in a degree-seeking program and participating in an approved University of Minnesota study-abroad program. </p>
@@ -56,23 +56,25 @@
         <p>Contact: Student Services, 612-625-3339, email: <a href="mailto:ehdschol@umn.edu">ehdschol@umn.edu</a>.</p>
       </div>
     </div>
-
-        <div class="twothird feature">
-          <div class="row emphasis cool">
-            <div class="container">
-              <div class="half feature">
-                <div>
-                  <span class="divider one-third"></span>
-                  <div class="third">
-                      <p class="h1">Did you know?</p>
-                  </div>
-                  <div class="twothirds">
-                      <p>More than 200 CEHD student study abroad each year. Popular programs include semester internships in London and Spain and three-week global seminars in South Africa and Thailand. </p>
-                  </div>
-                </div>
+    <div class="row outer-bg-right cool">
+        <div class="container">
+            <div class="inner-bg-right emphasis cool">
+                <div class="span-2"><br /></div>
+                <div class="span-10">
+                    <div class="span-8">
+                  {% set lines = [
+                  "More than 200 CEHD student study abroad each",
+                  "year. Popular programs include semester internships",
+                  "in London and Spain and three-week global seminars",
+                  "in South Africa and Thailand.",
+                  ] %}
+                  {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                   </div>
+                   <div class="span-4"><br /></div>
               </div>
-            </div>
-
+          </div>
+      </div>
+    </div>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

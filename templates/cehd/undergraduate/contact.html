@@ -2,6 +2,24 @@
 {% set page_title = "Contact Undergraduate" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+
+
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
     <h1>Contact us</h1>
@@ -15,7 +33,7 @@
     		      <p>Sheri Beck<br />
     		      <a href="mailto:cehdinfo@umn.edu">cehdinfo@umn.edu</a><br />
     		      612-625-3339</p>
-              
+
           <h2>CEHD Student Services</h2>
                 <p><a href="mailto:cehdinfo@umn.edu">cehdinfo@umn.edu</a><br />
                 612-625-3339<br/>
@@ -34,6 +52,8 @@
               </div>
             </div>
           </div>
+      </div> <!-- ./container -->
+ </div> <!-- ./row -->
     <div class="row emphasis cool">
       <div class="container">
           <div class="half feature">
@@ -47,6 +67,5 @@
         </div>
       </div>
 
-  </div> <!-- ./container -->
-</div> <!-- ./row -->
+
 {% endblock %}

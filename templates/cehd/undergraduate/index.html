@@ -2,6 +2,22 @@
 {% set page_title = "Undergraduate students" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+            }
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
     <h1>Undergraduate students</h1>
@@ -87,19 +103,17 @@
   <div class="twothirds feature">
     <p><a href="/undergraduate/majors/minors/">Minors and certificates</a> enhance your major studies and can be used to expand your employment opportunities after graduation.</p>
   </div>
-
+  </div> <!-- ./container -->
   <div class="row emphasis cool">
-    <div class="container">
         <div class="half feature">
           <div class="corner-borders-top"></div>
             <div class="container">
               <h2 class="text-center">Next steps </h2>
               <p class="text-center"><a href="/undergraduate/apply/">How to apply</a> | <a href="/undergraduate/scholarships/">Costs and aid</a> | <a href="/undergraduate/contact/">Contact</a></p>
-            </div>
+          </div>
           <div class="corner-borders-bottom"></div>
         </div>
-      </div>
     </div>
-  </div> <!-- ./container -->
+
 </div> <!-- ./row -->
 {% endblock %}

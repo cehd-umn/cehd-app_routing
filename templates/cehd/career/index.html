@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -63,13 +64,13 @@
         Fiday, Apr-l 21</p>
     </div>
 </div>
-
+  </div> <!-- ./container -->
 <div class="row outer-bg-right cool">
     <div class="container">
         <div class="inner-bg-right emphasis cool">
             <div class="span-2"><br /></div>
             <div class="span-10">
-                <div class="span-5">
+                <div class="span-6">
               {% set lines = [
               "86% of spring 2015",
               "undergraduate students",
@@ -78,13 +79,13 @@
               ] %}
               {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
                </div>
-               <div class="span-7"><br /></div>
+               <div class="span-6"><br /></div>
           </div>
       </div>
   </div>
 </div>
 
 
-  </div> <!-- ./container -->
+
 </div> <!-- ./row -->
 {% endblock %}
