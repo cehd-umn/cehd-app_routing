@@ -7,20 +7,20 @@
       href: "/programs/"
       subsection:
         - name: Study Abroad
-          href: "#"
+          href: "/studyabroad/"
     - name: Teacher Education
       href: "/teaching/"
       subsection:
         - name: Programs and Licensure
           href: "/programs/?filters=teaching"
         - name: Clinical Placements
-          href: "/teaching/clinical/"
+          href: "/404/"
         - name: Trainings and Workshops
           href: "/teaching/trainings/"
         - name: Assessment and Accreditation
-          href: "/teaching/assessment/"
-        - name: Partnerships and Multiple Pathways to Teaching
-          href: "/teaching/partnerships/"
+          href: "/404/"
+        - name: Multiple Pathways to Teaching
+          href: "/teaching/mpt/"
         - name: DirecTrack to Teaching
           href: "/direct/"
     - name: Undergraduate Studies
@@ -31,7 +31,7 @@
         - name: Transfer to CEHD
           href: "/undergraduate/transfer/"
         - name: Outcomes
-          href: "#"
+          href: "/404/"
         - name: Costs, Aid & Scholarships
           href: "/undergraduate/scholarships/"
         - name: First Year Experience
@@ -48,11 +48,9 @@
       href: "/graduate/"
       subsection:
         - name: Community
-          href: "#"
+          href: "/graduate/community/"
         - name: Funding
           href: "/graduate/funding/"
-        - name: Wellness & Support
-          href: "/graduate/support/"
         - name: Career & Leadership
           href: "/graduate/career/"
     - name: Tuition & Financial Aid
@@ -74,14 +72,14 @@
         - name: Prepare for Grad School
           href: "/career/grad-school/"
         - name: Hire a CEHD Student or Graduate
-          href: "#"
+          href: "/404/"
         - name: Services for Graduate Students
-          href: "#"
+          href: "/graduate/career/"
     - name: Graduation
-      href: "#"
+      href: "/404/"
       subsection:
         - name: Commencement
-          href: "#"
+          href: "/404/"
     - name: Departments and Centers
       href: "/departments-centers/"
       subsection:
@@ -112,37 +110,37 @@
     - name: Connect Magazine
       href: "http://connect.cehd.umn.edu/"
     - name: Media Requests
-      href: "#"
+      href: "/media/"
     - name: Featured Expert
-      href: "#"
+      href: "/featured/"
     - name: Events
-      href: "#"
+      href: "/events/"
   section: news-events
 - name: Giving
-  href: "#"
+  href: "/giving/"
   section: giving
 - name: Alumni
-  href: "/alumni/"
+  href: "/404/"
   section: alumni
   subsection:
     - name: Membership & Benefits
-      href: "#"
+      href: "/404/"
       subsection:
         - name: Meet the Board
-          href: "#"
+          href: "/404/"
     - name: Awards & Scholarships
-      href: "#"
+      href: "/404/"
       subsection:
         - name: CEHD Rising Alumni
           href: "/alumni/rising/"
         - name: Distinguished Alumni Awards
-          href: "#"
+          href: "/404/"
         - name: College & University Awards
-          href: "#"
+          href: "/404/"
     - name: News & Notes
-      href: "#"
+      href: "/404/"
     - name: Contact Us
-      href: "#"
+      href: "/404/"
 - name: About Us
   href: "/about/"
   section: about

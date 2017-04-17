@@ -864,6 +864,11 @@
   template: cehd/graduate/career.html
   template_data:
     - section: graduate
+/graduate/community/:
+  publish: true
+  template: cehd/graduate/community.html
+  template_data:
+    - section: graduate
 /graduate/funding/:
   publish: true
   template: cehd/graduate/funding.html
@@ -1017,6 +1022,11 @@
 /teaching/license/:
   publish: true
   template: cehd/teaching/license.html
+  template_data:
+    - section: teaching
+/teaching/mpt/:
+  publish: true
+  template: cehd/teaching/mpt.html
   template_data:
     - section: teaching
 /teaching/partnerships/:
@@ -1826,7 +1836,7 @@
     - section: trio
 /trio/mcnair/about/:
   publish: true
-  template: cehd/trio/mcnair/adout.html
+  template: cehd/trio/mcnair/about.html
   template_data:
     - section: trio
 /trio/mcnair/alumni/:
@@ -1899,9 +1909,9 @@
   template: cehd/trio/upward-bound/index.html
   template_data:
     - section: trio
-/trio/upward-bound/academicyear/:
+/trio/upward-bound/academic-year/:
   publish: true
-  template: cehd/trio/upward-bound/academicyear.html
+  template: cehd/trio/upward-bound/academic-year.html
   template_data:
     - section: trio
 /trio/upward-bound/apply/:
