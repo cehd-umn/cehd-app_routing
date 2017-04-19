@@ -63,26 +63,7 @@ header a#cehdlink {
 	-moz-background-size: contain;
 	-o-background-size: contain;
 }
-/* this substitutes a higehr resolution wordmark for hi res screens */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.1),
-    only screen and (-o-min-device-pixel-ratio: 11/10),
-    only screen and (min--moz-device-pixel-ratio: 1.1),
-    only screen and (min-device-pixel-ratio: 1.1) {
-	header a#deptlink {
-		background: 100% no-repeat url(../images/dept-header/Data-Big@2x.png);
-		background-size: contain;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-	}
-	header a#cehdlink {
-		background: 100% no-repeat url(../images/dept-header/Wordmark-CEHD@2x.png);
-		background-size: contain;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-	}
-}
+
 
 header a#deptlinkmobile {display: none;}
 
