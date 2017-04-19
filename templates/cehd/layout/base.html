@@ -80,7 +80,7 @@
                     {%- endif -%}
                 </a>
                 {%- if top_level_item.subsection -%}
-                <div class="dropdown-menu">
+                <div class="dropdown-menu dropdown-menu-{{ loop.index }}">
                     <ul class="span-3 margin-top nav">
                     {%- for sub_nav_item in top_level_item.subsection %}
                         <li class="dropdown-header">
