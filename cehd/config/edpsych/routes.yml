@@ -674,6 +674,12 @@
     template_data:
         meta_description: "The development of narrative thinking lab, led by Steve Yussen, focuses on memory and comprehension of stories, narrative exchanges between children and parents, and the role of culture on narrative storytelling and memory."
         section: research
+/edpsych/research/making-a-difference-with-data/:
+    publish: true
+    template: edpsych/research/making-a-difference-with-data.html
+    template_data:
+        meta_description: "LeAnne Johnson, assistant professor in special education and coordinator for the early childhood special education M.Ed. and licensure program, is dedicated to ensuring teachers have the tools they need to decide what interventions they should use with kids."
+        section: research
 /edpsych/research/pnrc/:
     publish: true
     template: edpsych/research/pnrc.html
