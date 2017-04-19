@@ -3,7 +3,6 @@
 nav {
     font-size: 15px;
     max-height: 0;
-    // overflow: hidden;
     transition-duration: .5s;
     transition-property: max-height;
     transition-timing-function: ease-out;
@@ -74,7 +73,6 @@ nav {
 
 @media all and (min-width: 768px) {
     .nav-container {
-        // overflow: hidden;
         padding: 0 0 2em;
         z-index: 1000;
 

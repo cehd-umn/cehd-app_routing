@@ -28,11 +28,13 @@
 
 .category-container {
     background-color: $base-light-grey;
+    min-height: 90px;
     padding: 0 1em;
 }
 
 .category-filter-container {
-    background-color: $sorter-translucent-white;
+    background-color: $base-white;
+    box-shadow: 0 3px 3px $base-light-grey;
     max-height: 0;
     overflow: hidden;
     padding: 0 1em;
