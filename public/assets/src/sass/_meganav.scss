@@ -3,12 +3,14 @@
 nav {
     font-size: 15px;
     max-height: 0;
+    overflow: hidden;
     transition-duration: .5s;
     transition-property: max-height;
     transition-timing-function: ease-out;
 
     &.open {
         max-height: 2000px;
+        overflow: visible;
     }
 
     a {
@@ -85,6 +87,7 @@ nav {
         display: flex;
         justify-content: center;
         max-height: 2000px;
+        overflow: visible;
 
         .last {
             border-bottom: 0;
