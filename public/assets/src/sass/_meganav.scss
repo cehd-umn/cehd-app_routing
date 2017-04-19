@@ -3,7 +3,7 @@
 nav {
     font-size: 15px;
     max-height: 0;
-    overflow: hidden;
+    // overflow: hidden;
     transition-duration: .5s;
     transition-property: max-height;
     transition-timing-function: ease-out;
@@ -74,7 +74,7 @@ nav {
 
 @media all and (min-width: 768px) {
     .nav-container {
-        overflow: hidden;
+        // overflow: hidden;
         padding: 0 0 2em;
         z-index: 1000;
 
@@ -133,9 +133,9 @@ nav {
         display: none;
         left: 0;
         padding: 10px 2em 20px;
-        position: fixed;
-        top: 162px;
-        width: 100vw;
+        position: absolute;
+        top: 25px;
+        width: 1400px;
 
         ul {
             display: block;
@@ -150,6 +150,22 @@ nav {
                 color: $base-black;
             }
 
+        }
+    }
+
+    // This is a little hacky, but it's based on the 1400px container with 3em
+    // right and left margins that is then divided into 7 (for the 7 nav
+    // elements) so we can properly place the meganav container and the list of
+    // links it contains. It'd be better to identify the exact pattern and
+    // calculate these based on that instead of hand writing the formulas and
+    // values, but this works for now.
+    @for $i from 2 through 7 {
+        .dropdown-menu-#{$i} {
+            margin-left: -(188.14 * $i) + (188.14) + px;
+
+            ul {
+                left: -(188.14 * $i) + (188.14) - 46 + px;
+            }
         }
     }
 
