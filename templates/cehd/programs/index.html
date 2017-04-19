@@ -1,6 +1,13 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Academic programs | CEHD | UMN" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .category-container {
+        background-color: #ffcc33;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 {#- @todo create a "sorter" template with common code from this and topics page -#}
 <div class="row">

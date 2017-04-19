@@ -2,10 +2,18 @@
 {%- import "macros/loader.html" as loader -%}
 {% set page_title = "College of Education + Human Development" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .category-container {
+        background-color: #ffcc33;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>Topics</h1>
+        <h1>Our research and expertise</h1>
+        <p>We advance research, teaching, and community engagement to increase opportunities for all individuals to have a successful start in life and to foster healthy human development, and will provide programs that meet the demands of the 21st century.</p>
         <div class="half feature">
             <input type="text" id="full-text-search-input" placeholder="Search here or choose a category below">
         </div>
