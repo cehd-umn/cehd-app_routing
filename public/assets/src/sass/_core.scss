@@ -666,6 +666,36 @@ footer {
     }
 }
 
+@media all and (max-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
 .search-heading {
     color: $base-white;
     font-size: 2em;

@@ -2,8 +2,6 @@
 
 $heading-map-desktop: (h1: 48px, h2: 30px, h3: 25px, h4: 20px, h5: 20px, h6: 18px);
 $heading-map-mobile: (h1: 36px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
-// $heading-map-desktop: (h1: 48px, h2: 48px, h3: 30px, h4: 24px, h5: 20px, h6: 18px);
-// $heading-map-mobile:  (h1: 36px, h2: 36px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
 $subheading-map-desktop: (h1: 36px, h2: 36px, h3: 30px, h4: 24px, h5: 20px, h6: 18px);
 $subheading-map-mobile: (h1: 30px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 14px);
 
@@ -23,3 +21,10 @@ $fh-textarea-max-width: 100%;
 // Handy link pseudo-class list
 
 $link-pseudo-classes: (link: $link-base, hover: $link-base-hover, visited: $link-base-visited, active: $link-base-active);
+
+// meganav
+$mega-dropdown-margins: (7 -181.14 0 -564.42 0 -940.7);
+$mega-dropdown-margins-1400: (9 -150.14 0 -467.42 0 -784.7);
+$mega-dropdown-margins-1200: (9 -125.14 0 -393.42 0 -659.7);
+$mega-dropdown-margins-1024: (9 -118.14 0 -365.42 0 -616.7);
+$mega-dropdown-margins-960: (9 -95.14 0 -298.42 0 -504.7);

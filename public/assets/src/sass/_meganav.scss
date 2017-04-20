@@ -73,7 +73,7 @@ nav {
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
     .nav-container {
         padding: 0 0 2em;
         z-index: 1000;
@@ -154,18 +154,14 @@ nav {
         }
     }
 
-    // This is a little hacky, but it's based on the 1400px container with 3em
-    // right and left margins that is then divided into 7 (for the 7 nav
-    // elements) so we can properly place the meganav container and the list of
-    // links it contains. It'd be better to identify the exact pattern and
-    // calculate these based on that instead of hand writing the formulas and
-    // values, but this works for now.
-    @for $i from 2 through 7 {
+    @for $i from 1 through length($mega-dropdown-margins) {
         .dropdown-menu-#{$i} {
-            margin-left: -(188.14 * $i) + (188.14) + px;
+            $margin: nth($mega-dropdown-margins, $i);
+
+            margin-left: $margin + px;
 
             ul {
-                left: -(188.14 * $i) + (188.14) - 46 + px;
+                left: $margin - 46 + px;
             }
         }
     }
@@ -243,17 +239,69 @@ nav {
     .nav-toggle {
         display: none;
     }
+}
 
-    // @media all and (max-width: 800px) {
-    //     .nav-inline {
-    //         .nav-item {
-    //             clear: both;
-    //             display: block;
+@media all and (max-width: 1400px) {
+    .dropdown-menu {
+        width: 1093px;
+    }
 
-    //             +.nav-item {
-    //                 margin-left: 0;
-    //             }
-    //         }
-    //     }
-    // }
+    @for $i from 1 through length($mega-dropdown-margins-1400) {
+        .dropdown-menu-#{$i} {
+            $margin: nth($mega-dropdown-margins-1400, $i);
+
+            margin-left: $margin + px;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .dropdown-menu {
+        width: 918px;
+    }
+
+    @for $i from 1 through length($mega-dropdown-margins-1200) {
+        .dropdown-menu-#{$i} {
+            $margin: nth($mega-dropdown-margins-1200, $i);
+
+            margin-left: $margin + px;
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    nav {
+        font-size: 13px;
+    }
+
+    .dropdown-menu {
+        width: 858px;
+    }
+
+    @for $i from 1 through length($mega-dropdown-margins-1024) {
+        .dropdown-menu-#{$i} {
+            $margin: nth($mega-dropdown-margins-1024, $i);
+
+            margin-left: $margin + px;
+        }
+    }
+}
+
+@media all and (max-width: 960px) {
+    nav {
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        top: 33px;
+        width: 704px;
+    }
+
+    @for $i from 1 through length($mega-dropdown-margins-960) {
+        .dropdown-menu-#{$i} {
+            $margin: nth($mega-dropdown-margins-960, $i);
+
+            margin-left: $margin + px;
+        }
+    }
 }
