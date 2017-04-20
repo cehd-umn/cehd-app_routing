@@ -782,6 +782,16 @@
   template: cehd/diversity/research.html
   template_data:
     - section: diversity
+/events/:
+  publish: true
+  template: cehd/events/index.html
+  template_data:
+    - section: events
+/events/block-party/:
+  publish: true
+  template: cehd/events/block-party.html
+  template_data:
+    - section: events
 
 # Examples section (note: keep publish "false" for these")
 /examples/:
