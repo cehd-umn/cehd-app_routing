@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 nav {
     font-size: 15px;
@@ -242,52 +243,38 @@ nav {
 }
 
 @media all and (max-width: 1400px) {
+    @include cehd-meganav-dropdowns($mega-dropdown-margins-1400);
+
     .dropdown-menu {
         width: 1093px;
-    }
-
-    @for $i from 1 through length($mega-dropdown-margins-1400) {
-        .dropdown-menu-#{$i} {
-            $margin: nth($mega-dropdown-margins-1400, $i);
-
-            margin-left: $margin + px;
-        }
     }
 }
 
 @media all and (max-width: 1200px) {
+    @include cehd-meganav-dropdowns($mega-dropdown-margins-1200);
+
     .dropdown-menu {
+        top: 45px;
         width: 918px;
-    }
-
-    @for $i from 1 through length($mega-dropdown-margins-1200) {
-        .dropdown-menu-#{$i} {
-            $margin: nth($mega-dropdown-margins-1200, $i);
-
-            margin-left: $margin + px;
-        }
     }
 }
 
 @media all and (max-width: 1024px) {
+    @include cehd-meganav-dropdowns($mega-dropdown-margins-1024);
+
     nav {
         font-size: 13px;
     }
 
     .dropdown-menu {
+        top: 20px;
         width: 858px;
-    }
-
-    @for $i from 1 through length($mega-dropdown-margins-1024) {
-        .dropdown-menu-#{$i} {
-            $margin: nth($mega-dropdown-margins-1024, $i);
-
-            margin-left: $margin + px;
-        }
     }
 }
 
 @media all and (max-width: 960px) {
+    @include cehd-meganav-dropdowns($mega-dropdown-margins-960);
+
     nav {
         font-size: 12px;
     }
@@ -295,13 +282,5 @@ nav {
     .dropdown-menu {
         top: 33px;
         width: 704px;
-    }
-
-    @for $i from 1 through length($mega-dropdown-margins-960) {
-        .dropdown-menu-#{$i} {
-            $margin: nth($mega-dropdown-margins-960, $i);
-
-            margin-left: $margin + px;
-        }
     }
 }
