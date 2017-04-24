@@ -128,6 +128,7 @@ img {
 }
 
 /// No `clear` for simple columns
+.always-half,
 .half,
 .third,
 .twothird,
@@ -136,9 +137,34 @@ img {
     min-height: 1px;
 }
 
+// "half" style that never stacks for mobile
+.always-half {
+    @include span-columns(6);
+}
+
 .whole {
     @include span-columns(12);
 }
+
+// .flex {
+//     align-content: stretch; /* Extra space in Cross Axis */
+//     align-items: stretch; /* align items in Cross Axis */
+//     display: flex;
+//     flex-grow: 1;
+//     justify-content: flex-start; /* align items in Main Axis */
+//
+//     &.column {
+//         flex-direction: column;
+//     }
+//
+//     &.center {
+//         justify-content: center;
+//     }
+// }
+//
+// .flex-item {
+//     flex: 1;
+// }
 
 /// Base styles for SVG wordmarks
 .wordmark-svg {

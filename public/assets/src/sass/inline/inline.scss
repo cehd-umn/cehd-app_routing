@@ -361,4 +361,65 @@ figure {
     src: local('Macondo'), local('Macondo-Regular'), url(https://fonts.gstatic.com/s/macondo/v5/wijdXSTMZhcyWspsnqogsw.ttf) format('truetype');
 }
 
+.svg-social-media-icon {
+    max-width: 50px;
+    width: 100%;
+
+    svg {
+        max-width: 50px;
+        width: 100%;
+    }
+}
+
+.svg-social-media-icon-group-wrapper {
+    display: table;
+}
+
+.svg-social-media-icon-group {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+%social-media-icon {
+    transition: fill .5s;
+}
+
+.icon-facebook {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $facebook-blue;
+    }
+}
+
+.icon-linkedin {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $linkedin-blue;
+    }
+}
+
+.icon-pinterest {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $pinterest-red;
+    }
+}
+
+.icon-twitter {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $twitter-blue;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .svg-social-media-icon {
+        max-width: 40px;
+    }
+}
+
 @import "umn-hf";
