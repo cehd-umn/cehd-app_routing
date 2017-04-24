@@ -772,16 +772,6 @@
   template: cehd/diversity/index.html
   template_data:
     - section: diversity
-/diversity/engagement/:
-  publish: true
-  template: cehd/diversity/engagement.html
-  template_data:
-    - section: diversity
-/diversity/research/:
-  publish: true
-  template: cehd/diversity/research.html
-  template_data:
-    - section: diversity
 /events/:
   publish: true
   template: cehd/events/index.html
@@ -934,6 +924,11 @@
   template: cehd/policy-breakfast/2016-09.html
   template_data:
     - section: policy-breakfast
+/privacy/:
+  publish: true
+  template: cehd/privacy/index.html
+  template_data:
+    - section: privacy
 /reads/:
   publish: true
   template: cehd/reads/index.html
