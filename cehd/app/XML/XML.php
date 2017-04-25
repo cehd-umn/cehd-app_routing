@@ -50,7 +50,6 @@ class XML extends \CEHD\App\BaseClass
                     throw new \Exception($msg);
                 }
             }
-            // var_dump($obj);
             return $obj;
         }
     }
@@ -77,6 +76,28 @@ class XML extends \CEHD\App\BaseClass
     {
         $stringified = $this->toString($property);
         return !empty($stringified) ? $stringified : null;
+    }
+
+    /**
+     * Casts string "true" or "false" to boolean
+     *
+     * @param mixed $property
+     * @return boolean
+     */
+    public function getBoolFromProperty($property)
+    {
+        $stringified = $this->getFromProperty($property);
+
+        switch($stringified)
+        {
+            case "true":
+                return true;
+            case "false":
+                return false;
+            default:
+                $msg = $stringified . " is not a boolean (true or false)";
+                throw new \Exception($msg);
+        }
     }
 
     /**
