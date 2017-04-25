@@ -54,6 +54,10 @@ $app->router->with('/services', function() use ($app)
         $app->router->respond('GET', '/feed/', [$app, 'newsFeedEndpointHandler']);
     });
 
+    $app->router->with('/info-sessions', function() use ($app) {
+        $app->router->respond('GET', '/', [$app, 'infoSessionsEndpointHandler']);
+    });
+
     $app->router->with('/events', function() use ($app) {
         $app->router->respond('GET', '/feed/', [$app, 'eventsFeedEndpointHandler']);
     });
