@@ -49,7 +49,7 @@ class InfoSession extends \CEHD\XML\Event\Event
 
         $this->contact = $this->getFromProperty($session->contact);
 
-        $this->date = $this->getFromProperty($session->eventDate);
+        $this->date = $this->getFromProperty($session->date);
 
         $this->dateChange = $this->getFromProperty($session->dateChange);
 
