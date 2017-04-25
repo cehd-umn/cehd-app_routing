@@ -86,7 +86,7 @@ class XML extends \CEHD\App\BaseClass
      */
     public function getBoolFromProperty($property)
     {
-        $stringified = $this->getFromProperty($property);
+        $stringified = strtolower($this->getFromProperty($property));
 
         switch($stringified)
         {
