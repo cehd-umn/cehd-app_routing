@@ -3,6 +3,7 @@ namespace CEHD\App\CEHD;
 
 require_once __DIR__ . '/../../../cehd/app/App/App.php';
 require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
+require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
@@ -266,6 +267,25 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $xml = $client_response->getBody();
             $news = new \CEHD\App\XML\News\News($xml);
             $response->sendJSONResponse(json_encode($news->stories));
+        }
+    }
+
+    public function infoSessionsEndpointHandler($request, $response, $service, $app)
+    {
+        $base_url = "https://apps.cehd.umn.edu/Students/Infosession/Admin/RSSFeed.aspx";
+        $query_data = $request->params();
+        if (array_key_exists("code", $query_data))
+        {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_query_data = ["query" => [
+                "code" => $query_data["code"],
+                ]
+            ];
+            $request_url = $base_url;
+            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $xml = $client_response->getBody();
+            $infoSessions = new \CEHD\XML\InfoSession\InfoSessions($xml);
+            $response->sendJSONResponse(json_encode($infoSessions->infoSessions));
         }
     }
 

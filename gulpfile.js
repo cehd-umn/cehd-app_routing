@@ -14,6 +14,7 @@ gulp.task("default", function() {
     runSequence(
         "cehd-sass-task",
         "cehd-inline-sass-task",
+        "cehd-forms-sass-task",
         "cehd-svg-sass-task",
         "cehd-javascript"
     );
@@ -29,6 +30,14 @@ gulp.task("cehd-sass-task", function() {
 
 gulp.task("cehd-inline-sass-task", function() {
     return gulp.src("./public/assets/src/sass/inline/inline.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(sourcemaps.write("assets/maps"))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
+gulp.task("cehd-forms-sass-task", function() {
+    return gulp.src("./public/assets/src/sass/forms/forms.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
     .pipe(sourcemaps.write("assets/maps"))
@@ -75,6 +84,7 @@ gulp.task("watch", function() {
         [
             "cehd-sass-task",
             "cehd-inline-sass-task",
+            "cehd-forms-sass-task",
             "cehd-svg-sass-task",
         ]
     );
