@@ -52,6 +52,13 @@ class XMLTest extends TestCase
 
         $bool = "true";
         $this->assertSame(true, $this->xmlInstance->getBoolFromProperty($bool));
+
+        // Capitalization shouldn't matter
+        $bool = "True";
+        $this->assertSame(true, $this->xmlInstance->getBoolFromProperty($bool));
+
+        $bool = "False";
+        $this->assertSame(false, $this->xmlInstance->getBoolFromProperty($bool));
     }
 
     public function testGetBoolFromPropertyNotBoolean()

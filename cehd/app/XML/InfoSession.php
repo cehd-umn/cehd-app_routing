@@ -25,8 +25,19 @@ class InfoSession extends \CEHD\XML\Event\Event
      * Class properties
      */
 
+     /**
+      * @type string
+      */
      public $code;
+
+     /**
+      * @type string
+      */
      public $contact;
+
+     /**
+      * @type string
+      */
      public $dateChange;
      public $degree;
      public $email;
@@ -51,11 +62,7 @@ class InfoSession extends \CEHD\XML\Event\Event
 
         $this->date = $this->getFromProperty($session->date);
 
-        $this->dateChange = $this->getFromProperty($session->dateChange);
-
-        $this->dateTimeEnd = $this->date . " " . $this->endTime;
-
-        $this->dateTimeStart = $this->date . " " . $this->startTime;
+        $this->dateChange = $this->getBoolFromProperty($session->dateChange);
 
         $this->degree = $this->getFromProperty($session->degree);
 
@@ -65,9 +72,9 @@ class InfoSession extends \CEHD\XML\Event\Event
 
         $this->endTime = $this->getFromProperty($session->endTime);
 
-        $this->id = $this->getFromProperty($session->infoSessionId);
+        $this->id = $this->getFromProperty($session->infosessionId);
 
-        $this->link = $this->getFromProperty($session->link);
+        $this->url = $this->getFromProperty($session->link);
 
         $this->location = $this->getFromProperty($session->location);
 
@@ -78,6 +85,10 @@ class InfoSession extends \CEHD\XML\Event\Event
         $this->startTime = $this->getFromProperty($session->startTime);
 
         $this->title = $this->getFromProperty($session->title);
+
+        $this->dateTimeEnd = $this->date . " " . $this->endTime;
+
+        $this->dateTimeStart = $this->date . " " . $this->startTime;
     }
 }
 
