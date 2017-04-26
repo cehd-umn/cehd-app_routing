@@ -9,7 +9,7 @@
 <script>
     (function() {
         "use strict";
-        var base_url = "/edpsych/services/events/feed/";
+        var base_url = "/services/events/feed/";
         var params = {
             url: base_url,
             data: {
@@ -26,7 +26,7 @@
             var results = client.getResults();
             var events = Helpers.parseEvents(results);
             var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/events/",
+                "template_path": "{{ config.nunjucks_view_base }}/cehd/events",
                 "template_name": "{{ template_name }}",
                 "$target_element": $("{{ target_element_selector }}"),
                 "data": {

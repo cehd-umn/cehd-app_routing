@@ -1,0 +1,13 @@
+{% if data.events|length > 0 %}
+    <ul>
+        {% for event in data.events %}
+            {% if loop.index0 < data.limit %}
+                <li>
+                    {{ event.dateMD }}: <a href="{{ event.link }}">{{ event.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no upcoming events.</p>
+{% endif %}

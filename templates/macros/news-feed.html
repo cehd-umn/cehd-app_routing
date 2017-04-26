@@ -2,7 +2,7 @@
 <script>
     (function() {
         "use strict";
-        var base_url = "/edpsych/services/news/feed/";
+        var base_url = "/services/news/feed/";
         var params = {
             url: base_url,
             data: {
@@ -18,7 +18,7 @@
             var news_category_uri = Helpers.feedPathToLinkPath("{{ feed_path }}");
             var news_link = news_site_base_url + news_category_uri;
             var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/edpsych/newsfeeds/",
+                "template_path": "{{ config.nunjucks_view_base }}/cehd/newsfeeds/",
                 "template_name": "{{ template_name }}",
                 "$target_element": $("{{ target_element_selector }}"),
                 "data": {
