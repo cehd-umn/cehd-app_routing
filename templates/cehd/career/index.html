@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/loader.html" as loader -%}
 {%- import "macros/svg.html" as svg -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -58,11 +60,17 @@
     </div>
     <div class="third">
       <h2 class="h2">Upcoming Events</h2>
+      <!-- http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&x=6&r=3&q=6&l=y&t=231 -->
       <p>Youth &amp; Family Services Career Panel<br>
         Thursday, March 30</p>
       <p>MN Education Job air 2017<br>
         Fiday, Apr-l 21</p>
     </div>
+                {{ loader.loader(
+                "Calendar",
+                "h3",
+                "events-container"
+) }}
 </div>
   </div> <!-- ./container -->
 <div class="row outer-bg-right cool">
@@ -88,4 +96,17 @@
 
 
 </div> <!-- ./row -->
+{% endblock %}
+
+{% block bottom_js %}{{ parent() }}
+
+
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+        355
+    ) }}
+
 {% endblock %}
