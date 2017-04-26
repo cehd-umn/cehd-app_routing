@@ -802,6 +802,18 @@
   template_data:
     meta_description: null
     section: null
+/examples/events/:
+  publish: false
+  template: cehd/examples/events.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/grid/:
+  publish: false
+  template: cehd/examples/grid.html
+  template_data:
+    meta_description: null
+    section: null
 /examples/hero/:
   publish: false
   template: cehd/examples/hero.html

@@ -508,6 +508,15 @@ footer {
                 $offset: $offset - .5;
             }
         }
+
+        .push-#{$grid-span} {
+            @include shift($grid-span);
+        }
+
+        // .pull-#{$grid-span} {
+        //     @include shift(-$grid-span);
+        // }
+
     }
 
     .dept-footer-section {
