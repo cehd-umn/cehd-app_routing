@@ -762,6 +762,11 @@
   template: cehd/career/teacher/teach-minn.html
   template_data:
     - section: career
+/commencement/:
+  publish: true
+  template: cehd/commencement/index.html
+  template_data:
+    - section: commencement
 /direct/:
   publish: true
   template: cehd/direct/index.html
