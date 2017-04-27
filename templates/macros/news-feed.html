@@ -1,4 +1,9 @@
-{%- macro news_feed_js(feed_path, target_element_selector="#news-container", template_name="index.html", limit=3) -%}
+{%- macro news_feed_js(
+    feed_path, 
+    target_element_selector="#news-container", 
+    template_name="index.html", 
+    limit=3, 
+    news_site_base_url="http://news.cehd.umn.edu/") -%}
 <script>
     (function() {
         "use strict";
@@ -14,7 +19,7 @@
 
         $request.done(function() {
             var results = client.getResults();
-            var news_site_base_url = "http://news.cehd.umn.edu/";
+            var news_site_base_url = {{ news_site_base_url }};
             var news_category_uri = Helpers.feedPathToLinkPath("{{ feed_path }}");
             var news_link = news_site_base_url + news_category_uri;
             var template_params = {
