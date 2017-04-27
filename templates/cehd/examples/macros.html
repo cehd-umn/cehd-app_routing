@@ -277,82 +277,80 @@
                     parameters to see if you need to override the defaults.</p>
                 </div><!-- /feature -->
             </div><!-- /span-12 -->
-        </div><!-- /span-12 margin-top-3 -->
-        <div class="twothird feature margin-top-3">
-            <h2>News feed macro</h2>
+            <div class="twothird feature margin-top-3">
+                <h2>News feed macro</h2>
 
-            <p>The news feed macro is very similar to the events feed macro,
-            except it takes different parameters.</p>
+                <p>The news feed macro is very similar to the events feed macro,
+                except it takes different parameters.</p>
 
-            <h3>Step one: import the macro</h3>
-            <pre><code class="jinja">{% verbatim %}{% import "macros/news-feed.html" as newsfeed %}{% endverbatim %}</code></pre>
-            <p>(<a href="#loader-instructions">See information about the loader above</a>.)</p>
+                <h3>Step one: import the macro</h3>
+                <pre><code class="jinja">{% verbatim %}{% import "macros/news-feed.html" as newsfeed %}{% endverbatim %}</code></pre>
+                <p>(<a href="#loader-instructions">See information about the loader above</a>.)</p>
 
-            <h3>Step two: Call the macro inside a <samp>bottom_js</samp> block</h3>
-            <pre><code class="jinja">{% verbatim %}
-{% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/alumni-educational-psychology/feed/") }}
-{% endblock %}
-{% endverbatim %}
-            </code></pre>
+                <h3>Step two: Call the macro inside a <samp>bottom_js</samp> block</h3>
+                <pre><code class="jinja">{% verbatim %}
+    {% block bottom_js %}{{ parent() }}
+        {{ newsfeed.news_feed_js("category/alumni-educational-psychology/feed/") }}
+    {% endblock %}
+    {% endverbatim %}
+                </code></pre>
 
-            <p>By default, <samp>news_feed_js</samp> renders the news stories
-            in an element with an id of "news-container". <a
-            href="#loader-instructions">The loader creates that by
-            default</a>.</p>
+                <p>By default, <samp>news_feed_js</samp> renders the news stories
+                in an element with an id of "news-container". <a
+                href="#loader-instructions">The loader creates that by
+                default</a>.</p>
 
-            <p>Once you have the loader set up, you might only need to pass in
-            the path to the feed on the news site as shown above. The macro
-            defaults to using the news site for news feeds. The feed we're
-            pulling in above is <samp><a
-            href="http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/">http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/</samp></a>.
-            The macro knows to use <samp>http://news.cehd.umn.edu/</samp>, so
-            we just have to provide the rest of the information. Thus, we pass
-            in <samp>category/alumni-educational-psychology/feed/</samp>.</p>
+                <p>Once you have the loader set up, you might only need to pass in
+                the path to the feed on the news site as shown above. The macro
+                defaults to using the news site for news feeds. The feed we're
+                pulling in above is <samp><a
+                href="http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/">http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/</samp></a>.
+                The macro knows to use <samp>http://news.cehd.umn.edu/</samp>, so
+                we just have to provide the rest of the information. Thus, we pass
+                in <samp>category/alumni-educational-psychology/feed/</samp>.</p>
 
-            <p>To recap:</p>
+                <p>To recap:</p>
 
-            <ol>
-                <li><a href="#loader-instructions">Set up your loader</a>.</li>
-                <li>Call the <samp>news_feed_js</samp> macro and pass in the path to the feed.</li>
-            </ol>
+                <ol>
+                    <li><a href="#loader-instructions">Set up your loader</a>.</li>
+                    <li>Call the <samp>news_feed_js</samp> macro and pass in the path to the feed.</li>
+                </ol>
 
-            <p>Of course, this macro is very customizable as well. The table
-            below lists out all the parameters.</p>
+                <p>Of course, this macro is very customizable as well. The table
+                below lists out all the parameters.</p>
 
-            {{ table.start_table("news_feed_js macro parameters") }}
-                {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
-                {{ table.row([
-                    "first",
-                    "Feed path",
-                    "The path to the RSS feed, e.g.,<samp>category/alumni-educational-psychology/feed/</samp>",
-                    "None (required)"]) }}
-                {{ table.row([
-                    "second",
-                    "Target element selector",
-                    "A JQuery selector for the element where the news stories should be rendered",
-                    "#news-container"]) }}
-                {{ table.row([
-                    "third",
-                    "Nunjucks<sup>&dagger;</sup> template name",
-                    "The name of the Nunjucks template used to render the events",
-                    "index.html"]) }}
-                {{ table.row([
-                    "fourth",
-                    "limit",
-                    "The number of stories to retrieve",
-                    "3"]) }}
-                {{ table.row([
-                    "fifth",
-                    "News feed base url",
-                    "The base url for the site with the news feed",
-                    "http://news.cehd.umn.edu/"]) }}
-            {{ table.end_table() }}
+                {{ table.start_table("news_feed_js macro parameters") }}
+                    {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+                    {{ table.row([
+                        "first",
+                        "Feed path",
+                        "The path to the RSS feed, e.g.,<samp>category/alumni-educational-psychology/feed/</samp>",
+                        "None (required)"]) }}
+                    {{ table.row([
+                        "second",
+                        "Target element selector",
+                        "A JQuery selector for the element where the news stories should be rendered",
+                        "#news-container"]) }}
+                    {{ table.row([
+                        "third",
+                        "Nunjucks<sup>&dagger;</sup> template name",
+                        "The name of the Nunjucks template used to render the events",
+                        "index.html"]) }}
+                    {{ table.row([
+                        "fourth",
+                        "limit",
+                        "The number of stories to retrieve",
+                        "3"]) }}
+                    {{ table.row([
+                        "fifth",
+                        "News feed base url",
+                        "The base url for the site with the news feed",
+                        "http://news.cehd.umn.edu/"]) }}
+                {{ table.end_table() }}
 
-            <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
-            is a JavaScript template engine that has a syntax almost identical
-            to Twig</a>.</p>
-</div><!-- /span-12 margin-top-3 -->
+                <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
+                is a JavaScript template engine that has a syntax almost identical
+                to Twig</a>.</p>
     </div><!-- container -->
 </div><!-- row -->
 {% endblock %}
