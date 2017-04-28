@@ -1,0 +1,41 @@
+{%- macro info_sessions_feed_js(
+    code,
+    limit=4,
+    target_element_selector="#info-sessions-container",
+    template_path="/assets/dist/views/cehd/info-sessions",
+    template_name="index.html"
+    ) -%}
+<script>
+    (function() {
+        "use strict";
+        var base_url = "/services/info-sessions/";
+        var params = {
+            url: base_url,
+            data: {
+                "code": "{{ code }}"
+            }
+        };
+        var client = new HTTPClient();
+        var $response = client.get(params);
+
+        $response.done(function() {
+            var results = client.getResults();
+            console.log(results);
+            var template_params = {
+                "template_path": "{{ template_path }}",
+                "template_name": "{{ template_name }}",
+                "$target_element": $("{{ target_element_selector }}"),
+                "data": {
+                    info_sessions: results,
+                    limit: {{ limit }},
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+
+            var renderer = new Renderer();
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
+</script>
+{%- endmacro -%}
