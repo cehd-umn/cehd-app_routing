@@ -7,7 +7,7 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <div class="feature half margin-top-2">
+        <div class="twothird feature">
             <h1>Using Macros</h1>
             <p>Our templating system (Twig) has some nice features to help with
             repetitive tasks on pages.</p>
@@ -28,72 +28,49 @@
 
             <p>Make sure you put it at the top, preferably just after the
             "extends" declaration at the top:</p>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <pre><code class="twig">{%- verbatim -%}
+            <pre><code class="twig">{%- verbatim -%}
 {% extends "edpsych/layout/section.html" %}
-{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
-{% endverbatim %}</code></pre>
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <div class="feature half margin-top-2">
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}{% endverbatim %}
+            </code></pre>
             <h3>Step Two: Use the macro</h3>
             <p>In the past we've included code like this for click tracking:</p>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <pre><code class="html">&lt;a href=&quot;/link&quot; onclick=&quot;ga('send', 'event', 'how to apply', 'click', 'csppmain');&quot;&gt;Link&lt;/a&gt;</code></pre>
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <div class="feature half margin-top-2">
+            <pre><code class="html">&lt;a href=&quot;/link&quot; onclick=&quot;ga('send', 'event', 'how to apply', 'click', 'csppmain');&quot;&gt;Link&lt;/a&gt;</code></pre>
             <p>That's a bad practice for two reasons:</p>
             <ol>
-                <li>It violates separation of concerns by mixing JavaScript in with the HTML</li>
-                <li>It will never be executed on a page that leaves the website</li>
+                <li>It violates separation of concerns by mixing JavaScript in
+                with the HTML</li>
+                <li>It will never be executed on a page that leaves the
+                website</li>
             </ol>
 
-            <p>This site has JavaScript included in it on every page that is set up
-            to work with the code that the GA tracking macro inserts.</p>
+            <p>This site has JavaScript included in it on every page that is
+            set up to work with the code that the GA tracking macro
+            inserts.</p>
 
-            <p>Using the macro follows a very similar pattern, but looks like this instead:
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <pre><code class="html">{%- verbatim -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endverbatim %}</code></pre>
-        <div class="span-12 margin-top-3">
-            <div class="half feature">
-                <h2>The events macro</h2>
-                <h3 id="loader-instructions">Step one: include the loader macro</h3>
-                <p>We're using a fancy animated loader for feeds. Using the
-                loader macro ensures you'll get all the right markup and styles
-                to create it without copying and pasting a bunch of
-                <samp>div</samp>s.</p>
+            <p>Using the macro follows a very similar pattern, but looks like
+            this instead:
+            <pre><code class="html">{%- verbatim -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endverbatim %}</code></pre>
 
-                <p><strong>Note:</strong> We use this same loader for all COPE
-                tools including the people, research, events and info
-                sessions.</p>
+            <h2>The events macro</h2>
+            <h3 id="loader-instructions">Step one: include the loader macro</h3>
 
-                <p>This code should go near the top of the page before the
-                <samp>main_content</samp> block.</p>
+            <p>We're using a fancy animated loader for feeds. Using the loader
+            macro ensures you'll get all the right markup and styles to create
+            it without copying and pasting a bunch of <samp>div</samp>s.</p>
 
-                <pre><code class="jinja">{% verbatim %}
-{%- import "macros/loader.html" as loader -%}
-            {% endverbatim %}</code></pre>
+            <p><strong>Note:</strong> We use this same loader for all COPE
+            tools including the people, research, events and info sessions.</p>
 
-                <h3>Step two: Place the loader on the page where your feed will go</h3>
+            <p>This code should go near the top of the page before the
+            <samp>main_content</samp> block.</p>
 
-                <pre><code class="jinja">{% verbatim %}
+            <pre><code class="jinja">{% verbatim %}
+{%- import "macros/loader.html" as loader -%}{% endverbatim %}
+            </code></pre>
+
+            <h3>Step two: Place the loader on the page where your feed will go</h3>
+
+            <pre><code class="jinja">{% verbatim %}
 &lt;article class=&quot;third&quot;&gt;
 {{ loader.loader(
     &quot;Alumni in the news&quot;,
@@ -101,10 +78,10 @@
     &quot;alumni-news-container&quot;
     ) }}{% endverbatim %}
 &lt;/article&gt;
-                </code></pre>
+            </code></pre>
 
-                <p>The loader macro will render HTML like this:</p>
-                <pre><code>
+            <p>The loader macro will render HTML like this:</p>
+            <pre><code>
 &lt;h3&gt;Alumni in the news&lt;/h3&gt;
 &lt;div id=&quot;alumni-news-container&quot;&gt;
     &lt;div class=&quot;loader small&quot;&gt;
@@ -112,62 +89,87 @@
         &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-                </code></pre>
+            </code></pre>
 
-                <p>And it looks like this:</p>
+            <p>And it looks like this:</p>
 
-                <div class="span-12">
-                    <div class="third" style="min-height:200px;">{{ loader.loader(
-                        "Alumni in the news",
-                        "h3",
-                        "alumni-news-container"
-                        ) }}
-                    </div>
-                </div>
+            <div class="third" style="min-height:200px;">{{ loader.loader(
+                "Alumni in the news",
+                "h3",
+                "alumni-news-container"
+                ) }}
             </div>
-        </div>
 
-        <div class="span-12">
-            <div class="half feature">
-                <p>You might have noticed that the content and markup in the
-                rendered HTML matches the parameters we passed into the
-                macro.</p>
+            <p>You might have noticed that the content and markup in the
+            rendered HTML matches the parameters we passed into the macro.</p>
 
-                <p>We passed in "Alumni in the news" and you can see that gets
-                inserted into the heading.</p>
+            <p>We passed in "Alumni in the news" and you can see that gets
+            inserted into the heading.</p>
 
-                <p>You may also have noticed that the second parameter we
-                passed in is "h3" and our heading is an <samp>h3</samp>.</p>
+            <p>You may also have noticed that the second parameter we passed in
+            is "h3" and our heading is an <samp>h3</samp>.</p>
 
-                <p>Finally, we passed in "alumni-news-container" and that's
-                what the <samp>id</samp> is for our alumni news container.
-                (That'll be important later on, because we're going to tell the
-                newsfeed macro to put the rendered newsfeed there.)</p>
+            <p>Finally, we passed in "alumni-news-container" and that's what
+            the <samp>id</samp> is for our alumni news container.  (That'll be
+            important later on, because we're going to tell the newsfeed macro
+            to put the rendered newsfeed there.)</p>
 
-                <p>The loader macro has a few more parameters. Below is a list
-                of parameters and their default values:</p>
-                </div>
-            </div>
+            <p>The loader macro has a few more parameters. Below is a list of
+            parameters and their default values:</p>
 
             {{ table.start_table("Loader macro parameters") }}
-                {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
-                {{ table.row(["first", "Heading text", "What you want the heading to say", "Latest news"]) }}
-                {{ table.row(["second", "Heading tag", "Which heading tag to use", "h3"]) }}
-                {{ table.row(["third", "Container id", "Which heading tag to use", "news-container"]) }}
-                {{ table.row(["fourth", "Heading classes", "Any classes you want to add to the heading; i.e., <samp>margin-top-1</samp>", "None (no classes will be added)"]) }}
-                {{ table.row(["fifth", "Additional loader classes", "Any classes you want to add to the loader element", "small"]) }}
-                {{ table.row(["sixth", "Loader text", "Text to display while the feed is loading", "Loading&hellip;"]) }}
-                {{ table.row(["seventh", "Additional container classes", "Any additional classes you wish to add to the container for the feed content", "None (no classes will be added)"]) }}
-                {{ table.row(["eighth", "Use a heading", "Insert a heading before the container for the feed content", "<samp>true</samp>"]) }}
+                {{ table.heading_row(
+                    ["Order",
+                    "Parameter",
+                    "Description",
+                    "Default"]) }}
+                {{ table.row(
+                    ["first",
+                    "Heading text",
+                    "What you want the heading to say",
+                    "Latest news"]) }}
+                {{ table.row(
+                    ["second",
+                    "Heading tag",
+                    "Which heading tag to use",
+                    "h3"]) }}
+                {{ table.row(
+                    ["third",
+                    "Container id",
+                    "Which heading tag to use",
+                    "news-container"]) }}
+                {{ table.row(
+                    ["fourth",
+                    "Heading classes",
+                    "Any classes you want to add to the heading; i.e., <samp>margin-top-1</samp>",
+                    "None (no classes will be added)"]) }}
+                {{ table.row(
+                    ["fifth",
+                    "Additional loader classes",
+                    "Any classes you want to add to the loader element",
+                    "small"]) }}
+                {{ table.row(
+                    ["sixth",
+                    "Loader text",
+                    "Text to display while the feed is loading",
+                    "Loading&hellip;"]) }}
+                {{ table.row(
+                    ["seventh",
+                    "Additional container classes",
+                    "Any additional classes you wish to add to the container for the feed content",
+                    "None (no classes will be added)"]) }}
+                {{ table.row(
+                    ["eighth",
+                    "Use a heading",
+                    "Insert a heading before the container for the feed content",
+                    "<samp>true</samp>"]) }}
             {{ table.end_table() }}
 
-            <div class="span-12 margin-top-3">
-                <div class="half feature">
-                    <p>Parameters <em>must be passed in order</em>. If you wish to
-                    override just some of the defaults, you can pass in
-                    <samp>null</samp> for the others like so:</p>
+            <p>Parameters <em>must be passed in order</em>. If you wish to
+            override just some of the defaults, you can pass in
+            <samp>null</samp> for the others like so:</p>
 
-                    <pre><code class="jinja">
+            <pre><code class="jinja">
 {% verbatim %}
 {# This example will only override the default for the third parameter #}
 {{ loader.loader(
@@ -176,181 +178,229 @@
     "alumni-news-container",
     ) }}
 {% endverbatim %}
-                    </code></pre>
-                </div>
-            </div>
-            <div class="span-12 margin-top-3">
-                <div class="half feature">
+            </code></pre>
 
-                    <h3>Step three: include the eventsfeed macro</h3>
-                    <pre><code>{% verbatim %}
+            <h3>Step three: include the eventsfeed macro</h3>
+            <pre><code>{% verbatim %}
 {%- import "macros/events-feed.html" as eventsfeed -%}{% endverbatim %}
             </code></pre>
 
-                    <h3>Step four: Call the macro inside a <samp>bottom_js</samp> block</h3>
-                    <pre><code class="jinja">{% verbatim %}
+            <h3>Step four: Call the macro inside a <samp>bottom_js</samp> block</h3>
+            <pre><code class="jinja">{% verbatim %}
 {% block bottom_js %}{{ parent() }}
     {# The call to parent() above is *very* important #}
     {{ events.events_feed_js(355) }}
 {% endblock %}{% endverbatim %}
-                    </pre></code>
+            </pre></code>
 
-                    <p>What we're doing here is inserting some JavaScript into
-                    the <samp>bottom_js</samp> block that will pull in an
-                    events feed and render it for us.</p>
+            <p>What we're doing here is inserting some JavaScript into the
+            <samp>bottom_js</samp> block that will pull in an events feed
+            and render it for us.</p>
 
-                    <p><strong>The call to <samp>parent()</samp> is
-                    critical.</strong> That makes sure we get all the
-                    JavaScript from the parent template. Since this macro (and
-                    many others) rely on JQuery, for example, we need to make
-                    sure we have all the JavaScript dependencies for it to
-                    work.</p>
+            <p><strong>The call to <samp>parent()</samp> is
+            critical.</strong> That makes sure we get all the JavaScript
+            from the parent template. Since this macro (and many others)
+            rely on JQuery, for example, we need to make sure we have all
+            the JavaScript dependencies for it to work.</p>
 
-                    <p>Okay, but the code sample above is a little cryptic.
-                    What's going on there?</p>
+            <p>Okay, but the code sample above is a little cryptic.  What's
+            going on there?</p>
 
-                    <p>Like the loader macro above, the
-                    <samp>events_feed_js</samp> macro takes several parameters.
-                    Often you'll only need one like the example above.</p>
+            <p>Like the loader macro above, the <samp>events_feed_js</samp>
+            macro takes several parameters.  Often you'll only need one
+            like the example above.</p>
 
-                    <p><a
-                    href="https://apps.cehd.umn.edu/events/admin/LinkPro.aspx">The
-                    events calendar "Link Pro"</a> sets up query parameters to
-                    pull in different feeds. For example, an XML feed will look
-                    something like this:
-                    <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;q=6&amp;t=355</samp></p>
+            <p><a
+            href="https://apps.cehd.umn.edu/events/admin/LinkPro.aspx">The
+            events calendar "Link Pro"</a> sets up query parameters to pull
+            in different feeds. For example, an XML feed will look
+            something like this:
+            <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;q=6&amp;t=355</samp></p>
 
-                    <p><samp>t=355</samp> above is the id for the tag we want
-                    to use. In many cases you won't need any more information
-                    than that. Thus, the tag id is the first parameter for
-                    pulling in events. So we call the macro like: <br><samp>{%
-                    verbatim %}{{ events.events_feed_js(355) }}{% endverbatim
-                    %}</samp>.
+            <p><samp>t=355</samp> above is the id for the tag we want to
+            use. In many cases you won't need any more information than
+            that. Thus, the tag id is the first parameter for pulling in
+            events. So we call the macro like: <br><samp>{% verbatim %}{{
+            events.events_feed_js(355) }}{% endverbatim
+            %}</samp>.
 
-                    <p>The table below lists all the parameters for the
-                    <samp>events_feed_js</samp> macro.</p>
-                </div>
-            </div>
-            <div class="span-12">
-                <div class="twothird feature">
-                    {{ table.start_table("events_feed_js macro parameters") }}
-                        {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
-                        {{ table.row([
-                            "first",
-                            "t parameter value",
-                            "the tag id",
-                            "None (value required)"]) }}
-                        {{ table.row([
-                            "second",
-                            "limit",
-                            "The number of results to retrieve from the calendar",
-                            "3"]) }}
-                        {{ table.row([
-                            "third",
-                            "path to template",
-                            "The path to the directory where the Nunjucks template is",
-                            "<samp>/assets/dist/views/cehd/events</samp>"]) }}
-                        {{ table.row([
-                            "fourth",
-                            "target element selector",
-                            "The JQuery selector for the element where events should be rendered",
-                            "<samp>#events-container</samp>"]) }}
-                        {{ table.row([
-                            "fifth",
-                            "Nunjucks<sup>&dagger;</sup> template name",
-                            "The name of the Nunjucks template used to render the events",
-                            "index.html"]) }}
-                        {{ table.row([
-                            "sixth",
-                            "q parameter value",
-                            "the value to use for the <samp>q</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;<strong>q=6</strong>&amp;t=355</samp>",
-                            "6"]) }}
-                        {{ table.row([
-                            "seventh",
-                            "r parameter value",
-                            "the value to use for the <samp>r</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;<strong>r=3</strong>&amp;q=6&amp;t=355</samp>",
-                            "3"]) }}
-                    {{ table.end_table() }}
+            <p>The table below lists all the parameters for the
+            <samp>events_feed_js</samp> macro.</p>
 
-                    <p>Just set up the feed you want to pull in and review the
-                    <samp>r</samp>, <samp>q</samp> and <samp>t</samp> query
-                    parameters to see if you need to override the defaults.</p>
-                </div><!-- /feature -->
-            </div><!-- /span-12 -->
-            <div class="twothird feature margin-top-3">
-                <h2>News feed macro</h2>
+            {{ table.start_table("events_feed_js macro parameters") }}
+                {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+                {{ table.row([
+                    "first",
+                    "t parameter value",
+                    "the tag id",
+                    "None (value required)"]) }}
+                {{ table.row([
+                    "second",
+                    "limit",
+                    "The number of results to retrieve from the calendar",
+                    "3"]) }}
+                {{ table.row([
+                    "third",
+                    "path to template",
+                    "The path to the directory where the Nunjucks template is",
+                    "<samp>/assets/dist/views/cehd/events</samp>"]) }}
+                {{ table.row([
+                    "fourth",
+                    "target element selector",
+                    "The JQuery selector for the element where events should be rendered",
+                    "<samp>#events-container</samp>"]) }}
+                {{ table.row([
+                    "fifth",
+                    "Nunjucks<sup>&dagger;</sup> template name",
+                    "The name of the Nunjucks template used to render the events",
+                    "index.html"]) }}
+                {{ table.row([
+                    "sixth",
+                    "q parameter value",
+                    "the value to use for the <samp>q</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;<strong>q=6</strong>&amp;t=355</samp>",
+                    "6"]) }}
+                {{ table.row([
+                    "seventh",
+                    "r parameter value",
+                    "the value to use for the <samp>r</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;<strong>r=3</strong>&amp;q=6&amp;t=355</samp>",
+                    "3"]) }}
+            {{ table.end_table() }}
 
-                <p>The news feed macro is very similar to the events feed macro,
-                except it takes different parameters.</p>
+            <p>Just set up the feed you want to pull in and review the
+            <samp>r</samp>, <samp>q</samp> and <samp>t</samp> query
+            parameters to see if you need to override the defaults.</p>
 
-                <h3>Step one: import the macro</h3>
-                <pre><code class="jinja">{% verbatim %}{% import "macros/news-feed.html" as newsfeed %}{% endverbatim %}</code></pre>
-                <p>(<a href="#loader-instructions">See information about the loader above</a>.)</p>
+            <h2>News feed macro</h2>
 
-                <h3>Step two: Call the macro inside a <samp>bottom_js</samp> block</h3>
-                <pre><code class="jinja">{% verbatim %}
+            <p>The news feed macro is very similar to the events feed macro,
+            except it takes different parameters.</p>
+
+            <h3>Step one: import the macro</h3>
+            <pre><code class="jinja">{% verbatim %}{% import "macros/news-feed.html" as newsfeed %}{% endverbatim %}</code></pre>
+            <p>(<a href="#loader-instructions">See information about the loader above</a>.)</p>
+
+            <h3>Step two: Call the macro inside a <samp>bottom_js</samp> block</h3>
+            <pre><code class="jinja">{% verbatim %}
     {% block bottom_js %}{{ parent() }}
         {{ newsfeed.news_feed_js("category/alumni-educational-psychology/feed/") }}
     {% endblock %}
     {% endverbatim %}
-                </code></pre>
+            </code></pre>
 
-                <p>By default, <samp>news_feed_js</samp> renders the news stories
-                in an element with an id of "news-container". <a
-                href="#loader-instructions">The loader creates that by
-                default</a>.</p>
+            <p>By default, <samp>news_feed_js</samp> renders the news stories
+            in an element with an id of "news-container". <a
+            href="#loader-instructions">The loader creates that by
+            default</a>.</p>
 
-                <p>Once you have the loader set up, you might only need to pass in
-                the path to the feed on the news site as shown above. The macro
-                defaults to using the news site for news feeds. The feed we're
-                pulling in above is <samp><a
-                href="http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/">http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/</samp></a>.
-                The macro knows to use <samp>http://news.cehd.umn.edu/</samp>, so
-                we just have to provide the rest of the information. Thus, we pass
-                in <samp>category/alumni-educational-psychology/feed/</samp>.</p>
+            <p>Once you have the loader set up, you might only need to pass in
+            the path to the feed on the news site as shown above. The macro
+            defaults to using the news site for news feeds. The feed we're
+            pulling in above is <samp><a
+            href="http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/">http://news.cehd.umn.edu/category/alumni-educational-psychology/feed/</samp></a>.
+            The macro knows to use <samp>http://news.cehd.umn.edu/</samp>, so
+            we just have to provide the rest of the information. Thus, we pass
+            in <samp>category/alumni-educational-psychology/feed/</samp>.</p>
 
-                <p>To recap:</p>
+            <p>To recap:</p>
 
-                <ol>
-                    <li><a href="#loader-instructions">Set up your loader</a>.</li>
-                    <li>Call the <samp>news_feed_js</samp> macro and pass in the path to the feed.</li>
-                </ol>
+            <ol>
+                <li><a href="#loader-instructions">Set up your loader</a>.</li>
+                <li>Call the <samp>news_feed_js</samp> macro and pass in the
+                path to the feed.</li>
+            </ol>
 
-                <p>Of course, this macro is very customizable as well. The table
-                below lists out all the parameters.</p>
+            <p>Of course, this macro is very customizable as well. The table
+            below lists out all the parameters.</p>
 
-                {{ table.start_table("news_feed_js macro parameters") }}
-                    {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
-                    {{ table.row([
-                        "first",
-                        "Feed path",
-                        "The path to the RSS feed, e.g.,<samp>category/alumni-educational-psychology/feed/</samp>",
-                        "None (required)"]) }}
-                    {{ table.row([
-                        "second",
-                        "Target element selector",
-                        "A JQuery selector for the element where the news stories should be rendered",
-                        "#news-container"]) }}
-                    {{ table.row([
-                        "third",
-                        "Nunjucks<sup>&dagger;</sup> template name",
-                        "The name of the Nunjucks template used to render the events",
-                        "index.html"]) }}
-                    {{ table.row([
-                        "fourth",
-                        "limit",
-                        "The number of stories to retrieve",
-                        "3"]) }}
-                    {{ table.row([
-                        "fifth",
-                        "News feed base url",
-                        "The base url for the site with the news feed",
-                        "http://news.cehd.umn.edu/"]) }}
-                {{ table.end_table() }}
+            {{ table.start_table("news_feed_js macro parameters") }}
+                {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+                {{ table.row([
+                    "first",
+                    "Feed path",
+                    "The path to the RSS feed, e.g.,<samp>category/alumni-educational-psychology/feed/</samp>",
+                    "None (required)"]) }}
+                {{ table.row([
+                    "second",
+                    "Target element selector",
+                    "A JQuery selector for the element where the news stories should be rendered",
+                    "#news-container"]) }}
+                {{ table.row([
+                    "third",
+                    "Nunjucks<sup>&dagger;</sup> template name",
+                    "The name of the Nunjucks template used to render the events",
+                    "index.html"]) }}
+                {{ table.row([
+                    "fourth",
+                    "limit",
+                    "The number of stories to retrieve",
+                    "3"]) }}
+                {{ table.row([
+                    "fifth",
+                    "News feed base url",
+                    "The base url for the site with the news feed",
+                    "http://news.cehd.umn.edu/"]) }}
+            {{ table.end_table() }}
 
-                <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
-                is a JavaScript template engine that has a syntax almost identical
-                to Twig</a>.</p>
+            <h2>Info session macro</h2>
+            <p>If you've skipped to this part, make sure you understand <a
+            href="#loader-instructions">how the loader works</a>. The patterns
+            there apply here as well.</p>
+
+            <p>By now hopefully you've read about how the other macros that
+            load feeds work. If so, this should seem very familiar. If you've
+            skipped ahead, <a href="#loader-instructions">start with the loader
+            instructions</a> and work your way back to here.</p>
+
+            <h3>Import the macro</h3>
+            <pre><code class="jinja">
+                {% verbatim %}
+{% import "macros/info-sessions-feed.html" as info_session %}
+                {% endverbatim %}
+            </code></pre>
+
+            <h3>Call the macro inside a <samp>bottom_js</samp> block</h3>
+            <pre><code class="jinja">
+                {% verbatim %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("McNair") }}
+{% endblock %}
+                {% endverbatim %}
+            </code></pre>
+            <p>The parameter we passed in above is the value for the
+            <samp>code</samp> query parameter in the feed. I.e.,
+            <samp>https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?<strong>code=McNair</strong></samp>
+
+            <p>The macro accepts other parameters as well. See the table
+            below.</p>
+            {{ table.start_table("info_sessions_feed_js macro parameters") }}
+                {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+                {{ table.row([
+                    "first",
+                    "code",
+                    "The value for the code query parameter in the info sessions feed. I.e., <samp><small>https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?<strong>code=McNair</strong></small></samp>",
+                    "None (required)"]) }}
+                {{ table.row([
+                    "second",
+                    "limit",
+                    "The number of results to display",
+                    "4"]) }}
+                {{ table.row([
+                    "third",
+                    "target element selector",
+                    "The JQuery selector for the element where info sesssion should be rendered",
+                    "<samp>#info-sessions-container</samp>"]) }}
+                {{ table.row([
+                    "fourth",
+                    "path to template",
+                    "The path to the directory where the Nunjucks&dagger; template is",
+                    "<samp>/assets/dist/views/cehd/info-sessions</samp>"]) }}
+            {{ table.end_table() }}
+
+            <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
+            is a JavaScript template engine that has a syntax almost identical
+            to Twig</a>.</p>
+        </div><!-- feature -->
     </div><!-- container -->
 </div><!-- row -->
 {% endblock %}
