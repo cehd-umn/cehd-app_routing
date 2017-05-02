@@ -52,6 +52,11 @@
   publish: true
   template_data:
     - section: home
+/academics/:
+  publish: true
+  template: cehd/academics/index.html
+  template_data:
+    - section: academics
 /about/:
   publish: true
   template: cehd/about/index.html
