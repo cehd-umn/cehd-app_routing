@@ -24,41 +24,44 @@ class EventTest extends TestCase
         $this->assertEquals("3/31/2017", $this->eventInstance->events[0]->date);
         $this->assertEquals("11:00 AM", $this->eventInstance->events[0]->startTime);
         $this->assertEquals("1:00 PM", $this->eventInstance->events[0]->endTime);
+        $this->assertEquals("March", $this->eventInstance->events[0]->fullMonth);
+        $this->assertEquals("Mar", $this->eventInstance->events[0]->shortMonth);
+        $this->assertEquals("Friday", $this->eventInstance->events[0]->dayOfWeek);
     }
 
     public function testEventDay()
     {
         $expected = "31";
-        $this->assertEquals($expected, $this->eventInstance->events[0]->day());
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getDay());
     }
 
     public function testEventMonth()
     {
         $expected = "3";
-        $this->assertEquals($expected, $this->eventInstance->events[0]->month());
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getMonth());
     }
 
     public function testEventFullMonth()
     {
         $expected = "March";
-        $this->assertEquals($expected, $this->eventInstance->events[0]->fullMonth());
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getFullMonth());
     }
 
     public function testEventShortMonth()
     {
         $expected = "Mar";
-        $this->assertEquals($expected, $this->eventInstance->events[0]->shortMonth());
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getShortMonth());
     }
 
     public function testEventYear()
     {
         $expected = "2017";
-        $this->assertEquals($expected, $this->eventInstance->events[0]->year());
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getYear());
     }
 
     public function testEventTimestamp()
     {
         $expected = 1490976000;
-        $this->assertTrue(is_int($this->eventInstance->events[0]->timestamp()));
+        $this->assertTrue(is_int($this->eventInstance->events[0]->getTimestamp()));
     }
 }
