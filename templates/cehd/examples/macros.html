@@ -373,6 +373,8 @@
 
             <p>The macro accepts other parameters as well. See the table
             below.</p>
+        </div><!-- feature -->
+        <div class="span-12">
             {{ table.start_table("info_sessions_feed_js macro parameters") }}
                 {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
                 {{ table.row([
@@ -395,12 +397,17 @@
                     "path to template",
                     "The path to the directory where the Nunjucks&dagger; template is",
                     "<samp>/assets/dist/views/cehd/info-sessions</samp>"]) }}
+                {{ table.row([
+                    "fifth",
+                    "Nunjucks<sup>&dagger;</sup> template name",
+                    "The name of the Nunjucks template used to render the events",
+                    "index.html"]) }}
             {{ table.end_table() }}
 
             <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
             is a JavaScript template engine that has a syntax almost identical
             to Twig</a>.</p>
-        </div><!-- feature -->
+        </div><!-- span-12 -->
     </div><!-- container -->
 </div><!-- row -->
 {% endblock %}

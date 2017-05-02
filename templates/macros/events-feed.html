@@ -2,10 +2,10 @@
     t,
     limit=4,
     target_element_selector="#events-container",
-    template_path="/assets/dist/views/cehd/events"
+    template_path="/assets/dist/views/cehd/events",
     template_name="index.html",
     q=6,
-    r=3,
+    r=3
     ) -%}
 <script>
     (function() {
@@ -24,8 +24,7 @@
         var $response = client.get(params);
 
         $response.done(function() {
-            var results = client.getResults();
-            var events = Helpers.parseEvents(results);
+            var events = client.getResults();
             var template_params = {
                 "template_path": "{{ template_path }}",
                 "template_name": "{{ template_name }}",
