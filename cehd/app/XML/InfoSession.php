@@ -39,10 +39,30 @@ class InfoSession extends \CEHD\XML\Event\Event
       * @type string
       */
      public $dateChange;
+
+     /**
+      * @type string
+      */
      public $degree;
+
+     /**
+      * @type string
+      */
      public $email;
+
+     /**
+      * @type string
+      */
      public $eventId;
+
+     /**
+      * @type string
+      */
      public $openSeats;
+
+     /**
+      * @type string
+      */
      public $phone;
 
     /**
