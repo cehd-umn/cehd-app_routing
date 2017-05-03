@@ -127,6 +127,7 @@ $corner-border-spacing: 5px;
 blockquote {
     &.quote-wrap {
         font-style: inherit;
+        margin-top: 50px;
         quotes: "“" "”" "‘" "’";
 
         &::after,
@@ -188,19 +189,25 @@ blockquote {
     }
 }
 
-.thumbnail {
-
+img {
     &.circular {
         border-radius: 50%;
-        height: 150px;
+        display: inline-block;
         overflow: hidden;
-        width: 150px;
+    }
+}
 
-        img {
-            left: 0;
-            position: absolute;
-            top: -10px;
-        }
+.circular-thumbnail {
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+
+    img {
+        left: 0;
+        position: absolute;
+        top: -10px;
     }
 }
 
@@ -235,3 +242,12 @@ blockquote {
 #maincontent {
     z-index: 0;
 }
+
+
+.speaker {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 80px 0 0;
+}
+
