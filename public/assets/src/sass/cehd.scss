@@ -127,6 +127,7 @@ $corner-border-spacing: 5px;
 blockquote {
     &.quote-wrap {
         font-style: inherit;
+        margin-top: 50px;
         quotes: "“" "”" "‘" "’";
 
         &::after,
@@ -235,3 +236,12 @@ blockquote {
 #maincontent {
     z-index: 0;
 }
+
+
+.speaker {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 80px 0 0;
+}
+
