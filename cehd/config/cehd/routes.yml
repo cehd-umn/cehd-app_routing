@@ -869,6 +869,46 @@
   template_data:
     meta_description: null
     section: null
+/giving/:
+  publish: true
+  template: cehd/giving/index.html
+  template_data:
+    - section: giving
+/giving/contact/:
+  publish: true
+  template: cehd/giving/contact.html
+  template_data:
+    - section: giving
+/giving/gifts/:
+  publish: true
+  template: cehd/giving/gifts.html
+  template_data:
+    - section: giving
+/giving/recognition/:
+  publish: true
+  template: cehd/giving/recognition.html
+  template_data:
+    - section: giving
+/giving/support/:
+  publish: true
+  template: cehd/giving/support.html
+  template_data:
+    - section: giving
+/giving/ways/:
+  publish: true
+  template: cehd/giving/ways.html
+  template_data:
+    - section: giving
+/giving/wplc/:
+  publish: true
+  template: cehd/giving/wplc/index.html
+  template_data:
+    - section: giving
+/giving/wplc/about/:
+  publish: true
+  template: cehd/giving/wplc/about.html
+  template_data:
+    - section: giving
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
