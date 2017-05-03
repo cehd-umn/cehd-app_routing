@@ -189,19 +189,25 @@ blockquote {
     }
 }
 
-.thumbnail {
-
+img {
     &.circular {
         border-radius: 50%;
-        height: 150px;
+        display: inline-block;
         overflow: hidden;
-        width: 150px;
+    }
+}
 
-        img {
-            left: 0;
-            position: absolute;
-            top: -10px;
-        }
+.circular-thumbnail {
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+
+    img {
+        left: 0;
+        position: absolute;
+        top: -10px;
     }
 }
 
