@@ -1,9 +1,10 @@
 {%- macro news_feed_js(
-    feed_path, 
-    target_element_selector="#news-container", 
-    template_name="index.html", 
-    limit=3, 
-    news_site_base_url="http://news.cehd.umn.edu/") -%}
+    feed_path,
+    target_element_selector="#news-container",
+    template_name="index.html",
+    limit=3,
+    news_site_base_url="http://news.cehd.umn.edu/",
+    more_news_text="More news") -%}
 <script>
     (function() {
         "use strict";
@@ -19,9 +20,10 @@
 
         $request.done(function() {
             var results = client.getResults();
-            var news_site_base_url = {{ news_site_base_url }};
+            var news_site_base_url = "{{ news_site_base_url }}";
             var news_category_uri = Helpers.feedPathToLinkPath("{{ feed_path }}");
             var news_link = news_site_base_url + news_category_uri;
+            var news_text = "{{ more_news_text }}";
             var template_params = {
                 "template_path": "{{ config.nunjucks_view_base }}/cehd/newsfeeds/",
                 "template_name": "{{ template_name }}",
@@ -29,6 +31,7 @@
                 "data": {
                     news: results,
                     more_news_link: news_link,
+                    more_news_text: news_text,
                     limit: {{ limit }},
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }

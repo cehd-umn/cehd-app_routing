@@ -79,6 +79,10 @@ img {
     li {
         margin-bottom: 10px;
         margin-left: 0;
+
+        &.news-item {
+            margin-bottom: 1em;
+        }
     }
 }
 
