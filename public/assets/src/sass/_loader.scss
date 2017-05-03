@@ -9,6 +9,10 @@ $loader-color: $umn-maroon;
 // LOADER
 // -------
 
+.loader-container {
+    min-height: 100px;
+}
+
 .loader,
 .loader-figure {
     @include position(absolute, 50% null null 50%);

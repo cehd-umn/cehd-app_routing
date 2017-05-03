@@ -11,10 +11,12 @@
         {%- set article_title = news_item.title -%}
     {%- endif -%}
     {% if loop.index0 < data.limit %}
-        <li>
+        <li class="news-item">
             <a href="{{ article_link }}">{{ article_title }}</a>
         </li>
     {% endif %}
 {% endfor %}
 </ul>
-<p><a href="{{ data.more_news_link }}">More news</a></p>
+<div class="news-more-news-link-container">
+    <p class="text-right"><a href="{{ data.more_news_link }}" class="news-more-news-link">{{ data.more_news_text }}</a></p>
+</div>

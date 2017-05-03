@@ -10,7 +10,7 @@
 {%- if use_heading -%}
   <{{ h_tag }}{% if heading_classes %} class="{{ heading_classes }}"{% endif %}>{{ heading_text }}</{{ h_tag }}>
 {%- endif -%}
-<div id="{{ container_id }}"{% if container_additional_classes %}class="{{ container_additional_classes }}"{% endif %}>
+<div id="{{ container_id }}" class="loader-container"{% if container_additional_classes %}{{ container_additional_classes }}"{% endif %}>
     <div class="loader {{ loader_additional_classes }}">
         <div class="loader-figure {{ loader_additional_classes }}"></div>
         <p class="loader-label">{{ loading_text|raw }}</p>
