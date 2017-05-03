@@ -2,19 +2,53 @@
 {% set page_title = "CEHD" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+    .speaker {
+        float: right;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 40px 80px 0 0;
+    }
+    .quote-wrap{
+        margin-top: 50px;
+    }
+
+
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
 
     <h1>Our community</h1>
     </div></div>
 <div class="row">
-  <div class="container">
-    <div class="third"><p>Graduate school is defined by its community. Our collection of students, faculty and staff, are all dedicated to one another, eager to collaborate and support each other. We believe caring for our community means caring for each individual member, for our scholarly identities, and for the cross-pollination of stories, theories, and relationships. </p></div>
-
-    <div class="twothird emphasis">
-<h3>Student profile</h3>
+    <div class="container">
+        <div class="half feature">
+        <p>Graduate school is defined by its community. Our collection of students, faculty and staff, are all dedicated to one another, eager to collaborate and support each other. We believe caring for our community means caring for each individual member, for our scholarly identities, and for the cross-pollination of stories, theories, and relationships.</p>
     </div>
-  </div></div>
+</div>
+</div>
+
+
+<div class="row emphasis bg-cehd-multi">
+  <div class="container">
+    <div class="third feature">
+        <div class="circular">
+
+                      <img src="/assets/images/headshots/student-features/JenniferS.jpg" alt="Jennifer S">
+         </div>
+    </div>
+    <div class="twothird">
+          <blockquote class="quote-wrap">My advice to other students is to get involved. It makes a big university feel small. Making those connections inside and outside of the classroom is great. There are so many different clubs and organizations, so you’ll definitely be able to find your fit.</blockquote>
+          <p align="right" class="speaker">Jennifer S., '18 <br/>
+         Business and Marketing Education
+        </p>
+    </div>
+  </div>
+</div>
+
+
 
     <div class="row emphasis">
     <div class="container">
@@ -57,7 +91,7 @@
   <p><a href="https://diversity.umn.edu/gradeducation/">Office for Diversity in Graduate Education</a> helps future and current students prepare for graduate education, understand financing options, and provides academic support and mentorship.</p>
 
   <p><a href="http://www.cogs.umn.edu/">The Council of Graduate Students (COGS)</a> and the <a href="http://gapsa.umn.edu/">Professional Student Assembly (PSA)</a> are University-level organizations to further graduate and professional student voices and representation beyond their colleges and departments.</p>
-    
+
 </div>
 
 <div class="third">
