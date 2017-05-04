@@ -4,7 +4,8 @@
     template_name="index.html",
     limit=3,
     news_site_base_url="http://news.cehd.umn.edu/",
-    more_news_text="More news") -%}
+    more_news_text="More news",
+    template_path="/assets/dist/views/cehd/newsfeeds/") -%}
 <script>
     (function() {
         "use strict";
@@ -25,7 +26,7 @@
             var news_link = news_site_base_url + news_category_uri;
             var news_text = "{{ more_news_text }}";
             var template_params = {
-                "template_path": "{{ config.nunjucks_view_base }}/cehd/newsfeeds/",
+                "template_path": "{{ template_path }}",
                 "template_name": "{{ template_name }}",
                 "$target_element": $("{{ target_element_selector }}"),
                 "data": {

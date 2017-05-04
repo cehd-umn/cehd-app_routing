@@ -172,13 +172,19 @@
     {#- Alumni news -#}
     {{ newsfeed.news_feed_js(
         "category/alumni-educational-psychology/feed/",
-        "#alumni-news-container"
+        "#alumni-news-container",
+        null,
+        3,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#- Dept news -#}
     {{ newsfeed.news_feed_js(
         "category/departments/department-news-no-alumni/feed/",
-        "#dept-news-container"
+        "#dept-news-container",
+        null,
+        3,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#-
