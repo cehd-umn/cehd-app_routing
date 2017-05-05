@@ -55,6 +55,14 @@ nav {
     .main-nav-hero-image-container {
         display: none;
     }
+
+    .dropdown-header {
+        font-weight: 700;
+
+        li {
+            font-weight: normal;
+        }
+    }
 }
 
 .nav-toggle {
@@ -132,6 +140,7 @@ nav {
     .dropdown-menu {
         background: $base-white;
         border: transparent;
+        box-shadow: 0 2px 3px 0 $box-shadow-rgba;
         display: none;
         left: 0;
         padding: 10px 2em 20px;
@@ -254,7 +263,7 @@ nav {
     @include cehd-meganav-dropdowns($mega-dropdown-margins-1200);
 
     .dropdown-menu {
-        top: 45px;
+        top: 41px;
         width: 918px;
     }
 }

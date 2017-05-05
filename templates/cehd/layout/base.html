@@ -17,7 +17,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
@@ -42,6 +42,12 @@
   font-style: normal;
   font-weight: 400;
   src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
 }
 @font-face {
     font-family: 'FontAwesome';
@@ -95,26 +101,37 @@
                             </ul><!-- // sub sub nav -->
                             {%- endif -%}
                         </li><!-- // dropdown header -->
-                    {%- if loop.index == 3 -%}
+                    {%- if loop.index == 3 and top_level_item.name == "Academics" -%}
                         {#- close the column and start a new one -#}
                         </ul>
                         <ul class="span-3 margin-top">
                         {%- endif -%}
                     {%- endfor -%}
                     </ul><!-- // sub nav column-->
-                    <div class="span-6">
+                    <div class="span-4">
                         <div class="main-nav-hero-image-container">
                             <figure>
                                 <img src ="/assets/dist/images/hero-image.jpg" alt="Hero image">
                                 <figcaption>Hero image</figcaption>
                             </figure>
-                            <p class="main-nav-hero-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aenean mattis dapibus mi, et facilisis lacus
-                            aliquam sed. Mauris dignissim pulvinar vestibulum. Cum
-                            sociis natoque penatibus et magnis dis parturient
-                            montes, nascetur ridiculus mus.</p>
+                            {%- if top_level_item.name == "Academics" -%}
+                                <p class="main-nav-hero-image-text">Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.
+                                Aenean mattis dapibus mi, et facilisis lacus
+                                aliquam sed. Mauris dignissim pulvinar
+                                vestibulum. Cum sociis natoque penatibus et
+                                magnis dis parturient montes, nascetur
+                                ridiculus mus.</p>
+                            {%- endif -%}
                         </div><!-- // hero img container -->
                     </div><!-- // hero img column -->
+                    <div class="span-5">
+                        {%- if top_level_item.name != "Academics" -%}
+                            <div class="hero-pithy-phrase-container">
+                                <p class="hero-pithy-phrase">A short, pithy phrase.</p>
+                            </div>
+                        {%- endif -%}
+                    </div>
                 </div><!-- // dropdown-menu -->
                 {%- endif -%}
             </li><!-- // top-level nav item -->

@@ -125,6 +125,7 @@ $corner-border-spacing: 5px;
 
 blockquote {
     &.quote-wrap {
+        font-size: 20px;
         font-style: inherit;
         margin-top: 50px;
         quotes: "“" "”" "‘" "’";
@@ -186,6 +187,18 @@ blockquote {
         right: 0;
         top: -5px;
     }
+}
+
+.hero-pithy-phrase-container {
+    display: flex;
+    flex-direction: column;
+    height: 267px;
+    justify-content: center;
+}
+
+.hero-pithy-phrase {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 img {
