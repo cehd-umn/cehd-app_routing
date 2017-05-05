@@ -189,6 +189,18 @@ blockquote {
     }
 }
 
+.hero-pithy-phrase-container {
+    display: flex;
+    flex-direction: column;
+    height: 267px;
+    justify-content: center;
+}
+
+.hero-pithy-phrase {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 img {
     &.circular {
         border-radius: 50%;
