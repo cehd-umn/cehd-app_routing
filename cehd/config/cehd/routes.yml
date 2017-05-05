@@ -345,14 +345,9 @@
   template: cehd/alumni/rising/2015/bell.html
   template_data:
     - section: alumni
-/alumni/rising/2015/cullerton/:
+/alumni/rising/2015/coleman/:
   publish: true
-  template: cehd/alumni/rising/2015/cullerton.html
-  template_data:
-    - section: alumni
-/alumni/rising/2015/johnson/:
-  publish: true
-  template: cehd/alumni/rising/2015/johnson.html
+  template: cehd/alumni/rising/2015/coleman.html
   template_data:
     - section: alumni
 /alumni/rising/2015/jordana/:
@@ -513,6 +508,96 @@
 /alumni/rising/2016/wilkinson/:
   publish: true
   template: cehd/alumni/rising/2016/wilkinson.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/:
+  publish: true
+  template: cehd/alumni/rising/2017/index.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/akukwe/:
+  publish: true
+  template: cehd/alumni/rising/2017/akukwe.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/boettcher/:
+  publish: true
+  template: cehd/alumni/rising/2017/boettcher.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/byun/:
+  publish: true
+  template: cehd/alumni/rising/2017/byun.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/collins/:
+  publish: true
+  template: cehd/alumni/rising/2017/collins.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/cosgrove/:
+  publish: true
+  template: cehd/alumni/rising/2017/cosgrove.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/eik/:
+  publish: true
+  template: cehd/alumni/rising/2017/eik.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/ersin/:
+  publish: true
+  template: cehd/alumni/rising/2017/ersin.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/farabee/:
+  publish: true
+  template: cehd/alumni/rising/2017/farabee.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/iverson/:
+  publish: true
+  template: cehd/alumni/rising/2017/iverson.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/koch/:
+  publish: true
+  template: cehd/alumni/rising/2017/koch.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/koenig/:
+  publish: true
+  template: cehd/alumni/rising/2017/koenig.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/legrand-arendt/:
+  publish: true
+  template: cehd/alumni/rising/2017/legrand-arendt.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/locher-house/:
+  publish: true
+  template: cehd/alumni/rising/2017/locher-house.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/mcintyre/:
+  publish: true
+  template: cehd/alumni/rising/2017/mcintyre.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/pentek/:
+  publish: true
+  template: cehd/alumni/rising/2017/pentek.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/rosenborough/:
+  publish: true
+  template: cehd/alumni/rising/2017/rosenborough.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/tompkins/:
+  publish: true
+  template: cehd/alumni/rising/2017/tompkins.html
   template_data:
     - section: alumni
 /career/:
