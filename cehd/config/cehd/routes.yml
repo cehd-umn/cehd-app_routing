@@ -1154,6 +1154,11 @@
   template: cehd/research/research-day.html
   template_data:
     - section: research
+/study-abroad/:
+  publish: true
+  template: cehd/study-abroad/index.html
+  template_data:
+    - section: study-abroad
 /teaching/:
   publish: true
   template: cehd/teaching/index.html
@@ -1194,9 +1199,94 @@
   template: cehd/teaching/trainings.html
   template_data:
     - section: teaching
+/teaching/co-teaching/:
+  publish: true
+  template: cehd/teaching/co-teaching/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/about/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/about.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/completion/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/completion.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/faq/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/faq.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/research/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/research.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/responsibilities/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/responsibilities.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/strategies/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/strategies.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/what/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/what.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/co-teaching/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/co-teaching.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/collaboration/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/collaboration.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/completion/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/completion.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/faq/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/faq.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/planning/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/planning.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/strategies/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/strategies.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/triad/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/triad.html
+  template_data:
+    - section: teaching
 /teri/:
   publish: true
-  template: cehd/teri/index.html
+  template: cehd//index.html
   template_data:
     - section: teri
 /teri/our-work/:
@@ -1207,91 +1297,6 @@
 /teri/partnerships/:
   publish: true
   template: cehd/teri/partnerships.html
-  template_data:
-    - section: teri
-/teri/co-teaching/:
-  publish: true
-  template: cehd/teri/co-teaching/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/about/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/about.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/completion/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/completion.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/faq/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/faq.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/research/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/research.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/responsibilities/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/responsibilities.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/strategies/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/strategies.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/what/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/what.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/co-teaching/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/co-teaching.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/collaboration/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/collaboration.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/completion/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/completion.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/faq/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/faq.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/planning/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/planning.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/strategies/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/strategies.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/triad/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/triad.html
   template_data:
     - section: teri
 /trio/:
