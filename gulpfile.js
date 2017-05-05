@@ -121,8 +121,7 @@ gulp.task("watch-edpsych", function() {
     gulp.watch(
         "./public/edpsych/assets/src/sass/**/*.scss",
         [
-            "sass-minified-task",
-            "sass-expanded-task"
+            "edpsych-sass-minified-task",
         ]
     );
 

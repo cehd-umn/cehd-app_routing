@@ -146,7 +146,6 @@ img {
 /// classes
 ///
 /// @requires $heading-map-desktop found in _variables.scss
-/// @todo figure out what margins should be
 @each $heading, $size in $heading-map-mobile {
     #{$heading}, .#{$heading} {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
@@ -167,6 +166,10 @@ img {
 
         &.no-margin-top {
             margin-top: 0;
+        }
+
+        &.no-margin-bottom {
+            margin-bottom: 0;
         }
     }
 
@@ -354,6 +357,10 @@ footer {
 
 .no-margin-top {
     margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
 }
 
 /// These aren't necessarily breakpoints defined around devices, but rather,
