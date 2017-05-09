@@ -29,6 +29,14 @@ $tracking_elements.on("click", function(event) {
     400);
 });
 
+$.fn.extend({
+    uncheckAll: function() {
+        return this.each(function() {
+            this.checked = false;
+        });
+    }
+});
+
 $(".nav-toggle").on("click touch", function() {
     var $nav = $("nav");
     $nav.toggleClass("open");
@@ -74,29 +82,68 @@ var HistoryManager = function() {
 };
 
 var FilterUIManager = function() {
-    this.setChecked = function(element_selector) {
-        $(element_selector).prop("checked", true);
+    this.setChecked = function(element_selector, checked) {
+        $(element_selector).prop("checked", checked);
     };
 
-    this.setSelectedText = function(selector) {
-        var $selector = $(selector);
-        var $target = $($selector.data("selected-indicator"));
-        $target.text($selector.data("indicator-text"));
+    /**
+     *
+     * @param filters - string for use in isotope
+     * @param query_data - object - an object containing filter data
+     * @param $cardsContainer - A JQuery object representing the cards container
+     * @param $clearFiltersInput - A JQuery object representing the "No filters" button
+     */
+    this.manageFilterState = function(filters, query_data, $cardsContainer, $clearFiltersInput) {
+        var no_filters_should_be_checked = filters.length === 0;
+        var self = this;
+        var $all_cards = $(".isotope-select");
+
+        $all_cards.uncheckAll();
+
+        $.each(query_data.filters, function(k, v) {
+            var element_selector = "#" + v + "-filter";
+            window.console.log(element_selector);
+            self.setChecked(element_selector, true);
+        });
+
+        $clearFiltersInput.prop("checked", no_filters_should_be_checked);
     };
 };
 
-var FilterManager = function(card_container_selector, filter_input_selector, search_input_selector, isotope_params) {
+var FilterManager = function(cardContainerSelector, filterInputSelector, searchInputSelector, isotopeParams) {
     var self = this;
 
+    this.filterInputSelector = filterInputSelector;
+    this.clearFiltersInputSelector = "#clear-filters";
     this.historyManager = new HistoryManager();
     this.uiManager = new FilterUIManager();
-    this.$cards = $(card_container_selector);
-    this.$filter_inputs = $(filter_input_selector);
-    this.$search_input = $(search_input_selector);
+    this.$cardsContainer = $(cardContainerSelector);
+    this.$filterInputs = $(filterInputSelector);
+    this.$clearFiltersInput = $(this.clearFiltersInputSelector);
+    this.$searchInput = $(searchInputSelector);
+    this.filterButtons = [];
 
-    this.$search_input.on("keyup", function() {
+    this.$filterInputs.each(function() {
+        var button = {checked: this.checked, isClearFiltersInput: false};
+        var obj = {};
+        obj[this.id] = button;
+        self.filterButtons.push(obj);
+    });
+
+    // The clear-filters button is a separate case
+    var button = {checked: this.$clearFiltersInput.checked, isClearFiltersInput: true};
+    var obj = {};
+    var clear_filters_id = this.$clearFiltersInput.id;
+    obj[clear_filters_id] = button;
+    self.filterButtons.push(obj);
+
+    this.$searchInput.on("keyup", function() {
         var search_value = $(this).val();
         var search_result = self.search.search(search_value, {expand: true});
+
+        self.$filterInputs.uncheckAll();
+        self.$clearFiltersInput.prop("checked", true);
+        self.clearQueryParams();
 
         $(".full-text-search-result").removeClass("full-text-search-result");
 
@@ -114,7 +161,7 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
     });
 
     // Instantiate isotope
-    this.$cards.isotope(isotope_params);
+    this.$cardsContainer.isotope(isotopeParams);
 
     this.init_search = function(elements_selector) {
         var $elements = $(elements_selector);
@@ -147,12 +194,12 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
     };
 
     this.filterCards = function (filters) {
-        this.$cards.isotope({ filter: filters });
+        this.$cardsContainer.isotope({ filter: filters });
     };
 
-    this.formClassStr = function($filter_inputs) {
+    this.getClassStr = function($filterInputs) {
         var class_str = "";
-        $filter_inputs.each(function() {
+        $filterInputs.each(function() {
             var $filter = $(this);
             var filter_value = $filter.data("filter");
             class_str += filter_value;
@@ -189,36 +236,49 @@ var FilterManager = function(card_container_selector, filter_input_selector, sea
         return filters;
     };
 
-    // @xxx this needs a better name
-    this.onPageLoad = function() {
-        var filters = this.loadQueryParams();
-        var query_data = this.getQueryData();
-        var self = this;
-
-        if (filters.length > 0) {
-            this.$cards.isotope({ filter: filters });
-
-            $.each(query_data.filters, function(k, v) {
-                var element_selector = "#" + v + "-filter";
-                self.uiManager.setChecked(element_selector);
-                self.uiManager.setSelectedText(element_selector);
-            });
-        }
+    this.clearQueryParams = function() {
+        var pathname = window.location.pathname;
+        this.historyManager.pushState(pathname);
     };
 
-    this.$filter_inputs.on("change", function() {
-        var $filters = self.getSelected(".isotope-select");
-        var filters = self.formClassStr($filters);
-        var params_data = self.historyManager.cssClassesToParams(filters);
-        var url = self.historyManager.makeURL(params_data);
+    // This sets the UI state on page load
+    this.setUIState = function() {
+        var filters = this.loadQueryParams();
+        var query_data = this.getQueryData();
+        this.uiManager.manageFilterState(filters, query_data, this.$cardsContainer, this.$clearFiltersInput);
+        this.filterCards(filters);
+    };
+
+    this.$clearFiltersInput.on("change", function() {
+        self.clearQueryParams();
+    });
+
+    this.$clearFiltersInput.on("change", function() {
+        var $input = $(this);
+
+        if ($input.is(":checked")) {
+            self.$filterInputs.uncheckAll();
+            self.filterCards($input.data("filter"));
+        }
+    });
+
+    // This needs to manage the UI state and the browser history state
+    this.$filterInputs.on("change", function() {
+        var $selected_cards = self.getSelected(".isotope-select");
+        var filters = self.getClassStr($selected_cards);
+        var query_data = self.historyManager.cssClassesToParams(filters);
+        var url = self.historyManager.makeURL(query_data);
+
+        if($selected_cards.length > 0) {
+            self.$clearFiltersInput.prop("checked", false);
+        }
 
         self.historyManager.pushState(url);
         self.filterCards(filters);
-        self.uiManager.setSelectedText("#" + $(this).attr("id"));
-        $(".open").removeClass("open");
+        self.uiManager.manageFilterState(filters, query_data, self.$cardsContainer, self.$clearFiltersInput);
     });
 
-    this.search = this.init_search(isotope_params.itemSelector);
+    this.search = this.init_search(isotopeParams.itemSelector);
 };
 
 window.$ = $;

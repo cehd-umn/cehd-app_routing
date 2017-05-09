@@ -10,6 +10,58 @@
     #maincontent {
         min-height: 900px;
     }
+
+    #full-text-search-input {
+        border-radius: 5px;
+        font-size: 2em;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .category-container {
+        background-color: $base-light-grey;
+        min-height: 90px;
+        padding: 0 1em;
+    }
+
+    .category-filter-container {
+        background-color: #fff;
+        overflow: hidden;
+        padding: 0 1em;
+    }
+
+    .category-filters {
+        text-align: center;
+    }
+
+    li.category-button {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .category-button input {
+        position: absolute;
+        top: -1000px;
+    }
+
+    .category-button label {
+        background: #efefef;
+        border-radius: 4px;
+        display: inline-block;
+        margin: 2px;
+        padding: 7px;
+    }
+
+    .category-button input:checked + label {
+        background: #ffde7a;
+        color: #7a0019;
+    }
+
+    li.category-button.clear {
+        clear: left;
+    }
 </style>
 {% endblock %}
 {% block main_content %}
@@ -17,69 +69,50 @@
 <div class="row">
     <div class="container">
         <h1>Academic programs</h1>
-        <p>The College of Education and Human Development combines cutting-edge research with practical applications to create truly multidisciplinary programs.</p>
+        <p>The College of Education and Human Development combines cutting-edge
+        research with practical applications to create truly multidisciplinary
+        programs.</p>
 
-        <p>Our internationally known faculty members encourage students to identify problems, ask critical questions, and develop creative solutions to transform individuals, families, and communities.</p>
+        <p>Our internationally known faculty members encourage students to
+        identify problems, ask critical questions, and develop creative
+        solutions to transform individuals, families, and communities.</p>
 
-
-        <input type="text" id="full-text-search-input" placeholder="Search here or choose a category below">
+        <div class="feature half">
+            {# TODO make sure these forms are accessible #}
+            <form action="">
+                <input type="text" id="full-text-search-input" placeholder="Search the cards below">
+            </form>
+        </div>
         <div class="button-group filter-button-group">
-            <div class="half category-container">
-                <div>
-                    <div class="half">
-                        <p><a class="multi-select" href="" data-target=".categories">By Category</a></p>
-                    </div>
-                    <div class="half">
-                        <p><strong>Category selected:</strong> <span id="category-selected">None</p>
-                    </div>
-                </div>
-                <form action="">
-                    <div class="category-filter-container categories">
-                        <ul class="category-filters">
-                            <li class="category-filter">
-                                <input type="radio" checked name="category-button-group" id="no-category-filter" class="isotope-select" data-filter="">
-                                    <label for="no-category-filter">No category filter</label>
-                                </input>
-                            </li>
+            <form action="">
+                <div class="category-filter-container">
+                    <ul class="category-filters">
+                        <div class="span-12">
                         {% for category_class, category in categories %}
-                            <li class="category-filter">
-                                <input type="radio" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
+                            <li class="category-filter category-button">
+                                <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
                         {% endfor %}
-                        </ul>
-                    </div><!-- / category-filter-container -->
-                </form>
-            </div><!-- / half -->
-            <div class="half category-container">
-                <div>
-                    <div class="half">
-                        <p><a class="multi-select" href="" data-target=".degrees">By Degree</a></p>
                     </div>
-                    <div class="half">
-                        <p><strong>Degree selected:</strong> <span id="degree-selected">None</p>
-                    </div>
-                </div>
-                <form action="">
-                    <div class="category-filter-container degrees">
-                        <ul class="category-filters">
-                            <li class="degree-filter">
-                                <input type="radio" checked name="degree-button-group" id="no-degree-filter" class="isotope-select" data-filter="">
-                                    <label for="no-degree-filter">No degree filter</label>
-                                </input>
-                            </li>
+                    <div class="span-12">
                         {% for degree_class, degree in degrees %}
-                            <li class="category-filter">
-                                <input type="radio" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}" data-selected-indicator="#degree-selected" data-indicator-text="{{ degree }}">
+                            <li class="category-filter category-button{% if loop.first %} clear{% endif %}">
+                                <input type="checkbox" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}" data-selected-indicator="#degree-selected" data-indicator-text="{{ degree }}">
                                     <label for="{{ degree_class }}-filter">{{ degree }}</label>
                                 </input>
                             </li>
                         {% endfor %}
-                        </ul>
-                    </div><!-- / category-filter-container -->
-                </form>
-            </div><!-- / half -->
+                            <li class="clear-filters category-button">
+                                <input type="checkbox" checked name="clear-filter" id="clear-filters" data-filter="*">
+                                    <label for="clear-filters">No filters</label>
+                                </input>
+                            </li>
+                        </div>
+                    </ul>
+                </div><!-- / category-filter-container -->
+            </form>
         </div><!-- button-group -->
     </div><!-- / container -->
 </div><!-- / row -->
@@ -135,18 +168,11 @@
         var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
 
         // reads query params and filterManager on them
-        filterManager.onPageLoad();
+        filterManager.setUIState();
 
         window.onpopstate = function() {
-            filterManager.onPageLoad();
+            filterManager.setUIState();
         };
-
-        $select_button.on("click", function(e) {
-            e.preventDefault();
-            var $button = $(this);
-            var $filter_group_container = $($button.data("target"));
-            $filter_group_container.toggleClass("open");
-        });
     });
 </script>
 {% endblock %}
