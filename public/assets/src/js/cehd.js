@@ -102,7 +102,6 @@ var FilterUIManager = function() {
 
         $.each(query_data.filters, function(k, v) {
             var element_selector = "#" + v + "-filter";
-            window.console.log(element_selector);
             self.setChecked(element_selector, true);
         });
 
@@ -275,7 +274,6 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
 
         self.historyManager.pushState(url);
         self.filterCards(filters);
-        self.uiManager.manageFilterState(filters, query_data, self.$cardsContainer, self.$clearFiltersInput);
     });
 
     this.search = this.init_search(isotopeParams.itemSelector);
