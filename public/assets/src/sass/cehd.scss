@@ -328,9 +328,11 @@ li {
 }
 
 .category-button {
+    overflow: hidden;
+
     input {
+        left: -100px;
         position: absolute;
-        top: -1000px;
 
         &:checked + label {
             background: $umn-light-gold;

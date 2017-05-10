@@ -7,10 +7,6 @@ var elasticlunr = require("elasticlunr");
 
 // TODO load modules and scope them within an app. I.e., App.Renderer, App.Client
 
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-}
-
 $(".no-js").removeClass("no-js");
 
 $tracking_elements.on("click", function(event) {
