@@ -2,12 +2,14 @@
 
 var $ = require("jquery");
 var queryString = require("query-string");
-var isotope = require("isotope-layout");
-var jquerybridget = require("jquery-bridget");
 var $tracking_elements = $("[data-ga-command]");
 var elasticlunr = require("elasticlunr");
 
 // TODO load modules and scope them within an app. I.e., App.Renderer, App.Client
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
 
 $(".no-js").removeClass("no-js");
 
@@ -41,8 +43,6 @@ $(".nav-toggle").on("click touch", function() {
     var $nav = $("nav");
     $nav.toggleClass("open");
 });
-
-jquerybridget("isotope", isotope, $);
 
 var HistoryManager = function() {
     this.makeQueryString = function(params_data) {
@@ -101,9 +101,9 @@ var FilterUIManager = function() {
     this.manageFilterState = function(filters, query_data, $cardsContainer, $clearFiltersInput) {
         var no_filters_should_be_checked = filters.length === 0;
         var self = this;
-        var $all_cards = $(".isotope-select");
+        var $all_buttons = $(".card-select");
 
-        $all_cards.uncheckAll();
+        $all_buttons.uncheckAll();
 
         $.each(query_data.filters, function(k, v) {
             var element_selector = "#" + v + "-filter";
@@ -114,7 +114,7 @@ var FilterUIManager = function() {
     };
 };
 
-var FilterManager = function(cardContainerSelector, filterInputSelector, searchInputSelector, isotopeParams) {
+var FilterManager = function(cardContainerSelector, filterInputSelector, searchInputSelector) {
     var self = this;
 
     this.filterInputSelector = filterInputSelector;
@@ -125,21 +125,6 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
     this.$filterInputs = $(filterInputSelector);
     this.$clearFiltersInput = $(this.clearFiltersInputSelector);
     this.$searchInput = $(searchInputSelector);
-    this.filterButtons = [];
-
-    this.$filterInputs.each(function() {
-        var button = {checked: this.checked, isClearFiltersInput: false};
-        var obj = {};
-        obj[this.id] = button;
-        self.filterButtons.push(obj);
-    });
-
-    // The clear-filters button is a separate case
-    var button = {checked: this.$clearFiltersInput.checked, isClearFiltersInput: true};
-    var obj = {};
-    var clear_filters_id = this.$clearFiltersInput.id;
-    obj[clear_filters_id] = button;
-    self.filterButtons.push(obj);
 
     this.$searchInput.on("keyup", function() {
         var search_value = $(this).val();
@@ -163,9 +148,6 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
             self.filterCards("*");
         }
     });
-
-    // Instantiate isotope
-    this.$cardsContainer.isotope(isotopeParams);
 
     this.init_search = function(elements_selector) {
         var $elements = $(elements_selector);
@@ -197,8 +179,25 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
         return search;
     };
 
-    this.filterCards = function (filters) {
-        this.$cardsContainer.isotope({ filter: filters });
+    this.filterCards = function(filter_classes) {
+
+        var filters = filter_classes.split(".").slice(1);
+
+        $(".hidden").removeClass("hidden");
+
+        $.each(filters, function(k, v) {
+
+            if (v === "*" || v === "") {
+                $(".hidden").removeClass("hidden");
+            } else {
+                var selector = ":not(." + v + ")";
+                var $elements = $(selector);
+
+                $elements.each(function() {
+                    $(this).addClass("hidden");
+                });
+            }
+        });
     };
 
     /**
@@ -277,7 +276,7 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
 
     // This needs to manage the UI state and the browser history state
     this.$filterInputs.on("change", function() {
-        var $selected_cards = self.getSelected(".isotope-select");
+        var $selected_cards = self.getSelected(self.filterInputSelector);
         var filters = self.getClassStr($selected_cards);
         var query_data = self.historyManager.cssClassesToParams(filters);
         var url = self.historyManager.makeURL(query_data);
@@ -288,7 +287,7 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
         self.filterCards(filters);
     });
 
-    this.search = this.init_search(isotopeParams.itemSelector);
+    this.search = this.init_search(".card");
 };
 
 window.$ = $;

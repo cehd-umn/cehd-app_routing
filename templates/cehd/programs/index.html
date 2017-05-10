@@ -11,57 +11,6 @@
         min-height: 900px;
     }
 
-    #full-text-search-input {
-        border-radius: 5px;
-        font-size: 2em;
-        margin-bottom: 16px;
-        width: 100%;
-    }
-
-    .category-container {
-        background-color: $base-light-grey;
-        min-height: 90px;
-        padding: 0 1em;
-    }
-
-    .category-filter-container {
-        background-color: #fff;
-        overflow: hidden;
-        padding: 0 1em;
-    }
-
-    .category-filters {
-        text-align: center;
-    }
-
-    li.category-button {
-        display: inline-block;
-        margin: 0;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .category-button input {
-        position: absolute;
-        top: -1000px;
-    }
-
-    .category-button label {
-        background: #efefef;
-        border-radius: 4px;
-        display: inline-block;
-        margin: 2px;
-        padding: 7px;
-    }
-
-    .category-button input:checked + label {
-        background: #ffde7a;
-        color: #7a0019;
-    }
-
-    li.category-button.clear {
-        clear: left;
-    }
 </style>
 {% endblock %}
 {% block main_content %}
@@ -90,20 +39,22 @@
                         <div class="span-12">
                         {% for category_class, category in categories %}
                             <li class="category-filter category-button">
-                                <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="isotope-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
+                                <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
                         {% endfor %}
-                    </div>
-                    <div class="span-12">
-                        {% for degree_class, degree in degrees %}
-                            <li class="category-filter category-button{% if loop.first %} clear{% endif %}">
-                                <input type="checkbox" id="{{ degree_class }}-filter" name="degree-button-group"  class="isotope-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}" data-selected-indicator="#degree-selected" data-indicator-text="{{ degree }}">
-                                    <label for="{{ degree_class }}-filter">{{ degree }}</label>
-                                </input>
-                            </li>
-                        {% endfor %}
+                        </div>
+                        <div class="span-12">
+                            {% for degree_class, degree in degrees %}
+                                <li class="category-filter category-button{% if loop.first %} clear{% endif %}">
+                                    <input type="checkbox" id="{{ degree_class }}-filter" name="degree-button-group"  class="card-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}" data-selected-indicator="#degree-selected" data-indicator-text="{{ degree }}">
+                                        <label for="{{ degree_class }}-filter">{{ degree }}</label>
+                                    </input>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        <div class="span-12">
                             <li class="clear-filters category-button">
                                 <input type="checkbox" checked name="clear-filter" id="clear-filters" data-filter="*">
                                     <label for="clear-filters">No filters</label>
@@ -116,19 +67,16 @@
         </div><!-- button-group -->
     </div><!-- / container -->
 </div><!-- / row -->
-<div class="row isotope">
+<div class="row cards">
     <div class="container">
-        <div class="isotope-container margin-top-2">
-            <div class="isotope-sizer"></div>
+        <div class="card-container margin-top-2">
             {% for program_title, program in program_data %}
-                <div id="isotope-item-{{ loop.index }}" class="isotope-item{%- if loop.index is divisible by(2) %} even{% endif %}
+                <div id="card-{{ loop.index }}" class="card
                     {%- if program.categories_hyphenated -%}
                       {{ " " }}{{- program.categories_hyphenated|join(" ") -}}
-                      {{- " category" -}}
                     {%- endif -%}
                     {%- if program.degrees_hyphenated -%}
                       {{ " " }}{{- program.degrees_hyphenated|join(" ") -}}
-                      {{- " degree" -}}
                     {%- endif -%}
                     "{#- close the class= quote -#}
                     {%- if program.categories -%}
@@ -150,9 +98,9 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
-                </div><!-- / isotope-item -->
+                </div><!-- / card -->
             {% endfor %}
-        </div><!-- / isotope-container -->
+        </div><!-- / card-container -->
     </div><!-- / container -->
 </div><!-- / row -->
 {% endblock %}
@@ -161,11 +109,7 @@
     $(function() {
         "use strict";
         var $select_button = $(".multi-select");
-        var isotope_params = {
-            itemSelector: ".isotope-item",
-            layoutMode: "fitRows"
-        };
-        var filterManager = new FilterManager(".isotope-container", ".isotope-select", "#full-text-search-input", isotope_params);
+        var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
 
         // reads query params and filterManager on them
         filterManager.setUIState();

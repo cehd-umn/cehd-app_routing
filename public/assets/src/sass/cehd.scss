@@ -4,7 +4,6 @@
 @import "core";
 @import "bourbon/bourbon";
 @import "loader";
-@import "isotope";
 @import "events";
 
 .videojs-background-wrap {
@@ -209,7 +208,7 @@ img {
         margin-top: 400px;
     }
 
-    &.isotope {
+    &.cards {
         z-index: -1;
     }
 }
@@ -254,4 +253,112 @@ img {
     line-height: 1.5;
     margin: 1em 0;
     padding: 0;
+}
+
+.card {
+    @include transition(
+        background-color .5s,
+        max-height 1s,
+        max-width 1s,
+        opacity 1s);
+
+    align-self: stretch;
+    background-color: $base-white;
+    border: 1px solid $base-light-grey;
+    border-radius: 2px;
+    left: auto;
+    margin: 1em;
+    max-height: 500px;
+    max-width: 500px;
+    opacity: 1;
+    overflow: hidden;
+    padding: .5em;
+    visibility: visible;
+    width: 285px;
+
+    &:hover {
+        background-color: $umn-light-gold;
+    }
+
+    &.hidden {
+        background-color: $umn-light-gold;
+        border: 0;
+        margin: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+}
+
+#full-text-search-input {
+    border-radius: 5px;
+    font-size: 2em;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.category-container {
+    background-color: $base-light-grey;
+    min-height: 90px;
+    padding: 0 1em;
+}
+
+.category-filter-container {
+    background-color: $base-white;
+    overflow: hidden;
+    padding: 0 1em;
+}
+
+.category-filters {
+    text-align: center;
+}
+
+li {
+    &.category-button {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+
+        &.clear {
+            clear: left;
+        }
+    }
+}
+
+.category-button {
+    input {
+        position: absolute;
+        top: -1000px;
+
+        &:checked + label {
+            background: $umn-light-gold;
+            color: $umn-maroon;
+        }
+    }
+
+    label {
+        background: $base-light-grey;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        padding: 7px;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $umn-medium-grey;
+        }
+    }
+}
+
+#clear-filters + label {
+    text-transform: uppercase;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
 }

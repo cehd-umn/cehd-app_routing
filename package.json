@@ -34,7 +34,6 @@
   "dependencies": {
     "elasticlunr": "^0.9.5",
     "install": "^0.8.7",
-    "isotope-layout": "^3.0.2",
     "jquery": "^3.1.1",
     "jquery-bridget": "^2.0.1",
     "js-cookie": "^2.1.3",
