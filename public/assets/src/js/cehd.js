@@ -46,8 +46,13 @@ jquerybridget("isotope", isotope, $);
 
 var HistoryManager = function() {
     this.makeQueryString = function(params_data) {
-        var query = "?";
-        var params = $.param(params_data);
+        var query = "";
+        var params = "";
+        if (params_data.length > 0) {
+            query = "?";
+            params = $.param(params_data);
+        }
+
         return query + params;
     };
 
@@ -196,16 +201,25 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
         this.$cardsContainer.isotope({ filter: filters });
     };
 
+    /**
+     * @param object $filterInputs - A JQuery object containing filter checkbox elements
+     * @return string - A string of CSS classes suitable for Isotope filtering
+     */
     this.getClassStr = function($filterInputs) {
         var class_str = "";
         $filterInputs.each(function() {
             var $filter = $(this);
+            // the data element should contain the correct selector
             var filter_value = $filter.data("filter");
             class_str += filter_value;
         });
         return class_str;
     };
 
+    /**
+     * @param string selector - a JQuery selector
+     * @return object - a JQuery object matching the selector that is also checked
+     */
     this.getSelected = function(selector) {
         return $(selector + ":checked");
     };
@@ -267,11 +281,9 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
         var filters = self.getClassStr($selected_cards);
         var query_data = self.historyManager.cssClassesToParams(filters);
         var url = self.historyManager.makeURL(query_data);
+        var clear_filters_should_be_checked = $selected_cards.length === 0;
 
-        if($selected_cards.length > 0) {
-            self.$clearFiltersInput.prop("checked", false);
-        }
-
+        self.$clearFiltersInput.prop("checked", clear_filters_should_be_checked);
         self.historyManager.pushState(url);
         self.filterCards(filters);
     });
