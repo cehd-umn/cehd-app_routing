@@ -190,8 +190,7 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
             if (v === "*" || v === "") {
                 $(".hidden").removeClass("hidden");
             } else {
-                var selector = ":not(." + v + ")";
-                var $elements = $(selector);
+                var $elements = self.$cardsContainer.find(":not(." + v + ")");
 
                 $elements.each(function() {
                     $(this).addClass("hidden");
