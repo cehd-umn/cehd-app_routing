@@ -76,7 +76,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
         $program_data = $this->loadYaml($yaml_file_path);
         $categories = [];
-        $degrees = [];
 
         // @todo this whole block is not DRY
         foreach ($program_data as $program_index => $program)
@@ -98,21 +97,19 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 foreach ($program["degrees"] as $degree_index => $degree)
                 {
-                    $hyphenated = $this->hyphenate($degree);
+                    $hyphenated = $this->hyphenate($degree["title"]);
                     array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
-                    $degrees[$hyphenated] = $degree;
+                    $categories[$hyphenated] = $degree["title"];
                 }
             }
         }
 
         asort($categories);
-        asort($degrees);
 
         $template_data = [
             "section" => "programs",
             "program_data" => $program_data,
             "categories" => $categories,
-            "degrees" => $degrees,
             "program_data_json" => json_encode($program_data),
         ];
 

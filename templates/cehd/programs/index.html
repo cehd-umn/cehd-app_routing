@@ -38,21 +38,15 @@
                     <ul class="category-filters">
                         <div class="span-12">
                         {% for category_class, category in categories %}
+                            {% if category == "Graduate Certificate" %}{# start a new row #}
+                                </div><div class="span-12">
+                            {% endif %}
                             <li class="category-filter category-button">
                                 <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}">
                                     <label for="{{ category_class }}-filter">{{ category }}</label>
                                 </input>
                             </li>
                         {% endfor %}
-                        </div>
-                        <div class="span-12">
-                            {% for degree_class, degree in degrees %}
-                                <li class="category-filter category-button{% if loop.first %} clear{% endif %}">
-                                    <input type="checkbox" id="{{ degree_class }}-filter" name="degree-button-group"  class="card-select degree-select degree-{{ degree_class }}" data-filter=".{{ degree_class }}" data-selected-indicator="#degree-selected" data-indicator-text="{{ degree }}">
-                                        <label for="{{ degree_class }}-filter">{{ degree }}</label>
-                                    </input>
-                                </li>
-                            {% endfor %}
                         </div>
                         <div class="span-12">
                             <li class="clear-filters category-button">
@@ -82,7 +76,7 @@
                     {%- if program.categories -%}
                       {{ " " }}data-categories="{{- program.categories|join(" ") }}
                       {%- if program.degrees -%}
-                        {{ " " }}{{- program.degrees|join(" ") }}
+                        {{ " " }}{{- program.degrees.title|join(" ") }}
                       {%- endif -%}
                       "{#- close the data-categories= quote -#}
                     {%- endif -%}
@@ -91,10 +85,10 @@
                     {% if program.description %}
                       <p class="description">{{ program.description }}</p>
                     {% endif %}
-                    {% if program.links %}
+                    {% if program.degrees %}
                     <ul class="no-bullet">
-                        {% for link in program.links %}
-                        <li><a href="{{ link.href }}">{{ link.text }}</a></li>
+                        {% for degree in program.degrees %}
+                        <li><a href="{{ degree.href }}">{{ degree.title }}</a></li>
                         {% endfor %}
                     </ul>
                     {% endif %}
