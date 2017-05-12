@@ -121,37 +121,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "item_data_json" => json_encode($data["data"]),
         ];
 
-        echo $this->_renderTemplate('cehd/sorters/index.html', $template_data);
-    }
-
-    private function _parseTopicData()
-    {
-        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $topic_data = $this->buildHyphenatedKeys(
-            $this->loadYaml($yaml_file_path));
-        $categories = [];
-
-        foreach ($topic_data as $key => $topic)
-        {
-            $topic_data[$key]["categories_hyphenated"] = [];
-
-            if ($topic["categories"])
-            {
-                foreach ($topic["categories"] as $category_index => $category)
-                {
-                    $hyphenated = $this->hyphenate($category);
-                    array_push($topic_data[$key]["categories_hyphenated"], $hyphenated);
-                    $categories[$hyphenated] = $category;
-                }
-            }
-        }
-
-        asort($categories);
-
-        return [
-            "topics" => $topic_data,
-            "categories" => $categories,
-        ];
+        echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
 
     public function topicsPageHandler($request, $response, $service, $app)
@@ -166,12 +136,13 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "item_data_json" => json_encode($data["data"]),
         ];
 
-        echo $this->_renderTemplate('cehd/sorters/index.html', $template_data);
+        echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
     }
 
     public function topicPageHandler($request, $response, $service, $app)
     {
-        $topics_and_cats = $this->_parseTopicData();
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
+        $data = $this->__processSorterData($yaml_file_path);
         $topics = $topics_and_cats["topics"];
         $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
 
