@@ -16,12 +16,12 @@ class InfoSessionTest extends TestCase
     public function testCreation()
     {
         $expected_count = 2;
-        $expected_link = "http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4444";
+        $expected_url = "http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4444";
         $expected_title = "Information Session for Transfer Admission to CEHD majors";
 
         $this->assertTrue(is_array($this->infoSessionInstance->infoSessions));
         $this->assertEquals($expected_count, count($this->infoSessionInstance->infoSessions));
-        $this->assertEquals($expected_link, $this->infoSessionInstance->infoSessions[0]->link);
+        $this->assertEquals($expected_url, $this->infoSessionInstance->infoSessions[0]->url);
         $this->assertEquals($expected_title, $this->infoSessionInstance->infoSessions[0]->title);
     }
 }
