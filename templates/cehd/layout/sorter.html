@@ -14,18 +14,10 @@
 </style>
 {% endblock %}
 {% block main_content %}
-{#- @todo create a "sorter" template with common code from this and topics page -#}
 <div class="row">
     <div class="container">
-        <h1>Academic programs</h1>
-        <p>The College of Education and Human Development combines cutting-edge
-        research with practical applications to create truly multidisciplinary
-        programs.</p>
-
-        <p>Our internationally known faculty members encourage students to
-        identify problems, ask critical questions, and develop creative
-        solutions to transform individuals, families, and communities.</p>
-
+        {% block intro_text %}
+        {% endblock %}
         <div class="feature half">
             {# TODO make sure these forms are accessible #}
             <form action="">
@@ -64,30 +56,30 @@
 <div class="row cards">
     <div class="container">
         <div class="card-container margin-top-2">
-            {% for program_title, program in program_data %}
+            {% for item_title, item in item_data %}
                 <div id="card-{{ loop.index }}" class="card
-                    {%- if program.categories_hyphenated -%}
-                      {{ " " }}{{- program.categories_hyphenated|join(" ") -}}
+                    {%- if item.categories_hyphenated -%}
+                      {{ " " }}{{- item.categories_hyphenated|join(" ") -}}
                     {%- endif -%}
-                    {%- if program.degrees_hyphenated -%}
-                      {{ " " }}{{- program.degrees_hyphenated|join(" ") -}}
+                    {%- if item.degrees_hyphenated -%}
+                      {{ " " }}{{- item.degrees_hyphenated|join(" ") -}}
                     {%- endif -%}
                     "{#- close the class= quote -#}
-                    {%- if program.categories -%}
-                      {{ " " }}data-categories="{{- program.categories|join(" ") }}
-                      {%- if program.degrees -%}
-                        {{ " " }}{{- program.degrees.title|join(" ") }}
+                    {%- if item.categories -%}
+                      {{ " " }}data-categories="{{- item.categories|join(" ") }}
+                      {%- if item.degrees -%}
+                        {{ " " }}{{- item.degrees.title|join(" ") }}
                       {%- endif -%}
                       "{#- close the data-categories= quote -#}
                     {%- endif -%}
                     >{#- close the tag -#}
-                    <h2 class="h4 title">{{ program_title }}</h2>
-                    {% if program.description %}
-                      <p class="description">{{ program.description }}</p>
+                    <h2 class="h4 title">{{ item_title }}</h2>
+                    {% if item.description %}
+                      <p class="description">{{ item.description }}</p>
                     {% endif %}
-                    {% if program.degrees %}
+                    {% if item.degrees %}
                     <ul class="no-bullet">
-                        {% for degree in program.degrees %}
+                        {% for degree in item.degrees %}
                         <li><a href="{{ degree.href }}">{{ degree.title }}</a></li>
                         {% endfor %}
                     </ul>

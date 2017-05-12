@@ -71,49 +71,57 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/index.html', $template_data);
     }
 
-    public function programsPageHandler($request, $response, $service, $app)
+    private function __processSorterData($yaml_file_path)
     {
-        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $program_data = $this->loadYaml($yaml_file_path);
+        $data = $this->loadYaml($yaml_file_path);
         $categories = [];
 
-        // @todo this whole block is not DRY
-        foreach ($program_data as $program_index => $program)
+        foreach ($data as $item_index => $item)
         {
-            $program_data[$program_index]["categories_hyphenated"] = [];
-            $program_data[$program_index]["degrees_hyphenated"] = [];
+            $data[$item_index]["categories_hyphenated"] = [];
+            $data[$item_index]["degrees_hyphenated"] = [];
 
-            if ($program["categories"])
+            if ($item["categories"])
             {
-                foreach ($program["categories"] as $category_index => $category)
+                foreach ($item["categories"] as $category_index => $category)
                 {
                     $hyphenated = $this->hyphenate($category);
-                    array_push($program_data[$program_index]["categories_hyphenated"], $hyphenated);
+                    array_push($data[$item_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
             }
 
-            if ($program["degrees"])
+            if (array_key_exists("degrees", $item) && $item["degrees"])
             {
-                foreach ($program["degrees"] as $degree_index => $degree)
+                foreach ($item["degrees"] as $degree_index => $degree)
                 {
                     $hyphenated = $this->hyphenate($degree["title"]);
-                    array_push($program_data[$program_index]["degrees_hyphenated"], $hyphenated);
+                    array_push($data[$item_index]["degrees_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $degree["title"];
                 }
             }
         }
 
         asort($categories);
+        return [
+            "data" => $data,
+            "categories" => $categories,
+        ];
+    }
+
+    public function programsPageHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
+        $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => "programs",
-            "program_data" => $program_data,
-            "categories" => $categories,
-            "program_data_json" => json_encode($program_data),
+            "section" => null,
+            "item_data" => $data["data"],
+            "categories" => $data["categories"],
+            "item_data_json" => json_encode($data["data"]),
         ];
 
-        echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
+        echo $this->_renderTemplate('cehd/sorters/index.html', $template_data);
     }
 
     private function _parseTopicData()
@@ -148,16 +156,17 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function topicsPageHandler($request, $response, $service, $app)
     {
-        $topics_and_cats = $this->_parseTopicData();
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
+        $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => "topics",
-            "topic_data" => $topics_and_cats["topics"],
-            "categories" => $topics_and_cats["categories"],
-            "topic_data_json" => json_encode($topics_and_cats["topics"]),
+            "section" => null,
+            "item_data" => $data["data"],
+            "categories" => $data["categories"],
+            "item_data_json" => json_encode($data["data"]),
         ];
 
-        echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
+        echo $this->_renderTemplate('cehd/sorters/index.html', $template_data);
     }
 
     public function topicPageHandler($request, $response, $service, $app)
