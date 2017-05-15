@@ -27,13 +27,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         parent::__construct($file_paths);
 
-        // @todo does the college site need this?
-        // Check for main nav state
-        // if (array_key_exists("cehd-cehd-navOpen", $_COOKIE)) {
-        //     $this->nav_open = $_COOKIE["cehd-cehd-navOpen"];
-        // }
-        // $this->template->addGlobal("cehd_cehd_nav_open", $this->nav_open);
-
         // Add a cachebuster for the css
         $this->template->addGlobal(
             "css_cachebuster",
@@ -115,7 +108,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => null,
+            "section" => "programs-sorter",
             "item_data" => $data["data"],
             "categories" => $data["categories"],
             "item_data_json" => json_encode($data["data"]),
@@ -130,7 +123,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => null,
+            "section" => "topics-sorter",
             "item_data" => $data["data"],
             "categories" => $data["categories"],
             "item_data_json" => json_encode($data["data"]),

@@ -244,8 +244,7 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
     };
 
     this.clearQueryParams = function() {
-        var pathname = window.location.pathname;
-        this.historyManager.pushState(pathname);
+        this.historyManager.pushState(window.location.pathname);
     };
 
     // This sets the UI state on page load
@@ -276,6 +275,17 @@ var FilterManager = function(cardContainerSelector, filterInputSelector, searchI
         var query_data = self.historyManager.cssClassesToParams(filters);
         var url = self.historyManager.makeURL(query_data);
         var clear_filters_should_be_checked = $selected_cards.length === 0;
+
+        // Send data off to Google Analytics
+        // @todo - concatenate this info and send it in one request
+        $selected_cards.each(function() {
+            var command = "send";
+            var hit_type = "event";
+            var category = $(this).data("ga-category");
+            var action = "filter";
+            var label = category + "-filter";
+            window.ga(command, hit_type, category, action, label);
+        });
 
         self.$clearFiltersInput.prop("checked", clear_filters_should_be_checked);
         self.historyManager.pushState(url);
