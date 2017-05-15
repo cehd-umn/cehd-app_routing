@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Sanchez" %}
+{% set page_title = "Evita M. Sanchez" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Evita M. Sanchez<small class="clear">McNair Scholar 2014</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Sanchez-Portrait.jpg" alt="Sanchez photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Evita M. Sanchez</strong> is a senior at the University of Minnesota Twin-Cities, majoring in Psychology with a minor in Chicano and Latino Studies. Her research interests are on understanding motivation among ethnic youth, and adolescent unhealthy relationships life impact. She plans on getting her M.A. in Marriage and Family Therapy. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2014<small class="clear">Evita M. Sanchez</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to receive my Master’s degree in Marriage and Family Therapy and to become a culturally competent therapist and start my own therapy practice within the Latino community.</blockquote>
-          </div>
+          <p><strong>Evita M. Sanchez</strong> is a senior at the University of Minnesota Twin-Cities, majoring in Psychology with a minor in Chicano and Latino Studies. Her research interests are on understanding motivation among ethnic youth, and adolescent unhealthy relationships life impact. She plans on getting her M.A. in Marriage and Family Therapy. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2014-Sanchez.jpg" alt="Evita M. Sanchez photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive my Master’s degree in Marriage and Family Therapy and to become a culturally competent therapist and start my own therapy practice within the Latino community.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

@@ -1,17 +1,39 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Bradford" %}
+{% set page_title = "Javaris Bradford" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
-    <h1>Javaris Bradford<small class="clear">McNair Scholar 2016</small></h1>
+    <div class="twothird"><h1>McNair Scholar 2016<small class="clear">Javaris Bradford</small></h1></div>
 
     <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <img src="/assets/images/trio/mcnair/Bradford2016Portrait2.jpg" width="135" height="202" alt="Bradford photo"/>
-    </div>
-    <div class="span-9">
+      <div class="container">
+          <div class="half feature">
       <p><strong>Javaris Bradford</strong> is a senior sociology major and African American &amp; African Studies minor at the University of Minnesota Twin-Cities. His research interest involves understanding institutional racism and how it impacts lower class African American communities. Mr. Bradford plans to get a Ph.D. in public policy. </p>
       </div>
     </div>
@@ -19,8 +41,11 @@
 </div> <!--./container -->
 <br />
     <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
+      <div class="containter-tight">
+        <div class="third feature">
+            <img class="circular" src="/assets/images/trio/m-scholars/Sq-2016-Bradford.jpg" alt="Bradford photo">
+          </div>
+          <div class="twothird">
               <blockquote class="quote-wrap">My dream is to provide inner city Milwaukee, WI, my hometown, with the resources necessary to alleviate the poverty plaguing the potential of young Black boys and girls, to then provide them with an opportunity to reach their full potential.</blockquote>
           </div>
       </div>

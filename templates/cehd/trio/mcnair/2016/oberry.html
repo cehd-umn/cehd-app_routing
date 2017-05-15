@@ -1,29 +1,59 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Oberry" %}
+{% set page_title = "Dorothy O’Berry" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
-    <h1>Dorothy O’Berry<small class="clear">McNair Scholar 2016</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Oberry2016Portrait1.jpg" alt="O'Berry photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Dorothy O’Berry </strong>is a  senior, majoring in business and marketing education with a minor in technical communication. Her research interests involve exploring alternate pedagogies on a wider scale, looking at various ways in which unconventional teaching methods affect learning, and also the exploration of the relation between teaching and technology. And more specifically, the ways in which educators can utilize technology to enhance classroom learning. Ms. O’Berry plans to pursue her master’s degree in multicultural college teaching and learning. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2016<small class="clear">Dorothy O’Berry</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">I believe that education is not only the key to success but also the key to survival. My dream is to provide an equal opportunity for quality education for all who desire it.</blockquote>
-          </div>
+          <p><strong>Dorothy O’Berry</strong> is a  senior, majoring in business and marketing education with a minor in technical communication. Her research interests involve exploring alternate pedagogies on a wider scale, looking at various ways in which unconventional teaching methods affect learning, and also the exploration of the relation between teaching and technology. And more specifically, the ways in which educators can utilize technology to enhance classroom learning. Ms. O’Berry plans to pursue her master’s degree in multicultural college teaching and learning.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2016-Oberry.jpg" alt="Dorothy O’Berry photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">I believe that education is not only the key to success but also the key to survival. My dream is to provide an equal opportunity for quality education for all who desire it.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

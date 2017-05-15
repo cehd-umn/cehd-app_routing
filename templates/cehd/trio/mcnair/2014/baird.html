@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Baird" %}
+{% set page_title = "Nicholas E. Baird" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Nicholas E. Baird<small class="clear">McNair Scholar 2014</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Baird-Portrait.jpg" alt="Baird photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Nicholas E. Baird</strong> is acquiring a Bachelor of Science in Psychology at the University of Minnesota, studies quantitative measurement and latent human factors, and will pursue a graduate program--further specializing into quantitative measurement. After graduate studies, Nicholas will research virtual user environments to improve psychological benefits associated with use. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2014<small class="clear">Nicholas E. Baird</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">"To achieve in dreams, one must only dream. In life, you must live it--unbound, creative, and free.” -F.</blockquote>
-          </div>
+          <p><strong>Nicholas E. Baird</strong> is acquiring a Bachelor of Science in Psychology at the University of Minnesota, studies quantitative measurement and latent human factors, and will pursue a graduate program--further specializing into quantitative measurement. After graduate studies, Nicholas will research virtual user environments to improve psychological benefits associated with use.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2014-Baird.jpg" alt="Nicholas E. Baird photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">"To achieve in dreams, one must only dream. In life, you must live it--unbound, creative, and free.” -F
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

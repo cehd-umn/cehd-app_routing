@@ -1,19 +1,55 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Funding | CEHD" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
     <h1>Finance and funding</h1>
     </div></div>
 <div class="row">
   <div class="container">
-    <div class="third"><p>Learning about your financial options and the tools and funding sources available can help ease your mind and put you on the right track to make informed financial decisions. CEHD is committed to making this process as clear and actionable as possible.</p></div>
-
-    <div class="twothird emphasis">
-<h3>Student profile</h3>
+    <div class="half feature"><p>Learning about your financial options and the tools and funding sources available can help ease your mind and put you on the right track to make informed financial decisions. CEHD is committed to making this process as clear and actionable as possible.</p></div>
+  </div>
+    <div class="row emphasis bg-cehd-multi">
+      <div class="containter-tight">
+        <div class="third feature">
+            <img class="circular" src="/assets/images/headshots/student-features/Sq-2017-Emily-Horton.jpg" alt="photo of Emily Horton">
+        </div>
+        <div class="twothird">
+              <blockquote class="quote-wrap">My interest in equity and inclusion work really grew out of my own experience, fighting to go to college, fighting to afford it, fighting to see myself represented in my classrooms.</blockquote>
+              <p align="right" class="speaker">Emily Horton <br/>
+             master's student <br/>
+             higher education</p>
+        </div>
+      </div>
     </div>
-  </div></div>
+
+</div>
 <div class="row">
   <div class="container">
     <div class="span-6">

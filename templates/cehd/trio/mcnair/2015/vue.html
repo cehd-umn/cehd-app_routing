@@ -1,30 +1,61 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Vue" %}
+{% set page_title = "Gaozouapa Vue" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Gaozouapa Vue<small class="clear">McNair Scholar 2015</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Gaozouapa Vue</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Vue2015Portrait.jpg" alt="Vue photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Gaozouapa Vue</strong> is a senior at the University of Minnesota Twin Cities. She is majoring in youth studies in the School of Social Work. Ms. Vue will continue with higher education and pursue a master’s in development practice with a concentration in women’s studies. Ms. Vue hopes to have an experiential education abroad with the Humanity in Action and Princeton in Asia.</p>
-        </div>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
   <div class="row emphasis bg-cehd-multi">
-    <div class="container">
-        <div class="half feature">
-            <blockquote class="quote-wrap">I want to continue to pursue higher education in the youth development field and understand the profound globalization issues in a diverse world where many may not be able to comprehend the complexities. I want to be a leader in international affairs for women representation in public policy.</blockquote>
-        </div>
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Vue.jpg" alt="Gaozouapa Vue photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">I want to continue to pursue higher education in the youth development field and understand the profound globalization issues in a diverse world where many may not be able to comprehend the complexities. I want to be a leader in international affairs for women representation in public policy.
+            </blockquote>
+
+      </div>
     </div>
-</div>
+  </div>
 
 <div class="container">
   <div class="span-8 feature">

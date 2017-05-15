@@ -1,30 +1,61 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Wahlia" %}
+{% set page_title = "Hany Wahila" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Hany Wahila<small class="clear">McNair Scholar 2015</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Hany Wahila</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Wahila2015Portrait.jpg" alt="Wahila photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Hany Wahila</strong> is a senior at the University of Minnesota, Twin Cities, double majoring in political science and sociology with a minor in public health. She hopes to pursue a Ph.D. in international affairs that focuses on understanding the global conflict of countries attaining democracy. In addition her research interests also include immigration and relations between the African-American and African Diaspora communities.</p>
-        </div>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
   <div class="row emphasis bg-cehd-multi">
-    <div class="container">
-        <div class="half feature">
-            <blockquote class="quote-wrap">My dream is to better understand the international conflicts that exist in the world by attaining a PhD in international relations or global policy. By helping countries better understand one another on a macro level, I will help resolve the issues that countries face in terms of their foreign affairs and decrease the chance of international conflicts that exists today and may continue to exist in the future.</blockquote>
-        </div>
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Wahila.jpg" alt="Hany Wahila photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to better understand the international conflicts that exist in the world by attaining a PhD in international relations or global policy. By helping countries better understand one another on a macro level, I will help resolve the issues that countries face in terms of their foreign affairs and decrease the chance of international conflicts that exists today and may continue to exist in the future.
+            </blockquote>
+
+      </div>
     </div>
-</div>
+  </div>
 
 <div class="container">
   <div class="span-8 feature">

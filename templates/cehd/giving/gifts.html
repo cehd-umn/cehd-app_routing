@@ -1,235 +1,509 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Gifts | CEHD" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .span-5 {
+        margin-right: -2%;
+    }
+    h5 {
+        margin-bottom: -10%;
+        margin-top: -1%
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
-  <div class="container">
-    <h1>Gifts at work</h1>
+    <div class="container">
+      <h1>Gifts at work</h1>
 
-    <div class="half feature">
-        <p>During the past five years, the College of Education and Human Development has raised over $9 million in gifts from alumni and friends. These gifts are making a real difference to students, faculty, and staff.</p>
+      <div class="half feature">
+        <p>During the past five years, the College of Education and Human Development has
+        raised over $9 million in gifts from alumni and friends. These gifts are making a
+        real difference to students, faculty, and staff.</p>
+
         <p>The following are just a few examples of how gifts are being used.</p>
-    </div>
-    <div class="margin-top-3">
-    </div>
-
-        <h2 class="text-center">Giving matters</h2>
-        <div class="third">
-            <h3>Inspiring math learners</h3>
-            <img src="/assets/images/giving/math.jpg" alt="Example image."  />
-                <p>A Mooty Foundation gift helps Lesa Clarkson foster math skills in North Minneapolis.<br/>
-                    <a href="http://connect.cehd.umn.edu/giving-matters-inspiring-math-learners/">Continue reading</a></p>
-        </div>
-        <div class="third">
-            <h3>Support for women scholars</h3>
-            <img src="/assets/images/giving/scholar.jpg" alt="Example image."  />
-                <p>With the Women’s Philanthropic Leadership Circle, small gifts make a big difference.<br/> <a href="http://connect.cehd.umn.edu/wplc/">Continue reading</a></p>
-        </div>
-        <div class="third">
-            <h3>Dreams to teach come true</h3>
-            <img src="/assets/images/giving/teach.jpg" alt="Example image."  />
-                <p>The Schulze Family Foundation supports future teachers who have a passion for subjects in short supply.<br/> <a href="http://connect.cehd.umn.edu/giving-matters-helping-dreams-to-teach-come-true/">Continue reading</a></p>
-        </div>
-  </div> <!-- ./container -->
-    <div class="container">
-        <div class="margin-top-3">
-        </div>
-        <div class="half feature">
-            <h2 class="text-center">Endowed Chairs and Professorships</h2>
-            <h3 class="text-center">Current appointments</h3>
-        </div>
-    </div> <!-- ./container -->
-
-
-    <div class="container">
-         <div class="span-4">
-             <h4>Robert Holmes Beck Chair of Ideas in Education</h4>
-             <img src="/assets/images/giving/appointments/SeashoreK-2016.jpg" alt="Karen Seashore"  />
-             <p><a href="http://www.cehd.umn.edu/OLPD/people/faculty/Seashore.asp">Karen Seashore</a></br>
-                 Regents Professor <br />
-                 <a href="http://www.cehd.umn.edu/olpd/">Department of Organizational Leadership, Policy, and Development</a></p>
-                 <p>Term: 7/01/14-6/30/17</p>
-         </div>
-         <div class="span-4">
-             <h4>Emma M. Birkmaier Professor in Educational Leadership</h4>
-                <img src="/assets/images/giving/appointments/LewisC-2016.jpg" alt="Cynthia Lewis "  />
-             <p><a href="http://www.cehd.umn.edu/ci/People/profiles/lewis.html">Cynthia Lewis </a><br/>
-                 Department Chair <br />
-                 <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a></p>
-                 <p>Term: 7/01/15-6/30/18</p>
-         </div>
-         <div class="span-4">
-             <h4>Guy Bond Chair in Reading</h4>
-                <img src="/assets/images/giving/appointments/DillonD-2005.jpg" alt="Deborah Dillon "  />
-             <p><a href="http://www.cehd.umn.edu/ci/People/profiles/dillon.html">Deborah Dillon</a>
-             <br/>Associate Dean for Graduate and Professional Programs <br />
-             <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a></p>
-             <p>Term: 7/01/15-6/30/18</p>
-
-        </div>
-</div>
-        <div class="margin-top-3">
-        </div>
-  <div class="container">
-
-           <div class="span-4">
-               <h4>Guy Bond Chair in Reading</h4>
-                <img src="/assets/images/giving/appointments/kendeou_2.jpeg" alt="Panayiota Kendeou"  />
-               <p><a href="http://www.cehd.umn.edu/edpsych/people/kend0040/">Panayiota Kendeou</a>
-               <br  />Associate Professor <br />
-               <a href="http://www.cehd.umn.edu/edpsych/">Department of Educational Psychology</a></p>
-               <p>Term: 7/01/16-6/30/19</p>
-
-           </div>
-           <div class="span-4">
-               <h4>Campbell Leadership Chair in Education and Human Development
-               </h4>
-                <img src="/assets/images/giving/appointments/RodriguezM-2003.jpg" alt="Michael Rodriguez"  />
-               <p><a href="http://www.cehd.umn.edu/edpsych/people/mcrdz/">Michael Rodriguez</a><br />
-                   Professor<br/>
-               <a href="http://www.cehd.umn.edu/edpsych/">Department of Educational Psychology</a></p>
-               <p>Term: 7/1/16-6/30/19</p>
-           </div>
-           <div class="span-4">
-               <h4>Campbell Chair for Innovation in Teacher Development</h4>
-                <img src="/assets/images/giving/appointments/SatoM-2007.jpg" alt="Mistilina Sato"  />
-               <p><a href="http://www.cehd.umn.edu/ci/People/profiles/sato.html">Mistilina Sato</a><br/>
-                   Professor<br/>
-                   <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a>
-               </p>
-               <p>Term: 7/01/15-6/30/18</p>
-           </div>
-
-    </div> <!-- ./container -->
-    <div class="margin-top-3">
-    </div>
-    <div class="container">
-             <div class="span-4">
-             <h4>Gamble-Skogmo Land Grant Chair in Child Welfare and Youth Policy</h4>
-                <img src="/assets/images/giving/appointments/HaightW-2011.jpg" alt="Wendy Haight"  />
-             <p><a href="http://www.cehd.umn.edu/ssw/People/profiles/HaightW.html">Wendy Haight</a><br/>
-                 Professor<br/>
-                 <a href="http://www.cehd.umn.edu/ssw/">School of Social Work</a>
-             </br/></p>
-             <p>Term: 7/01/15-6/30/18</p>
-         </div>
-             <div class="span-4">
-                 <h4>Hellervik Endowed Chair in Leadership and Adult Career Development</h4>
-                    <img src="/assets/images/giving/appointments/ArdichviliA-2013.jpg" alt="Alexandre Ardichvili"  />
-                 <p><a href="http://www.cehd.umn.edu/olpd/people/faculty/Ardichvili.asp">Alexandre Ardichvili</a></br>
-                     Professor<br/>
-                     <a href="http://www.cehd.umn.edu/olpd/">Department of Organizational Leadership, Policy, and Development</a></p>
-                     <p>Term: 7/01/15-6/30/18</p>
-                 </div>
-             <div class="span-4">
-                 <h4>Bonnie Westby Huebner Endowed Chair in Education and Technology</h4>
-                <img src="/assets/images/giving/appointments/DoeringA-2014.jpg" alt="Aaron Doering"  />
-              <p><a href="http://www.cehd.umn.edu/ci/People/profiles/doering.html">Aaron Doering</a><br/>
-                    Professor<br/>
-                  <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a>
-              </p>
-              <p>Term: 7/01/15-6/30/18</p>
-          </div>
-      </div> <!-- ./container -->
-      <div class="margin-top-3">
       </div>
-      <div class="container">
-               <div class="span-4">
-               <h4>Irving Harris Professor of Child Development</h4>
-                  <img src="/assets/images/giving/appointments/MastenA-Pref.jpg" alt="Ann Masten"  />
-               <p><a href="http://www.cehd.umn.edu/icd/people/faculty/masten.html">Ann Masten</a><br/>
-                   Regents Professor <br/>
-                   Distinguished McKnight University Professor <br/>
-                   <a href="http://www.cehd.umn.edu/icd/">Institute of Child Development</a>
-               </br/></p>
-               <p>Term: 7/1/16-6/30/19</p>
-           </div>
-               <div class="span-4">
-                   <h4>William Harris Professor of Child Development and Psychiatry</h4>
-                      <img src="/assets/images/giving/appointments/CicchettiD-Pref.jpg" alt="Dante Cicchetti"  />
-                   <p><a href="http://www.cehd.umn.edu/icd/people/faculty/Cicchetti.html">Dante Cicchetti</a></br>
-                       McKnight Presidential Chair <br/>
-                       <a href="http://www.cehd.umn.edu/icd/">Institute of Child Development</a></p>
-                       <p>Term: 7/1/16-6/30/19</p>
-                   </div>
-               <div class="span-4">
-                   <h4>The Lindahl Leadership Professor</h4>
-                  <img src="/assets/images/giving/appointments/GewirtzA-2007.jpg" alt="Abigail Gewirtz"  />
-                <p><a href="http://www.cehd.umn.edu/fsos/people/faculty/GewirtzA.asp">Abigail Gewirtz</a><br/>
-                      Director, ITRCMIT <br/>
-                    <a href="http://www.cehd.umn.edu/fsos/">Department of Family Social Science</a>
-                </p>
-                <p>Term: 7/01/15-6/30/18</p>
-            </div>
-        </div> <!-- ./container -->
-        <div class="margin-top-3">
+
+      <div class="margin-top-3"></div>
+
+      <h2 class="text-center">Giving matters</h2>
+
+      <div class="third">
+        <h3>Inspiring math learners</h3><img src="/assets/images/giving/math.jpg" alt=
+        "Example image." />
+
+        <p>A Mooty Foundation gift helps Lesa Clarkson foster math skills in North
+        Minneapolis.<br />
+        <a href=
+        "http://connect.cehd.umn.edu/giving-matters-inspiring-math-learners/">Continue
+        reading</a></p>
+      </div>
+
+      <div class="third">
+        <h3>Support for women scholars</h3><img src="/assets/images/giving/scholar.jpg"
+        alt="Example image." />
+
+        <p>With the Women&rsquo;s Philanthropic Leadership Circle, small gifts make a big
+        difference.<br />
+        <a href="http://connect.cehd.umn.edu/wplc/">Continue reading</a></p>
+      </div>
+
+      <div class="third">
+        <h3>Dreams to teach come true</h3><img src="/assets/images/giving/teach.jpg" alt=
+        "Example image." />
+
+        <p>The Schulze Family Foundation supports future teachers who have a passion for
+        subjects in short supply.<br />
+        <a href=
+        "http://connect.cehd.umn.edu/giving-matters-helping-dreams-to-teach-come-true/">Continue
+        reading</a></p>
+      </div>
+    </div><!-- ./container -->
+
+    <div class="container">
+      <div class="margin-top-3"></div>
+
+      <div class="half feature">
+        <h2 class="text-center">Endowed Chairs and Professorships</h2>
+
+        <h3 class="text-center">Current appointments</h3>
+      </div>
+    </div><!-- ./container -->
+
+    <div class="container">
+        <div class="span-4">
+     <div class="span-12">
+       <h4>Robert Holmes Beck Chair<br />
+       of Ideas in Education</h4>
+     </div>
+
+     <div class="span-5"><img src=
+     "/assets/images/giving/appointments/SeashoreK-2016.jpg" alt=
+     "Karen Seashore" /></div>
+
+     <div class="span-7">
+       <h5><a href=
+       "http://www.cehd.umn.edu/OLPD/people/faculty/Seashore.asp">Karen
+       Seashore</a> <small class="clear h6 light">Regents
+       Professor</small></h5>
+
+       <p><a href="http://www.cehd.umn.edu/olpd/">Department of
+       Organizational Leadership, Policy, and Development</a></p>
+
+       <p>Term: 7/01/14-6/30/17</p>
+     </div>
+   </div>
+
+   <div class="span-4">
+     <div class="span-12">
+       <h4>Emma M. Birkmaier Professor in Educational
+       Leadership</h4>
+     </div>
+
+     <div class="span-5"><img src=
+     "/assets/images/giving/appointments/LewisC-2016.jpg" alt=
+     "Cynthia Lewis " />
+    </div>
+
+     <div class="span-7">
+       <h5><a href=
+       "http://www.cehd.umn.edu/ci/People/profiles/lewis.html">Cynthia
+       Lewis</a> <small class="clear h6 light">Department Chair</small>
+        </h5>
+
+       <p><a href=
+       "http://www.cehd.umn.edu/ci/">Department of Curriculum and
+       Instruction</a></p>
+
+       <p>Term: 7/01/15-6/30/18</p>
+     </div>
+   </div>
+
+   <div class="span-4">
+ <div class="span-12">
+   <h4>Guy Bond Chair in Reading</h4>
+ </div>
+ <div class="margin-top-4">
+ </div>
+ <div class="margin-top-1">
+ </div>
+ <div class="span-5"><img src="/assets/images/giving/appointments/DillonD-2005.jpg"
+ alt="Deborah Dillon " /></div>
+
+ <div class="span-7">
+   <h5><a href="http://www.cehd.umn.edu/ci/People/profiles/dillon.html">Deborah
+   Dillon</a><small class="clear h6 light">Associate
+   Dean for Graduate and Professional Programs</small></h5>
+
+   <p><a href="http://www.cehd.umn.edu/ci/">Department
+   of Curriculum and Instruction</a></p>
+
+   <p>Term: 7/01/15-6/30/18</p>
+ </div>
+</div>
+</div>
+
+    <div class="margin-top-3"></div>
+
+    <div class="container">
+      <div class="span-4">
+          <div class="span-12">
+              <h4>Guy Bond Chair in Reading</h4>
+          </div>
+              <div class="margin-top-4">
+              </div>
+              <div class="margin-top-1">
+              </div>
+        <div class="span-5">
+          <img src="/assets/images/giving/appointments/kendeou_2.jpeg" alt="Panayiota Kendeou" />
+        </div>
+        <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/edpsych/people/kend0040/">Panayiota
+        Kendeou</a>
+        <small class="clear h6 light">
+        Associate Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/edpsych/">Department of Educational
+        Psychology</a></p>
+
+        <p>Term: 7/01/16-6/30/19</p>
+    </div>
+      </div>
+
+      <div class="span-4">
+          <div class="span-12">
+        <h4>Campbell Leadership Chair in Education and Human Development</h4>
+          </div>
+
+          <div class="span-5">
+                  <img src="/assets/images/giving/appointments/RodriguezM-2003.jpg" alt=
+            "Michael Rodriguez" />
+        </div>
+      <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/edpsych/people/mcrdz/">Michael
+        Rodriguez</a>
+        <small class="clear h6 light">
+        Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/edpsych/">Department of Educational
+        Psychology</a></p>
+
+        <p>Term: 7/1/16-6/30/19</p>
+      </div>
+  </div>
+      <div class="span-4">
+        <div class="span-12">
+            <h4>Campbell Chair for Innovation in Teacher Development</h4>
+        </div>
+        <div class="span-5">
+        <img src=
+        "/assets/images/giving/appointments/SatoM-2007.jpg" alt="Mistilina Sato" />
+        </div>
+        <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/ci/People/profiles/sato.html">Mistilina
+        Sato</a>
+        <small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and
+        Instruction</a></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+  </div>
+    </div><!-- ./container -->
+
+    <div class="margin-top-3"></div>
+
+    <div class="container">
+        <div class="span-4">
+            <div class="span-12">
+          <h4>Gamble-Skogmo Land Grant Chair in Child Welfare and Youth
+          Policy</h4>
+          </div>
+          <div class="span-5">
+          <img src="/assets/images/giving/appointments/HaightW-2011.jpg" alt=
+          "Wendy Haight" />
+              </div>
+              <div class="span-7">
+          <h5><a href="http://www.cehd.umn.edu/ssw/People/profiles/HaightW.html">Wendy
+          Haight</a>
+          <small class="clear h6 light">Professor</small></h5>
+          <p><a href="http://www.cehd.umn.edu/ssw/">School of Social Work</a></p>
+          <p>Term: 7/01/15-6/30/18</p>
+        </div>
         </div>
 
-        <div class="container">
-                 <div class="span-4">
-                 <h4>The Nancy and John Lindahl Leadership Professor</h4>
-                <img src="/assets/images/giving/appointments/ZelazoP-Pref.jpg" alt="Philip David Zelazo"  />
+      <div class="span-4">
+          <div class="span-12">
+        <h4>Hellervik Endowed Chair in Leadership and Adult Career
+        Development</h4>
+    </div>
+    <div class="span-5">
+        <img src=
+        "/assets/images/giving/appointments/ArdichviliA-2013.jpg" alt=
+        "Alexandre Ardichvili" width="120px" />
+    </div>
+    <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/olpd/people/faculty/Ardichvili.asp">Alexandre
+        Ardichvili</a>
+        <small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/olpd/">Department of Organizational Leadership,
+        Policy, and Development</a></p>
 
-                 <p><a href="http://www.cehd.umn.edu/people/profiles/zelazo/">Philip David Zelazo</a><br/>
-                     Professor <br/>
-                     <a href="http://www.cehd.umn.edu/icd/">Institute of Child Development</a>
-                 </br/></p>
-                 <p>Term: 7/01/15-6/30/18</p>
-             </div>
-                 <div class="span-4">
-                     <h4>Dorothy McNeill and Elbridge Ashcraft Tucker Chair for Women in Exercise Science and Sport</h4>
-                        <img src="/assets/images/giving/appointments/CicchettiD-Pref.jpg" alt="Mary Jo Kane"  />
-                     <p><a href="http://www.cehd.umn.edu/kin/people/maryjo.html">Mary Jo Kane</a></br>
-                         <a href="http://www.cehd.umn.edu/kin/">School of Kinesiology</a></p>
-                         <p>Term: 7/01/96-no end date</p>
-                     </div>
-                 <div class="span-4">
-                     <h4>John W. and Nancy E. Peyton Faculty Fellow in Child and Adolescent Wellbein</h4>
-                    <img src="/assets/images/giving/appointments/CookC_2015.jpg" alt="Clayton Cook"  />
-                  <p><a href="http://www.cehd.umn.edu/edpsych/people/crcook/">Clayton Cook</a><br/>
-                      <a href="http://www.cehd.umn.edu/edpsych/">Department of Educational Psychology</a>
-                  </p>
-                  <p>Term: 7/01/16-6/30/19</p>
-              </div>
-          </div> <!-- ./container -->
-          <div class="container">
-                   <div class="span-4">
-                   <h4>Sidney and Marguerite Henry Professor of Children's and Young Adult Literature</h4>
-                      <img src="/assets/images/giving/appointments/OziewiczMarek-2014.jpg" alt="Marek Oziewicz"  />
-                   <p><a href="http://www.cehd.umn.edu/ci/People/profiles/oziewicz.html">Marek Oziewicz</a><br/>
-                       Professor <br/>
-                       <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a>
-                   </br/></p>
-                   <p>Term: 7/1/16-6/30/19</p>
-               </div>
-                   <div class="span-4">
-                       <h4>Rodney S. Wallace Professor for the Advancement of Teaching and Learning</h4>
-                          <img src="/assets/images/giving/appointments/NgoB-2007.jpg" alt="Bic Ngo"  />
-                       <p><a href="http://drydock.cehd.umn.edu/CI/People/profiles/Ngo.html">Bic Ngo</a></br>
-                           <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and Instruction</a></p>
-                           <p>Term: 7/01/15-6/30/18</p>
-                       </div>
-                   <div class="span-4">
-                       <h4>Yackel Professor of Educational Assessment and Measurement</h4>
-                      <img src="/assets/images/giving/appointments/ChristT-2009.jpg" alt="Theodore Christ"  />
-                    <p><a href="http://drydock.cehd.umn.edu/edpsych/people/tchrist/">Theodore Christ</a><br/>
-                        <a href="http://www.cehd.umn.edu/edpsych/">Department of Educational Psychology</a>
-                    </p>
-                    <p>Term: 7/01/15-6/30/18</p>
+        <p>Term: 7/01/15-6/30/18</p>
+            </div>
+      </div>
+
+      <div class="span-4">
+          <div class="span-12">
+        <h4>Bonnie Westby Huebner Endowed Chair in Education and Technology</h4>
+         </div>
+
+         <div class="span-5">
+             <img src=
+        "/assets/images/giving/appointments/DoeringA-2014.jpg" alt="Aaron Doering" />
+        </div>
+        <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/ci/People/profiles/doering.html">Aaron
+        Doering</a><small class="clear h6 light">
+        Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and
+        Instruction</a></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+            </div>
+      </div>
+    </div><!-- ./container -->
+
+    <div class="margin-top-3"></div>
+
+    <div class="container">
+      <div class="span-4">
+          <div class="span-12">
+        <h4>Irving Harris Professor of Child Development</h4>
+    </div>
+    <div class="span-5">
+    <img src=
+        "/assets/images/giving/appointments/MastenA-Pref.jpg" alt="Ann Masten" />
+            </div>
+            <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/icd/people/faculty/masten.html">Ann
+        Masten</a>
+        <small class="clear h6 light">Regents Professor
+        Distinguished McKnight University Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/icd/">Institute of Child
+        Development</a></p>
+
+        <p>Term: 7/1/16-6/30/19</p>
+      </div>
+      </div>
+      <div class="span-4">
+          <div class="span-12">
+        <h4>William Harris Professor of Child Development and Psychiatry</h4>
+        </div>
+        <div class="span-5">
+
+
+                  <img src=
+        "/assets/images/giving/appointments/CicchettiD-Pref.jpg" alt="Dante Cicchetti" />
                 </div>
-            </div> <!-- ./container -->
-            <div class="container">
-                     <div class="span-12">
-                     <h4>Yackel Professor of Educational Assessment and Measurement</h4>
-                        <img src="/assets/images/giving/appointments/DavisonM-2004.jpg" alt="Mark Davison"  />
-                     <p><a href="http://drydock.cehd.umn.edu/edpsych/people/mld/">Mark Davison</a><br/>
-                         Professor <br/>
-                         <a href="http://www.cehd.umn.edu/edpsy/">Department of Educational Psychology</a>
-                     </br/></p>
-                     <p>Term: 7/01/15-6/30/18</p>
-                 </div>
+                <div class="span-7">
 
-              </div> <!-- ./container -->
 
-</div> <!-- ./row -->
+        <h5><a href="http://www.cehd.umn.edu/icd/people/faculty/Cicchetti.html">Dante
+        Cicchetti</a>
+        <small class="clear h6 light">McKnight Presidential Chair</small></h5>
+        <p><a href="http://www.cehd.umn.edu/icd/">Institute of Child Development</a></p>
+
+        <p>Term: 7/1/16-6/30/19</p>
+            </div>
+      </div>
+
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>The Lindahl Leadership Professor</h4>
+        </div>
+        <div class="margin-top-4">
+        </div>
+        <div class="margin-top-1">
+        </div>
+        <div class="span-5">
+            <img src=
+        "/assets/images/giving/appointments/GewirtzA-2007.jpg" alt="Abigail Gewirtz" />
+            </div>
+            <div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/fsos/people/faculty/GewirtzA.asp">Abigail
+        Gewirtz</a>
+        <small class="clear h6 light">Director, ITRCMIT</small></h5>
+        <p><a href="http://www.cehd.umn.edu/fsos/">Department of Family Social
+        Science</a></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+          </div>
+    </div><!-- ./container -->
+
+    <div class="margin-top-3"></div>
+
+    <div class="container">
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>The Nancy and John Lindahl Leadership Professor</h4>
+        </div>
+
+        <div class="span-5"><img src=
+        "/assets/images/giving/appointments/ZelazoP-Pref.jpg" alt=
+        "Philip David Zelazo" />
+    </div>
+    <div class="span-7">
+
+
+        <h5><a href="http://www.cehd.umn.edu/people/profiles/zelazo/">Philip David
+        Zelazo</a>
+        <small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/icd/">Institute of Child
+        Development</a><br /></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+    </div>
+      <div class="span-4">
+          <div class="span-12">
+    <h4>Dorothy McNeill and Elbridge Ashcraft Tucker Chair for Women in Exercise
+        Science and Sport</h4>
+         </div>
+         <div class="span-5">
+             <img src=
+        "/assets/images/giving/appointments/KaneMJ-2005.jpg" alt="Mary Jo Kane" />
+         </div>
+<div class="span-7">
+
+
+        <h5><a href="http://www.cehd.umn.edu/kin/people/maryjo.html">Mary Jo
+        Kane</a><small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/kin/">School of Kinesiology</a></p>
+
+        <p>Term: 7/01/96-no end date</p>
+      </div>
+</div>
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>John W. and Nancy E. Peyton Faculty Fellow in Child and Adolescent
+        Wellbeing</h4>
+          </div>
+          <div class="span-5">
+
+         <img src="/assets/images/giving/appointments/CookC_2015.jpg" alt=
+        "Clayton Cook" width="120px"/>
+         </div>
+         <div class="span-7">
+
+
+        <h5><a href="http://www.cehd.umn.edu/edpsych/people/crcook/">Clayton
+        Cook</a><small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/edpsych/">Department of Educational
+        Psychology</a></p>
+
+        <p>Term: 7/01/16-6/30/19</p>
+      </div>
+       </div>
+    </div><!-- ./container -->
+    <div class="margin-top-3"></div>
+    <div class="container">
+
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>Sidney and Marguerite Henry Professor of Children's and Young Adult
+        Literature</h4>      </div>
+        <div class="span-5">
+
+        <img src=
+        "/assets/images/giving/appointments/OziewiczMarek-2014.jpg" alt=
+        "Marek Oziewicz" width="120px"/>
+        </div>
+<div class="span-7">
+        <h5><a href="http://www.cehd.umn.edu/ci/People/profiles/oziewicz.html">Marek
+        Oziewicz</a>
+        <small class="clear h6 light">Professor</small></h5>
+        <a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and
+        Instruction</a><br /></p>
+
+        <p>Term: 7/1/16-6/30/19</p>
+      </div>
+  </div>
+
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>Rodney S. Wallace Professor for the Advancement of Teaching and
+        Learning</h4>
+         </div>
+         <div class="span-5">
+
+         <img src="/assets/images/giving/appointments/NgoB-2007.jpg" alt=
+        "Bic Ngo" />
+        </div>
+        <div class="span-7">
+        <h5><a href="http://drydock.cehd.umn.edu/CI/People/profiles/Ngo.html">Bic
+        Ngo</a><small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/ci/">Department of Curriculum and
+        Instruction</a></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+</div>
+      <div class="span-4">
+          <div class="span-12">
+
+
+        <h4>Yackel Professor of Educational Assessment and Measurement</h4>
+          </div>
+          <div class="span-5">
+
+        <img src=
+        "/assets/images/giving/appointments/ChristT-2009.jpg" alt="Theodore Christ" />
+          </div>
+          <div class="span-7">
+
+
+        <h5><a href="http://drydock.cehd.umn.edu/edpsych/people/tchrist/">Theodore
+        Christ</a><small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/edpsych/">Department of Educational
+        Psychology</a></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+       </div>
+    </div><!-- ./container -->
+    <div class="margin-top-3"></div>
+    <div class="container">
+        <div class="span-4">
+      <div class="span-12">
+        <h4>Yackel Professor of Educational Assessment and Measurement</h4>
+    </div>
+    <div class="span-5">
+
+<img src=
+        "/assets/images/giving/appointments/DavisonM-2004.jpg" alt="Mark Davison" />
+            </div>
+            <div class="span-7">
+<h5><a href="http://drydock.cehd.umn.edu/edpsych/people/mld/">Mark
+        Davison</a>
+        <small class="clear h6 light">Professor</small></h5>
+        <p><a href="http://www.cehd.umn.edu/edpsy/">Department of Educational
+        Psychology</a><br /></p>
+
+        <p>Term: 7/01/15-6/30/18</p>
+      </div>
+      </div>
+      </div>
+    </div><!-- ./container -->
+  </div><!-- ./row -->
 {% endblock %}

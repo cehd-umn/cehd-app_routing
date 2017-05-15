@@ -1,29 +1,59 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Vang" %}
+{% set page_title = "Chria Vang" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
-    <h1>Chria Vang<small class="clear">McNair Scholar 2016</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/CVang2016Portrait2.jpg" alt="Vang, Chria photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Chria Vang</strong> is a senior attending the University of Minnesota with an interdisciplinary degree in youth, holistic health and healing, and leadership studies. Her research interests include positive youth development, education, and Somali, Latino, and Hmong communities. Ms. Vang plans to obtain her master’s degree and Ph.D. and live abroad.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2016<small class="clear">Chria Vang</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to leave this world better than how I found it. Changing the world starts with changing myself.</blockquote>
-          </div>
+          <p><strong>Chria Vang</strong>is a senior attending the University of Minnesota with an interdisciplinary degree in youth, holistic health and healing, and leadership studies. Her research interests include positive youth development, education, and Somali, Latino, and Hmong communities. Ms. Vang plans to obtain her master’s degree and Ph.D. and live abroad.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2016-CVang.jpg" alt="Chria Vang photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to leave this world better than how I found it. Changing the world starts with changing myself.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

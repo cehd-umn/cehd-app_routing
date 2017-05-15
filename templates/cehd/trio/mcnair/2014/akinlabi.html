@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Akinlabi" %}
+{% set page_title = "A. Akintomiwa Akinlabi" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>A. Akintomiwa Akinlabi<small class="clear">McNair Scholar 2014</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Akinlabi-Portrait.jpg" alt="Akinlabi photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>A. Akintomiwa Akinlabi</strong> is a senior at Carleton College, Northfield, majoring in Chemistry. His research interest includes the synthesis of nanoparticles using hydrothermal means and the use of nanoparticles in solar cells. Mr. Akinlabi plans on getting his Ph.D. in Material Chemistry. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2014<small class="clear">A. Akintomiwa Akinlabi</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to receive a Ph.D. in Chemistry and strive for world peace. I want to be involved in global conflict resolution efforts and I want to travel and take photographs of different places I visit.</blockquote>
-          </div>
+          <p><strong>A. Akintomiwa Akinlabi</strong> is a senior at Carleton College, Northfield, majoring in Chemistry. His research interest includes the synthesis of nanoparticles using hydrothermal means and the use of nanoparticles in solar cells. Mr. Akinlabi plans on getting his Ph.D. in Material Chemistry. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2014-Akinlabi.jpg" alt="A. Akintomiwa Akinlabi photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in Chemistry and strive for world peace. I want to be involved in global conflict resolution efforts and I want to travel and take photographs of different places I visit.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Perez" %}
+{% set page_title = "Shanel Perez" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Shanel Perez<small class="clear">McNair Scholar 2015</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Perez2015Portrait.jpg" alt="Perez photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Shanel Perez </strong>is a senior at the University of Minnesota, Twin Cities, double majoring in business marketing education and human resource development. Her research interests revolve around youth, race, institutional inequalities, and access to higher education. Ms. Perez plans on getting her Ph.D. in either higher or urban education. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Shanel Perez</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to continue my educational journey and receive a Ph.D. in order to better serve my community. I dream that my education will help prepare me in creating a bridge program for underrepresented high school students in the Minneapolis and surrounding area.</blockquote>
-          </div>
+          <p><strong>Shanel Perez </strong>is a senior at the University of Minnesota, Twin Cities, double majoring in business marketing education and human resource development. Her research interests revolve around youth, race, institutional inequalities, and access to higher education. Ms. Perez plans on getting her Ph.D. in either higher or urban education.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Perez.jpg" alt="Shanel Perez photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to continue my educational journey and receive a Ph.D. in order to better serve my community. I dream that my education will help prepare me in creating a bridge program for underrepresented high school students in the Minneapolis and surrounding area.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

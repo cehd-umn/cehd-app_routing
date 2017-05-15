@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Chu" %}
+{% set page_title = "Wendy Chu" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Wendy Chu<small class="clear">McNair Scholar 2015</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Chu2015Portrait.jpg" alt="Chu photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Wendy Chu</strong> is a rising junior at Macalester College majoring in Psychology. Her background as a first-generation, low-income intellectual has propelled her to seek ways in which she can contribute to the knowledge of psychopathology. She maintains her desire to obtain a Ph.D. in Clinical Science at a renowned university.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Wendy Chu</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">As a registered nurse, I will address the ways in which poverty-induced hardships impact health in underrepresented communities.</blockquote>
-          </div>
+          <p><strong>Wendy Chu</strong> is a rising junior at Macalester College majoring in Psychology. Her background as a first-generation, low-income intellectual has propelled her to seek ways in which she can contribute to the knowledge of psychopathology. She maintains her desire to obtain a Ph.D. in Clinical Science at a renowned university.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Chu.jpg" alt="Wendy Chu photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">As a registered nurse, I will address the ways in which poverty-induced hardships impact health in underrepresented communities.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

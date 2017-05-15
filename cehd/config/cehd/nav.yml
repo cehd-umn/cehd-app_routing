@@ -7,7 +7,7 @@
       href: "/programs/"
       subsection:
         - name: Study Abroad
-          href: "/studyabroad/"
+          href: "/study-abroad/"
     - name: Teacher Education
       href: "/teaching/"
       subsection:
@@ -37,13 +37,15 @@
         - name: First Year Experience
           href: "/undergraduate/fye/"
         - name: Newly Admitted Students
-          href: "/undergraduate/freshmen/"
+          href: "/undergraduate/admitted/"
         - name: Academic Advising
           href: "/undergraduate/advising/"
         - name: Get Involved
           href: "/undergraduate/involvement/"
         - name: TRIO Programs
           href: "/trio/"
+        - name: iPad Resources
+          href: "http://academics.cehd.umn.edu/mobile/"
     - name: Graduate Studies
       href: "/graduate/"
       subsection:
@@ -80,6 +82,9 @@
       subsection:
         - name: Commencement
           href: "/404/"
+    - name: Global Initiatives
+      href: "/global"
+      subsection:
     - name: Departments and Centers
       href: "/departments-centers/"
       subsection:
@@ -119,6 +124,26 @@
 - name: Giving
   href: "/giving/"
   section: giving
+  subsection:
+    - name: Improving Lives
+      href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
+    - name: Gifts at work
+      href: "/giving/gifts/"
+    - name: Ways to give
+      href: "/giving/ways/"
+    - name: Rcognition
+      href: "/giving/recognition/"
+    - name: Women's Philanthropic Leadership Circle
+      href: "/giving/wplc/"
+      subsection:
+        - name: Events
+          href: "/wplc/events/"
+        - name: Awards
+          href: "/wplc/awards/"
+        - name: Join
+          href: "/wplc/join/"
+    - name: Contact
+      href: "/giving/contact/"
 - name: Alumni
   href: "/404/"
   section: alumni

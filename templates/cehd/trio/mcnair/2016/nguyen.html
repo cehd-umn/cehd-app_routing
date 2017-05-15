@@ -1,29 +1,59 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Nguyen" %}
+{% set page_title = "Ryan Nguyen" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
 <div class="row">
   <div class="container">
-    <h1>Ryan Nguyen<small class="clear">McNair Scholar 2016</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2016<small class="clear">Ryan Nguyen</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Nguyen2016Portrait2.jpg" alt="Nguyen photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Ryan Nguyen</strong> is a senior, majoring in medical laboratory sciences. His research interests involve host pathogen interaction, emergence and dissemination of antimicrobial resistance, especially in Asia. Mr. Nguyen plans to pursue graduate school to obtain a Ph.D. in microbiology.</p>
         </div>
       </div>
-    </div>
-    </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">The purpose of education was to replace the empty mind with an open one. The empty mind can be caused by my disadvantaged life or my disorientation in life, but the education is a power weapon that can replace my empty mind by an open mind.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2016-Nguyen.jpg" alt="Ryan Nguyen photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">The purpose of education was to replace the empty mind with an open one. The empty mind can be caused by my disadvantaged life or my disorientation in life, but the education is a power weapon that can replace my empty mind by an open mind.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

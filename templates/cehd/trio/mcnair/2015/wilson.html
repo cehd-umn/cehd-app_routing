@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Wilson" %}
+{% set page_title = "Aaryn J. Wilson" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Aaryn J. Wilson<small class="clear">McNair Scholar 2015</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Wilson2015Portrait.jpg" alt="Wilson photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Aaryn J. Wilson</strong> is a senior at the University of Minnesota, Twin Cities, majoring in plant science with a minor in sustainability studies. His research interests revolve around organic nutrient management, creating sustainable food systems, and agricultural education. He enjoys biking, cooking, and volunteering outside of the lab. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Aaryn J. Wilson</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to advocate for small-scale organic farmers through research and policy. I want to lead by example, reshaping minorities’ opinions about agriculture.</blockquote>
-          </div>
+          <p><strong>Aaryn J. Wilson</strong> is a senior at the University of Minnesota, Twin Cities, majoring in plant science with a minor in sustainability studies. His research interests revolve around organic nutrient management, creating sustainable food systems, and agricultural education. He enjoys biking, cooking, and volunteering outside of the lab. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Wilson.jpg" alt="Aaryn J. Wilson photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to advocate for small-scale organic farmers through research and policy. I want to lead by example, reshaping minorities’ opinions about agriculture.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">
@@ -37,7 +68,7 @@
     <h2>Faculty Profile</h2>
     <p><strong>Carl J. Rosen</strong> is Head of the Department of Soil, Water and Climate at the University of Minnesota. Rosen received his Ph.D. from the University of California, Davis in 1983. His research focuses on crop nutrient management and water quality issues related to fertilizer use. Rosen has refereed 105 peer-reviewed papers and multiple extension publications. Dr. Rosen is a member of several professional associations and has received four awards for excellence in education and service. Currently, he serves on the editorial board of the journal Communications in Soil Science and Plant Analysis. </p>
   </div>
-  
+
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

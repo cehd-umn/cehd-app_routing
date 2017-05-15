@@ -1,30 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Manjang" %}
+{% set page_title = "Lanmin Manjang" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Lanmin Manjang<small class="clear">McNair Scholar 2015</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Lanmin Manjang</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Manjang2015Portrait.jpg" alt="Manjang photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Lanmin Manjang</strong> is studying health and wellness through the Inter College Program. </p>
-        </div>
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
+          <p><strong>Lanmin Manjang</strong> is studying health and wellness through the Inter College Program.</p>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
   <div class="row emphasis bg-cehd-multi">
-    <div class="container">
-        <div class="half feature">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Manjang.jpg" alt="Lanmin Manjang photo">
+      </div>
+      <div class="twothird">
             <blockquote class="quote-wrap">My dream is to attend graduate school and eventually obtain my PhD in the nursing field. My goal is to become a nurse practitioner traveling to third-world countries to treat people in need. Eventually I want to return to the US to work as a nurse practitioner in a large hospital.</blockquote>
-        </div>
+
+      </div>
     </div>
-</div>
+  </div>
 
 <div class="container">
   <div class="span-8 feature">

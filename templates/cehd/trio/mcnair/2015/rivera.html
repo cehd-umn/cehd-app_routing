@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Rivera" %}
+{% set page_title = "Azira Rivera" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Azira Rivera<small class="clear">McNair Scholar 2015</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Rivera2015Portrait.jpg" alt="Rivera photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Azira Rivera</strong> is a junior at the University of Minnesota- Twin Cities, obtaining a B. S. in mathematics with an emphasis in mathematical biology-physiology. She is interested in modeling biological systems to gain a deeper understanding of the physical world. Rivera plans to obtain a Ph. D. in mathematical biology while researching the mathematics of the brain.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Azira Rivera</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to be able to change the stigma behind mental illness through my understanding of the human brain. I want to be able to teach others about the complexities and beauties behind not only the brain, but the underlying mathematics of what makes us human.</blockquote>
-          </div>
+          <p><strong>Azira Rivera</strong> is a junior at the University of Minnesota- Twin Cities, obtaining a B. S. in mathematics with an emphasis in mathematical biology-physiology. She is interested in modeling biological systems to gain a deeper understanding of the physical world. Rivera plans to obtain a Ph. D. in mathematical biology while researching the mathematics of the brain.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Rivera.jpg" alt="Azira Rivera photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to be able to change the stigma behind mental illness through my understanding of the human brain. I want to be able to teach others about the complexities and beauties behind not only the brain, but the underlying mathematics of what makes us human.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

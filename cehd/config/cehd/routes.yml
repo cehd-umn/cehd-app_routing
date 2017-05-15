@@ -989,11 +989,26 @@
   template: cehd/giving/wplc/index.html
   template_data:
     - section: giving
-/giving/wplc/about/:
+/giving/wplc/events/:
   publish: true
-  template: cehd/giving/wplc/about.html
+  template: cehd/giving/wplc/events.html
   template_data:
     - section: giving
+/giving/wplc/awards/:
+  publish: true
+  template: cehd/giving/wplc/awards.html
+  template_data:
+    - section: giving
+/giving/wplc/join/:
+  publish: true
+  template: cehd/giving/wplc/join.html
+  template_data:
+    - section: giving
+/global/:
+  publish: true
+  template: cehd/global/index.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
@@ -1787,6 +1802,11 @@
 /trio/mcnair/2014/wright/:
   publish: true
   template: cehd/trio/mcnair/2014/wright.html
+  template_data:
+    - section: trio
+/trio/mcnair/2014/yang/:
+  publish: true
+  template: cehd/trio/mcnair/2014/yang.html
   template_data:
     - section: trio
 /trio/mcnair/2015/abdi/:

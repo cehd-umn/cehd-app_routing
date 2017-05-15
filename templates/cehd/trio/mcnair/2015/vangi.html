@@ -1,30 +1,61 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Vang" %}
+{% set page_title = "Julie Vang" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Julie Vang<small class="clear">McNair Scholar 2015</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Julie Vang</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Vang2015Portrait.jpg" alt="Vang photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Julie Vang </strong>is a senior at the University of Minnesota, Twin Cities, majoring in family social science with a minor in Asian American studies. Her research interests include cultural identity, community engagement, understanding family dynamics, and diverse and social justice issues. During her spring semester of 2015, Ms. Vang studied abroad in Kenya to broaden her global competency. She plans to attain her master's degree and Ph.D. in higher education and student affairs. </p>
-        </div>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
   <div class="row emphasis bg-cehd-multi">
-    <div class="container">
-        <div class="half feature">
-            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in higher education and work at an institution in which is committed to creating a more diverse and inclusive campus community. I hope to use my life experiences and leadership skills to help students pursue in their education, life, and career goals.</blockquote>
-        </div>
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Vang.jpg" alt="Julie Vang photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in higher education and work at an institution in which is committed to creating a more diverse and inclusive campus community. I hope to use my life experiences and leadership skills to help students pursue in their education, life, and career goals.
+            </blockquote>
+
+      </div>
     </div>
-</div>
+  </div>
 
 <div class="container">
   <div class="span-8 feature">
