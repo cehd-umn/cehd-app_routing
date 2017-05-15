@@ -3,11 +3,18 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
-    .span-5 {
+    .thumbnail-img {
+        flex: 0 0 120px;
+        margin-right: 10px;
     }
+
     h5 {
         margin-bottom: -10%;
         margin-top: -1%
+    }
+
+    .appointment {
+        width: 33%;
     }
 </style>
 {% endblock %}
@@ -70,14 +77,15 @@
             </div>
         </div><!-- ./span-12 -->
 
-        <div class="span-12">
-            {% for appointment in appointments %}
-                <div class="third">
-                    <h4>{{ appointment.heading }}</h4>
-                    <div class="span-5">
+        <div class="flex-container wrap align-bottom">
+        {% for appointment in appointments %}
+            <div class="flex-item padding-1 appointment">
+                <h4>{{ appointment.heading }}</h4>
+                <div class="flex-container">
+                    <div class="flex-item thumbnail-img">
                         <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
                     </div>
-                    <div class="span-7">
+                    <div class="flex-item">
                         <h5>
                             <a href="{{ appointment.urls.profile }}">{{ appointment.name }}</a>
                             <small class="clear h6 light">
@@ -85,14 +93,11 @@
                             </small>
                         </h5>
                         <p><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></p>
-                    </div><!-- /span-7 -->
-                </div><!-- /third -->
-                {% if loop.index is divisible by (3) %}
-                    </div><!-- /span-12 -->
-                    <div class="span-12">
-                {% endif %}
-            {% endfor %}
-        </div><!-- /span-12 -->
+                    </div><!-- flex-item -->
+                </div><!-- /flex-container -->
+            </div><!-- /flex-item -->
+        {% endfor %}
+        </div><!-- /flex-container -->
     </div><!-- ./container -->
   </div><!-- ./row -->
 {% endblock %}
