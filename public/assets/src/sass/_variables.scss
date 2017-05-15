@@ -23,8 +23,8 @@ $fh-textarea-max-width: 100%;
 $link-pseudo-classes: (link: $link-base, hover: $link-base-hover, visited: $link-base-visited, active: $link-base-active);
 
 // meganav
-$mega-dropdown-margins: (7 -181.14 0 -555.42 0 -929.7);
-$mega-dropdown-margins-1400: (9 -150.14 0 -466.42 0 -783.7);
-$mega-dropdown-margins-1200: (9 -126.14 0 -392.42 0 -659.7);
-$mega-dropdown-margins-1024: (9 -118.14 0 -370.42 0 -622.7);
-$mega-dropdown-margins-960: (9 -95.14 0 -300.42 0 -506.7);
+$mega-dropdown-margins: (7 -181.14 0 -555.42 -743 -929.7);
+$mega-dropdown-margins-1400: (9 -150.14 0 -466.42 -625 -783.7);
+$mega-dropdown-margins-1200: (9 -126.14 0 -392.42 -526 -659.7);
+$mega-dropdown-margins-1024: (9 -118.14 0 -370.42 -497 -622.7);
+$mega-dropdown-margins-960: (9 -95.14 0 -300.42 -404 -506.7);
