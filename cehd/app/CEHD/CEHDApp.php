@@ -10,8 +10,6 @@ require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
-    // public $nav_open = false;
-
     private $_sites = [
                 "primary" => [
                     "name" => "College of Education + Human Development",
@@ -314,5 +312,16 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "internet_id" => $request->internetId,
         ];
         echo $this->_renderTemplate('cehd/people/person.html', $template_data);
+    }
+
+    public function giftsPageHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/gifts_page_appointments.yml';
+        $appointments = $this->loadYaml($yaml_file_path);
+        $template_data = [
+            "section" => null,
+            "appointments" => $appointments,
+        ];
+        echo $this->_renderTemplate('cehd/giving/gifts.html', $template_data);
     }
 }
