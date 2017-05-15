@@ -164,6 +164,7 @@ nav {
         }
     }
 
+    // @todo use the cehd-meganav-dropdowns mixin here
     @for $i from 1 through length($mega-dropdown-margins) {
         .dropdown-menu-#{$i} {
             $margin: nth($mega-dropdown-margins, $i);
