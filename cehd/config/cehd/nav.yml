@@ -13,16 +13,12 @@
       subsection:
         - name: Programs and Licensure
           href: "/programs/?filters=teaching"
-        - name: Clinical Placements
-          href: "/404/"
+        - name: Placements and Partnerships
+          href: "/teaching/partnerships"
         - name: Trainings and Workshops
           href: "/teaching/trainings/"
         - name: Assessment and Accreditation
           href: "/404/"
-        - name: Multiple Pathways to Teaching
-          href: "/teaching/mpt/"
-        - name: DirecTrack to Teaching
-          href: "/direct/"
     - name: Undergraduate Studies
       href: "/undergraduate/"
       subsection:

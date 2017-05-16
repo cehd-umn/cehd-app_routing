@@ -1039,6 +1039,11 @@
   template: cehd/graduate/funding.html
   template_data:
     - section: graduate
+/graduate/policy/:
+  publish: true
+  template: cehd/graduate/policy.html
+  template_data:
+    - section: graduate
 /graduate/scholarships/:
   publish: true
   template: cehd/graduate/scholarships.html
