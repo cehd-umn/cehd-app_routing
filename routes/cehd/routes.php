@@ -27,6 +27,8 @@ $app = new \CEHD\App\CEHD\CEHDApp($yaml_file_paths);
 
 $app->router->respond('GET', '/', [$app, 'homePageHandler']);
 
+$app->router->respond('GET', '/giving/gifts/', [$app, 'giftsPageHandler']);
+
 $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
 $app->router->respond('GET', '/topics/', [$app, 'topicsPageHandler']);

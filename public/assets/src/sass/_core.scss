@@ -754,19 +754,26 @@ footer {
     width: 12%;
 }
 
-// @todo give these specific classes for where they're intended
-input[type="radio"] {
-    margin-left: 2px;
+.to-upper {
+    text-transform: uppercase;
 }
 
-input[type="text"]:focus {
-    border: 1px solid $umn-light-gold;
+.flex-container {
+    display: flex;
+    justify-content: space-between;
 
-    &::placeholder {
-        color: transparent;
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.align-bottom {
+        align-items: flex-end;
     }
 }
 
-.to-upper {
-    text-transform: uppercase;
+.flex-item {
+
+    &.vertical-stretch {
+        align-self: stretch;
+    }
 }
