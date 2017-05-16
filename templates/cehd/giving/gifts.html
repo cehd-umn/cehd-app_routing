@@ -9,12 +9,49 @@
     }
 
     h5 {
-        margin-bottom: -10%;
-        margin-top: -1%
+        margin: 0;
+    }
+
+    .h6 {
+        margin: 0;
     }
 
     .appointment {
-        width: 33%;
+        width: 45%;
+    }
+
+    .flex-container {
+        align-content: flex-end;
+    }
+
+    .flex-item p {
+        margin-top: 0;
+    }
+
+    @media all and (min-width: 1400px) {
+        .flex-container {
+            align-content: flex-end;
+        }
+    }
+
+    @media all and (max-width: 1200px) {
+        .flex-container {
+            align-content: flex-start;
+        }
+
+        .flex-container h4 {
+            min-height: 48px;
+        }
+    }
+
+    @media all and (max-width: 960px) {
+        .flex-container {
+            justify-content: flex-start;
+        }
+
+        .appointment {
+            width: 100%;
+        }
     }
 </style>
 {% endblock %}
@@ -77,9 +114,9 @@
             </div>
         </div><!-- ./span-12 -->
 
-        <div class="flex-container wrap align-bottom">
+        <div class="flex-container wrap">
         {% for appointment in appointments %}
-            <div class="flex-item padding-1 appointment">
+            <div class="flex-item appointment">
                 <h4>{{ appointment.heading }}</h4>
                 <div class="flex-container">
                     <div class="flex-item thumbnail-img">

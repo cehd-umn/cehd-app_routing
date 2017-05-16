@@ -760,6 +760,7 @@ footer {
 
 .flex-container {
     display: flex;
+    justify-content: space-between;
 
     &.wrap {
         flex-wrap: wrap;
@@ -771,10 +772,6 @@ footer {
 }
 
 .flex-item {
-
-    &.padding-1 {
-        padding: 1em;
-    }
 
     &.vertical-stretch {
         align-self: stretch;
