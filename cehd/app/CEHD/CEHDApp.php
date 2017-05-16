@@ -65,7 +65,9 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     private function __processSorterData($yaml_file_path)
     {
         $data = $this->loadYaml($yaml_file_path);
+        $category_data = [];
         $categories = [];
+        $degrees = [];
 
         foreach ($data as $item_index => $item)
         {
@@ -88,15 +90,17 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 {
                     $hyphenated = $this->hyphenate($degree["title"]);
                     array_push($data[$item_index]["degrees_hyphenated"], $hyphenated);
-                    $categories[$hyphenated] = $degree["title"];
+                    $degrees[$hyphenated] = $degree["title"];
                 }
             }
         }
 
         asort($categories);
+        asort($degrees);
+        $category_data =  $categories + $degrees;
         return [
             "data" => $data,
-            "categories" => $categories,
+            "categories" => $category_data,
         ];
     }
 
