@@ -16,19 +16,14 @@
     <div class="container">
         {% block intro_text %}
         {% endblock %}
-        <div class="feature half">
-            {# TODO make sure these forms are accessible #}
-            <form action="">
-                <input type="text" id="full-text-search-input" placeholder="Search the cards below">
-            </form>
-        </div>
         <div class="button-group filter-button-group">
             <form action="">
                 <div class="category-filter-container">
                     <ul class="category-filters">
                         <div class="span-12">
                         {% for category_class, category in categories %}
-                            {% if category == "Graduate Minor" %}{# start a new row #}
+                            {% set start_new_row = category == "Graduate Minor" or category == "Family and Social Relationships" %}
+                            {% if start_new_row %}
                                 </div><div class="span-12">
                             {% endif %}
                             <li class="category-filter category-button">
@@ -49,6 +44,12 @@
                 </div><!-- / category-filter-container -->
             </form>
         </div><!-- button-group -->
+        <div class="span-3 push-8">
+            {# TODO make sure these forms are accessible #}
+            <form action="">
+                <input type="text" id="full-text-search-input" placeholder="Search">
+            </form>
+        </div>
     </div><!-- / container -->
 </div><!-- / row -->
 <div class="row cards">
@@ -92,15 +93,27 @@
 <script>
     $(function() {
         "use strict";
-        var $select_button = $(".multi-select");
+        // var $select_button = $(".multi-select");
         var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
+        var $s = $("#full-text-search-input");
 
-        // reads query params and filterManager on them
+        // reads query params and filters on them
         filterManager.setUIState();
 
         window.onpopstate = function() {
             filterManager.setUIState();
         };
+
+        $s.focusin(function() {
+            $s = $(this);
+            $s.data("placeholder", $s.attr("placeholder"));
+            $s.attr("placeholder", "");
+        });
+
+        $s.focusout(function() {
+            $s = $(this);
+            $s.attr("placeholder", $s.data("placeholder"));
+        });
     });
 </script>
 {% endblock %}
