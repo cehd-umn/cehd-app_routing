@@ -1,24 +1,20 @@
 <div class="meganav-container">
     <button class="nav-toggle">Menu</button>
     <nav class="container">
-        <ul class="nav navbar-nav">
+        <ul class="nav">
         {%- for top_level_item in nav_items -%}
-            <li class="top-level{%-
-                if top_level_item.subsection -%}
-                {{ " " }}dropdown mega-dropdown
-                {%- endif -%}
-                {%- if loop.first -%}
-                    {{ " " }}first
-                {%- endif -%}" id="top-level-{{ top_level_item.section }}">
-                <a href="{{ top_level_item.href }}" class="
-                {%- if top_level_item.subsection -%}
-                    dropdown-toggle
-                {%- endif %}" data-toggle="dropdown">
+            {%- set is_academics = top_level_item.name == "Academics" %}
+            {%- set top_level_classes = "" %}
+            {%- if top_level_item.subsection -%}
+                {% set top_level_classes = top_level_classes ~ " dropdown mega-dropdown" %}
+            {%- endif %}
+            {%- if loop.first -%}
+                {% set top_level_classes = top_level_classes ~ " first" %}
+            {%- endif %}
+            <li class="top-level{{ top_level_classes }}" id="top-level-{{ top_level_item.section }}">
+                <a href="{{ top_level_item.href }}" class="top-level-link{%- if top_level_item.subsection %} dropdown-toggle{%- endif %}">
                     {{ top_level_item.name }}
-                {%- if top_level_item.subsection -%}
-                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                {%- endif -%}
-            </a>
+                </a>
             {%- if top_level_item.subsection -%}
             <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
                 <div class="ul-container nav-items">
@@ -36,7 +32,7 @@
                             </ul><!-- // sub sub nav -->
                             {%- endif -%}
                         </li><!-- // dropdown header -->
-                    {%- if loop.index == 3 and top_level_item.name == "Academics" -%}
+                    {%- if loop.index == 3 and is_academics -%}
                         {#- close the column and start a new one -#}
                         </ul>
                       </div>
@@ -46,7 +42,7 @@
                     {%- endfor -%}
                     </ul><!-- // sub nav column-->
                 </div>
-                <div class="content-container flex-container align-center">
+                <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center">
                     {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
                 </div>
             </div><!-- // dropdown-menu -->

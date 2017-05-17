@@ -375,7 +375,7 @@ a {
     position: relative;
 }
 
- /// Text alignments
+ /// Text styles
 
 .text-left {
     text-align: left;
@@ -391,6 +391,12 @@ a {
     small {
         text-align: center;
     }
+}
+
+.text-plain {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
 }
 
 #dept-footer {
@@ -760,16 +766,20 @@ footer {
     display: flex;
     justify-content: space-between;
 
-    &.wrap {
-        flex-wrap: wrap;
-    }
-
     &.align-bottom {
         align-items: flex-end;
     }
 
     &.align-center {
         align-items: center;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
     }
 }
 
@@ -778,4 +788,8 @@ footer {
     &.vertical-stretch {
         align-self: stretch;
     }
+}
+
+.no-shrink {
+    flex-shrink: 0;
 }

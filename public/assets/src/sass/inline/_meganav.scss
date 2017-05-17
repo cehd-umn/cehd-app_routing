@@ -52,16 +52,10 @@ nav {
         }
     }
 
-    .hero-pithy-phrase-container {
-        display: flex;
-        flex-direction: column;
-        height: 267px;
-        justify-content: center;
-    }
-
     .hero-pithy-phrase {
         font-size: 25px;
         font-weight: bold;
+        margin-right: 30px;
     }
 
     .main-nav-hero-image-text {
@@ -134,7 +128,6 @@ nav {
     .nav {
 
         li {
-            // display: inline-block;
             margin: 0;
             padding: 0;
 
@@ -143,14 +136,12 @@ nav {
             }
         }
 
-        .main-nav-hero-image-container {
-            // display: block;
-            max-width: 400px;
-        }
+        // .main-nav-hero-image-container {
+        //     max-width: 400px;
+        // }
     }
 
     .dropdown-menu-wrapper {
-        // background: $umn-light-grey-background;
         background: $base-white;
         border: transparent;
         box-shadow: 0 2px 3px 0 $box-shadow-rgba;
@@ -186,7 +177,6 @@ nav {
     }
 
     .nav-items {
-        //background: $base-white;
         padding: 18px;
     }
 
@@ -197,7 +187,14 @@ nav {
     .content-container {
         background: $umn-light-grey-background;
         margin-left: 10px;
-        width: 856px;
+
+        &.first {
+            width: 856px;
+        }
+
+        .flex-item-inline {
+            display: inline-flex;
+        }
     }
 
     // @todo use the cehd-meganav-dropdowns mixin here
@@ -215,7 +212,6 @@ nav {
 
     .top-level {
         border-left: 1px solid $base-black;
-        // display: inline-block;
         padding-left: .5em;
         padding-right: .5em;
         width: calc(100% / 7);
@@ -225,7 +221,7 @@ nav {
             padding-right: 0;
         }
 
-        a {
+        .top-level-link {
             border-top: 5px solid transparent;
             text-align: center;
         }
@@ -235,7 +231,7 @@ nav {
         }
 
         &:hover {
-            a {
+            .top-level-link {
                 border-top: 5px solid $nav-hover-border-top-color;
                 color: $nav-hover-color;
                 text-decoration: none;
