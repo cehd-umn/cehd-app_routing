@@ -17,7 +17,7 @@
                 </a>
             {%- if top_level_item.subsection -%}
             <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
-                <div class="ul-container nav-items">
+                <div class="ul-container nav-items{% if not is_academics %} single-column{% endif %}">
                     <ul class="margin-top nav">
                     {%- for sub_nav_item in top_level_item.subsection %}
                         <li class="dropdown-header">

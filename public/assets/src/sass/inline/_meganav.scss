@@ -178,6 +178,10 @@ nav {
 
     .nav-items {
         padding: 18px;
+
+        &.single-column {
+            flex: 0 0 285px;
+        }
     }
 
     .ul-container {
@@ -187,6 +191,7 @@ nav {
     .content-container {
         background: $umn-light-grey-background;
         margin-left: 10px;
+        padding: 10px 0 10px 10px;
 
         &.first {
             width: 856px;
