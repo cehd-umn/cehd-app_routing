@@ -377,6 +377,22 @@ figure {
     transition: fill .5s;
 }
 
+.icon-calendar {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-email {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
 .icon-facebook {
     @extend %social-media-icon;
 
