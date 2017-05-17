@@ -1,24 +1,73 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Paredes" %}
+{% set page_title = "Sonia V. Paredes" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2015</h1>
-    <blockquote>“My dream is to play an active role in closing the opportunity gap by providing equitable and consistent resources to multicultural students. I am convinced that underserved or marginalized students can achieve a prosperous academic future when helpful resources are available to them.” </blockquote>
-    <div class="whole"><p><strong><img src="images/Paredes2015Portrait.jpg" class="left" width="135" height="202" alt=""/></strong></p>
-      <p> <strong>Sonia V. Paredes</strong> is a senior at the University of Minnesota, Twin Cities, pursuing a major in family social science and a minor in social justice. Her research interests revolve around investigating equitable intervention programs that support first-generation college students. Ms. Paredes plans on getting her Ph.D. in Higher Education. </p>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Sonia V. Paredes</small></h1>
     </div>
 
-      <div class="whole"><div id="poster">
-      <h2>Research Project</h2>
-    <p class="title">Breaking Barriers: Impact of Sexual Reproductive Health Curriculum and Cultural Activities Sessions on Adolescent Girls in Ghana </p>
-    <p><strong>Abstract:&nbsp; </strong>This project investigated the effectiveness of a year-long intervention targeting culturally taboo topics in a school characterized by high rates of teenage pregnancy and dropout. The program was implemented with 27 girls aged 12-18, in a port city in Ghana. Intervention activities focused on two broad themes: 1) sexual and reproductive health (SRH); and 2) cultural activities designed to supplement the SRH curriculum and challenge cultural norms for girls (e.g., drumming). Post-test data collection will include attendance, academic self-perception, self-efficacy, civic responsibility, and sense of school membership, as well as knowledge of contraceptive methods and sexually transmitted diseases. Preliminary midterm results suggest that the intervention may significantly increase girls’ self-efficacy and confidence, and decrease pregnancy rate. Anecdotal midterm reports from girls indicate that they valued learning SRH topics not typically discussed in schools and gained confidence from engaging in activities typically reserved for boys, such as drumming. <a href="Posters/Paredes2015finalposter.pdf">Download poster.</a> [PDF]&nbsp; </p></div>
 
-    <div id="facultyProfile"><h2>Faculty Profile</h2>
-    <p><strong>Rose K. Vukovic</strong> is currently an associate professor in the Department of Educational Psychology, University of Minnesota-Twin Cities. Vukovic aims to increase the educational and psychological well-being of students at-risk for negative life outcomes, especially in underserved or marginalized populations. Her primary research investigates risk factors within schools and communities that contribute to academic failure in children. Her secondary research investigates the proximal and distal effects of a leadership program both for Ghanaian female teachers as well as their female students. Vukovic has been invited to present her findings to researchers, decision-makers, and practitioners nationally and internationally.</p>
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
+          <p><strong>Sonia V. Paredes</strong> is a senior at the University of Minnesota, Twin Cities, pursuing a major in family social science and a minor in social justice. Her research interests revolve around investigating equitable intervention programs that support first-generation college students. Ms. Paredes plans on getting her Ph.D. in Higher Education.</p>
+      </div>
     </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Paredes2.jpg" alt="Sonia V. Paredes photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to play an active role in closing the opportunity gap by providing equitable and consistent resources to multicultural students. I am convinced that underserved or marginalized students can achieve a prosperous academic future when helpful resources are available to them.
+            </blockquote>
+
+      </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="span-8 feature">
+
+    <h2>Research Project</h2>
+    <p>Breaking Barriers: Impact of Sexual Reproductive Health Curriculum and Cultural Activities Sessions on Adolescent Girls in Ghana</p>
+    <p><strong>Abstract: </strong>This project investigated the effectiveness of a year-long intervention targeting culturally taboo topics in a school characterized by high rates of teenage pregnancy and dropout. The program was implemented with 27 girls aged 12-18, in a port city in Ghana. Intervention activities focused on two broad themes: 1) sexual and reproductive health (SRH); and 2) cultural activities designed to supplement the SRH curriculum and challenge cultural norms for girls (e.g., drumming). Post-test data collection will include attendance, academic self-perception, self-efficacy, civic responsibility, and sense of school membership, as well as knowledge of contraceptive methods and sexually transmitted diseases. Preliminary midterm results suggest that the intervention may significantly increase girls’ self-efficacy and confidence, and decrease pregnancy rate. Anecdotal midterm reports from girls indicate that they valued learning SRH topics not typically discussed in schools and gained confidence from engaging in activities typically reserved for boys, such as drumming.
+     <a href="/assets/docs/trio/posters/Paredes2015finalposter.pdf">Download poster</a>. [PDF] </p>
+
+    <h2>Faculty Profile</h2>
+    <p><strong>Rose K. Vukovic</strong> is currently an associate professor in the Department of Educational Psychology, University of Minnesota-Twin Cities. Vukovic aims to increase the educational and psychological well-being of students at-risk for negative life outcomes, especially in underserved or marginalized populations. Her primary research investigates risk factors within schools and communities that contribute to academic failure in children. Her secondary research investigates the proximal and distal effects of a leadership program both for Ghanaian female teachers as well as their female students. Vukovic has been invited to present her findings to researchers, decision-makers, and practitioners nationally and internationally. </p>
+  </div>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

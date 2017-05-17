@@ -85,6 +85,41 @@ class Event extends \CEHD\App\XML\XML
     public $url;
 
     /**
+     * @type string
+     */
+    public $day;
+
+    /**
+     * @type string
+     */
+    public $dayOfWeek;
+
+    /**
+     * @type string
+     */
+    public $month;
+
+    /**
+     * @type string
+     */
+    public $fullMonth;
+
+    /**
+     * @type string
+     */
+    public $shortMonth;
+
+    /**
+     * @type string
+     */
+    public $year;
+
+    /**
+     * @type int
+     */
+    public $timestamp;
+
+    /**
      * Class methods
      */
 
@@ -96,6 +131,20 @@ class Event extends \CEHD\App\XML\XML
     function __construct($event)
     {
         $this->date = $this->getFromProperty($event->eventDate);
+
+        $this->day = $this->getFromProperty($event->dateDay);
+
+        $this->dayOfWeek = $this->getFromProperty($event->dayOfWeek);
+
+        $this->year = $this->getFromProperty($event->dateYear);
+
+        $this->month = $this->getFromProperty($this->getMonth());
+
+        $this->fullMonth = $this->getFromProperty($this->getFullMonth());
+
+        $this->shortMonth = $this->getFromProperty($this->getShortMonth());
+
+        $this->timestamp = $this->getTimestamp();
 
         $this->startTime = $this->getFromProperty($event->startTime);
 
@@ -125,7 +174,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @return string
      */
-    public function day()
+    public function getDay()
     {
         return date("j", strtotime($this->date));
     }
@@ -135,7 +184,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @return string
      */
-    public function month()
+    public function getMonth()
     {
         return date("n", strtotime($this->date));
     }
@@ -145,7 +194,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @return string
      */
-    public function fullMonth()
+    public function getFullMonth()
     {
         return date("F", strtotime($this->date));
     }
@@ -155,7 +204,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @return string
      */
-    public function shortMonth()
+    public function getShortMonth()
     {
         return date("M", strtotime($this->date));
     }
@@ -165,7 +214,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @return string
      */
-    public function year()
+    public function getYear()
     {
         return date("Y", strtotime($this->date));
     }
@@ -176,7 +225,7 @@ class Event extends \CEHD\App\XML\XML
      * @param boolean $end - Whether or not to use the end date
      * @return string
      */
-    public function timestamp($end=false)
+    public function getTimestamp($end=false)
     {
         if ($end)
         {
@@ -245,5 +294,12 @@ class Events extends \CEHD\App\XML\XML
      */
     public function get_count() {
         return count($this->events);
+    }
+
+    public function parse() {
+        foreach ($this->events as $event)
+        {
+            // do stuff
+        }
     }
 }

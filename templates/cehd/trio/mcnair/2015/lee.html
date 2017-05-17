@@ -1,25 +1,73 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Lee" %}
+{% set page_title = "Eileen Lee" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2015</h1>
-    <blockquote>“As my mentors and counselors have done for me, I aspire to inspire underrepresented college students to embrace their stories and truly realize their potential in making a difference wherever they go.”</blockquote>
-		<div class="whole"><p><strong><img src="images/Lee2015Portrait.jpg" class="left" width="135" height="202" alt=""/>Eileen Lee</strong> is a senior at the University of Minnesota-Twin Cities, majoring in Health &amp; Wellness, with a focus in Public Health. Her research interests include mindfulness, well-being, multicultural identity, and career development in ethnic minority populations. Ms. Lee plans on pursuing a Ph.D. in Counseling Psychology. </p>
-		  <p></p>
-		  <p></p>
-						</div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Eileen Lee</small></h1>
+    </div>
 
-			<div class="whole"><div id="poster">
-			<h2>Research Project</h2>
-		<p class="title">A Mixed Methods Assessment of Family Influence on Weight-Related Behaviors among African-Americans </p>
-		<p><strong>Abstract:&nbsp;</strong>Compared to any other race in the United States today, African-American youth are disproportionately overweight.  Because overweight children are more likely to be obese and consequently suffer adverse health outcomes as adults, it is important obesity prevention measures are being implemented among youth to address this public health issue. One effective strategy may be the use of behavioral interventions incorporating the core African-American cultural value of family. In this exploratory, pilot study, family-based, behavioral interventions will be utilized to (1) explore family influences on weight-related behaviors and (2) examine the relationship between family dynamics (i.e. family cohesion, parenting style, social support) with physical activity and healthy eating behaviors of select members from each family. The results of this proposed study will be used as pilot data for a resubmission of a NIH R01 application that proposes a family-based intervention to increase physical activity in African-American youth. <a href="Posters/Lee2015FinalPoster.pdf">Download poster</a>. [PDF]</p></div>
 
-		<div id="facultyProfile"><h2>Faculty Profile</h2>
-		<p> <strong>Daheia Barr-Anderson</strong>, PhD, MSPH, FACSM, is an assistant professor in the School of Kinesiology at the University of Minnesota. Barr-Anderson received her Bachelor of Science (B.S.) degree in Biology from Winthrop University in 1998, her Master of Science (M.S.) degree in Public Health from the University of South Carolina in 2000, and her Doctor of Philosophy (Ph.D) in Kinesiology from the University of Maryland in 2006. Focusing on physical activity, sedentary behaviors, and obesity prevention in children and adolescents, Barr-Anderson has published over 20 articles and received more than 10 local and national awards for her research. </p>
-		</div>
-		</div>
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
+          <p><strong>Eileen Lee</strong> is a senior at the University of Minnesota-Twin Cities, majoring in Health &amp; Wellness, with a focus in Public Health. Her research interests include mindfulness, well-being, multicultural identity, and career development in ethnic minority populations. Ms. Lee plans on pursuing a Ph.D. in Counseling Psychology.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Lee.jpg" alt="Eileen Lee photo">
+      </div>
+      <div class="twothird">
+              <blockquote class="quote-wrap">As my mentors and counselors have done for me, I aspire to inspire underrepresented college students to embrace their stories and truly realize their potential in making a difference wherever they go.
+            </blockquote>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="span-8 feature">
+
+    <h2>Research Project</h2>
+    <p>A Mixed Methods Assessment of Family Influence on Weight-Related Behaviors among African-Americans</p>
+    <p><strong>Abstract: </strong>Compared to any other race in the United States today, African-American youth are disproportionately overweight.  Because overweight children are more likely to be obese and consequently suffer adverse health outcomes as adults, it is important obesity prevention measures are being implemented among youth to address this public health issue. One effective strategy may be the use of behavioral interventions incorporating the core African-American cultural value of family. In this exploratory, pilot study, family-based, behavioral interventions will be utilized to (1) explore family influences on weight-related behaviors and (2) examine the relationship between family dynamics (i.e. family cohesion, parenting style, social support) with physical activity and healthy eating behaviors of select members from each family. The results of this proposed study will be used as pilot data for a resubmission of a NIH R01 application that proposes a family-based intervention to increase physical activity in African-American youth.
+     <a href="/assets/docs/trio/posters/Lee2015FinalPoster.pdf">Download poster</a>. [PDF] </p>
+
+    <h2>Faculty Profile</h2>
+    <p><strong>Daheia Barr-Anderson</strong>, PhD, MSPH, FACSM, is an assistant professor in the School of Kinesiology at the University of Minnesota. Barr-Anderson received her Bachelor of Science (B.S.) degree in Biology from Winthrop University in 1998, her Master of Science (M.S.) degree in Public Health from the University of South Carolina in 2000, and her Doctor of Philosophy (Ph.D) in Kinesiology from the University of Maryland in 2006. Focusing on physical activity, sedentary behaviors, and obesity prevention in children and adolescents, Barr-Anderson has published over 20 articles and received more than 10 local and national awards for her research. </p>
+  </div>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Abdi" %}
+{% set page_title = "Sahaam Abdi" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Sahaam Abdi<small class="clear">McNair Scholar 2015</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img class="circular" src="/assets/images/trio/mcnair/Abdi2015Portrait.jpg" alt="Abdi photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Sahaam Abdi</strong> is a rising senior at the University of Minnesota, Twin Cities, majoring in linguistics and double minoring in neuroscience and speech language hearing sciences. Her research interests revolve around the neuroscience of language and how a person’s speech and language is impacted by neurodevelopmental disorders or traumatic brain injury. Ms. Abdi plans on getting her M.A. in speech pathology and her Ph.D in neuroscience. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2015<small class="clear">Sahaam Abdi</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to be a source of positive influence, inspiration and guidance for anyone striving to pursue their dreams. When people see me, I want them to think, 'if she can do it, so can I'.</blockquote>
-          </div>
+          <p><strong>Sahaam Abdi</strong> is a rising senior at the University of Minnesota, Twin Cities, majoring in linguistics and double minoring in neuroscience and speech language hearing sciences. Her research interests revolve around the neuroscience of language and how a person’s speech and language is impacted by neurodevelopmental disorders or traumatic brain injury. Ms. Abdi plans on getting her M.A. in speech pathology and her Ph.D in neuroscience. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2015-Abdi.jpg" alt="Sahaam Abdi photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to be a source of positive influence, inspiration and guidance for anyone striving to pursue their dreams. When people see me, I want them to think, 'if she can do it, so can I'
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">
@@ -35,7 +66,7 @@
      <a href="/assets/docs/trio/posters/Abdi2015FinalPoster.pdf">Download poster</a>. [PDF] </p>
 
     <h2>Faculty Profile</h2>
-    <p><strong>Benjamin Munson</strong> is currently a professor in the Department of Speech Language Hearing Sciences at the University of Minnesota. Munson attended Ohio State University where he received his Ph.D. in Speech and Hearing Sciences in 2000. His research focuses on the study of phonological development and disorders. He has published numerous articles in various journals and presents his research internationally. He Munson is passionate about teaching and extensively works with undergraduate and graduate students in research. This is his first year being a McNair faculty mentor and hopes to continue as one in the following years. </p>
+    <p><strong>Benjamin Munson</strong> is currently a professor in the Department of Speech Language Hearing Sciences at the University of Minnesota. Munson attended Ohio State University where he received his Ph.D. in Speech and Hearing Sciences in 2000. His research focuses on the study of phonological development and disorders. He has published numerous articles in various journals and presents his research internationally. Munson is passionate about teaching and extensively works with undergraduate and graduate students in research. This is his first year being a McNair faculty mentor and hopes to continue as one in the following years. </p>
   </div>
 
   </div> <!-- ./container -->

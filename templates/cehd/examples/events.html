@@ -1,0 +1,102 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Events styles" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .connect-more {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        float: right;
+        margin-top: -10px;
+    }
+
+    .connect-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .connect-issue {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-variant: caps;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+    .connect-articles {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .connect-cover {
+        float: right;
+        margin-bottom: 50px;
+    }
+    .connect-date {
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom:-18px;
+}
+</style>
+{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>{{ page_title }}</h1>
+
+    <div class="half">
+       <h2>Susan's markup</h2>
+
+       <p class="connect-date">Wednesday, April 12</p>
+
+       <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+
+       <p class="connect-date">Tuesday, April 18</p>
+
+       <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+       Environmental Risk &amp; Intervention</a></p>
+
+       <p class="connect-date">Tuesday, April 18</p>
+
+       <p><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of
+       MN</a></p>
+
+       <p class="connect-date">Wednesday, April 12</p>
+
+       <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+
+       <p class="connect-date">Tuesday, April 18</p>
+
+       <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+       Environmental Risk &amp; Intervention</a></p>
+
+       <p class="connect-more"><a href="#">More CEHD events</a></p>
+    </div>
+    <div class="half">
+        <h2>Tony's markup</h2>
+
+        <dl class="events">
+            <dt class="event-date">Wednesday, April 12</dt>
+            <dd class="event-title"><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></dd>
+
+            <dt class="event-date">Tuesday, April 18</dt>
+            <dd class="event-title"><a href="#">Adverse Childhood Experiences: Longitudinal
+            Outcomes in Context of Environmental Risk &amp;
+            Intervention</a></dd>
+
+            <dt class="event-date">Tuesday, April 18</dt>
+            <dd class="event-title"><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of MN</a></dd>
+
+            <dt class="event-date">Wednesday, April 12</dt>
+            <dd class="event-title"><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></dd>
+
+            <dt class="event-date">Tuesday, April 18</dt>
+            <dd class="event-title"><a href="#">Adverse Childhood Experiences: Longitudinal
+            Outcomes in Context of Environmental Risk &amp;
+            Intervention</a></dd>
+
+       <p class="connect-more"><a href="#">More CEHD events</a></p>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

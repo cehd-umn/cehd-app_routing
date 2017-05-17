@@ -8,6 +8,9 @@
 # The preferred style for routes (i.e., /about/) is lowercase, hyphenated,
 # unabbreviated words.
 #
+# For more information see:
+# https://support.google.com/webmasters/answer/76329?hl=en
+#
 # Good:
 #
 # /this/is/a/registration/page/
@@ -52,6 +55,11 @@
   publish: true
   template_data:
     - section: home
+/academics/:
+  publish: true
+  template: cehd/academics/index.html
+  template_data:
+    - section: academics
 /about/:
   publish: true
   template: cehd/about/index.html
@@ -337,14 +345,9 @@
   template: cehd/alumni/rising/2015/bell.html
   template_data:
     - section: alumni
-/alumni/rising/2015/cullerton/:
+/alumni/rising/2015/coleman/:
   publish: true
-  template: cehd/alumni/rising/2015/cullerton.html
-  template_data:
-    - section: alumni
-/alumni/rising/2015/johnson/:
-  publish: true
-  template: cehd/alumni/rising/2015/johnson.html
+  template: cehd/alumni/rising/2015/coleman.html
   template_data:
     - section: alumni
 /alumni/rising/2015/jordana/:
@@ -505,6 +508,96 @@
 /alumni/rising/2016/wilkinson/:
   publish: true
   template: cehd/alumni/rising/2016/wilkinson.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/:
+  publish: true
+  template: cehd/alumni/rising/2017/index.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/akukwe/:
+  publish: true
+  template: cehd/alumni/rising/2017/akukwe.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/boettcher/:
+  publish: true
+  template: cehd/alumni/rising/2017/boettcher.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/byun/:
+  publish: true
+  template: cehd/alumni/rising/2017/byun.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/collins/:
+  publish: true
+  template: cehd/alumni/rising/2017/collins.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/cosgrove/:
+  publish: true
+  template: cehd/alumni/rising/2017/cosgrove.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/eik/:
+  publish: true
+  template: cehd/alumni/rising/2017/eik.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/ersin/:
+  publish: true
+  template: cehd/alumni/rising/2017/ersin.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/farabee/:
+  publish: true
+  template: cehd/alumni/rising/2017/farabee.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/iverson/:
+  publish: true
+  template: cehd/alumni/rising/2017/iverson.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/koch/:
+  publish: true
+  template: cehd/alumni/rising/2017/koch.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/koenig/:
+  publish: true
+  template: cehd/alumni/rising/2017/koenig.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/legrand-arendt/:
+  publish: true
+  template: cehd/alumni/rising/2017/legrand-arendt.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/locher-house/:
+  publish: true
+  template: cehd/alumni/rising/2017/locher-house.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/mcintyre/:
+  publish: true
+  template: cehd/alumni/rising/2017/mcintyre.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/pentek/:
+  publish: true
+  template: cehd/alumni/rising/2017/pentek.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/rosenborough/:
+  publish: true
+  template: cehd/alumni/rising/2017/rosenborough.html
+  template_data:
+    - section: alumni
+/alumni/rising/2017/tompkins/:
+  publish: true
+  template: cehd/alumni/rising/2017/tompkins.html
   template_data:
     - section: alumni
 /career/:
@@ -762,6 +855,11 @@
   template: cehd/career/teacher/teach-minn.html
   template_data:
     - section: career
+/commencement/:
+  publish: true
+  template: cehd/commencement/index.html
+  template_data:
+    - section: commencement
 /direct/:
   publish: true
   template: cehd/direct/index.html
@@ -770,16 +868,6 @@
 /diversity/:
   publish: true
   template: cehd/diversity/index.html
-  template_data:
-    - section: diversity
-/diversity/engagement/:
-  publish: true
-  template: cehd/diversity/engagement.html
-  template_data:
-    - section: diversity
-/diversity/research/:
-  publish: true
-  template: cehd/diversity/research.html
   template_data:
     - section: diversity
 /events/:
@@ -809,6 +897,18 @@
 /examples/divider/:
   publish: false
   template: cehd/examples/divider.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/events/:
+  publish: false
+  template: cehd/examples/events.html
+  template_data:
+    meta_description: null
+    section: null
+/examples/grid/:
+  publish: false
+  template: cehd/examples/grid.html
   template_data:
     meta_description: null
     section: null
@@ -860,6 +960,56 @@
   template_data:
     meta_description: null
     section: null
+/giving/:
+  publish: true
+  template: cehd/giving/index.html
+  template_data:
+    - section: giving
+/giving/contact/:
+  publish: true
+  template: cehd/giving/contact.html
+  template_data:
+    - section: giving
+/giving/recognition/:
+  publish: true
+  template: cehd/giving/recognition.html
+  template_data:
+    - section: giving
+/giving/support/:
+  publish: true
+  template: cehd/giving/support.html
+  template_data:
+    - section: giving
+/giving/ways/:
+  publish: true
+  template: cehd/giving/ways.html
+  template_data:
+    - section: giving
+/giving/wplc/:
+  publish: true
+  template: cehd/giving/wplc/index.html
+  template_data:
+    - section: giving
+/giving/wplc/events/:
+  publish: true
+  template: cehd/giving/wplc/events.html
+  template_data:
+    - section: giving
+/giving/wplc/awards/:
+  publish: true
+  template: cehd/giving/wplc/awards.html
+  template_data:
+    - section: giving
+/giving/wplc/join/:
+  publish: true
+  template: cehd/giving/wplc/join.html
+  template_data:
+    - section: giving
+/global/:
+  publish: true
+  template: cehd/global/index.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
@@ -888,6 +1038,11 @@
 /graduate/funding/:
   publish: true
   template: cehd/graduate/funding.html
+  template_data:
+    - section: graduate
+/graduate/policy/:
+  publish: true
+  template: cehd/graduate/policy.html
   template_data:
     - section: graduate
 /graduate/scholarships/:
@@ -940,6 +1095,11 @@
   template: cehd/policy-breakfast/2016-09.html
   template_data:
     - section: policy-breakfast
+/privacy/:
+  publish: true
+  template: cehd/privacy/index.html
+  template_data:
+    - section: privacy
 /reads/:
   publish: true
   template: cehd/reads/index.html
@@ -1015,6 +1175,11 @@
   template: cehd/research/research-day.html
   template_data:
     - section: research
+/study-abroad/:
+  publish: true
+  template: cehd/study-abroad/index.html
+  template_data:
+    - section: study-abroad
 /teaching/:
   publish: true
   template: cehd/teaching/index.html
@@ -1055,9 +1220,94 @@
   template: cehd/teaching/trainings.html
   template_data:
     - section: teaching
+/teaching/co-teaching/:
+  publish: true
+  template: cehd/teaching/co-teaching/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/about/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/about.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/completion/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/completion.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/faq/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/faq.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/research/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/research.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/responsibilities/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/responsibilities.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/strategies/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/strategies.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/foundations/what/:
+  publish: true
+  template: cehd/teaching/co-teaching/foundations/what.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/index.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/co-teaching/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/co-teaching.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/collaboration/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/collaboration.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/completion/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/completion.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/faq/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/faq.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/planning/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/planning.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/strategies/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/strategies.html
+  template_data:
+    - section: teaching
+/teaching/co-teaching/pairs/triad/:
+  publish: true
+  template: cehd/teaching/co-teaching/pairs/triad.html
+  template_data:
+    - section: teaching
 /teri/:
   publish: true
-  template: cehd/teri/index.html
+  template: cehd//index.html
   template_data:
     - section: teri
 /teri/our-work/:
@@ -1068,91 +1318,6 @@
 /teri/partnerships/:
   publish: true
   template: cehd/teri/partnerships.html
-  template_data:
-    - section: teri
-/teri/co-teaching/:
-  publish: true
-  template: cehd/teri/co-teaching/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/about/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/about.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/completion/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/completion.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/faq/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/faq.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/research/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/research.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/responsibilities/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/responsibilities.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/strategies/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/strategies.html
-  template_data:
-    - section: teri
-/teri/co-teaching/foundations/what/:
-  publish: true
-  template: cehd/teri/co-teaching/foundations/what.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/index.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/co-teaching/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/co-teaching.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/collaboration/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/collaboration.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/completion/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/completion.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/faq/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/faq.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/planning/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/planning.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/strategies/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/strategies.html
-  template_data:
-    - section: teri
-/teri/co-teaching/pairs/triad/:
-  publish: true
-  template: cehd/teri/co-teaching/pairs/triad.html
   template_data:
     - section: teri
 /trio/:
@@ -1643,6 +1808,11 @@
 /trio/mcnair/2014/wright/:
   publish: true
   template: cehd/trio/mcnair/2014/wright.html
+  template_data:
+    - section: trio
+/trio/mcnair/2014/yang/:
+  publish: true
+  template: cehd/trio/mcnair/2014/yang.html
   template_data:
     - section: trio
 /trio/mcnair/2015/abdi/:

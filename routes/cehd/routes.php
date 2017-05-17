@@ -27,13 +27,15 @@ $app = new \CEHD\App\CEHD\CEHDApp($yaml_file_paths);
 
 $app->router->respond('GET', '/', [$app, 'homePageHandler']);
 
+$app->router->respond('GET', '/giving/gifts/', [$app, 'giftsPageHandler']);
+
 $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
 $app->router->respond('GET', '/topics/', [$app, 'topicsPageHandler']);
 
 $app->router->respond('GET', '/topics/[:topic]/', [$app, 'topicPageHandler']);
 
-// $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
+$app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
 $app->router->respond('GET', '/directory/[:internetId]/', [$app, 'personPageHandler']);
 
@@ -52,6 +54,10 @@ $app->router->with('/services', function() use ($app)
 
     $app->router->with('/news', function() use ($app) {
         $app->router->respond('GET', '/feed/', [$app, 'newsFeedEndpointHandler']);
+    });
+
+    $app->router->with('/info-sessions', function() use ($app) {
+        $app->router->respond('GET', '/', [$app, 'infoSessionsEndpointHandler']);
     });
 
     $app->router->with('/events', function() use ($app) {

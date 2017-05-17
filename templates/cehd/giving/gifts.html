@@ -1,0 +1,144 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Gifts" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .thumbnail-img {
+        flex: 0 0 120px;
+        margin-right: 10px;
+    }
+
+    h5 {
+        margin: 0;
+    }
+
+    .h6 {
+        margin: 0;
+    }
+
+    .appointment {
+        width: 45%;
+    }
+
+    .appointment .flex-container {
+        justify-content: flex-start;
+    }
+
+    .flex-container {
+        align-content: flex-end;
+    }
+
+    .flex-item p {
+        margin-top: 0;
+    }
+
+    @media all and (min-width: 1400px) {
+        .flex-container {
+            align-content: flex-end;
+        }
+    }
+
+    @media all and (max-width: 1200px) {
+        .flex-container {
+            align-content: flex-start;
+        }
+
+        .flex-container h4 {
+            min-height: 48px;
+        }
+    }
+
+    @media all and (max-width: 960px) {
+        .flex-container {
+            justify-content: flex-start;
+        }
+
+        .appointment {
+            width: 100%;
+        }
+    }
+</style>
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Gifts at work</h1>
+
+        <div class="half feature">
+            <p>During the past five years, the College of Education and Human
+            Development has raised over $9 million in gifts from alumni and
+            friends. These gifts are making a real difference to students, faculty,
+            and staff.</p>
+
+            <p>The following are just a few examples of how gifts are being
+            used.</p>
+        </div>
+
+        <div class="margin-top-3"></div>
+
+        <div class="span-12">
+            <h2 class="text-center">Giving matters</h2>
+            <div class="third">
+                <h3>Inspiring math learners</h3>
+                <img src="/assets/images/giving/math.jpg" alt= "Example image." />
+
+                <p>A Mooty Foundation gift helps Lesa Clarkson foster math skills in North
+                Minneapolis.<br />
+                <a href=
+                "http://connect.cehd.umn.edu/giving-matters-inspiring-math-learners/">Continue
+                reading</a></p>
+            </div>
+
+            <div class="third">
+                <h3>Support for women scholars</h3>
+                <img src="/assets/images/giving/scholar.jpg" alt="Example image." />
+
+                <p>With the Women&rsquo;s Philanthropic Leadership Circle, small gifts make a big
+                difference.<br />
+                <a href="http://connect.cehd.umn.edu/wplc/">Continue reading</a></p>
+            </div>
+
+            <div class="third">
+                <h3>Dreams to teach come true</h3>
+                <img src="/assets/images/giving/teach.jpg" alt="Example image." />
+
+                <p>The Schulze Family Foundation supports future teachers who have a passion for
+                subjects in short supply.<br />
+                <a href=
+                "http://connect.cehd.umn.edu/giving-matters-helping-dreams-to-teach-come-true/">Continue
+                reading</a></p>
+            </div>
+        </div><!-- /span-12 -->
+        <div class="span-12">
+            <div class="margin-top-3"></div>
+
+            <div class="half feature">
+                <h2 class="text-center">Endowed Chairs and Professorships</h2>
+                <h3 class="text-center">Current appointments</h3>
+            </div>
+        </div><!-- ./span-12 -->
+
+        <div class="flex-container wrap">
+        {% for appointment in appointments %}
+            <div class="flex-item appointment">
+                <h4>{{ appointment.heading }}</h4>
+                <div class="flex-container">
+                    <div class="flex-item thumbnail-img">
+                        <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
+                    </div>
+                    <div class="flex-item">
+                        <h5>
+                            <a href="{{ appointment.urls.profile }}">{{ appointment.name }}</a>
+                            <small class="clear h6 light">
+                                {{ appointment.titles|join(", ") }}
+                            </small>
+                        </h5>
+                        <p><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></p>
+                    </div><!-- flex-item -->
+                </div><!-- /flex-container -->
+            </div><!-- /flex-item -->
+        {% endfor %}
+        </div><!-- /flex-container -->
+    </div><!-- ./container -->
+  </div><!-- ./row -->
+{% endblock %}

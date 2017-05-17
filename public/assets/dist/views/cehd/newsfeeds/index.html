@@ -1,0 +1,22 @@
+<ul class="no-bullet">
+{% for news_item in data.news %}
+    {%- if news_item.link_override -%}
+        {%- set article_link = news_item.link_override -%}
+    {%- else -%}
+        {%- set article_link = news_item.link -%}
+    {%- endif -%}
+    {%- if news_item.title_override -%}
+        {%- set article_title = news_item.title_override -%}
+    {%- else -%}
+        {%- set article_title = news_item.title -%}
+    {%- endif -%}
+    {% if loop.index0 < data.limit %}
+        <li class="news-item">
+            <a href="{{ article_link }}">{{ article_title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<div class="news-more-news-link-container">
+    <p class="text-right"><a href="{{ data.more_news_link }}" class="news-more-news-link">{{ data.more_news_text }}</a></p>
+</div>

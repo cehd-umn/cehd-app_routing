@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -6,21 +8,29 @@
   <div class="container">
     <h1>Career Services Events</h1>
     <p>Prepare for career and employer events with these <a href="/career/events/career-fairs/">helpful tips</a>. </p>
-    		<div id="CalEventList">
-    		<script type="text/javascript">
-    			getRssFeed("CalEventList","http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&r=3&q=6&t=231","/attributes/XSLT/Events-CareerAll.xslt","My Error Message")
-    		</script>
-    		</div>
-    		<!-- #EndEditable --></div>
-    		<div id="features"><!-- #BeginEditable "Features" -->
-    	<div id="news" class="plain xc-green"><h2>News</h2>
-    <div id="CareerNewsFeed">
-    		<script type="text/javascript">
-    			getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message")
-    		</script>
-    		 </div>
-
-    		</div>
+    <div class="twothirds feature">
+    <div class="half">
+    {{ loader.loader(
+    "Events",
+    "h3",
+    "events-container"
+    ) }}
+</div>
+    <div class="half">
+    <h2>News</h2>
+    <p>News feed here.</p>
+    {# getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message") #}
+</div>
+</div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
+{%- block bottom_js %}{{ parent() }}
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+       353
+    ) }}
+{%- endblock -%}

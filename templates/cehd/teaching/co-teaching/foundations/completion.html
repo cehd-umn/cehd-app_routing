@@ -1,0 +1,29 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Assessment" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <div class="span-8 feature">
+    <h1>Foundations Completion and CEU Certificate</h1>
+    <!-- <p>It will take you 1.5-2 hours to complete the Co-Teaching
+    Foundations online module.</p> -->
+    <p>In order to record your completion of the Co-Teaching Foundations
+    online workshop, we require your contact information as well as your
+    responses to three reflective questions. Feel free to develop responses
+    to each question as a co-teaching pair.<br />
+    <br />
+    After you complete and submit
+    the required reflection form you will be able to download and print out
+    CEU certificates. Cooperating teachers, please keep a copy of submission confirmation message for
+    your records.</p>
+    <div class="LineBreak"> </div>
+    <!-- IN Cognito from is named:OTE - Foundations Completion & CEU | 2017-05-05 JFA -->
+        <div class="cognito">
+        <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
+        <script>Cognito.load("forms", { id: "23" });</script>
+      </div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

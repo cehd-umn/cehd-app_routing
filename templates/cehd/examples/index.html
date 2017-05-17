@@ -22,7 +22,8 @@
                         <li><a href="macros/">Macros</a></li>
                         <li><a href="routes/">Setting up routes and templates</a></li>
                         <li><a href="divider/">Column divider</a></li>
-                        <li><a href="cheats/">Jeff's cheats</a></li>
+                        <li><a href="cheats/">Pre-baked cheats</a></li>
+                        <li><a href="grid/">12-column grid</a></li>
                         <li><a href="hero/">Page with hero image example</a></li>
                         <li><a href="images/">Styling and positioning images</a></li>
                     </ul>
@@ -538,6 +539,36 @@ kept forgetting which was correct.) --&gt;
     </div>
 </div>
 
+<div class="row">
+    <div class="container">
+        <h2>Brown (earthy) backgrounds</h2>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis earthy&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with blue background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row emphasis earthy margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with earthy background</p>
+        </div>
+    </div>
+</div>
+
 <div class="row margin-top-1">
     <div class="container">
         <div class="half feature">
@@ -626,201 +657,6 @@ kept forgetting which was correct.) --&gt;
 <div class="row">
     <div class="container">
         <div class="half feature margin-top-3">
-            <h2 class="toc">12-column Grid</h2>
-            <p>Some times you may need more granular control over column widths. There
-            is a set of classes for a 12-column grid system. Think of a grid of 12
-            columns like so:
-        </div>
-        <div class="span-12">
-            <div class="span-1 grid-example">1</div>
-            <div class="span-1 grid-example">2</div>
-            <div class="span-1 grid-example">3</div>
-            <div class="span-1 grid-example">4</div>
-            <div class="span-1 grid-example">5</div>
-            <div class="span-1 grid-example">6</div>
-            <div class="span-1 grid-example">7</div>
-            <div class="span-1 grid-example">8</div>
-            <div class="span-1 grid-example">9</div>
-            <div class="span-1 grid-example">10</div>
-            <div class="span-1 grid-example">11</div>
-            <div class="span-1 grid-example">12</div>
-        </div>
-        <div class="half feature margin-top-3">
-            <p>To span two of those columns, you would use the <samp>.span-2</samp>
-            class like this:</p>
-        </div>
-        <div class="span-12">
-            <div class="span-1 grid-example">1</div>
-            <div class="span-1 grid-example">2</div>
-            <div class="span-1 grid-example">3</div>
-            <div class="span-1 grid-example">4</div>
-            <div class="span-1 grid-example">5</div>
-            <div class="span-1 grid-example">6</div>
-            <div class="span-1 grid-example">7</div>
-            <div class="span-1 grid-example">8</div>
-            <div class="span-1 grid-example">9</div>
-            <div class="span-1 grid-example">10</div>
-            <div class="span-1 grid-example">11</div>
-            <div class="span-1 grid-example">12</div>
-        </div>
-        <div class="span-12 margin-top-1">
-            <div class="span-2 grid-example">.span-2</div>
-        </div>
-        <div class="half feature">
-            <pre><code class="html">
-&lt;div class=&quot;span-2&quot;&gt;.span-2&lt;/div&gt;
-            </code></pre>
-        </div>
-        <div class="half feature margin-top-3">
-            <p>Just append the number of columns you wish to span to
-            <samp>.span-</samp>. (I.e, <samp>.span-1</samp>, <samp>.span-2</samp>,
-            <samp>.span-3</samp>, <samp>.span-4</samp>, etc.)</p>
-        </div>
-        <div class="span-12">
-            <div class="span-1 grid-example">1</div>
-            <div class="span-1 grid-example">2</div>
-            <div class="span-1 grid-example">3</div>
-            <div class="span-1 grid-example">4</div>
-            <div class="span-1 grid-example">5</div>
-            <div class="span-1 grid-example">6</div>
-            <div class="span-1 grid-example">7</div>
-            <div class="span-1 grid-example">8</div>
-            <div class="span-1 grid-example">9</div>
-            <div class="span-1 grid-example">10</div>
-            <div class="span-1 grid-example">11</div>
-            <div class="span-1 grid-example">12</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-1 grid-example">.span-1</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-2 grid-example">.span-2</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-3 grid-example">.span-3</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-4 grid-example">.span-4</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-5 grid-example">.span-5</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-6 grid-example">.span-6</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-7 grid-example">.span-7</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-8 grid-example">.span-8</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-9 grid-example">.span-9</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-10 grid-example">.span-10</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-11 grid-example">.span-11</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-12 grid-example">.span-12</div>
-        </div>
-        <div class="half feature margin-top-3">
-            <p>You can also use these in different combinations to achieve the result
-            you want <em>as long as the <samp>.span-x</samp> values add up to
-            12</em>.</p>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-10 grid-example">.span-10</div>
-            <div class="span-2 grid-example">.span-2</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-4 grid-example">.span-4</div>
-            <div class="span-8 grid-example">.span-8</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <div class="span-6 grid-example">.span-6</div>
-            <div class="span-2 grid-example">.span-2</div>
-            <div class="span-2 grid-example">.span-2</div>
-            <div class="span-2 grid-example">.span-2</div>
-        </div>
-        <div class="margin-top-1 span-12">
-            <p>The <samp>.feature</samp> class will also work in conjunction with the
-            <samp>.span-x</samp> classes for very granular control over the width.</p>
-
-            <p><strong>Note:</strong> Each column here is wrapped in a
-            <samp>.span-12</samp> column so it clears content above and below it.</p>
-
-            <pre><code class="html">
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-1 feature&quot;&gt;.span-1.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-2 feature&quot;&gt;.span-2.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-3 feature&quot;&gt;.span-3.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-4 feature&quot;&gt;.span-4.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-5 feature&quot;&gt;.span-5.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-6 feature&quot;&gt;.span-6.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-7 feature&quot;&gt;.span-7.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-8 feature&quot;&gt;.span-8.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-9 feature&quot;&gt;.span-9.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-10 feature&quot;&gt;.span-10.feature&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span-12&quot;&gt;
-    &lt;div class=&quot;span-11 feature&quot;&gt;.span-11.feature&lt;/div&gt;
-&lt;/div&gt;
-            </code></pre>
-
-            <div class="margin-top-1 span-12">
-                <div class="span-1 feature grid-example">.span-1.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-2 feature grid-example">.span-2.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-3 feature grid-example">.span-3.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-4 feature grid-example">.span-4.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-5 feature grid-example">.span-5.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-6 feature grid-example">.span-6.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-7 feature grid-example">.span-7.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-8 feature grid-example">.span-8.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-9 feature grid-example">.span-9.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-10 feature grid-example">.span-10.feature</div>
-            </div>
-            <div class="margin-top-1 span-12">
-                <div class="span-11 feature grid-example">.span-11.feature</div>
-            </div>
         </div>
         <div class="twothirds feature margin-top-3">
             <h2 class="toc">Other Styles</h2>

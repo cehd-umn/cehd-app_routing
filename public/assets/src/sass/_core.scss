@@ -45,6 +45,10 @@ img {
     &.cool {
         background-color: $umn-light-blue-background;
     }
+
+    &.earthy {
+        background-color: $umn-light-brown-foreground;
+    }
 }
 
 .outer-bg-right {
@@ -79,6 +83,10 @@ img {
     li {
         margin-bottom: 10px;
         margin-left: 0;
+
+        &.news-item {
+            margin-bottom: 1em;
+        }
     }
 }
 
@@ -110,14 +118,12 @@ img {
 .container {
     @include outer-container;
     @include pad(0 2em 0 2em);
-}
 
-/// Container for main navigation
-/// @todo move this to _nav.scss
-// .nav-container {
-//     position: absolute;
-//     top: 100px;
-// }
+    &.tight {
+        padding: 0 2em;
+        width: 75%;
+    }
+}
 
 /// Granular grid options for all breakpoints
 @for $grid-span from 1 through 12 {
@@ -395,7 +401,7 @@ a {
     position: relative;
 }
 
- /// Text alignments
+ /// Text styles
 
 .text-left {
     text-align: left;
@@ -411,6 +417,12 @@ a {
     small {
         text-align: center;
     }
+}
+
+.text-plain {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
 }
 
 #dept-footer {
@@ -534,6 +546,15 @@ footer {
                 $offset: $offset - .5;
             }
         }
+
+        .push-#{$grid-span} {
+            @include shift($grid-span);
+        }
+
+        // .pull-#{$grid-span} {
+        //     @include shift(-$grid-span);
+        // }
+
     }
 
     .dept-footer-section {
@@ -763,18 +784,38 @@ footer {
     width: 12%;
 }
 
-input[type="radio"] {
-    margin-left: 2px;
+.to-upper {
+    text-transform: uppercase;
 }
 
-input[type="text"]:focus {
-    border: 1px solid $umn-light-gold;
+.flex-container {
+    display: flex;
+    justify-content: space-between;
 
-    &::placeholder {
-        color: transparent;
+    &.align-bottom {
+        align-items: flex-end;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
     }
 }
 
-.to-upper {
-    text-transform: uppercase;
+.flex-item {
+
+    &.vertical-stretch {
+        align-self: stretch;
+    }
+}
+
+.no-shrink {
+    flex-shrink: 0;
 }

@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{% import "macros/info-sessions-feed.html" as info_session %}
+{% import "macros/loader.html" as loader %}
 {% set page_title = "McNair Open House" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -9,15 +11,15 @@
             scholars. Staff and alumni will be on hand to answer
             questions about the program, the application process and
             to provide feedback on personal statements.</p>
-    <h2>Upcoming Sessions </h2>
 
     <div id="InfoFeed-McNair">
-    <script type="text/javascript">
-      getRssFeed("InfoFeed-McNair","https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?code=McNair","/attributes/XSLT/InfoSession-McNair-ListHack.xslt","Sorry, the Info-Session feed is temporarily down.")
-    </script>
-    </div>
+        {{ loader.loader(
+            "Upcoming Sessions",
+            "h2",
+            "info-sessions-container"
+        ) }}
 
-  <div id="DissapearingDiv">
+  {# <div id="DissapearingDiv">
     <script type="text/javascript">
       getRssFeed("DissapearingDiv","http://apps.cehd.umn.edu/events/Admin/RSSFeed.aspx?&x=3&r=3&q=6&t=279","/attributes/XSLT/Events-FeatureWidget-Dissapear-TRiO.xslt","Sorry, the event calendar is currently unavailable.")
     </script>
@@ -26,7 +28,12 @@
   <h2>Connect</h2>
       <p class="last"><a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">TRIO McNair
       Scholars on Facebook</a></p>
+    #}
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("McNair") }}
 {% endblock %}

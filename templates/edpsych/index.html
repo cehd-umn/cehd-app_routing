@@ -12,12 +12,12 @@
             <div class="large-image-container">
                 <div class="home-image large">
                     <figure>
-                        <a href="{{ config.base_url}}/about/diversity-inclusion/">
-                            <img src="{{ config.base_url}}/assets/dist/images/home/large.jpg" alt="a man and a woman talking in a classroom in the foreground with two other people talking in the background">
+                        <a href="{{ config.base_url}}/research/making-a-difference-with-data/">
+                            <img src="{{ config.base_url}}/assets/dist/images/home/robbinsdale-kids-playground-chalk.jpg" alt="preschoolers play with chalk on playground">
                         </a>
                         <figcaption>
-                            <a href="{{ config.base_url}}/about/diversity-inclusion/">
-                                A diverse ethnic, cultural and socio-economic community of students.
+                            <a href="{{ config.base_url}}/research/making-a-difference-with-data/">
+                                Using data to make a real difference for all students.
                             </a>
                         </figcaption>
                     </figure>
@@ -26,12 +26,12 @@
             <div class="small-image-container">
                 <div class="home-image small top">
                     <figure>
-                        <a href="{{ config.base_url}}/research/">
-                            <img src="{{ config.base_url}}/assets/dist/images/home/small-top.jpg" alt="students on bridge over Mississippi River">
+                        <a href="{{ config.base_url}}/about/diversity-inclusion/">
+                            <img src="{{ config.base_url}}/assets/dist/images/home/diversity.jpg" alt="students study ">
                         </a>
                         <figcaption>
-                            <a href="{{ config.base_url}}/research/">
-                              Our students learn from top researchers in educational psychology.
+                            <a href="{{ config.base_url}}/about/diversity-inclusion/">
+                              A diverse ethnic, cultural and socio-economic community of students.
                             </a>
                         </figcaption>
                     </figure>
@@ -42,7 +42,7 @@
                             <img src="{{ config.base_url}}/assets/dist/images/home/ed-equity-in-action17-bottom.jpg" alt="Register now for 2017 Educational Equity in Action">
                         </a>
                         <figcaption>
-                            <a href="http://www.gap.umn.edu/about/edequityinaction.html">Early bird registration ends April 30.
+                            <a href="http://www.gap.umn.edu/about/edequityinaction.html">Register today!
                             </a>
                         </figcaption>
                     </figure>
@@ -145,7 +145,10 @@
         "category/educational-psychology/homepage/feed",
         "#news-container",
         "home.html",
-        2
+        2,
+        null,
+        null,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
     {#- events feed -#}
     {{ eventsfeed.events_feed_js(

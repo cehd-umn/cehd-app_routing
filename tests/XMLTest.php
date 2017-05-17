@@ -45,6 +45,30 @@ class XMLTest extends TestCase
         $this->assertEquals("whitespace", $this->xmlInstance->getFromProperty($string_with_whitespace));
     }
 
+    public function testGetBoolFromProperty()
+    {
+        $bool = "false";
+        $this->assertSame(false, $this->xmlInstance->getBoolFromProperty($bool));
+
+        $bool = "true";
+        $this->assertSame(true, $this->xmlInstance->getBoolFromProperty($bool));
+
+        // Capitalization shouldn't matter
+        $bool = "True";
+        $this->assertSame(true, $this->xmlInstance->getBoolFromProperty($bool));
+
+        $bool = "False";
+        $this->assertSame(false, $this->xmlInstance->getBoolFromProperty($bool));
+    }
+
+    public function testGetBoolFromPropertyNotBoolean()
+    {
+        // Non boolean values should throw an Exception
+        $this->expectException(Exception::class);
+        $bool = "not boolean";
+        $this->assertSame(null, $this->xmlInstance->getBoolFromProperty($bool));
+    }
+
     public function testToJSON()
     {
         $this->assertTrue(is_string($this->xmlInstance->toJSON()));

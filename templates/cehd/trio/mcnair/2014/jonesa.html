@@ -1,30 +1,61 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Jones" %}
+{% set page_title = "Amber Z. Jones" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>Amber Z. Jones<small class="clear">McNair Scholar 2014</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img class="circular" src="/assets/images/trio/mcnair/JonesA-Portrait.jpg" alt="JonesA photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Amber Z. Jones </strong>is a senior at the University of Minnesota-Twin Cities, majoring in African-American &amp; African Studies with a minor in Political Science. Her research interests include 20th-century African-American history and public history, focusing on intersections of race, class, and gender. Ms. Jones intends to earn her Ph.D. in History, African-American Studies, or American Studies. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2014<small class="clear">Amber Z. Jones</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to earn my Ph.D. and become a local historian and educator in urban communities. I want to equip the next generation with crucial narratives of their pasts in hopes of anchoring their future goals.</blockquote>
-          </div>
+          <p><strong>Amber Z. Jones </strong>is a senior at the University of Minnesota-Twin Cities, majoring in African-American &amp; African Studies with a minor in Political Science. Her research interests include 20th-century African-American history and public history, focusing on intersections of race, class, and gender. Ms. Jones intends to earn her Ph.D. in History, African-American Studies, or American Studies. </p>
       </div>
     </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2014-Jonesa.jpg" alt="Amber Z. Jones photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to earn my Ph.D. and become a local historian and educator in urban communities. I want to equip the next generation with crucial narratives of their pasts in hopes of anchoring their future goals.
+            </blockquote>
+
+      </div>
+    </div>
+  </div>
 
     <div class="container">
       <div class="span-8 feature">

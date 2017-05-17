@@ -4,9 +4,7 @@
 @import "core";
 @import "bourbon/bourbon";
 @import "loader";
-@import "form_hack";
-@import "isotope";
-@import "meganav";
+@import "events";
 
 .videojs-background-wrap {
     z-index: -1;
@@ -23,29 +21,6 @@
     button,
     div {
         display: none;
-    }
-}
-
-.category-container {
-    background-color: $base-light-grey;
-    min-height: 90px;
-    padding: 0 1em;
-}
-
-.category-filter-container {
-    background-color: $base-white;
-    box-shadow: 0 3px 3px $base-light-grey;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1em;
-    position: absolute;
-    transition-duration: .5s;
-    transition-property: max-height;
-    transition-timing-function: ease-out;
-    z-index: 1;
-
-    &.open {
-        max-height: 500px;
     }
 }
 
@@ -126,7 +101,9 @@ $corner-border-spacing: 5px;
 
 blockquote {
     &.quote-wrap {
+        font-size: 20px;
         font-style: inherit;
+        margin-top: 50px;
         quotes: "“" "”" "‘" "’";
 
         &::after,
@@ -149,6 +126,13 @@ blockquote {
             top: .35em;
         }
     }
+}
+
+.speaker {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 80px 0 0;
 }
 
 .section-header-container {
@@ -188,13 +172,26 @@ blockquote {
     }
 }
 
-.circular {
-    border-radius: 50%;
-    overflow: hidden;
+img {
+    &.circular {
+        border-radius: 50%;
+        display: inline-block;
+        overflow: hidden;
+    }
 }
 
-.main-nav-hero-image-text {
-    font-size: 12px;
+.circular-thumbnail {
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+
+    img {
+        left: 0;
+        position: absolute;
+        top: -10px;
+    }
 }
 
 .row {
@@ -202,7 +199,7 @@ blockquote {
         margin-top: 400px;
     }
 
-    &.isotope {
+    &.cards {
         z-index: -1;
     }
 }
@@ -227,4 +224,130 @@ blockquote {
 
 #maincontent {
     z-index: 0;
+}
+
+.news-more-news-container {
+    float: right;
+    width: 50%;
+}
+
+.news-more-news-link {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-item {
+    line-height: 1.5;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.card {
+    @include transition(
+        background-color .5s,
+        max-height 1s,
+        max-width 1s,
+        opacity 1s);
+
+    align-self: stretch;
+    background-color: $base-white;
+    border: 1px solid $base-light-grey;
+    border-radius: 2px;
+    left: auto;
+    margin: 1em;
+    max-height: 500px;
+    max-width: 500px;
+    opacity: 1;
+    overflow: hidden;
+    padding: .5em;
+    visibility: visible;
+    width: 285px;
+
+    &:hover {
+        background-color: $umn-light-gold;
+    }
+
+    &.hidden {
+        background-color: $umn-light-gold;
+        border: 0;
+        margin: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+}
+
+#full-text-search-input {
+    border-radius: 2px;
+    font-size: 1em;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.category-container {
+    background-color: $base-light-grey;
+    min-height: 90px;
+    padding: 0 1em;
+}
+
+.category-filter-container {
+    background-color: $base-white;
+    overflow: hidden;
+    padding: 0 1em;
+}
+
+.category-filters {
+    text-align: center;
+}
+
+li {
+    &.category-button {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+
+        &.clear {
+            clear: left;
+        }
+    }
+}
+
+.category-button {
+    overflow: hidden;
+
+    input {
+        left: -100px;
+        position: absolute;
+
+        &:checked + label {
+            background: $umn-light-gold;
+            color: $umn-maroon;
+        }
+    }
+
+    label {
+        background: $base-light-grey;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        padding: 7px;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $umn-medium-grey;
+        }
+    }
+}
+
+#clear-filters + label {
+    text-transform: uppercase;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
 }

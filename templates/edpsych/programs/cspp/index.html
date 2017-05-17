@@ -196,7 +196,13 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     {{ newsfeed.news_feed_js(
-        "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/"
+        "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/",
+        "#news-container",
+        "index.html",
+        3,
+        null,
+        null,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#-
