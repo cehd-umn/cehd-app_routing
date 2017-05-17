@@ -1,0 +1,58 @@
+<div class="meganav-container">
+    <button class="nav-toggle">Menu</button>
+    <nav class="container">
+        <ul class="nav navbar-nav">
+        {%- for top_level_item in nav_items -%}
+            <li class="top-level{%-
+                if top_level_item.subsection -%}
+                {{ " " }}dropdown mega-dropdown
+                {%- endif -%}
+                {%- if loop.first -%}
+                    {{ " " }}first
+                {%- endif -%}" id="top-level-{{ top_level_item.section }}">
+                <a href="{{ top_level_item.href }}" class="
+                {%- if top_level_item.subsection -%}
+                    dropdown-toggle
+                {%- endif %}" data-toggle="dropdown">
+                    {{ top_level_item.name }}
+                {%- if top_level_item.subsection -%}
+                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                {%- endif -%}
+            </a>
+            {%- if top_level_item.subsection -%}
+            <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
+                <div class="ul-container nav-items">
+                    <ul class="margin-top nav">
+                    {%- for sub_nav_item in top_level_item.subsection %}
+                        <li class="dropdown-header">
+                            <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
+                            {%- if sub_nav_item.subsection %}
+                            <ul>
+                                {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
+                                <li>
+                                    <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
+                                </li>
+                                {%- endfor -%}
+                            </ul><!-- // sub sub nav -->
+                            {%- endif -%}
+                        </li><!-- // dropdown header -->
+                    {%- if loop.index == 3 and top_level_item.name == "Academics" -%}
+                        {#- close the column and start a new one -#}
+                        </ul>
+                      </div>
+                      <div class="ul-container nav-items">
+                        <ul class="margin-top">
+                        {%- endif -%}
+                    {%- endfor -%}
+                    </ul><!-- // sub nav column-->
+                </div>
+                <div class="content-container flex-container align-center">
+                    {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
+                </div>
+            </div><!-- // dropdown-menu -->
+            {%- endif -%}
+        </li><!-- // top-level nav item -->
+        {%- endfor -%}
+        </ul>
+    </nav>
+</div><!-- meganav-container -->

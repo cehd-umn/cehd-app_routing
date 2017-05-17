@@ -172,18 +172,6 @@ blockquote {
     }
 }
 
-.hero-pithy-phrase-container {
-    display: flex;
-    flex-direction: column;
-    height: 267px;
-    justify-content: center;
-}
-
-.hero-pithy-phrase {
-    font-size: 30px;
-    font-weight: bold;
-}
-
 img {
     &.circular {
         border-radius: 50%;
@@ -204,10 +192,6 @@ img {
         position: absolute;
         top: -10px;
     }
-}
-
-.main-nav-hero-image-text {
-    font-size: 12px;
 }
 
 .row {

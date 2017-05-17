@@ -110,7 +110,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => "programs-sorter",
+            "section" => "academics",
             "item_data" => $data["data"],
             "categories" => $data["categories"],
             "item_data_json" => json_encode($data["data"]),
@@ -125,7 +125,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $data = $this->__processSorterData($yaml_file_path);
 
         $template_data = [
-            "section" => "topics-sorter",
+            "section" => "topics",
             "item_data" => $data["data"],
             "categories" => $data["categories"],
             "item_data_json" => json_encode($data["data"]),

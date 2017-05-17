@@ -52,8 +52,20 @@ nav {
         }
     }
 
-    .main-nav-hero-image-container {
-        display: none;
+    .hero-pithy-phrase-container {
+        display: flex;
+        flex-direction: column;
+        height: 267px;
+        justify-content: center;
+    }
+
+    .hero-pithy-phrase {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .main-nav-hero-image-text {
+        font-size: 12px;
     }
 
     .dropdown-header {
@@ -122,7 +134,7 @@ nav {
     .nav {
 
         li {
-            display: inline-block;
+            // display: inline-block;
             margin: 0;
             padding: 0;
 
@@ -132,21 +144,22 @@ nav {
         }
 
         .main-nav-hero-image-container {
-            display: block;
+            // display: block;
             max-width: 400px;
         }
     }
 
-    .dropdown-menu {
+    .dropdown-menu-wrapper {
+        // background: $umn-light-grey-background;
         background: $base-white;
         border: transparent;
         box-shadow: 0 2px 3px 0 $box-shadow-rgba;
         display: none;
         left: 0;
-        padding: 10px 2em 20px;
+        padding: 0;
         position: absolute;
         top: 23px;
-        width: 1400px;
+        width: 1310px;
 
         ul {
             display: block;
@@ -162,6 +175,29 @@ nav {
             }
 
         }
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .dropdown-menu-item {
+        padding: 10px 2em 20px;
+    }
+
+    .nav-items {
+        //background: $base-white;
+        padding: 18px;
+    }
+
+    .ul-container {
+        width: 300px;
+    }
+
+    .content-container {
+        background: $umn-light-grey-background;
+        margin-left: 10px;
+        width: 856px;
     }
 
     // @todo use the cehd-meganav-dropdowns mixin here
@@ -179,7 +215,7 @@ nav {
 
     .top-level {
         border-left: 1px solid $base-black;
-        display: inline-block;
+        // display: inline-block;
         padding-left: .5em;
         padding-right: .5em;
         width: calc(100% / 7);
@@ -226,8 +262,9 @@ nav {
 
     .mega-dropdown {
         &:hover {
-            .dropdown-menu {
-                display: block;
+            .dropdown-menu-wrapper {
+                align-items: stretch;
+                display: flex;
             }
         }
 
@@ -255,7 +292,7 @@ nav {
 @media all and (max-width: 1400px) {
     @include cehd-meganav-dropdowns($mega-dropdown-margins-1400);
 
-    .dropdown-menu {
+    .dropdown-menu-wrapper {
         width: 1093px;
     }
 }
@@ -263,9 +300,26 @@ nav {
 @media all and (max-width: 1200px) {
     @include cehd-meganav-dropdowns($mega-dropdown-margins-1200);
 
-    .dropdown-menu {
+    .dropdown-menu-wrapper {
         top: 41px;
         width: 918px;
+
+        img {
+            margin-right: auto;
+            margin-top: 10%;
+        }
+    }
+
+    nav {
+        .hero-pithy-phrase {
+            flex-grow: 1;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .flex-container {
+            flex-direction: column;
+        }
     }
 }
 
@@ -276,7 +330,7 @@ nav {
         font-size: 13px;
     }
 
-    .dropdown-menu {
+    .dropdown-menu-wrapper {
         top: 20px;
         width: 858px;
     }
@@ -289,7 +343,7 @@ nav {
         font-size: 12px;
     }
 
-    .dropdown-menu {
+    .dropdown-menu-wrapper {
         top: 33px;
         width: 704px;
     }
