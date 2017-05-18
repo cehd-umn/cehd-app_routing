@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Jade Beauclair" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2013<small class="clear">Jade Beauclair</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Beauclair.jpg" alt="Beauclair photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Jade Beauclair</strong> is a senior at the University of Minnesota, Twin Cities, majoring in Youth Studies and minoring in Teaching English as a Second Language. Her research interests are in urban education and Education Policy, specifically in work regarding educational access including standardized testing. Ms. Beauclair intends to obtain a Ph.D. in Educational Policy and Leadership.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2013<small class="clear">Jade Beauclair</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to use a doctorate in education policy to contribute to a fairer system by which all students can access high quality education. I will advocate for a system where student achievement outcomes are measured fairly and in a manner that is sensitive to culture and learning style.</blockquote>
-          </div>
+          <p><strong>Jade Beauclair</strong> is a senior at the University of Minnesota, Twin Cities, majoring in Youth Studies and minoring in Teaching English as a Second Language. Her research interests are in urban education and Education Policy, specifically in work regarding educational access including standardized testing. Ms. Beauclair intends to obtain a Ph.D. in Educational Policy and Leadership.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2013-Beauclair.jpg" alt="Jade Beauclair photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to use a doctorate in education policy to contribute to a fairer system by which all students can access high quality education. I will advocate for a system where student achievement outcomes are measured fairly and in a manner that is sensitive to culture and learning style.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

@@ -1,30 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "DeLos Rios" %}
+{% set page_title = "Gabriel De Los Rios" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2012</h1>
-    <h1>Gabriel De Los Rios<small class="clear">McNair Scholar 2012</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Rios.jpg" alt="De Los Rios photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Gabriel De Los Rios</strong> is a junior at the University of Minnesota, Twin Cities, majoring in neuroscienceand minoring in psychology. His interests focus on the cognitive mind and its effects on individual and social behaviors. Mr. De Los Rios plans on getting his Ph.D. in cognitive neuroscience.  </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2012<small class="clear">Gabriel De Los Rios</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to first receive my Ph.D. in neuroscience and to eventually become a principle investigator researching my own interests. I want to make advances in	the field of cognitive neuroscience so we can begin to	understand why some people experience deficits in mental	process and how we can begin to fix them.</blockquote>
-          </div>
+          <p><strong>Gabriel De Los Rios</strong> is a junior at the University of Minnesota, Twin Cities, majoring in neuroscienceand minoring in psychology. His interests focus on the cognitive mind and its effects on individual and social behaviors. Mr. De Los Rios plans on getting his Ph.D. in cognitive neuroscience.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2012-De-Los-Rios.jpg" alt=">Gabriel De Los Rios photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to first receive my Ph.D. in neuroscience and to eventually become a principle investigator researching my own interests. I want to make advances in	the field of cognitive neuroscience so we can begin to understand why some people experience deficits in mental process and how we can begin to fix them.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">
