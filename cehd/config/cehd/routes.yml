@@ -944,6 +944,12 @@
   template_data:
     meta_description: null
     section: null
+/examples/svg/social-media/:
+  publish: false
+  template: cehd/examples/svg/social-media.html
+  template_data:
+    meta_description: null
+    section: null
 /giving/:
   publish: true
   template: cehd/giving/index.html

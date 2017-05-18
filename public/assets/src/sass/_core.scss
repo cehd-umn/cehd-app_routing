@@ -118,14 +118,12 @@ img {
 .container {
     @include outer-container;
     @include pad(0 2em 0 2em);
-}
 
-/// Container for main navigation
-/// @todo move this to _nav.scss
-// .nav-container {
-//     position: absolute;
-//     top: 100px;
-// }
+    &.tight {
+        padding: 0 2em;
+        width: 75%;
+    }
+}
 
 /// Granular grid options for all breakpoints
 @for $grid-span from 1 through 12 {
@@ -136,6 +134,7 @@ img {
 }
 
 /// No `clear` for simple columns
+.always-half,
 .half,
 .third,
 .twothird,
@@ -144,9 +143,34 @@ img {
     min-height: 1px;
 }
 
+// "half" style that never stacks for mobile
+.always-half {
+    @include span-columns(6);
+}
+
 .whole {
     @include span-columns(12);
 }
+
+// .flex {
+//     align-content: stretch; /* Extra space in Cross Axis */
+//     align-items: stretch; /* align items in Cross Axis */
+//     display: flex;
+//     flex-grow: 1;
+//     justify-content: flex-start; /* align items in Main Axis */
+//
+//     &.column {
+//         flex-direction: column;
+//     }
+//
+//     &.center {
+//         justify-content: center;
+//     }
+// }
+//
+// .flex-item {
+//     flex: 1;
+// }
 
 /// Base styles for SVG wordmarks
 .wordmark-svg {
@@ -377,7 +401,7 @@ a {
     position: relative;
 }
 
- /// Text alignments
+ /// Text styles
 
 .text-left {
     text-align: left;
@@ -393,6 +417,12 @@ a {
     small {
         text-align: center;
     }
+}
+
+.text-plain {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
 }
 
 #dept-footer {
@@ -762,12 +792,20 @@ footer {
     display: flex;
     justify-content: space-between;
 
-    &.wrap {
-        flex-wrap: wrap;
-    }
-
     &.align-bottom {
         align-items: flex-end;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
     }
 }
 
@@ -776,4 +814,8 @@ footer {
     &.vertical-stretch {
         align-self: stretch;
     }
+}
+
+.no-shrink {
+    flex-shrink: 0;
 }

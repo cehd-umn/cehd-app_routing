@@ -361,5 +361,75 @@ figure {
     src: local('Macondo'), local('Macondo-Regular'), url(https://fonts.gstatic.com/s/macondo/v5/wijdXSTMZhcyWspsnqogsw.ttf) format('truetype');
 }
 
+.svg-social-media-icon {
+    display: inline-block;
+    max-width: 50px;
+    width: 100%;
+
+    @each $size in 40, 60, 70, 80, 90, 100 {
+        &.size-#{$size} {
+            max-width: #{$size}px;
+        }
+    }
+}
+
+%social-media-icon {
+    transition: fill .5s;
+}
+
+.icon-calendar {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-email {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-facebook {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $facebook-blue;
+    }
+}
+
+.icon-linkedin {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $linkedin-blue;
+    }
+}
+
+.icon-pinterest {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $pinterest-red;
+    }
+}
+
+.icon-twitter {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $twitter-blue;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .svg-social-media-icon {
+        max-width: 40px;
+    }
+}
+
 @import "umn-hf";
 @import "meganav";

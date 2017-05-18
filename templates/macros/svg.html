@@ -21,3 +21,7 @@
     </g>
 </svg>
 {%- endmacro -%}
+
+{%- macro social_media_icon(title, description, path) -%}
+<svg viewBox="0 0 512 512" aria-labelledby="title" aria-describedby="title desc" role="img"><title>{{ title }}</title><description>{{ description }}</description>{{ path|raw }}</svg><!--[if lt IE 9]><em>{{ title }}</em><![endif]-->
+{%- endmacro -%}

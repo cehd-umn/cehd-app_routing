@@ -128,6 +128,13 @@ blockquote {
     }
 }
 
+.speaker {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 80px 0 0;
+}
+
 .section-header-container {
     background-color: $nav-translucent-white;
 }
@@ -165,18 +172,6 @@ blockquote {
     }
 }
 
-.hero-pithy-phrase-container {
-    display: flex;
-    flex-direction: column;
-    height: 267px;
-    justify-content: center;
-}
-
-.hero-pithy-phrase {
-    font-size: 30px;
-    font-weight: bold;
-}
-
 img {
     &.circular {
         border-radius: 50%;
@@ -199,10 +194,6 @@ img {
     }
 }
 
-.main-nav-hero-image-text {
-    font-size: 12px;
-}
-
 .row {
     &.has-hero-image {
         margin-top: 400px;
@@ -220,6 +211,10 @@ img {
     }
 }
 
+.connect-with-us {
+    max-width: 600px;
+}
+
 #cehd-wordmark {
     border-bottom: 0;
     float: none;
@@ -229,14 +224,6 @@ img {
 
 #maincontent {
     z-index: 0;
-}
-
-
-.speaker {
-    float: right;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 40px 80px 0 0;
 }
 
 .news-more-news-container {
@@ -292,8 +279,8 @@ img {
 }
 
 #full-text-search-input {
-    border-radius: 5px;
-    font-size: 2em;
+    border-radius: 2px;
+    font-size: 1em;
     margin-bottom: 16px;
     width: 100%;
 }

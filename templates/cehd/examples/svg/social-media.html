@@ -1,0 +1,77 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Social Media Icon SVG's" %}
+{% block title %}{{ page_title }}{% endblock %}
+{%- import "macros/svg.html" as svg -%}
+{% block main_content %}
+<div class="row">
+    <div class="container" style="min-height: 300px;">
+        <div class="half feature">
+            <h2>Social media icons</h2>
+            <p>(With cool hover effects.)</p>
+
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/twitter.html" %}
+            </div>
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/facebook.html" %}
+            </div>
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/linkedin.html" %}
+            </div>
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/pinterest.html" %}
+            </div>
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/email.html" %}
+            </div>
+            <div class="svg-social-media-icon">
+                {% include "cehd/includes/svg/social-media/calendar.html" %}
+            </div>
+        </div><!-- /half.feature -->
+        <div class="whole margin-top-1">
+            <pre><code class="html">{% verbatim %}
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/twitter.html&quot; %}
+&lt;/div&gt;
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/facebook.html&quot; %}
+&lt;/div&gt;
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/linkedin.html&quot; %}
+&lt;/div&gt;
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/pinterest.html&quot; %}
+&lt;/div&gt;
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/email.html&quot; %}
+&lt;/div&gt;
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% include &quot;cehd/includes/svg/social-media/calendar.html&quot; %}
+&lt;/div&gt;{% endverbatim %}
+            </code></pre>
+        </div>
+        <div class="half feature margin-top-2">
+            <h3>Multiple sizes</h3>
+        </div><!-- /half.feature -->
+        <div class="whole margin-top-1">
+            <div class="half feature">
+                {% for size in [40, 50, 60, 70, 80, 90, 100] %}
+                <div class="svg-social-media-icon size-{{ size }}">
+                    {% include "cehd/includes/svg/social-media/twitter.html" %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="whole margin-top-1">
+                <pre><code class="html">
+{%- for size in [40, 50, 60, 70, 80, 90, 100] %}
+&lt;div class=&quot;svg-social-media-icon size-{{ size }}&quot;&gt;
+    {% verbatim %}{% include "cehd/includes/svg/social-media/twitter.html" %}{% endverbatim %}
+&lt;/div&gt;
+
+{% endfor -%}
+                </code></pre>
+            </div>
+        </div><!-- /whole -->
+    </div><!-- /container -->
+</div><!-- /row -->
+{% endblock %}
