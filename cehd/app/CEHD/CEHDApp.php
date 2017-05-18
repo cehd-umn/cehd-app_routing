@@ -38,6 +38,25 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"));
 
         $this->router->onHttpError([$this, 'errorPageHandler']);
+
+        if (!$this->is_prod)
+        {
+            $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
+            $pattern_data = $this->loadYaml($yaml_file_path);
+
+            foreach($pattern_data as $key => $pattern)
+            {
+                $handler = "patternHandler";
+
+                if ($pattern["handler"])
+                {
+                    $handler = $pattern["handler"];
+                }
+
+                $this->router->respond(
+                    'GET', $pattern["route"], [$this, $handler]);
+            }
+        }
     }
 
     public function errorPageHandler($code, $router)
@@ -327,5 +346,12 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "appointments" => $appointments,
         ];
         echo $this->_renderTemplate('cehd/giving/gifts.html', $template_data);
+    }
+
+    public function patternsPageHandler($request, $response, $service, $app)
+    {
+        if ($this->is_prod)
+        {
+        }
     }
 }
