@@ -1,0 +1,16 @@
+{% extends "cehd/layout/documentation.html" %}
+{% block title %}{{ pattern.title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        {% for twig_file in pattern.twig_files %}
+            <h1>{{ pattern.title }}</h1>
+            {% if twig_file.type == "include" %}
+                <div class="whole">
+                    {% include twig_file.path %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

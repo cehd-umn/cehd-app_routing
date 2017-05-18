@@ -1,79 +1,73 @@
 ---
-title-block:
-  name: title block
+title block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/title-block.html
-    type: include
-title-prepend:
-  name: title_prepend block
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/title-block.html
+      type: include
+  type: include
+title_prepend block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/title-prepend.html
-    type: include
-title-append:
-  name: title_append block
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/title-prepend.html
+      type: include
+  type: include
+title_append block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/title-append.html
-    type: include
-meta-content:
-  name: meta_content block
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/title-append.html
+      type: include
+  type: include
+meta_content block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/meta-content.html
-    type: include
-main-content-block:
-  name: main_content block
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/meta-content.html
+      type: include
+  type: include
+main_content block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/main-content.html
-    type: include
-extra-css:
-  name: extra_css block
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/main-content.html
+      type: include
+  type: include
+extra_css block:
   categories:
     - template
     - twig blocks
-  scope: atom
   group: twig
-  route: /patterns/templates/twig-blocks/
   example_page_url: null
   handler: null
-  twig_file:
-    path: cehd/patterns/includes/template/extra-css.html
-    type: include
+  template: null
+  twig_files:
+    - path: cehd/patterns/includes/template/extra-css.html
+      type: include
+  type: include

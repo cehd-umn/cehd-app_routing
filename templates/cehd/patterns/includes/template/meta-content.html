@@ -1,0 +1,11 @@
+<p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
+can insert a <samp>meta_content</samp> block on a template to populate a
+<samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
+
+<pre><code class="jinja">{% verbatim %}
+{% meta_content %}This is my page description for search engines to read{% endblock %}{% endverbatim %}
+            </code></pre>
+
+<pre><code class="jinja">
+&lt;meta name=&quot;description&quot; content=&quot;This is my page description for search engines to read&quot;&gt;
+</code></pre>

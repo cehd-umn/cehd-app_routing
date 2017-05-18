@@ -7,6 +7,7 @@ require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
+require_once __DIR__ . '/../../../vendor/autoload.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
@@ -20,6 +21,8 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     "url" => "www.umn.edu",
                 ]
             ];
+
+    private $_patternLibraryData;
 
     function __construct($file_paths)
     {
@@ -39,14 +42,18 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         $this->router->onHttpError([$this, 'errorPageHandler']);
 
-        if (!$this->is_prod)
+        if (!$this->config["is_prod"])
         {
             $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
             $pattern_data = $this->loadYaml($yaml_file_path);
 
-            foreach($pattern_data as $key => $pattern)
+            $patterns = $this->__buildPatternData($pattern_data);
+
+            $this->_patternLibraryData = $this->_loadDict($patterns);
+
+            foreach($patterns as $route => $pattern)
             {
-                $handler = "patternHandler";
+                $handler = "patternPageHandler";
 
                 if ($pattern["handler"])
                 {
@@ -54,9 +61,28 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 }
 
                 $this->router->respond(
-                    'GET', $pattern["route"], [$this, $handler]);
+                    'GET', $route, [$this, $handler]);
             }
         }
+    }
+
+    private function __buildRouteFromPattern($group, $title)
+    {
+        $hyphenated_title = $this->hyphenate($title);
+        return "/patterns/" . $group . "/" . $hyphenated_title . "/";
+    }
+
+    private function __buildPatternData($patterns)
+    {
+        $new_structure = [];
+
+        foreach ($patterns as $title => $pattern)
+        {
+            $route = $this->__buildRouteFromPattern($pattern["group"], $title);
+            $pattern["title"] = $title;
+            $new_structure[$route] = $pattern;
+        }
+        return $new_structure;
     }
 
     public function errorPageHandler($code, $router)
@@ -348,10 +374,17 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/giving/gifts.html', $template_data);
     }
 
-    public function patternsPageHandler($request, $response, $service, $app)
+    public function patternPageHandler($request, $response, $service, $app)
     {
-        if ($this->is_prod)
+        $path = $request->pathname();
+        $pattern = $this->_patternLibraryData->get($path);
+
+        if ($pattern)
         {
+            if ($pattern["type"] === "include")
+            {
+                echo $this->_renderTemplate("cehd/patterns/patterns.html", ["pattern" => $pattern]);
+            }
         }
     }
 }

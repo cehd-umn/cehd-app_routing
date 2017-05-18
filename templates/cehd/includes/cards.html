@@ -1,0 +1,37 @@
+<div class="row cards">
+    <div class="container">
+        <div class="card-container margin-top-2">
+            {% for item_title, item in item_data %}
+                <div id="card-{{ loop.index }}" class="card
+                    {%- if item.categories_hyphenated -%}
+                      {{ " " }}{{- item.categories_hyphenated|join(" ") -}}
+                    {%- endif -%}
+                    {%- if item.degrees_hyphenated -%}
+                      {{ " " }}{{- item.degrees_hyphenated|join(" ") -}}
+                    {%- endif -%}
+                    "{#- close the class= quote -#}
+                    {%- if item.categories -%}
+                      {{ " " }}data-categories="{{- item.categories|join(" ") }}
+                      {%- if item.degrees -%}
+                        {{ " " }}{{- item.degrees.title|join(" ") }}
+                      {%- endif -%}
+                      "{#- close the data-categories= quote -#}
+                    {%- endif -%}
+                    >{#- close the tag -#}
+                    <h2 class="h4 title">{{ item_title }}</h2>
+                    {% if item.description %}
+                      <p class="description">{{ item.description }}</p>
+                    {% endif %}
+                    {% if item.degrees %}
+                    <ul class="no-bullet">
+                        {% for degree in item.degrees %}
+                        <li><a href="{{ degree.href }}">{{ degree.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div><!-- / card -->
+            {% endfor %}
+        </div><!-- / card-container -->
+    </div><!-- / container -->
+</div><!-- / row -->
+

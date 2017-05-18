@@ -131,6 +131,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * files
      *
      * @param mixed[] $file_paths - array of file paths
+     * @todo can some of this instantiation be lazily loaded?
      */
     function __construct($file_paths)
     {
@@ -342,8 +343,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * @return string - rendered template if the URI matches a route key or
      *         null if not
      */
-    public function renderStaticTemplate(
-        $request, $response, $service, $app)
+    public function renderStaticTemplate($request, $response, $service, $app)
     {
         // strip query params
         $path = explode("?", $request->uri());
