@@ -1,23 +1,52 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Internships" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+
 <div class="row">
   <div class="container">
-    <h1>Internships</h1>
-    <div class="twothirds feature">
-		<p>An internship is a real world experience related to your career
-		interests providing an opportunity to learn specific skills and
-		knowledge. Internships are a great way to “test-drive” a career, gain
-		professional experience, and develop your network.</p><p>Internships can be:</p>
-		<ul>
 
- <li>Paid or unpaid experiences</li>
-						<li>Done during the academic year or summer </li>
-						<li>For academic credit or not for credit</li>
-						<li>Part-time or full-time</li>
-						<li><a href="http://umabroad.umn.edu/programs/">Abroad</a> - Search for internships abroad under the &quot;program features&quot; option. </li>
-		</ul>
+    <h1>Internships</h1>
+    <div class="row">
+      <div class="half">
+        <p>An internship is a real world experience related to your career
+    		interests providing an opportunity to learn specific skills and
+    		knowledge. Internships are a great way to “test-drive” a career, gain
+    		professional experience, and develop your network.</p><p>Internships can be:</p>
+
+      </div>
+      <div class="half">
+        <ul>
+          <li>Paid or unpaid experiences</li>
+    			<li>Done during the academic year or summer </li>
+					<li>For academic credit or not for credit</li>
+					<li>Part-time or full-time</li>
+					<li><a href="http://umabroad.umn.edu/programs/">Abroad</a> - Search for internships abroad under the &quot;program features&quot; option. </li>
+    		</ul>
+      </div>
+    </div>
+
+      <div class="row outer-bg-right cool">
+            <div class="container">
+              <div class="inner-bg-right emphasis cool">
+                <div class="span-2"><br /></div>
+                  <div class="span-10">
+                    <div class="span-6">
+                    {% set lines = [
+                    "Each year, over 5000 students",
+                    "enroll in our",
+                    "undergraduate and graduate programs.",
+                    ] %}
+                    {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                    </div>
+                  <div class="span-6"><br /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  <div class="twothirds feature">
 		<h2>The internship search</h2>
 		<ol>
 						<li><strong class="h3">Find your focus</strong><br />

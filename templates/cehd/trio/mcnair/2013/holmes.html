@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Holmes" %}
+{% set page_title = "Alyssa M. Holmes" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2013<small class="clear">Alyssa M. Holmes</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Holmes.jpg" alt="Holmes photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Alyssa M. Holmes</strong>  is a junior at the University of Minnesota, Crookston, double majoring in equine and animal science with an emphasis in pre-veterinary medicine.  Her research interests include equine reproduction, genetics and pedigree and their influence on coat color, conformation, performance, and congenital disease.  She plans to pursue a dual Ph.D./DVM degree following her undergraduate studies.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2013<small class="clear">Alyssa M. Holmes</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">I wish to educate the public on equine preventative measures necessary to reduce congenital defects and overpopulation through the promotion of controlled breeding. In addition, I aim to specialize in pedigree and conformation to study factors which influence performance, and uncover genotypic indicators for phenotypic color anomalies. If one is ready to sacrifice everything for their dream, then they are ready.</blockquote>
-          </div>
+          <p><strong>Alyssa M. Holmes</strong>  is a junior at the University of Minnesota, Crookston, double majoring in equine and animal science with an emphasis in pre-veterinary medicine.  Her research interests include equine reproduction, genetics and pedigree and their influence on coat color, conformation, performance, and congenital disease.  She plans to pursue a dual Ph.D./DVM degree following her undergraduate studies.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2013-Holmes.jpg" alt="Alyssa M. Holmes photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">I wish to educate the public on equine preventative measures necessary to reduce congenital defects and overpopulation through the promotion of controlled breeding. In addition, I aim to specialize in pedigree and conformation to study factors which influence performance, and uncover genotypic indicators for phenotypic color anomalies. If one is ready to sacrifice everything for their dream, then they are ready.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

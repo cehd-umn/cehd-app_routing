@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Nantharath" %}
+{% set page_title = "Phitsavath Nantharath" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2013<small class="clear">Phitsavath Nantharath</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/NantharathThumb.jpg" alt="Phitsavath Nantharath photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Phitsavath Nantharath</strong> is a senior attending the University of Minnesota, Twin Cities. She is a double major in business marketing education and human resource development; she is also a double minor in business management and public health. Her research interests revolve around understanding determinants of dating violence and informing interventions to promote healthy relationships. Ms. Nantharath plans on obtaining her master's degree and Ph.D. in healthcare administration</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2013<small class="clear">Phitsavath Nantharath</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to receive a Ph.D. in healthcare administration and to apply my knowledge in the Laotian community; I wish to contribute to the implementation of quality healthcare organization and to promote healthy living.</blockquote>
-          </div>
+          <p><strong>Phitsavath Nantharath</strong> is a senior attending the University of Minnesota, Twin Cities. She is a double major in business marketing education and human resource development; she is also a double minor in business management and public health. Her research interests revolve around understanding determinants of dating violence and informing interventions to promote healthy relationships. Ms. Nantharath plans on obtaining her master's degree and Ph.D. in healthcare administration</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2013-Nantharath.jpg" alt="Phitsavath Nantharath photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in healthcare administration and to apply my knowledge in the Laotian community; I wish to contribute to the implementation of quality healthcare organization and to promote healthy living.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

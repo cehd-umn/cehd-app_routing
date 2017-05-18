@@ -440,11 +440,6 @@
   template: cehd/alumni/rising/2015/sweet.html
   template_data:
     - section: alumni
-/alumni/rising/2016/:
-  publish: true
-  template: cehd/alumni/rising/2016/index.html
-  template_data:
-    - section: alumni
 /alumni/rising/2016/bohn-gettler/:
   publish: true
   template: cehd/alumni/rising/2016/bohn-gettler.html
@@ -508,11 +503,6 @@
 /alumni/rising/2016/wilkinson/:
   publish: true
   template: cehd/alumni/rising/2016/wilkinson.html
-  template_data:
-    - section: alumni
-/alumni/rising/2017/:
-  publish: true
-  template: cehd/alumni/rising/2017/index.html
   template_data:
     - section: alumni
 /alumni/rising/2017/akukwe/:
@@ -590,9 +580,9 @@
   template: cehd/alumni/rising/2017/pentek.html
   template_data:
     - section: alumni
-/alumni/rising/2017/rosenborough/:
+/alumni/rising/2017/roseborough/:
   publish: true
-  template: cehd/alumni/rising/2017/rosenborough.html
+  template: cehd/alumni/rising/2017/roseborough.html
   template_data:
     - section: alumni
 /alumni/rising/2017/tompkins/:
@@ -2262,6 +2252,11 @@
 /undergraduate/mraz/:
   publish: true
   template: cehd/undergraduate/mraz.html
+  template_data:
+    - section: undergraduate
+/undergraduate/outcomes/:
+  publish: true
+  template: cehd/undergraduate/outcomes.html
   template_data:
     - section: undergraduate
 /undergraduate/research/:

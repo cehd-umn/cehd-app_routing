@@ -1,29 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Farah" %}
+{% set page_title = "Naima Farah" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2013<small class="clear">Naima Farah</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Farah.jpg" alt="Farah photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Naima Farah</strong> is a senior at the University of Minnesota, majoring in Family Social Science with minors in Youth Studies and Counseling and Student Personnel Psychology (CSPP). Her interests include the accessibility of enrichment programs for underrepresented youth and educational counseling. She plans to pursue a doctoral degree in Educational Policy and Administration. </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2013<small class="clear">Natisha Alicea</small></h1>
     </div>
-  </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to attain a master in Counseling Psychology (M.A.) and a doctoral degree in Educational Policy and Administration. I want to open a nonprofit organization to end educational disparities affecting underrepresented communities. I am interested increasing the accessibility and availability of out-of-school enrichment programs</blockquote>
-          </div>
+          <p><strong>Naima Farah</strong> is a senior at the University of Minnesota, majoring in Family Social Science with minors in Youth Studies and Counseling and Student Personnel Psychology (CSPP). Her interests include the accessibility of enrichment programs for underrepresented youth and educational counseling. She plans to pursue a doctoral degree in Educational Policy and Administration. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2013-Farah.jpg" alt="Naima Farah photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to attain a master in Counseling Psychology (M.A.) and a doctoral degree in Educational Policy and Administration. I want to open a nonprofit organization to end educational disparities affecting underrepresented communities. I am interested increasing the accessibility and availability of out-of-school enrichment programs
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

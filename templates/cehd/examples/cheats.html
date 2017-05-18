@@ -1,4 +1,4 @@
-{% extends "cehd/layout/base.html" %}
+{% extends "cehd/layout/documentation.html" %}
 {%- import "macros/svg.html" as svg -%}
 {% set page_title = "Cheats" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -49,12 +49,12 @@
         </div>
       </div>
     </div>
-    <h2>Did You Know?</h2>
-    <p>You need to add a macro at the top of your page, line 2, for this to work... Did you know that?</p>
+    <h2>The Did You Know box</h2>
+    <p>Did you know? You need to add a macro at the top of your page for this to work. Line 2 right after the template call works.</p>
     <h3>The Macro</h3>
       <pre>
-        <code class="html">
-          {%- import "macros/svg.html" as svg -%}
+        <code class="twig">
+          &#123;%- import "macros/svg.html" as svg -%&#125;
         </code>
       </pre>
 
@@ -69,12 +69,12 @@
                   &lt;div class="span-2"&gt;&lt;br /&gt;&lt;/div&gt;
                     &lt;div class="span-10"&gt;
                       &lt;div class="span-6"&gt;
-                      {% set lines = [
+                      &#123;% set lines = [
                       "Each year, over 5000 students",
                       "enroll in our",
                       "undergraduate and graduate programs.",
-                      ] %}
-                      {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                      ] %&#125;
+                      &#123;&#123; svg.did_you_know(_context, "Did you know facts", "Did you know", lines) &#125;&#125;
                       &lt;/div&gt;
                     &lt;div class="span-6"&gt;&lt;br /&gt;&lt;/div&gt;
                   &lt;/div&gt;
