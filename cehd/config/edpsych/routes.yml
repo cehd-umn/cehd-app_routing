@@ -14,6 +14,12 @@
     template_data:
         meta_description: "The Department of Educational Psychology provides training in the cognitive, emotional, and social learning processes that underlie education and human development across the lifespan, including: the psychological foundations of education, quantitative methods in education, the practice and science of counseling psychology, school psychology, and special education."
         section: about
+/edpsych/about/deno-event-2017/:
+    publish: true
+    template: edpsych/about/deno-event-2017.html
+    template_data:
+        meta_description: "Join members of the Department of Educational Psychology for a Memorial Conference, Stanley Scramble golf event, and University of Minnesota Outstanding Achievement Award Luncheon celebrating the life and work of Stan Deno."
+        section: about
 /edpsych/about/diversity-inclusion/:
     publish: true
     template: edpsych/about/diversity.html
