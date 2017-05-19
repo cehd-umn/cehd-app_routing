@@ -1135,6 +1135,11 @@
   template: cehd/reads/previous-books/stjames.html
   template_data:
     - section: reads
+/reads/previous-books/treuer/:
+  publish: true
+  template: cehd/reads/previous-books/treuer.html
+  template_data:
+    - section: reads
 /reads/previous-books/yang/:
   publish: true
   template: cehd/reads/previous-books/yang.html

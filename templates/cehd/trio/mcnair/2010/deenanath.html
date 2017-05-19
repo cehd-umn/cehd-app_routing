@@ -1,17 +1,44 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Deenanath" %}
+{% set page_title = "Veronica Deenanath" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2010<small class="clear">Veronica Deenanath</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2010<small class="clear">Veronica Deenanath</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Deenanath.jpg" alt="Deenanath photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Veronica Deenanath</strong>
       						is a senior at the University of Minnesota, double
       						majoring in psychology and family social science. Her
@@ -19,17 +46,21 @@
       						family home environment, and the impacts these factors
       						have on children, youth, and families. Ms. Deenanath
       						plans on getting her Ph.D. in family social science.</p>
-        </div>
       </div>
     </div>
-    </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to receive a Ph.D. in the social science field and become a professor and researcher. My research interests include finance, mental health, and family home environments.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2010-Deenanath.jpg" alt="Veronica Deenanath photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in the social science field and become a professor and researcher. My research interests include finance, mental health, and family home environments.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

@@ -35,8 +35,8 @@
                     <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
                 </p>
                 {% if data.person.officeHours|is_string %}
-                    <h3 class="h5">Office hours</h3>
-                    <p>{{ data.person.officeHours|safe }}</p>
+                    <h3 class="h5 no-margin-bottom">Office hours</h3>
+                    <p class="no-margin-top">{{ data.person.officeHours|safe }}</p>
                 {% endif %}
                 {% if data.person.curriculumVitaeAddr|is_string %}
                     <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>

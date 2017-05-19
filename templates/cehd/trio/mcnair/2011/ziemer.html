@@ -1,36 +1,60 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Ziemer" %}
+{% set page_title = "Angela Eve Ziemer" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">Angela Eve Ziemer</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Ziemer.jpg" alt="Ziemer photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Angela Eve Ziemer</strong> is a senior at the University of Minnesota – Twin Cities, pursuing a Bachelor of Science
-          and majoring in Kinesiology, Clinical Movement Science.
-          Her research experience is in Sports Sociology working
-          with issues of the historical representation and
-          visibility of minority populations in sport. Ms. Ziemer
-          intends to pursue graduate studies in Therapeutic
-          Sciences.</p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">Angela Eve Ziemer</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">After acquiring an applied understanding of the field of Rehabilitation Science, my ambition is to earn a Ph.D. and to help generate new concepts and designs which enhance the body of all human
-              knowledge. I hope to contribute in a way that ameliorates my community and potentially the world.</blockquote>
-          </div>
+          <p><strong>Octavia Cheatom</strong> is a junior at the University of Minnesota, Twin Cities, majoring in Kinesiology and African American Studies. Her research interests are centered on sport sociology and the impact that culture has on those who participate in sport. Ms. Cheatom plans to pursue a doctorate in physical therapy. </p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Ziemer.jpg" alt="Angela Eve Ziemer photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to be a co-owner of a private practice where professional and collegiate athletes can receive rehabilitative treatment, which will include physical therapy, acupuncture, and psychology.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

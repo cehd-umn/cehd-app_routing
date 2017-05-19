@@ -1,17 +1,44 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Yeboah" %}
+{% set page_title = "Alexis N. Yeboah" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">Alexis N. Yeboah</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">Alexis N. Yeboah</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Yeboah.jpg" alt="Yeboah photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Alexis N. Yeboah</strong> is a senior at the University of Minnesota, majoring in Psychology with a minor in
           Sociology. Her research interests include health
           disparities of underrepresented groups, psychological
@@ -21,17 +48,21 @@
           communities. Ms. Yeboah plans on getting her Masters of
           Public Health with a focus on global and community
           health and later pursuing a doctoral degree.</p>
-        </div>
       </div>
     </div>
-    </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to serve as spokesperson for those who suffer from poor health using my skills acquired as a psychologist and health advocate by providing them with the avenues needed to live to their full potential. Giving them, their children and communities a chance to grow and prosper as I was given.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Yeboah.jpg" alt="Alexis N. Yeboah photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to serve as spokesperson for those who suffer from poor health using my skills acquired as a psychologist and health advocate by providing them with the avenues needed to live to their full potential. Giving them, their children and communities a chance to grow and prosper as I was given.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

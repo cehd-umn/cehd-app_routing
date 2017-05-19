@@ -1,36 +1,67 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Girma" %}
+{% set page_title = "Lidiya Girma" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2010<small class="clear">Lidiya Girma</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2010<small class="clear">Lidiya Girma</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Girma.jpg" alt="Lidiya Girma photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Lidiya Girma</strong>
             is an undergraduate student double majoring in political
       science and sociology. Her research interests include
       immigration policy and human rights as well as the
       effect of mental illness in the African refugee
-      community. </p>
-        </div>
+      community.</p>
       </div>
     </div>
-    </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to earn a graduate degree and work to advocate for the improvement of immigrant and minority rights.
-                I seek to identify and prevent discriminatory policies that hinder the progress of minority groups and leave them vulnerable to exploitation.
-                Marginalized groups need to be given a voice and that is what I want my work to reflect.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2010-Girma.jpg" alt="Lidiya Girma photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to earn a graduate degree and work to advocate for the improvement of immigrant and minority rights.
+                I seek to identify and prevent discriminatory policies that hinder the progress of minority groups and leave them vulnerable to exploitation.
+                Marginalized groups need to be given a voice and that is what I want my work to reflect.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

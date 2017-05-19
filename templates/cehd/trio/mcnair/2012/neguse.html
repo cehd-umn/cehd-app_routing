@@ -1,17 +1,44 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Neguse" %}
+{% set page_title = "Amy Neguse" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2012<small class="clear">Amy Neguse</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2012<small class="clear">Amy Neguse</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Neguse.jpg" alt="Neguse photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Amy Neguse</strong> is a senior at the
           University of Minnesota, Twin Cities, majoring in Family
           Social Science and minoring in Family Violence
@@ -20,20 +47,23 @@
           culturally diverse families, parent education, and
           prevention programs focused on the family system. Ms.
           Neguse plans on pursuing a Ph.D. in marriage and family
-          therapy. </p>
-        </div>
+          therapy.</p>
       </div>
     </div>
-    </div> <!-- ./container -->
-
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to encourage healthy family relationships among	underrepresented populations within our community. With	my motivation and passion for families and education, I	plan to develop intervention and prevention programs in	order to create healthy family systems and to motivate	youth to obtain a higher education</blockquote>
-          </div>
-      </div>
   </div>
 
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2012-Neguse.jpg" alt="Amy Neguse photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to encourage healthy family relationships among	underrepresented populations within our community. With	my motivation and passion for families and education, I	plan to develop intervention and prevention programs in	order to create healthy family systems and to motivate	youth to obtain a higher education
+            </blockquote>
+
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="span-8 feature">
 
