@@ -47,7 +47,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
             $pattern_data = $this->loadYaml($yaml_file_path);
 
-            $patterns = $this->__buildPatternData($pattern_data);
+            $patterns = $this->_buildPatternData($pattern_data);
 
             $this->_patternLibraryData = $this->_loadDict($patterns);
 
@@ -63,22 +63,54 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 $this->router->respond(
                     'GET', $route, [$this, $handler]);
             }
+
+            $groups = $this->_getPatternGroups();
+
+            foreach ($groups as $group)
+            {
+                $patterns = $this->_filterPatternsByGroup($group);
+                $this->router->respond("GET", "/patterns/" . $group . "/", [$this, "patternGroupHandler"]);
+            }
         }
     }
 
-    private function __buildRouteFromPattern($group, $title)
+    private function _filterPatternsByGroup($group)
     {
-        $hyphenated_title = $this->hyphenate($title);
-        return "/patterns/" . $group . "/" . $hyphenated_title . "/";
+        $patterns = [];
+
+        foreach ($this->_patternLibraryData as $pattern)
+        {
+            if ($pattern["group"] === $group)
+            {
+                array_push($patterns, $pattern);
+            }
+        }
+        return $patterns;
     }
 
-    private function __buildPatternData($patterns)
+    private function _getPatternGroups()
+    {
+        $groups = [];
+
+        foreach($this->_patternLibraryData as $pattern)
+        {
+            array_push($groups, $pattern["group"]);
+        }
+        return array_unique($groups);
+    }
+
+    private function _buildRouteFromPattern($group, $title)
+    {
+        return "/patterns/" . $group . "/" . $this->hyphenate($title) . "/";
+    }
+
+    private function _buildPatternData($patterns)
     {
         $new_structure = [];
 
         foreach ($patterns as $title => $pattern)
         {
-            $route = $this->__buildRouteFromPattern($pattern["group"], $title);
+            $route = $this->_buildRouteFromPattern($pattern["group"], $title);
             $pattern["title"] = $title;
             $new_structure[$route] = $pattern;
         }
@@ -107,7 +139,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/index.html', $template_data);
     }
 
-    private function __processSorterData($yaml_file_path)
+    private function _processSorterData($yaml_file_path)
     {
         $data = $this->loadYaml($yaml_file_path);
         $category_data = [];
@@ -152,7 +184,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function programsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $data = $this->__processSorterData($yaml_file_path);
+        $data = $this->_processSorterData($yaml_file_path);
 
         $template_data = [
             "section" => "academics",
@@ -167,7 +199,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function topicsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $data = $this->__processSorterData($yaml_file_path);
+        $data = $this->_processSorterData($yaml_file_path);
 
         $template_data = [
             "section" => "topics",
@@ -182,7 +214,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function topicPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $data = $this->__processSorterData($yaml_file_path);
+        $data = $this->_processSorterData($yaml_file_path);
         $topics = $topics_and_cats["topics"];
         $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
 
@@ -383,8 +415,25 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         {
             if ($pattern["type"] === "include")
             {
-                echo $this->_renderTemplate("cehd/patterns/patterns.html", ["pattern" => $pattern]);
+                echo $this->_renderTemplate("cehd/patterns/pattern.html", ["pattern" => $pattern]);
             }
+            else if ($pattern["type"] === "template")
+            {
+                echo $this->_renderTemplate($pattern["template"], ["pattern" => $pattern]);
+            }
+        }
+    }
+
+    public function patternGroupHandler($request, $response, $service, $app)
+    {
+        $uri_parts = explode("/", $request->pathname());
+        $group = $uri_parts[2];
+        $patterns = $this->_filterPatternsByGroup($group);
+
+        // var_dump($uri_parts);
+        if ($patterns)
+        {
+            echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);
         }
     }
 }

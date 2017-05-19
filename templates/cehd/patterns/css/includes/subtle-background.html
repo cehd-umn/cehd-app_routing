@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="container">
+        <p>To add a background with the correct shade of blue and bigger
+        margins to one of these, add the <samp>.emphasis</samp> and
+        <samp>.subtle</samp> classes.</p>
+
+        <pre><code class="html">
+&lt;div class=&quot;row emphasis margin-top-1&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+
+<div class="row emphasis subtle margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with grey background</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="margin-top-1">
+            <h2>Sass</h2>
+            <pre><code class="scss">
+
+// public/assets/src/sass/_colors.scss
+$base-white: #fff;
+$cehd-tertiary-gold: #ffec99;
+$cehd-light-grey: rgb(239, 239, 238);
+$umn-light-blue-background: #d0edf5;
+$umn-light-brown-foreground: #91785b;
+
+// public/assets/src/sass/_core.scss
+.emphasis {
+    background-color: $cehd-tertiary-gold;
+    padding: 2em;
+
+    &amp;.subtle {
+        background-color: $cehd-light-grey;
+
+        .button {
+            border-color: $base-white;
+        }
+    }
+
+    &amp;.subtle {
+        background-color: $umn-light-blue-background;
+    }
+
+    &amp;.earthy {
+        background-color: $umn-light-brown-foreground;
+    }
+}
+            </code></pre>
+        </div>
+        <div class="margin-top-1">
+            <h2>Rendered CSS</h2>
+            <pre><code class="css">
+.emphasis {
+    background-color: #ffec99;
+    padding: 2em;
+}
+
+/* The subtle class overrides the default background color. */
+.emphasis.subtle {
+    background-color: rgb(239, 239, 238);
+}
+            </code></pre>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Headings" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="whole">
+            <h1>Headings</h1>
+            <dl>
+                <dt>Font</dt>
+                <dd>Montserrat</dd>
+            </dl>
+        </div>
+        <div>
+            <div class="half">
+                <h1>Default heading sizes</h1>
+                {% for i in 1..6 %}
+                    <h{{ i }}>Heading {{ i }}</h{{ i }}>
+                {% endfor %}
+            </div>
+            <div class="half">
+                <h1>Heading classes</h1>
+                {% for i in 1..5 %}
+                    <h6 class="h{{ i }}">Heading 6 with <samp>.h{{ i }}</samp> class</h6>
+                {% endfor %}
+                <h1 class="h6">Heading 1 with <samp>.h6</samp> class</h1>
+            </div>
+        </div>
+
+        <h2>Sass</h2>
+        <pre><code class="scss">
+// public/assets/src/sass/_variables.scss
+$heading-map-desktop: (h1: 48px, h2: 30px, h3: 25px, h4: 20px, h5: 20px, h6: 18px);
+$heading-map-mobile: (h1: 36px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
+
+// public/assets/src/sass/_core.scss
+@each $heading, $size in $heading-map-mobile {
+    #{$heading}, .#{$heading} {
+        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+        font-size: $size;
+        margin: .7em 0;
+        padding: 0;
+
+        &amp;.light {
+            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-weight: normal;
+        }
+
+        &amp;.no-margin-top {
+            margin-top: 0;
+        }
+    }
+
+}
+
+@media all and (min-width: 768px) {
+    @each $heading, $size in $heading-map-desktop {
+        #{$heading}, .#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+            font-weight: bold;
+            margin: 1em 0;
+            padding: 0;
+            text-align: left;
+        }
+    }
+}
+        </code></pre>
+    </div>
+</div>
+{% endblock %}

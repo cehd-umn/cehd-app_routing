@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="container">
+        <div class="twothird grid-example">
+            <p>This is a <samp>.twothird</samp> (66%). (<samp>.twothirds</samp> will also work.)</p>
+        </div>
+        <div class="third grid-example">
+            <p>This is a <samp>.third</samp> (33%).</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container margin-top-1">
+        <div class="third grid-example">
+            <p>This is a <samp>.third</samp> (33%).</p>
+        </div>
+        <div class="twothird grid-example">
+            <p>This is a <samp>.twothird</samp> (66%). (<samp>.twothirds</samp> will also work.)</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <p>The second element <em>must be the last child</em> or the columns will wrap.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h2>Works</h2>
+        <div class="margin-top-1">
+            <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.twothird&lt;/samp&gt; (66%). (&lt;samp&gt;.twothirds&lt;/samp&gt; will also work.)&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.third&lt;/samp&gt; (33%).&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container margin-top-1&quot;&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.third&lt;/samp&gt; (33%).&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.twothird&lt;/samp&gt; (66%). (&lt;samp&gt;.twothirds&lt;/samp&gt; will also work.)&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        <h2>Doesn't Work</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="margin-top-1">
+            <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.twothird&lt;/samp&gt; (66%). (&lt;samp&gt;.twothirds&lt;/samp&gt; will also work.)&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.third&lt;/samp&gt; (33%).&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container margin-top-1&quot;&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.third&lt;/samp&gt; (33%).&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.twothird&lt;/samp&gt; (66%). (&lt;samp&gt;.twothirds&lt;/samp&gt; will also work.)&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- the third .third is no longer the last child --&gt;
+        &lt;div class=&quot;another-element&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h3>Result</h3>
+        <div class="twothird grid-example margin-top-1">
+            <p>This is a <samp>.third</samp> (33%).</p>
+        </div>
+        <div class="third grid-example">
+            <p>This is a <samp>.third</samp> (33%).</p>
+        </div>
+        <div class="another-element"></div>
+    </div>
+</div>

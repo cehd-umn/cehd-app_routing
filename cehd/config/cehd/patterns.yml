@@ -3,6 +3,7 @@ title block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -11,10 +12,12 @@ title block:
     - path: cehd/patterns/includes/template/title-block.html
       type: include
   type: include
+  uses: null
 title_prepend block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -23,10 +26,12 @@ title_prepend block:
     - path: cehd/patterns/includes/template/title-prepend.html
       type: include
   type: include
+  uses: null
 title_append block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -35,10 +40,12 @@ title_append block:
     - path: cehd/patterns/includes/template/title-append.html
       type: include
   type: include
+  uses: null
 meta_content block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -47,10 +54,12 @@ meta_content block:
     - path: cehd/patterns/includes/template/meta-content.html
       type: include
   type: include
+  uses: null
 main_content block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -59,10 +68,12 @@ main_content block:
     - path: cehd/patterns/includes/template/main-content.html
       type: include
   type: include
+  uses: null
 extra_css block:
   categories:
     - template
     - twig blocks
+  description: null
   group: twig
   example_page_url: null
   handler: null
@@ -71,3 +82,443 @@ extra_css block:
     - path: cehd/patterns/includes/template/extra-css.html
       type: include
   type: include
+  uses: null
+Headings:
+  categories:
+    - core styles
+  description: null
+  group: html
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/html/headings.html
+  twig_files: null
+  type: template
+  uses: null
+Layout and grid:
+  categories:
+    - core styles
+  description: null
+  group: css
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/css/layout-grid.html
+  twig_files: null
+  type: template
+  uses:
+    - row
+    - container
+row:
+  categories:
+    - core styles
+  description: Creates a fluid 100% element.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/row.html
+      type: include
+  type: include
+  uses: null
+container:
+  categories:
+    - core styles
+  description: Creates a centered, fluid element with max-width of 1400px;
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/container.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+half:
+  categories:
+    - core styles
+  description: Creates half width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/half.html
+      type: include
+  type: include
+  uses: null
+third:
+  categories:
+    - core styles
+  description: Creates one-third width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/third.html
+      type: include
+  type: include
+  uses: null
+two third:
+  categories:
+    - core styles
+  description: Creates one-third width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/two-third.html
+      type: include
+  type: include
+  uses: null
+centered elements:
+  categories:
+    - core styles
+  description: Creates a centered element on the page
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/centered-element.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: Yellow background
+    - group: css
+      name: Blue background
+    - group: css
+      name: Grey background
+    - group: css
+      name: Brown background
+12-column grid:
+  categories:
+    - core styles
+  description: null
+  group: css
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/css/grid.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+Yellow background:
+  categories:
+    - core styles
+  description: Gives an element a consistent yellow background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/yellow-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+Blue background:
+  categories:
+    - core styles
+  description: Gives an element a consistent blue background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/blue-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+Grey background:
+  categories:
+    - core styles
+  description: Gives an element a consistent grey background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/grey-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+Brown background:
+  categories:
+    - core styles
+  description: Gives an element a consistent brown background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/brown-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+Multi-color background:
+  categories:
+    - core styles
+  description: Gives an element a consistent a background with the CEHD logo repeated.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/multi-color-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+pull quote:
+  categories:
+    - core styles
+    - text
+  description: Gives text the proper size and padding for a pull quote.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/text/includes/pull-quote.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: Yellow background
+standard button:
+  categories:
+    - core styles
+  description: Creates a standard button with hover effects
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/standard-button.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: Grey background
+Partial blue background:
+  categories:
+    - core styles
+  description: Gives an element a partial blue background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/partial-blue-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: Blue background
+Partial yellow background:
+  categories:
+    - core styles
+  description: Gives an element a partial yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/partial-yellow-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: Yellow background
+box corners:
+  categories:
+    - core styles
+  description: Creates a box with angles in the corners
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/box-corners.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+centered text:
+  categories:
+    - core styles
+  description: Center justifies text.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/text/includes/centered-text.html
+      type: include
+  type: include
+  uses: null
+centered button:
+  categories:
+    - core styles
+  description: creates a centered button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/centered-button.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+adding top margin:
+  categories:
+    - core styles
+    - margin-top
+  description: adds top margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/top-margin.html
+      type: include
+  type: include
+  uses: null
+small text:
+  categories:
+    - core styles
+    - tags
+  description: Smaller font size
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/html/includes/tags/small.html
+      type: include
+  type: include
+  uses: null
+sub headings:
+  categories:
+    - core styles
+  description: Sub headings with smaller text
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/sub-headings.html
+      type: include
+  type: include
+  uses:
+    - group: html
+      name: small text
+Hiding images on mobile:
+  categories:
+    - core styles
+  description: Hides images for small screens
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/hiding-images-on-mobile.html
+      type: include
+  type: include
+  uses: null
+Red text:
+  categories:
+    - core styles
+  description: Gives text a red color
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/text/includes/red-text.html
+      type: include
+  type: include
+  uses: null

@@ -51,6 +51,10 @@ img {
     }
 }
 
+.pull-quote {
+    font-size: 1.5em;
+}
+
 .outer-bg-right {
     background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
 
@@ -695,6 +699,10 @@ footer {
 
     .third {
         @include span-columns(4);
+
+        &.feature {
+            @include shift(4);
+        }
     }
 
     .twothird,
