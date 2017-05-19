@@ -1,35 +1,66 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Jordan Langen" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">Jordan Langen</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">Jordan Langen</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Langen.jpg" alt="Jordan Langen photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Jordan Langen</strong> is a senior in the Honors Program at the
             University of Minnesota, Twin Cities, majoring in
             Kinesiology and minoring in Japanese. His research
             interests include understanding the physiological
             factors of endurance events, specifically marathon
-            running. </p>
-        </div>
+            running.</p>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to be able to communicate across cultures and continue learning and trying to enlighten others
-    of the beauty and capabilities of the human body.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Langen.jpg" alt="Jordan Langen photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to be able to communicate across cultures and continue learning and trying to enlighten others
+    of the beauty and capabilities of the human body.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

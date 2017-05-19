@@ -1,30 +1,65 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Gadson" %}
+{% set page_title = "Pertesia Gadson" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2012<small class="clear">Pertesia Gadson</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2012<small class="clear">Pertesia Gadson</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
 
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Pertesia Gadson</strong> is a junior at the
 						University of Minnesota, Rochester.&nbsp; She is majoring in
 						Health Sciences.&nbsp; Her primary research interest revolves
 						around advancing the health and education of at risk
 						youth, but she is also interested in genetics because
-						she finds phenotypes fascinating. </p>
-        </div>
-    </div>
-    </div> <!-- ./container -->
-
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to obtain my bachelor degree from the	University of Minnesota, Rochester then I would like to	receive my doctorate degree.&nbsp; I aspire to obtain those	degrees because essentially I would like to give my	services back to the community through teaching and	research.</blockquote>
-          </div>
+						she finds phenotypes fascinating.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2012-Gadson.jpg" alt="Pertesia Gadson photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to obtain my bachelor degree from the	University of Minnesota, Rochester then I would like to receive my doctorate degree.&nbsp; I aspire to obtain those degrees because essentially I would like to give my services back to the community through teaching and research.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

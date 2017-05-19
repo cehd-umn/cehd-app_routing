@@ -1,18 +1,45 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Jeylani" %}
+{% set page_title = "Aliya M. Jeylani" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">Aliya M. Jeylani</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">Aliya M. Jeylani</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Jeylani.jpg" alt="Aliya M. Jeylani photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Aliya M. Jeylani</strong>s a senior at the University of
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
+          <p><strong>Aliya M. Jeylani</strong> is a senior at the University of
 						Minnesota, Twin Cities, majoring in Business and
 						Marketing Education and minoring in Global Studies. Her
 						research interests revolve around understanding access
@@ -20,19 +47,23 @@
 						students. Ms. Jeylani plans on getting her M.A. in
 						Public Health with emphasis in Health Service
 						Administration.</p>
-        </div>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to start my own non-profit organization that promotes the well being of all citizens by
-                providing services that offset costs of health insurance in order to improve quality of life, 
-                and be an advocate for the creation of efficient and accessible health insurance for all.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Jeylani.jpg" alt="Aliya M. Jeylani photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to start my own non-profit organization that promotes the well being of all citizens by
+                providing services that offset costs of health insurance in order to improve quality of life,
+                and be an advocate for the creation of efficient and accessible health insurance for all.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

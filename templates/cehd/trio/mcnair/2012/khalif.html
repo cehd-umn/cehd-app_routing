@@ -1,31 +1,61 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Khalif" %}
+{% set page_title = "Biftu Khalif" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2012<small class="clear">Biftu Khalif</small></h1>
-
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Khalif.jpg" alt="Khalif photo" /></p>
-        </div>
-        <div class="span-9">
-          <p><strong>Biftu Khalif </strong>is a senior at the University of Minnesota, Twin Cities,  double majoring in sociology and child psychology and  with a minor in public health. Her research interests  revolve around immigration, mental health issues (with a focus on immigrants) and human rights/social justice.  Ms. Khalif plans on getting her M.A. in Occupational  Therapy. &nbsp; </p>
-        </div>
-      </div>
+    <div class="twothirds">
+        <h1>McNair Scholar 2012<small class="clear">Biftu Khalif</small></h1>
     </div>
-    </div> <!-- ./container -->
 
-    <div class="row emphasis bg-cehd-multi">
+
+  </div> <!-- ./container -->
+  <div class="row">
       <div class="container">
           <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to obtain a degree in Occupational Therapy and	start my own non-profit organization to help the many	individuals who are unable to perform daily tasks due to	a disability in countries like Ethiopia.</blockquote>
-          </div>
+          <p><strong>Biftu Khalif </strong>is a senior at the University of Minnesota, Twin Cities,  double majoring in sociology and child psychology and  with a minor in public health. Her research interests  revolve around immigration, mental health issues (with a focus on immigrants) and human rights/social justice.  Ms. Khalif plans on getting her M.A. in Occupational  Therapy.</p>
       </div>
+    </div>
   </div>
 
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2012-Khalif.jpg" alt="Biftu Khalif photo">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to obtain a degree in Occupational Therapy and	start my own non-profit organization to help the many	individuals who are unable to perform daily tasks due to	a disability in countries like Ethiopia.
+            </blockquote>
+
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="span-8 feature">
 

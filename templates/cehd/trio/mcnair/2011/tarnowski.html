@@ -1,32 +1,63 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Tarnowksi" %}
+{% set page_title = "John Tarnowski" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">John Tarnowski</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">John Tarnowski</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Tarnowski.jpg" alt="Tarnowski photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>John Tarnowski</strong> is a junior at the University of
           Minnesota majoring in biochemistry. His life experiences
           have motivated him to improve the human condition
           through research. John plans to earn an MD-PhD.</p>
-        </div>
       </div>
     </div>
-    </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to increase our understanding of health related issues that affect our society. I hope to do this by working in a federal laboratory after earning an MD-Ph.D.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Tarnowski.jpg" alt="John Tarnowski photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to increase our understanding of health related issues that affect our society. I hope to do this by working in a federal laboratory after earning an MD-Ph.D.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">

@@ -1,37 +1,68 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{% set page_title = "Ngoc D. Nguyen" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+
 <div class="row">
   <div class="container">
-    <h1>McNair Scholar 2011<small class="clear">Ngoc D. Nguyen</small></h1>
+    <div class="twothirds">
+        <h1>McNair Scholar 2011<small class="clear">Ngoc D. Nguyen</small></h1>
+    </div>
 
-    <div class="row">
-      <div class="span-8 feature">
-        <div class="span-3">
-          <p><img src="/assets/images/trio/mcnair/Nguyen_Ngoc.gif" alt="Ngoc D. Nguyen photo" /></p>
-        </div>
-        <div class="span-9">
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
           <p><strong>Ngoc D. Nguyen</strong> is a senior at the University of
             Minnesota, majoring in Psychology and minoring in
             Spanish Studies. Her research interests broadly include
             ethnic minority studies, racial discrimination, and
             racial disparities at work, particularly in motivation
             and leadership development. Ms. Nguyen aspires to attain
-            a Ph.D. in Industrial-Organizational Psychology.  </p>
-        </div>
+            a Ph.D. in Industrial-Organizational Psychology.</p>
       </div>
     </div>
-  </div> <!-- ./container -->
+  </div>
 
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-          <div class="half feature">
-              <blockquote class="quote-wrap">My dream is to receive a Ph.D. in Industrial-Organizational Psychology. With the doctorate degree, I would
-    like to investigate and find ways to improve motivation, training, and leadership development for ethnic minorities, to
-    help lessen the gap in racial disparities in the work place.</blockquote>
-          </div>
+  <div class="row emphasis bg-cehd-multi">
+    <div class="containter-tight">
+      <div class="third feature">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2011-Nguyen.jpg" alt="Ngoc D. Nguyen photo">
       </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">My dream is to receive a Ph.D. in Industrial-Organizational Psychology. With the doctorate degree, I would
+    like to investigate and find ways to improve motivation, training, and leadership development for ethnic minorities, to
+    help lessen the gap in racial disparities in the work place.
+            </blockquote>
+
+      </div>
+    </div>
   </div>
 
   <div class="container">
