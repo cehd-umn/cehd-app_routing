@@ -31,6 +31,8 @@ $app->router->respond('GET', '/giving/gifts/', [$app, 'giftsPageHandler']);
 
 $app->router->respond('GET', '/programs/', [$app, 'programsPageHandler']);
 
+$app->router->respond('GET', '/patterns/', [$app, 'patternsHomePageHandler']);
+
 $app->router->respond('GET', '/topics/', [$app, 'topicsPageHandler']);
 
 $app->router->respond('GET', '/topics/[:topic]/', [$app, 'topicPageHandler']);

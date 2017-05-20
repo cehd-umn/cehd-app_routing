@@ -1,0 +1,48 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "CEHD layout components" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row background-grey">
+    <p class="h1 foreground-light-grey detached rotate" style="margin:.5em"><samp>.row</samp></p>
+    <div class="container background-gold">
+        <h1>Heading</h1>
+        <p class="h1 foreground-light-grey detached rotate no-margin-bottom" style="left:-2em;"><samp>.container</samp></p>
+        <div>
+            <div class="background-blue half give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.half</samp></p>
+            </div>
+            <div class="background-blue half give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.half</samp></p>
+            </div>
+        </div>
+
+        <div class="margin-top-1">
+            <div class="background-orange third give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.third</samp></p>
+            </div>
+            <div class="background-orange third give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.third</samp></p>
+            </div>
+            <div class="background-orange third give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.third</samp></p>
+            </div>
+        </div>
+        <div class="margin-top-1">
+            <div class="background-green third give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.third</samp></p>
+            </div>
+            <div class="background-green twothird give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.twothird</samp></p>
+            </div>
+        </div>
+        <div class="margin-top-1">
+            <div class="background-green twothird give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.twothird</samp></p>
+            </div>
+            <div class="background-green third give-height">
+                <p class="h1 foreground-light-grey detached rotate"><samp>.third</samp></p>
+            </div>
+        </div>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

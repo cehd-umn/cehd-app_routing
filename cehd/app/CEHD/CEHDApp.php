@@ -142,6 +142,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     private function _processSorterData($yaml_file_path)
     {
         $data = $this->loadYaml($yaml_file_path);
+        ksort($data);
         $category_data = [];
         $categories = [];
         $degrees = [];
@@ -209,6 +210,34 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         ];
 
         echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
+    }
+
+    public function patternsHomePageHandler($request, $response, $service, $app)
+    {
+        if (!$this->config["is_prod"])
+        {
+            $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
+            $data = $this->_processSorterData($yaml_file_path);
+
+            foreach ($data["data"] as $title => $pattern)
+            {
+                $path = $this->_buildRouteFromPattern($pattern["group"], $title);
+                $link = [
+                    "href" => $path,
+                    "title" => $title,
+                ];
+                $data["data"][$title]["links"] = [$link];
+            }
+
+            $template_data = [
+                "section" => "patterns",
+                "item_data" => $data["data"],
+                "categories" => $data["categories"],
+                "item_data_json" => json_encode($data["data"]),
+            ];
+
+            echo $this->_renderTemplate('cehd/patterns/index.html', $template_data);
+        }
     }
 
     public function topicPageHandler($request, $response, $service, $app)
