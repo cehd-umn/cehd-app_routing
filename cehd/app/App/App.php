@@ -348,9 +348,7 @@ class BaseApp extends \CEHD\App\BaseClass
      */
     public function renderStaticTemplate($request, $response, $service, $app)
     {
-        // strip query params
-        $path = explode("?", $request->uri());
-        $route_info = $this->_routes->get($path[0]);
+        $route_info = $this->_routes->get($request->pathname());
         if ($this->_routeIsLive($route_info))
         {
             echo $this->template->render(
