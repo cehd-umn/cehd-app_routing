@@ -813,3 +813,117 @@ tables:
       type: include
   type: include
   uses: null
+column divider:
+  categories:
+    - layout
+  description: A vertical divider between columns
+  group: page
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/css/divider.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: third
+    - group: css
+      name: half
+    - group: css
+      name: two third
+    - group: css
+      name: 12-column grid
+hero image:
+  categories:
+    - layout
+    - hero image
+    - images
+  description: Code sample for a page with a hero image
+  group: page
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/page/hero.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: uppercase buttons
+    - group: css
+      name: clear buttons
+    - group: css
+      name: third
+    - group: css
+      name: two third
+    - group: css
+      name: 12-column grid
+    - group: css
+      name: container
+    - group: css
+      name: row
+image with caption:
+  categories:
+    - images
+  description: Default styles for figures and figcaptions
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/images/includes/image-with-caption.html
+      type: include
+  type: include
+  uses: null
+vertically aligning headings with images:
+  categories:
+    - images
+    - element vertical alignment
+  description: Removing the top margin from a heading so it aligns with the top of a heading
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/images/includes/image-heading-alignment.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: half
+cropping images to a circle:
+  categories:
+    - images
+    - cropping images
+    - circular images
+  description: Cropping square and thumbnail images to a circle
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/images/includes/image-circular.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+positioning images:
+  categories:
+    - images
+    - layout
+  description: Best practices for positioning images on a page
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/images/includes/image-positioning.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+    - group: css
+      name: half
+    - group: css
+      name: third
+    - group: css
+      name: twothird
