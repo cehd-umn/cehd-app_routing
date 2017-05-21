@@ -927,3 +927,14 @@ positioning images:
       name: third
     - group: css
       name: twothird
+colors:
+  categories:
+    - colors
+  description: Our predefined color pallete
+  group: css
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/colors/index.html
+  twig_files: null
+  type: template
+  uses: null
