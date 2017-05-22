@@ -101,7 +101,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     private function _buildRouteFromPattern($group, $title)
     {
-        return "/patterns/" . $group . "/" . $this->hyphenate($title) . "/";
+        return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
     }
 
     private function _buildPatternData($patterns)
