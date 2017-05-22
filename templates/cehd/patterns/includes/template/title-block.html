@@ -1,0 +1,23 @@
+<p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
+engine</a> is configured to build off of a "base" template that includes a lot
+of code that you shouldn't have to worry about.</p>
+
+<p>Blocks start with <samp>{% verbatim %}{%{% endverbatim %}</samp>, the word
+<samp>block</samp>, and the block name and <samp>{% verbatim %}%}{% endverbatim %}</samp>.</p>
+
+<p>For example, the "title" block looks like this: <samp>{% verbatim %}{% block title %}{% endverbatim %}</samp>.
+
+<p>Blocks must be closed with <samp>{% verbatim %}{% endblock %}{% endverbatim %}</samp>.</p>
+
+<p>All together now, the <samp>title</samp> block looks like this:</p>
+
+<pre><code class="twig">{%- verbatim -%}
+{# Set the title #}
+{% block title %}
+My Page Title
+{% endblock %}
+{%- endverbatim -%}</code></pre>
+
+<p>The code above will generate this html on the page:</p>
+
+<pre><code class="html">&lt;title&gt;My Page Title&lt;/title&gt;</code></pre>

@@ -131,6 +131,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * files
      *
      * @param mixed[] $file_paths - array of file paths
+     * @todo can some of this instantiation be lazily loaded?
      */
     function __construct($file_paths)
     {
@@ -147,6 +148,9 @@ class BaseApp extends \CEHD\App\BaseClass
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
         $twig->addGlobal('inline_svg_styles', $this->inline_svg_styles);
+        // @xxx Will change in version 2 of Twig
+        $filter = new \Twig_SimpleFilter('hyphenate', array($this, 'hyphenate'));
+        $twig->addFilter($filter);
         $this->template = $twig;
 
         $this->response = new \CEHD\App\Response\BaseResponse();
@@ -342,12 +346,9 @@ class BaseApp extends \CEHD\App\BaseClass
      * @return string - rendered template if the URI matches a route key or
      *         null if not
      */
-    public function renderStaticTemplate(
-        $request, $response, $service, $app)
+    public function renderStaticTemplate($request, $response, $service, $app)
     {
-        // strip query params
-        $path = explode("?", $request->uri());
-        $route_info = $this->_routes->get($path[0]);
+        $route_info = $this->_routes->get($request->pathname());
         if ($this->_routeIsLive($route_info))
         {
             echo $this->template->render(

@@ -1,0 +1,29 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Headings" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="whole">
+            <h1>Headings</h1>
+            <dl>
+                <dt>Font</dt>
+                <dd>Montserrat</dd>
+            </dl>
+        </div>
+        <div>
+            <div class="half">
+                <h1>Default heading sizes</h1>
+                {% for i in 1..6 %}
+                    <h{{ i }}>Heading {{ i }}</h{{ i }}>
+                {% endfor %}
+            </div>
+            <div class="half">
+                <h1>Heading classes</h1>
+                {% for i in 1..5 %}
+                    <h6 class="h{{ i }}">Heading 6 with <samp>.h{{ i }}</samp> class</h6>
+                {% endfor %}
+                <h1 class="h6">Heading 1 with <samp>.h6</samp> class</h1>
+            </div>
+        </div>
+{% endblock %}

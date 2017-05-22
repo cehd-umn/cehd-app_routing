@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="container">
+        <dl>
+            <dt class="h2">Copy font<dt>
+            <dd>Lato size 18px</dd>
+            <dt class="h2">Heading font<dt>
+            <dd>
+                <ul>
+                {% for i in 1..6 %}
+                    <li><h{{ i }}>Montserrat heading {{ i }}</h{{ i }}></li>
+                {% endfor %}
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>

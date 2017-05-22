@@ -51,6 +51,10 @@ img {
     }
 }
 
+.pull-quote {
+    font-size: 1.5em;
+}
+
 .outer-bg-right {
     background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
 
@@ -151,26 +155,6 @@ img {
 .whole {
     @include span-columns(12);
 }
-
-// .flex {
-//     align-content: stretch; /* Extra space in Cross Axis */
-//     align-items: stretch; /* align items in Cross Axis */
-//     display: flex;
-//     flex-grow: 1;
-//     justify-content: flex-start; /* align items in Main Axis */
-//
-//     &.column {
-//         flex-direction: column;
-//     }
-//
-//     &.center {
-//         justify-content: center;
-//     }
-// }
-//
-// .flex-item {
-//     flex: 1;
-// }
 
 /// Base styles for SVG wordmarks
 .wordmark-svg {
@@ -695,6 +679,10 @@ footer {
 
     .third {
         @include span-columns(4);
+
+        &.feature {
+            @include shift(4);
+        }
     }
 
     .twothird,

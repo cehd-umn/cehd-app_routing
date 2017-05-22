@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="container">
+        <div class="half grid-example">
+            <p>This is a <samp>.half</samp> (50%).</p>
+        </div>
+        <div class="half grid-example">
+            <p>This is a <samp>.half</samp> (50%).</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <p>The second element with the <samp>.half</samp> class <em>must be the last child</em> or the columns will wrap.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h2>Works</h2>
+        <div class="margin-top-1">
+            <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.half&lt;/samp&gt; (50%).&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;half&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.half&lt;/samp&gt; (50%).&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- the second half is the last child inside the container div --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        <h2>Doesn't Work</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="margin-top-1">
+            <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.half&lt;/samp&gt; (50%).&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;half&quot;&gt;
+            &lt;p&gt;This is a &lt;samp&gt;.half&lt;/samp&gt; (50%).&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- the second .half is no longer the last child --&gt;
+        &lt;div class=&quot;another-element&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h3>Result</h3>
+        <div class="half grid-example margin-top-1">
+            <p>This is a <samp>.half</samp> (50%).</p>
+        </div>
+        <div class="half grid-example">
+            <p>This is a <samp>.half</samp> (50%).</p>
+        </div>
+        <div class="another-element"></div>
+    </div>
+</div>
