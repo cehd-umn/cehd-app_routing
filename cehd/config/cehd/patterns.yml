@@ -129,7 +129,7 @@ centered elements:
     - group: css
       name: Yellow background
     - group: css
-      name: Blue background
+      name: blue background
     - group: css
       name: Grey background
     - group: css
@@ -245,6 +245,27 @@ multi-color background:
       name: container
     - group: css
       name: half
+wplc background:
+  categories:
+    - background color
+    - images
+    - wplc
+  description: Gives an element a consistent blue background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/wplc-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
 pull quote:
   categories:
     - text
@@ -338,7 +359,7 @@ partial blue background:
     - group: css
       name: twothird
     - group: css
-      name: Blue background
+      name: blue background
 partial yellow background:
   categories:
     - layout

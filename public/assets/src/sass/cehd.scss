@@ -209,6 +209,13 @@ img {
         background-image: url("/assets/dist/images/background-cehd-multicolor.png");
         background-repeat: repeat;
     }
+
+    &.wplc {
+        background-image: url("/assets/dist/images/background-wplc.svg");
+        background-position: 0 -100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .connect-with-us {
