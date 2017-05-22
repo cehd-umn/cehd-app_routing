@@ -1,0 +1,47 @@
+{%- import "macros/svg.html" as svg -%}
+<div class="row">
+    <div class="container">
+        <pre><code class="jinja">{% verbatim %}
+{# import the macro #}
+{%- import "macros/svg.html" as svg -%}
+&lt;div class=&quot;row emphasis earthy&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature margin-top-1&quot;&gt;
+            {# create an array of 2-5 short lines of text #}
+            {% set lines = [
+                &quot;CEHD has scholarships&quot;,
+                &quot;ranging from&quot;,
+                &quot;$1,000-$20,000 for tuition, study abroad&quot;,
+                &quot;and unpaid internships.&quot;,
+            ] %}
+            {# call the macro #}
+            {{ svg.did_you_know(_context, &quot;Did you know facts&quot;, &quot;Did you know&quot;, lines) }}
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endverbatim %}
+</code></pre>
+    </div>
+</div>
+<div class="row emphasis earthy margin-top-1">
+    <div class="container">
+        <div class="half feature margin-top-1">
+            {% set lines = [
+                "CEHD has scholarships",
+                "ranging from",
+                "$1,000-$20,000 for tuition, study abroad",
+                "and unpaid internships.",
+            ] %}
+            {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="/examples/macros/">Our macro documentation</a></li>
+            <li><a href="https://twig.sensiolabs.org/doc/1.x/templates.html#macros">The Twig macro documentation</a></li>
+        </ul>
+    </div>
+</div>

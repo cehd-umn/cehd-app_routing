@@ -339,11 +339,11 @@ partial blue background:
       name: twothird
     - group: css
       name: Blue background
-partial yellow background:
+half yellow background:
   categories:
     - layout
     - background color
-  description: Gives an element a partial yellow background from the right side.
+  description: Gives an element a half-width yellow background from the right side.
   group: css
   example_page_url: null
   handler: null
@@ -358,11 +358,61 @@ partial yellow background:
     - group: css
       name: container
     - group: css
+      name: half
+    - group: css
+      name: yellow background
+third yellow background:
+  categories:
+    - layout
+    - background color
+  description: Gives an element a third-width yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/partial-yellow-background-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
       name: third
     - group: css
       name: twothird
     - group: css
-      name: Yellow background
+      name: yellow background
+    - group: css
+      name: half yellow background
+two-third yellow background:
+  categories:
+    - layout
+    - background color
+  description: Gives an element a two third-width yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/partial-yellow-background-twothird.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: yellow background
+    - group: css
+      name: half yellow background
 box corners:
   categories:
     - corners
@@ -757,6 +807,7 @@ strong tag:
     - html
     - tags
     - defaults
+    - font weight
   description: Default styles for bold text
   group: html
   example_page_url: null
@@ -938,3 +989,194 @@ colors:
   twig_files: null
   type: template
   uses: null
+did you know SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?"
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+did you know SVG with yellow background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?"
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-yellow.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: yellow background
+    - group: svg
+      name: did you know SVG
+did you know SVG with blue background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a blue background
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG
+did you know SVG with a one-third blue background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one third blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-one-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG with blue background
+    - group: svg
+      name: did you know SVG
+did you know SVG with a two-third blue background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one two third blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-two-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG
+    - group: svg
+      name: did you know SVG with blue background
+did you know SVG with grey background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a grey background
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-grey.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: grey background
+did you know SVG with brown background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a grey background
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-brown.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: brown background
