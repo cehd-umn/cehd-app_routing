@@ -4,18 +4,19 @@
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>About TERI</h1>
-      <div class="row">
-        <div class="span-6">
+    <div class="row">
+      <div class="span-4">
+        {{ include('cehd/teaching/co-teaching/foundations/aa-nav.html') }}
+      </div>
+      <div class="span-8">
+        <h1>About TERI</h1>
           <p>Co-Teaching is a key element of the
           <a href="/teri/"><strong>Teacher Education Redesign
           Initiative</strong></a> (TERI) Partner Network between the University of MN- Twin
-          Cities and our district partners including schools in: Brooklyn Center, Columbia Heights, Edina, Forrest Lake,
+          Cities and our district partners including schools in: Brooklyn Center, Columbia Heights, Edina, Forest Lake,
           Minneapolis, Richfield, St. Paul, Wayzata, and White Bear Lake.</p>
           <p class="text-center">
           <img alt="school district network" src="/assets/images/teaching/co-teaching/OTE-Partner-Network-Diagram-01.jpg" /></p>
-        </div>
-        <div class="span-6">
           <p><a href="/teri/"><strong>TERI</strong></a> is one
           of many Bush funded initiatives in Minnesota. As part of the Bush
           network, universities and school district partners
@@ -38,15 +39,14 @@
           <ul>
             <li><a href="/assets/docs/teaching/co-teaching-modules/Reimaginging-Our-Practice.pdf"><strong>Reimaging our practice: what’s new?</strong></a>
             (PDF)</li>
-
           </ul>
-        </div>
-      </div>
+
       <p class="text-center"><a href="/teaching/co-teaching/foundations/what/" class="button center">Next: What is
       Co-Teaching?</a></p>
 
         <p><small>&copy; 2012, St. Cloud State University. Used with permission by the University of Minnesota-Twin Cities’ Office of Teacher Education (OTE) for the CEHD Partner Network</small></p>
-
+      </div>
+    </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

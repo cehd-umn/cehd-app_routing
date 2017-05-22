@@ -1000,6 +1000,11 @@
   template: cehd/global/index.html
   template_data:
     - section: global
+/global/gtep/:
+  publish: true
+  template: cehd/global/gtep.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
