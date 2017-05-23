@@ -1098,6 +1098,36 @@ did you know SVG with a one-third blue background:
       name: did you know SVG with blue background
     - group: svg
       name: did you know SVG
+did you know SVG with a one-half blue background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one half blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-one-half.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG with blue background
+    - group: svg
+      name: did you know SVG
 did you know SVG with a two-third blue background:
   categories:
     - background color
@@ -1160,7 +1190,7 @@ did you know SVG with brown background:
     - macros
     - svg
     - twig
-  description: Creates an inline SVG for "Did you know?" with a grey background
+  description: Creates an inline SVG for "Did you know?" with a brown background
   group: svg
   example_page_url: null
   handler: null
