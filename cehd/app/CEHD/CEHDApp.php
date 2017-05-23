@@ -304,7 +304,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $query['tg'] = $query_data['tg'];
         };
 
-        if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
+        if (array_key_exists('nm', $query_data))
+        {
+            $query['nm'] = $query_data['nm'];
+        };
+
+        if (
+            array_key_exists('en', $query_data) ||
+            array_key_exists('tg', $query_data) ||
+            array_key_exists('nm', $query_data))
         {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => $query];
