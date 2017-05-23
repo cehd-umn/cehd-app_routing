@@ -1223,3 +1223,99 @@ did you know SVG with brown background:
       name: half
     - group: css
       name: brown background
+Twitter icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Twitter logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/twitter.html
+      type: include
+  type: include
+  uses: null
+Facebook icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Facebook logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/facebook.html
+      type: include
+  type: include
+  uses: null
+Pinterest icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Pinterest logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/pinterest.html
+      type: include
+  type: include
+  uses: null
+LinkedIn icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the LinkedIn logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/linkedin.html
+      type: include
+  type: include
+  uses: null
+Email icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Email logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/email.html
+      type: include
+  type: include
+  uses: null
+Calendar icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Calendar logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/calendar.html
+      type: include
+  type: include
+  uses: null
