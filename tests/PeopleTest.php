@@ -53,6 +53,7 @@ class PeopleTest extends TestCase
     {
         $this->assertEquals(3, count($this->people_multiple_from_tag->people[0]->jobs));
         $this->assertEquals("Associate Professor", $this->people_multiple_from_tag->people[0]->jobs[0]->description);
+        $this->assertEquals("CEHD Educational Psychology", $this->people_multiple_from_tag->people[0]->jobs[0]->umZDeptIdDescription);
         $this->assertEquals("Codding,Robin Susan", $this->people_multiple_from_tag->people[0]->name);
     }
 
