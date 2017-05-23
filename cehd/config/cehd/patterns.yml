@@ -740,6 +740,19 @@ lists without bullets or numbers:
       type: include
   type: include
   uses: null
+lists with headings:
+  categories:
+    - ordered lists
+  description: Creates an ordered list with numbers the same size as the headings
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/lists-with-headings.html
+      type: include
+  type: include
+  uses: null
 a tag:
   categories:
     - html

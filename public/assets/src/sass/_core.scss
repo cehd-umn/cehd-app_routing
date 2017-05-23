@@ -210,6 +210,29 @@ img {
     font-style: normal;
 }
 
+ol {
+    &.with-headings {
+        counter-reset: li; /* Initiate a counter */;
+        padding-left: 1.13em;
+
+        > li {
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: counter(li); /* Use the counter as content */
+                counter-increment: li; /* Increment the counter by 1 */
+                left: -2em;
+                margin-right: 8px;
+                padding: 4px;
+                position: absolute;
+                top: -4px;
+                width: 2em;
+            }
+        }
+    }
+}
+
 /// Iterates over map of heading sizes to generate heading styles and matching
 /// classes
 ///
@@ -221,6 +244,11 @@ img {
         font-size: $size;
         margin: .7em 0;
         padding: 0;
+
+        li.#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+        }
 
         &.light {
             font-family: Lato, Verdana, Geneva, sans-serif;
