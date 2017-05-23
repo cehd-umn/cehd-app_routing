@@ -1,0 +1,16 @@
+<dl>
+{% for person in data.people %}
+    <dt>{{ person.nameFirstLast }}</dt>
+    <dd>
+        <dl>
+            <dt>Department</dt>
+            {% for job in person.jobs %}
+                <dd>{{ job.umZDeptIdDescription }}</dd>
+            {% endfor %}
+            <dt>Contact</dt>
+            <dd>{{ person.phone }}</dd>
+            <dd><a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a></dd>
+        </dl>
+    </dd>
+{% endfor %}
+</dl>
