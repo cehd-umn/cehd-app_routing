@@ -5,7 +5,14 @@
 <div class="row">
   <div class="container">
     <h1>Directory</h1>
-    <p>search box will be placed here</p>
+    <div class="whole">
+        <form action="/directory/" method="get" id="directory-search">
+            <label for="nm">Search</label>
+            <input type="text" placeholder="Search" id="nm" name="nm">
+        </form>
+    </div>
+    <div class="whole" id="search-results">
+    </div>
     <div class="third"></div>
     <div class="twothird">
       <p><strong>Academic and Information Technology</strong> <br />
@@ -72,4 +79,46 @@
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    (function() {
+        "use strict";
+        var $form = $("#directory-search");
+        var base_url = "/services/people-tool/";
+
+        $form.on("submit", function(e) {
+            e.preventDefault();
+            var query = encodeURIComponent($(this).find("input").val());
+            var params = {
+                url: base_url,
+                data: {
+                    "nm": query,
+                }
+            };
+
+            var client = new HTTPClient();
+            var $response = client.get(params);
+            $response.done(function() {
+                var results = client.getResults();
+                var template_params = {
+                    "template_path": "/assets/dist/views/cehd/people/",
+                    "template_name": "directory.html",
+                    "$target_element": $("#search-results"),
+                    "data": {
+                        people: results,
+                        limit: 20,
+                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                    }
+                };
+
+                console.log(template_params);
+
+                var renderer = new Renderer();
+                renderer.init(template_params);
+                renderer.render();
+            });
+        });
+    })();
+</script>
 {% endblock %}
