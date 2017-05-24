@@ -184,7 +184,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function programsPageHandler($request, $response, $service, $app)
     {
-        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/programs.yml';
         $data = $this->_processSorterData($yaml_file_path);
 
         $template_data = [
