@@ -740,6 +740,19 @@ lists without bullets or numbers:
       type: include
   type: include
   uses: null
+lists with headings:
+  categories:
+    - ordered lists
+  description: Creates an ordered list with numbers the same size as the headings
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/lists-with-headings.html
+      type: include
+  type: include
+  uses: null
 a tag:
   categories:
     - html
@@ -1098,6 +1111,36 @@ did you know SVG with a one-third blue background:
       name: did you know SVG with blue background
     - group: svg
       name: did you know SVG
+did you know SVG with a one-half blue background:
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one half blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-one-half.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG with blue background
+    - group: svg
+      name: did you know SVG
 did you know SVG with a two-third blue background:
   categories:
     - background color
@@ -1160,7 +1203,7 @@ did you know SVG with brown background:
     - macros
     - svg
     - twig
-  description: Creates an inline SVG for "Did you know?" with a grey background
+  description: Creates an inline SVG for "Did you know?" with a brown background
   group: svg
   example_page_url: null
   handler: null
@@ -1180,3 +1223,99 @@ did you know SVG with brown background:
       name: half
     - group: css
       name: brown background
+Twitter icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Twitter logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/twitter.html
+      type: include
+  type: include
+  uses: null
+Facebook icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Facebook logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/facebook.html
+      type: include
+  type: include
+  uses: null
+Pinterest icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Pinterest logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/pinterest.html
+      type: include
+  type: include
+  uses: null
+LinkedIn icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the LinkedIn logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/linkedin.html
+      type: include
+  type: include
+  uses: null
+Email icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Email logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/email.html
+      type: include
+  type: include
+  uses: null
+Calendar icon SVG:
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Calendar logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/calendar.html
+      type: include
+  type: include
+  uses: null

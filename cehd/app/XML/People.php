@@ -478,11 +478,11 @@ class Person extends \CEHD\App\XML\XML
         $job = new Job();
 
         $job->deptId               = $this->toString($jobData->deptId);
-        $job->deptIdDescription    = $this->toString($jobData->deptIdDescription);
+        $job->deptIdDescription    = $this->toString($jobData->deptIdDescr);
         $job->status               = $this->toString($jobData->jobStatus);
         $job->description          = $this->toString($jobData->jobCodeDescr);
         $job->umZDeptId            = $this->toString($jobData->umZDeptId);
-        $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescription);
+        $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescr);
         return $job;
     }
 
