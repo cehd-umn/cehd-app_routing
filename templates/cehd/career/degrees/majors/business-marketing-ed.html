@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Careers in Business and Marketing Education" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -52,7 +53,20 @@
               </ul>
           </div>
       </div>
-
+      <div class="row emphasis cool">
+          <div class="container">
+              <div class="half feature margin-top-1">
+                  {# create an array of 2-5 short lines of text #}
+                  {% set lines = [
+                      "100% of business and marketing education",
+                      "students complete",
+                      " at least one internship.",
+                  ] %}
+                  {# call the macro #}
+                  {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+              </div>
+          </div>
+      </div>
 
 <h2 class="text-center">Career opportunities</h2>
     <div class="row">
@@ -119,22 +133,6 @@
         </div>
     </div>
 </div>
-<div class="margin-top-2">
-</div>
-    <div class="row emphasis bg-cehd-multi">
-      <div class="container">
-        <div class="third feature">
-
-                          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2016-Oberry.jpg" alt="photo of Dorothy O'Berry">
-             </div>
-        <div class="twothird">
-              <blockquote class="quote-wrap">I believe that education is not only the key to success but also the key to survival. My dream is to provide an equal opportunity for quality education for all who desire it.</blockquote>
-              <p align="right" class="speaker">Dorothy O'Berry<br/>
-             Business and Marketing Education <br/>
-             minor in technical communication</p>
-        </div>
-      </div>
-    </div>
   <div class="container">
 <h2 class="text-center">Career opportunities with an advanced or graduate degree</h2>
     <div class="row">

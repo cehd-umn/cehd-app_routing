@@ -1320,6 +1320,11 @@
   template: cehd/teri/partnerships.html
   template_data:
     - section: teri
+/topics/sample/:
+  publish: true
+  template: cehd/topics/sample.html
+  template_data:
+    - section: topics
 /trio/:
   publish: true
   template: cehd/trio/index.html
