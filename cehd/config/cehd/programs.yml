@@ -4,7 +4,7 @@ Adult Education:
   publish: true
   links:
     - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.
+      href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
     - title: Masters
       href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
     - title: Graduate Certificate
@@ -148,7 +148,8 @@ Counseling and Student Personnel Psychology:
       href: http://www.cehd.umn.edu/EdPsych/Programs/CSPP/default.html
   description: Counsel others throughout the lifespan. Work in schools, colleges, or community organizations, and help people develop personally and socially, in their academic or career pursuits.
   categories:
-    - Teaching, Learning, and Schools",Disability and Aging
+    - Teaching, Learning, and Schools
+    - Disability and Aging
 Couple and Family Therapy:
   meta: null
   publish: true
@@ -178,7 +179,8 @@ Disability Policy and Services:
       href: http://www.cehd.umn.edu/OLPD/grad-programs/EPL/disabilitycert.html
   description: This program surveys the spectrum of education, health, and social services available to individuals with disabilities and their families, and the public and private networks of disability services.
   categories:
-    - Community and Leadership,Disability and Aging
+    - Community and Leadership
+    - Disability and Aging
 Dual Language and Immersion Education:
   meta: null
   publish: true
@@ -186,7 +188,7 @@ Dual Language and Immersion Education:
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
   description: Work effectively in dual language and immersion settings, in programs where the second / foreign / heritage / indigenous language is the vehicle to teach school subjects.
-  categores:
+  categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
 Early Childhood Education:
@@ -375,7 +377,8 @@ Human Resource Development:
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/certificate.html
   description: Study the methods and practices for helping employees develop their personal and organizational skills, knowledge, and abilities.
-  categories: Community and Leadership
+  categories:
+    - Community and Leadership
 K-12 Technology Integration:
   meta: null
   publish: true
@@ -422,7 +425,7 @@ Learning Technologies:
   meta: null
   publish: true
   links:
-    - title: Master
+    - title: Masters
       href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/LT.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/LT.html
@@ -513,7 +516,7 @@ Professional Development:
       href: http://www.cehd.umn.edu/olpd/grad-programs/EPL/profdev-cert.html
   description: Design, implement, and evaluate learning opportunities for PreK-12 educators and related staff.
   categories:
-    -Community and Leadership
+    - Community and Leadership
 Program Evaluation:
   meta: null
   publish: true
@@ -562,7 +565,8 @@ Recreation Administration:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/kin/current/undergrad/rec.html
   description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
-  categories: Recreation, Health, and Wellbeing
+  categories:
+    - Recreation, Health, and Wellbeing
 School Psychology:
   meta: null
   publish: true
@@ -578,6 +582,7 @@ School Psychology:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
 Science Education:
+  meta: null
   publish: true
   links:
     - title: License
@@ -586,6 +591,7 @@ Science Education:
   categories:
     - Teaching, Learning, and Schools
 Science, Technology, Engineering, and Math (STEM) Education:
+  meta: null
   publish: true
   links:
     - title: Masters
