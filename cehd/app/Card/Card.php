@@ -32,7 +32,7 @@ abstract class Card extends BaseClass
      */
     private $_categories = [];
 
-    private $_links = [];
+    public $links = [];
 
     public $description;
 
@@ -92,14 +92,14 @@ abstract class Card extends BaseClass
     {
         $l = new CardLink();
         $l->set($link["title"], $link["href"]);
-        array_push($this->_links, $l);
+        array_push($this->links, $l);
     }
 
     public function getLink($key)
     {
-        if (array_key_exists($key, $this->_links))
+        if (array_key_exists($key, $this->links))
         {
-            return $this->_links[$key];
+            return $this->links[$key];
         }
     }
 

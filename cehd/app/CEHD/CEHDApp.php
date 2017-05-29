@@ -192,7 +192,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $template_data = [
             "section" => "academics",
             "item_data" => $cards,
-            "categories" => $cardsInstance->getCategories(),
+            "categories" => $cardsInstance->getCategoriesAndDegrees(),
             "item_data_json" => json_encode($cards),
         ];
 

@@ -41,4 +41,22 @@ class ProgramCards extends CardGroup
 
         return $this;
     }
+
+    public function getCategoriesAndDegrees()
+    {
+        $categories = $this->getCategories();
+        $degrees = [];
+
+        foreach ($this->_cards as $card)
+        {
+            foreach ($card->links as $degree)
+            {
+                $degrees[$this->hyphenate($degree->title)] = $degree->title;
+            }
+        }
+
+        asort($degrees);
+        $categories = $categories + $degrees;
+        return $categories;
+    }
 }
