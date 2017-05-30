@@ -1013,7 +1013,7 @@ did you know SVG:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know.html
       type: include
   type: include
   uses:
@@ -1037,7 +1037,7 @@ did you know SVG with yellow background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-yellow.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-yellow.html
       type: include
   type: include
   uses:
@@ -1065,7 +1065,7 @@ did you know SVG with blue background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-blue.html
       type: include
   type: include
   uses:
@@ -1093,7 +1093,7 @@ did you know SVG with a one-third blue background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-one-third.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-blue-one-third.html
       type: include
   type: include
   uses:
@@ -1123,7 +1123,7 @@ did you know SVG with a one-half blue background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-one-half.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-blue-one-half.html
       type: include
   type: include
   uses:
@@ -1153,7 +1153,7 @@ did you know SVG with a two-third blue background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-blue-two-third.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-blue-two-third.html
       type: include
   type: include
   uses:
@@ -1183,7 +1183,7 @@ did you know SVG with grey background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-grey.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-grey.html
       type: include
   type: include
   uses:
@@ -1209,7 +1209,7 @@ did you know SVG with brown background:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/macros/includes/svg/did-you-know-background-brown.html
+    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-brown.html
       type: include
   type: include
   uses:

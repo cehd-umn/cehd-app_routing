@@ -2,13 +2,11 @@
     <div class="container">
         <div class="card-container margin-top-2">
             {% for item_title, item in item_data %}
+                {% if item.publish is not defined or item.publish %}
                 <div id="card-{{ loop.index }}" class="card
                     {%- if item.categories_hyphenated -%}
                       {{ " " }}{{- item.categories_hyphenated|join(" ") -}}
                     {%- endif -%}
-                    {# {%- if item.degrees_hyphenated -%}
-                      {{ " " }}{{- item.degrees_hyphenated|join(" ") -}}
-                    {%- endif -%} #}
                     "{#- close the class= quote -#}
                     {%- if item.categories -%}
                       {{ " " }}data-categories="{{- item.categories|join(" ") }}
@@ -30,8 +28,8 @@
                     </ul>
                     {% endif %}
                 </div><!-- / card -->
+                {% endif %}
             {% endfor %}
         </div><!-- / card-container -->
     </div><!-- / container -->
 </div><!-- / row -->
-
