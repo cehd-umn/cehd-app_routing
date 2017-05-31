@@ -22,6 +22,14 @@ class NotImplementedException extends \Exception
 {
 }
 
+class MissingElementException extends \Exception
+{
+}
+
+class InvalidTypeException extends \Exception
+{
+}
+
 /**
  * Abstract Card class
  */
@@ -43,6 +51,60 @@ abstract class Card extends BaseClass
     public $title;
 
     public $categories_hyphenated;
+
+    private function _validateCard($card)
+    {
+        $msg = "OK";
+        $valid = true;
+
+        if (!is_array($card))
+        {
+            $msg = "card data must be in an associative array";
+            $valid = false;
+            throw new InvalidTypeException($msg);
+        }
+        else if ($this->arrayContains("publish", $card) && !is_bool($card["publish"]))
+        {
+            $msg = "card data must contain a publish status that is boolean";
+            $valid = false;
+            throw new InvalidTypeException($msg);
+        }
+        else if (gettype(key($card)) !== "string")
+        {
+            $msg = "Card array keys should be a string.";
+            $valid = false;
+            throw new InvalidTypeException($msg);
+        }
+
+        $cards_should_have = [
+            "categories",
+            "description",
+            "publish",
+            "meta",
+        ];
+
+        foreach ($cards_should_have as $card_should_have)
+        {
+            if ($this->arrayDoesNotContain($card_should_have, $card))
+            {
+                $msg = "card data must contain a " . $card_should_have . " element";
+                $valid = false;
+                throw new MissingElementException($msg);
+            }
+        }
+
+        return $valid;
+    }
+
+    public function arrayContains($needle, $haystack)
+    {
+       return array_key_exists($needle, $haystack);
+    }
+
+    public function arrayDoesNotContain($needle, $haystack)
+    {
+        return !$this->arrayContains($needle, $haystack);
+    }
 
     public function addCategory($category, $key=null)
     {
@@ -105,31 +167,54 @@ abstract class Card extends BaseClass
 
     public function setCard($title, $card)
     {
-        if ($card["categories"])
+        try
         {
-            foreach($card["categories"] as $category)
+            if ($this->_validateCard($card) === true)
             {
-                $this->addCategory($category);
+                if ($card["categories"])
+                {
+                    foreach($card["categories"] as $category)
+                    {
+                        $this->addCategory($category);
+                    }
+                }
+
+                if (array_key_exists("links", $card) && $card["links"])
+                {
+                    foreach($card["links"] as $link)
+                    {
+                        $this->addLink($link);
+                    }
+                }
+
+                $this->description = $card["description"];
+
+                $this->publish = $card["publish"];
+
+                $this->meta = $card["meta"];
+
+                $this->title = $title;
+
+                $this->categories_hyphenated = $this->getCategoryKeys();
             }
         }
-
-        if ($card["links"])
+        catch (InvalidKeyException $e)
         {
-            foreach($card["links"] as $link)
-            {
-                $this->addLink($link);
-            }
+            echo "Invalid key: " . $e->getMessage() . "\n";
         }
-
-        $this->description = $card["description"];
-
-        $this->publish = $card["publish"];
-
-        $this->meta = $card["meta"];
-
-        $this->title = $title;
-
-        $this->categories_hyphenated = $this->getCategoryKeys();
+        catch (MissingElementException $e)
+        {
+            echo "Missing element: " . $e->getMessage() . "\n";
+        }
+        catch (InvalidTypeException $e)
+        {
+            // echo "Invalid type: " . $e->getMessage() . "\n";
+            echo "Invalid type: " . get_class($e) . "\n";
+        }
+        catch (Exception $e)
+        {
+            echo "Exception: " . $e->getMessage() . "\n";
+        }
     }
 }
 
