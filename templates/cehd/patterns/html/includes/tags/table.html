@@ -1,0 +1,28 @@
+{%- import "macros/table/table.html" as table -%}
+<div class="row">
+    <div class="container">
+        {{ table.start_table("Default table styles") }}
+            {{ table.heading_row(["Heading 1", "Heading 2", "Heading 3", "Heading 4", "Heading 5"]) }}
+            {{ table.row([
+                "lorem",
+                "ipsum",
+                "dolor",
+                "sit",
+                "amet"]) }}
+            {{ table.row([
+                "consectetur",
+                "adipiscing",
+                "elit",
+                "sed",
+                "do",
+                ]) }}
+            {{ table.row([
+                "eiusmod",
+                "tempor",
+                "incididunt",
+                "ut",
+                "labore",
+                ]) }}
+        {{ table.end_table() }}
+    </div>
+</div>
