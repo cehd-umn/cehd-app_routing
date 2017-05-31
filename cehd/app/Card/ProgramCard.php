@@ -16,6 +16,7 @@ use CEHD\App\Card\CardGroup;
 
 class ProgramCard extends Card
 {
+    // @todo add links validation
 }
 
 class ProgramCards extends CardGroup
