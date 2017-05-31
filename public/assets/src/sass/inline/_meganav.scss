@@ -53,9 +53,9 @@ nav {
     }
 
     .hero-pithy-phrase {
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 20px;
         margin-right: 30px;
+        padding-right: 62px;
     }
 
     .main-nav-hero-image-text {
@@ -190,6 +190,7 @@ nav {
 
     .content-container {
         background: $umn-light-grey-background;
+        border-top: 17px solid $base-white;
         margin-left: 10px;
         padding: 10px 0 10px 10px;
 
