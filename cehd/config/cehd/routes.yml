@@ -740,11 +740,6 @@
   template: cehd/career/hours.html
   template_data:
     - section: career
-/career/opportunities/:
-  publish: true
-  template: cehd/career/opportunities.html
-  template_data:
-    - section: career
 /career/research/:
   publish: true
   template: cehd/career/research.html
@@ -805,9 +800,9 @@
   template: cehd/career/degrees/majors/kinesiology.html
   template_data:
     - section: career
-/career/degrees/majors/rec-park-leisure/:
+/career/degrees/majors/rec-admin/:
   publish: true
-  template: cehd/career/degrees/majors/rec-park-leisure.html
+  template: cehd/career/degrees/majors/rec-admin.html
   template_data:
     - section: career
 /career/degrees/majors/sped/:
@@ -973,6 +968,11 @@
 /commencement/:
   publish: true
   template: cehd/commencement/index.html
+  template_data:
+    - section: commencement
+/commencement/index-for-jan-2018/:
+  publish: false
+  template: cehd/commencement/index-for-jan-2018.html
   template_data:
     - section: commencement
 /direct/:
@@ -2253,11 +2253,6 @@
 /trio/upward-bound/apply/:
   publish: true
   template: cehd/trio/upward-bound/apply.html
-  template_data:
-    - section: trio
-/trio/upward-bound/events/:
-  publish: true
-  template: cehd/trio/upward-bound/events.html
   template_data:
     - section: trio
 /trio/upward-bound/hollenback/:
