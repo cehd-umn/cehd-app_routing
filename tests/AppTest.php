@@ -206,4 +206,17 @@ class AppTest extends TestCase
         $this->assertArrayHasKey("foo-bar", $result);
         $this->assertEquals($categories[0], $result["foo-bar"]);
     }
+
+    public function testArrayContains()
+    {
+        $categories = [
+            "key" => "value"
+        ];
+        $result = $this->appInstance->arrayContains("key", $categories);
+
+        $this->assertEquals(true, $result);
+
+        $result = $this->appInstance->arrayContains("nokey", $categories);
+        $this->assertEquals(false, $result);
+    }
 }

@@ -8,6 +8,7 @@ require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 require_once __DIR__ . '/../../../cehd/app/Card/ProgramCard.php';
+require_once __DIR__ . '/../../../cehd/app/Card/TopicCard.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
@@ -188,11 +189,24 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/programs.yml';
         $cardsInstance = new \CEHD\App\Card\ProgramCard\ProgramCards();
         $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
+        $categories = $cardsInstance->getCategoriesAndDegrees();
+
+        // @todo see if this functionality can go in the ProgramCard class
+        foreach ($cards as $card_key => $card)
+        {
+            foreach($card->links as $link_key => $link)
+            {
+                $card->addCategory($link->title);
+                $card->categories_hyphenated = $card->getCategoryKeys();
+                $cardsInstance->putCard($card_key, $card);
+            }
+        }
+
 
         $template_data = [
             "section" => "academics",
-            "item_data" => $cards,
-            "categories" => $cardsInstance->getCategoriesAndDegrees(),
+            "item_data" => $cardsInstance->getCards(),
+            "categories" => $categories,
             "item_data_json" => json_encode($cards),
         ];
 
@@ -202,13 +216,14 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function topicsPageHandler($request, $response, $service, $app)
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $data = $this->_processSorterData($yaml_file_path);
+        $cardsInstance = new \CEHD\App\Card\TopicCard\TopicCards();
+        $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
 
         $template_data = [
-            "section" => "topics",
-            "item_data" => $data["data"],
-            "categories" => $data["categories"],
-            "item_data_json" => json_encode($data["data"]),
+            "section" => "academics",
+            "item_data" => $cards,
+            "categories" => $cardsInstance->getCategories(),
+            "item_data_json" => json_encode($cards),
         ];
 
         echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
