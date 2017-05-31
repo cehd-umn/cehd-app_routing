@@ -115,9 +115,9 @@ blockquote {
         }
 
         &::after {
-            bottom: -.3em;
+            bottom: -30px;
             content: close-quote;
-            right: .2em;
+            right: -28px;
         }
 
         &::before {
@@ -208,6 +208,13 @@ img {
     &.bg-cehd-multi {
         background-image: url("/assets/dist/images/background-cehd-multicolor.png");
         background-repeat: repeat;
+    }
+
+    &.wplc {
+        background-image: url("/assets/dist/images/background-wplc.svg");
+        background-position: 0 -100px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

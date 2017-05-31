@@ -726,6 +726,22 @@ plus symbol SVG:
   uses:
     - group: css
       name: 12-column grid
+WPLC Background:
+  categories:
+    - images
+    - svg
+  description: WPLC background image
+  group: images
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/wplc-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
 lists without bullets or numbers:
   categories:
     - ordered lists
