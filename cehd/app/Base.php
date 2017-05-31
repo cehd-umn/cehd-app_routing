@@ -299,4 +299,15 @@ abstract class BaseClass
         }
         return $results;
     }
+
+    /**
+     * Convenience method to check if an array has a key
+     *
+     * @param string - $needle
+     * @return boolean
+     */
+    public function arrayContains($needle, $haystack)
+    {
+       return array_key_exists($needle, $haystack);
+    }
 }

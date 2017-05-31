@@ -54,24 +54,17 @@ abstract class Card extends BaseClass
 
     private function _validateCard($card)
     {
-        $msg = "OK";
         $valid = true;
 
         if (!is_array($card))
         {
-            $msg = "card data must be in an associative array";
+            $msg = "card data must be in an associative array" . "\n\n" . var_export($card, true) . "\n";
             $valid = false;
             throw new InvalidTypeException($msg);
         }
         else if ($this->arrayContains("publish", $card) && !is_bool($card["publish"]))
         {
-            $msg = "card data must contain a publish status that is boolean";
-            $valid = false;
-            throw new InvalidTypeException($msg);
-        }
-        else if (gettype(key($card)) !== "string")
-        {
-            $msg = "Card array keys should be a string.";
+            $msg = "card data must contain a publish status that is boolean" . "\n\n" . var_export($card, true) . "\n";
             $valid = false;
             throw new InvalidTypeException($msg);
         }
@@ -87,7 +80,7 @@ abstract class Card extends BaseClass
         {
             if ($this->arrayDoesNotContain($card_should_have, $card))
             {
-                $msg = "card data must contain a " . $card_should_have . " element";
+                $msg = "card data must contain a " . $card_should_have . " element" . "\n\n" . var_export($card, true) . "\n";
                 $valid = false;
                 throw new MissingElementException($msg);
             }
@@ -96,9 +89,24 @@ abstract class Card extends BaseClass
         return $valid;
     }
 
-    public function arrayContains($needle, $haystack)
+    private function _validateCategory($category, $key)
     {
-       return array_key_exists($needle, $haystack);
+        $valid = true;
+
+        if ($this->categoryKeyExists($key))
+        {
+            $valid = false;
+            throw new InvalidKeyException("The key " . $key . " is already in use.");
+        }
+        else if (gettype($category) !== "string")
+        {
+            $valid = false;
+            throw new InvalidTypeException("'" . $category .
+                "' should be a string. Got " . gettype($category) .
+                " instead");
+        }
+
+        return $valid;
     }
 
     public function arrayDoesNotContain($needle, $haystack)
@@ -108,24 +116,35 @@ abstract class Card extends BaseClass
 
     public function addCategory($category, $key=null)
     {
-        if (!$key)
+        try
         {
-            $key = $this->hyphenate($category);
-        }
+            if ($this->_validateCategory($category, $key))
+            {
+                if (!$key)
+                {
+                    $key = $this->hyphenate($category);
+                }
 
-        if (array_key_exists($key, $this->_categories))
-        {
-            throw new InvalidKeyException("The key " . $key . " is already in use.");
+                $this->_categories[$key] = $category;
+            }
         }
-        else
+        catch (InvalidKeyException $e)
         {
-            $this->_categories[$key] = $category;
+            echo "Invalid key: " . $e->getMessage();
+        }
+        catch (InvalidTypeException $e)
+        {
+            echo "Invalid type: " . $e->getMessage();
+        }
+        catch (Exception $e)
+        {
+            echo "Exception: " . $e->getMessage();
         }
     }
 
     public function categoryKeyExists($key)
     {
-        return array_key_exists($key, $this->categories);
+        return $this->arrayContains($key, $this->_categories);
     }
 
     public function getCategory($key)
@@ -133,10 +152,6 @@ abstract class Card extends BaseClass
         if (array_key_exists($key, $this->_categories))
         {
             return $this->_categories[$key];
-        }
-        else
-        {
-            return null;
         }
     }
 
@@ -196,6 +211,8 @@ abstract class Card extends BaseClass
                 $this->title = $title;
 
                 $this->categories_hyphenated = $this->getCategoryKeys();
+
+                return $this;
             }
         }
         catch (InvalidKeyException $e)
@@ -208,8 +225,7 @@ abstract class Card extends BaseClass
         }
         catch (InvalidTypeException $e)
         {
-            // echo "Invalid type: " . $e->getMessage() . "\n";
-            echo "Invalid type: " . get_class($e) . "\n";
+            echo "Invalid type: " . $e->getMessage() . "\n";
         }
         catch (Exception $e)
         {
