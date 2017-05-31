@@ -11,14 +11,14 @@
     - name: Teacher Education
       href: "/teaching/"
       subsection:
-        - name: Programs and Licensure
-          href: "/programs/?filters=teaching"
+        - name: Licensure Process
+          href: "/teaching/license/"
         - name: Placements and Partnerships
-          href: "/teaching/partnerships"
+          href: "/teaching/partnerships/"
         - name: Trainings and Workshops
           href: "/teaching/trainings/"
         - name: Assessment and Accreditation
-          href: "/404/"
+          href: "/teaching/assessment/"
     - name: Undergraduate Studies
       href: "/undergraduate/"
       subsection:
@@ -27,7 +27,7 @@
         - name: Transfer to CEHD
           href: "/undergraduate/transfer/"
         - name: Outcomes
-          href: "/404/"
+          href: "/undergraduate/outcomes/"
         - name: Costs, Aid & Scholarships
           href: "/undergraduate/scholarships/"
         - name: First Year Experience
@@ -68,18 +68,20 @@
         - name: Find a Job or Internship
           href: "/career/internships/"
         - name: Prepare for Grad School
-          href: "/career/grad-school/"
+          href: "/career/grad-school/prepare/"
         - name: Hire a CEHD Student or Graduate
-          href: "/404/"
+          href: "/career/employers/"
         - name: Services for Graduate Students
-          href: "/graduate/career/"
+          href: "/career/grad-school/"
+        - name: Resources for Teachers
+          href: "/career/teacher/"
     - name: Graduation
       href: "/404/"
       subsection:
         - name: Commencement
           href: "/404/"
     - name: Global Initiatives
-      href: "/global"
+      href: "/global/"
       subsection:
     - name: Departments and Centers
       href: "/departments-centers/"
@@ -94,8 +96,6 @@
       href: "/research/research-day/"
     - name: Grantsmanship
       href: "/research/grantsmanship/"
-    - name: International Partnerships
-      href: "/research/intl-partnerships/"
     - name: PI Elligibility
       href: "/research/pi/"
     - name: Policy Breakfast Series

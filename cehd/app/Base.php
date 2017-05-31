@@ -281,4 +281,22 @@ abstract class BaseClass
         }
         return "?v=" . $mod_time;
     }
+
+    /**
+     * Takes an array with elements that are phrases and creates hyphenated
+     * keys based on the phrase
+     *
+     * @param array - $data
+     * @return array
+     */
+    public function createHyphenatedKeys($data)
+    {
+        $results = [];
+        foreach ($data as $index => $datum)
+        {
+            $hyphenated = $this->hyphenate($datum);
+            $results[$hyphenated] = $datum;
+        }
+        return $results;
+    }
 }

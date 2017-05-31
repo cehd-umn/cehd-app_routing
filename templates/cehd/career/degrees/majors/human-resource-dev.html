@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Careers in Human Resource Development" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -89,7 +90,20 @@
       <div class="half feature">
 	         <p>Some careers require postbaccalaureate degrees or training.</p>
     </div>
-
+    <div class="row emphasis cool">
+        <div class="container">
+            <div class="half feature margin-top-1">
+                {# create an array of 2-5 short lines of text #}
+                {% set lines = [
+                    "100% of human resource development    ",
+                    "students complete",
+                    " at least one internship.",
+                ] %}
+                {# call the macro #}
+                {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+            </div>
+        </div>
+    </div>
 
 	<h2 class="text-center">Job titles and employers of alumni</h2>
       <div class="row">

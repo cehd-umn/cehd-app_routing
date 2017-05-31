@@ -58,8 +58,24 @@ img {
 .outer-bg-right {
     background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
 
+    &.right-third {
+        background: linear-gradient(90deg, $base-white 65%, $cehd-tertiary-gold 65%);
+
+        &.cool {
+            background: linear-gradient(90deg, $base-white 65%, $umn-light-blue-background 65%);
+        }
+    }
+
+    &.right-two-third {
+        background: linear-gradient(90deg, $base-white 34%, $cehd-tertiary-gold 34%);
+
+        &.cool {
+            background: linear-gradient(90deg, $base-white 34%, $umn-light-blue-background 34%);
+        }
+    }
+
     &.cool {
-        background: linear-gradient(90deg, $base-white 80%, $umn-light-blue-background 20%);
+        background: linear-gradient(90deg, $base-white 50%, $umn-light-blue-background 50%);
     }
 }
 
@@ -194,6 +210,29 @@ img {
     font-style: normal;
 }
 
+ol {
+    &.with-headings {
+        counter-reset: li; /* Initiate a counter */;
+        padding-left: 1.13em;
+
+        > li {
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: counter(li); /* Use the counter as content */
+                counter-increment: li; /* Increment the counter by 1 */
+                left: -2em;
+                margin-right: 8px;
+                padding: 4px;
+                position: absolute;
+                top: -4px;
+                width: 2em;
+            }
+        }
+    }
+}
+
 /// Iterates over map of heading sizes to generate heading styles and matching
 /// classes
 ///
@@ -205,6 +244,11 @@ img {
         font-size: $size;
         margin: .7em 0;
         padding: 0;
+
+        li.#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+        }
 
         &.light {
             font-family: Lato, Verdana, Geneva, sans-serif;

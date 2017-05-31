@@ -7,6 +7,7 @@ require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
+require_once __DIR__ . '/../../../cehd/app/Card/ProgramCard.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 class CEHDApp extends \CEHD\App\App\BaseApp
@@ -145,12 +146,12 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         ksort($data);
         $category_data = [];
         $categories = [];
-        $degrees = [];
+        $links = [];
 
         foreach ($data as $item_index => $item)
         {
             $data[$item_index]["categories_hyphenated"] = [];
-            $data[$item_index]["degrees_hyphenated"] = [];
+            $data[$item_index]["links_hyphenated"] = [];
 
             if ($item["categories"])
             {
@@ -162,20 +163,20 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 }
             }
 
-            if (array_key_exists("degrees", $item) && $item["degrees"])
+            if (array_key_exists("links", $item) && $item["links"])
             {
-                foreach ($item["degrees"] as $degree_index => $degree)
+                foreach ($item["links"] as $degree_index => $degree)
                 {
                     $hyphenated = $this->hyphenate($degree["title"]);
-                    array_push($data[$item_index]["degrees_hyphenated"], $hyphenated);
-                    $degrees[$hyphenated] = $degree["title"];
+                    array_push($data[$item_index]["links_hyphenated"], $hyphenated);
+                    $links[$hyphenated] = $degree["title"];
                 }
             }
         }
 
         asort($categories);
-        asort($degrees);
-        $category_data =  $categories + $degrees;
+        asort($links);
+        $category_data =  $categories + $links;
         return [
             "data" => $data,
             "categories" => $category_data,
@@ -184,14 +185,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function programsPageHandler($request, $response, $service, $app)
     {
-        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/program_sorter.yml';
-        $data = $this->_processSorterData($yaml_file_path);
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/programs.yml';
+        $cardsInstance = new \CEHD\App\Card\ProgramCard\ProgramCards();
+        $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
 
         $template_data = [
             "section" => "academics",
-            "item_data" => $data["data"],
-            "categories" => $data["categories"],
-            "item_data_json" => json_encode($data["data"]),
+            "item_data" => $cards,
+            "categories" => $cardsInstance->getCategoriesAndDegrees(),
+            "item_data_json" => json_encode($cards),
         ];
 
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
@@ -304,7 +306,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $query['tg'] = $query_data['tg'];
         };
 
-        if (array_key_exists('en', $query_data) || array_key_exists('tg', $query_data))
+        if (array_key_exists('nm', $query_data))
+        {
+            $query['nm'] = $query_data['nm'];
+        };
+
+        if (
+            array_key_exists('en', $query_data) ||
+            array_key_exists('tg', $query_data) ||
+            array_key_exists('nm', $query_data))
         {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => $query];

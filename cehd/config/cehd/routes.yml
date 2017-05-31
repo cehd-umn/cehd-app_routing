@@ -95,6 +95,96 @@
   template: cehd/alumni/index.html
   template_data:
     - section: alumni
+/alumni/contact/:
+  publish: true
+  template: cehd/alumni/contact.html
+  template_data:
+    - section: alumni
+/alumni/events/:
+  publish: true
+  template: cehd/alumni/events.html
+  template_data:
+    - section: alumni
+/alumni/involved/:
+  publish: true
+  template: cehd/alumni/involved.html
+  template_data:
+    - section: alumni
+/alumni/mentor/:
+  publish: true
+  template: cehd/alumni/mentor.html
+  template_data:
+    - section: alumni
+/alumni/news/:
+  publish: true
+  template: cehd/alumni/news.html
+  template_data:
+    - section: alumni
+/alumni/notes/:
+  publish: true
+  template: cehd/alumni/notes.html
+  template_data:
+    - section: alumni
+/alumni/awards/:
+  publish: true
+  template: cehd/alumni/awards/index.html
+  template_data:
+    - section: alumni
+/alumni/awards/recipients/:
+  publish: true
+  template: cehd/alumni/awards/recipients.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/:
+  publish: true
+  template: cehd/alumni/distinguished/index.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/centennial/:
+  publish: true
+  template: cehd/alumni/distinguished/centennial.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/che/:
+  publish: true
+  template: cehd/alumni/distinguished/che.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2010/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2010.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2011/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2011.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2012/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2012.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2013/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2013.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2014/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2014.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2015/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2015.html
+  template_data:
+    - section: alumni
+/alumni/distinguished/deans-2016/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2016.html
+  template_data:
+    - section: alumni
 /alumni/rising/:
   publish: true
   template: cehd/alumni/rising/index.html
@@ -590,6 +680,41 @@
   template: cehd/alumni/rising/2017/tompkins.html
   template_data:
     - section: alumni
+/alumni/society/:
+  publish: true
+  template: cehd/alumni/society/index.html
+  template_data:
+    - section: alumni
+/alumni/society/board-meetings/:
+  publish: true
+  template: cehd/alumni/society/board-meetings.html
+  template_data:
+    - section: alumni
+/alumni/society/board/:
+  publish: true
+  template: cehd/alumni/society/board.html
+  template_data:
+    - section: alumni
+/alumni/society/fund/:
+  publish: true
+  template: cehd/alumni/society/fund.html
+  template_data:
+    - section: alumni
+/alumni/society/job-description/:
+  publish: true
+  template: cehd/alumni/society/job-description.html
+  template_data:
+    - section: alumni
+/alumni/society/message/:
+  publish: true
+  template: cehd/alumni/society/message.html
+  template_data:
+    - section: alumni
+/alumni/society/scholarships/:
+  publish: true
+  template: cehd/alumni/society/scholarships.html
+  template_data:
+    - section: alumni
 /career/:
   publish: true
   template: cehd/career/index.html
@@ -1000,6 +1125,21 @@
   template: cehd/global/index.html
   template_data:
     - section: global
+/global/gtep/:
+  publish: true
+  template: cehd/global/gtep.html
+  template_data:
+    - section: global
+/global/intl-partnerships/:
+  publish: true
+  template: cehd/global/intl-partnerships.html
+  template_data:
+    - section: global
+/global/scholars/:
+  publish: true
+  template: cehd/global/scholars.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
@@ -1175,9 +1315,19 @@
   template: cehd/study-abroad/index.html
   template_data:
     - section: study-abroad
+/study-abroad/locations/:
+  publish: true
+  template: cehd/study-abroad/locations.html
+  template_data:
+    - section: study-abroad
 /teaching/:
   publish: true
   template: cehd/teaching/index.html
+  template_data:
+    - section: teaching
+/teaching/additional/:
+  publish: true
+  template: cehd/teaching/additional.html
   template_data:
     - section: teaching
 /teaching/assessment/:
@@ -1315,6 +1465,11 @@
   template: cehd/teri/partnerships.html
   template_data:
     - section: teri
+/topics/sample/:
+  publish: true
+  template: cehd/topics/sample.html
+  template_data:
+    - section: topics
 /trio/:
   publish: true
   template: cehd/trio/index.html
@@ -2113,6 +2268,11 @@
 /trio/upward-bound/jobs/:
   publish: true
   template: cehd/trio/upward-bound/jobs.html
+  template_data:
+    - section: trio
+/trio/upward-bound/nelson/:
+  publish: true
+  template: cehd/trio/upward-bound/nelson.html
   template_data:
     - section: trio
 /trio/upward-bound/people/:

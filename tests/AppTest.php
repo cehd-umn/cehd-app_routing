@@ -194,4 +194,16 @@ class AppTest extends TestCase
         $this->expectException(PHPUnit_Framework_Error::class);
         $result = $this->appInstance->getCacheBusterQueryString("/does/not/exist.txt");
     }
+
+    public function testCreatHyphenatedKeys()
+    {
+        $categories = [
+            "foo bar",
+            "bat baz",
+        ];
+
+        $result = $this->appInstance->createHyphenatedKeys($categories);
+        $this->assertArrayHasKey("foo-bar", $result);
+        $this->assertEquals($categories[0], $result["foo-bar"]);
+    }
 }

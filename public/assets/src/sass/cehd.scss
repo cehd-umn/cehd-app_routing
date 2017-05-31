@@ -115,9 +115,9 @@ blockquote {
         }
 
         &::after {
-            bottom: -.3em;
+            bottom: -30px;
             content: close-quote;
-            right: .2em;
+            right: -28px;
         }
 
         &::before {
@@ -268,7 +268,7 @@ img {
     overflow: hidden;
     padding: .5em;
     visibility: visible;
-    width: 285px;
+    width: 237px;
 
     &:hover {
         background-color: $umn-light-gold;
