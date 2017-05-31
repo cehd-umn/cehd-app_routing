@@ -18,13 +18,15 @@ class ProgramCardTest extends TestCase
         $this->cards = $this->cardsInstance->setCards($file_path)->getCards();
     }
 
-    // @todo test all the exception types (this test fails)
-    // public function testInvalidTypeException()
-    // {
-    //     $this->expectException(InvalidTypeException::class);
-    //     $cardInstance = new \CEHD\App\Card\ProgramCard\ProgramCard();
-    //     $card = $cardInstance->setCard("test", "string");
-    // }
+    // @todo test all the exception types
+    /**
+     * @expectedException(InvalidTypeException)
+     */
+    public function testInvalidTypeException()
+    {
+        $cardInstance = new \CEHD\App\Card\ProgramCard\ProgramCard();
+        $card = $cardInstance->setCard("test", "string");
+    }
 
     public function testCreation()
     {
