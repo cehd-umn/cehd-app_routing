@@ -115,9 +115,9 @@ blockquote {
         }
 
         &::after {
-            bottom: -.3em;
+            bottom: -30px;
             content: close-quote;
-            right: .2em;
+            right: -28px;
         }
 
         &::before {
