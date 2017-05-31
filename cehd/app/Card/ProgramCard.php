@@ -17,6 +17,18 @@ use CEHD\App\Card\CardGroup;
 class ProgramCard extends Card
 {
     // @todo add links validation
+
+    public function getDegrees()
+    {
+        $degrees = [];
+        
+        foreach($this->links as $key => $link)
+        {
+            $degrees[$this->hyphenate($link->title)] = $link->title;
+        }
+
+        return $degrees;
+    }
 }
 
 class ProgramCards extends CardGroup

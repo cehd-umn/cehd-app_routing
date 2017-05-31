@@ -176,4 +176,14 @@ class ProgramCardTest extends TestCase
         $category = array_shift($categories);
         $this->assertEquals("Community and Leadership", $category);
     }
+
+    public function testPutCard()
+    {
+        $key = "Adult Education";
+        $card = $this->cardsInstance->getCard($key);
+        $card->addCategory("foo bar");
+        $this->cardsInstance->putCard($key, $card);
+        $card = $this->cardsInstance->getCard($key);
+        $this->assertTrue($card->categoryKeyExists("foo-bar"));
+    }
 }

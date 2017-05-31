@@ -189,11 +189,24 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/programs.yml';
         $cardsInstance = new \CEHD\App\Card\ProgramCard\ProgramCards();
         $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
+        $categories = $cardsInstance->getCategoriesAndDegrees();
+
+        // @todo see if this functionality can go in the ProgramCard class
+        foreach ($cards as $card_key => $card)
+        {
+            foreach($card->links as $link_key => $link)
+            {
+                $card->addCategory($link->title);
+                $card->categories_hyphenated = $card->getCategoryKeys();
+                $cardsInstance->putCard($card_key, $card);
+            }
+        }
+
 
         $template_data = [
             "section" => "academics",
-            "item_data" => $cards,
-            "categories" => $cardsInstance->getCategoriesAndDegrees(),
+            "item_data" => $cardsInstance->getCards(),
+            "categories" => $categories,
             "item_data_json" => json_encode($cards),
         ];
 

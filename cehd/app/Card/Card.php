@@ -238,6 +238,11 @@ abstract class CardGroup extends BaseClass
 {
     protected $_cards = [];
 
+    protected function _isValidCardInstance($card)
+    {
+        return $card instanceof Card;
+    }
+
     public function setCard($title, $data)
     {
         throw new NotImplementedException("Classes that extend CardGroup must implement their own setCard method.");
@@ -255,10 +260,24 @@ abstract class CardGroup extends BaseClass
 
     public function getCard($key)
     {
-        if (array_key_exists($key, $this->_cards))
+        if ($this->cardExists($key))
         {
             return $this->_cards[$key];
         }
+    }
+
+    public function cardExists($key)
+    {
+        return $this->arrayContains($key, $this->_cards);
+    }
+
+    public function putCard($key, $card)
+    {
+        if ($this->cardExists($key) && $this->_isValidCardInstance($card))
+        {
+            $this->_cards[$key] = $card;
+        }
+        return $this;
     }
 
     public function getCategories()
