@@ -1,5 +1,7 @@
 ---
 page layout:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Basic components for laying out a page.
@@ -11,6 +13,8 @@ page layout:
   type: template
   uses: null
 headings:
+  publish: true
+  meta: null
   categories:
     - tags
     - fonts
@@ -24,6 +28,8 @@ headings:
   type: template
   uses: null
 layout and grid:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Examples for simple page layouts
@@ -37,6 +43,8 @@ layout and grid:
     - row
     - container
 row:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates a fluid 100% width element.
@@ -50,6 +58,8 @@ row:
   type: include
   uses: null
 container:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates a centered, fluid element with max-width of 1400px;
@@ -65,6 +75,8 @@ container:
     - group: css
       name: row
 half:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates half width columns.
@@ -78,6 +90,8 @@ half:
   type: include
   uses: null
 third:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates one-third width columns.
@@ -91,6 +105,8 @@ third:
   type: include
   uses: null
 two third:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates one-third width columns.
@@ -104,6 +120,8 @@ two third:
   type: include
   uses: null
 centered elements:
+  publish: true
+  meta: null
   categories:
     - layout
   description: Creates a centered element on the page
@@ -135,6 +153,8 @@ centered elements:
     - group: css
       name: Brown background
 12-column grid:
+  publish: true
+  meta: null
   categories:
     - layout
     - grid
@@ -151,6 +171,8 @@ centered elements:
     - group: css
       name: container
 yellow background:
+  publish: true
+  meta: null
   categories:
     - background color
   description: Gives an element a consistent yellow background.
@@ -170,6 +192,8 @@ yellow background:
     - group: css
       name: half
 blue background:
+  publish: true
+  meta: null
   categories:
     - background color
   description: Gives an element a consistent blue background.
@@ -189,6 +213,8 @@ blue background:
     - group: css
       name: half
 grey background:
+  publish: true
+  meta: null
   categories:
     - background color
   description: Gives an element a consistent grey background.
@@ -208,6 +234,8 @@ grey background:
     - group: css
       name: half
 brown background:
+  publish: true
+  meta: null
   categories:
     - background color
   description: Gives an element a consistent brown background.
@@ -227,6 +255,8 @@ brown background:
     - group: css
       name: half
 multi-color background:
+  publish: true
+  meta: null
   categories:
     - background image
   description: Gives an element a consistent a background with the CEHD logo repeated.
@@ -246,6 +276,8 @@ multi-color background:
     - group: css
       name: half
 pull quote:
+  publish: true
+  meta: null
   categories:
     - text
     - quotes
@@ -268,6 +300,8 @@ pull quote:
     - group: css
       name: Yellow background
 standard button:
+  publish: true
+  meta: null
   categories:
     - buttons
     - background color
@@ -292,6 +326,8 @@ standard button:
     - group: css
       name: centered elements
 clear button:
+  publish: true
+  meta: null
   categories:
     - buttons
     - background color
@@ -316,6 +352,8 @@ clear button:
     - group: css
       name: standard button
 partial blue background:
+  publish: true
+  meta: null
   categories:
     - layout
     - background color
@@ -340,6 +378,8 @@ partial blue background:
     - group: css
       name: Blue background
 half yellow background:
+  publish: true
+  meta: null
   categories:
     - layout
     - background color
@@ -362,6 +402,8 @@ half yellow background:
     - group: css
       name: yellow background
 third yellow background:
+  publish: true
+  meta: null
   categories:
     - layout
     - background color
@@ -388,6 +430,8 @@ third yellow background:
     - group: css
       name: half yellow background
 two-third yellow background:
+  publish: true
+  meta: null
   categories:
     - layout
     - background color
@@ -414,6 +458,8 @@ two-third yellow background:
     - group: css
       name: half yellow background
 box corners:
+  publish: true
+  meta: null
   categories:
     - corners
   description: Creates a box with angles in the corners
@@ -433,6 +479,8 @@ box corners:
     - group: css
       name: half
 centered text:
+  publish: true
+  meta: null
   categories:
     - text
     - text alignment
@@ -447,6 +495,8 @@ centered text:
   type: include
   uses: null
 right text:
+  publish: true
+  meta: null
   categories:
     - text
     - text alignment
@@ -461,6 +511,8 @@ right text:
   type: include
   uses: null
 left text:
+  publish: true
+  meta: null
   categories:
     - text
     - text alignment
@@ -475,6 +527,8 @@ left text:
   type: include
   uses: null
 plain text:
+  publish: true
+  meta: null
   categories:
     - text
     - font size
@@ -490,6 +544,8 @@ plain text:
   type: include
   uses: null
 centered button:
+  publish: true
+  meta: null
   categories:
     - background color
     - buttons
@@ -513,6 +569,8 @@ centered button:
     - group: css
       name: centered elements
 simple button:
+  publish: true
+  meta: null
   categories:
     - background color
     - buttons
@@ -536,6 +594,8 @@ simple button:
     - group: css
       name: centered elements
 simple green button:
+  publish: true
+  meta: null
   categories:
     - background color
     - buttons
@@ -559,6 +619,8 @@ simple green button:
     - group: css
       name: centered elements
 simple maroon button:
+  publish: true
+  meta: null
   categories:
     - background color
     - buttons
@@ -582,6 +644,8 @@ simple maroon button:
     - group: css
       name: centered elements
 uppercase buttons:
+  publish: true
+  meta: null
   categories:
     - background color
     - buttons
@@ -610,6 +674,8 @@ uppercase buttons:
     - group: text
       name: uppercase text
 adding top margin:
+  publish: true
+  meta: null
   categories:
     - margin-top
     - element vertical alignment
@@ -624,6 +690,8 @@ adding top margin:
   type: include
   uses: null
 small text:
+  publish: true
+  meta: null
   categories:
     - tags
     - text
@@ -639,6 +707,8 @@ small text:
   type: include
   uses: null
 sub headings:
+  publish: true
+  meta: null
   categories:
     - headings
     - font size
@@ -655,6 +725,8 @@ sub headings:
     - group: html
       name: small text
 hiding images on mobile:
+  publish: true
+  meta: null
   categories:
     - mobile styles
     - images
@@ -669,6 +741,8 @@ hiding images on mobile:
   type: include
   uses: null
 red text:
+  publish: true
+  meta: null
   categories:
     - text
     - font color
@@ -683,6 +757,8 @@ red text:
   type: include
   uses: null
 wrapping blockquotes with fancy quotes:
+  publish: true
+  meta: null
   categories:
     - quotes
   description: Puts curly quotes around a block quote
@@ -696,6 +772,8 @@ wrapping blockquotes with fancy quotes:
   type: include
   uses: null
 uppercase text:
+  publish: true
+  meta: null
   categories:
     - text
     - uppercase
@@ -711,6 +789,8 @@ uppercase text:
   type: include
   uses: null
 plus symbol SVG:
+  publish: true
+  meta: null
   categories:
     - images
     - svg
@@ -727,6 +807,8 @@ plus symbol SVG:
     - group: css
       name: 12-column grid
 WPLC Background:
+  publish: true
+  meta: null
   categories:
     - images
     - svg
@@ -743,6 +825,8 @@ WPLC Background:
     - group: css
       name: 12-column grid
 lists without bullets or numbers:
+  publish: true
+  meta: null
   categories:
     - ordered lists
     - unordered lists
@@ -757,6 +841,8 @@ lists without bullets or numbers:
   type: include
   uses: null
 lists with headings:
+  publish: true
+  meta: null
   categories:
     - ordered lists
   description: Creates an ordered list with numbers the same size as the headings
@@ -770,6 +856,8 @@ lists with headings:
   type: include
   uses: null
 a tag:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -785,6 +873,8 @@ a tag:
   type: include
   uses: null
 fonts:
+  publish: true
+  meta: null
   categories:
     - defaults
     - html
@@ -801,6 +891,8 @@ fonts:
   type: include
   uses: null
 dl tag:
+  publish: true
+  meta: null
   categories:
     - defaults
     - lists
@@ -817,6 +909,8 @@ dl tag:
   type: include
   uses: null
 em tag:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -832,6 +926,8 @@ em tag:
   type: include
   uses: null
 strong tag:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -848,6 +944,8 @@ strong tag:
   type: include
   uses: null
 ul and ol tags:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -864,6 +962,8 @@ ul and ol tags:
   type: include
   uses: null
 p tag:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -879,6 +979,8 @@ p tag:
   type: include
   uses: null
 tables:
+  publish: true
+  meta: null
   categories:
     - html
     - tags
@@ -894,6 +996,8 @@ tables:
   type: include
   uses: null
 column divider:
+  publish: true
+  meta: null
   categories:
     - layout
   description: A vertical divider between columns
@@ -913,6 +1017,8 @@ column divider:
     - group: css
       name: 12-column grid
 hero image:
+  publish: true
+  meta: null
   categories:
     - layout
     - hero image
@@ -940,6 +1046,8 @@ hero image:
     - group: css
       name: row
 image with caption:
+  publish: true
+  meta: null
   categories:
     - images
   description: Default styles for figures and figcaptions
@@ -953,6 +1061,8 @@ image with caption:
   type: include
   uses: null
 vertically aligning headings with images:
+  publish: true
+  meta: null
   categories:
     - images
     - element vertical alignment
@@ -969,6 +1079,8 @@ vertically aligning headings with images:
     - group: css
       name: half
 cropping images to a circle:
+  publish: true
+  meta: null
   categories:
     - images
     - cropping images
@@ -986,6 +1098,8 @@ cropping images to a circle:
     - group: css
       name: 12-column grid
 positioning images:
+  publish: true
+  meta: null
   categories:
     - images
     - layout
@@ -1008,6 +1122,8 @@ positioning images:
     - group: css
       name: twothird
 colors:
+  publish: true
+  meta: null
   categories:
     - colors
   description: Our predefined color pallete
@@ -1019,6 +1135,8 @@ colors:
   type: template
   uses: null
 did you know SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1042,6 +1160,8 @@ did you know SVG:
     - group: css
       name: half
 did you know SVG with yellow background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1070,6 +1190,8 @@ did you know SVG with yellow background:
     - group: svg
       name: did you know SVG
 did you know SVG with blue background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1098,6 +1220,8 @@ did you know SVG with blue background:
     - group: svg
       name: did you know SVG
 did you know SVG with a one-third blue background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1128,6 +1252,8 @@ did you know SVG with a one-third blue background:
     - group: svg
       name: did you know SVG
 did you know SVG with a one-half blue background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1158,6 +1284,8 @@ did you know SVG with a one-half blue background:
     - group: svg
       name: did you know SVG
 did you know SVG with a two-third blue background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1188,6 +1316,8 @@ did you know SVG with a two-third blue background:
     - group: svg
       name: did you know SVG with blue background
 did you know SVG with grey background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1214,6 +1344,8 @@ did you know SVG with grey background:
     - group: css
       name: grey background
 did you know SVG with brown background:
+  publish: true
+  meta: null
   categories:
     - background color
     - macros
@@ -1240,6 +1372,8 @@ did you know SVG with brown background:
     - group: css
       name: brown background
 Twitter icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1256,6 +1390,8 @@ Twitter icon SVG:
   type: include
   uses: null
 Facebook icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1272,6 +1408,8 @@ Facebook icon SVG:
   type: include
   uses: null
 Pinterest icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1288,6 +1426,8 @@ Pinterest icon SVG:
   type: include
   uses: null
 LinkedIn icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1304,6 +1444,8 @@ LinkedIn icon SVG:
   type: include
   uses: null
 Email icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
@@ -1320,6 +1462,8 @@ Email icon SVG:
   type: include
   uses: null
 Calendar icon SVG:
+  publish: true
+  meta: null
   categories:
     - macros
     - svg
