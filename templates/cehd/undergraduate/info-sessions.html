@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/info-sessions-feed.html" as info_session %}
 {% set page_title = "Transfer Information Sessions" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -24,8 +26,15 @@
     <script type="text/javascript">
       getRssFeed("InfoFeed-UG","https://apps.cehd.umn.edu/Students/Infosession/Admin/RSSFeed.aspx?code=TA-NonEd","/attributes/XSLT/InfoSession-ListHack-2011-04-20.xslt","Sorry, the Info-Session feed is temporarily down.")
     </script>
-</div>
+    </div>
+    <div id="info-sessions-container">
+
+    </div>
     </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("TA-NonEd","4","#info-sessions-container","/assets/dist/views/cehd/info-sessions","jeffsmanship.html") }}
 {% endblock %}

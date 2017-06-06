@@ -1,7 +1,4 @@
-{% extends "cehd/layout/base.html" %}
-{% set page_title = "News" %}
-{% block title %}{{ page_title }}{% endblock %}
-{% block extra_css %}
+{% extends "cehd/layout/base.html" %} {% set page_title = "News" %} {% block title %}{{ page_title }}{% endblock %} {% block extra_css %}
 <style>
     .connect-more {
         font-family: 'Montserrat', sans-serif;
@@ -16,6 +13,7 @@
         font-weight: bold;
         margin: 0;
     }
+
     .connect-issue {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
@@ -23,6 +21,7 @@
         font-weight: bold;
         margin-top: -5px;
     }
+
     .connect-articles {
         font-family: 'Lato', sans-serif;
         font-size: 18px;
@@ -33,156 +32,149 @@
         float: right;
         margin-bottom: 50px;
     }
+
     .connect-date {
         font-family: 'Montserrat', sans-serif;
-        margin-bottom:-18px;
-}
+        margin-bottom: -18px;
+        font-size: 14px;
+    }
 </style>
-{% endblock %}
-{% block main_content %}
+{% endblock %} {% block main_content %}
 
 <div class="row">
-   <div class="container">
-     <h1>News and events</h1>
+    <div class="container">
+        <h1>News and events</h1>
 
-     <div class="span-6">
-       <h2>In the news</h2><iframe src="https://player.vimeo.com/video/208185523" width=
-       "640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
-       allowfullscreen=""></iframe>
+        <div class="span-6">
+            <h2>In the news</h2><iframe src="https://player.vimeo.com/video/208185523" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-       <p><small>In this Fox 9 story, child development expert Jed Elison describes how
+            <p><small>In this Fox 9 story, child development expert Jed Elison describes how
        his team of researchers is using brain scans to predict autism in
        infants.</small></p>
 
-       <h2>Research indepth</h2><iframe src="https://player.vimeo.com/video/208185448"
-       width="640" height="360" frameborder="0" webkitallowfullscreen=""
-       mozallowfullscreen="" allowfullscreen=""></iframe>
+            <h2>Research indepth</h2><iframe src="https://player.vimeo.com/video/208185448" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-       <p><small>Kinesiology researcher J&uuml;rgen Konczak uses a WristBot and virtual
+            <p><small>Kinesiology researcher J&uuml;rgen Konczak uses a WristBot and virtual
        reality to help diagnose wrist movement problems and to create training
        activities to improve lives for people with neurological diseases.</small></p>
-     </div>
+        </div>
 
-     <div class="span-4">
-       <h2>CEHD news</h2>
+        <div class="span-4">
+            <h2>CEHD news</h2>
 
-       <p><a href="#">McComas named CEHD President&rsquo;s Community Engaged
+            <p><a href="#">McComas named CEHD President&rsquo;s Community Engaged
        Scholar</a></p>
 
-       <p><a href="#">Hewitt accepts University&rsquo;s Innovation Award</a></p>
+            <p><a href="#">Hewitt accepts University&rsquo;s Innovation Award</a></p>
 
-       <p><a href="#">Award-winning book on sport management theory features chapters by
+            <p><a href="#">Award-winning book on sport management theory features chapters by
        Inoue, Kane, and Kihl</a></p>
 
-       <p><a href="#">McComas named CEHD President&rsquo;s Community Engaged
+            <p><a href="#">McComas named CEHD President&rsquo;s Community Engaged
        Scholar</a></p>
 
-       <p><a href="#">Hewitt accepts University&rsquo;s Innovation Award</a></p>
+            <p><a href="#">Hewitt accepts University&rsquo;s Innovation Award</a></p>
 
-       <p><a href="#">Award-winning book on sport management theory features chapters by
+            <p><a href="#">Award-winning book on sport management theory features chapters by
        Inoue, Kane, and Kihl</a></p>
 
-       <p class="connect-more"><a href="#">More CEHD news</a></p>
+            <p class="connect-more"><a href="http://news.cehd.umn.edu/">More CEHD news</a></p>
 
-       <h2>CEHD events</h2>
+            <h2>CEHD events</h2>
 
-       <p class="connect-date">Wednesday, April 12</p>
+            <p class="connect-date">Wednesday, April 12</p>
 
-       <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+            <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
 
-       <p class="connect-date">Tuesday, April 18</p>
+            <p class="connect-date">Tuesday, April 18</p>
 
-       <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+            <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
        Environmental Risk &amp; Intervention</a></p>
 
-       <p class="connect-date">Tuesday, April 18</p>
+            <p class="connect-date">Tuesday, April 18</p>
 
-       <p><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of
-       MN</a><br /></p>
-       <p class="connect-date">Wednesday, April 12</p>
+            <p><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of MN</a><br /></p>
+            <p class="connect-date">Wednesday, April 12</p>
 
-       <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+            <p><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
 
-       <p class="connect-date">Tuesday, April 18</p>
+            <p class="connect-date">Tuesday, April 18</p>
 
-       <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+            <p><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
        Environmental Risk &amp; Intervention</a></p>
 
-       <p class="connect-more"><a href="#">More CEHD events</a></p>
-     </div>
-   </div>
- </div>
+            <p class="connect-more"><a href="#">More CEHD events</a></p>
+        </div>
+    </div>
+</div>
 
- <div class="row">
-   <div class="container">
-     <div class="span-12">
-       <h2 class="text-center">Our expertise and knowledge guide</h2>
-     </div>
-   </div>
- </div>
+<div class="row">
+    <div class="container">
+        <div class="span-12">
+            <h2 class="text-center">Our expertise and knowledge guide</h2>
+        </div>
+    </div>
+</div>
 
-     <div class="row outer-bg-right emphasis">
-         <div class="container">
-             <div class="inner-bg-right">
-                 <div class="half"><p><a href="#">With our guide to CEHD research and expertise</a>, members of
-                 the media can access expert perspectives on breaking news, local and national
-                 trends, policy issues, and emerging research.</p></div>
-                 <div class="half">{% include "includes/svg/for-the-media.html" %}</div>
-             </div>
-         </div>
-     </div>
+<div class="row outer-bg-right emphasis">
+    <div class="container">
+        <div class="inner-bg-right">
+            <div class="half">
+                <p><a href="#">With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news, local and national trends, policy issues, and emerging research.</p>
+            </div>
+            <div class="half">{% include "includes/svg/for-the-media.html" %}</div>
+        </div>
+    </div>
+</div>
 
 <p class="text-center"><a href="/topics/" class="button center">Explore our research</a></p>
- <div class="row">
-   <div class="row emphasis bg-cehd-multi margin-top-1 ">
-     <div class="container">
-       <div class="half feature"><img class="mobile-hide" src=
-       "/assets/images/wordmarks/wordmark-Connect.svg" alt=
-       "Connect magazine wordmark" /></div>
+<div class="row">
+    <div class="row emphasis bg-cehd-multi margin-top-1 ">
+        <div class="container">
+            <div class="half feature"><img class="mobile-hide" src="/assets/images/wordmarks/wordmark-Connect.svg" alt="Connect magazine wordmark" /></div>
 
-       <div class="span-12">
-         <br />
-       </div>
+            <div class="span-12">
+                <br />
+            </div>
 
-       <div class="half">
-         <a href="http://connect.cehd.umn.edu"><img class="mobile-hide connect-cover"
+            <div class="half">
+                <a href="http://connect.cehd.umn.edu"><img class="mobile-hide connect-cover"
          height="400px" src="/assets/images/news/SpSu17_ConnectCover_lg.jpg" alt=
          "Cover image of Connect magazine" /></a>
-       </div>
+            </div>
 
-       <div class="half">
-         <p class="connect-title">The Power of Play</p>
+            <div class="half">
+                <p class="connect-title">The Power of Play</p>
 
-         <p class="connect-issue">Spring Summer 2017</p>
+                <p class="connect-issue">Spring Summer 2017</p>
 
-         <ul class="connect-articles no-bullet">
-           <li><a href="http://connect.cehd.umn.edu/the-power-of-play/">The power of
+                <ul class="connect-articles no-bullet">
+                    <li><a href="http://connect.cehd.umn.edu/the-power-of-play/">The power of
            play</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/financially-capable/">Financially
+                    <li><a href="http://connect.cehd.umn.edu/financially-capable/">Financially
            capable</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/a-breath-of-fresh-air/">A breath of
+                    <li><a href="http://connect.cehd.umn.edu/a-breath-of-fresh-air/">A breath of
            fresh air</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/debunking-misinformation/">Debunking
+                    <li><a href="http://connect.cehd.umn.edu/debunking-misinformation/">Debunking
            misinformation</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/what-the-body-is/">What the body
+                    <li><a href="http://connect.cehd.umn.edu/what-the-body-is/">What the body
            is</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/citizens-in-the-classroom/">Citizens
+                    <li><a href="http://connect.cehd.umn.edu/citizens-in-the-classroom/">Citizens
            in the classroom</a></li>
 
-           <li><a href="http://connect.cehd.umn.edu/a-force-for-families/">A force for
+                    <li><a href="http://connect.cehd.umn.edu/a-force-for-families/">A force for
            families</a></li>
 
-           <li><a href=
-           "http://connect.cehd.umn.edu/giving-matters-fostering-educational-leadership/">
+                    <li><a href="http://connect.cehd.umn.edu/giving-matters-fostering-educational-leadership/">
            Giving matters</a></li>
-         </ul>
-       </div>
-     </div>
-   </div>
- </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

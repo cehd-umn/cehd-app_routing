@@ -1,0 +1,7 @@
+<ul class="no-bullet">
+{% for info_session in data.info_sessions %}
+    {% if loop.index0 < data.limit %}
+        <li><a href='{{ info_session.url }}'>"dateFull" not working{{ info_session.dateFull }} {{ info_session.date }}</a> | {{ info_session.startTime }}</li>
+    {% endif %}
+{% endfor %}
+</ul>

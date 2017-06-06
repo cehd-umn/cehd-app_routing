@@ -79,7 +79,7 @@
       href: "/404/"
       subsection:
         - name: Commencement
-          href: "/404/"
+          href: "/commencement/"
     - name: Global Initiatives
       href: "/global/"
       subsection:
@@ -133,15 +133,15 @@
       href: "/giving/wplc/"
       subsection:
         - name: Events
-          href: "/wplc/events/"
+          href: "/giving/wplc/events/"
         - name: Awards
-          href: "/wplc/awards/"
+          href: "/giving/wplc/awards/"
         - name: Join
-          href: "/wplc/join/"
+          href: "/giving/wplc/join/"
     - name: Contact
       href: "/giving/contact/"
 - name: Alumni
-  href: "/404/"
+  href: "/Alumni/"
   section: alumni
   subsection:
     - name: Membership & Benefits

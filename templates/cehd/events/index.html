@@ -1,10 +1,119 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Events" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    /*.connect-more {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        float: right;
+        margin-top: -10px;
+}
+
+    .connect-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .connect-issue {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-variant: caps;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+    .connect-articles {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .connect-cover {
+        float: right;
+        margin-bottom: 50px;
+    }*/
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        padding: 10px 0 0 15px;
+    }
+    .date-box {
+        background-color: #eeeeed;
+        height: 40px;
+    }
+    .event-box {
+        /*background-color: #eeeeed;*/
+        background-color: #d9edf7;
+        /*border-left: 5px #2d6987 solid;
+        border-right: 5px #2d6987 solid;*/
+        height: 50px;
+        padding-top: 7px;
+    }
+    .event {
+        padding-left: 15px;
+    }
+    .description {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
+    <h1>CEHD Events</h1>
+    <div class="span-6">
+
+        <p class="date date-box">Wednesday, April 12 | 8:00 AM – 12:00 PM</p>
+        <p class="event"><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+        <p class="description">When coaching a child care provider it is important to make sure we are not attempting to replicate someone else, but to instead prepare the provider to go beyond where she has been. </p>
+
+        <p class="date date-box">Wednesday, April 12 | Online course</p>
+        <p class="event"><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+        Environmental Risk &amp; Intervention</a></p>
+        <p class="description">We'll explore the impact of chronic trauma on youth. We'll also include a special focus on American Indian students. Get more information on the event agenda, including keynote speakers.</p>
+
+        <p class="date date-box">Wednesday, April 12 | 10:00 AM – 2:00 PM</p>
+        <p class="event"><a href="#">Webinar: Autism Spectrum Disorder and the Somali Community of
+        MN</a><br /></p>
+        <p class="description">Mindfulness and Reflection Training in Young Children: Foundations for Learning and Adaptation.</p>
+
+        <p class="date date-box">Wednesday, April 12 | 9:00 AM – 11:30 AM</p>
+        <p class="event"><a href="#">2017 Naomi C. Chase Lecture by Melissa Sweet</a></p>
+        <p class="description">The Center for Advanced Research on Language Acquisition (CARLA) offers a series of intensive weeklong summer institutes each year targeted at K-16 ...</p>
+
+        <p class="date date-box">Wednesday, April 12-13 | all day</p>
+        <p class="event"><a href="#">Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+        Environmental Risk &amp; Intervention</a></p>
+        <p class="description">The SSW Clinical Practice and Supervision Series offers full day, weekend, and online options to help social service professionals meet changing...</p>
+
+    </div>
+    <div class="span-1">
+        &nbsp;
+    </div>
+        <div class="span-5">
+            <h2 class="event-box text-center">Event details</h2>
+                <h3>Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+                Environmental Risk &amp; Intervention</h3>
+                    <p><strong>When:</strong> June 20 - 21, 2017</p>
+                    <p><strong>Where:</strong> University of Minnesota West Bank Campus <a href="#">map</a></p>
+                    <p><strong>Cost:</strong> Individual (before April 30): $100; Individual (after April 30): $125; Group (3 or more): $75/ea.; Student: $50</p>
+                <div class="text-center">
+                    <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/email.html" %}</div>
+                    <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/calendar.html" %}</div>
+                    <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/facebook.html" %}</div>
+                    <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/twitter.html" %}</div>
+                </div>
+                    <p>Register now for the second University of Minnesota convening of Minnesota's education leaders, researchers, policy makers, and non-profit organizations committed to improving educational equity.</p>
+
+                    <p>This year's theme is Working Across Schools and Communities to Enhance Social Emotional Learning. University of Minnesota faculty, school, community, and youth leaders will present the latest research and programs that are making a difference in the lives of children and youth across the state.</p>
+
+                    <p>We'll explore the impact of chronic trauma on youth. We'll also include a special focus on American Indian students. Get more information on the event agenda, including keynote speakers.</p>
+
+                    <p>Following the event: You'll leave with ideas for how to promote social emotional learning in your organization and a support system of others across the state focused on the same goal.</p>
+
+                    <p><strong>REGISTRATION:</strong> <a href="#">Register now</a>. For more information or to request disability accomodations, email <a herf="mailto:edequity@umn.edu">edequity@umn.edu</a>.</p>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

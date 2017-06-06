@@ -1,71 +1,85 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Research" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="Lab research">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>A resercher monitors an athlete's peak capabilities<br />
+                in the School of Kinesiology's Human Performance Reseach Laboratory</p>
+        </div>
+        <div class="third">
+            <p><a href="/research/centers/" class="to-upper button clear">Our centers and labs</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block main_content %}
-<div class="row">
+<div class="row has-hero-image">
   <div class="container">
 
-  <h1>Excellence in research</h1>
+  <h1>Research</h1>
 
     <div class="row">
+        <span class="divider one-third"></span>
+
       <div class="third">
-      <p>CEHD faculty and professional staff are active researchers, conducting projects in fields from childhood obesity to STEM integration to family finance. Our Office of Research and Policy supports CEHD researchers in finding, applying for and managing $51.5 million in externally funded research (2014-15), providing seed funding, and connecting research to policy.</p>
+      <p>CEHD faculty and professional staff are active researchers, conducting projects in <a href="/topics/">over 100 fields</a>. The Office of Research and Policy supports CEHD researchers in finding, applying for and managing $51.5 million in externally funded research (2014-15), providing seed funding, and connecting research to policy.</p>
 
       <p>Our vision is to advance research, teaching, and community engagement to increase opportunities for all individuals to have a successful start in life and to foster healthy human development, and will provide programs that meet the demands of the 21st century.</p>
       </div>
       <div class="twothird">
-      <h2><a href="https://cehdvision2020.umn.edu/blog/students-compete-three-minute-thesis-competition-cehd-research-day/">Three-Minute Thesis Competition</a></h2>
-      <img src="https://cehdvision2020.umn.edu/wp-content/uploads/2017/03/Jeanandwinners-1280x626.png" />
-      <p>CEHD graduate students boiled their work down during the <a href="https://cehdvision2020.umn.edu/blog/students-compete-three-minute-thesis-competition-cehd-research-day/">fast-paced Three-Minute Thesis competition</a> at the annual CEHD Research Day. In addition, more than 50 posters of ongoing work were on display. <a href="/research/research-day/">See all the abstracts and posters from Research Day 2017</a>.</p>
+      <h2>Highlights: our expertise</h2>
+      <dl>
+      <dt>Children's mental health</dt>
+      <dd>Supporting children and families with research, field work, and resources for understanding and resilience.</dd>
+      <dt>Achievement gap</dt>
+      <dd>Studying educational outcomes and disparities to improve how we serve students who need additional supports to succeed in schools.</dd>
+      <dt>Family systems</dt>
+      <dd>Understanding the psychology and functioning of people in the context of their family relationships.</dd>
+      <dt>STEM integration</dt>
+      <dd>Increasing student exposure to science, technology, engineering, and math (STEM) fields in the classroom. </dd>
+      </dl>
+
+<h3><small><a href="/topics/">Explore all of our areas of expertise and research</a></small></h3>
+
       </div>
     </div>
 </div><!-- ./container -->
 
+
 <div class="row emphasis">
-  <div class="container">
-      <h2>Our research and expertise</h2>
-      <div class="row">
-        <div class="span-3">
-            <p class="text-center"><a href="/topics/children-s-mental-health/" class="button center">Children's Mental Health</a></p>
-        </div>
-        <div class="span-3">
-            <p class="text-center"><a href="/topics/achievement-gap/" class="button center">Achievement Gap</a></p>
-        </div>
-        <div class="span-3">
-            <p class="text-center"><a href="/topics/family-systems/" class="button center">Family Systems</a></p>
-        </div>
-        <div class="span-3">
-            <p class="text-center"><a href="/topics/stem-integration/" class="button center">STEM Integration</a></p>
-        </div>
-      </div>
-        <h2 class="h4"><a href="/topics/">Explore all research and expertise topics</a></h2>
-    </div>
-</div>
 <div class="container">
-  <div class="row">
-
     <div class="half">
-      <h2>News</h2>
-      <ul>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </ul>
+      <h2>Policy Breakfast</h2>
+
+<p>Our <a href="/policy-breakfast/">policy breakfast series</a> brings experts and policymakers together to discuss the ways CEHD research can inform Minnesota's education policy.</p>
+
+
+<h3>Spring 2017: Ready to Lead? Positioning America's High Schools For Success</h3>
+
+<p>What are the unique challenges facing secondary schools, and how can school leaders best prepare and respond?</p>
+
+<p>Join us on May 17 for an interactive breakfast event that blends research and practitioner experience to examine how public policy supports high school success.</p>
+
+<p class="text-center"><a href="" class="button center simple">Learn more about the May policy breakfast</a></p>
+
+
     </div>
     <div class="half">
-      <h2>Events</h2>
-      <p>Our <a href="/policy-breakfast/">policy breakfast series</a> brings experts and policymakers together to discuss the ways CEHD research can inform Minnesota's education policy.</p>
+      <h2>Research Day</h2>
+      <img src="https://cehdvision2020.umn.edu/wp-content/uploads/2017/03/Jeanandwinners-1280x626.png" />
+      <p>CEHD graduate students boiled their work down during the <a href="https://cehdvision2020.umn.edu/blog/students-compete-three-minute-thesis-competition-cehd-research-day/">fast-paced Three-Minute Thesis competition</a> at the annual CEHD Research Day. In addition, more than 50 posters of ongoing work were on display. <a href="/research/research-day/">See all the abstracts and posters from Research Day 2017</a>.</p>
+      </div>
 
-      <h3>Upcoming Events</h3>
-      <ul>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </ul>
     </div>
-  </div>
+    </div>
+    </div>
+
+
+<div class="row">
+<div class="container">
 
   <div class="whole">
     <h2>Research Support &amp; Services</h2>
@@ -152,6 +166,29 @@
     Email: <a href="mailto:effz@umn.edu">jeffz@umn.edu</a></p>
   </div>
 </div>
+
+<div class="row">
+  <div class="span-4">
+    <p><strong>Lucy Luu Evans</strong><br />
+    <em>Pre-Award Support: ICI</em><br />
+    Phone: 612-625-3061<br />
+    Email: <a href="mailto:luuxx001@umn.edu">luuxx001@umn.edu</a></p>
+  </div>
+  <div class="span-4">
+    <p><strong>Danielle Billington </strong><br />
+    <em>Pre-Award Support: ICI</em><br />
+    Phone: 612-626-5949<br />
+    Email: <a href="mailto:billi015@umn.edu">billi015@umn.edu</a></p>
+  </div>
+  <div class="span-4">
+    <p><strong>Elizabeth Hedin </strong><br />
+    <em>Pre-Award Support: ITR</em><br />
+    Phone: 612-301-9446<br />
+    Email: <a href="mailto:hedi0022@umn.edu">hedi0022@umn.edu</a></p>
+  </div>
+
+</div>
+
 <div class="whole">
     <p>When preparing proposals that involve CEHD faculty and staff, please contact the <a href="/research/prf/">grant coordinator assigned to the investigator’s unit</a> with any questions.</p>
 </div>
