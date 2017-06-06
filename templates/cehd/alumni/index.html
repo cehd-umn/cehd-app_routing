@@ -1,22 +1,95 @@
+
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "Alumni | CEHD | U of M" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "Alumni" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .connect-more {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        float: right;
+        margin-top: -10px;
+    }
+
+    .connect-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .connect-issue {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-variant: caps;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+    .connect-articles {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .connect-cover {
+        float: right;
+        margin-bottom: 50px;
+    }
+    .connect-date {
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom:-18px;
+        font-size: 14px;
+}
+</style>
+{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/alumni/hero.jpg" alt="Belle Yaffe, ’70">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>Belle Yaffe, ’70, followed her values to a <br  />career in special education and social services</p>
+        </div>
+        <div class="third">
+            <p><a href="http://connect.cehd.umn.edu/a-force-for-families/" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block main_content %}
-<div class="row">
+<div class="row has-hero-image">
   <div class="container">
     <h1>Welcome Alumni</h1>
-		<p>College of Education and Human Development alumni and friends are
-		invited to become members of the
-		<a href="http://umnalumni.org/home">University of Minnesota Alumni
-		Association</a> and the <a href="society/default.html">CEHD Alumni
-		Society</a>.</p>
-		<p>The college has over 70,000 living alumni in the United
-		States and abroad. With over 8,000 Alumni Association members, the CEHD
-		Alumni Society is the second largest alumni society at the University of
-		Minnesota.</p>
-
+    <div class="twothird feature">
+  		<p>College of Education and Human Development alumni and friends are
+  		invited to become members of the
+  		<a href="http://umnalumni.org/home">University of Minnesota Alumni
+  		Association</a> and the <a href="/alumni/society/">CEHD Alumni
+  		Society</a>.</p>
+  		<p>The college has over 70,000 living alumni in the United
+  		States and abroad. With over 8,000 Alumni Association members, the CEHD
+  		Alumni Society is the second largest alumni society at the University of
+  		Minnesota.</p>
+      <div class="row">
+        <div class="span-6">
+          {{ loader.loader(
+            "Alumni News",
+            "h2",
+            "news-container"
+          ) }}
+        </div>
+        <div class="span-6">
+          {{ loader.loader(
+            "Alumni Events",
+            "h2",
+            "events-container"
+          ) }}
+        </div>
+      </div>
+    </div>
  </div> <!-- ./container -->
-    <div class="row">
+
    <div class="row emphasis bg-cehd-multi margin-top-1 ">
      <div class="container">
        <div class="half feature"><img class="mobile-hide" src=
@@ -67,8 +140,9 @@
        </div>
      </div>
    </div>
- </div>
-
-
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+        {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
+        {{ events.events_feed_js(182) }}
 {% endblock %}

@@ -125,6 +125,11 @@
   template: cehd/alumni/notes.html
   template_data:
     - section: alumni
+/alumni/volunteer/:
+  publish: true
+  template: cehd/alumni/volunteer.html
+  template_data:
+    - section: alumni
 /alumni/awards/:
   publish: true
   template: cehd/alumni/awards/index.html
@@ -1290,6 +1295,11 @@
   template: cehd/research/index.html
   template_data:
     - section: research
+/research/centers/:
+  publish: true
+  template: cehd/research/centers.html
+  template_data:
+    - section: research
 /research/grantsmanship/:
   publish: true
   template: cehd/research/grantsmanship.html
@@ -1303,6 +1313,11 @@
 /research/pi/:
   publish: true
   template: cehd/research/pi.html
+  template_data:
+    - section: research
+/research/prf/:
+  publish: true
+  template: cehd/research/prf.html
   template_data:
     - section: research
 /research/research-day/:

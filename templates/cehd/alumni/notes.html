@@ -1,11 +1,85 @@
 {% extends "cehd/layout/base.html" %}
-{% set page_title = "CEHD" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{% set page_title = "Alumni Notes" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Heading</h1>
-      
+    <h1>Alumni Notes</h1>
+      <div class="row">
+        <div class="span-6">
+          <h2>From the President</h2>
+            <p>At the University’s two-day Educational Equity in Action event in June, it
+            was inspirational and exciting to convene with more than 640 participants. How
+            does our CEHD Alumni Society Board embrace this transformational work to provide
+            educational opportunities and close the disparities? For one, our board reaches
+            out to engage students and share their knowledge and expertise at networking
+            events—with graduate students each fall and undergraduates each spring. We also
+            seek to build networks and strengthen connections by honoring our Rising Alumni
+            each spring.</p>
+
+            <p>At the same time, our board strives to build four key
+            scholarships to advance educational opportunities for students, and we are
+            increasing the number of recipients every year to address opportunity gaps.
+            This, we hope, is equity in action as we support students in their pursuits and
+            passions. We ask you to embrace the Improving Lives campaign with donations to
+            our scholarships.</p>
+
+            <p>We treasure engagement with alumni, families, and
+            students through the University’s Homecoming activities beginning October 21—see
+            the back cover for details. Join in our celebrations and connect with one
+            another.</p>
+
+            <p>We also invite you to attend CEHD Saturday Scholars on November
+            12 to learn about exciting and innovative research within our college, including
+            resilience, trauma-informed care, literacy through relationships, and
+            social–emotional learning. How can the board serve you? We want to hear from
+            you. Send us your inquiries, ideas, comments, and feedback. Please email me at
+            cehdas@umn.edu or connect through LinkedIn, Facebook, or Twitter.</p>
+
+            <p>I am honored to serve a second year as the Alumni Society Board president. Thank you
+            for the opportunity to serve. I, too, am reconnecting with our college and
+            university as I seek to learn how to expand educational opportunities for
+            students and address equity in action.</p>
+
+            <p>We thank you for your ongoing support and contributions to our college and
+            the University. As one of more than 74,000 proud CEHD alumni, I look forward to
+            serving you. The Alumni Society Board welcomes your comments, questions, and
+            feedback.  Please email me at  <a href="mailto:cehdas@umn.edu">cehdas@umn.edu</a> or connect with us through
+            LinkedIn, Facebook, or Twitter.</p> <p>Sincerely,</p>
+
+          	<p><strong>Jan Ormasa, M.A. ’74</strong><br />
+        		CEHD Alumni Society President</p>
+          </div>
+          <div class="span-6">
+            <h2>Share Your News Online</h2>
+      			<p>Did you land a new job? Receive an award? Celebrate a
+      			milestone? Let us know.</p>
+      			<p>Complete the alumni notes form.
+      		  We look forward to hearing from you soon!</p>
+            <!-- Form called Alumni - News and Notes in Cognito | JFA 2017-06-02 -->
+            <div class="cognito">
+              <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
+              <script>Cognito.load("forms", { id: "28" });</script>
+            </div>
+
+          </div>
+      </div>
+      <div class="row">
+        <div class="span-6 feature">
+          <article>
+          {{ loader.loader(
+            "Alumni Notes",
+            "h2",
+            "news-container"
+          ) }}
+        </article>
+        </div>
+      </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+        {{ newsfeed.news_feed_js("alumni-notes/","#news-container","index.html","20") }}
 {% endblock %}
