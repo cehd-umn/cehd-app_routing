@@ -187,6 +187,10 @@ Dual Language and Immersion Education:
   links:
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
+    - title: License
+      href: /teaching/dual-language/
+    - title: Masters
+      href: /teaching/dual-language/
   description: Work effectively in dual language and immersion settings, in programs where the second / foreign / heritage / indigenous language is the vehicle to teach school subjects.
   categories:
     - Teaching, Learning, and Schools
@@ -350,8 +354,6 @@ Higher Education:
   meta: null
   publish: true
   links:
-    - title: License
-      href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/edd.html
     - title: Masters
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/ma.html
     - title: Ph.D.

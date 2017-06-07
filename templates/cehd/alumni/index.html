@@ -62,15 +62,15 @@
   <div class="container">
     <h1>Welcome Alumni</h1>
     <div class="twothird feature">
-  		<p>College of Education and Human Development alumni and friends are
-  		invited to become members of the
-  		<a href="http://umnalumni.org/home">University of Minnesota Alumni
-  		Association</a> and the <a href="/alumni/society/">CEHD Alumni
-  		Society</a>.</p>
-  		<p>The college has over 70,000 living alumni in the United
-  		States and abroad. With over 8,000 Alumni Association members, the CEHD
-  		Alumni Society is the second largest alumni society at the University of
-  		Minnesota.</p>
+        <p>College of Education and Human Development alumni and friends are
+        invited to become members of the
+        <a href="http://umnalumni.org/home">University of Minnesota Alumni
+        Association</a> and the <a href="/alumni/society/">CEHD Alumni
+        Society</a>.</p>
+        <p>The college has over 70,000 living alumni in the United
+        States and abroad. With over 8,000 Alumni Association members, the CEHD
+        Alumni Society is the second largest alumni society at the University of
+        Minnesota.</p>
       <div class="row">
         <div class="span-6">
           {{ loader.loader(
@@ -144,5 +144,5 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
         {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
-        {{ events.events_feed_js(182) }}
+        {{ eventsfeed.events_feed_js(182) }}
 {% endblock %}

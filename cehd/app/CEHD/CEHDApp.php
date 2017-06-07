@@ -9,7 +9,10 @@ require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 require_once __DIR__ . '/../../../cehd/app/Card/ProgramCard.php';
 require_once __DIR__ . '/../../../cehd/app/Card/TopicCard.php';
+require_once __DIR__ . '/../../../cehd/app/Card/PatternCard.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
+
+use CEHD\App\Card\PatternCard\PatternCards;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
@@ -25,6 +28,8 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             ];
 
     private $_patternLibraryData;
+
+    private $_patternCardsInstance;
 
     function __construct($file_paths)
     {
@@ -47,76 +52,22 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         if (!$this->config["is_prod"])
         {
             $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
-            $pattern_data = $this->loadYaml($yaml_file_path);
+            $this->_patternCardsInstance = new PatternCards();
+            $this->_patternCardsInstance->setCards($yaml_file_path);
 
-            $patterns = $this->_buildPatternData($pattern_data);
+            $this->_patternLibraryData = $this->_patternCardsInstance->buildRoutesFromPatternData();;
 
-            $this->_patternLibraryData = $this->_loadDict($patterns);
-
-            foreach($patterns as $route => $pattern)
+            foreach ($this->_patternLibraryData as $route => $card)
             {
                 $handler = "patternPageHandler";
 
-                if ($pattern["handler"])
+                if ($card->handler)
                 {
-                    $handler = $pattern["handler"];
+                    $handler = $card->handler;
                 }
-
-                $this->router->respond(
-                    'GET', $route, [$this, $handler]);
-            }
-
-            $groups = $this->_getPatternGroups();
-
-            foreach ($groups as $group)
-            {
-                $patterns = $this->_filterPatternsByGroup($group);
-                $this->router->respond("GET", "/patterns/" . $group . "/", [$this, "patternGroupHandler"]);
+                $this->router->respond('GET', $route, [$this, $handler]);
             }
         }
-    }
-
-    private function _filterPatternsByGroup($group)
-    {
-        $patterns = [];
-
-        foreach ($this->_patternLibraryData as $pattern)
-        {
-            if ($pattern["group"] === $group)
-            {
-                array_push($patterns, $pattern);
-            }
-        }
-        return $patterns;
-    }
-
-    private function _getPatternGroups()
-    {
-        $groups = [];
-
-        foreach($this->_patternLibraryData as $pattern)
-        {
-            array_push($groups, $pattern["group"]);
-        }
-        return array_unique($groups);
-    }
-
-    private function _buildRouteFromPattern($group, $title)
-    {
-        return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
-    }
-
-    private function _buildPatternData($patterns)
-    {
-        $new_structure = [];
-
-        foreach ($patterns as $title => $pattern)
-        {
-            $route = $this->_buildRouteFromPattern($pattern["group"], $title);
-            $pattern["title"] = $title;
-            $new_structure[$route] = $pattern;
-        }
-        return $new_structure;
     }
 
     public function errorPageHandler($code, $router)
@@ -238,7 +189,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
             foreach ($data["data"] as $title => $pattern)
             {
-                $path = $this->_buildRouteFromPattern($pattern["group"], $title);
+                $path = $this->_patternCardsInstance->buildRouteFromPattern($pattern["group"], $title);
                 $link = [
                     "href" => $path,
                     "title" => $title,
@@ -463,15 +414,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function patternPageHandler($request, $response, $service, $app)
     {
         $path = $request->pathname();
-        $pattern = $this->_patternLibraryData->get($path);
+        $pattern = $this->_patternLibraryData[$path];
 
         if ($pattern)
         {
-            if ($pattern["type"] === "include")
+            if ($pattern->type === "include")
             {
                 echo $this->_renderTemplate("cehd/patterns/pattern.html", ["pattern" => $pattern]);
             }
-            else if ($pattern["type"] === "template")
+            else if ($pattern->type === "template")
             {
                 echo $this->_renderTemplate($pattern["template"], ["pattern" => $pattern]);
             }
@@ -484,7 +435,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $group = $uri_parts[2];
         $patterns = $this->_filterPatternsByGroup($group);
 
-        // var_dump($uri_parts);
         if ($patterns)
         {
             echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);

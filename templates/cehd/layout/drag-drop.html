@@ -1,0 +1,177 @@
+{% extends "cehd/layout/base.html" %}
+{% block bottom_js %}{{ parent() }}
+<script>var jQuery = $;</script>
+<script src="/assets/dist/js/lib/jquery-ui.min.js"></script>
+<script>
+// Shuffle function for random description order in Self Test 1
+(function($) {
+    $.fn.shuffle = function() {
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+
+        return $(shuffled);
+    };
+})(jQuery);
+
+$(function() {
+
+    // Self Test 1: Draggable and droppable listeners for descriptions / description boxes
+    $("#unsorted li").shuffle();
+
+    $(".draggable-items li").draggable({
+        helper: "clone",
+        cursor: "move"
+    });
+
+    $(".draggable-items").droppable({
+            hoverClass: "draggable-items-hover",
+            over: function(event, ui) {
+            $(this).find(".empty-text").hide();
+        },
+        out: function(event, ui) {
+            if ($(this).find("li").length <= 1) {
+                $(this).find(".empty-text").show();
+            }
+        },
+        drop: function(event, ui) {
+            item = ui.draggable;
+            list = $(this);
+            list.find(".empty-text").hide();
+            item.fadeOut("fast", function() {
+                item.appendTo(list).fadeIn("fast");
+
+                if (list.is("#unsorted")) {
+                    // Unsorted box - remove correct/incorrect classes and icon
+                    item.removeClass("correct");
+                    item.removeClass("incorrect");
+                    item.find("i.icon").remove();
+                } else if (list.hasClass("boolean")) {
+                    // Dropped in a sort box - check if correct
+                    if ((item.hasClass("solo-item") && list.is("#solo")) || (item.hasClass("lead-item") && list.is("#lead"))) {
+                        item.removeClass("incorrect");
+                        item.addClass("correct");
+                        item.find("i.icon").remove();
+                        item.prepend('<i class="icon icon-ok" />');
+                    } else {
+                        item.removeClass("correct");
+                        item.addClass("incorrect");
+                        item.find("i.icon").remove();
+                        item.prepend('<i class="icon icon-remove" />');
+                    }
+                } else if (list.hasClass("importance")) {
+                    var target_selector = list.data("target");
+
+                    if (target_selector) {
+                        $target = $(target_selector);
+                        $target.append("<li>" + item[0].innerText + "</li>");
+                    }
+                }
+
+                $(".draggable-items").each( function() {
+                    if ($(this).find("li").length <= 1) {
+                        $(this).find(".empty-text").show();
+                    }
+                })
+            });
+        }
+    });
+
+    // Self Test 2: Show Correct/Incorrect answer feedback
+    $("#self-test-2 input[type=radio]").click( function() {
+        var response = $("input[name="+$(this).attr("name")+"]:checked").val();
+
+        if (response == "true") {
+            $(this).parents(".controls").find(".correct").slideUp("fast");
+            $(this).parents(".controls").find(".incorrect").slideDown("fast");
+        } else {
+            $(this).parents(".controls").find(".incorrect").slideUp("fast");
+            $(this).parents(".controls").find(".correct").slideDown("fast");
+        }
+    });
+
+    $(".change-slide").on("click", function(e) {
+        e.preventDefault();
+        var $button = $(this);
+        var $target = $($button.data("target"));
+        var $item = $button.closest(".item");
+        $item.addClass("done");
+        $(".active").removeClass("active");
+        $target.addClass("active");
+        $target.removeClass("done");
+    });
+});
+</script>
+{% endblock %}
+{% block extra_css %}
+    <style>
+        .empty-text {
+            display: none;
+            margin-top: 10px;
+        }
+
+        a.button:link,
+        a.button:visited,
+        a.button:active,
+        a.button:hover,
+        .simple.button {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .draggable-items li,
+        .simple.button {
+            background-color: #0facee;
+            background-image: linear-gradient(top, #17b8fb,#049cdb);
+            background-repeat: repeat-x;
+            border-color: #049cdb #049cdb #036690;
+            border-radius: 10px;
+            border: 1px solid #555;
+            color: #fff;
+            cursor: move;
+            margin: 5px;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .droppable {
+            min-height: 245px;
+        }
+
+        .draggable-items {
+            border-radius: 10px;
+            border: 2px dashed #999;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .draggable-items li.correct {
+            background-color: #56b256;
+            background-image: linear-gradient(top, #62bc62,#46a546);
+            background-repeat: repeat-x;
+            border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1), 15%);
+        }
+
+        .draggable-items li.incorrect {
+            background-color: #b62c21;
+            background-repeat: repeat-x;
+            border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1), 15%);
+        }
+        /*This hides submit button on form*/
+        div.c-action {display:none}
+        .c-label {font-size: 2em}
+    </style>
+{% endblock %}

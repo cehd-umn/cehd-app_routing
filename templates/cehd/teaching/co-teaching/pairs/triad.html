@@ -1,360 +1,314 @@
-{% extends "cehd/layout/base.html" %}
+{% extends "cehd/layout/drag-drop.html" %}
 {% set page_title = "The Student Teaching Triad" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}{{ parent() }}
+<style>
+    .droppable {
+        min-height: 3em;
+    }
+
+    .draggable-items li.empty-text {
+        background: transparent;
+    }
+
+    .container.carousel {
+        min-height: 1000px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .item {
+        left: 150%;
+        padding: 3em;
+        position: absolute;
+        transition: left .5s;
+        width: 100%
+    }
+
+    .item.active {
+        left: 0;
+    }
+
+    .item.done {
+        left: -150%;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
-  <div class="container">
-          <h1>The Student Teaching Triad</h1>
-    <div class="row">
-      <div class="span-4">
-        {{ include('cehd/teaching/co-teaching/pairs/aa-nav.html') }}
-      </div>
-      <div class="span-8">
+    <div class="container">
+        <h1>The Student Teaching Triad</h1>
+        <div class="span-4">
+            {{ include('cehd/teaching/co-teaching/pairs/aa-nav.html') }}
+        </div>
+        <div class="span-8">
+            <div class="margin-top-3"></div>
+            <p>In student teaching, a cooperating teacher and a university
+            supervisor support the development of a teacher candidate. These three
+            individuals form a triad.</p>
 
-    <div class="margin-top-3">
-    </div>
-    <p>In student teaching, a cooperating teacher and a university
-    supervisor support the development of a teacher candidate.&nbsp; These three
-    individuals form a triad. </p>
-    <p>Each member of the triad has particular roles that provide the
-    foundation for a successful student teaching experience. Because the
-    triad works together it is important to know the responsibilities and
-    expectations for each member. </p>
-    <p>For information on building rapport in a triad please see:</p>
-    <ul>
-            <li><strong>
-            <a href="/assets/docs/teaching/co-teaching-modules/Welcoming-Your-TC.pdf">Welcoming your Teacher Candidate</a>
-            </strong>(PDF)</li>
-            <li><strong>
-            <a href="/assets/docs/teaching/co-teaching-modules/Roles-of-the-Triad.pdf">
-            The Roles Of The Triad</a> </strong>(PDF)</li>
-            <li><strong><a href="/assets/docs/teaching/co-teaching-modules/Stages-Concern-TC.pdf">Stages Of Concern for Teacher Candidates</a></strong>
-            (PDF) </li>
-    </ul>
-    <div class="LineBreak"> </div>
-    <p>The following relationship building activities are designed to help
-    you get to know your co-teaching partner better.</p>
-    <h2>What values are most important to you and why ?</h2>
-    <p>You are to work as a cooperating teacher and teacher candidate pair. Each of you will take turns to:</p>
-    <ol class="style1">
-            <li>Reflect on what values are most important to you and
-            what they mean to you</li>
-            <li>Then sort available value options by dragging and dropping them into
-    three dropboxes: <strong>Very important</strong>,<strong> Somewhat
-    important</strong>, and <strong>Not
-    important</strong>. </li>
-    </ol>
-    <p>The results of your selection will be displayed to you side by side. Discuss with your partner what&nbsp;
-    values you chose, why you selected it, and
-    what you have learned about yourself during this exercise. What did you
-    learn about each other?</p>
-    <p>&nbsp;</p>
+            <p>Each member of the triad has particular roles that provide the
+            foundation for a successful student teaching experience. Because the
+            triad works together it is important to know the responsibilities and
+            expectations for each member.</p>
 
-    <!-- Activity 3 -->
+            <p>For information on building rapport in a triad please see:</p>
+            <ul>
+                <li><strong><a
+                href="/assets/docs/teaching/co-teaching-modules/Welcoming-Your-TC.pdf">Welcoming
+                your Teacher Candidate</a></strong> (PDF)</li>
+                <li><strong> <a
+                href="/assets/docs/teaching/co-teaching-modules/Roles-of-the-Triad.pdf">
+                The Roles Of The Triad</a></strong> (PDF)</li>
+                <li><strong><a
+                href="/assets/docs/teaching/co-teaching-modules/Stages-Concern-TC.pdf">Stages
+                Of Concern for Teacher Candidates</a></strong>
+                (PDF) </li>
+            </ul>
 
-    <div class="container" id="self-test-3">
-      <div id="value-cards-slides" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="active item">
-            <div class="ct">
-              <div class="row">
+            <p>The following relationship building activities are designed to help
+            you get to know your co-teaching partner better.</p>
+
+            <h2>What values are most important to you and why?</h2>
+
+            <p>You are to work as a cooperating teacher and teacher candidate pair. Each of you will take turns to:</p>
+            <ol>
+                <li>Reflect on what values are most important to you and what
+                they mean to you</li>
+                <li>Then sort available value options by dragging and dropping
+                them into three dropboxes: <strong>Very
+                important</strong>,<strong> Somewhat important</strong>, and
+                <strong>Not important</strong>. </li>
+            </ol>
+            <p>The results of your selection will be displayed to you side by
+            side. Discuss with your partner what values you chose, why
+            you selected it, and what you have learned about yourself during
+            this exercise. What did you learn about each other?</p>
+        </div><!-- /span-8 -->
+    </div><!-- /container -->
+</div><!-- /row -->
+<div class="row">
+    <div class="container carousel">
+        <!-- Activity 3 -->
+        <div class="active item span-4" id="item-1">
+            <div class="span-12">
                 <h3>Round 1: Cooperating Teacher</h3>
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Problem Solving</li>
-                    <li>Simplicity</li>
-                    <li>Sincerity</li>
-                    <li>Punctuality</li>
-                    <li>Self Improvement</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Problem Solving</li>
+                        <li class="draggable-box">Simplicity</li>
+                        <li class="draggable-box">Sincerity</li>
+                        <li class="draggable-box">Punctuality</li>
+                        <li class="draggable-box">Self Improvement</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Routine</li>
-                    <li>Feedback</li>
-                    <li>Power</li>
-                    <li>Arts</li>
-                    <li>Safety</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Routine</li>
+                        <li class="draggable-box">Feedback</li>
+                        <li class="draggable-box">Power</li>
+                        <li class="draggable-box">Arts</li>
+                        <li class="draggable-box">Safety</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Service (to others)</li>
-                    <li>Wisdom</li>
-                    <li>Challenge</li>
-                    <li>Clear Expectations</li>
-                    <li>Variety</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Service (to others)</li>
+                        <li class="draggable-box">Wisdom</li>
+                        <li class="draggable-box">Challenge</li>
+                        <li class="draggable-box">Clear Expectations</li>
+                        <li class="draggable-box">Variety</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Comfort</li>
-                    <li>Change</li>
-                    <li>Leisure</li>
-                    <li>Health</li>
-                    <li>Independence</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Comfort</li>
+                        <li class="draggable-box">Change</li>
+                        <li class="draggable-box">Leisure</li>
+                        <li class="draggable-box">Health</li>
+                        <li class="draggable-box">Independence</li>
+                    </ul>
                 </div>
-
-              </div> <!-- end .row -->
-
-              <div class="row">
-                <div class="span4">
-                  <h3>Very Important</h3>
-                  <ul class="value-cards sorted" id="ct-most-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+            </div> <!-- /span-12 -->
+            <div class="span-12">
+                <div class="span-4">
+                    <h3 class="h4">Very Important</h3>
+                    <ul class="draggable-items droppable sorted importance"
+                        id="ct-most-important" data-target="#ct-most-important-final">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-                <div class="span4">
-                  <h3>Somewhat Important</h3>
-                  <ul class="value-cards sorted" id="ct-somewhat-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+                <div class="span-4">
+                    <h3 class="h4">Somewhat Important</h3>
+                    <ul class="draggable-items droppable sorted" id="ct-somewhat-important">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-                <div class="span4">
-                  <h3>Not Important</h3>
-                  <ul class="value-cards sorted" id="ct-not-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+                <div class="span-4">
+                    <h3 class="h4">Not Important</h3>
+                    <ul class="draggable-items droppable sorted" id="ct-not-important">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-              </div> <!-- end .row -->
-
-              <div class="row">
-                <div class="span12">
-                  <a href="#" class="done-sorting btn btn-primary btn-large pull-right">
-                    Cooperating Teacher Done Sorting
-                    <i class="icon-chevron-right"></i>
-                  </a>
-                </div>
-              </div> <!-- end .row -->
-
-            </div> <!-- end .ct -->
-          </div> <!-- end .active.item -->
-
-
-          <div class="item">
-            <div class="tc">
-
-              <div class="row">
+            </div> <!-- /span-12 -->
+            <div class="span-12 margin-top-1">
+                <a href="#" class="done-sorting simple button change-slide" data-target="#item-2">Cooperating Teacher Done Sorting &rarr;</a>
+            </div>
+        </div> <!-- /item  -->
+        <div class="item span-4" id="item-2">
+            <div class="span-12">
                 <h3>Round 2: Teacher Candidate</h3>
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Problem Solving</li>
-                    <li>Simplicity</li>
-                    <li>Sincerity</li>
-                    <li>Punctuality</li>
-                    <li>Self Improvement</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Problem Solving</li>
+                        <li class="draggable-box">Simplicity</li>
+                        <li class="draggable-box">Sincerity</li>
+                        <li class="draggable-box">Punctuality</li>
+                        <li class="draggable-box">Self Improvement</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Routine</li>
-                    <li>Feedback</li>
-                    <li>Power</li>
-                    <li>Arts</li>
-                    <li>Safety</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Routine</li>
+                        <li class="draggable-box">Feedback</li>
+                        <li class="draggable-box">Power</li>
+                        <li class="draggable-box">Arts</li>
+                        <li class="draggable-box">Safety</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Service (to others)</li>
-                    <li>Wisdom</li>
-                    <li>Challenge</li>
-                    <li>Clear Expectations</li>
-                    <li>Variety</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Service (to others)</li>
+                        <li class="draggable-box">Wisdom</li>
+                        <li class="draggable-box">Challenge</li>
+                        <li class="draggable-box">Clear Expectations</li>
+                        <li class="draggable-box">Variety</li>
+                    </ul>
                 </div>
-
-
-                <div class="span3">
-                  <ul class="value-cards unsorted">
-                    <li class="empty-text"><em>Empty</em></li>
-                    <li>Comfort</li>
-                    <li>Change</li>
-                    <li>Leisure</li>
-                    <li>Health</li>
-                    <li>Independence</li>
-                  </ul>
+                <div class="span-3">
+                    <ul class="draggable-items unsorted">
+                        <li class="empty-text"><em>Empty</em></li>
+                        <li class="draggable-box">Comfort</li>
+                        <li class="draggable-box">Change</li>
+                        <li class="draggable-box">Leisure</li>
+                        <li class="draggable-box">Health</li>
+                        <li class="draggable-box">Independence</li>
+                    </ul>
                 </div>
-
-              </div> <!-- end .row -->
-
-              <div class="row">
-                <div class="span4">
-                  <h3>Very Important</h3>
-                  <ul class="value-cards sorted" id="tc-most-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+            </div> <!-- /span-12 -->
+            <div class="span-12">
+                <div class="span-4">
+                    <h3 class="h4">Very Important</h3>
+                    <ul class="draggable-items sorted droppable importance"
+                        id="tc-most-important" data-target="#tc-most-important-final">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-                <div class="span4">
-                  <h3>Somewhat Important</h3>
-                  <ul class="value-cards sorted" id="tc-somewhat-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+                <div class="span-4">
+                    <h3 class="h4">Somewhat Important</h3>
+                    <ul class="draggable-items sorted droppable" id="tc-somewhat-important">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-                <div class="span4">
-                  <h3>Not Important</h3>
-                  <ul class="value-cards sorted" id="tc-not-important">
-                    <li class="empty-text"><em>Empty</em></li>
-                  </ul>
+                <div class="span-4">
+                    <h3 class="h4">Not Important</h3>
+                    <ul class="draggable-items sorted droppable" id="tc-not-important">
+                        <li class="empty-text"><em>Empty</em></li>
+                    </ul>
                 </div>
-
-              </div> <!-- end .row -->
-
-              <div class="row">
-                <div class="span12">
-                  <a href="#" class="step-backwards btn btn-large pull-left">
-                    <i class="icon-chevron-left"></i>
-                    Back to Cooperating Teacher Sorting
-                  </a>
-
-
-                  <a href="#" class="done-sorting btn btn-primary btn-large pull-right">
-                    Teacher Candidate Done Sorting
-                    <i class="icon-chevron-right"></i>
-                  </a>
-                </div>
-              </div> <!-- end .row -->
-
-            </div> <!-- end .tc -->
-          </div> <!-- end .item -->
-
-
-          <div class="item">
-            <div class="row">
-              <h3>Round 3: Discuss</h3>
-
-              <div class="span4 offset2">
-                <h4>CT's Very Important Values</h4>
-                <ul class="value-cards sorted" id="ct-most-important-final">
-
-                </ul>
-              </div>
-
-              <div class="span4">
-                <h4>TC's Very Important Values</h4>
-                <ul class="value-cards sorted" id="tc-most-important-final">
-
-                </ul>
-              </div>
-
-            </div> <!-- end .row -->
-
-            <div class="row">
-              <div class="span12">
-                <a href="#" class="step-backwards btn btn-large pull-left">
-                  <i class="icon-chevron-left"></i>
-                  Back to Teacher Candidate Sorting
+            </div> <!-- /span-12 -->
+            <div class="span-12 margin-top-1">
+                <a href="#" class="step-backwards simple button change-slide" data-target="#item-1">
+                    &larr; Back to Cooperating Teacher Sorting
                 </a>
+                <a href="#" class="done-sorting simple button change-slide" data-target="#item-3">
+                    Teacher Candidate Done Sorting  &rarr;
+                </a>
+            </div> <!-- /span-12 -->
+        </div> <!-- /item -->
+        <div class="item span-4" id="item-3">
+            <div class="span-12">
+                <h3>Round 3: Discuss</h3>
+                <div class="half">
+                    <h4>CT's Very Important Values</h4>
+                    <ul class="draggable-items sorted" id="ct-most-important-final">
+                    </ul>
+                </div>
+                <div class="half">
+                    <h4>TC's Very Important Values</h4>
+                    <ul class="draggable-items sorted" id="tc-most-important-final">
+                    </ul>
+                </div>
+            </div> <!-- /span-12 -->
+            <div class="span-12 margin-top-1">
+                <a href="#" class="step-backwards simple button change-slide" data-target="#item-2">
+                    &larr; Back to Teacher Candidate Sorting
+                </a>
+            </div>
+        </div> <!-- /item -->
+    </div><!-- /container -->
+</div><!-- /row -->
+<!-- End Activity 3 -->
+<div class="row">
+    <div class="container">
+        <h2>What are your perceptions about student behaviors and attitudes? </h2>
 
-              </div>
-            </div> <!-- end .row -->
-
-
-
-          </div> <!-- end .item -->
-
-
-        </div> <!-- end .carousel-inner -->
-
-      </div> <!-- end .carousel.slide -->
-
-    </div><!-- end #self-test-3.container -->
-    <!-- End Activity 3 -->
-
-
-    <h2>What are your perceptions about student behaviors and attitudes? </h2>
     <p>This tool is designed to help you compare your perceptions about
-    appropriate and inappropriate student behaviors in the classroom.&nbsp;
+    appropriate and inappropriate student behaviors in the classroom.
     Please discuss similarities and differences in your perceptions using
     guiding questions below. Are these behaviours acceptable or unacceptable?</p>
 
     <ol class="with-headings">
-      <li class="h4">Student arrives late to class.</li>
-
-      <li class="h4">Student does not complete homework.</li>
-
-      <li class="h4">Student frequently misses school the day of test or major assignment.</li>
-
-      <li class="h4">Student often requests help or approval of work in progress.</li>
-
-      <li class="h4">Student is inattentive (talking, doing another task, sleeping).</li>
-
-      <li class="h4">Student hits or shoves another student.</li>
-
-      <li class="h4">Student uses profanity or inappropriate language.</li>
-
-      <li class="h4">Student argues with or is rude to teacher.</li>
-
-      <li class="h4">Student verbally/sexually harasses another student.</li>
-
-      <li class="h4">Student makes frequent requests to leave the room.</li>
-
-      <li class="h4">Student hums, sub-vocalizes, taps pencil, etc.</li>
-
-      <li class="h4">Student frequently requests extra credit or special consideration.</li>
-
-      <li class="h4">Student does not participate in classroom activities.</li>
-
-      <li class="h4">Student throws pencils/paper wads, shoots rubber bands.</li>
-
-      <li class="h4">Student makes irrelevant comments or gives silly answers.</li>
-
-      <li class="h4">Student interrupts others.</li>
-
-      <li class="h4">Student comes to class without paper, book, pencil, etc.</li>
-
-      <li class="h4">Student whines or tattles on other students.</li>
-
-      <li class="h4">Student's work from home exceeds quality or work in class.</li>
-
+        <li class="h4">Student arrives late to class.</li>
+        <li class="h4">Student does not complete homework.</li>
+        <li class="h4">Student frequently misses school the day of test or major assignment.</li>
+        <li class="h4">Student often requests help or approval of work in progress.</li>
+        <li class="h4">Student is inattentive (talking, doing another task, sleeping).</li>
+        <li class="h4">Student hits or shoves another student.</li>
+        <li class="h4">Student uses profanity or inappropriate language.</li>
+        <li class="h4">Student argues with or is rude to teacher.</li>
+        <li class="h4">Student verbally/sexually harasses another student.</li>
+        <li class="h4">Student makes frequent requests to leave the room.</li>
+        <li class="h4">Student hums, sub-vocalizes, taps pencil, etc.</li>
+        <li class="h4">Student frequently requests extra credit or special consideration.</li>
+        <li class="h4">Student does not participate in classroom activities.</li>
+        <li class="h4">Student throws pencils/paper wads, shoots rubber bands.</li>
+        <li class="h4">Student makes irrelevant comments or gives silly answers.</li>
+        <li class="h4">Student interrupts others.</li>
+        <li class="h4">Student comes to class without paper, book, pencil, etc.</li>
+        <li class="h4">Student whines or tattles on other students.</li>
+        <li class="h4">Student's work from home exceeds quality or work in class.</li>
     </ol>
 
     <h3>Discussion</h3>
-
     <ul>
-      <li>What is your
-    rationale for the degree of acceptance/tolerance you have for different
-    behaviors? </li>
-      <li>How does this affect your rapport with and regard
-      for students?</li>
-      <li>What behaviors do you demonstrate to promote success for
-    students?</li>
-      <li>What behaviors do you demonstrate to compromise success?</li>
-      <li>Do some of those behaviors appear to be opposite of
-      your co-teacher?</li>
+        <li>What is your
+        rationale for the degree of acceptance/tolerance you have for different
+        behaviors?</li>
+        <li>How does this affect your rapport with and regard
+        for students?</li>
+        <li>What behaviors do you demonstrate to promote success for
+        students?</li>
+        <li>What behaviors do you demonstrate to compromise success?</li>
+        <li>Do some of those behaviors appear to be opposite of
+        your co-teacher?</li>
     </ul>
 
-    <p class="text-center"><a href="/teaching/co-teaching/pairs/collaboration/" class="button center">Next:
-    Communication and Collaboration</a></p>
+    <p class="text-center"><a href="/teaching/co-teaching/pairs/collaboration/"
+    class="button center">Next: Communication and Collaboration</a></p>
 
-    <p><small>&copy; 2012, St. Cloud State University. Used with permission by the University of Minnesota-Twin Cities’ Office of Teacher Education (OTE) for the CEHD Partner Network</small></p>
-      </div> <!-- ./span-8 -->
-    </div> <!-- ./row -->
-  </div> <!-- ./container -->
+    <p><small>&copy; 2012, St. Cloud State University. Used with permission by
+    the University of Minnesota-Twin Cities’ Office of Teacher Education (OTE)
+    for the CEHD Partner Network</small></p>
+            </div> <!-- ./span-8 -->
+        </div> <!-- ./row -->
+    </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}

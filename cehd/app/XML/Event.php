@@ -136,7 +136,7 @@ class Event extends \CEHD\App\XML\XML
 
         $this->dayOfWeek = $this->getFromProperty($event->dayOfWeek);
 
-        $this->year = $this->getFromProperty($event->dateYear);
+        $this->year = $this->getYear();
 
         $this->month = $this->getFromProperty($this->getMonth());
 

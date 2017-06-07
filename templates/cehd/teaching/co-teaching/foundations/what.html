@@ -1,161 +1,10 @@
-{% extends "cehd/layout/base.html" %}
+{% extends "cehd/layout/drag-drop.html" %}
 {% set page_title = "What is Co-Teaching?" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block bottom_js %}{{ parent() }}
-<script>var jQuery = $;</script>
-<script src="/assets/dist/js/lib/jquery-ui.min.js"></script>
-<script>
-// Shuffle function for random description order in Self Test 1
-(function($) {
-    $.fn.shuffle = function() {
-        var allElems = this.get(),
-            getRandom = function(max) {
-                return Math.floor(Math.random() * max);
-            },
-            shuffled = $.map(allElems, function(){
-                var random = getRandom(allElems.length),
-                    randEl = $(allElems[random]).clone(true)[0];
-                allElems.splice(random, 1);
-                return randEl;
-           });
-
-        this.each(function(i){
-            $(this).replaceWith($(shuffled[i]));
-        });
-
-        return $(shuffled);
-    };
-})(jQuery);
-
-$(function() {
-
-    // Self Test 1: Draggable and droppable listeners for descriptions / description boxes
-    $("#unsorted li").shuffle();
-
-    $(".description-box li").draggable({
-        helper: "clone",
-        cursor: "move"
-    });
-
-    $(".description-box").droppable({
-            hoverClass: "description-box-hover",
-            over: function(event, ui) {
-            $(this).find(".empty-text").hide();
-        },
-        out: function(event, ui) {
-            if ($(this).find("li").length <= 1) {
-                $(this).find(".empty-text").show();
-            }
-        },
-        drop: function(event, ui) {
-            item = ui.draggable;
-            list = $(this);
-            list.find(".empty-text").hide();
-            item.fadeOut("fast", function() {
-                item.appendTo(list).fadeIn("fast");
-
-                if (list.is("#unsorted")) {
-
-                // Unsorted box - remove correct/incorrect classes and icon
-                item.removeClass("correct");
-                item.removeClass("incorrect");
-                item.find("i.icon").remove();
-
-                } else {
-
-                    // Dropped in a sort box - check if correct
-                    if ((item.hasClass("solo-item") && list.is("#solo")) || (item.hasClass("lead-item") && list.is("#lead"))) {
-                        item.removeClass("incorrect");
-                        item.addClass("correct");
-                        item.find("i.icon").remove();
-                        item.prepend('<i class="icon icon-ok" />');
-                    } else {
-                        item.removeClass("correct");
-                        item.addClass("incorrect");
-                        item.find("i.icon").remove();
-                        item.prepend('<i class="icon icon-remove" />');
-                    }
-                }
-
-                $(".description-box").each( function() {
-                    if ($(this).find("li").length <= 1) {
-                        $(this).find(".empty-text").show();
-                    }
-                })
-            });
-        }
-    });
-
-    // Self Test 2: Show Correct/Incorrect answer feedback
-    $("#self-test-2 input[type=radio]").click( function() {
-        var response = $("input[name="+$(this).attr("name")+"]:checked").val();
-
-        if (response == "true") {
-            $(this).parents(".controls").find(".correct").slideUp("fast");
-            $(this).parents(".controls").find(".incorrect").slideDown("fast");
-        } else {
-            $(this).parents(".controls").find(".incorrect").slideUp("fast");
-            $(this).parents(".controls").find(".correct").slideDown("fast");
-        }
-    });
-});
-</script>
-{% endblock %}
-{% block extra_css %}
-    <style>
-        .empty-text {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .description-box li {
-            background-color: #0facee;
-            background-image: linear-gradient(top, #17b8fb,#049cdb);
-            background-repeat: repeat-x;
-            border-color: #049cdb #049cdb #036690;
-            border-radius: 10px;
-            border: 1px solid #555;
-            color: #fff;
-            cursor: move;
-            margin: 5px;
-            padding: 10px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .droppable {
-            min-height: 245px;
-        }
-
-        .description-box {
-            border-radius: 10px;
-            border: 2px dashed #999;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .description-box li.correct {
-            background-color: #56b256;
-            background-image: linear-gradient(top, #62bc62,#46a546);
-            background-repeat: repeat-x;
-            border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1), 15%);
-        }
-
-        .description-box li.incorrect {
-            background-color: #b62c21;
-            background-repeat: repeat-x;
-            border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1), 15%);
-        }
-        /*This hides submit button on form*/
-        div.c-action {display:none}
-        .c-label {font-size: 2em}
-    </style>
-{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-            <h1>What is Co-Teaching?</h1>
+        <h1>What is Co-Teaching?</h1>
       <div class="row">
         <div class="span-4">
           {{ include('cehd/teaching/co-teaching/foundations/aa-nav.html') }}
@@ -271,7 +120,7 @@ $(function() {
             descriptions by clicking and dragging into the correct boxes.</p>
             <!-- Ativity 1 -->
             <div id="self-test-1">
-                <ul id="unsorted" class="description-box">
+                <ul id="unsorted" class="draggable-items">
                     <li class="empty-text"><em>You have dragged all of the
                     descriptions out of the unsorted box.</em></li>
                     <li class="solo-item">Teacher candidates observe a great
@@ -298,7 +147,7 @@ $(function() {
                 <div>
                     <div class="half">
                         <h4>Traditional Student-Teaching Model (SOLO Teaching)</h4>
-                        <ul id="solo" class="description-box droppable">
+                        <ul id="solo" class="draggable-items droppable boolean">
                             <li class="empty-text"><em>Drag the descriptions of SOLO
                             teaching in a traditional student-teaching model into this
                             box</em></li>
@@ -306,7 +155,7 @@ $(function() {
                     </div>
                     <div class="half">
                         <h4>Co-Teaching Model of Student-Teaching (LEAD Teaching)</h4>
-                        <ul id="lead" class="description-box droppable">
+                        <ul id="lead" class="draggable-items droppable boolean">
                             <li class="empty-text"><em>Drag the descriptions of LEAD
                             teaching in a co-teaching approach to student-teaching into
                             this box</em></li>
