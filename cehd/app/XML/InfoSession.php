@@ -76,11 +76,15 @@ class InfoSession extends \CEHD\XML\Event\Event
      */
     function __construct($session)
     {
+        parent::__construct($session);
+
         $this->code = $this->getFromProperty($session->code);
 
         $this->contact = $this->getFromProperty($session->contact);
 
         $this->date = $this->getFromProperty($session->date);
+
+        $this->year = $this->getYear();
 
         $this->dateChange = $this->getBoolFromProperty($session->dateChange);
 
