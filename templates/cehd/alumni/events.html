@@ -6,14 +6,21 @@
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Alumni Events</h1>
-    {{ loader.loader(
-      "Alumni Events",
-      "h2",
-      "events-container"
-    ) }}
-    <h2>More events</h2>
-    <p>CEHD events calendar</p>
+    <h1>Events</h1>
+    <div class="twothird feature">
+        <div class="span-6">
+            {{ loader.loader(
+              "Alumni events",
+              "h2",
+              "events-container"
+            ) }}
+        </div>
+        <div class="span-6">
+            <h2>College-wide events</h2>
+                <p>need a feed</p>
+        </div>
+    </div>
+
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->

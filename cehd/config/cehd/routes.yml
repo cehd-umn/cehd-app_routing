@@ -720,6 +720,51 @@
   template: cehd/alumni/society/scholarships.html
   template_data:
     - section: alumni
+/book-week/:
+  publish: true
+  template: cehd/book-week/index.html
+  template_data:
+    - section: book-week
+/book-week/author/:
+  publish: true
+  template: cehd/book-week/author.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/:
+  publish: true
+  template: cehd/book-week/previous-authors/index.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/bruchac/:
+  publish: true
+  template: cehd/book-week/previous-authors/bruchac.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/curtis/:
+  publish: true
+  template: cehd/book-week/previous-authors/curtis.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/farmer/:
+  publish: true
+  template: cehd/book-week/previous-authors/farmer.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/fox/:
+  publish: true
+  template: cehd/book-week/previous-authors/fox.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/munoz-ryan/:
+  publish: true
+  template: cehd/book-week/previous-authors/munoz-ryan.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/yang/:
+  publish: true
+  template: cehd/book-week/previous-authors/yang.html
+  template_data:
+    - section: book-week
 /career/:
   publish: true
   template: cehd/career/index.html

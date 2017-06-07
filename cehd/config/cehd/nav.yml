@@ -141,27 +141,47 @@
     - name: Contact
       href: "/giving/contact/"
 - name: Alumni
-  href: "/Alumni/"
+  href: "/alumni/"
   section: alumni
   subsection:
-    - name: Membership & Benefits
-      href: "/404/"
+    - name: Stay Involved
+      href: "/alumni/involved/"
       subsection:
-        - name: Meet the Board
-          href: "/404/"
+        - name: Mentor Programs
+          href: "/alumni/mentor/"
+        - name: Volunteer Opportunities
+          href: "/alumni/volunteer/"
+    - name: Alumni Society
+      href: "/alumni/society/"
+      subsection:
+        - name: Board Members
+          href: "/alumni/society/board/"
+        - name: Job Description
+          href: "/alumni/society/job-description/"
+        - name: Message from the Alumni Society President
+          href: "/alumni/society/message/"
+        - name: Scholarships
+          href: "/alumni/society/scholarships/"
+        - name: Scholarship Funds
+          href: "/alumni/society/fund/"
     - name: Awards & Scholarships
-      href: "/404/"
+      href: "/alumni/awards/"
       subsection:
+        - name: Distinguished Alumni Awards
+          href: "/alumni/distinguished/"
+        - name: College & University Alumni Awards
+          href: "/alumni/awards/recipients/"
         - name: CEHD Rising Alumni
           href: "/alumni/rising/"
-        - name: Distinguished Alumni Awards
-          href: "/404/"
-        - name: College & University Awards
-          href: "/404/"
-    - name: News & Notes
-      href: "/404/"
+    - name: News
+      href: "/alumni/news/"
+    - name: Notes
+      href: "/alumni/notes/"
+    - name: Events
+      href: "/alumni/events/"
     - name: Contact Us
-      href: "/404/"
+      href: "/alumni/contact/"
+
 - name: About Us
   href: "/about/"
   section: about

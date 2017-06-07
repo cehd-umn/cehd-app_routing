@@ -3,55 +3,68 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
-  <div class="container">
-    <div class="span-8 feature">  
-      <h1>Volunteer Opportunities</h1>
-    		<h2>Ways for Alumni to Stay Involved </h2>
-    		<h3>Informational Interviews</h3>
-    		<p>Connect with a current student. Informational interviews, generally
-    		20-30 minutes in length, allow a student to gain an inside view into
-    		your particular industry area and hear your first hand experiences. Meet
-    		in person or discuss through email or over the phone. </p>
+    <div class="container">
+        <h1>Volunteer Opportunities</h1>
+        <h2>Ways for Alumni to Stay Involved </h2>
 
-    		<h3>Career Panels</h3>
-    		<p>Share your experience with students by participating on a career
-    		panel (located on campus). </p>
 
-    		<h3>Mock Interviews</h3>
-    		<p>Volunteer as the interviewer for student mock interviews. Ask
-    		students commonly asked questions and provide feedback. </p>
+        <div class="row">
+            <div class="span-3">
 
-    		<h3>Presentations</h3>
-    		<p>Classroom and student groups: Visit a class or student group to share
-    		information about your career area. </p>
+                <h3>Informational Interviews</h3>
+                <p>Connect with a current student. Informational interviews, generally 20-30 minutes in length, allow a student to gain an inside view into your particular industry area and hear your first hand experiences. Meet in person or discuss through
+                    email or over the phone. </p>
+            </div>
+            <div class="span-3">
+                <h3>Career Panels</h3>
+                <p>Share your experience with students by participating on a career panel (located on campus). </p>
 
-    		<h3>Alumni to call admitted students</h3>
-    		<p>Help welcome newly admitted CEHD students into the college. A
-    		personal call form an alumni can go a long way in helping a student
-    		decide to attend the University of Minnesota. Training is provided. </p>
+            </div>
+            <div class="span-3">
+                <h3>Mock Interviews</h3>
+                <p>Volunteer as the interviewer for student mock interviews. Ask students commonly asked questions and provide feedback. </p>
+            </div>
+            <div class="span-3">
+                <h3>Presentations</h3>
+                <p>Classroom and student groups: Visit a class or student group to share information about your career area. </p>
+            </div>
 
-    		<h3>Alumni Groups</h3>
-    		<p>Help form a CEHD alumni group in your area of occupation or place of employment.</p>
-
-    		<h3>Alumni Events </h3>
-    		<p>Promote and attend alumni networking events. </p>
-
-    		<h3>Sign Up</h3>
-
-    		<p>Register with usif you would like to&nbsp;volunteer for&nbsp;any of the opportunities listed
-    		above.&nbsp; Many opportunities are driven by student demand, so you
-    		would be contacted as activities become available.</p>
-        <!-- For called Alumni - Volunteer Opportunities Mentor in Cognito | JFA 2017-06-02 -->
-        <div class="cognito">
-          <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
-          <script>Cognito.load("forms", { id: "27" });</script>
         </div>
 
-    		<h2>For Students</h2>
-    		<p>CEHD students interested in connecting with alumni should contact
-    		<a href="/career/">CEHD Career Services</a> at
-    		612-624-7577 to schedule an appointment with a career counselor. </p>
-      </div>
-  </div> <!-- ./container -->
-</div> <!-- ./row -->
+        <div class="row">
+
+            <div class="span-3">
+                <h3>Alumni to call admitted students</h3>
+                <p>Help welcome newly admitted CEHD students into the college. A personal call form an alumni can go a long way in helping a student decide to attend the University of Minnesota. Training is provided. </p>
+            </div>
+            <div class="span-3">
+                <h3>Alumni Groups</h3>
+                <p>Help form a CEHD alumni group in your area of occupation or place of employment.</p>
+            </div>
+            <div class="span-3">
+                <h3>Alumni Events </h3>
+                <p>Promote and attend alumni networking events. </p>
+            </div>
+            <div class="span-3">
+                <h2>For Students</h2>
+                <p>CEHD students interested in connecting with alumni should contact
+                    <a href="/career/">CEHD Career Services</a> at 612-624-7577 to schedule an appointment with a career counselor. </p>
+            </div>
+        </div>
+        <div class="span-8 feature">
+            <h3>Sign Up</h3>
+
+            <p>Register with usif you would like to&nbsp;volunteer for&nbsp;any of the opportunities listed above.&nbsp; Many opportunities are driven by student demand, so you would be contacted as activities become available.</p>
+            <!-- For called Alumni - Volunteer Opportunities Mentor in Cognito | JFA 2017-06-02 -->
+            <div class="cognito">
+                <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
+                <script>
+                    Cognito.load("forms", {
+                        id: "27"
+                    });
+                </script>
+            </div>
+        </div>
+    </div><!-- ./container -->
+</div><!-- ./row -->
 {% endblock %}
