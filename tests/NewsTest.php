@@ -49,7 +49,7 @@ class NewsTest extends TestCase
         $expected_first_key = 1930;
         reset($newsInstance->stories);
         $first_key = key($newsInstance->stories);
-        $first_story = array_shift($newsInstance->stories["1930"]);
+        $first_story = array_shift($newsInstance->stories["1930"]["1939"]);
 
         // Search for "193" to see if there's a category with a year in the 1930's
         $matches = [];

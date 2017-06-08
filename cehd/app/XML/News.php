@@ -178,11 +178,22 @@ class News extends \CEHD\App\XML\RSS\RSS
         }
 
         $years = array_unique($years);
+        sort($years);
+
+        // build decade keys
         foreach ($years as $year)
         {
             $decade_min = $this->toDeca($year);
             $decade_max = $decade_min + 9;
             $result[$decade_min] = [];
+        }
+
+        // Now add year keys
+        foreach ($years as $year)
+        {
+            $decade_min = $this->toDeca($year);
+            $decade_max = $decade_min + 9;
+            $result[$decade_min][$year] = [];
         }
 
         foreach ($this->stories as $story)
@@ -196,7 +207,7 @@ class News extends \CEHD\App\XML\RSS\RSS
 
                     if ($this->inRange($category, $decade_min, $decade_max))
                     {
-                        array_push($result[$decade_min], $story);
+                        array_push($result[$decade_min][$category], $story);
                     }
                 }
             }
