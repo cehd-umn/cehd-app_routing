@@ -320,6 +320,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $client_response = $http_client->request("GET", $request_url);
             $xml = $client_response->getBody();
             $news = new \CEHD\App\XML\News\News($xml);
+
+            if ($this->arrayContains("sortBy", $query_data) && $query_data["sortBy"] == "categoryDecade")
+            {
+                $news->sortByCategoryDecade();
+            }
             $response->sendJSONResponse(json_encode($news->stories));
         }
     }

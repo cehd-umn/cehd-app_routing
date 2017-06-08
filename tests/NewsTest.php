@@ -23,6 +23,8 @@ class NewsTest extends TestCase
         $expected_story_thumbnail = "http://news.cehd.umn.edu/wp-content/uploads/2016/09/kendeou_2.jpg";
         $expected_story_title = "Kendeou presents at symposium on reducing impact of misinformation, fake news";
         $expected_story_title_override = "Kendeou presents at symposium on reducing impact of misinformation, fake news";
+        $expected_category_count = 6;
+        $expected_category = "Educational Psychology";
 
         $this->assertTrue(is_array($this->newsInstance->stories));
         $this->assertEquals($expected_story_count, count($this->newsInstance->stories));
@@ -32,5 +34,35 @@ class NewsTest extends TestCase
         $this->assertEquals($expected_story_teaser, $this->newsInstance->stories[0]->teaser);
         $this->assertEquals($expected_story_thumbnail, $this->newsInstance->stories[0]->thumbnail);
         $this->assertEquals($expected_story_title_override, $this->newsInstance->stories[0]->title_override);
+        $this->assertTrue(is_array($this->newsInstance->stories[0]->categories));
+        $this->assertCount($expected_category_count, $this->newsInstance->stories[0]->categories);
+        $this->assertEquals($expected_category, $this->newsInstance->stories[0]->categories[0]);
+
+    }
+
+    public function testSortByCategoryDecade()
+    {
+        $validRSSStr = file_get_contents(__DIR__ . '/fixtures/xml/newsfeed-alumni-notes.xml');
+        $newsInstance = new \CEHD\App\XML\News\News($validRSSStr);
+        $newsInstance->sortByCategoryDecade();
+        $expected_story_count = 8;
+        $expected_first_key = 1930;
+        reset($newsInstance->stories);
+        $first_key = key($newsInstance->stories);
+        $first_story = array_shift($newsInstance->stories["1930"]);
+
+        // Search for "193" to see if there's a category with a year in the 1930's
+        $matches = [];
+        foreach ($first_story->categories as $category)
+        {
+            if (preg_match("/193/", $category))
+            {
+                array_push($matches, $category);
+            }
+        }
+
+        $this->assertEquals($expected_story_count, count($newsInstance->stories));
+        $this->assertEquals($expected_first_key, $first_key);
+        $this->assertFalse(empty($matches));
     }
 }

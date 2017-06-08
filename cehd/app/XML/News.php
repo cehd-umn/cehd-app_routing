@@ -72,6 +72,8 @@ class Story extends \CEHD\App\XML\RSS\RSS
      */
     public $title_override;
 
+    public $categories = [];
+
     /**
      * Constructor
      *
@@ -92,6 +94,14 @@ class Story extends \CEHD\App\XML\RSS\RSS
         $this->title = $this->toString($story->title[0]);
 
         $this->title_override = $this->getContentAttr($story, "titleinternal" );
+
+        foreach ($story->category as $category)
+        {
+            // var_dump($this->isDigit($category));
+            // var_dump(is_string($category));
+
+            array_push($this->categories, $this->toString($category));
+        }
     }
 }
 
@@ -148,5 +158,52 @@ class News extends \CEHD\App\XML\RSS\RSS
         {
             array_push($this->stories, new Story($story));
         }
+    }
+
+    public function sortByCategoryDecade()
+    {
+        $years = [];
+        $result = [];
+
+        // Build up an array of year categories to use as array keys
+        foreach ($this->stories as $story)
+        {
+            foreach ($story->categories as $category)
+            {
+                if ($this->isDigit($category))
+                {
+                    array_push($years, $category);
+                }
+            }
+        }
+
+        $years = array_unique($years);
+        foreach ($years as $year)
+        {
+            $decade_min = $this->toDeca($year);
+            $decade_max = $decade_min + 9;
+            $result[$decade_min] = [];
+        }
+
+        foreach ($this->stories as $story)
+        {
+            foreach ($story->categories as $category)
+            {
+                if ($this->isDigit($category))
+                {
+                    $decade_min = $this->toDeca($category);
+                    $decade_max = $decade_min + 9;
+
+                    if ($this->inRange($category, $decade_min, $decade_max))
+                    {
+                        array_push($result[$decade_min], $story);
+                    }
+                }
+            }
+        }
+
+        ksort($result);
+        $this->stories = $result;
+        return $result;
     }
 }

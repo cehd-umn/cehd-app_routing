@@ -310,4 +310,35 @@ abstract class BaseClass
     {
        return array_key_exists($needle, $haystack);
     }
+
+    public function isDigit($string)
+    {
+        return ctype_digit($string);
+    }
+
+    public function toInt($string)
+    {
+        $int = (int)$string;
+
+        if ($int === 0 and $string !== "0")
+        {
+            throw new \Exception("Received '" . $string . "' which "
+                . "can't be converted to an integer.");
+        }
+        else
+        {
+            return $int;
+        }
+    }
+
+    // @todo write some type exception classes and use them here
+    public function inRange($num, $min, $max)
+    {
+        return ($num >= $min && $num <= $max);
+    }
+
+    public function toDeca($num)
+    {
+        return floor($num / 10) * 10;
+    }
 }
