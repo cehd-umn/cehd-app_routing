@@ -3,35 +3,7 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}{{ parent() }}
 <style>
-    .droppable {
-        min-height: 3em;
-    }
-
-    .draggable-items li.empty-text {
-        background: transparent;
-    }
-
-    .container.carousel {
-        min-height: 1000px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .item {
-        left: 150%;
-        padding: 3em;
-        position: absolute;
-        transition: left .5s;
-        width: 100%
-    }
-
-    .item.active {
-        left: 0;
-    }
-
-    .item.done {
-        left: -150%;
-    }
+    .droppable { min-height: 3em; } .draggable-items li.empty-text { background: transparent; } .container.carousel { min-height: 800px; overflow: scroll; position: relative; } .item { left: 150%; padding: 3em; position: absolute; transition: left .5s; width: 100% } .item.active { left: 0; } .item.done { left: -150%; }
 </style>
 {% endblock %}
 {% block main_content %}
@@ -257,10 +229,12 @@
 </div><!-- /row -->
 <!-- End Activity 3 -->
 <div class="row">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="span-8 feature">
         <h2>What are your perceptions about student behaviors and attitudes? </h2>
 
-    <p>This tool is designed to help you compare your perceptions about
+    <p>This list is designed to help you compare your perceptions about
     appropriate and inappropriate student behaviors in the classroom.
     Please discuss similarities and differences in your perceptions using
     guiding questions below. Are these behaviours acceptable or unacceptable?</p>

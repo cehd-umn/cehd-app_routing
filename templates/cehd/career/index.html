@@ -47,14 +47,16 @@
     </div>
     <div class="third">
     		<h2 class="h2">Hours/Location</h2>
-    		<ul class="no-bullet-no-indent">
+    		<ul class="no-bullet">
     		  <li>8:00 a.m.-4:00 p.m., Monday-Friday</li>
           <li>CEHD Student Services <br>
             360 <a href="http://www1.umn.edu/twincities/maps/EdSciB/">Education Sciences Building</a><br>
             56 East River Road<br>
             Minneapolis, MN 55455
             </li>
+        </ul>
     		   <h2>Drop-in Hours </h2>
+            <ul class="no-bullet">
     		    <li> Drop-in hours are held on Fridays  between 9:00 a.m.- 2:00 p.m. The last drop-in appointment will be taken at 1:45pm.</li>
 
     		</ul>
@@ -62,40 +64,33 @@
     <div class="third">
       <h2 class="h2">Upcoming Events</h2>
       <!-- http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&x=6&r=3&q=6&l=y&t=231 -->
-      <p>Youth &amp; Family Services Career Panel<br>
-        Thursday, March 30</p>
-      <p>MN Education Job air 2017<br>
-        Fiday, Apr-l 21</p>
-    </div>
                 {{ loader.loader(
                 "Calendar",
                 "h3",
                 "events-container"
 ) }}
 </div>
+</div>
   </div> <!-- ./container -->
-<div class="row outer-bg-right cool">
-    <div class="container">
-        <div class="inner-bg-right emphasis cool">
-            <div class="span-2"><br /></div>
-            <div class="span-10">
-                <div class="span-6">
+  <div class="margin-top-2">
+  </div>
+  {# import the macro #}
+  {%- import "macros/svg.html" as svg -%}
+  <div class="row emphasis cool">
+      <div class="container">
+          <div class="half feature margin-top-1">
+              {# create an array of 2-5 short lines of text #}
               {% set lines = [
-              "94% of spring 2015",
-              "graduates were satisfied",
-              "overall with their experiences",
-              "at the University of Minnesota",
+                  "94% of spring 2015",
+                  "graduates were satisfied",
+                  "overall with their experiences",
+                  "at the University of Minnesota",
               ] %}
+              {# call the macro #}
               {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
-               </div>
-               <div class="span-6"><br /></div>
           </div>
       </div>
   </div>
-</div>
-
-
-
 </div> <!-- ./row -->
 {% endblock %}
 

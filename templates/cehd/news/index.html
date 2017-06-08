@@ -1,4 +1,7 @@
-{% extends "cehd/layout/base.html" %} {% set page_title = "News" %} {% block title %}{{ page_title }}{% endblock %} {% block extra_css %}
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "News" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
 <style>
     .connect-more {
         font-family: 'Montserrat', sans-serif;
@@ -39,24 +42,26 @@
         font-size: 14px;
     }
 </style>
-{% endblock %} {% block main_content %}
+{% endblock %}
+{% block main_content %}
 
 <div class="row">
     <div class="container">
         <h1>News and events</h1>
 
         <div class="span-6">
+
             <h2>In the news</h2><iframe src="https://player.vimeo.com/video/208185523" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-            <p><small>In this Fox 9 story, child development expert Jed Elison describes how
+            <p>In this Fox 9 story, child development expert Jed Elison describes how
        his team of researchers is using brain scans to predict autism in
-       infants.</small></p>
+       infants.</p>
 
             <h2>Research indepth</h2><iframe src="https://player.vimeo.com/video/208185448" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-            <p><small>Kinesiology researcher J&uuml;rgen Konczak uses a WristBot and virtual
+            <p>Kinesiology researcher J&uuml;rgen Konczak uses a WristBot and virtual
        reality to help diagnose wrist movement problems and to create training
-       activities to improve lives for people with neurological diseases.</small></p>
+       activities to improve lives for people with neurological diseases.</p>
         </div>
 
         <div class="span-4">
@@ -129,7 +134,8 @@
 
 <p class="text-center"><a href="/topics/" class="button center">Explore our research</a></p>
 <div class="row">
-    <div class="row emphasis bg-cehd-multi margin-top-1 ">
+    {{ include('cehd/alumni/aa-connect.html') }}
+    <!-- <div class="row emphasis bg-cehd-multi margin-top-1 ">
         <div class="container">
             <div class="half feature"><img class="mobile-hide" src="/assets/images/wordmarks/wordmark-Connect.svg" alt="Connect magazine wordmark" /></div>
 
@@ -175,6 +181,6 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {% endblock %}

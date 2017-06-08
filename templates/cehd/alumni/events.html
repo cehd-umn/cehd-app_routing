@@ -9,15 +9,18 @@
     <h1>Events</h1>
     <div class="twothird feature">
         <div class="span-6">
-            {{ loader.loader(
-              "Alumni events",
-              "h2",
-              "events-container"
-            ) }}
+          {{ loader.loader(
+            "Alumni Events",
+            "h2",
+            "events-container"
+          ) }}
         </div>
         <div class="span-6">
-            <h2>College-wide events</h2>
-                <p>need a feed</p>
+          {{ loader.loader(
+            "College-wide Events",
+            "h2",
+            "events-container-college"
+          ) }}
         </div>
     </div>
 
@@ -26,5 +29,6 @@
 </div> <!-- ./row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-        {{ events.events_feed_js(182) }}
+        {{ eventsfeed.events_feed_js(182) }}
+        {{ eventsfeed.events_feed_js("182","3","/assets/dist/views/cehd/events","#events-container-college") }}
 {% endblock %}

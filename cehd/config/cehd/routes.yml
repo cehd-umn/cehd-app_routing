@@ -1006,13 +1006,8 @@
   template_data:
     - section: career
 /career/teacher/success/:
-  publish: true
+  publish: false
   template: cehd/career/teacher/success.html
-  template_data:
-    - section: career
-/career/teacher/teach-minn/:
-  publish: true
-  template: cehd/career/teacher/teach-minn.html
   template_data:
     - section: career
 /commencement/:
@@ -1512,7 +1507,7 @@
     - section: teaching
 /teri/:
   publish: true
-  template: cehd//index.html
+  template: cehd/teri/index.html
   template_data:
     - section: teri
 /teri/our-work/:
