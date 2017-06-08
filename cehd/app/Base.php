@@ -15,7 +15,7 @@ require_once __DIR__ . "/../../cehd/app/Config/Config.php";
 /**
  * Base class
  */
-class BaseClass
+abstract class BaseClass
 {
     /**
      * Class properties

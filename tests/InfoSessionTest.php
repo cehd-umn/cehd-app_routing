@@ -21,7 +21,7 @@ class InfoSessionTest extends TestCase
 
         $this->assertTrue(is_array($this->infoSessionInstance->infoSessions));
         $this->assertEquals($expected_count, count($this->infoSessionInstance->infoSessions));
-        $this->assertEquals($expected_link, $this->infoSessionInstance->infoSessions[0]->link);
+        $this->assertEquals($expected_link, $this->infoSessionInstance->infoSessions[0]->url);
         $this->assertEquals($expected_title, $this->infoSessionInstance->infoSessions[0]->title);
     }
 }
