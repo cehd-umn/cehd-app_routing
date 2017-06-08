@@ -219,4 +219,59 @@ class AppTest extends TestCase
         $result = $this->appInstance->arrayContains("nokey", $categories);
         $this->assertEquals(false, $result);
     }
+
+    public function testIsDigit()
+    {
+        $result = $this->appInstance->isDigit("string");
+        $expected_result = false;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->isDigit("1940");
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testToInt()
+    {
+        $result = $this->appInstance->toInt("4");
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->toInt("0");
+        $expected_result = 0;
+        $this->assertEquals($expected_result, $result);
+
+        $this->expectException(\Exception::class);
+        $result = $this->appInstance->toInt("string");
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+
+        $this->expectException(\Exception::class);
+        $result = $this->appInstance->toInt(null);
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testInRange()
+    {
+        $result = $this->appInstance->inRange(1984, 1980, 1989);
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->inRange(1980, 1980, 1989);
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->inRange(1990, 1980, 1989);
+        $expected_result = false;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testToDeca()
+    {
+        $year = 1966;
+        $expected_result = 1960;
+
+        $this->assertEquals($expected_result, $this->appInstance->toDeca($year));
+    }
 }

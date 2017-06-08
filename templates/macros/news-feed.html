@@ -9,12 +9,20 @@
 <script>
     (function() {
         "use strict";
+        var data = {
+                "feed-path": "{{ feed_path }}"
+            };
+        {% if varargs %}
+            {% for arg in varargs %}
+                {% for key, value in arg %}
+                    data.{{ key }} = "{{ value }}";
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
         var base_url = "/services/news/feed/";
         var params = {
             url: base_url,
-            data: {
-                "feed-path": "{{ feed_path }}"
-            }
+            data: data
         };
         var client = new HTTPClient();
         var $request = client.get(params);

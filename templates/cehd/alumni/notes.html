@@ -49,15 +49,15 @@
             feedback.  Please email me at  <a href="mailto:cehdas@umn.edu">cehdas@umn.edu</a> or connect with us through
             LinkedIn, Facebook, or Twitter.</p> <p>Sincerely,</p>
 
-          	<p><strong>Jan Ormasa, M.A. ’74</strong><br />
-        		CEHD Alumni Society President</p>
+            <p><strong>Jan Ormasa, M.A. ’74</strong><br />
+                CEHD Alumni Society President</p>
           </div>
           <div class="span-6">
             <h2>Share Your News Online</h2>
-      			<p>Did you land a new job? Receive an award? Celebrate a
-      			milestone? Let us know.</p>
-      			<p>Complete the alumni notes form.
-      		  We look forward to hearing from you soon!</p>
+                <p>Did you land a new job? Receive an award? Celebrate a
+                milestone? Let us know.</p>
+                <p>Complete the alumni notes form.
+              We look forward to hearing from you soon!</p>
             <!-- Form called Alumni - News and Notes in Cognito | JFA 2017-06-02 -->
             <div class="cognito">
               <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
@@ -81,5 +81,13 @@
 </div> <!-- ./row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-        {{ newsfeed.news_feed_js("alumni-notes/","#news-container","index.html","20") }}
+        {{ newsfeed.news_feed_js(
+            "alumni-notes/",
+            "#news-container",
+            "alumni-notes.html",
+            "1000",
+            null,
+            null,
+            "/assets/dist/views/cehd/newsfeeds/",
+            {"sortBy": "categoryDecade"}) }}
 {% endblock %}
