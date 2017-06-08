@@ -297,6 +297,10 @@ nav {
     .dropdown-menu-wrapper {
         width: 1093px;
     }
+
+    #top-level-home {
+        display: none;
+    }
 }
 
 @media all and (max-width: 1200px) {
@@ -349,4 +353,11 @@ nav {
         top: 33px;
         width: 704px;
     }
+}
+
+#main-nav-home-link {
+    height: 23px;
+    margin: 0 auto;
+    opacity: .65;
+    width: 25px;
 }
