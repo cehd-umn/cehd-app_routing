@@ -24,6 +24,8 @@ class Story extends \CEHD\App\XML\RSS\RSS
      * Class properties
      */
 
+    public $encoded;
+
     /**
      * Story description
      *
@@ -95,11 +97,10 @@ class Story extends \CEHD\App\XML\RSS\RSS
 
         $this->title_override = $this->getContentAttr($story, "titleinternal" );
 
+        $this->encoded = $this->getContentAttr($story, "encoded" );
+
         foreach ($story->category as $category)
         {
-            // var_dump($this->isDigit($category));
-            // var_dump(is_string($category));
-
             array_push($this->categories, $this->toString($category));
         }
     }

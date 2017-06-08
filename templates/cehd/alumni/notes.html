@@ -81,5 +81,13 @@
 </div> <!-- ./row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-        {{ newsfeed.news_feed_js("alumni-notes/","#news-container","index.html","20") }}
+        {{ newsfeed.news_feed_js(
+            "alumni-notes/",
+            "#news-container",
+            "alumni-notes.html",
+            "1000",
+            null,
+            null,
+            "/assets/dist/views/cehd/newsfeeds/",
+            {"sortBy": "categoryDecade"}) }}
 {% endblock %}

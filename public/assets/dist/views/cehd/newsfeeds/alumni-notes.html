@@ -1,0 +1,8 @@
+{% for decade, year in data.news %}
+    <h3>{{ decade }}s</h3>
+    {% for yr, notes in year %}
+        {% for note in notes %}
+            <p>{{ note.encoded|safe }}</p>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
