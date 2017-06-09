@@ -429,7 +429,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             }
             else if ($pattern->type === "template")
             {
-                echo $this->_renderTemplate($pattern["template"], ["pattern" => $pattern]);
+                echo $this->_renderTemplate($pattern->template, ["pattern" => $pattern]);
             }
         }
     }
