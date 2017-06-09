@@ -38,6 +38,10 @@ nav {
             color: $base-charcoal;
         }
 
+        &:link {
+            color: $base-charcoal;
+        }
+
         &:active {
             color: $base-black;
         }
@@ -161,10 +165,6 @@ nav {
                 display: block;
             }
         }
-
-        // .main-nav-hero-image-container {
-        //     max-width: 400px;
-        // }
     }
 
     .dropdown-menu-wrapper {
