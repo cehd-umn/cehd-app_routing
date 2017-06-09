@@ -976,7 +976,7 @@
   template_data:
     - section: career
 /career/teacher/career-fair/:
-  publish: true
+  publish: false
   template: cehd/career/teacher/career-fair.html
   template_data:
     - section: career
@@ -1038,6 +1038,11 @@
 /events/block-party/:
   publish: true
   template: cehd/events/block-party.html
+  template_data:
+    - section: events
+/events/fall-assembly/:
+  publish: true
+  template: cehd/events/fall-assembly.html
   template_data:
     - section: events
 
