@@ -6,8 +6,9 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <div class="half feature">
-            <h1>Teacher Education Redesign Initiative (TERI)</h1>
+                    <h1>Teacher Education Redesign Initiative (TERI)</h1>
+        <div class="span-8">
+
             <p>The Teacher Education Redesign Initiative (TERI) is a re-envisioning
             of the teacher education programs in the College of Education and Human
             Development (CEHD) at the University of Minnesota. As the premiere
@@ -28,14 +29,14 @@
                 <li><a href="partnerships">Learn about our school partners</a></li>
                 <li><a href="co-teaching/default.html">Training workshops for co-teaching</a></li>
             </ul>
-
-            <div class="span-8">
+    </div>
+            <div class="span-4">
                 {{ loader.loader(
                     "Recent TERI news",
                     "h2"
                 ) }}
             </div>
-    </div> <!-- ./half feature -->
+    </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
