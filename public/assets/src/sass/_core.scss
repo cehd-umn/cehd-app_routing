@@ -56,32 +56,32 @@ img {
 }
 
 .outer-bg-right {
-    background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
+    background: $cehd-tertiary-gold;
 
     &.right-third {
-        background: linear-gradient(90deg, $base-white 65%, $cehd-tertiary-gold 65%);
+        background: $cehd-tertiary-gold;
 
         &.cool {
-            background: linear-gradient(90deg, $base-white 65%, $umn-light-blue-background 65%);
+            background: $umn-light-blue-background;
         }
     }
 
     &.right-two-third {
-        background: linear-gradient(90deg, $base-white 34%, $cehd-tertiary-gold 34%);
+        background: $cehd-tertiary-gold;
 
         &.cool {
-            background: linear-gradient(90deg, $base-white 34%, $umn-light-blue-background 34%);
+            background: $umn-light-blue-background;
         }
     }
 
     &.cool {
-        background: linear-gradient(90deg, $base-white 50%, $umn-light-blue-background 50%);
+        background: $umn-light-blue-background;
     }
 }
 
 .inner-bg-right {
     &.cool {
-        background: linear-gradient(90deg, $base-white 14.69%, $umn-light-blue-background 14.69%);
+        background: $umn-light-blue-background;
     }
 }
 
@@ -756,6 +756,30 @@ footer {
         border-bottom: 0;
         float: right;
         padding: .9em 0 0;
+    }
+
+    .outer-bg-right {
+        background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
+
+        &.right-third {
+            background: linear-gradient(90deg, $base-white 65%, $cehd-tertiary-gold 65%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 65%, $umn-light-blue-background 65%);
+            }
+        }
+
+        &.right-two-third {
+            background: linear-gradient(90deg, $base-white 34%, $cehd-tertiary-gold 34%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 34%, $umn-light-blue-background 34%);
+            }
+        }
+
+        &.cool {
+            background: linear-gradient(90deg, $base-white 50%, $umn-light-blue-background 50%);
+        }
     }
 }
 
