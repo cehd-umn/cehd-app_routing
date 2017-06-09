@@ -121,9 +121,9 @@ Coaching:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Minor
+    - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/kin/current/coaching.html
-    - title: Graduate Certificate
+    - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/kin/current/coaching.html
   description: If you're interested in pursuing sport management or teacher licensure, this certificate  gives you a foundation for developing your coaching skills.
   categories:
@@ -368,7 +368,7 @@ Human Resource Development:
   links:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/default.html
-    - title: Undergraduate Minor
+    - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/certificate.html
     - title: License
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/edd.html
@@ -463,8 +463,6 @@ Multicultural Teaching and Learning:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/certificate.
     - title: Masters
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/mctl.html
   description: Apply current theory and practice related to access, persistence, and student achievement to successfully address the changing needs of postsecondary education
@@ -573,8 +571,6 @@ School Psychology:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/EdPsych/Programs/minor/default.html
     - title: Masters
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/master/
     - title: Ph.D.
