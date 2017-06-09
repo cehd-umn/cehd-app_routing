@@ -200,6 +200,7 @@ abstract class Card extends BaseClass
                     {
                         $this->addLink($link);
                     }
+                    asort($this->links);
                 }
 
                 $this->description = $card["description"];
@@ -211,6 +212,8 @@ abstract class Card extends BaseClass
                 $this->title = $title;
 
                 $this->categories_hyphenated = $this->getCategoryKeys();
+
+                asort($this->_categories);
 
                 return $this;
             }
@@ -292,7 +295,6 @@ abstract class CardGroup extends BaseClass
             }
         }
 
-        asort($results);
         return $results;
     }
 }
