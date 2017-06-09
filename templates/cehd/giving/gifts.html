@@ -3,17 +3,10 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
+    /* These styles are unique to this page and so can stay here. --thoma127 2017-06-09 */
     .thumbnail-img {
         flex: 0 0 120px;
         margin-right: 10px;
-    }
-
-    h5 {
-        margin: 0;
-    }
-
-    .h6 {
-        margin: 0;
     }
 
     .appointment {
@@ -131,9 +124,9 @@
                         <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
                     </div>
                     <div class="flex-item">
-                        <h5>
+                        <h5 class="no-margin-top no-margin-bottom">
                             <a href="{{ appointment.urls.profile }}">{{ appointment.name }}</a>
-                            <small class="clear h6 light">
+                            <small class="clear h6 light no-margin-top no-margin-bottom">
                                 {{ appointment.titles|join(", ") }}
                             </small>
                         </h5>
