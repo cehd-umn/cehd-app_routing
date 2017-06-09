@@ -9,6 +9,20 @@ nav {
     transition-property: max-height;
     transition-timing-function: ease-out;
 
+    ul {
+        &.nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            ul {
+                margin-top: 0;
+            }
+        }
+    }
+
     &.open {
         max-height: 2000px;
         overflow: visible;
@@ -35,13 +49,22 @@ nav {
         &.current {
             color: $link-base-blue;
         }
-    }
 
-    ul {
-        &.nav {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        &.sub-nav-item-link {
+            &::before {
+                color: $base-white;
+                content: "\2022";
+                font-size: 1.4em;
+                margin-right: 5px;
+            }
+
+            &:hover {
+                &::before {
+                    color: $base-charcoal;
+                    content: "\2022";
+                    margin-right: 5px;
+                }
+            }
         }
     }
 
@@ -49,6 +72,11 @@ nav {
         li {
             color: $base-charcoal;
             position: relative;
+
+
+            &.sub-nav-item {
+                text-indent: -12px;
+            }
         }
     }
 

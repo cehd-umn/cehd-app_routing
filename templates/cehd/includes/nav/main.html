@@ -4,6 +4,7 @@
         <ul class="nav">
         {%- for top_level_item in nav_items -%}
             {%- set is_academics = top_level_item.name == "Academics" %}
+            {%- set is_alumni = top_level_item.name == "Alumni" %}
             {%- set top_level_classes = "" %}
             {%- if top_level_item.subsection -%}
                 {% set top_level_classes = top_level_classes ~ " dropdown mega-dropdown" %}
@@ -20,19 +21,19 @@
                 <div class="ul-container nav-items{% if not is_academics %} single-column{% endif %}">
                     <ul class="margin-top nav">
                     {%- for sub_nav_item in top_level_item.subsection %}
-                        <li class="dropdown-header">
-                            <a href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
+                        <li class="dropdown-header sub-nav-item">
+                            <a class="sub-nav-item-link" href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
                             {%- if sub_nav_item.subsection %}
                             <ul>
                                 {%- for sub_sub_nav_item in sub_nav_item.subsection -%}
-                                <li>
-                                    <a href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-item-link" href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
                                 </li>
                                 {%- endfor -%}
                             </ul><!-- // sub sub nav -->
                             {%- endif -%}
                         </li><!-- // dropdown header -->
-                    {%- if loop.index == 3 and is_academics -%}
+                    {%- if loop.index == 3 and is_academics or loop.index == 2 and is_alumni-%}
                         {#- close the column and start a new one -#}
                         </ul>
                       </div>
