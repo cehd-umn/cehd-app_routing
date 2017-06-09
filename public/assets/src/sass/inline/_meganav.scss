@@ -55,7 +55,10 @@ nav {
                 color: $base-white;
                 content: "\2022";
                 font-size: 1.4em;
+                left: -10px;
                 margin-right: 5px;
+                position: absolute;
+                top: 1px;
             }
 
             &:hover {
@@ -72,11 +75,6 @@ nav {
         li {
             color: $base-charcoal;
             position: relative;
-
-
-            &.sub-nav-item {
-                text-indent: -12px;
-            }
         }
     }
 
