@@ -91,6 +91,12 @@ img {
     }
 }
 
+@each $size in 12, 14, 16, 18, 20, 24 {
+    .margin-bottom-#{ $size } {
+        margin-bottom: #{ $size }px;
+    }
+}
+
 /// lists with no bullets
 .no-bullet {
     list-style: none;
@@ -107,6 +113,10 @@ img {
         &.news-item {
             margin-bottom: 1em;
         }
+    }
+
+    &.indent {
+        margin-left: 15px;
     }
 }
 

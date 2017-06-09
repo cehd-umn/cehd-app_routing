@@ -136,7 +136,7 @@
                 {{ table.row(
                     ["third",
                     "Container id",
-                    "Which heading tag to use",
+                    "The id of the element where the feed will go",
                     "news-container"]) }}
                 {{ table.row(
                     ["fourth",
@@ -189,7 +189,7 @@
             <pre><code class="jinja">{% verbatim %}
 {% block bottom_js %}{{ parent() }}
     {# The call to parent() above is *very* important #}
-    {{ events.events_feed_js(355) }}
+    {{ eventsfeed.events_feed_js(355) }}
 {% endblock %}{% endverbatim %}
             </pre></code>
 
