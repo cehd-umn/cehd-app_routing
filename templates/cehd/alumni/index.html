@@ -5,46 +5,6 @@
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "Alumni" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block extra_css %}
-<style>
-    /* These styles can be removed once the Connect stuff uses the macro --thoma127 2017-06-09 */
-    .connect-more {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 12px;
-        float: right;
-        margin-top: -10px;
-    }
-
-    .connect-title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        margin: 0;
-    }
-    .connect-issue {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
-        font-variant: caps;
-        font-weight: bold;
-        margin-top: -5px;
-    }
-    .connect-articles {
-        font-family: 'Lato', sans-serif;
-        font-size: 18px;
-        margin-left: 15px;
-    }
-
-    .connect-cover {
-        float: right;
-        margin-bottom: 50px;
-    }
-    .connect-date {
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom:-18px;
-        font-size: 14px;
-}
-</style>
-{% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
     <img class="hero-image" src="/assets/dist/images/alumni/hero.jpg" alt="Belle Yaffe, ’70">
@@ -90,57 +50,10 @@
       </div>
     </div>
  </div> <!-- ./container -->
+ <div class="span-12">
+              {{ include('cehd/includes/connect.html') }}
+ </div>
 
-   <div class="row emphasis bg-cehd-multi margin-top-1 ">
-     <div class="container">
-       <div class="half feature"><img class="mobile-hide" src=
-       "/assets/images/wordmarks/wordmark-Connect.svg" alt=
-       "Connect magazine wordmark" /></div>
-
-       <div class="span-12">
-         <br />
-       </div>
-
-       <div class="half">
-         <a href="http://connect.cehd.umn.edu"><img class="mobile-hide connect-cover"
-         height="400px" src="/assets/images/news/SpSu17_ConnectCover_lg.jpg" alt=
-         "Cover image of Connect magazine" /></a>
-       </div>
-
-       <div class="half">
-         <p class="connect-title">The Power of Play</p>
-
-         <p class="connect-issue">Spring Summer 2017</p>
-
-         <ul class="connect-articles no-bullet">
-           <li><a href="http://connect.cehd.umn.edu/the-power-of-play/">The power of
-           play</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/financially-capable/">Financially
-           capable</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/a-breath-of-fresh-air/">A breath of
-           fresh air</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/debunking-misinformation/">Debunking
-           misinformation</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/what-the-body-is/">What the body
-           is</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/citizens-in-the-classroom/">Citizens
-           in the classroom</a></li>
-
-           <li><a href="http://connect.cehd.umn.edu/a-force-for-families/">A force for
-           families</a></li>
-
-           <li><a href=
-           "http://connect.cehd.umn.edu/giving-matters-fostering-educational-leadership/">
-           Giving matters</a></li>
-         </ul>
-       </div>
-     </div>
-   </div>
 </div> <!-- ./row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}

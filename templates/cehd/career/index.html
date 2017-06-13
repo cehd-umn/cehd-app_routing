@@ -9,8 +9,8 @@
   <div class="container">
     <h1 class="h1">Career Services</h1>
     <div class="row">
-      <div class="span-6">
-      <p>CEHD Career Services connects current CEHD students to their future. We can help you with:</p>
+      <div class="twothird feature">
+      <p>CEHD Career Services connects current CEHD students to their future. Career Services staff host on-campus events so you can find jobs and internships, meet with you to review your resume, help with major and career exploration, and prepare for interviews and graduate/professional school. Learn more about:</p>
       <ul>
         <li><a href="/career/resumes/">Writing  your resume</a></li>
         <li><a href="/career/degrees/">Exploring majors and careers</a></li>
@@ -22,16 +22,13 @@
 
       </ul>
     </div>
-    <div class="span-1">&nbsp;</div>
-    <div class="span-5">
-      <div class="row emphasis margin-top-1">
-          <span class="divider one-third"></span>
-            <div class="third">
-              <h2>Keep<br>in<br>touch</h2>
-            </div>
-        <div class="twothirds">
-            <div class="margin-top-3">
-            </div>
+</div>
+</div> <!-- ./row -->
+<div class="row emphasis margin-top-1">
+    <div class="container">
+
+        <div class="third feature">
+            <h2>Keep in touch</h2>
             <div class="svg-social-media-icon size-40">
                 <a href="https://www.facebook.com/cehdcareers">
             {% include "cehd/includes/svg/social-media/facebook.html" %}</a>
@@ -45,12 +42,19 @@
             <div class="svg-social-media-icon size-40">
                 <a href="https://www.pinterest.com/hirecehd/">{% include "cehd/includes/svg/social-media/pinterest.html" %}</a>
             </div>
+<p>
+  Follow us on social media to stay up-to-date on career-related events, networking opportunities, job postings, and more.
+</p>
+
+
         </div>
+
     </div>
-  </div>
 </div>
+
 <div class="margin-top-1">
 </div>
+  <div class="container">
     <div class="row">
     <div class="third">
       <h2>Appointments</h2>
@@ -105,7 +109,7 @@
           </div>
       </div>
   </div>
-</div> <!-- ./row -->
+
 {% endblock %}
 
 {% block bottom_js %}{{ parent() }}
