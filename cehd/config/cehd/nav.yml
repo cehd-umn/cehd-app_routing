@@ -82,7 +82,7 @@
     - name: Global Initiatives
       href: "/global/"
       subsection:
-    - name: Departments and Centers
+    - name: Departments & Centers
       href: "/departments-centers/"
       subsection:
 - name: Research
@@ -187,5 +187,7 @@
   subsection:
     - name: Accreditation
       href: "/about/accreditation/"
-    - name: Departments and Centers
+    - name: Directory
+      href: "/directory/"
+    - name: Departments & Centers
       href: "/departments-centers/"
