@@ -445,4 +445,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);
         }
     }
+
+    public function singleEventPageHandler($request, $response, $service, $app)
+    {
+        // This loads all the events. The specific event in question is loaded
+        // via JavaScript and the history API.
+        echo $this->_renderTemplate("cehd/events/index.html", []);
+    }
 }
