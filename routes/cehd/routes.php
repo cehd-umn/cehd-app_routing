@@ -41,6 +41,8 @@ $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
 $app->router->respond('GET', '/directory/[:internetId]/', [$app, 'personPageHandler']);
 
+$app->router->respond('GET', '/events/[i:id]/', [$app, 'eventPageHandler']);
+
 // Services
 $app->router->with('/services', function() use ($app)
 {
@@ -63,6 +65,7 @@ $app->router->with('/services', function() use ($app)
     });
 
     $app->router->with('/events', function() use ($app) {
+        $app->router->respond('GET', '/', [$app, 'eventEndpointHandler']);
         $app->router->respond('GET', '/feed/', [$app, 'eventsFeedEndpointHandler']);
     });
 

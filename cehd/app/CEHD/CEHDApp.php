@@ -348,6 +348,41 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    public function getEvent($event_id, $response)
+    {
+        $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
+        $http_client = $this->bootstrapHTTPClient([]);
+        $client_query_data = ["query" => [
+            "z" => $event_id,
+            ]
+        ];
+        $client_response = $http_client->request("GET",$base_url, $client_query_data);
+        $events =  new \CEHD\XML\Event\Events($client_response->getBody());
+        return $events->events[0];
+    }
+
+    public function getEventJSON($event_id, $response)
+    {
+        // $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
+        // $http_client = $this->bootstrapHTTPClient([]);
+        // $client_query_data = ["query" => [
+        //     "z" => $event_id,
+        //     ]
+        // ];
+        // $client_response = $http_client->request("GET",$base_url, $client_query_data);
+        // $events =  new \CEHD\XML\Event\Events($client_response->getBody());
+        return $response->sendJSONResponse(json_encode($this->getEvent($event_id, $response)));
+    }
+
+    public function eventEndpointHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        if (array_key_exists("z", $query_data))
+        {
+            return $this->getEventJSON($query_data["z"], $response);
+        }
+    }
+
     public function eventsFeedEndpointHandler($request, $response, $service, $app)
     {
         $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
@@ -446,10 +481,9 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function singleEventPageHandler($request, $response, $service, $app)
+    public function eventPageHandler($request, $response, $service, $app)
     {
-        // This loads all the events. The specific event in question is loaded
-        // via JavaScript and the history API.
-        echo $this->_renderTemplate("cehd/events/index.html", []);
+        $event = $this->getEvent($request->id, $response);
+        echo $this->_renderTemplate("cehd/events/event.html", ["event" => $event]);
     }
 }
