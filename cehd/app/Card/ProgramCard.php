@@ -21,7 +21,7 @@ class ProgramCard extends Card
     public function getDegrees()
     {
         $degrees = [];
-        
+
         foreach($this->links as $key => $link)
         {
             $degrees[$this->hyphenate($link->title)] = $link->title;
