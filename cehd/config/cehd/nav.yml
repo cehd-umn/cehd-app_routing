@@ -89,8 +89,6 @@
   href: "/research/"
   section: research
   subsection:
-    - name: RESEARCH
-      href: "/research/"
     - name: Research Topics
       href: "/topics/"
     - name: Research Day
@@ -107,8 +105,6 @@
 - name: News & Events
   href: "/news/"
   subsection:
-    - name: NEWS & EVENTS
-      href: "/news/"
     - name: Find an Expert
       href: "/topics/"
     - name: Connect Magazine
@@ -124,8 +120,6 @@
   href: "/giving/"
   section: giving
   subsection:
-    - name: GIVING
-      href: "/giving/"
     - name: Improving Lives
       href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
     - name: Gifts at work
@@ -149,8 +143,6 @@
   href: "/alumni/"
   section: alumni
   subsection:
-    - name: ALUMNI
-      href: "/alumni/"
     - name: Stay Involved
       href: "/alumni/involved/"
       subsection:
@@ -193,8 +185,6 @@
   href: "/about/"
   section: about
   subsection:
-    - name: ABOUT US
-      href: "/about/"
     - name: Accreditation
       href: "/about/accreditation/"
     - name: Departments and Centers
