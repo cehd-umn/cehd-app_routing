@@ -16,6 +16,18 @@ use CEHD\App\Card\CardGroup;
 
 class TopicCard extends Card
 {
+    public $title;
+
+    public $tag_id;
+
+    public function setCard($title, $card)
+    {
+        parent::setCard($title, $card);
+
+        $this->title = $title;
+
+        $this->tagId = $card["tag_id"];
+    }
 }
 
 class TopicCards extends CardGroup
@@ -40,5 +52,17 @@ class TopicCards extends CardGroup
         }
 
         return $this;
+    }
+
+    public function getCardsWithHyphenatedKeys()
+    {
+        $new_cards = [];
+
+        foreach ($this->_cards as $key => $card)
+        {
+            $new_cards[$this->hyphenate($key)] = $card;
+        }
+
+        return $new_cards;
     }
 }

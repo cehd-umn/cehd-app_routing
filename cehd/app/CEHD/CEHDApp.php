@@ -180,6 +180,25 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate('cehd/topics/index.html', $template_data);
     }
 
+    public function topicPageHandler($request, $response, $service, $app)
+    {
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
+        $cardsInstance = new \CEHD\App\Card\TopicCard\TopicCards();
+        $topics = $cardsInstance->setCards($yaml_file_path)->getCardsWithHyphenatedKeys();
+
+        $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
+
+        if ($topic_data)
+        {
+            $template_data = [
+                "section" => "topics",
+                "topic_data" => $topic_data,
+                "topic_data_json" => json_encode($topic_data),
+            ];
+            echo $this->_renderTemplate('cehd/topics/topic.html', $template_data);
+        }
+    }
+
     public function patternsHomePageHandler($request, $response, $service, $app)
     {
         if (!$this->config["is_prod"])
@@ -205,24 +224,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             ];
 
             echo $this->_renderTemplate('cehd/patterns/index.html', $template_data);
-        }
-    }
-
-    public function topicPageHandler($request, $response, $service, $app)
-    {
-        $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
-        $data = $this->_processSorterData($yaml_file_path);
-        $topics = $topics_and_cats["topics"];
-        $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
-
-        if ($topic_data)
-        {
-            $template_data = [
-                "section" => "topics",
-                "topic_data" => $topic_data,
-                "topic_data_json" => json_encode($topic_data),
-            ];
-            echo $this->_renderTemplate('cehd/topics/topic.html', $template_data);
         }
     }
 
