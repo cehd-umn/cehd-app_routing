@@ -21,11 +21,11 @@
             <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
                 <div class="ul-container nav-items{% if not is_academics %} single-column{% endif %}">
                     <ul class="margin-top nav">
-                        <li class="dropdown-header-repeated sub-nav-item">
-                            <a href="{{ top_level_item.href }}" class="to-upper">{{ top_level_item.name }}</a>
+                        <li class="sub-nav-item">
+                            <a href="{{ top_level_item.href }}" class="dropdown-header-repeated to-upper">{{ top_level_item.name }}</a>
                             <ul>
                             {%- for sub_nav_item in top_level_item.subsection %}
-                                <li class="dropdown-header sub-nav-item">
+                                <li class="{% if sub_nav_item.subsection %}dropdown-header {% endif %}sub-nav-item">
                                     <a class="sub-nav-item-link" href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
                                     {%- if sub_nav_item.subsection %}
                                     <ul>

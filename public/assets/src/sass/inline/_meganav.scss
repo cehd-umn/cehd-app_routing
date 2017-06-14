@@ -9,6 +9,15 @@ nav {
     transition-property: max-height;
     transition-timing-function: ease-out;
 
+    .dropdown-header-repeated {
+        font-size: 17px;
+        font-weight: 700;
+
+        li {
+            font-size: 15px;
+        }
+    }
+
     ul {
         &.nav {
             list-style: none;
@@ -47,33 +56,12 @@ nav {
         }
 
         &:hover {
-            // background: $nav-hover-border-top-color;
             color: $link-base-blue;
         }
 
         &.current {
             color: $link-base-blue;
         }
-
-        // &.sub-nav-item-link {
-        //     &::before {
-        //         color: $base-white;
-        //         content: "\2022";
-        //         font-size: 1.4em;
-        //         left: -10px;
-        //         margin-right: 5px;
-        //         position: absolute;
-        //         top: 1px;
-        //     }
-
-        //     &:hover {
-        //         &::before {
-        //             color: $base-charcoal;
-        //             content: "\2022";
-        //             margin-right: 5px;
-        //         }
-        //     }
-        // }
     }
 
     .nav {
@@ -91,11 +79,6 @@ nav {
 
     .main-nav-hero-image-text {
         font-size: 12px;
-    }
-
-    .dropdown-header-repeated {
-        font-size: 17px;
-        font-weight: 700;
     }
 
     .dropdown-header {
