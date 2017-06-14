@@ -348,7 +348,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function getEvent($event_id, $response)
+    public function getEvent($event_id)
     {
         $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
         $http_client = $this->bootstrapHTTPClient([]);
@@ -356,22 +356,14 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "z" => $event_id,
             ]
         ];
-        $client_response = $http_client->request("GET",$base_url, $client_query_data);
+        $client_response = $http_client->request("GET", $base_url, $client_query_data);
         $events =  new \CEHD\XML\Event\Events($client_response->getBody());
         return $events->events[0];
     }
 
     public function getEventJSON($event_id, $response)
     {
-        // $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
-        // $http_client = $this->bootstrapHTTPClient([]);
-        // $client_query_data = ["query" => [
-        //     "z" => $event_id,
-        //     ]
-        // ];
-        // $client_response = $http_client->request("GET",$base_url, $client_query_data);
-        // $events =  new \CEHD\XML\Event\Events($client_response->getBody());
-        return $response->sendJSONResponse(json_encode($this->getEvent($event_id, $response)));
+        return $response->sendJSONResponse(json_encode($this->getEvent($event_id)));
     }
 
     public function eventEndpointHandler($request, $response, $service, $app)
