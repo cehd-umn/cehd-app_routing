@@ -135,6 +135,11 @@ class BaseApp extends \CEHD\App\BaseClass
      */
     function __construct($file_paths)
     {
+        $twig_filters = [
+            "hyphenate",
+            "stripStyleAttributes",
+        ];
+
         $this->router = new Klein\Klein();
         $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
@@ -148,9 +153,13 @@ class BaseApp extends \CEHD\App\BaseClass
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
         $twig->addGlobal('inline_svg_styles', $this->inline_svg_styles);
-        // @xxx Will change in version 2 of Twig
-        $filter = new \Twig_SimpleFilter('hyphenate', array($this, 'hyphenate'));
-        $twig->addFilter($filter);
+
+        foreach ($twig_filters as $filter_method)
+        {
+            // @xxx Will change in version 2 of Twig
+            $filter = new \Twig_SimpleFilter($filter_method, [$this, $filter_method]);
+            $twig->addFilter($filter);
+        }
         $this->template = $twig;
 
         $this->response = new \CEHD\App\Response\BaseResponse();

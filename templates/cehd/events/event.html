@@ -1,0 +1,74 @@
+{% extends "cehd/layout/base.html" %}
+{% block title %}{{ event.title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="span-8 feature">
+            <h1>{{ event.title }}
+                <small class="clear h2">
+                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}
+                    {% if event.endTime %}
+                        | {{ event.startTime }}
+                    {% endif %}
+                    {% if event.endTime %}
+                        - {{ event.endTime }}
+                    {% endif %}
+                </small>
+            </h1>
+
+            <div class="svg-social-media-icon">
+                <a href="mailto:?&subject={{ event.title|url_encode }}&body=http%3A//www.cehd.umn.edu/events/{{ event.id }}/">
+                    {% include "cehd/includes/svg/social-media/email.html" %}
+                </a>
+            </div>
+            <div class="svg-social-media-icon">
+                <a href="http://calendar.google.com/render?action=TEMPLATE&text=
+                {{- "CEHD Event: "|url_encode -}}
+                {{- event.title|url_encode -}}&dates=
+                {{- event.year -}}
+                {% if event.month < 10 %}0{% endif %}{{- event.month -}}
+                {% if event.day < 10 %}0{% endif %}{{- event.day -}}T
+                {%- if event.startMinute -%}
+                    {{- event.startMinute -}}
+                {%- else -%}
+                    00
+                {%- endif -%}
+                {%- if event.startMinute -%}
+                    {{- event.startMinute -}}
+                {%- else -%}
+                    00
+                {%- endif -%}
+                    00/
+                {{- event.year -}}
+                {% if event.month < 10 %}0{% endif %}{{- event.month -}}
+                {% if event.day < 10 %}0{% endif %}{{- event.day -}}T
+                {%- if event.endMinute -%}
+                    {{- event.endMinute -}}
+                {%- else -%}
+                    00
+                {%- endif -%}
+                {%- if event.endMinute -%}
+                    {{- event.endMinute -}}
+                {%- else -%}
+                    00
+                {%- endif -%}
+                    00&prop=website:http://www.cehd.umn.edu/events/{{ event.id }}&sprop=name:College+Event+Calendar&location="{{ event.location }}&sf=true" target="_blank">
+                    {% include "cehd/includes/svg/social-media/calendar.html" %}
+                </a>
+            </div>
+            <div class="svg-social-media-icon">
+                <a href="https://twitter.com/home?status=http%3A//www.cehd.umn.edu/events/{{ event.id}}/" target="_blank">
+                    {% include "cehd/includes/svg/social-media/twitter.html" %}
+                </a>
+            </div>
+            <div class="svg-social-media-icon">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cehd.umn.edu/events/{{ event.id }}/" target="_blank">
+                    {% include "cehd/includes/svg/social-media/facebook.html" %}
+                </a>
+            </div>
+
+            {{ event.shortDescription|stripStyleAttributes|raw }}
+        </div>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

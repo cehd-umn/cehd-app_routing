@@ -4,7 +4,7 @@
         {% if loop.index0 < data.limit %}
             <dt class="event-date">{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}</dt>
             <dd class="event-title">
-                <a href="{{ event.url }}">{{ event.title }}</a>
+                <a href="/events/{{ event.id }}/">{{ event.title }}</a>
             </dd>
         {% endif %}
     {% endfor %}

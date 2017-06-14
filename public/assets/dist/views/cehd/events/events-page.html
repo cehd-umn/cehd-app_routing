@@ -1,0 +1,64 @@
+{% if data.events|length > 0 %}
+    <dl class="events">
+    {% for event in data.events %}
+        {% if loop.index0 < data.limit %}
+            <dt class="date">
+                {{ event.dayOfWeek }},
+                {{ event.fullMonth }}
+                {{ event.day }}
+                {% if event.startTime and event.endTime %}
+                    | {{ event.startTime }} - {{ event.endTime }}
+                {% endif %}
+            </dt>
+            <dd class="event-title">
+                <p class="event">
+                    <a class="event-link" data-event-id="{{ event.id }}" href="/events/{{ event.id }}/">{{ event.title }}</a>
+                </p>
+                {% if event.shortDescription %}
+                    <div class="description">
+                        {{ event.shortDescription|strip_style_attributes|safe }}
+                    </div>
+                {% endif %}
+            </dd>
+        {% endif %}
+    {% endfor %}
+    </dl>
+{% else %}
+    <p>There are no upcoming events.</p>
+{% endif %}
+
+{#
+{% for event in data.events %}
+    <div class="off-canvas event-details" id="event-{{ event.id }}" class="accessible-hidden">
+        <a class="close-button" href="{{ event.url }}" data-target="#event-{{ event.id }}"><span class="accesible-hidden">Close</span></a>
+        <h2 class="event-box text-center">Event details</h2>
+        <h3 class="og-title">{{ event.title }}</h3>
+        <dl>
+            <dt>When</dt>
+            <dd>
+                {{ event.dayOfWeek }},
+                {{ event.fullMonth }}
+                {{ event.day }}
+                {% if event.startTime and event.endTime %}
+                    | {{ event.startTime }} - {{ event.endTime }}
+                {% endif %}
+            </dd>
+            {% if event.location %}
+            <dt>Where</dt>
+            <dd>
+                {% if event.locationURL %}
+                    <a class="og-url" href="{{ event.locationURL }}">
+                {% endif %}
+                    {{ event.location }}
+                {% if event.locationURL %}
+                    </a>
+                {% endif %}
+            </dd>
+            <div class="og-description">
+                {{ event.shortDescription|strip_style_attributes|safe }}
+            </div>
+            {% endif %}
+        </dl>
+    </div>
+{% endfor %}
+#}
