@@ -274,4 +274,11 @@ class AppTest extends TestCase
 
         $this->assertEquals($expected_result, $this->appInstance->toDeca($year));
     }
+
+    public function testStripStyleAttributes()
+    {
+        $original_tag = '<p style="some: style; another: style">';
+        $expected_result = "<p >";
+        $this->assertEquals($expected_result, $this->appInstance->stripStyleAttributes($original_tag));
+    }
 }

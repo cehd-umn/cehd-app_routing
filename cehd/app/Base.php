@@ -341,4 +341,11 @@ abstract class BaseClass
     {
         return floor($num / 10) * 10;
     }
+
+    public function stripStyleAttributes($tag)
+    {
+        $pattern = "/style=(\".*?\"|\'.*?\'|[^\"'][^\s]*)/i";
+        $replacement = "";
+        return preg_replace($pattern, $replacement, $tag);
+    }
 }
