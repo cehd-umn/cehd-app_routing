@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as events -%}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "McNair Scholars" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -142,17 +144,14 @@
 			  [PDF]</p>
 
 	  	<div>
-        <h2>Open Houses</h2>
-        <div id="Info-Session">
-        <script type="text/javascript">
-        getRssFeed("Info-Session","https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?code=McNair","/attributes/XSLT/InfoSession-McNair.xslt","My Error Message")
-        </script>
-        </div>
-			<div id="DissapearingDiv">
-		<script type="text/javascript">
-			getRssFeed("DissapearingDiv","http://apps.cehd.umn.edu/events/Admin/RSSFeed.aspx?&x=3&r=3&q=6&t=279","/attributes/XSLT/Events-FeatureWidget-Dissapear-TRiO-More.xslt","Sorry, the event calendar is currently unavailable.")
-		</script>
-	    	</div>
+        <!-- 2017-06-14, check with Christina in the fall to see if the McNair info-session feed will be used. | JFA
+        <h2>Open Houses</h2> -->
+      <!-- Events feed -->
+      {{ loader.loader(
+               "Events",
+               "h2",
+               "events-container"
+               ) }}
       <h2>Connect</h2>
       <p class="last">
       <a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">
@@ -168,4 +167,14 @@
     </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ events.events_feed_js(
+        279, 6
+    ) }}
+
 {% endblock %}

@@ -1285,11 +1285,6 @@
   template: cehd/reads/index.html
   template_data:
     - section: reads
-/reads/events/:
-  publish: true
-  template: cehd/reads/events/index.html
-  template_data:
-    - section: reads
 /reads/previous-books/:
   publish: true
   template: cehd/reads/previous-books/index.html
