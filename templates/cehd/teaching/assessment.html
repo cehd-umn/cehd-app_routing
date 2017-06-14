@@ -1,68 +1,76 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/table/table.html" as table -%}
 {% set page_title = "Assesment and Accreditation" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
-  <div class="container">
+    <div class="container">
 
-<h1>Assessment and Accreditation</h1>
-<div class="twothird feature">
-    <h2>CAEP Annual Reporting and Monitoring</h2>
+    <h1>Assessment and Accreditation</h1>
+    <div class="twothird feature">
+        <h2>CAEP Annual Reporting and Monitoring</h2>
 
-    			<p>As part of our accreditation from CAEP, we publish information and statistics about students in our initial licensure programs (ILP). </p>
+        <p>As part of our accreditation from CAEP, we publish information and
+        statistics about students in our initial licensure programs (ILP).</p>
 
-                <h3>Measures of Program Impacts</h3>
+        <h3>Measures of Program Impacts</h3>
 
-                <p><strong>97.4%</strong> of 2014/15 candidates who completed the program agree or tend to agree that they would would recommend the ILP to other interested candidates.<br />
-                <em>(from 2013 Candidate Exit Survey, response rate 78.8%)</em></p>
+        <p><strong>97.4%</strong> of 2014/15 candidates who completed the
+        program agree or tend to agree that they would would recommend the ILP
+        to other interested candidates.<br />
+            <em>(from 2013 Candidate Exit Survey, response rate 78.8%)</em></p>
 
-                <p><strong>Employers agreed or tended to agree</strong> that first year teachers from our ILP programs:</p>
-    <ul>
-    <li>Creates a learning environment in which differences such as race, culture, gender, sexual orientation, and language are respected (92.2%)</li>
-    <li>Regularly adjusts instructional plans to meet students&#39; needs (89.1%)</li>
-    <li>Designs instructions to support students who are English language learners (89.6%)</li>
-    <li>Has developed a classroom environment that promotes student engagement (85.3%)</li>
-    <li>Effectively teaches students from culturally and ethnically diverse backgrounds and communities (92.6%)</li>
-    <li>Actively engages parents/guardians in support of their children&#39;s learning (88.9%)</li>
-    </ul>
-                <p><em>(from Supervisor-Employer Survey 2013-2014, response rate 67%)</em></p>
+        <p><strong>Employers agreed or tended to agree</strong> that first year
+        teachers from our ILP programs:</p>
+        <ul>
+            <li>Creates a learning environment in which differences such as race, culture, gender, sexual orientation, and language are respected (92.2%)</li>
+            <li>Regularly adjusts instructional plans to meet students&#39; needs (89.1%)</li>
+            <li>Designs instructions to support students who are English language learners (89.6%)</li>
+            <li>Has developed a classroom environment that promotes student engagement (85.3%)</li>
+            <li>Effectively teaches students from culturally and ethnically diverse backgrounds and communities (92.6%)</li>
+            <li>Actively engages parents/guardians in support of their children&#39;s learning (88.9%)</li>
+        </ul>
+        <p><em>(from Supervisor-Employer Survey 2013-2014, response rate 67%)</em></p>
 
-                <h3>Initial Licensure Program </h3>
-                <ul>
-                <li><strong>2014/2015</strong>: 351 new enrollments, 261 candidates completed</li>
-               	<li><strong>2013/2014</strong>: 303 new enrollments, 294 candidates completed</li>
-                <li><strong>2012/2013</strong>: 246 new enrollments, 284 candidates completed</li>
-                </ul>
+        <h3>Initial Licensure Program </h3>
+        <ul>
+            <li><strong>2014/2015</strong>: 351 new enrollments, 261 candidates completed</li>
+            <li><strong>2013/2014</strong>: 303 new enrollments, 294 candidates completed</li>
+            <li><strong>2012/2013</strong>: 246 new enrollments, 284 candidates completed</li>
+        </ul>
 
-                <p>Candidates may take more than a year to complete the program. For more information on initial licensure program enrollments and completion, see <a href="https://title2.ed.gov/Public/Home.aspx">Title II Reports</a>.</p>
+        <p>Candidates may take more than a year to complete the program. For
+        more information on initial licensure program enrollments and
+        completion, see <a href="https://title2.ed.gov/Public/Home.aspx">Title
+        II Reports</a>.</p>
 
-                <h3>Exam pass rate of the Minnesota Teacher Licensure Exam (MTLE)</h3>
-                <p>The <a href="http://www.mtle.nesinc.com/">Minnesota Teacher Licensure Examinations</a>, or MTLEs, are tests taken by candidates as part of applying for a Minnesota teaching license. All candidates for initial licenses take tests in basic skills, content-area knowledge, and pedagogy.</p>
+        <h3>Exam pass rate of the Minnesota Teacher Licensure Exam (MTLE)</h3>
+        <p>The <a href="http://www.mtle.nesinc.com/">Minnesota Teacher
+        Licensure Examinations</a>, or MTLEs, are tests taken by candidates as
+        part of applying for a Minnesota teaching license. All candidates for
+        initial licenses take tests in basic skills, content-area knowledge,
+        and pedagogy.</p>
 
-                <p><strong>2010 - Current (June 1, 2016)</strong></p>
+        <p><strong>2010 - Current (June 1, 2016)</strong></p>
 
-       <table class="basic" width="75%" border="1">
-      <tr>
-        <td>MTLE Exam</td>
-        <td>Institutional Pass Rate (UMN)</td>
-        <td>MN Statewide Pass Rate</td>
-      </tr>
-      <tr>
-        <td>Basic Skills</td>
-        <td>92%</td>
-        <td>79%</td>
-      </tr>
-      <tr>
-        <td>Content-Area</td>
-        <td>97%</td>
-        <td>94%</td>
-      </tr>
-      <tr>
-        <td>Pedagogy</td>
-        <td>98%</td>
-        <td>96%</td>
-      </tr>
-    </table>
+        {{ table.start_table("Exam pass rates") }}
+        {{ table.heading_row(
+            ["MTLE Exam",
+            "Institutional Pass Rate (UMN)",
+            "MN Statewide Pass Rate"]) }}
+        {{ table.row(
+            ["Basic Skills",
+            "92%",
+            "79%"]) }}
+        {{ table.row(
+            ["Content-Area",
+            "97%",
+            "94%"]) }}
+        {{ table.row(
+            ["Pedagogy",
+            "98%",
+            "96%"]) }}
+        {{ table.end_table() }}
 
     <p>Data was developed from Pearson MTLE Analyzer Site. For more information on initial licensure program enrollments and completion, see <a href="https://title2.ed.gov/Public/Home.aspx">Title II Reports</a>.</p>
 
