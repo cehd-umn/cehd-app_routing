@@ -25,8 +25,6 @@
           href: "/undergraduate/transfer/"
         - name: Outcomes
           href: "/undergraduate/outcomes/"
-        - name: Costs, Aid & Scholarships
-          href: "/undergraduate/scholarships/"
         - name: First Year Experience
           href: "/undergraduate/fye/"
         - name: Newly Admitted Students
@@ -46,8 +44,6 @@
       subsection:
         - name: Community
           href: "/graduate/community/"
-        - name: Funding
-          href: "/graduate/funding/"
         - name: Career & Leadership
           href: "/graduate/career/"
     - name: Tuition & Financial Aid
@@ -55,7 +51,7 @@
       subsection:
         - name: Undergraduate Scholarships
           href: "/undergraduate/scholarships/"
-        - name: Graduate Assistantships, Fellowships & Aid
+        - name: Graduate Finance and Funding
           href: "/graduate/funding/"
     - name: Career Services
       href: "/career/"
@@ -70,8 +66,6 @@
           href: "/career/grad-school/prepare/"
         - name: Hire a CEHD Student or Graduate
           href: "/career/employers/"
-        - name: Services for Graduate Students
-          href: "/career/grad-school/"
         - name: Resources for Teachers
           href: "/career/teacher/"
     - name: Graduation
@@ -81,9 +75,6 @@
           href: "/commencement/"
     - name: Global Initiatives
       href: "/global/"
-      subsection:
-    - name: Departments & Centers
-      href: "/departments-centers/"
       subsection:
 - name: Research
   href: "/research/"

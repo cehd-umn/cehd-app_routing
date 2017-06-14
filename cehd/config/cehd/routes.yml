@@ -1235,6 +1235,11 @@
   template: cehd/graduate/support.html
   template_data:
     - section: graduate
+/graduate/wellbeing/:
+  publish: false
+  template: cehd/graduate/wellbeing.html
+  template_data:
+    - section: graduate
 /news/:
   publish: true
   template: cehd/news/index.html
