@@ -68,12 +68,20 @@ class PatternCards extends CardGroup
         {
             array_push($groups, $pattern->group);
         }
+        sort($groups);
         return array_unique($groups);
     }
 
-    public function buildRouteFromPattern($group, $title)
+    public function buildRouteFromPattern($group, $title, $group_route=false)
     {
-        return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
+        if ($group_route)
+        {
+            return "/patterns/v1/" . $group . "/";
+        }
+        else
+        {
+            return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
+        }
     }
 
     public function buildRoutesFromPatternData()
@@ -90,7 +98,7 @@ class PatternCards extends CardGroup
 
         foreach($groups as $group)
         {
-            $route = $this->buildRouteFromPattern($group, $group);
+            $route = $this->buildRouteFromPattern($group, $group, true);
             $routes[$route] = new Dict\Dict(["handler" => "patternGroupHandler"]);
         }
 

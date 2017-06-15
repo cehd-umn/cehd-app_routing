@@ -203,34 +203,45 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         if (!$this->config["is_prod"])
         {
-            $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
-            $data = $this->_processSorterData($yaml_file_path);
+            $cards = $this->_patternCardsInstance->getCards();
 
-            foreach ($data["data"] as $title => $pattern)
+            // @todo this should probably go in the pattern card class
+            foreach ($cards as $title => $pattern)
             {
-                $path = $this->_patternCardsInstance->buildRouteFromPattern($pattern["group"], $title);
+                $path = $this->_patternCardsInstance->buildRouteFromPattern($pattern->group, $title);
                 $link = [
                     "href" => $path,
                     "title" => $title,
                 ];
-                $data["data"][$title]["links"] = [$link];
+                $cards[$title]->links = [$link];
             }
 
             $template_data = [
                 "section" => "patterns",
-                "item_data" => $data["data"],
-                "categories" => $data["categories"],
-                "item_data_json" => json_encode($data["data"]),
+                "item_data" => $cards,
+                "categories" => $this->_patternCardsInstance->getCategories(),
+                "groups" => $this->_patternCardsInstance->getGroupNames(),
+                "item_data_json" => json_encode($cards),
             ];
 
             echo $this->_renderTemplate('cehd/patterns/index.html', $template_data);
         }
     }
 
+    public function patternGroupHandler($request, $response, $service, $app)
+    {
+        $uri_parts = explode("/", $request->pathname());
+        $group = $uri_parts[3];
+        $patterns = $this->_patternCardsInstance->getGroup($group);
+
+        if ($patterns)
+        {
+            echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);
+        }
+    }
+
     public function searchPageHandler($request, $response, $service, $app)
     {
-        // Lazily load the search client so it's not loaded on unrelated
-        // requests
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
         $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
@@ -459,18 +470,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             {
                 echo $this->_renderTemplate($pattern->template, ["pattern" => $pattern]);
             }
-        }
-    }
-
-    public function patternGroupHandler($request, $response, $service, $app)
-    {
-        $uri_parts = explode("/", $request->pathname());
-        $group = $uri_parts[2];
-        $patterns = $this->_filterPatternsByGroup($group);
-
-        if ($patterns)
-        {
-            echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);
         }
     }
 
