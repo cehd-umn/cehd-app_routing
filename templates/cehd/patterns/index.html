@@ -4,5 +4,12 @@
 {% block extra_css %}{{ parent() }}
 {% endblock %}
 {% block intro_text %}
-    <h1>Pattern Library</h1>
+    <h1>Pattern library</h1>
+    <h2>Patterns by group</h2>
+    <ul>
+    {% for group in groups %}
+        <li><a href="{{ group }}/">{{ group }}</a></li>
+    {% endfor %}
+    </ul>
+    <h2>Patterns by category</h2>
 {% endblock %}

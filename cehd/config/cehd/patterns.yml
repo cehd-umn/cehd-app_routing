@@ -673,6 +673,22 @@ uppercase buttons:
       name: centered elements
     - group: text
       name: uppercase text
+removing top margin:
+  publish: true
+  meta: null
+  categories:
+    - margin-top
+    - element vertical alignment
+  description: removes top margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/top-margin-remove.html
+      type: include
+  type: include
+  uses: null
 adding top margin:
   publish: true
   meta: null
