@@ -168,7 +168,10 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/experts.yml';
         $cardsInstance = new \CEHD\App\Card\TopicCard\TopicCards();
-        $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
+
+        $cards = $cardsInstance->setCards($yaml_file_path)
+            ->nullifyDescriptions()
+            ->getCards();
 
         $template_data = [
             "section" => "academics",

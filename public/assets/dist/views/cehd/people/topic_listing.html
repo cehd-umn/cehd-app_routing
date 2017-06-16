@@ -1,25 +1,26 @@
+<h2>Our expert{% if data.people|length > 1 %}s{% endif %}</h2>
+{% set column_class = "third" %}
+{% if data.people|length == 2 %}{% set column_class = "half" %}{% endif %}
+<div>
 {% for person in data.people %}
     {% if person.internetId %}
-        <h2 class="heading-profile">{{ person.nameFirstLast }}
-            <small class="clear h4">
-            {% if person.workingTitle|is_string %}
-                {{ person.workingTitle }}
-            {% endif %}
-            </small>
-        </h2>
-        <dl>
-            <dt>Email</dt>
-            <dd><a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a></dd>
-            <dt>Profile Page</dt>
-            <dd><a href="/directory/{{ person.internetId }}/">Visit profile page</a></dd>
-            {% if person.headshotAddress|is_string and person.areasOfInterest|is_string %}
-                <dt>Headshot</dt>
-                <dd><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></dd>
-            {% endif %}
-            {% if person.areasOfInterest|is_string %}
-                <dt>Areas of interest</dt>
-                <dd>{{ person.areasOfInterest|safe }}</dd>
-            {% endif %}
-        </dl>
+    <div class="{{ column_class }}">
+        <h2 class="heading-profile"><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></h2>
+        <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
+        {% if person.workingTitle|is_string %}
+            <p>{{ person.workingTitle }}</p>
+        {% endif %}
+        <p>{{ person.jobs[0].umZDeptIdDescription}}</p>
+        {% if person.areasOfInterest|is_string %}
+        <div>
+            {{ person.areasOfInterest|safe }}
+        </div>
+        {% endif %}
+    {% endif %}
+    </div>
+    {% if loop.index == 3 %}
+</div>
+<div>
     {% endif %}
 {% endfor %}
+</div>

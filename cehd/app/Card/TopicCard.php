@@ -22,6 +22,11 @@ class TopicCard extends Card
 
     public function setCard($title, $card)
     {
+        $card["links"] = [[
+            "title" => "More about " . $title,
+            "href" => "/topics/" . $this->hyphenate($title) . "/",
+        ]];
+
         parent::setCard($title, $card);
 
         $this->title = $title;
