@@ -1165,6 +1165,11 @@
   template: cehd/giving/wplc/awards.html
   template_data:
     - section: giving
+/giving/wplc/recipients/:
+  publish: true
+  template: cehd/giving/wplc/recipients.html
+  template_data:
+    - section: giving
 /giving/wplc/join/:
   publish: true
   template: cehd/giving/wplc/join.html
@@ -1213,6 +1218,11 @@
 /graduate/community/:
   publish: true
   template: cehd/graduate/community.html
+  template_data:
+    - section: graduate
+/graduate/contact/:
+  publish: true
+  template: cehd/graduate/contact.html
   template_data:
     - section: graduate
 /graduate/funding/:
