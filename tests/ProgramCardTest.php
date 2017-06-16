@@ -186,4 +186,12 @@ class ProgramCardTest extends TestCase
         $card = $this->cardsInstance->getCard($key);
         $this->assertTrue($card->categoryKeyExists("foo-bar"));
     }
+
+    public function testNullifyDescriptions()
+    {
+        $key = "Adult Education";
+        $card = $this->cardsInstance->getCard($key);
+        $this->cardsInstance->nullifyDescriptions();
+        $this->assertNull($card->description);
+    }
 }

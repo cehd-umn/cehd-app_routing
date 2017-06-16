@@ -46,6 +46,6 @@ class PatternCardTest extends TestCase
     {
         $group_names = $this->_cardsInstance->getGroupNames();
         $this->assertTrue(is_array($group_names));
-        $this->assertEquals("page", $group_names[0]);
+        $this->assertEquals("css", $group_names[0]);
     }
 }

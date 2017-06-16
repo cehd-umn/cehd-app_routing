@@ -297,6 +297,15 @@ abstract class CardGroup extends BaseClass
 
         return $results;
     }
+
+    public function nullifyDescriptions()
+    {
+        foreach ($this->_cards as &$card)
+        {
+            $card->description = null;
+        }
+        return $this;
+    }
 }
 
 class CardLink
