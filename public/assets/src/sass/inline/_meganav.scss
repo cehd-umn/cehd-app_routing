@@ -72,7 +72,7 @@ nav {
     }
 
     .hero-pithy-phrase {
-        font-size: 20px;
+        font-size: 14px;
         margin-right: 30px;
         padding-right: 62px;
     }
@@ -160,11 +160,14 @@ nav {
         background: $base-white;
         border: transparent;
         box-shadow: 0 2px 3px 0 $box-shadow-rgba;
-        display: none;
+        // display: none;
         left: 0;
+        max-height: 0;
+        overflow: hidden;
         padding: 0;
         position: absolute;
         top: 23px;
+        transition: max-height .3s;
         width: 1310px;
 
         ul {
@@ -273,6 +276,7 @@ nav {
                 color: $base-black;
                 padding: 0 5px;
                 text-decoration: none;
+                transition: background-color .3s;
 
                 &:hover {
                     background-color: $nav-hover-border-top-color;
@@ -296,6 +300,7 @@ nav {
             .dropdown-menu-wrapper {
                 align-items: stretch;
                 display: flex;
+                max-height: 2000px;
             }
         }
 
@@ -400,6 +405,6 @@ nav {
     width: 200px;
 }
 
-// #dropdown-right-content-giving {
-//     justify-content: flex-start;
-// }
+.meganav-read-more {
+    font-size: 11px;
+}
