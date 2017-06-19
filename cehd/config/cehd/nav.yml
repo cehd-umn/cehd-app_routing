@@ -167,6 +167,7 @@
               href: "/alumni/society/scholarships/"
             - name: Scholarship Funds
               href: "/alumni/society/fund/"
+    -
       - name: Awards & Scholarships
         href: "/alumni/awards/"
         subsections:
@@ -177,7 +178,6 @@
               href: "/alumni/awards/recipients/"
             - name: CEHD Rising Alumni
               href: "/alumni/rising/"
-    -
       - name: News
         href: "/alumni/news/"
       - name: Notes
