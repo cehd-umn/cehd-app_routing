@@ -27,7 +27,7 @@
                                 {% endif %}
                                 <ul>
                                     {% for sub_nav_item in subsection %}
-                                    <li class="{% if sub_nav_item.subsections %}dropdown-header {% endif %}sub-nav-item">
+                                    <li class="{% if sub_nav_item.subsections %}dropdown-header {% endif %}sub-nav-item" id="dropdown-subsection-{{ sub_nav_item.name|hyphenate }}">
                                         <a class="sub-nav-item-link" href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
                                         {% if sub_nav_item.subsections %}
                                         <ul>
@@ -48,7 +48,7 @@
                     </div><!-- // .ul-container -->
                     {% endfor %}{# end for subsection in top_level_item.subsections #}
                     {% if not is_about %}
-                    <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center">
+                    <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
                         {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
                     </div>
                     {% endif %}

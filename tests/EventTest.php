@@ -87,4 +87,11 @@ class EventTest extends TestCase
         $expected = "00";
         $this->assertEquals($expected, $this->eventInstance->events[0]->getStartMinute());
     }
+
+    public function testNoEventsReturned()
+    {
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/events_empty.xml');
+        $eventInstance = new \CEHD\XML\Event\Events($xmlStr);
+        $this->assertEmpty($eventInstance->events);
+    }
 }

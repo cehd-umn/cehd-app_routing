@@ -336,12 +336,16 @@ class Events extends \CEHD\App\XML\XML
     function __construct($xml_string)
     {
         $xml = $this->xmlStringToObject($xml_string);
+        $count = (int) $xml->attributes()["totalCount"];
 
         if ($xml)
         {
-            foreach($xml->event as $event)
+            if ($count > 0)
             {
-                array_push($this->events, new Event($event));
+                foreach($xml->event as $event)
+                {
+                    array_push($this->events, new Event($event));
+                }
             }
         }
         else
