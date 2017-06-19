@@ -84,6 +84,16 @@ class InfoSession extends \CEHD\XML\Event\Event
 
         $this->date = $this->getFromProperty($session->date);
 
+        $this->day = $this->getFromProperty($session->dateDay);
+
+        $this->month = $this->getFromProperty($this->getMonth());
+
+        $this->fullMonth = $this->getFromProperty($this->getFullMonth());
+
+        $this->shortMonth = $this->getFromProperty($this->getShortMonth());
+
+        $this->timestamp = $this->getTimestamp();
+
         $this->year = $this->getYear();
 
         $this->dateChange = $this->getBoolFromProperty($session->dateChange);

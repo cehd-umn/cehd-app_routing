@@ -15,11 +15,16 @@ class InfoSessionTest extends TestCase
 
     public function testCreation()
     {
-        $expected_count = 2;
-        $expected_link = "http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4444";
+        $expected_count = 4;
+        $expected_link = "http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4460";
         $expected_title = "Information Session for Transfer Admission to CEHD majors";
         $expected_year = "2017";
-        $expected_date = "5/5/2017";
+        $expected_date = "7/14/2017";
+        $expected_day = "14";
+        $expected_month = "7";
+        $expected_full_month = "July";
+        $expected_short_month = "Jul";
+        $expected_timestamp = "1497866400";
 
         $this->assertTrue(is_array($this->infoSessionInstance->infoSessions));
         $this->assertEquals($expected_count, count($this->infoSessionInstance->infoSessions));
@@ -27,5 +32,10 @@ class InfoSessionTest extends TestCase
         $this->assertEquals($expected_title, $this->infoSessionInstance->infoSessions[0]->title);
         $this->assertEquals($expected_year, $this->infoSessionInstance->infoSessions[0]->year);
         $this->assertEquals($expected_date, $this->infoSessionInstance->infoSessions[0]->date);
+        $this->assertEquals($expected_day, $this->infoSessionInstance->infoSessions[0]->day);
+        $this->assertEquals($expected_month, $this->infoSessionInstance->infoSessions[0]->month);
+        $this->assertEquals($expected_full_month, $this->infoSessionInstance->infoSessions[0]->fullMonth);
+        $this->assertEquals($expected_short_month, $this->infoSessionInstance->infoSessions[0]->shortMonth);
+        $this->assertEquals($expected_timestamp, $this->infoSessionInstance->infoSessions[0]->timestamp);
     }
 }
