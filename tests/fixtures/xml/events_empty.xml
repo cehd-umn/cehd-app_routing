@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Created with xmlDocument class-->
+<EventsCalendar totalCount="0">
+  <event count="0" sequenceByDate="0">
+    <eventId>0</eventId>
+    <title>There are no events listed for your selection</title>
+    <eventDate>1/1/1900</eventDate>
+    <startTime>
+    </startTime>
+    <endTime>
+    </endTime>
+    <dayOfWeek>
+    </dayOfWeek>
+    <dateDay>
+    </dateDay>
+    <dateMD>
+    </dateMD>
+    <dateYear>
+    </dateYear>
+    <dateISO>
+    </dateISO>
+    <occurrences />
+    <eventSchedule>&lt;ul class='eventSchedule'&gt;&lt;/ul&gt;</eventSchedule>
+    <keyword>
+    </keyword>
+    <tags />
+    <tagList>&lt;ul class='tagList'&gt;&lt;/ul&gt;</tagList>
+    <briefDescr>
+    </briefDescr>
+    <extendedDescr>
+    </extendedDescr>
+    <link>http://www.cehd.umn.edu/events/?z=0&amp;dt=1/1/1900</link>
+    <linkEncoded>http%3a%2f%2fwww.cehd.umn.edu%2fevents%2f%3fz%3d0%26dt%3d1%2f1%2f1900</linkEncoded>
+    <location>
+    </location>
+    <locationURL>
+    </locationURL>
+    <relatedEvents>
+    </relatedEvents>
+    <relatedEventURL>
+    </relatedEventURL>
+    <emailWidget>&lt;a title='Email: ""' href='javascript:ShareEmail("http://www.cehd.umn.edu/events/?z=0&amp;dt=1/1/1900?z=0&amp;amp;dt=1/1/1900","01/01/1900","")' class='tools-share-email'&gt;&lt;img src='/attributes/images/Events/icon-email.gif' alt='Email to a Friend' /&gt;&lt;/a&gt;
+</emailWidget>
+    <googleWidget>&lt;a title='Add to Google Calendar: ""' href='http://www.google.com/calendar/event?action=TEMPLATE&amp;amp;text=CEHD Event: There are no events listed for your selection&amp;amp;dates=19000101T000000/19000101T000000&amp;amp;sprop=website:http://www.cehd.umn.edu/events/?z=0&amp;dt=1/1/1900/&amp;amp;sprop=name:College Event Calendar&amp;amp;location=blank&amp;amp;details=' target='_blank' class='tools-share-google'&gt;&lt;img src='/attributes/images/Events/icon-google.gif' alt='Add to Google Calendar' /&gt;&lt;/a&gt;
+</googleWidget>
+    <UGoogleWidget>&lt;a title='Add to University Google Calendar: ""' href='http://www.google.com/calendar/hosted/umn.edu/event?action=TEMPLATE&amp;amp;text=CEHD Event: There are no events listed for your selection&amp;amp;dates=19000101T000000/19000101T000000&amp;amp;sprop=website:http://www.cehd.umn.edu/events/?z=0&amp;dt=1/1/1900/&amp;amp;sprop=name:College Event Calendar&amp;amp;location=blank&amp;amp;details=' target='_blank' class='tools-share-UGoogle'&gt;&lt;img src='/attributes/images/Events/icon-UGoogle.gif' alt='Add to University Google Calendar' /&gt;&lt;/a&gt;
+</UGoogleWidget>
+  </event>
+</EventsCalendar>
