@@ -64,4 +64,11 @@ class EventTest extends TestCase
         $expected = 1490976000;
         $this->assertTrue(is_int($this->eventInstance->events[0]->getTimestamp()));
     }
+
+    public function testNoEventsReturned()
+    {
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/events_empty.xml');
+        $eventInstance = new \CEHD\XML\Event\Events($xmlStr);
+        $this->assertEmpty($eventInstance->events);
+    }
 }
