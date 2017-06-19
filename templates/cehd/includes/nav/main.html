@@ -48,7 +48,7 @@
                     </div><!-- // .ul-container -->
                     {% endfor %}{# end for subsection in top_level_item.subsections #}
                     {% if not is_about %}
-                    <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center">
+                    <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
                         {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
                     </div>
                     {% endif %}

@@ -212,9 +212,14 @@ nav {
         border-top: 17px solid $base-white;
         margin-left: 10px;
         padding: 10px 0 10px 10px;
+        width: 100%;
 
         &.first {
             width: 856px;
+        }
+
+        &.flex-container {
+            justify-content: flex-start;
         }
 
         .flex-item-inline {
@@ -390,3 +395,11 @@ nav {
 #dropdown-subsection-women-s-philanthropic-leadership-circle {
     font-weight: normal;
 }
+
+.nav-img-container {
+    width: 200px;
+}
+
+// #dropdown-right-content-giving {
+//     justify-content: flex-start;
+// }
