@@ -2,179 +2,198 @@
 - name: Academics
   href: "#"
   section: academics
-  subsection:
-    - name: Majors, Degrees & Programs
-      href: "/programs/"
-    - name: Teacher Education
-      href: "/teaching/"
-      subsection:
-        - name: Licensure Process
-          href: "/teaching/license/"
-        - name: Placements and Partnerships
-          href: "/teaching/partnerships/"
-        - name: Trainings and Workshops
-          href: "/teaching/trainings/"
-        - name: Assessment and Accreditation
-          href: "/teaching/assessment/"
-    - name: Undergraduate Studies
-      href: "/undergraduate/"
-      subsection:
-        - name: Visit and Apply
-          href: "/undergraduate/apply/"
-        - name: Transfer to CEHD
-          href: "/undergraduate/transfer/"
-        - name: Outcomes
-          href: "/undergraduate/outcomes/"
-        - name: First Year Experience
-          href: "/undergraduate/fye/"
-        - name: Newly Admitted Students
-          href: "/undergraduate/admitted/"
-        - name: Academic Advising
-          href: "/undergraduate/advising/"
-        - name: Honors and Dean's List
-          href: "/undergraduate/honors/"
-        - name: Get Involved
-          href: "/undergraduate/involvement/"
-        - name: TRIO Programs
-          href: "/trio/"
-        - name: iPad Resources
-          href: "http://academics.cehd.umn.edu/mobile/"
-    - name: Graduate Studies
-      href: "/graduate/"
-      subsection:
-        - name: Community
-          href: "/graduate/community/"
-        - name: Career & Leadership
-          href: "/graduate/career/"
-    - name: Tuition & Financial Aid
-      href: "/tuition/"
-      subsection:
-        - name: Undergraduate Scholarships
-          href: "/undergraduate/scholarships/"
-        - name: Graduate Finance and Funding
-          href: "/graduate/funding/"
-    - name: Career Services
-      href: "/career/"
-      subsection:
-        - name: Careers By Degree
-          href: "/career/degrees/"
-        - name: Create Your Resume
-          href: "/career/resumes/"
-        - name: Find a Job or Internship
-          href: "/career/internships/"
-        - name: Prepare for Grad School
-          href: "/career/grad-school/prepare/"
-        - name: Hire a CEHD Student or Graduate
-          href: "/career/employers/"
-        - name: Resources for Teachers
-          href: "/career/teacher/"
-    - name: Graduation
-      href: "/404/"
-      subsection:
-        - name: Commencement
-          href: "/commencement/"
-    - name: Global Initiatives
-      href: "/global/"
-      subsection:
+  subsections:
+    -
+      - name: Majors, Degrees & Programs
+        href: "/programs/"
+      - name: Tuition & Financial Aid
+        href: "/tuition/"
+        subsections:
+          -
+            - name: Undergraduate Scholarships
+              href: "/undergraduate/scholarships/"
+            - name: Graduate Finance and Funding
+              href: "/graduate/funding/"
+      - name: Career Services
+        href: "/career/"
+        subsections:
+          -
+            - name: Careers By Degree
+              href: "/career/degrees/"
+            - name: Create Your Resume
+              href: "/career/resumes/"
+            - name: Find a Job or Internship
+              href: "/career/internships/"
+            - name: Prepare for Grad School
+              href: "/career/grad-school/prepare/"
+            - name: Hire a CEHD Student or Graduate
+              href: "/career/employers/"
+            - name: Resources for Teachers
+              href: "/career/teacher/"
+    -
+      - name: Graduate Studies
+        href: "/graduate/"
+        subsections:
+          -
+            - name: Community
+              href: "/graduate/community/"
+            - name: Career & Leadership
+              href: "/graduate/career/"
+      - name: Undergraduate Studies
+        href: "/undergraduate/"
+        subsections:
+          -
+            - name: Visit and Apply
+              href: "/undergraduate/apply/"
+            - name: Transfer to CEHD
+              href: "/undergraduate/transfer/"
+            - name: Outcomes
+              href: "/undergraduate/outcomes/"
+            - name: First Year Experience
+              href: "/undergraduate/fye/"
+            - name: Newly Admitted Students
+              href: "/undergraduate/admitted/"
+            - name: Academic Advising
+              href: "/undergraduate/advising/"
+            - name: Honors and Dean's List
+              href: "/undergraduate/honors/"
+            - name: Get Involved
+              href: "/undergraduate/involvement/"
+            - name: TRIO Programs
+              href: "/trio/"
+            - name: iPad Resources
+              href: "http://academics.cehd.umn.edu/mobile/"
+    -
+      - name: Teacher Education
+        href: "/teaching/"
+        subsections:
+          -
+            - name: Licensure Process
+              href: "/teaching/license/"
+            - name: Placements and Partnerships
+              href: "/teaching/partnerships/"
+            - name: Trainings and Workshops
+              href: "/teaching/trainings/"
+            - name: Assessment and Accreditation
+              href: "/teaching/assessment/"
+      - name: Global Initiatives
+        href: "/global/"
+        subsections:
+          -
+            - name: Graduation
+              href: "/404/"
+          -
+            - name: Commencement
+              href: "/commencement/"
 - name: Research
   href: "/research/"
   section: research
-  subsection:
-    - name: Research Topics
-      href: "/topics/"
-    - name: Research Day
-      href: "/research/research-day/"
-    - name: Grantsmanship
-      href: "/research/grantsmanship/"
-    - name: PI Elligibility
-      href: "/research/pi/"
-    - name: Policy Breakfast Series
-      href: "/policy-breakfast/"
+  subsections:
+    -
+      - name: Research Topics
+        href: "/topics/"
+      - name: Research Day
+        href: "/research/research-day/"
+      - name: Grantsmanship
+        href: "/research/grantsmanship/"
+      - name: PI Elligibility
+        href: "/research/pi/"
+      - name: Policy Breakfast Series
+        href: "/policy-breakfast/"
 - name: Diversity & Inclusion
   href: "/diversity/"
   section: diversity-inclusion
+  subsections: null
 - name: News & Events
   href: "/news/"
-  subsection:
-    - name: Find an Expert
-      href: "/topics/"
-    - name: Connect Magazine
-      href: "http://connect.cehd.umn.edu/"
-    - name: Events
-      href: "/events/"
   section: news-events
+  subsections:
+    -
+      - name: Find an Expert
+        href: "/topics/"
+      - name: Connect Magazine
+        href: "http://connect.cehd.umn.edu/"
+      - name: Events
+        href: "/events/"
 - name: Giving
   href: "/giving/"
   section: giving
-  subsection:
-    - name: Improving Lives
-      href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
-    - name: Gifts at work
-      href: "/giving/gifts/"
-    - name: Ways to give
-      href: "/giving/ways/"
-    - name: Recognition
-      href: "/giving/recognition/"
-    - name: Women's Philanthropic Leadership Circle
-      href: "/giving/wplc/"
-      subsection:
-        - name: Events
-          href: "/giving/wplc/events/"
-        - name: Awards
-          href: "/giving/wplc/awards/"
-        - name: Join
-          href: "/giving/wplc/join/"
-    - name: Contact
-      href: "/giving/contact/"
+  subsections:
+    -
+      - name: Improving Lives
+        href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
+      - name: Gifts at work
+        href: "/giving/gifts/"
+      - name: Ways to give
+        href: "/giving/ways/"
+      - name: Recognition
+        href: "/giving/recognition/"
+      - name: Women's Philanthropic Leadership Circle
+        href: "/giving/wplc/"
+        subsections:
+          -
+            - name: Events
+              href: "/giving/wplc/events/"
+            - name: Awards
+              href: "/giving/wplc/awards/"
+            - name: Join
+              href: "/giving/wplc/join/"
+      - name: Contact
+        href: "/giving/contact/"
 - name: Alumni
   href: "/alumni/"
   section: alumni
-  subsection:
-    - name: Stay Involved
-      href: "/alumni/involved/"
-      subsection:
-        - name: Mentor Programs
-          href: "/alumni/mentor/"
-        - name: Volunteer Opportunities
-          href: "/alumni/volunteer/"
-    - name: Alumni Society
-      href: "/alumni/society/"
-      subsection:
-        - name: Board Members
-          href: "/alumni/society/board/"
-        - name: Job Description
-          href: "/alumni/society/job-description/"
-        - name: Message from the Alumni Society President
-          href: "/alumni/society/message/"
-        - name: Scholarships
-          href: "/alumni/society/scholarships/"
-        - name: Scholarship Funds
-          href: "/alumni/society/fund/"
-    - name: Awards & Scholarships
-      href: "/alumni/awards/"
-      subsection:
-        - name: Distinguished Alumni Awards
-          href: "/alumni/distinguished/"
-        - name: College & University Alumni Awards
-          href: "/alumni/awards/recipients/"
-        - name: CEHD Rising Alumni
-          href: "/alumni/rising/"
-    - name: News
-      href: "/alumni/news/"
-    - name: Notes
-      href: "/alumni/notes/"
-    - name: Events
-      href: "/alumni/events/"
-    - name: Contact Us
-      href: "/alumni/contact/"
-
+  subsections:
+    -
+      - name: Stay Involved
+        href: "/alumni/involved/"
+        subsections:
+          -
+            - name: Mentor Programs
+              href: "/alumni/mentor/"
+            - name: Volunteer Opportunities
+              href: "/alumni/volunteer/"
+      - name: Alumni Society
+        href: "/alumni/society/"
+        subsections:
+          -
+            - name: Board Members
+              href: "/alumni/society/board/"
+            - name: Job Description
+              href: "/alumni/society/job-description/"
+            - name: Message from the Alumni Society President
+              href: "/alumni/society/message/"
+            - name: Scholarships
+              href: "/alumni/society/scholarships/"
+            - name: Scholarship Funds
+              href: "/alumni/society/fund/"
+      - name: Awards & Scholarships
+        href: "/alumni/awards/"
+        subsections:
+          -
+            - name: Distinguished Alumni Awards
+              href: "/alumni/distinguished/"
+            - name: College & University Alumni Awards
+              href: "/alumni/awards/recipients/"
+            - name: CEHD Rising Alumni
+              href: "/alumni/rising/"
+    -
+      - name: News
+        href: "/alumni/news/"
+      - name: Notes
+        href: "/alumni/notes/"
+      - name: Events
+        href: "/alumni/events/"
+      - name: Contact Us
+        href: "/alumni/contact/"
 - name: About Us
   href: "/about/"
   section: about
-  subsection:
-    - name: Accreditation
-      href: "/about/accreditation/"
-    - name: Directory
-      href: "/directory/"
-    - name: Departments & Centers
-      href: "/departments-centers/"
+  subsections:
+    -
+      - name: Accreditation
+        href: "/about/accreditation/"
+      - name: Directory
+        href: "/directory/"
+      - name: Departments & Centers
+        href: "/departments-centers/"
