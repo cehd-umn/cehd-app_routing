@@ -38,7 +38,7 @@ abstract class Card extends BaseClass
     /**
      * Class properties
      */
-    private $_categories = [];
+    protected $_categories = [];
 
     public $links = [];
 

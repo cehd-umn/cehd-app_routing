@@ -14,9 +14,12 @@ use CEHD\App\Card\CardLink;
 use CEHD\App\Card\Card;
 use CEHD\App\Card\CardGroup;
 
+// @todo sort links by special order
+// @todo sort degrees by special order (for buttons in sorter)
+// @todo add links validation
 class ProgramCard extends Card
 {
-    // @todo add links validation
+    use LinkSort;
 
     public function getDegrees()
     {
@@ -33,12 +36,15 @@ class ProgramCard extends Card
 
 class ProgramCards extends CardGroup
 {
+    use LinkSort;
+
     private $_routes;
 
     public function setCard($title, $data)
     {
         $card = new ProgramCard();
         $card->setCard($title, $data);
+        $card->sortCardLinks();
         return $card;
     }
 
@@ -60,6 +66,9 @@ class ProgramCards extends CardGroup
         $categories = $this->getCategories();
         $degrees = [];
 
+        // degrees need to use custom sort order
+        // Then categories should break to a new line starting at degrees,
+        // undergraduate series first, then new line w/ graduate
         foreach ($this->_cards as $card)
         {
             foreach ($card->links as $degree)
@@ -71,5 +80,40 @@ class ProgramCards extends CardGroup
         asort($degrees);
         $categories = $categories + $degrees;
         return $categories;
+    }
+}
+
+trait LinkSort
+{
+    private function _compareLinkOrder($a, $b)
+    {
+        $order = [
+            "Undergraduate Major",
+            "Undergraduate Minor",
+            "Undergraduate Certificate",
+            "License",
+            "Masters",
+            "Ph.D.",
+            "Graduate Minor",
+            "Graduate Certificate",
+        ];
+
+        $pos_a = array_search($a->title, $order);
+        $pos_b = array_search($b->title, $order);
+        return $pos_a - $pos_b;
+    }
+
+    // Operates on a Card object
+    // Does not preserve keys
+    public function sortCardLinks()
+    {
+        usort($this->links, [$this, '_compareLinkOrder']);
+    }
+
+    // Operates on an arbitrary set of links
+    // preserves keys
+    public function sortLinks(&$links)
+    {
+        uasort($links, [$this, '_compareLinkOrder']);
     }
 }
