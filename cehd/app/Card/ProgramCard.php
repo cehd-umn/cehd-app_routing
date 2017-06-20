@@ -66,9 +66,6 @@ class ProgramCards extends CardGroup
         $categories = $this->getCategories();
         $degrees = [];
 
-        // degrees need to use custom sort order
-        // Then categories should break to a new line starting at degrees,
-        // undergraduate series first, then new line w/ graduate
         foreach ($this->_cards as $card)
         {
             foreach ($card->links as $degree)
