@@ -16,7 +16,15 @@
                       "{#- close the data-categories= quote -#}
                     {%- endif -%}
                     >{#- close the tag -#}
-                    <h2 class="h4 title">{{ item_title }}</h2>
+                    <p class="h4 title">
+                    {% if item.uri %}
+                        <a href="{{ item.uri }}">
+                    {% endif %}
+                            {{ item_title }}
+                    {% if item.uri %}
+                        </a>
+                    {% endif %}
+                    </p>
                     {% if item.description %}
                       <p class="description">{{ item.description }}</p>
                     {% endif %}

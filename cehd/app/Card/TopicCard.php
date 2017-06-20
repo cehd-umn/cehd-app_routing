@@ -10,7 +10,6 @@ namespace CEHD\App\Card\TopicCard;
 
 require_once __DIR__ . '/Card.php';
 
-use CEHD\App\Card\CardLink;
 use CEHD\App\Card\Card;
 use CEHD\App\Card\CardGroup;
 
@@ -20,18 +19,17 @@ class TopicCard extends Card
 
     public $tag_id;
 
+    public $uri;
+
     public function setCard($title, $card)
     {
-        $card["links"] = [[
-            "title" => "More about " . $title,
-            "href" => "/topics/" . $this->hyphenate($title) . "/",
-        ]];
-
         parent::setCard($title, $card);
 
         $this->title = $title;
 
         $this->tagId = $card["tag_id"];
+
+        $this->uri = "/topics/" . $this->hyphenate($title) . "/";
     }
 }
 
