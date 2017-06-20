@@ -70,7 +70,10 @@ class ProgramCards extends CardGroup
         {
             foreach ($card->links as $degree)
             {
-                $degrees[$this->hyphenate($degree->title)] = $degree->title;
+                $key = $this->hyphenate($degree->title);
+                $degrees[$key] = $degree->title;
+                // @todo this works for now, but it muddies the purpose of this method, which is a getter and not a setter
+                array_push($card->categories_hyphenated, $key);
             }
         }
 
