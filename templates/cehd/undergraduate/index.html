@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Undergraduate students" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -83,6 +84,22 @@
 
     <p><a href="/direct/">DirecTrack to Teaching</a> is a pre-teaching program for current U of M students interested in teaching secondary or K-12 subjects and keeps you on track for the combined master&rsquo;s/teaching licensure program.</p>
   </div>
+</div>
+<div class="margin-top-2">
+</div>
+<div class="row emphasis cool">
+    <div class="container">
+        <div class="half feature">
+            {# create an array of 2-5 short lines of text #}
+            {% set lines = [
+                "100% of CEHD students",
+                "complete an internship, teaching praticum",
+                "or experiential coursework.",
+            ] %}
+            {# call the macro #}
+            {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+        </div>
+    </div>
 </div>
 <div class="row">
   <div class="half">
