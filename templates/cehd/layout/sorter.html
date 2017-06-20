@@ -22,7 +22,9 @@
                     <ul class="category-filters">
                         <div class="span-12">
                         {% for category_class, category in categories %}
-                            {% set start_new_row = category == "Graduate Minor" or category == "Family and Social Relationships" %}
+                            {% set start_new_row = category == "Undergraduate Major" or
+                                category == "Languages, Culture, and International" or
+                                category == "Masters" %}
                             {% if start_new_row %}
                                 </div><div class="span-12">
                             {% endif %}

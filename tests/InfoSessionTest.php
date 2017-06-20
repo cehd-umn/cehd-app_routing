@@ -24,7 +24,7 @@ class InfoSessionTest extends TestCase
         $expected_month = "7";
         $expected_full_month = "July";
         $expected_short_month = "Jul";
-        $expected_timestamp = "1497866400";
+        $expected_timestamp = "1500026400";
 
         $this->assertTrue(is_array($this->infoSessionInstance->infoSessions));
         $this->assertEquals($expected_count, count($this->infoSessionInstance->infoSessions));

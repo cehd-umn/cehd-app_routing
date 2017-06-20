@@ -92,8 +92,6 @@ class InfoSession extends \CEHD\XML\Event\Event
 
         $this->shortMonth = $this->getFromProperty($this->getShortMonth());
 
-        $this->timestamp = $this->getTimestamp();
-
         $this->year = $this->getYear();
 
         $this->dateChange = $this->getBoolFromProperty($session->dateChange);
@@ -123,6 +121,8 @@ class InfoSession extends \CEHD\XML\Event\Event
         $this->dateTimeEnd = $this->date . " " . $this->endTime;
 
         $this->dateTimeStart = $this->date . " " . $this->startTime;
+
+        $this->timestamp = $this->getTimestamp();
     }
 }
 

@@ -1,12 +1,16 @@
+{% if data.people|length > 0 %}
 <h2>Our expert{% if data.people|length > 1 %}s{% endif %}</h2>
 {% set column_class = "third" %}
-{% if data.people|length == 2 %}{% set column_class = "half" %}{% endif %}
+{% for group in data.people %}
+    {% if group|length == 2 %}{% set column_class = "half" %}{% endif %}
 <div>
-{% for person in data.people %}
-    {% if person.internetId %}
+    {% for person in group %}
     <div class="{{ column_class }}">
+    {% if person.internetId %}
         <h2 class="heading-profile"><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></h2>
+        {% if person.headshotAddress %}
         <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
+        {% endif %}
         {% if person.workingTitle|is_string %}
             <p>{{ person.workingTitle }}</p>
         {% endif %}
@@ -18,9 +22,9 @@
         {% endif %}
     {% endif %}
     </div>
-    {% if loop.index == 3 %}
+    {% endfor %}
 </div>
-<div>
-    {% endif %}
 {% endfor %}
-</div>
+{% else %}
+<p>It appears we've neglected to categorize an expert in this field. Please check back later.</p>
+{% endif %}

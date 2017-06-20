@@ -859,22 +859,27 @@ footer {
 }
 
 .flex-container {
+    display: -ms-flex;
     display: flex;
     justify-content: space-between;
 
     &.align-bottom {
+        -ms-flex-align: flex-end;
         align-items: flex-end;
     }
 
     &.align-center {
+        -ms-flex-align: center;
         align-items: center;
     }
 
     &.column {
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
     &.wrap {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 }
