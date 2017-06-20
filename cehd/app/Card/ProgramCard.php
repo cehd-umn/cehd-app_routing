@@ -77,7 +77,7 @@ class ProgramCards extends CardGroup
             }
         }
 
-        asort($degrees);
+        $this->sortLinks($degrees);
         $categories = $categories + $degrees;
         return $categories;
     }
@@ -85,7 +85,7 @@ class ProgramCards extends CardGroup
 
 trait LinkSort
 {
-    private function _compareLinkOrder($a, $b)
+    private function _compareLinkObjectOrder($a, $b)
     {
         $order = [
             "Undergraduate Major",
@@ -103,17 +103,35 @@ trait LinkSort
         return $pos_a - $pos_b;
     }
 
+    private function _compareLinkArrayOrder($a, $b)
+    {
+        $order = [
+            "Undergraduate Major",
+            "Undergraduate Minor",
+            "Undergraduate Certificate",
+            "License",
+            "Masters",
+            "Ph.D.",
+            "Graduate Minor",
+            "Graduate Certificate",
+        ];
+
+        $pos_a = array_search($a, $order);
+        $pos_b = array_search($b, $order);
+        return $pos_a - $pos_b;
+    }
+
     // Operates on a Card object
     // Does not preserve keys
     public function sortCardLinks()
     {
-        usort($this->links, [$this, '_compareLinkOrder']);
+        usort($this->links, [$this, '_compareLinkObjectOrder']);
     }
 
     // Operates on an arbitrary set of links
     // preserves keys
     public function sortLinks(&$links)
     {
-        uasort($links, [$this, '_compareLinkOrder']);
+        uasort($links, [$this, '_compareLinkArrayOrder']);
     }
 }
