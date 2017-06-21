@@ -62,13 +62,10 @@
               href: "/graduate/funding/"
       - name: Global Initiatives
         href: "/global/"
-        subsections:
-          -
-            - name: Graduation
-              href: "/404/"
-          -
-            - name: Commencement
-              href: "/commencement/"
+      - name: Graduation
+        href: "/404/"
+      - name: Commencement
+        href: "/commencement/"
     -
       - name: Career Services
         href: "/career/"

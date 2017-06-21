@@ -5,6 +5,7 @@
         {%- for top_level_item in nav_items %}
             {%- set is_academics = top_level_item.name == "Academics" %}
             {%- set is_about = top_level_item.name == "About Us" %}
+            {%- set is_alumni = top_level_item.name == "Alumni" %}
             {%- set top_level_classes = "" %}
             {%- if top_level_item.subsections -%}
                 {% set top_level_classes = top_level_classes ~ " dropdown mega-dropdown" %}
@@ -47,13 +48,11 @@
                         </ul><!-- // ul.margin-top.nav -->
                     </div><!-- // .ul-container -->
                     {% endfor %}{# end for subsection in top_level_item.subsections #}
-                    {#
-                    {% if not is_about %}
+                    {% if not (is_academics or is_alumni or is_about) %}
                     <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
                         {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
                     </div>
                     {% endif %}
-                    #}
                 </div><!-- // dropdown-menu-wrapper -->
                 {% endif %}{# end if top_level_item.subsections #}
             </li><!-- // top-level nav item -->
