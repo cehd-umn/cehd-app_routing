@@ -356,7 +356,7 @@ nav {
         .hero-pithy-phrase {
             flex-grow: 1;
             font-size: 18px;
-            text-align: center;
+            // text-align: center;
         }
 
         .flex-container {
@@ -370,6 +370,10 @@ nav {
 
     nav {
         font-size: 13px;
+
+        .hero-pithy-phrase {
+            // text-align: center;
+        }
     }
 
     .dropdown-menu-wrapper {
@@ -417,4 +421,9 @@ nav {
 
 .meganav-read-more {
     font-size: 11px;
+}
+
+.dropdown-right-content-wrapper {
+    margin: 0 auto;
+    max-width: 66%;
 }
