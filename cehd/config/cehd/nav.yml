@@ -6,39 +6,19 @@
     -
       - name: Majors, Degrees & Programs
         href: "/programs/"
-      - name: Tuition & Financial Aid
-        href: "/tuition/"
+      - name: Teacher Education
+        href: "/teaching/"
         subsections:
           -
-            - name: Undergraduate Scholarships
-              href: "/undergraduate/scholarships/"
-            - name: Graduate Finance and Funding
-              href: "/graduate/funding/"
-      - name: Career Services
-        href: "/career/"
-        subsections:
-          -
-            - name: Careers By Degree
-              href: "/career/degrees/"
-            - name: Create Your Resume
-              href: "/career/resumes/"
-            - name: Find a Job or Internship
-              href: "/career/internships/"
-            - name: Prepare for Grad School
-              href: "/career/grad-school/prepare/"
-            - name: Hire a CEHD Student or Graduate
-              href: "/career/employers/"
-            - name: Resources for Teachers
-              href: "/career/teacher/"
+            - name: Licensure Process
+              href: "/teaching/license/"
+            - name: Placements and Partnerships
+              href: "/teaching/partnerships/"
+            - name: Trainings and Workshops
+              href: "/teaching/trainings/"
+            - name: Assessment and Accreditation
+              href: "/teaching/assessment/"
     -
-      - name: Graduate Studies
-        href: "/graduate/"
-        subsections:
-          -
-            - name: Community
-              href: "/graduate/community/"
-            - name: Career & Leadership
-              href: "/graduate/career/"
       - name: Undergraduate Studies
         href: "/undergraduate/"
         subsections:
@@ -64,18 +44,14 @@
             - name: iPad Resources
               href: "http://academics.cehd.umn.edu/mobile/"
     -
-      - name: Teacher Education
-        href: "/teaching/"
+      - name: Graduate Studies
+        href: "/graduate/"
         subsections:
           -
-            - name: Licensure Process
-              href: "/teaching/license/"
-            - name: Placements and Partnerships
-              href: "/teaching/partnerships/"
-            - name: Trainings and Workshops
-              href: "/teaching/trainings/"
-            - name: Assessment and Accreditation
-              href: "/teaching/assessment/"
+            - name: Community
+              href: "/graduate/community/"
+            - name: Career & Leadership
+              href: "/graduate/career/"
       - name: Global Initiatives
         href: "/global/"
         subsections:
@@ -85,6 +61,31 @@
           -
             - name: Commencement
               href: "/commencement/"
+    -
+      - name: Tuition & Financial Aid
+        href: "/tuition/"
+        subsections:
+          -
+            - name: Undergraduate Scholarships
+              href: "/undergraduate/scholarships/"
+            - name: Graduate Finance and Funding
+              href: "/graduate/funding/"
+      - name: Career Services
+        href: "/career/"
+        subsections:
+          -
+            - name: Careers By Degree
+              href: "/career/degrees/"
+            - name: Create Your Resume
+              href: "/career/resumes/"
+            - name: Find a Job or Internship
+              href: "/career/internships/"
+            - name: Prepare for Grad School
+              href: "/career/grad-school/prepare/"
+            - name: Hire a CEHD Student or Graduate
+              href: "/career/employers/"
+            - name: Resources for Teachers
+              href: "/career/teacher/"
 - name: Research
   href: "/research/"
   section: research
