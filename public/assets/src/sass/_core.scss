@@ -886,6 +886,8 @@ footer {
 
 .flex-item {
 
+    flex: 1 0 auto;
+
     &.vertical-stretch {
         align-self: stretch;
     }
