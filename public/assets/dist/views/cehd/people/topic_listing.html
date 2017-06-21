@@ -12,7 +12,7 @@
         <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
         {% endif %}
         {% if person.workingTitle|is_string %}
-            <p>{{ person.workingTitle }}</p>
+            <p>{{ person.workingTitle|safe }}</p>
         {% endif %}
         <p>{{ person.jobs[0].umZDeptIdDescription}}</p>
         {% if person.areasOfInterest|is_string %}
