@@ -123,9 +123,9 @@
     -
       - name: Improving Lives
         href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
-      - name: Gifts at work
+      - name: Gifts at Work
         href: "/giving/gifts/"
-      - name: Ways to give
+      - name: Ways to Give
         href: "/giving/ways/"
       - name: Recognition
         href: "/giving/recognition/"
@@ -140,7 +140,7 @@
               href: "/giving/wplc/awards/"
             - name: Join
               href: "/giving/wplc/join/"
-      - name: Contact
+      - name: Contact Us
         href: "/giving/contact/"
 - name: Alumni
   href: "/alumni/"
