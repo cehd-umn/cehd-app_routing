@@ -247,6 +247,7 @@ nav {
 
     .top-level {
         border-left: 1px solid $base-black;
+        display: inline-block;
         padding-left: .5em;
         padding-right: .5em;
         width: calc(100% / 7);
