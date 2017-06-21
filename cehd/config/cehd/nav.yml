@@ -12,18 +12,18 @@
           -
             - name: Licensure Process
               href: "/teaching/license/"
-            - name: Placements and Partnerships
+            - name: Placements & Partnerships
               href: "/teaching/partnerships/"
-            - name: Trainings and Workshops
+            - name: Trainings & Workshops
               href: "/teaching/trainings/"
-            - name: Assessment and Accreditation
+            - name: Assessment & Accreditation
               href: "/teaching/assessment/"
     -
       - name: Undergraduate Studies
         href: "/undergraduate/"
         subsections:
           -
-            - name: Visit and Apply
+            - name: Visit & Apply
               href: "/undergraduate/apply/"
             - name: Transfer to CEHD
               href: "/undergraduate/transfer/"
@@ -35,7 +35,7 @@
               href: "/undergraduate/admitted/"
             - name: Academic Advising
               href: "/undergraduate/advising/"
-            - name: Honors and Dean's List
+            - name: Honors & Dean's List
               href: "/undergraduate/honors/"
             - name: Get Involved
               href: "/undergraduate/involvement/"
@@ -52,6 +52,14 @@
               href: "/graduate/community/"
             - name: Career & Leadership
               href: "/graduate/career/"
+      - name: Tuition & Financial Aid
+        href: "/tuition/"
+        subsections:
+          -
+            - name: Undergraduate Scholarships
+              href: "/undergraduate/scholarships/"
+            - name: Graduate Finance & Funding
+              href: "/graduate/funding/"
       - name: Global Initiatives
         href: "/global/"
         subsections:
@@ -62,14 +70,6 @@
             - name: Commencement
               href: "/commencement/"
     -
-      - name: Tuition & Financial Aid
-        href: "/tuition/"
-        subsections:
-          -
-            - name: Undergraduate Scholarships
-              href: "/undergraduate/scholarships/"
-            - name: Graduate Finance and Funding
-              href: "/graduate/funding/"
       - name: Career Services
         href: "/career/"
         subsections:
@@ -129,6 +129,8 @@
         href: "/giving/ways/"
       - name: Recognition
         href: "/giving/recognition/"
+      - name: Contact Us
+        href: "/giving/contact/"
     -
       - name: Women's Philanthropic Leadership Circle
         href: "/giving/wplc/"
@@ -140,8 +142,6 @@
               href: "/giving/wplc/awards/"
             - name: Join
               href: "/giving/wplc/join/"
-      - name: Contact
-        href: "/giving/contact/"
 - name: Alumni
   href: "/alumni/"
   section: alumni
@@ -155,6 +155,15 @@
               href: "/alumni/mentor/"
             - name: Volunteer Opportunities
               href: "/alumni/volunteer/"
+      - name: News
+        href: "/alumni/news/"
+      - name: Notes
+        href: "/alumni/notes/"
+      - name: Events
+        href: "/alumni/events/"
+      - name: Contact Us
+        href: "/alumni/contact/"
+    -
       - name: Alumni Society
         href: "/alumni/society/"
         subsections:
@@ -180,14 +189,6 @@
               href: "/alumni/awards/recipients/"
             - name: CEHD Rising Alumni
               href: "/alumni/rising/"
-      - name: News
-        href: "/alumni/news/"
-      - name: Notes
-        href: "/alumni/notes/"
-      - name: Events
-        href: "/alumni/events/"
-      - name: Contact Us
-        href: "/alumni/contact/"
 - name: About Us
   href: "/about/"
   section: about

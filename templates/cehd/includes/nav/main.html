@@ -19,18 +19,18 @@
                 {% if top_level_item.subsections %}
                 <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
                     {% for subsection in top_level_item.subsections %}
-                    <div class="ul-container nav-items{% if not is_academics %} single-column{% endif %}">
+                    <div class="ul-container nav-items{# {% if not is_academics %} single-column{% endif %} #}">
                         <ul class="margin-top nav">
                             <li class="sub-nav-item">
                                 {% if loop.first %}
                                 <a href="{{ top_level_item.href }}" class="dropdown-header-repeated to-upper">{{ top_level_item.name }}</a>
                                 {% endif %}
-                                <ul>
+                                <ul id="{{ top_level_item.name|hyphenate }}-subsection-list-{{ loop.index }}">
                                     {% for sub_nav_item in subsection %}
                                     <li class="{% if sub_nav_item.subsections %}dropdown-header {% endif %}sub-nav-item" id="dropdown-subsection-{{ sub_nav_item.name|hyphenate }}">
                                         <a class="sub-nav-item-link" href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
                                         {% if sub_nav_item.subsections %}
-                                        <ul>
+                                        <ul id="{{ top_level_item.name|hyphenate }}-{{ sub_nav_item.name|hyphenate }}-list">
                                             {% for sub_subsection in sub_nav_item.subsections %}
                                               {% for sub_sub_nav_item in sub_subsection %}
                                             <li class="sub-nav-item">
@@ -47,11 +47,13 @@
                         </ul><!-- // ul.margin-top.nav -->
                     </div><!-- // .ul-container -->
                     {% endfor %}{# end for subsection in top_level_item.subsections #}
+                    {#
                     {% if not is_about %}
                     <div class="{% if loop.first %}first {% endif %}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
                         {% include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" %}
                     </div>
                     {% endif %}
+                    #}
                 </div><!-- // dropdown-menu-wrapper -->
                 {% endif %}{# end if top_level_item.subsections #}
             </li><!-- // top-level nav item -->
