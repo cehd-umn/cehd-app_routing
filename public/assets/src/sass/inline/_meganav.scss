@@ -207,10 +207,6 @@ nav {
 
     .nav-items {
         padding: 18px;
-
-        &.single-column {
-            flex: 0 0 285px;
-        }
     }
 
     .ul-container {
@@ -230,6 +226,10 @@ nav {
         &.flex-container {
             align-items: center;
             justify-content: flex-start;
+
+            .align-bottom {
+                align-self: flex-end;
+            }
         }
 
         .flex-item-inline {
@@ -360,13 +360,13 @@ nav {
 
     nav {
         .hero-pithy-phrase {
+            align-self: flex-end;
             flex-grow: 1;
             font-size: 18px;
-            // text-align: center;
         }
 
         .flex-container {
-            flex-direction: column;
+            // flex-direction: column;
         }
     }
 }
@@ -403,6 +403,10 @@ nav {
         top: 33px;
         width: 704px;
     }
+
+    #dropdown-right-content-alumni {
+        display: none;
+    }
 }
 
 #main-nav-home-link {
@@ -426,9 +430,17 @@ nav {
 }
 
 .nav-img-container {
-    // max-width: 200px;
+    margin-right: 18px;
 }
 
 .meganav-read-more {
     font-size: 11px;
+}
+
+#top-level-alumni {
+    .ul-container {
+        &:not(.first) {
+            margin-top: 25px;
+        }
+    }
 }
