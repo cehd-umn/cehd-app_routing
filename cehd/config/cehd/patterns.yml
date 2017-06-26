@@ -1423,6 +1423,24 @@ Facebook icon SVG:
       type: include
   type: include
   uses: null
+Instagram icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Instagram logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/instagram.html
+      type: include
+  type: include
+  uses: null
 Pinterest icon SVG:
   publish: true
   meta: null
