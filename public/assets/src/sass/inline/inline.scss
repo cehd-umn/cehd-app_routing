@@ -393,6 +393,14 @@ figure {
     }
 }
 
+.icon-instagram {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
 .icon-facebook {
     @extend %social-media-icon;
 
