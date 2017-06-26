@@ -1,4 +1,6 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "Apply" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -61,23 +63,15 @@
 </div>
 <div class="span-12">
 <div class="span-6">
-    <h2>Open Houses</h2>
-            <div id="Info-Session">
-<script type="text/javascript">
-getRssFeed("Info-Session","https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?code=McNair","/attributes/XSLT/InfoSession-McNair.xslt","My Error Message")
-</script>
-              </div>
+  {{ loader.loader(
+  "Events",
+  "h2",
+  "events-container"
+  ) }}
 
-    <div id="DissapearingDiv">
-<script type="text/javascript">
-getRssFeed("DissapearingDiv","http://apps.cehd.umn.edu/events/Admin/RSSFeed.aspx?&x=3&r=3&q=6&t=279","/attributes/XSLT/Events-FeatureWidget-Dissapear-TRiO-More.xslt","Sorry, the event calendar is currently unavailable.")
-</script>
-      </div>
-
-                <h2>Connect</h2>
-                <p><a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">
-                TRIO McNair Scholars on Facebook</a>: Keep updated about events, networking opportunities, and student and alumni news. </p>
-
+      <h2>Connect</h2>
+      <p><a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">
+      TRIO McNair Scholars on Facebook</a>: Keep updated about events, networking opportunities, and student and alumni news. </p>
 
   </div>
   <div class="span-6">
@@ -95,4 +89,8 @@ getRssFeed("DissapearingDiv","http://apps.cehd.umn.edu/events/Admin/RSSFeed.aspx
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ eventsfeed.events_feed_js(279) }}
 {% endblock %}

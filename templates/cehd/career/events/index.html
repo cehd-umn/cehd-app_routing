@@ -1,5 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
+{% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/loader.html" as loader -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -8,7 +9,7 @@
   <div class="container">
     <h1>Career Services Events</h1>
     <p>Prepare for career and employer events with these <a href="/career/events/career-fairs/">helpful tips</a>. </p><p>
-      Dates listed below are tentative. Registration for events will begin July 1st. 
+      Dates listed below are tentative. Registration for events will begin July 1st.
     </p>
     <div class="twothirds feature">
     <div class="half">
@@ -19,9 +20,12 @@
     ) }}
 </div>
     <div class="half">
-    <h2>News</h2>
-    <p>News feed here.</p>
-    {# getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message") #}
+    {{ loader.loader(
+      "News",
+      "h2",
+      "news-container"
+    ) }}
+    <!-- {# getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message") #} -->
 </div>
 </div>
   </div> <!-- ./container -->
@@ -33,6 +37,7 @@
         * the first value passed in for for the t query param
     -#}
     {{ eventsfeed.events_feed_js(
-       353
+       231
     ) }}
+    {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
 {%- endblock -%}

@@ -1,42 +1,7 @@
-<dl>
+<ul>
 {% for info_session in data.info_sessions %}
     {% if loop.index0 < data.limit %}
-        <dt>code</dt>
-        <dd>{{ info_session.code }}</dd>
-        <dt>id</dt>
-        <dd>{{ info_session.id }}</dd>
-        <dt>dayOfWeek</dt>
-        <dd>{{ info_session.dayOfWeek }}</dd>
-        <dt>startTime</dt>
-        <dd>{{ info_session.startTime }}</dd>
-        <dt>endTime</dt>
-        <dd>{{ info_session.endTime }}</dd>
-        <dt>contact</dt>
-        <dd>{{ info_session.contact }}</dd>
-        <dt>date</dt>
-        <dd>{{ info_session.date }}</dd>
-        <dt>dateChange</dt>
-        <dd>{{ info_session.dateChange }}</dd>
-        <dt>degree</dt>
-        <dd>{{ info_session.degree }}</dd>
-        <dt>email</dt>
-        <dd>{{ info_session.email }}</dd>
-        <dt>eventId</dt>
-        <dd>{{ info_session.eventId }}</dd>
-        <dt>openSeats</dt>
-        <dd>{{ info_session.openSeats }}</dd>
-        <dt>phone</dt>
-        <dd>{{ info_session.phone }}</dd>
-        <dt>url</dt>
-        <dd>{{ info_session.url }}</dd>
-        <dt>location</dt>
-        <dd>{{ info_session.location }}</dd>
-        <dt>title</dt>
-        <dd>{{ info_session.title }}</dd>
-        <dt>dateTimeStart</dt>
-        <dd>{{ info_session.dateTimeStart }}</dd>
-        <dt>dateTimeEnd</dt>
-        <dd>{{ info_session.dateTimeEnd }}</dd>
+        <li><a href="">{{ info_session.dayOfWeek }} {{ info_session.dateFull }}</a> | {{ info_session.startTime }}</li>
     {% endif %}
 {% endfor %}
-</dl>
+</ul>

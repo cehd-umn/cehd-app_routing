@@ -6,7 +6,9 @@
     -
       - name: Majors, Degrees & Programs
         href: "/programs/"
-      - name: Teacher Education
+        subsections:
+          -
+      - name: TEACHER EDUCATION
         href: "/teaching/"
         subsections:
           -
@@ -19,7 +21,7 @@
             - name: Assessment & Accreditation
               href: "/teaching/assessment/"
     -
-      - name: Undergraduate Studies
+      - name: UNDERGRADUATE STUDIES
         href: "/undergraduate/"
         subsections:
           -
@@ -44,7 +46,7 @@
             - name: iPad Resources
               href: "http://academics.cehd.umn.edu/mobile/"
     -
-      - name: Graduate Studies
+      - name: GRADUATE STUDIES
         href: "/graduate/"
         subsections:
           -
@@ -52,7 +54,7 @@
               href: "/graduate/community/"
             - name: Career & Leadership
               href: "/graduate/career/"
-      - name: Tuition & Financial Aid
+      - name: TUITION & FINANCIAL AID
         href: "/tuition/"
         subsections:
           -
@@ -60,14 +62,12 @@
               href: "/undergraduate/scholarships/"
             - name: Graduate Finance & Funding
               href: "/graduate/funding/"
-      - name: Global Initiatives
-        href: "/global/"
-      - name: Graduation
+      - name: GRADUATION
         href: "/404/"
       - name: Commencement
         href: "/commencement/"
     -
-      - name: Career Services
+      - name: CAREER SERVICES
         href: "/career/"
         subsections:
           -
@@ -83,6 +83,8 @@
               href: "/career/employers/"
             - name: Resources for Teachers
               href: "/career/teacher/"
+      - name: GLOBAL INITIATIVES
+        href: "/global/"
 - name: Research
   href: "/research/"
   section: research
@@ -144,14 +146,6 @@
   section: alumni
   subsections:
     -
-      - name: Stay Involved
-        href: "/alumni/involved/"
-        subsections:
-          -
-            - name: Mentor Programs
-              href: "/alumni/mentor/"
-            - name: Volunteer Opportunities
-              href: "/alumni/volunteer/"
       - name: News
         href: "/alumni/news/"
       - name: Notes
@@ -161,7 +155,16 @@
       - name: Contact Us
         href: "/alumni/contact/"
     -
-      - name: Alumni Society
+      - name: STAY INVOLVED
+        href: "/alumni/involved/"
+        subsections:
+          -
+            - name: Mentor Programs
+              href: "/alumni/mentor/"
+            - name: Volunteer Opportunities
+              href: "/alumni/volunteer/"
+    -
+      - name: ALUMNI SOCIETY
         href: "/alumni/society/"
         subsections:
           -
@@ -176,7 +179,7 @@
             - name: Scholarship Funds
               href: "/alumni/society/fund/"
     -
-      - name: Awards & Scholarships
+      - name: AWARDS & SCHOLARSHIPS
         href: "/alumni/awards/"
         subsections:
           -
