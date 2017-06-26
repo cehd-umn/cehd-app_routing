@@ -19,7 +19,7 @@
                 {%- if top_level_item.subsections -%}
                 <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
                     {%- for subsection in top_level_item.subsections -%}
-                    <div class="ul-container nav-items{# {%- if not is_academics -%} single-column{%- endif -%} #}">
+                    <div class="ul-container nav-items{% if loop.first %} first{% endif %}">
                         <ul class="margin-top nav">
                             <li class="sub-nav-item">
                                 {%- if loop.first -%}
@@ -49,7 +49,7 @@
                     {%- endfor -%}{# end for subsection in top_level_item.subsections #}
                     {%- if not (is_academics or is_about) -%}
                     <div class="{%- if loop.first -%}first {%- endif -%}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
-                        <div class="dropdown-right-content-wrapper" id="{{ top_level_item.name|hyphenate }}-dropdown-right-content-container">
+                        <div class="dropdown-right-content-wrapper flex-container" id="{{ top_level_item.name|hyphenate }}-dropdown-right-content-container">
                             {%- include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" -%}
                         </div>
                     </div>
