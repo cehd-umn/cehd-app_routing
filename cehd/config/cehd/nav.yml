@@ -146,15 +146,6 @@
   section: alumni
   subsections:
     -
-      - name: News
-        href: "/alumni/news/"
-      - name: Notes
-        href: "/alumni/notes/"
-      - name: Events
-        href: "/alumni/events/"
-      - name: Contact Us
-        href: "/alumni/contact/"
-    -
       - name: STAY INVOLVED
         href: "/alumni/involved/"
         subsections:
@@ -189,6 +180,15 @@
               href: "/alumni/awards/recipients/"
             - name: CEHD Rising Alumni
               href: "/alumni/rising/"
+    -
+      - name: News
+        href: "/alumni/news/"
+      - name: Notes
+        href: "/alumni/notes/"
+      - name: Events
+        href: "/alumni/events/"
+      - name: Contact Us
+        href: "/alumni/contact/"
 - name: About Us
   href: "/about/"
   section: about
