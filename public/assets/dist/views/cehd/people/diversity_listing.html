@@ -1,0 +1,27 @@
+{% if data.people|length > 0 %}
+{% for group in data.people %}
+<div>
+    {% for person in group %}
+    <div class="third margin-top-2">
+    {% if person.internetId %}
+        {% if person.headshotAddress %}
+        <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
+        {% else %}
+        <img src="/assets/images/headshots/slug.jpg" alt="{{ person.nameFirstLast }} headshot" />
+        {% endif %}
+        <p><strong><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></strong></p>
+        <p>
+        {% if person.workingTitle|is_string %}
+            <em>{{ person.workingTitle|safe }}</em>
+        {% endif %}
+            <br>
+            {{ person.jobs[0].umZDeptIdDescription}}
+        </p>
+    {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% else %}
+<p>It appears we've neglected to categorize an expert in this field. Please check back later.</p>
+{% endif %}
