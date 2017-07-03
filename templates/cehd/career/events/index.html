@@ -1,13 +1,13 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
-{% import "macros/news-feed.html" as newsfeed %}
+{% import "macros/career-blog-feed.html" as careerfeed %}
 {%- import "macros/loader.html" as loader -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h1>Career Services Events</h1>
+    <h1>Career services events</h1>
     <p>Prepare for career and employer events with these <a href="/career/events/career-fairs/">helpful tips</a>. </p><p>
       Dates listed below are tentative. Registration for events will begin July 1st.
     </p>
@@ -23,7 +23,7 @@
     {{ loader.loader(
       "News",
       "h2",
-      "news-container"
+      "career-container"
     ) }}
     <!-- {# getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message") #} -->
 </div>
@@ -39,5 +39,5 @@
     {{ eventsfeed.events_feed_js(
        231
     ) }}
-    {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
+    {{ careerfeed.career_feed_js("feed/") }}
 {%- endblock -%}
