@@ -5,21 +5,27 @@
     {% if group|length == 2 %}{% set column_class = "half" %}{% endif %}
 <div>
     {% for person in group %}
-    <div class="{{ column_class }}">
+    <div class="{{ column_class }} margin-top-2">
     {% if person.internetId %}
-        <h2 class="heading-profile"><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></h2>
-        {% if person.headshotAddress %}
-        <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
-        {% endif %}
-        {% if person.workingTitle|is_string %}
-            <p>{{ person.workingTitle|safe }}</p>
-        {% endif %}
-        <p>{{ person.jobs[0].umZDeptIdDescription}}</p>
-        {% if person.areasOfInterest|is_string %}
-        <div>
-            {{ person.areasOfInterest|safe }}
+        <div class="half">
+            {% if person.headshotAddress %}
+            <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
+            {% else %}
+                Placeholder headshot here.
+            {% endif %}
         </div>
-        {% endif %}
+        <div class="half">
+            <h2 class="heading-profile no-margin-top"><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></h2>
+            {% if person.workingTitle|is_string %}
+                <p>{{ person.workingTitle|safe }}</p>
+            {% endif %}
+            <p>{{ person.jobs[0].umZDeptIdDescription}}</p>
+            {% if person.areasOfInterest|is_string %}
+            <div>
+                {{ person.areasOfInterest|safe }}
+            </div>
+            {% endif %}
+        </div>
     {% endif %}
     </div>
     {% endfor %}
