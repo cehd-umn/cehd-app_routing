@@ -1045,6 +1045,11 @@
   template: cehd/events/fall-assembly.html
   template_data:
     - section: events
+/events/slifer/:
+  publish: true
+  template: cehd/events/slifer.html
+  template_data:
+    - section: events
 
 # Examples section (note: keep publish "false" for these")
 /examples/:
@@ -1250,6 +1255,11 @@
   template: cehd/graduate/wellbeing.html
   template_data:
     - section: graduate
+/graduation/:
+  publish: false
+  template: cehd/graduation/index.html
+  template_data:
+    - section: graduation
 /news/:
   publish: true
   template: cehd/news/index.html
@@ -1415,6 +1425,11 @@
   template: cehd/teaching/clinical.html
   template_data:
     - section: teaching
+/teaching/directrack/:
+  publish: true
+  template: cehd/teaching/directrack.html
+  template_data:
+    - section: teaching
 /teaching/dual-language/:
   publish: true
   template: cehd/teaching/dual-language.html
@@ -1428,6 +1443,11 @@
 /teaching/mpt/:
   publish: true
   template: cehd/teaching/mpt.html
+  template_data:
+    - section: teaching
+/teaching/mtle/:
+  publish: true
+  template: cehd/teaching/mtle.html
   template_data:
     - section: teaching
 /teaching/partnerships/:

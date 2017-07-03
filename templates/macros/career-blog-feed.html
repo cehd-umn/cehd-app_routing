@@ -1,0 +1,54 @@
+{%- macro career_feed_js(
+    feed_path,
+    target_element_selector="#career-container",
+    template_name="index.html",
+    limit=3,
+    career_site_base_url="http://academics.cehd.umn.edu/career/",
+    more_news_text="More career news",
+    template_path="/assets/dist/views/cehd/newsfeeds/") -%}
+<script>
+    (function() {
+        "use strict";
+        var data = {
+                "feed-path": "{{ feed_path }}"
+            };
+        {% if varargs %}
+            {% for arg in varargs %}
+                {% for key, value in arg %}
+                    data.{{ key }} = "{{ value }}";
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        var base_url = "/services/news/feed/";
+        var params = {
+            url: base_url,
+            data: data
+        };
+        var client = new HTTPClient();
+        var $request = client.get(params);
+
+        $request.done(function() {
+            var results = client.getResults();
+            var career_site_base_url = "{{ career_site_base_url }}";
+            var career_category_uri = Helpers.feedPathToLinkPath("{{ feed_path }}");
+            var news_link = career_site_base_url + career_category_uri;
+            var news_text = "{{ more_news_text }}";
+            var template_params = {
+                "template_path": "{{ template_path }}",
+                "template_name": "{{ template_name }}",
+                "$target_element": $("{{ target_element_selector }}"),
+                "data": {
+                    news: results,
+                    more_news_link: news_link,
+                    more_news_text: news_text,
+                    limit: {{ limit }},
+                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                }
+            };
+            var renderer = new Renderer();
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
+</script>
+{%- endmacro -%}
