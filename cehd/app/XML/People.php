@@ -475,6 +475,17 @@ class Person extends \CEHD\App\XML\XML
      */
     private function _createJob($jobData)
     {
+        $dept_description_map = [
+            "CEHD Curriculum & Instruction" => "Department of Curriculum and Instruction",
+            "CEHD Org Leadership,Policy/Dev" => "Department of Organizational Leadership, Policy, and Development",
+            "CEHD Family Social Science" => "Department of Family Social Science",
+            "CEHD Community Integration" => "Institute on Community Integration",
+            "CEHD Child Development, Inst" => "Institute of Child Development",
+            "CEHD Educational Psychology" => "Department of Educational Psychology",
+            "CEHD Social Work" => "School of School of Social Work",
+            "CEHD Kinesiology" => "School of Kinesiology",
+        ];
+
         $job = new Job();
 
         $job->deptId               = $this->toString($jobData->deptId);
@@ -482,7 +493,8 @@ class Person extends \CEHD\App\XML\XML
         $job->status               = $this->toString($jobData->jobStatus);
         $job->description          = $this->toString($jobData->jobCodeDescr);
         $job->umZDeptId            = $this->toString($jobData->umZDeptId);
-        $job->umZDeptIdDescription = $this->toString($jobData->umZDeptIdDescr);
+        $peoplesoftDeptIdDesription = $this->toString($jobData->umZDeptIdDescr);
+        $job->umZDeptIdDescription = array_key_exists($peoplesoftDeptIdDesription, $dept_description_map) ? $dept_description_map[$peoplesoftDeptIdDesription] : $peoplesoftDeptIdDesription;
         return $job;
     }
 
