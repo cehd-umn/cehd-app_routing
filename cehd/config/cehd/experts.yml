@@ -5,7 +5,7 @@ Access to Education:
     categories:
         - Disability
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining how to remove barrier s so all people can have equal opportunity in education."
     tag_id: 349
@@ -17,7 +17,7 @@ Achievement Gap:
         - Education Practice and Theory
         - Organizations and Policy
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying educational outcomes and disparities to improve how we serve each student, reduce gaps, and improve equity and academic performance."
     tag_id: 350
@@ -26,7 +26,7 @@ Adolescents and Youth:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -37,7 +37,7 @@ Adoption:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
     description: "How adoption affects development and the family environment."
@@ -47,7 +47,7 @@ Art Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining art, theater, and performance education in schools, museums, and community arts organizations."
     tag_id: 353
@@ -57,7 +57,7 @@ Autism Spectrum Disorders:
     categories:
         - Disability
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
     description: "Understanding all aspects of ASDs, from neuroscience and interventions, to school and community support and integration."
     tag_id: 354
@@ -66,7 +66,7 @@ Behavioral Psychology:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Studying the connection between minds and behavior, examining how and why people behave the way they do."
@@ -76,7 +76,7 @@ Brain Development:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -88,7 +88,7 @@ Career and Technical Education:
     categories:
         - Education Practice and Theory
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Researching best practices in preparing teachers in career and technical education at the secondary and post-secondary level."
     tag_id: 357
@@ -97,7 +97,7 @@ Child Care:
     publish: true
     categories:
         - Early Childhood
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
     description: "Researching and developing best practices in caring for young children and training providers."
     tag_id: 358
@@ -107,6 +107,9 @@ Child Welfare:
     categories:
         - Community
         - Early Childhood
+    categories_internal:
+        - Autism and Developmental Disabilities
+        - Children's Mental Health and Welfare
     description: "Child welfare services typically include foster care, adoption services, and other services aimed at protecting children and supporting family stability."
     tag_id: 359
 Children's Mental Health:
@@ -115,7 +118,7 @@ Children's Mental Health:
     categories:
         - Early Childhood
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Supporting children and families with research, field work, and resources for understanding and resilience. "
@@ -125,7 +128,7 @@ Cognitive Development:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Focus on the development of the brain's cognitive functions, such as perception, memory, attention, motor skills, and language."
@@ -135,7 +138,7 @@ Community Engagement:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -147,7 +150,7 @@ Community Services and Supports:
     publish: true
     categories:
         - Disability
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -160,7 +163,7 @@ Community-Based Participatory Research (CBPR):
     categories:
         - Assessment and Research Methods
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Living Better, Living Longer
     description: "An action research approach involving close collaboration among researchers and community members directly affected by an issue."
@@ -170,7 +173,7 @@ Cooperative Learning:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "A teaching strategy where small groups of students work together to learn and help one another in learning."
     tag_id: 365
@@ -179,7 +182,7 @@ Counseling:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
     description: "Research and training in the processes and outcomes of advising people in many areas of life and work."
     tag_id: 366
@@ -189,7 +192,7 @@ Couple and Family Therapy (CFT):
     categories:
         - Family and Social Relationships
         - Psychology
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Researching and training practitioners in therapy and counseling for relationships."
@@ -199,7 +202,7 @@ Cultural Competence:
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Living Better, Living Longer
     description: "Understanding the differences between one's own culture and the cultures of others to effectively connect, teach, and help."
@@ -210,7 +213,7 @@ Culture and Education:
     categories:
         - Culture and Diversity
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining education across broad social, cultural, and poltical contexts, with a focus on equity, democracy, and social justice."
     tag_id: 369
@@ -219,7 +222,7 @@ Decision Making:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
     description: "Understanding how the process of making a choice impacts behavior and relationships."
     tag_id: 370
@@ -229,7 +232,7 @@ Developmental Psychology:
     categories:
         - Human Development
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Studying how and why people change over the course of their lives, from infants and children, to teens and young adults, to adults and the elderly. "
@@ -240,7 +243,7 @@ Disability Policy and Services:
     categories:
         - Disability
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -251,7 +254,7 @@ Disability:
     publish: true
     categories:
         - Disability
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -262,7 +265,7 @@ Distance Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Understanding how teaching and technology combine to serve students and educators in different locations."
     tag_id: 374
@@ -273,7 +276,7 @@ Diversity and Equity:
         - Culture and Diversity
         - Education Practice and Theory
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -285,7 +288,7 @@ Divorce:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Looking at how dissolutions of marriages impact individuals, families, and communities."
@@ -296,7 +299,7 @@ Early Childhood Education:
     categories:
         - Early Childhood
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Researching and developing activities and experiences which promote a child's development before entering elementary school."
@@ -307,7 +310,7 @@ Early Childhood:
     categories:
         - Early Childhood
         - Human Development
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -320,7 +323,7 @@ Education Policy Higher Ed:
         - Education Practice and Theory
         - Organizations and Policy
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying legal, regulatory, and enforcement practices of post-secondary education policies, and examining how those policies intersect with social, political, and economic conditions. "
     tag_id: 379
@@ -330,7 +333,7 @@ Education Policy K-12:
     categories:
         - Education Practice and Theory
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -342,7 +345,7 @@ Education Theory:
     categories:
         - Education Practice and Theory
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Investigate and explore how teaching, learning, and educational organization are informed by culture, behavior, and sociology."
     tag_id: 381
@@ -352,7 +355,7 @@ Educational Assessment:
     categories:
         - Assessment and Research Methods
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Holding school professionals responsible for the appropriate instruction of all students, and evaluating the degree to which all students are learning."
     tag_id: 382
@@ -363,7 +366,7 @@ Educational Finance:
         - Education Practice and Theory
         - Organizations and Policy
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "How schools and educational institutions are funded, and how they budget."
     tag_id: 383
@@ -373,7 +376,7 @@ Educational Psychology:
     categories:
         - Education Practice and Theory
         - Psychology
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Researching how people learn, through cognitive, emotional, and social processes that underlie education and human development "
     tag_id: 384
@@ -382,7 +385,7 @@ Engineering Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Preparing educators of engineering, including areas such as mechanical engineering, construction science, computer science and engineering, and electrical engineering."
     tag_id: 385
@@ -391,7 +394,7 @@ Ethics:
     publish: true
     categories:
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining morality and choices in cultures, relationships, educational systems, and organizations."
     tag_id: 386
@@ -400,7 +403,7 @@ Evaluation:
     publish: true
     categories:
         - Assessment and Research Methods
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
     description: "Models, methods, and practices that assess the success of an educational program or activity."
@@ -411,7 +414,7 @@ Executive Function:
     categories:
         - Early Childhood
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Cognitive skills that help a person focus attention, remember details, solve problems, make plans. "
@@ -421,7 +424,7 @@ Faculty:
     publish: true
     categories:
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining and exploring the work and roles of academic staff in higher education, including professors, lecturers, and researchers."
     tag_id: 389
@@ -430,7 +433,7 @@ Families and Conflict:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Studying how growth and changes in families and relationships affect conflict, and researching effective resolution strategies. "
@@ -440,7 +443,7 @@ Family Economics:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Applying economic concepts such as production, division of labor, distribution, and decision making to the study of families."
@@ -451,7 +454,7 @@ Family Education:
     categories:
         - Education Practice and Theory
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -462,7 +465,7 @@ Family Systems:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Understanding the psychology and functioning of people in the context of their family relationships."
@@ -472,7 +475,7 @@ Family Violence:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Researching cycles of violence in families and relationships, and providing education to practitioners and individuals to break cycles of abuse."
@@ -482,7 +485,7 @@ Gender and Sexuality:
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -493,7 +496,7 @@ Globalization:
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
     description: "The spread of policies and practices across cultures, and the impacts on education and human development."
     tag_id: 396
@@ -502,7 +505,7 @@ Health:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -513,7 +516,7 @@ Healthcare:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -525,7 +528,7 @@ Higher Education:
     publish: true
     categories:
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "The experiences, practices, and decisions of those involved in post-secondary education, as well as on the sociopolitical contexts in which higher education exists."
     tag_id: 399
@@ -534,7 +537,7 @@ Homelessness:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -545,7 +548,7 @@ Human Resources Development:
     publish: true
     categories:
         - Organizations and Policy
-    categories-internal: null
+    categories_internal: null
     description: "Applying research and best practices in education, policy, and leadership to organizational human resources."
     tag_id: 401
 Immigration:
@@ -553,7 +556,7 @@ Immigration:
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Examining educational, social, and cultural aspects of human migration to other countries."
     tag_id: 402
@@ -564,7 +567,7 @@ Inclusive Education:
         - Culture and Diversity
         - Disability
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
     description: "Bringing people with and without learning disabilities into the same classes and educational systems."
@@ -575,7 +578,7 @@ Instructional Design:
     categories:
         - Education Practice and Theory
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Analyzing learner's needs, then developing and designing lessons, methods, and materials to meet them."
     tag_id: 404
@@ -584,7 +587,7 @@ Intellectual and Developmental Disabilities:
     publish: true
     categories:
         - Disability
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -596,7 +599,7 @@ International Education:
     categories:
         - Culture and Diversity
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying education’s role in economic, political, and sociocultural development; international educational exchange; and the internationalization of education."
     tag_id: 406
@@ -605,7 +608,7 @@ Intervention Science:
     publish: true
     categories:
         - Assessment and Research Methods
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Developing, testing, and disseminating family or community-based screenings, treatments, and prevention models in service of at-risk or vulnerable groups throughout the lifespan. "
@@ -615,7 +618,7 @@ Intimate Relationships:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Exploring and understanding close relationships that have strong emotional connections of belonging, care, and love."
@@ -625,7 +628,7 @@ Language and Culture Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying the connections between languages and cultures, and how those connections promote or change peoples' intellectual development. "
     tag_id: 409
@@ -635,7 +638,7 @@ Language Development:
     categories:
         - Early Childhood
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
     description: "Investigating how language development and acquisition impact learning and growth."
     tag_id: 410
@@ -644,7 +647,7 @@ Leadership:
     publish: true
     categories:
         - Organizations and Policy
-    categories-internal: null
+    categories_internal: null
     description: "Analyzing and developing frameworks of leadership, leading to personal and organizational advancement."
     tag_id: 411
 Learning Disabilities:
@@ -653,7 +656,7 @@ Learning Disabilities:
     categories:
         - Disability
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -665,7 +668,7 @@ Learning Technologies:
     categories:
         - Disability
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Creating and adapting technology - both theory and tools - to enhance learning. "
     tag_id: 413
@@ -674,7 +677,7 @@ Loss and Trauma:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Examining the effects of trauma and loss on individuals, relationships, and communities, and developing support for understanding and healing."
@@ -684,7 +687,7 @@ Math Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Preparing educators to teach mathematics, and investigating new theories and methods in math education."
     tag_id: 415
@@ -694,7 +697,7 @@ Mental Health:
     categories:
         - Human Development
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -706,7 +709,7 @@ Motor Development:
     categories:
         - Early Childhood
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Living Better, Living Longer
     description: "Investigating the development and abilities surrounding body movement. "
@@ -716,7 +719,7 @@ Movement Science:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Investigating the control, organization, and learning of human movement through psychological, biomechanical, and neurophysiological research."
     tag_id: 418
@@ -726,7 +729,7 @@ Neuroimaging:
     categories:
         - Assessment and Research Methods
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Interpreting images of brain and neural system activity in connection to development and learning."
@@ -736,7 +739,7 @@ Neuroscience:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Addressing and investigating complex questions about how the nervous system and brain connect to human behavior and development."
@@ -746,7 +749,7 @@ Obesity:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Analyzing the effects of excess weight on health, fitness, and lifestyle."
     tag_id: 421
@@ -755,7 +758,7 @@ Organizational Systems:
     publish: true
     categories:
         - Organizations and Policy
-    categories-internal: null
+    categories_internal: null
     description: "Examining how organizations are formed and change, and how people work with and within them."
     tag_id: 422
 Parenting:
@@ -763,7 +766,7 @@ Parenting:
     publish: true
     categories:
         - Family and Social Relationships
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
     description: "Understanding and guiding individual and societal involvement in the care for and raising of children."
@@ -773,7 +776,7 @@ Physical Activity:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Investigating and exploring the contribution of physical activity to overall health and wellness. "
     tag_id: 424
@@ -782,7 +785,7 @@ Physical Disability:
     publish: true
     categories:
         - Disability
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Severe orthopedic impairments that affect how people interact with their environment."
     tag_id: 425
@@ -791,7 +794,7 @@ Policy:
     publish: true
     categories:
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying the legal, regulatory, and enforcement practices across a range of topics throughout education and human development. "
     tag_id: 426
@@ -800,7 +803,7 @@ Problem Solving:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
     description: "Analyzing problem solving methods, strategies, and skills in the context of cognitive development and learning."
     tag_id: 427
@@ -809,7 +812,7 @@ Psychological Models:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
     description: "Understanding how cognitive processes function, interact with each other, and contribute to decision making."
     tag_id: 428
@@ -818,7 +821,7 @@ Psychological Stress:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -829,7 +832,7 @@ Psychopathology:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
     description: "Analyzing and studying mental disorders, and their effects on development and relationships."
@@ -839,7 +842,7 @@ Qualitative Research Methods:
     publish: true
     categories:
         - Assessment and Research Methods
-    categories-internal: null
+    categories_internal: null
     description: "Research methods focusing on how and why decisions are made, often collected as word data."
     tag_id: 431
 Quantitative Research Methods:
@@ -847,7 +850,7 @@ Quantitative Research Methods:
     publish: true
     categories:
         - Assessment and Research Methods
-    categories-internal: null
+    categories_internal: null
     description: "Research methods focusing on empirical investigation and measurement, often collected as numerical data."
     tag_id: 432
 Reading and Literacy:
@@ -855,7 +858,7 @@ Reading and Literacy:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying and guiding reading and writing, skills critical to independence and educational success."
     tag_id: 433
@@ -864,7 +867,7 @@ Retention / Dropout Prevention:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Researching and analyzing the factors that contribute to student persistence, and designing programs to support student success and degree completion. "
     tag_id: 434
@@ -874,7 +877,7 @@ School Psychology:
     categories:
         - Education Practice and Theory
         - Psychology
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -885,7 +888,7 @@ Science Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Advancing research and practice for science educators, with focus areas in chemistry, earth and space science, life science, and physics."
     tag_id: 436
@@ -894,7 +897,7 @@ Seniors / Aging / Gerontology:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Examining the life stage of people over 65 years of age."
     tag_id: 437
@@ -905,7 +908,7 @@ Social Development:
         - Family and Social Relationships
         - Human Development
         - Psychology
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -916,7 +919,7 @@ Social Justice:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
     description: "Researching and addressing the distributions of the social common good through the lens of historical power structures and social norms. Promoting just and equitable outcomes."
@@ -927,7 +930,7 @@ Social Services:
     categories:
         - Community
         - Organizations and Policy
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -938,7 +941,7 @@ Social Studies Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Preparing educators to teach a range of social studies topics, including American studies, anthropology, economics, geography, history, political science, psychology, and sociology."
     tag_id: 441
@@ -947,7 +950,7 @@ Social Work:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
     description: "Advancing the research and practice done for the welfare of society, through principles of social justice, human rights, collective responsibility, and respect for diversity."
@@ -958,7 +961,7 @@ Special Education:
     categories:
         - Disability
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Autism and Developmental Disabilities
         - Children's Mental Health and Welfare
@@ -969,7 +972,7 @@ Specific Cultures (African American):
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -980,7 +983,7 @@ Specific Cultures (Native American):
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -991,7 +994,7 @@ Specific Cultures (Southeast Asian):
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -1002,7 +1005,7 @@ Sport and Exercise Psychology:
     publish: true
     categories:
         - Psychology
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Supporting athlete mental health and researching the psychological effects of participation in sports and exercise."
     tag_id: 448
@@ -1011,7 +1014,7 @@ Sport:
     publish: true
     categories:
         - Community
-    categories-internal:
+    categories_internal:
         - Living Better, Living Longer
     description: "Exploring the developmental, organizational, and societal impacts of organized physical activity and games."
     tag_id: 447
@@ -1020,7 +1023,7 @@ Statistics Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Preparing educators to teach statistics, involving the collection, analysis, understanding, and presentation of data."
     tag_id: 449
@@ -1029,7 +1032,7 @@ STEM Integration:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Increasing student exposure to and integration of science, technology, engineering, and math (STEM) fields in the classroom. "
     tag_id: 450
@@ -1038,7 +1041,7 @@ Student Achievement:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Researching theory and methods for assessing how students progress in learning."
     tag_id: 451
@@ -1047,7 +1050,7 @@ Student Development:
     publish: true
     categories:
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Exploring post-secondary student learning, taking into account unique individual learning needs, student responsibility, and learning environments."
     tag_id: 452
@@ -1058,7 +1061,7 @@ Student Engagement:
         - Disability
         - Education Practice and Theory
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Understanding and promoting meaningful participation and involvement of students in their schools and learning environments."
     tag_id: 453
@@ -1067,7 +1070,7 @@ Substance Abuse:
     publish: true
     categories:
         - Human Development
-    categories-internal:
+    categories_internal:
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
     description: "Researching the effects of drug abuse, dependency, addiction, and recovery on individuals, families, and organizations."
@@ -1078,7 +1081,7 @@ Systems Change:
     categories:
         - Education Practice and Theory
         - Organizations and Policy
-    categories-internal: null
+    categories_internal: null
     description: "Researching who initiates change efforts in institutions and cultures, why they intiate them, when efforts start and stop, and whether they succeed or fail."
     tag_id: 455
 Teacher Education:
@@ -1086,7 +1089,7 @@ Teacher Education:
     publish: true
     categories:
         - Education Practice and Theory
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Researching and developing the best methods for preparing current and future educators."
     tag_id: 456
@@ -1095,7 +1098,7 @@ Urban Environments:
     publish: true
     categories:
         - Culture and Diversity
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
         - Children's Mental Health and Welfare
         - Living Better, Living Longer
@@ -1108,7 +1111,7 @@ Workforce Development:
         - Disability
         - Organizations and Policy
         - Postsecondary Education
-    categories-internal:
+    categories_internal:
         - Educational Equity and the Achievement Gap
     description: "Studying and developing methods for environmental and structural changes that meet worker needs and promote equity."
     tag_id: 458

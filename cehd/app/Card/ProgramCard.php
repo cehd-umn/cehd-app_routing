@@ -63,7 +63,12 @@ class ProgramCards extends CardGroup
 
     public function getCategoriesAndDegrees()
     {
-        $categories = $this->getCategories();
+        $category_groups = [
+            "Areas of Study" => [],
+            "Degrees" => [],
+        ];
+
+        $category_groups["Areas of Study"] = $this->getCategories();
         $degrees = [];
 
         foreach ($this->_cards as $card)
@@ -78,8 +83,9 @@ class ProgramCards extends CardGroup
         }
 
         $this->sortLinks($degrees);
-        $categories = $categories + $degrees;
-        return $categories;
+        $category_groups["Degrees"] = $degrees;
+
+        return $category_groups;
     }
 }
 

@@ -7,6 +7,11 @@
                     {%- if item.categories_hyphenated -%}
                       {{ " " }}{{- item.categories_hyphenated|join(" ") -}}
                     {%- endif -%}
+                    {%- if item.categories_internal -%}{{" "}}
+                      {%- for internal_category in item.categories_internal -%}
+                        {{ " " }}{{ internal_category|hyphenate -}}
+                      {%- endfor -%}
+                    {%- endif -%}
                     "{#- close the class= quote -#}
                     {%- if item.categories -%}
                       {{ " " }}data-categories="{{- item.categories|join(" ") }}

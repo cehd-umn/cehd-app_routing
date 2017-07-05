@@ -39,7 +39,7 @@ $app->router->respond('GET', '/topics/[:topic]/', [$app, 'topicPageHandler']);
 
 $app->router->respond('GET', '/search/', [$app, 'searchPageHandler']);
 
-$app->router->respond('GET', '/directory/[:internetId]/', [$app, 'personPageHandler']);
+$app->router->respond('GET', '/people/[:internetId]/', [$app, 'personPageHandler']);
 
 $app->router->respond('GET', '/events/[i:id]/', [$app, 'eventPageHandler']);
 

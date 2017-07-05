@@ -37,10 +37,13 @@ class TopicCards extends CardGroup
 {
     private $_routes;
 
+    public $categories_internal;
+
     public function setCard($title, $data)
     {
         $card = new TopicCard();
         $card->setCard($title, $data);
+        $card->categories_internal = $data["categories_internal"];
         return $card;
     }
 
@@ -67,5 +70,35 @@ class TopicCards extends CardGroup
         }
 
         return $new_cards;
+    }
+
+    public function getInternalCategories()
+    {
+        $results = [];
+        foreach($this->_cards as $card)
+        {
+            if ($card->categories_internal)
+            {
+                foreach($card->categories_internal as $internal_category)
+                {
+                    $results[$this->hyphenate($internal_category)] = $internal_category;
+                }
+            }
+        }
+
+        return $results;
+    }
+
+    public function getCategoriesAndInternalCategories()
+    {
+        $category_groups = [
+            "Research Areas" => [],
+            "Critical Issues" => [],
+        ];
+
+        $category_groups["Research Areas"] = $this->getCategories();
+        $category_groups["Critical Issues"] = $this->getInternalCategories();
+
+        return $category_groups;
     }
 }
