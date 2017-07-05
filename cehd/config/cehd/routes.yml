@@ -1555,16 +1555,6 @@
   template: cehd/teri/index.html
   template_data:
     - section: teri
-/teri/our-work/:
-  publish: true
-  template: cehd/teri/our-work.html
-  template_data:
-    - section: teri
-/teri/partnerships/:
-  publish: true
-  template: cehd/teri/partnerships.html
-  template_data:
-    - section: teri
 /topics/sample/:
   publish: true
   template: cehd/topics/sample.html
