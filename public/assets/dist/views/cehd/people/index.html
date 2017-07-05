@@ -19,7 +19,7 @@
             {% for person in topic.people %}
                 <li>{{ topic_data.tag_id }} {{ tag.id }}
                     {% if person.internetId|is_string %}
-                        <a href="{{ data.config.base_url }}/directory/{{ person.internetId }}/">{{ person.firstName }} {{ person.lastName }}</a>
+                        <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">{{ person.firstName }} {{ person.lastName }}</a>
                     {% else %}
                         {{ person.firstName }} {{ person.lastName }}
                     {% endif %}

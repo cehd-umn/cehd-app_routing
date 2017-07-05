@@ -9,7 +9,7 @@
         {% else %}
         <img src="/assets/images/headshots/slug.jpg" alt="{{ person.nameFirstLast }} headshot" />
         {% endif %}
-        <p><strong><a href="/directory/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></strong></p>
+        <p><strong><a href="/people/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></strong></p>
         <p>
         {% if person.workingTitle|is_string %}
             <em>{{ person.workingTitle|safe }}</em>
