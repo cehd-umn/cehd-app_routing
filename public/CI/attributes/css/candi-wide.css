@@ -1,0 +1,22 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2012r "Responsive"
+	Authors: Dan Sagisser
+	Created: 2012-11-30
+	Updated: 2013-04-30
+*/
+
+
+
+div#maincontent {
+	width: 80%;
+}
+
+div#extracontent {
+	display: none;
+}
+
+@media all and (max-width: 960px) {	div#restabs div#tabextra {display: none;} }
+@media all and (max-width: 830px) {	div#maincontent {width: 70%;} }
+@media all and (max-width: 520px) {	div#maincontent {width: 100%;} }

@@ -1,0 +1,168 @@
+﻿@charset "UTF-8";
+
+
+body  {
+	background: #fff;
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	line-height:18px;
+} 
+
+/* -------------------- Headings  ------------------------ */
+h6{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h5{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h4{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h3{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h2{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h1{color:darkolivegreen;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h1 {font-size:155%;line-height:140%;text-transform:uppercase}
+h2 {font-size:135%;line-height:130%}
+h3 {font-size:115%;line-height:130%}
+h4 {font-size:105%;line-height:120%}
+h5 {font-size:105%;line-height:120%}
+h6 {font-size:100%;line-height:100%}
+
+p {margin:10px 25px;}
+
+a {color:purple;}
+
+/* ----------------------------------------------------------- COLUMNS FOR LAYOUT */
+div.narrow	{width:120px;float:left;margin:0;padding:0;}
+div.quarter	{width:160px;float:left;margin:0;padding:0;}
+div.third 	{width:220px;float:left;margin:0;padding:0;}
+div.half 	{width:320px;float:left;margin:0;padding:0;}
+div.twothird{width:440px;float:left;margin:0;padding:0;}
+div.threequarter{width:480px;float:left;margin:0;padding:0;}
+div.whole 	{width:660px;float:left;margin:0;padding:0;}
+
+/* COURSE FEED STYLING*/
+
+div#CourseNav {margin-left: 40px; border-bottom: 1px tomato solid;}
+
+div#CourseFeed ul {list-style-type: none}
+
+li.CourseTitle h2 {margin-left: 0;}
+
+.shade {background-color: #ccc}
+
+/* Tenure Table*/
+
+table.Tenure {width: 100%;}
+
+table.Tenure th {width: 33%;text-align: left}
+
+table.Tenure td {vertical-align: top}
+
+/* BASIC TABLE STYLE - YES... SOMETIMES YOU NEED A TABLE */
+
+table.DisplayGrid {
+	border:1px solid #e2e2e2;
+	border-collapse: collapse;
+	empty-cells: show;
+	width: 730px;
+}
+
+table.basic {
+	border:1px solid #e2e2e2;
+	border-collapse: collapse;
+	empty-cells: show;
+	width: 900px;
+	margin: 10px 25px;
+}
+
+table.basic th {background-color:#ccc;}
+table.basic td {background-color:transparent;}
+
+table.DisplayGrid th {
+	padding:4px;
+	border-spacing: 4px;
+	vertical-align:top;
+	text-align:left;
+	border:1px solid #e2e2e2;
+}
+
+table.basic th {
+	padding:4px;
+	border-spacing: 4px;
+	vertical-align:top;
+	text-align:left;
+	border:1px solid #e2e2e2;
+}
+
+table.DisplayGrid td {
+	padding:4px;
+	border-spacing: 4px;
+	vertical-align:top;
+	text-align:left;
+	border:1px solid #e2e2e2;
+}
+
+table.basic td {
+	padding:4px;
+	border-spacing: 4px;
+	vertical-align:top;
+	text-align:left;
+	border:1px solid #e2e2e2;
+}
+
+table.DisplayGrid td {
+	border:none;
+}
+
+table.DisplayGrid th {
+	border:none;
+}
+
+table.DisplayGrid {
+	border:none;
+}
+
+table.DisplayGrid td {
+	text-align:center;
+	padding: 4px 4px 8px 4px;
+}
+
+table.PeopleResults img {
+	position:relative;
+	float:left;
+	margin: 0 15px 15px 0;
+}
+
+.PR-Name {width:40%}
+
+.PR-Dept {width:30%}
+
+.PR-Phone {width:30%}
+
+/* FLIP FLOP NEWS FEED*/
+
+div#News {
+	width:800px;
+}
+
+article {
+	border-bottom: silver dotted 3px;
+}
+
+article h3 a {
+	color: purple;
+	text-decoration:none;
+}
+
+article h3 span {
+	color: black;
+	font-size:12px;
+	font-weight:normal;
+}
+
+article img {
+	position:relative;
+	float:left;
+	margin: 0 15px 15px 25px;
+	height:80px;
+	width:80px;	
+}
+
+article.FlipIt img {
+	float:right;
+	margin: 0 0 15px 15px;
+}

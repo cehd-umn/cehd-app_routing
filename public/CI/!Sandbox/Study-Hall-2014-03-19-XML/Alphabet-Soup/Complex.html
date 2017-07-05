@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alphabet Soup - Complex</title>
+<link rel="stylesheet" type="text/css" href="../core.css">
+
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+<h1>People Sorter</h1>
+<p>Notice how this list throws in a number at 30, 60, and 90 using an if statement.<br /> 
+	Can you <a href="Directory-Complex.xslt">make the XSLT start a new column</a> at a certain number?<br />
+	No, seriously can you? Jeff cannot figure this out.</p>
+<!--#include virtual="/attributes/rssParser/Functions.asp"-->
+
+<%
+	GetRSSFeed "http://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?en=299A","Directory-Complex.xslt","My Error Message"
+%>
+
+</body>
+</html>

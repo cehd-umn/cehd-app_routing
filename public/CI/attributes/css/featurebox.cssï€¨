@@ -1,0 +1,3 @@
+#featurebox {
+  background-image: url('../images/featurebox/background-1.jpg')
+}

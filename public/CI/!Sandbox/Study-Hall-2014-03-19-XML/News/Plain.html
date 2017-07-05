@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Plain News Feed</title>
+<style type="text/css">
+body {margin: 20px 60px;font-family: verdana;}
+
+
+
+</style>
+</head>
+
+<body>
+<h1>Plain News Feed</h1>
+<!--#include virtual="/attributes/rssParser/Functions.asp"-->
+
+<%
+	GetRSSFeed "https://news.cehd.umn.edu/category/topics/teaching-learning/feed/","News-WP-Plain.xslt","My Error Message"
+%>
+
+</body>
+</html>
