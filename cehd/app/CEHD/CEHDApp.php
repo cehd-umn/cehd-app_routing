@@ -165,7 +165,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             "section" => "academics",
             "titles_are_links" => true,
             "item_data" => $cards,
-            "categories" => $cardsInstance->getCategories(),
+            "categories" => $cardsInstance->getCategoriesAndInternalCategories(),
             "item_data_json" => json_encode($cards),
         ];
 
