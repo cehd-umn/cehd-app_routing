@@ -6,7 +6,7 @@
                 <h2 class="heading-profile">{{ data.person.nameFirstLast }}
                     <small class="clear h4">
                     {% if data.person.workingTitle|is_string %}
-                        {{ data.person.workingTitle }}
+                        {{ data.person.workingTitle|safe }}
                     {% endif %}
                     </small>
                 </h2>
