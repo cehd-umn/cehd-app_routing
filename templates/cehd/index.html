@@ -17,10 +17,32 @@
     }
 
     .vertical-center {
-        align-items: center;
-        display: flex;
+        display: block;
         height: 100vh;
         padding-top: 25%;
+    }
+
+    @media all and (max-width: 768px) {
+        .third {
+            clear: both;
+            min-height: 105px;
+        }
+
+        .third .button {
+            margin: 0 auto;
+            max-width: 95%;
+        }
+
+        .vertical-center {
+            padding-top: 246px;
+        }
+    }
+
+    @media all and (min-width: 768px) {
+        .vertical-center {
+            align-items: center;
+            display: flex;
+        }
     }
 
     .main-heading-box {
@@ -33,6 +55,7 @@
 
     .videojs-background-wrap {
         background-color: #222;
+        max-width: 100%;
         overflow: hidden;
         position: absolute;
         top: 169px;
@@ -72,16 +95,15 @@
                 height="100%"
                 width="100%"
                 src="/assets/dist/video/home-01.mp4">
-                <!-- poster="http://video-js.zencoder.com/oceans-clip.png" -->
             </video>
             <div class="row vertical-center">
-                <div class="span-4">
+                <div class="third">
                     <p class="button"><a href="/programs/">Programs</a></p>
                 </div>
-                <div class="span-4">
+                <div class="third">
                     <p class="button"><a href="/news/">News &amp; events</a></p>
                 </div>
-                <div class="span-4">
+                <div class="third">
                     <p class="button"><a href="/research/">Research</a></p>
                 </div>
             </div>
