@@ -64,11 +64,11 @@ class ProgramCards extends CardGroup
     public function getCategoriesAndDegrees()
     {
         $category_groups = [
-            "Areas of Study" => [],
+            "Areas of study" => [],
             "Degrees" => [],
         ];
 
-        $category_groups["Areas of Study"] = $this->getCategories();
+        $category_groups["Areas of study"] = $this->getCategories();
         $degrees = [];
 
         foreach ($this->_cards as $card)

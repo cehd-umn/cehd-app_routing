@@ -92,12 +92,12 @@ class TopicCards extends CardGroup
     public function getCategoriesAndInternalCategories()
     {
         $category_groups = [
-            "Research Areas" => [],
-            "Critical Issues" => [],
+            "Research areas" => [],
+            "Critical issues" => [],
         ];
 
-        $category_groups["Research Areas"] = $this->getCategories();
-        $category_groups["Critical Issues"] = $this->getInternalCategories();
+        $category_groups["Research areas"] = $this->getCategories();
+        $category_groups["Critical issues"] = $this->getInternalCategories();
 
         return $category_groups;
     }
