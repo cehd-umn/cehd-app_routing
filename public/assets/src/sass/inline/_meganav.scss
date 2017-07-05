@@ -405,6 +405,18 @@ nav {
     }
 }
 
+@media all and (max-width: 959px) {
+    .dropdown-menu-wrapper {
+        margin-left: auto;
+        top: auto;
+        width: auto;
+    }
+
+    .top-level-link {
+        display: none;
+    }
+}
+
 #main-nav-home-link {
     height: 23px;
     margin: 0 auto;
