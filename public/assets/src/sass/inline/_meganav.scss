@@ -3,7 +3,12 @@
 
 .dropdown-right-content-wrapper {
     margin: 0 auto;
-    // max-width: 80%;
+}
+
+.content-container {
+    &.flex-container {
+        display: none;
+    }
 }
 
 nav {
@@ -79,7 +84,6 @@ nav {
     .hero-pithy-phrase {
         font-size: 14px;
         margin-right: 30px;
-        // padding-right: 62px;
     }
 
     .main-nav-hero-image-text {
@@ -167,7 +171,6 @@ nav {
         background: $base-white;
         border: transparent;
         box-shadow: 0 2px 3px 0 $box-shadow-rgba;
-        // display: none;
         left: 0;
         max-height: 0;
         overflow: hidden;
@@ -225,6 +228,7 @@ nav {
 
         &.flex-container {
             align-items: center;
+            display: flex;
             justify-content: flex-start;
 
             .align-bottom {
@@ -364,10 +368,6 @@ nav {
             flex-grow: 1;
             font-size: 18px;
         }
-
-        .flex-container {
-            // flex-direction: column;
-        }
     }
 }
 
@@ -376,10 +376,6 @@ nav {
 
     nav {
         font-size: 13px;
-
-        .hero-pithy-phrase {
-            // text-align: center;
-        }
     }
 
     .dropdown-menu-wrapper {
