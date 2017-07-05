@@ -1035,6 +1035,11 @@
   template: cehd/diversity/all.html
   template_data:
     - section: diversity
+/diversity/cgc/:
+  publish: true
+  template: cehd/diversity/cgc.html
+  template_data:
+    - section: diversity
 /events/:
   publish: true
   template: cehd/events/index.html

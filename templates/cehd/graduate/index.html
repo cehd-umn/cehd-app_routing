@@ -8,7 +8,7 @@
   <div class="container">
     <h1>Graduate education in CEHD</h1>
     <div class="row">
-    <div class="half">
+    <div class="span-6 push-2">
 
       <p>The College of Education and Human Development is home to a wide array of professional programs and academic disciplines that together study the whole person in context. We research how people learn and grow and how they feel capable and secure
         in their work, fulfilled in their family lives, and satisfied in their health and wellbeing.
@@ -17,7 +17,7 @@
       <p>Our curriculum will challenge you to do things like personally affect how people create equity in classrooms and work spaces, tackle health concerns through a community-based approach, investigate the role of trauma in children’s mental health,
         or provide knowledge and tools to build family resilience.</p>
     </div>
-    <div class="half">
+    <div class="span-4">
       {{ loader.loader(
     "Events",
     "h2",
@@ -45,7 +45,7 @@
 <div class="row margin-top-1 ">
   <div class="container">
 
-    <div class="half">
+    <div class="span-6">
       <h2>Our programs</h2>
 
       <p>Our degrees and programs are looking forward. We prepare you for a rapidly-changing world. All of CEHD’s graduate programs are imbued with our own original and forward-looking research. In CEHD, you will study with experienced researchers working
@@ -57,7 +57,7 @@
       <p class="text-center"><a href="/programs/" class="button center">Explore our programs and degrees</a></p>
 
     </div>
-    <div class="half">
+    <div class="span-6">
       <h2>Collaborative and inclusive community</h2>
 
       <p>This is our moment to contribute to a more just and diverse society in the most human way. CEHD celebrates diversity in thought and experiences. We offer an environment that insists on listening, strives for understanding, and encourages risk-taking
@@ -75,5 +75,5 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     {# The call to parent() above is *very* important #}
-    {{ eventsfeed.events_feed_js(71) }}
+    {{ eventsfeed.events_feed_js(361) }}
 {% endblock %}
