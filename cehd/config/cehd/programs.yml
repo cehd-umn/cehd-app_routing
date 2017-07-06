@@ -508,6 +508,16 @@ PK-12 Administrative Licensure:
   categories:
     - Teaching, Learning, and Schools
     - Community and Leadership
+Prevention Science:
+  meta: null
+  publish: true
+  links:
+    - title: Masters
+      href: http://www.cehd.umn.edu/FSoS/programs/prevsci.asp
+  description: The scientific study of systematic efforts to reduce the incidence of unhealthy or maladaptive behavior, and to promote health and adaptive behavior in populations across the life span.
+  categories:
+    - Evaluation and Methods
+    - Families, Youth, and Children
 Professional Development:
   meta: null
   publish: true
@@ -552,7 +562,9 @@ Quantitative Methods in Education:
 Racial Justice in Urban Schooling:
   meta: race, language, social class, gender, sexual orientation, LGBT
   publish: false
-  links: null
+  links:
+    - title: Undergraduate Minor
+      href: https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=21880&strm=1179&campus=UMNTC
   description: Analyze educational practices that marginalize students from non-dominant social groups and learn how to support those students.
   categories:
     - Teaching, Learning, and Schools
