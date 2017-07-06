@@ -750,6 +750,11 @@
   template: cehd/book-week/previous-authors/farmer.html
   template_data:
     - section: book-week
+/book-week/previous-authors/farmer/:
+  publish: true
+  template: cehd/book-week/previous-authors/fleming.html
+  template_data:
+    - section: book-week
 /book-week/previous-authors/fox/:
   publish: true
   template: cehd/book-week/previous-authors/fox.html
