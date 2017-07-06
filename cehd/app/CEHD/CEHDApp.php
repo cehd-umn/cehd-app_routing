@@ -317,6 +317,12 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
+
+        if (array_key_exists("feed_url", $query_data))
+        {
+            $base_url = $query_data["feed_url"];
+        }
+
         if (array_key_exists("feed-path", $query_data))
         {
             $http_client = $this->bootstrapHTTPClient([]);

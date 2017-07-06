@@ -10,7 +10,8 @@
     (function() {
         "use strict";
         var data = {
-                "feed-path": "{{ feed_path }}"
+                "feed-path": "{{ feed_path }}",
+                "feed_url": "{{ news_site_base_url }}"
             };
         {% if varargs %}
             {% for arg in varargs %}
