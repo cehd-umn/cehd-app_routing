@@ -7,7 +7,7 @@
     <div class="container">
       <h2>{{ page_title }}</h2>
       <section>
-      <div class="half"><p><iframe src="https://player.vimeo.com/video/140834612" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="half"><p><iframe src="https://player.vimeo.com/video/140834612" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen {{ analytics.add_tracking("send", "event", "feature", "click", "schpsy master feature") }}></iframe>
 </p></div>
       <div class="half">
       <h3 class=".no-margin-top">Earn your M.A. and become certified to practice in schools</h3>
