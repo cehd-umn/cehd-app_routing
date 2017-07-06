@@ -750,7 +750,7 @@
   template: cehd/book-week/previous-authors/farmer.html
   template_data:
     - section: book-week
-/book-week/previous-authors/farmer/:
+/book-week/previous-authors/fleming/:
   publish: true
   template: cehd/book-week/previous-authors/fleming.html
   template_data:
@@ -1203,6 +1203,11 @@
 /global/gtep/:
   publish: true
   template: cehd/global/gtep.html
+  template_data:
+    - section: global
+/global/i-connect/:
+  publish: true
+  template: cehd/global/i-connect.html
   template_data:
     - section: global
 /global/intl-partnerships/:
