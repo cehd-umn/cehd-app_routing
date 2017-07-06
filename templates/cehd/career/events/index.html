@@ -1,6 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
-{% import "macros/career-blog-feed.html" as careerfeed %}
+{% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/loader.html" as loader -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -20,6 +20,11 @@
     ) }}
 </div>
     <div class="half">
+      <!-- <h2>News</h2>
+      <ul class="no-bullet">
+        <li><a href="http://academics.cehd.umn.edu/career/success-story-hayley-chartier-family-social-science/">Success Story | Hayley Chartier, Family Social Science</a></li>
+        <li><a href="http://academics.cehd.umn.edu/career/success_story_mykenna_yesnes_whitney_zahn_elementary_education/">Success Story | Mykenna Yesnes &amp; Whitney Zahn, Elementary Education</a></li>
+    </ul> -->
     {{ loader.loader(
       "News",
       "h2",
@@ -39,5 +44,13 @@
     {{ eventsfeed.events_feed_js(
        231
     ) }}
-    {{ careerfeed.career_feed_js("feed/") }}
+    {{ newsfeed.news_feed_js(
+      "feed/",
+      "#career-container",
+      "index.html",
+      3,
+      "http://academics.cehd.umn.edu/career/",
+      "More career news",
+      "/assets/dist/views/cehd/newsfeeds/"
+      ) }}
 {%- endblock -%}

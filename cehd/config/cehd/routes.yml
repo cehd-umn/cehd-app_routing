@@ -1270,6 +1270,11 @@
   template: cehd/graduation/index.html
   template_data:
     - section: graduation
+/graduation/med/:
+  publish: false
+  template: cehd/graduation/med.html
+  template_data:
+    - section: graduation
 /news/:
   publish: true
   template: cehd/news/index.html
@@ -1463,6 +1468,11 @@
 /teaching/partnerships/:
   publish: true
   template: cehd/teaching/partnerships.html
+  template_data:
+    - section: teaching
+/teaching/scholarships/:
+  publish: true
+  template: cehd/teaching/scholarships.html
   template_data:
     - section: teaching
 /teaching/trainings/:

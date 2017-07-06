@@ -54,6 +54,8 @@
               href: "/graduate/community/"
             - name: Career & Leadership
               href: "/graduate/career/"
+            - name: Policies and Processes
+              href: "/graduate/policy/"
       - name: TUITION & FINANCIAL AID
         href: "/tuition/"
         subsections:
@@ -62,6 +64,9 @@
               href: "/undergraduate/scholarships/"
             - name: Graduate Finance & Funding
               href: "/graduate/funding/"
+            - name: Aid for Future Teachers
+              href: "/teaching/scholarships/"
+
       - name: GRADUATION
         href: "/graduation/"
       - name: Commencement
