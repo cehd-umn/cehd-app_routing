@@ -1,0 +1,32 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Assessment" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Pairs completion and CEU certificate</h1>
+    <div class="row">
+      <div class="span-4">
+        {{ include('cehd/teaching/co-teaching/pairs/aa-nav.html') }}
+      </div>
+      <div class="span-8">
+
+        <div class="margin-top-3">
+        </div>
+        <p>In order to record your completion of the Co-Teaching Pairs online workshop, we require your contact information as well as your responses to three reflective questions. Please work together to answer these questions.</p>
+        <p>The CEU certificate will be available for download after you submit this form. You may print two copies of the certificate.</p>
+        <!-- IN Cognito from is named: OTE - Pairs Completion & CEU | 2017-05-25 JFA -->
+        <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=25" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="1580" width="100%"></iframe>
+        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+        <script>
+          Cognito.setCss('http://backstage.cehd.umn.edu/assets/dist/css/minified/forms.css');
+        </script>
+      </div>
+      <!-- ./span-8 -->
+    </div>
+    <!-- ./row -->
+  </div>
+  <!-- ./container -->
+</div>
+<!-- ./row -->
+{% endblock %}

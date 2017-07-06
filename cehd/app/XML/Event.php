@@ -52,6 +52,16 @@ class Event extends \CEHD\App\XML\XML
     /**
      * @type string
      */
+    public $endHour;
+
+    /**
+     * @type string
+     */
+    public $endMinute;
+
+    /**
+     * @type string
+     */
     public $id;
 
     /**
@@ -73,6 +83,16 @@ class Event extends \CEHD\App\XML\XML
      * @type string
      */
     public $startTime;
+
+    /**
+     * @type string
+     */
+    public $startHour;
+
+    /**
+     * @type string
+     */
+    public $startMinute;
 
     /**
      * @type string
@@ -136,7 +156,7 @@ class Event extends \CEHD\App\XML\XML
 
         $this->dayOfWeek = $this->getFromProperty($event->dayOfWeek);
 
-        $this->year = $this->getFromProperty($event->dateYear);
+        $this->year = $this->getYear();
 
         $this->month = $this->getFromProperty($this->getMonth());
 
@@ -148,7 +168,15 @@ class Event extends \CEHD\App\XML\XML
 
         $this->startTime = $this->getFromProperty($event->startTime);
 
+        $this->startHour = $this->getFromProperty($this->getStartHour());
+
+        $this->startMinute = $this->getFromProperty($this->getStartMinute());
+
         $this->endTime = $this->getFromProperty($event->endTime);
+
+        $this->endHour = $this->getFromProperty($this->getEndHour());
+
+        $this->endMinute = $this->getFromProperty($this->getEndMinute());
 
         $this->dateTimeEnd = $this->date . " " . $this->endTime;
 
@@ -167,6 +195,46 @@ class Event extends \CEHD\App\XML\XML
         $this->title = $this->getFromProperty($event->title);
 
         $this->url = $this->getFromProperty($event->link);
+    }
+
+    /**
+     * Returns the numerical starting hour of the event start time
+     *
+     * @return string
+     */
+    public function getStartHour()
+    {
+        return $this->startTime ? date("h", strtotime($this->startTime)) : $this->startTime;
+    }
+
+    /**
+     * Returns the numerical starting minute of the event
+     *
+     * @return string
+     */
+    public function getEndHour()
+    {
+        return $this->endTime ? date("h", strtotime($this->endTime)) : $this->endTime;
+    }
+
+    /**
+     * Returns the numerical ending minute of the event
+     *
+     * @return string
+     */
+    public function getEndMinute()
+    {
+        return $this->endTime ? date("i", strtotime($this->endTime)) : $this->endTime;
+    }
+
+    /**
+     * Returns the numerical starting minute of the event
+     *
+     * @return string
+     */
+    public function getStartMinute()
+    {
+        return $this->startTime ? date("i", strtotime($this->startTime)) : $this->startTime;
     }
 
     /**

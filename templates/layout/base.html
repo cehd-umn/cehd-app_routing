@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}University of Minnesota{% endblock %}</title>
+        <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}UMN{% endblock %}</title>
         <meta name="description" content="{% block meta_content %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
@@ -13,8 +13,12 @@
     </head>
     <body>
         <header>
-            <h1 class="accessible-no-display">{% block heading_1 %}{% endblock %}</h1>
-            <p class="accessible-no-display"><a href="#maincontent">Skip to main content</a></p>
+            <div class="accessible-no-display">
+                <ul class="accessible-no-display">
+                    <li class="accessible-no-display"><a class="accessible-no-display" href="#maincontent">Skip to main content</a>
+                    <li class="accessible-no-display"><a class="accessible-no-display" href="#mainnav">Skip to main navigation</a>
+                </ul>
+            </div>
             <div id="umnheader">
                 <div class="container">
                     <ul id="umn-links">
@@ -31,16 +35,21 @@
                     </div><!-- /#umnh-searchbox -->
                 </div>
             </div><!-- /#umnheader -->
-            <div class="container">
-                <div class="wordmark-container-right wordmark-container reverse-span-6">
-                    <a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
-                </div>
-                <div class="wordmark-container-left wordmark-container reverse-span-6">
-                    {% block section_wordmark %}{% endblock %}
+            {% block hero_image %}{% endblock %}
+            <div class="section-header-container">
+                <div class="container">
+                    <div id="wordmark-wrapper">
+                        <div class="wordmark-container-right wordmark-container half">
+                            <a href="/"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
+                        </div>
+                        <div class="wordmark-container-left wordmark-container half">
+                            {% block section_wordmark %}{% endblock %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
-        <div class="nav-container container">
+        <div id="mainnav" class="nav-container">
             {% block nav %}{% endblock %}
         </div>
         <main id="maincontent">

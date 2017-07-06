@@ -1,0 +1,31 @@
+{% extends "cehd/layout/documentation.html" %}
+{% block title %}{{ pattern.title }}{% endblock %}
+{% block main_content %}
+{% for twig_file in pattern.twig_files %}
+    <div class="row">
+        <div class="container">
+                <h1>{{ pattern.title }}</h1>
+        </div>
+    </div>
+    {% if twig_file.type == "include" %}
+        {% include twig_file.path %}
+    {% endif %}
+    {% if pattern.uses %}
+        <div class="row">
+            <div class="container">
+                <h2>Uses these patterns</h2>
+                    <ul>
+                        {% for use in pattern.uses %}
+                            <li><a href="/patterns/v1/{{ use.group}}/{{ use.name|hyphenate }}/">{{ use.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+<div class="row">
+    <div class="container">
+        <p><a href="/patterns/v1/">Return to patterns page</a></p>
+    </div>
+</div>
+{% endblock %}

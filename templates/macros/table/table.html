@@ -1,0 +1,34 @@
+{%- macro start_table(
+    caption="",
+    summary="",
+    table_id="",
+    table_classes=""
+) -%}
+<table {% if summary %}summary="{{ summary }}"{% endif %}{% if table_id %} id="{{ table_id }}"{% endif %}{% if table_classes %} class="{{ table_classes }}"{% endif %}>
+    {%- if caption -%}
+        <caption>{{ caption }}</caption>
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro end_table(caption="") -%}
+    {%- if caption -%}
+        <caption>{{ caption }}</caption>
+    {%- endif -%}
+</table>
+{%- endmacro -%}
+
+{%- macro heading_row(headings) -%}
+    <tr>
+        {%- for heading in headings -%}
+            <th scope="col">{{ heading }}</th>
+        {%- endfor -%}
+    </tr>
+{%- endmacro -%}
+
+{%- macro row(data) -%}
+    <tr>
+        {%- for datum in data -%}
+            <td>{{ datum|raw }}</td>
+        {%- endfor -%}
+    </tr>
+{%- endmacro -%}

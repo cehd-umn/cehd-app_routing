@@ -1,0 +1,82 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Gifts" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Gifts at work</h1>
+        <div class="half feature">
+            <p>During the past five years, the College of Education and Human
+            Development has raised over $9 million in gifts from alumni and
+            friends. These gifts are making a real difference to students, faculty,
+            and staff.</p>
+
+            <p>The following are just a few examples of how gifts are being
+            used.</p>
+        </div>
+
+        <div class="margin-top-3"></div>
+
+        <div class="span-12">
+            <h2 class="text-center">Giving matters</h2>
+            <div class="third">
+                <h3>Inspiring math learners</h3>
+
+                <img src="/assets/images/giving/math.jpg" alt= "Example image." />
+
+                <p>A Mooty Foundation gift helps Lesa Clarkson foster math skills in North
+                Minneapolis.<br />
+                <small><a href=
+                "http://connect.cehd.umn.edu/giving-matters-inspiring-math-learners/">Continue
+                reading</a></small></p>
+            </div>
+            <div class="third">
+                <h3>Support for women scholars</h3>
+                <img src="/assets/images/giving/scholar.jpg" alt="Example image." />
+
+                <p>With the Women&rsquo;s Philanthropic Leadership Circle, small gifts make a big
+                difference.<br />
+                <small><a href="http://connect.cehd.umn.edu/wplc/">Continue reading</a></small></p>
+            </div>
+            <div class="third">
+                <h3>Dreams to teach come true</h3>
+                <img src="/assets/images/giving/teach.jpg" alt="Example image." />
+
+                <p>The Schulze Family Foundation supports future teachers who have a passion for
+                subjects in short supply.<br />
+                <small><a href=
+                "http://connect.cehd.umn.edu/giving-matters-helping-dreams-to-teach-come-true/">Continue
+                reading</a></small></p>
+            </div>
+        </div><!-- /span-12 -->
+        <p class="text-center"><a href="https://makingagift.umn.edu/onlinegiving/enterOnlineGiving.do?owner=O_CEHD&desc_source=UWXX_EDHD_SITE" class="button center">Give now</a></p>
+        <div class="span-12">
+            <div class="half feature">
+                <h2 class="text-center">Endowed chairs and professorships</h2>
+                <h3 class="text-center">Current appointments</h3>
+            </div>
+        </div><!-- ./span-12 -->
+        {% for appointment_group in appointments %}
+        <div class="span-12">
+          {% for appointment in appointment_group %}
+            <div class="appointment third">
+                <h4>{{ appointment.heading }}</h4>
+                <div class="span-4 thumbnail-img">
+                    <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
+                </div>
+                <div class="span-8">
+                    <h5 class="no-margin-top no-margin-bottom">
+                        <a href="{{ appointment.urls.profile }}">{{ appointment.name }}</a>
+                        <small class="clear h6 light no-margin-top no-margin-bottom">
+                            {{ appointment.titles|join(", ") }}
+                        </small>
+                    </h5>
+                    <p><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></p>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+    </div><!-- ./container -->
+  </div><!-- ./row -->
+{% endblock %}

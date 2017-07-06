@@ -1,0 +1,108 @@
+{% extends "cehd/layout/documentation.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Cheats" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Cheats</h1>
+    <p>a.k.a Jeffsmanship.</p>
+    <h2>Emphasis rows spanning the WHOLE page</h2>
+  </div><!-- ./container -->
+  <div class="row emphasis margin-top-1">
+    <div class="half feature">
+        <p>Features won't go all the way across if they are in a container div.</p>
+        <p>End the container div before the feature and then start it up again afterwards.</p>
+    </div>
+</div>
+<div class="container">
+  <div class="row emphasis margin-top-1">
+    <div class="half feature">
+        <p>I am in a container</p>
+    </div>
+</div>
+  <h2>That bottom blue box</h2>
+  <p>It's a lot of nested divs!</p>
+  <pre><code class="html">
+    &lt;div class="row emphasis cool"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="half feature"&gt;
+          &lt;div class="corner-borders-top"&gt;&lt;/div&gt;
+          &lt;div class="container"&gt;
+           &lt;h2 class="text-center"&gt;Next steps &lt;/h2&gt;
+           &lt;p class="text-center"&gt;&lt;a href="/undergraduate/apply/"&gt;How to apply&lt;/a&gt; | &lt;a href="/undergraduate/scholarships/"&gt;Costs and aid&lt;/a&gt; | &lt;a href="/undergraduate/contact/"&gt;Contact&lt;/a&gt;&lt;/p&gt;
+         &lt;/div&gt;
+         &lt;div class="corner-borders-bottom"&gt;&lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  </code></pre>
+  <div class="row emphasis cool">
+    <div class="container">
+        <div class="half feature">
+          <div class="corner-borders-top"></div>
+            <div class="container">
+              <h2 class="text-center">Next steps </h2>
+              <p class="text-center"><a href="/undergraduate/apply/">How to apply</a> | <a href="/undergraduate/scholarships/">Costs and aid</a> | <a href="/undergraduate/contact/">Contact</a></p>
+            </div>
+          <div class="corner-borders-bottom"></div>
+        </div>
+      </div>
+    </div>
+    <h2>The Did You Know box</h2>
+    <p>Did you know? You need to add a macro at the top of your page for this to work. Line 2 right after the template call works.</p>
+    <h3>The Macro</h3>
+      <pre>
+        <code class="twig">
+          &#123;%- import "macros/svg.html" as svg -%&#125;
+        </code>
+      </pre>
+
+
+    <h3>The box</h3>
+      <p>Notice each line is broken out.</p>
+        <pre>
+          <code class="html">
+            &lt;div class="row outer-bg-right cool"&gt;
+              &lt;div class="container"&gt;
+                &lt;div class="inner-bg-right emphasis cool"&gt;
+                  &lt;div class="span-2"&gt;&lt;br /&gt;&lt;/div&gt;
+                    &lt;div class="span-10"&gt;
+                      &lt;div class="span-6"&gt;
+                      &#123;% set lines = [
+                      "Each year, over 5000 students",
+                      "enroll in our",
+                      "undergraduate and graduate programs.",
+                      ] %&#125;
+                      &#123;&#123; svg.did_you_know(_context, "Did you know facts", "Did you know", lines) &#125;&#125;
+                      &lt;/div&gt;
+                    &lt;div class="span-6"&gt;&lt;br /&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <div class="row outer-bg-right cool">
+            <div class="container">
+                <div class="inner-bg-right emphasis cool">
+                    <div class="span-2"><br /></div>
+                    <div class="span-10">
+                        <div class="span-6">
+                      {% set lines = [
+                      "Each year, over 5000 students",
+                      "enroll in our",
+                      "undergraduate and graduate programs.",
+                      ] %}
+                      {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                       </div>
+                       <div class="span-6"><br /></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

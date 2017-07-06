@@ -1,8 +1,8 @@
 {% extends "edpsych/layout/section.html" %}
-{%- import "edpsych/macros/ga-tracking.html" as analytics -%}
-{%- import "edpsych/macros/news-feed.html" as newsfeed %}
-{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
-{%- import "edpsych/macros/loader.html" as loader -%}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{%- import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/loader.html" as loader -%}
 {%- set page_title = "Counseling & student personnel psychology" %}
 {%- block title %}{{ page_title }}{% endblock %}
 {%- block main_content %}
@@ -196,7 +196,13 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     {{ newsfeed.news_feed_js(
-        "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/"
+        "category/departments/educational-psychology/counseling-and-student-personnel-psychology/feed/",
+        "#news-container",
+        "index.html",
+        3,
+        null,
+        null,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#-

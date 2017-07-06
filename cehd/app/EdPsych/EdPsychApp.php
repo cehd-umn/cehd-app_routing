@@ -15,7 +15,6 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     private $_searchApplianceSites;
 
-    // @todo move routes in public/edpsych/index.php here
     function __construct($file_paths)
     {
         parent::__construct($file_paths);
@@ -62,6 +61,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         echo $this->_renderTemplate("edpsych/search.html", $template_data);
     }
 
+    // @todo remove all these endpoints and point Ed Psych stuff to college-level ones
     public function searchEndpointHandler($request, $response, $service, $app)
     {
         $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
@@ -97,6 +97,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    // @todo this method should go in a BaseApp class
     public function personEndpointHandler($request, $response, $service, $app)
     {
         $query_data = $request->params();

@@ -1,0 +1,85 @@
+{% extends "cehd/layout/base.html" %}
+{% block bottom_js %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+    <style>
+        samp, code {
+            font-family: monospace;
+        }
+
+        samp {
+            background: #f0f0f0;
+            color: #79111a;
+            font-family: monospace;
+        }
+
+        code {
+            display: block;
+            padding: 1em;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        sup {
+            vertical-align: super;
+        }
+
+        .give-height {
+            min-height: 200px;
+        }
+
+        .no-margin-bottom {
+            margin-bottom: 0;
+        }
+
+        .grid-example,
+        .background-grey {
+            background: #f0f0f0;
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+        }
+
+        .background-grey samp {
+            background: transparent;
+            color: #ccc;
+        }
+
+        .foreground-light-grey {
+            color: #ccc;
+        }
+
+        .background-gold {
+            background: #ffde7a
+        }
+
+        .background-blue {
+            background: #d0edf5;
+        }
+
+        .background-orange {
+            background: #f7e7b2;
+        }
+
+        .background-green {
+            background: #eef2b8;
+        }
+
+        .background-brown {
+            background: #f0e9d1;
+        }
+
+        .detached {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+{% endblock %}
+

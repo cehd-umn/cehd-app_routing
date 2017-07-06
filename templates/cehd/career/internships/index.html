@@ -1,0 +1,149 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Internships" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+
+<div class="row">
+  <div class="container">
+
+    <h1>Internships</h1>
+    <div class="row">
+      <div class="half">
+        <p>An internship is a real world experience related to your career
+    		interests providing an opportunity to learn specific skills and
+    		knowledge. Internships are a great way to “test-drive” a career, gain
+    		professional experience, and develop your network.</p><p>Internships can be:</p>
+
+      </div>
+      <div class="half">
+        <ul>
+          <li>Paid or unpaid experiences</li>
+    			<li>Done during the academic year or summer </li>
+					<li>For academic credit or not for credit</li>
+					<li>Part-time or full-time</li>
+					<li><a href="http://umabroad.umn.edu/programs/">Abroad</a> - Search for internships abroad under the &quot;program features&quot; option. </li>
+    		</ul>
+      </div>
+    </div>
+</div>
+<div class="margin-top-2">
+</div>
+      <div class="row emphasis cool">
+            <div class="container">
+              <div class="half feature">
+                                    {% set lines = [
+                      "86% of spring 2015",
+                      "undergraduate students",
+                      "completed at least",
+                      "one internship",
+                    ] %}
+                    {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+
+                </div>
+              </div>
+            </div>
+            <div class="margin-top-2">
+            </div>
+  <div class="container">
+  <div class="twothirds feature">
+		<h2>The internship search</h2>
+						<h3>Find your focus</h3>
+						<p>Be clear about your goals and what you would like to
+						get out of an internship. Some questions to ask yourself:</p>
+						  <ul class="gray-circle">
+										<li>What type of experience are you
+										hoping to have?</li>
+										<li>Do you want to receive
+
+										academic
+										credit or funding? Many CEHD majors require an internship or field experience as part of your degree requirements for graduation. Connect with your major adviser to determine their specific requirements.</li>
+										<li>What skills would you like to
+										develop?</li>
+										<li>What career fields or industries
+										interest you?</li>
+										<li>What type of organization is a good
+										fit? (government, for-profit,
+										non-profit, education, large, small)</li>
+										<li>
+										<a href="/career/research/">Learn how to research careers.</a>
+										</li>
+						</ul>
+						</li>
+						<h3>Create an effective resume, cover letter, and portfolio </h3>
+						<p>Having good marketing materials (résumé, cover letter,
+						and portfolio) is essential to a successful internship</p>
+						search. Begin creating your materials early!
+                        <ul class="gray-circle">
+										<li>Write a draft of your résumé and
+										cover letter.<ul>
+														<li>
+														<a href="https://umconnect.umn.edu/resumes">Online résumé
+										writing workshop</a></li>
+														<li>
+														<a href="/career/resumes/">
+														Résumé resources</a></li>
+														<li>
+														<a href="/career/resumes/cover-letters/">
+														Cover letter resources</a></li>
+										</ul>
+										</li>
+										<li>Have your materials reviewed by a
+										<a href="/career/staff/">career counselor</a>.</li>
+						</ul>
+						</li>
+						<h3>Find internship opportunities</h3>
+
+                            <ul class="gray-circle">
+						  <li>Search
+							<a href="http://www.goldpass.umn.edu">GoldPASS</a> for
+						  internship postings.</li>
+										<li>Apply to <a href="/assets/docs/career/student-alumni-roadmap-to-on-campus-interviews.pdf">on-campus interviews</a> through GoldPASS</li>
+										<li>Attend <a href="/career/events/">CEHD career events</a> &amp;  campus job fairs.</li>
+						  <li>Create a list of organizations you
+										would like to intern with and contact
+										them directly. Many internship positions
+						  are not advertised.</li>
+						  <li>Talk to people.
+							<a href="/career/networking/">Networking</a> is the best way to learn
+						  about unadvertised opportunities.</li>
+						  <li>Create your own internship with an
+										organization that does not have a
+						  current internship program.</li>
+						  <li>View the online
+										<a href="https://umconnect.umn.edu/jobandinternshipsearch">
+										job and internship
+						  search workshop</a>.</li>
+						</ul>
+						</li>
+						<h3>Prepare for the interview</h3>
+                            <ul class="gray-circle">
+										<li>Learn the basics of
+										<a href="/career/interview/">interviewing</a>.</li>
+										<li>Schedule a mock
+		interview with a <a href="/career/staff/">career counselor</a>.</li>
+										<li>Do an online mock
+		interview with <a href="http://umn.interviewstream.com/">InterviewStream</a>.
+		&nbsp;</li>
+						</ul>
+						</li>
+
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+<div class="margin-top-2">
+</div>
+<div class="row emphasis bg-cehd-multi">
+  <div class="container span-9 feature">
+        <div class="third">
+          <img class="circular" src="/assets/images/headshots/student-features/Sq-2017-Hannah-Boldt.jpg" alt="photo of Hannah Boldt">
+      </div>
+    <div class="twothird">
+          <blockquote class="quote-wrap">What drew me to the counseling and student personnel program was their focus on the lived experiences, personal characteristics, and individual potential for each student as a counselor, no matter their professional background.</blockquote>
+          <p align="right" class="speaker">Hannah Boldt, M.A. student<br/>
+         counseling and student personnel psychology<br/>
+         Department of Educational Psychology</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

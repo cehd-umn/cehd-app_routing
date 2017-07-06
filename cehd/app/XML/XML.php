@@ -40,7 +40,7 @@ class XML extends \CEHD\App\BaseClass
             $obj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
             if (!$obj)
             {
-                // Throw exceptions of the XML was invalid
+                // Throw exceptions if the XML was invalid
                 $xml_errors = libxml_get_errors();
 
                 $errors = $this->parseXMLErrors($xml_errors);

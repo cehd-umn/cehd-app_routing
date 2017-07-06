@@ -1,0 +1,154 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Undergraduate students" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Undergraduate students
+        <small class="clear">Problem solvers, leaders, and advocates</small></h1>
+
+        <h2 class="text-center">Majors</h2>
+
+        <div class="twothirds feature">
+            <p>We offer a diverse set of majors - in business, human services, health and wellness and education - that prepare you for <a href="/career/">meaningful careers</a>. </p>
+        </div>
+        <div class="row">
+            <div class="third">
+                <h3>Business</h3>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/olpd/undergrad-programs/BME/default.html"> Business and marketing education</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/default.html">Human resource development</a>
+                    </li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/kin/current/undergrad/smgt.html">Sport management</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="third">
+                <h3>Health and Wellness </h3>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/kin/current/undergrad/kin.html">Kinesiology</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/kin/current/undergrad/rec.html">Recreation administration</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="third">
+                <h3>Social Science and Human Services</h3>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/FSoS/programs/undergrad.asp">Family social science</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/ssw/Undergraduate/YOST.html">Youth studies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="twothirds feature">
+            <h3 class="text-center">Education</h3>
+            <p>
+                Our teacher education programs prepare you to be an expert in your field and an effective teacher. The program length varies depending on the subject area you are interested in teaching. Visit <a href="http://teach.umn.edu/">teach.umn.edu</a>                for more information on the benefits of teacher preparation at the U of M. </p>
+        </div>
+        <div class="row">
+            <div class="half">
+                <h3>Early and elementary education</h3>
+                <p>The following undergraduate majors in CEHD lead to a bachelor's degree and offer a direct path to our graduate-level teaching licensure programs:</p>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/icd/programs/ECE/Undergraduate/">Early childhood education foundations</a>
+                    </li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ElementaryEducationFoundations.html">Elementary education foundations</a><br>
+                    </li>
+                </ul>
+                <h3>Special education</h3>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/"> Special education </a> - earn your bachelor's degree and teaching license in four years.
+                    </li>
+                </ul>
+            </div>
+            <div class="half">
+                <h3>Secondary and specialty teaching licenses (Grades K-12 and 5-12) </h3>
+                <p>If you are interested in teaching middle or high school students in subjects like math and science, or in specialty areas such as English as a second language or arts education, first choose a major that supports the subject you want to
+                    teach. Once you&rsquo;ve obtained your bachelor&rsquo;s degree, you may apply to one our combined master&rsquo;s/teaching licensure programs.</p>
+
+                <p><a href="/direct/">DirecTrack to Teaching</a> is a pre-teaching program for current U of M students interested in teaching secondary or K-12 subjects and keeps you on track for the combined master&rsquo;s/teaching licensure program.</p>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-2">
+    </div>
+    <div class="row emphasis cool">
+        <div class="container">
+            <div class="half feature">
+                {# create an array of 2-5 short lines of text #} {% set lines = [ "100% of CEHD students", "complete an internship, teaching", "praticum or experiential coursework.", ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you
+                know", lines) }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="twothirds feature">
+            <div class="half">
+                <h3>Minors</h3>
+                <ul>
+                    <li><a href="http://www.cehd.umn.edu/edpsych/programs/minor/">Applied Psychology in Educational and Community Settings (APECS)</a>
+                    </li>
+                    <li><a href="http://www.cehd.umn.edu/kin/current/coaching.html">Coaching</a></li>
+                    <li><a href="http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html">English as a Second Language Minor/Teaching <br/>
+                        English as a Second Language Certificate</a></li>
+                    <li><a href="http://www.cehd.umn.edu/FSoS/programs/undergrad.asp">Family Social Science</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/SSW/Undergraduate/minors.html">Family Violence Prevention</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html">Leadership</a></li>
+                    <li><a href="http://www.cehd.umn.edu/kin/current/undergrad/rpls.html#minor">Outdoor Recreation and Education</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/ssw/Undergraduate/minors.html">Social Justice</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/kin/current/undergrad/smgt.html#minor">
+                            Sport Management</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/ssw/Undergraduate/minors.html">Youth Studies</a></li>
+                </ul>
+            </div>
+            <div class="half">
+                <h3>Certificates </h3>
+                <ul>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/OLPD/undergrad-programs/AdEd/certificate.html">Adult Education</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/">Autism Spectrum Disorder</a></li>
+                    <li><a href="http://www.cehd.umn.edu/kin/current/coaching.html">Coaching</a> </li>
+                    <li><a href="http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html">English as a Second Language Minor/Teaching English as a Second Language Certificate</a></li>
+                    <li>
+                        <a href="http://www.cehd.umn.edu/OLPD/undergrad-programs/HRD/certificate.html">Human Resource Development</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row emphasis cool">
+        <div class="half feature">
+            <div class="corner-borders-top"></div>
+            <div class="container">
+                <h2 class="text-center">Next steps </h2>
+                <p class="text-center"><a href="/undergraduate/apply/">How to apply</a> | <a href="/undergraduate/scholarships/">Costs and aid</a> | <a href="/undergraduate/contact/">Contact</a></p>
+            </div>
+            <div class="corner-borders-bottom"></div>
+        </div>
+    </div>
+</div><!-- ./row -->
+{% endblock %}

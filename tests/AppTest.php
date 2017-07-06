@@ -168,4 +168,117 @@ class AppTest extends TestCase
         $this->assertEquals($expected, $this->appInstance->get("does_not_exist", "default"));
         $this->assertTrue(is_array($this->appInstance->get("config")));
     }
+
+    public function testBuildHyphenatedKeys()
+    {
+        $yamlData = $this->appInstance->loadYaml(__DIR__ . '/fixtures/experts.yml');
+        $hyphenatedData = $this->appInstance->buildHyphenatedKeys($yamlData);
+        $expected = "Education Policy K-12";
+        $expected_key = $expected;
+        $expected_hyphenated = $this->appInstance->hyphenate($expected);
+        $this->assertArrayHasKey($expected, $yamlData);
+        $this->assertArrayHasKey($expected_hyphenated, $hyphenatedData);
+        $this->assertEquals($expected, $hyphenatedData[$expected_hyphenated]["keyTitle"]);
+    }
+
+    public function testCacheBusterQueryString()
+    {
+        $query_string = substr($this->appInstance->getCacheBusterQueryString(__DIR__ . "/fixtures/empty.txt"), 0, 3);
+        $expected = "?v=";
+        $this->assertEquals($expected, $query_string);
+    }
+
+    public function testCacheBusterQueryStringTriggersErrorIfNoFile()
+    {
+        // Test that invalid file path triggers an error
+        $this->expectException(PHPUnit_Framework_Error::class);
+        $result = $this->appInstance->getCacheBusterQueryString("/does/not/exist.txt");
+    }
+
+    public function testCreatHyphenatedKeys()
+    {
+        $categories = [
+            "foo bar",
+            "bat baz",
+        ];
+
+        $result = $this->appInstance->createHyphenatedKeys($categories);
+        $this->assertArrayHasKey("foo-bar", $result);
+        $this->assertEquals($categories[0], $result["foo-bar"]);
+    }
+
+    public function testArrayContains()
+    {
+        $categories = [
+            "key" => "value"
+        ];
+        $result = $this->appInstance->arrayContains("key", $categories);
+
+        $this->assertEquals(true, $result);
+
+        $result = $this->appInstance->arrayContains("nokey", $categories);
+        $this->assertEquals(false, $result);
+    }
+
+    public function testIsDigit()
+    {
+        $result = $this->appInstance->isDigit("string");
+        $expected_result = false;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->isDigit("1940");
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testToInt()
+    {
+        $result = $this->appInstance->toInt("4");
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->toInt("0");
+        $expected_result = 0;
+        $this->assertEquals($expected_result, $result);
+
+        $this->expectException(\Exception::class);
+        $result = $this->appInstance->toInt("string");
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+
+        $this->expectException(\Exception::class);
+        $result = $this->appInstance->toInt(null);
+        $expected_result = 4;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testInRange()
+    {
+        $result = $this->appInstance->inRange(1984, 1980, 1989);
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->inRange(1980, 1980, 1989);
+        $expected_result = true;
+        $this->assertEquals($expected_result, $result);
+
+        $result = $this->appInstance->inRange(1990, 1980, 1989);
+        $expected_result = false;
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testToDeca()
+    {
+        $year = 1966;
+        $expected_result = 1960;
+
+        $this->assertEquals($expected_result, $this->appInstance->toDeca($year));
+    }
+
+    public function testStripStyleAttributes()
+    {
+        $original_tag = '<p style="some: style; another: style">';
+        $expected_result = "<p >";
+        $this->assertEquals($expected_result, $this->appInstance->stripStyleAttributes($original_tag));
+    }
 }

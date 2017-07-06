@@ -1,0 +1,36 @@
+{% if data.people|length > 0 %}
+<h2>Our expert{% if data.people|length > 1 %}s{% endif %}</h2>
+{% set column_class = "third" %}
+{% for group in data.people %}
+    {% if group|length == 2 %}{% set column_class = "half" %}{% endif %}
+<div>
+    {% for person in group %}
+    <div class="{{ column_class }} margin-top-2">
+    {% if person.internetId %}
+        <div class="half">
+            {% if person.headshotAddress %}
+            <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
+            {% else %}
+                <img src="/assets/images/headshots/slug.jpg" alt="{{ person.nameFirstLast }} headshot" />
+            {% endif %}
+        </div>
+        <div class="half">
+            <h2 class="heading-profile no-margin-top"><a href="/people/{{ person.internetId }}/">{{ person.nameFirstLast }}</a></h2>
+            {% if person.workingTitle|is_string %}
+                <p>{{ person.workingTitle|safe }}</p>
+            {% endif %}
+            <p>{{ person.jobs[0].umZDeptIdDescription}}</p>
+            {% if person.areasOfInterest|is_string %}
+            <div>
+                {{ person.areasOfInterest|safe }}
+            </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% else %}
+<p>It appears we've neglected to categorize an expert in this field. Please check back later.</p>
+{% endif %}

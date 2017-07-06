@@ -1,0 +1,36 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/info-sessions-feed.html" as info_session %}
+{% set page_title = "Transfer Information Sessions" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Information sessions for transfer admissions</h1>
+    <div class="span-6">
+<h2>Welcome prospective transfer students!</h2>
+    <p><em>Please come to a transfer information session!</em></p>
+    <ul>
+      <li>Explore admission requirements for CEHD majors. </li>
+      <li>Find out what the admissions team looks for in your application. </li>
+      <li>Learn about the steps to submitting your application. </li>
+      <li>Discover resources for course planning. </li>
+      <li>Get your questions answered.</li>
+      </ul>
+  </div>
+      <div class="span-6">
+    <h2>Sign up for an information session</h2>
+
+    <div id="info-sessions-container">
+
+    </div>
+
+    <p>You can also <a href="https://admissions.tc.umn.edu/visit/">arrange a tour of our historic campus</a> to see where U of M students attend class, study and relax. To schedule a campus visit, call the VISITLINE at (612)-625-0000 or 1-800-752-1000.</p>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("TA-NonEd","4","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "undergraduate.html") }}
+{% endblock %}

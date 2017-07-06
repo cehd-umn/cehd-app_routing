@@ -100,6 +100,13 @@ class BaseApp extends \CEHD\App\BaseClass
     public $inline_styles;
 
     /**
+     * Minified SVG styles to inject into inline SVGs
+     *
+     * @type string
+     */
+    public $inline_svg_styles;
+
+    /**
      * Template engine
      *
      * @type Twig
@@ -124,20 +131,35 @@ class BaseApp extends \CEHD\App\BaseClass
      * files
      *
      * @param mixed[] $file_paths - array of file paths
+     * @todo can some of this instantiation be lazily loaded?
      */
     function __construct($file_paths)
     {
+        $twig_filters = [
+            "hyphenate",
+            "stripStyleAttributes",
+        ];
+
         $this->router = new Klein\Klein();
         $this->file_paths = $file_paths;
         $this->config = $this->_setConfig();
         $this->nav_items = $this->_setNav();
         $this->copyright_yr = date("Y");
         $this->inline_styles = array_key_exists("inline_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_styles"]) : null;
+        $this->inline_svg_styles = array_key_exists("inline_svg_styles", $this->file_paths) ? file_get_contents($this->file_paths["inline_svg_styles"]) : null;
 
         $twig = $this->bootstrapTwig($this->config['debug']);
         $twig->addGlobal('config', $this->config);
         $twig->addGlobal('nav_items', $this->nav_items);
         $twig->addGlobal('inline_styles', $this->inline_styles);
+        $twig->addGlobal('inline_svg_styles', $this->inline_svg_styles);
+
+        foreach ($twig_filters as $filter_method)
+        {
+            // @xxx Will change in version 2 of Twig
+            $filter = new \Twig_SimpleFilter($filter_method, [$this, $filter_method]);
+            $twig->addFilter($filter);
+        }
         $this->template = $twig;
 
         $this->response = new \CEHD\App\Response\BaseResponse();
@@ -198,6 +220,18 @@ class BaseApp extends \CEHD\App\BaseClass
                 $redirect_uri = $uri . "/" . $query_str;
                 $response->redirect($redirect_uri, 301)->send();
             }
+        }
+
+        $path_components = $this->pathToArray($uri);
+        // If there is something like default.html in the path, it'll be the
+        // last element.
+        $potential_html_filename = array_pop($path_components);
+
+        if (in_array($potential_html_filename, ["default.html", "index.html"]))
+        {
+            // put the uri back together minus the html filename.
+            $new_uri = "/" . implode("/", $path_components) . "/";
+            $response->redirect($new_uri, 301)->send();
         }
 
         // Most redirects will match a key that is the lowercase version of
@@ -333,8 +367,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * @return string - rendered template if the URI matches a route key or
      *         null if not
      */
-    public function renderStaticTemplate(
-        $request, $response, $service, $app)
+    public function renderStaticTemplate($request, $response, $service, $app)
     {
         $route_info = $this->_routes->get($request->pathname());
         if ($this->_routeIsLive($route_info))
@@ -363,5 +396,31 @@ class BaseApp extends \CEHD\App\BaseClass
     protected function _renderTemplate($template_path, $template_data)
     {
         return $this->template->render($template_path, $template_data);
+    }
+
+    /**
+     * Takes an array of human-readable names and gives them a key with the
+     * hyphenated version of the name
+     *
+     * @param array - names
+     * @param boolean - sort
+     * @return array
+     */
+    public function nameToHyphenatedKey($names, $sort=true)
+    {
+        $new_names = [];
+        foreach ($names as $idx => $name)
+        {
+            $hyphenated = $this->helpers->hyphenate($name);
+            $new_names[$hyphenated] = $name;
+        }
+
+        if ($sort)
+        {
+            sort($new_names);
+            return $new_names;
+        }
+
+        return $new_names;
     }
 }

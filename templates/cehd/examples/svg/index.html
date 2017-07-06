@@ -1,0 +1,364 @@
+{% extends "cehd/layout/documentation.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "CEHD Code Examples" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="span-12 margin-top-1">
+            <h2>SVG Experiments</h2>
+
+            <h3>SVG with internal CSS</h3>
+
+            <pre><code class="svg">
+&lt;svg id=&quot;Layer_1&quot; data-name=&quot;Layer 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 574.81 168.58&quot; aria-labelledby=&quot;title&quot; aria-describedby=&quot;title desc&quot; role=&quot;img&quot;&gt;
+    &lt;defs&gt;
+        &lt;style&gt;
+            .cls-1 {
+                font-size: 48px;
+                font-family: Lato-Bold, Lato;
+                font-weight: 700;
+            }
+
+            .cls-1,
+            .cls-5 {
+                fill: #333;
+            }
+
+            .cls-2 {
+                letter-spacing: -0.02em;
+            }
+
+            .cls-3 {
+                letter-spacing: 0em;
+            }
+
+            .cls-4 {
+                fill: none;
+                stroke: #231f20;
+                stroke-miterlimit: 10;
+                stroke-width: 5px;
+            }
+
+            .cls-5 {
+                font-size: 24px;
+                font-family: Lato-Regular, Lato;
+            }
+
+            .cls-6 {
+                letter-spacing: -0.02em;
+            }
+        &lt;/style&gt;
+    &lt;/defs&gt;
+    &lt;title&gt;Did You Know&lt;/title&gt;
+    &lt;desc&gt;Did you know graphic with facts about scholarships&lt;/desc&gt;
+    &lt;text class=&quot;cls-1&quot; transform=&quot;translate(42.77 54.58)&quot;&gt;
+        Did
+        &lt;tspan class=&quot;cls-2&quot;&gt;
+            &lt;tspan x=&quot;-3.14&quot; y=&quot;48&quot;&gt;y&lt;/tspan&gt;
+            &lt;tspan class=&quot;cls-3&quot; x=&quot;21.67&quot; y=&quot;48&quot;&gt;ou&lt;/tspan&gt;
+        &lt;/tspan&gt;
+        &lt;tspan x=&quot;-42.77&quot; y=&quot;96&quot;&gt;know&lt;/tspan&gt;
+    &lt;/text&gt;
+    &lt;line class=&quot;cls-4&quot; x1=&quot;128.35&quot; x2=&quot;128.35&quot; y2=&quot;168.58&quot;/&gt;
+    &lt;text class=&quot;cls-5&quot; transform=&quot;translate(141.01 69.58)&quot;&gt;
+        CEHD has scholarships
+        &lt;tspan class=&quot;cls-6&quot; x=&quot;246.29&quot; y=&quot;0&quot;&gt;r&lt;/tspan&gt;
+        &lt;tspan x=&quot;255.5&quot; y=&quot;0&quot;&gt;anging from&lt;/tspan&gt;
+        &lt;tspan x=&quot;0&quot; y=&quot;28.8&quot;&gt;$1,000-$20,000 for tuition, study abroad&lt;/tspan&gt;
+        &lt;tspan x=&quot;0&quot; y=&quot;57.6&quot;&gt;and unpaid internship.&lt;/tspan&gt;
+    &lt;/text&gt;
+&lt;/svg&gt;
+            </code></pre>
+
+            <div class="feature half margin-top-2">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                font-size: 48px;
+                                font-family: Lato-Bold, Lato;
+                                font-weight: 700;
+                            }
+
+                            .cls-1,
+                            .cls-5 {
+                                fill: #333;
+                            }
+
+                            .cls-2 {
+                                letter-spacing: -0.02em;
+                            }
+
+                            .cls-3 {
+                                letter-spacing: 0em;
+                            }
+
+                            .cls-4 {
+                                fill: none;
+                                stroke: #231f20;
+                                stroke-miterlimit: 10;
+                                stroke-width: 5px;
+                            }
+
+                            .cls-5 {
+                                font-size: 24px;
+                                font-family: Lato-Regular, Lato;
+                            }
+
+                            .cls-6 {
+                                letter-spacing: -0.02em;
+                            }
+                        </style>
+                    </defs>
+                    <title>Did You Know</title>
+                    <desc>Did you know graphic with facts about scholarships</desc>
+                    <text class="cls-1" transform="translate(42.77 54.58)">
+                        Did
+                        <tspan class="cls-2">
+                            <tspan x="-3.14" y="48">y</tspan>
+                            <tspan class="cls-3" x="21.67" y="48">ou</tspan>
+                        </tspan>
+                        <tspan x="-42.77" y="96">know</tspan>
+                    </text>
+                    <line class="cls-4" x1="128.35" x2="128.35" y2="168.58"/>
+                    <text class="cls-5" transform="translate(141.01 69.58)">
+                        CEHD has scholarships
+                        <tspan class="cls-6" x="246.29" y="0">r</tspan>
+                        <tspan x="255.5" y="0">anging from</tspan>
+                        <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                        <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                    </text>
+                </svg>
+            </div>
+            <div class="whole margin-top-4">
+                <div class="half">
+                    <h3>Original</h3>
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    font-size: 48px;
+                                    font-family: Lato-Bold, Lato;
+                                    font-weight: 700;
+                                }
+
+                                .cls-1,
+                                .cls-5 {
+                                    fill: #333;
+                                }
+
+                                .cls-2 {
+                                    letter-spacing: -0.02em;
+                                }
+
+                                .cls-3 {
+                                    letter-spacing: 0em;
+                                }
+
+                                .cls-4 {
+                                    fill: none;
+                                    stroke: #231f20;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 5px;
+                                }
+
+                                .cls-5 {
+                                    font-size: 24px;
+                                    font-family: Lato-Regular, Lato;
+                                }
+
+                                .cls-6 {
+                                    letter-spacing: -0.02em;
+                                }
+                            </style>
+                        </defs>
+                        <title>Did You Know</title>
+                        <desc>Did you know graphic with facts about scholarships</desc>
+                        <text class="cls-1" transform="translate(42.77 54.58)">
+                            Did
+                            <tspan class="cls-2">
+                                <tspan x="-3.14" y="48">y</tspan>
+                                <tspan class="cls-3" x="21.67" y="48">ou</tspan>
+                            </tspan>
+                            <tspan x="-42.77" y="96">know</tspan>
+                        </text>
+                        <line class="cls-4" x1="128.35" x2="128.35" y2="168.58"/>
+                        <text class="cls-5" transform="translate(141.01 69.58)">
+                            CEHD has scholarships
+                            <tspan class="cls-6" x="246.29" y="0">r</tspan>
+                            <tspan x="255.5" y="0">anging from</tspan>
+                            <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                            <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                        </text>
+                    </svg>
+                </div>
+                <div class="half">
+                    <h3>Less markup</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                        <defs>
+                            <style> {{ inline_svg_styles|raw }}</style>
+                        </defs>
+                        <title>Did You Know</title>
+                        <desc>Did you know graphic with facts about scholarships</desc>
+                        <g id="img">
+                            <text class="svg-text-title" transform="translate(42.77 54.58)">
+                                Did
+                                <tspan x="-3.14" y="48">you</tspan>
+                                <tspan x="-42.77" y="96">know</tspan>
+                            </text>
+                            <line class="svg-stroke-vertical" x1="128.35" x2="128.35" y2="168.58"/>
+                            <text class="svg-text-text" transform="translate(141.01 69.58)">
+                                CEHD has scholarships
+                                <tspan x="246.29" y="0">ranging from</tspan>
+                                <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                                <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="whole margin-top-1">
+                <h4>Code example of the SVG with less markup</h4>
+                <pre><code class="svg">
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 574.81 168.58&quot; aria-labelledby=&quot;title&quot; aria-describedby=&quot;title desc&quot; role=&quot;img&quot;&gt;
+    &lt;defs&gt;
+        &lt;style&gt;
+            .cls-1 {
+                font-size: 48px;
+                font-family: Lato-Bold, Lato;
+                font-weight: 700;
+            }
+
+            .cls-1,
+            .cls-5 {
+                fill: #333;
+            }
+
+            .cls-4 {
+                fill: none;
+                stroke: #231f20;
+                stroke-miterlimit: 10;
+                stroke-width: 5px;
+            }
+
+            .cls-5 {
+                font-size: 24px;
+                font-family: Lato-Regular, Lato;
+            }
+        &lt;/style&gt;
+    &lt;/defs&gt;
+    &lt;title&gt;Did You Know&lt;/title&gt;
+    &lt;desc&gt;Did you know graphic with facts about scholarships&lt;/desc&gt;
+    &lt;text class=&quot;cls-1&quot; transform=&quot;translate(42.77 54.58)&quot;&gt;
+        Did
+        &lt;tspan x=&quot;-3.14&quot; y=&quot;48&quot;&gt;you&lt;/tspan&gt;
+        &lt;tspan x=&quot;-42.77&quot; y=&quot;96&quot;&gt;know&lt;/tspan&gt;
+    &lt;/text&gt;
+    &lt;line class=&quot;cls-4&quot; x1=&quot;128.35&quot; x2=&quot;128.35&quot; y2=&quot;168.58&quot;/&gt;
+    &lt;text class=&quot;cls-5&quot; transform=&quot;translate(141.01 69.58)&quot;&gt;
+        CEHD has scholarships
+        &lt;tspan x=&quot;246.29&quot; y=&quot;0&quot;&gt;ranging from&lt;/tspan&gt;
+        &lt;tspan x=&quot;0&quot; y=&quot;28.8&quot;&gt;$1,000-$20,000 for tuition, study abroad&lt;/tspan&gt;
+        &lt;tspan x=&quot;0&quot; y=&quot;57.6&quot;&gt;and unpaid internship.&lt;/tspan&gt;
+    &lt;/text&gt;
+&lt;/svg&gt;
+                </code></pre>
+            </div>
+            <div class="whole margin-top-1">
+                <div class="half">
+                    <h3>Straight markup</h3>
+                    <pre><code class="svg">
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 574.81 168.58&quot; aria-labelledby=&quot;title&quot; aria-describedby=&quot;title desc&quot; role=&quot;img&quot;&gt;
+        &lt;defs&gt;
+            &lt;style&gt;
+                .cls-1 {
+                    font-size: 48px;
+                    font-family: Lato-Bold, Lato;
+                    font-weight: 700;
+                }
+
+                .cls-1,
+                .cls-5 {
+                    fill: #333;
+                }
+
+                .cls-4 {
+                    fill: none;
+                    stroke: #231f20;
+                    stroke-miterlimit: 10;
+                    stroke-width: 5px;
+                }
+
+                .cls-5 {
+                    font-size: 24px;
+                    font-family: Lato-Regular, Lato;
+                }
+            &lt;/style&gt;
+        &lt;/defs&gt;
+        &lt;title&gt;Did You Know&lt;/title&gt;
+        &lt;desc&gt;Did you know graphic with facts about scholarships&lt;/desc&gt;
+        &lt;text class=&quot;cls-1&quot; transform=&quot;translate(42.77 54.58)&quot;&gt;
+            Did
+            &lt;tspan x=&quot;-3.14&quot; y=&quot;48&quot;&gt;you&lt;/tspan&gt;
+            &lt;tspan x=&quot;-42.77&quot; y=&quot;96&quot;&gt;know&lt;/tspan&gt;
+        &lt;/text&gt;
+        &lt;line class=&quot;cls-4&quot; x1=&quot;128.35&quot; x2=&quot;128.35&quot; y2=&quot;168.58&quot;/&gt;
+        &lt;text class=&quot;cls-5&quot; transform=&quot;translate(141.01 69.58)&quot;&gt;
+            CEHD has scholarships
+            &lt;tspan x=&quot;246.29&quot; y=&quot;0&quot;&gt;ranging from&lt;/tspan&gt;
+            &lt;tspan x=&quot;0&quot; y=&quot;28.8&quot;&gt;$1,000-$20,000 for tuition, study abroad&lt;/tspan&gt;
+            &lt;tspan x=&quot;0&quot; y=&quot;57.6&quot;&gt;and unpaid internship.&lt;/tspan&gt;
+        &lt;/text&gt;
+    &lt;/svg&gt;
+                    </code></pre>
+                    <div class="whole margin-top-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.81 168.58" aria-labelledby="title" aria-describedby="title desc" role="img">
+                            <defs>
+                                <style> {{ inline_svg_styles|raw }}</style>
+                            </defs>
+                            <title>Did You Know</title>
+                            <desc>Did you know graphic with facts about scholarships</desc>
+                            <g id="img">
+                                <text class="svg-text-title" transform="translate(42.77 54.58)">
+                                    Did
+                                    <tspan x="-3.14" y="48">you</tspan>
+                                    <tspan x="-42.77" y="96">know</tspan>
+                                </text>
+                                <line class="svg-stroke-vertical" x1="128.35" x2="128.35" y2="168.58"/>
+                                <text class="svg-text-text" transform="translate(141.01 69.58)">
+                                    CEHD has scholarships
+                                    <tspan x="246.29" y="0">ranging from</tspan>
+                                    <tspan x="0" y="28.8">$1,000-$20,000 for tuition, study abroad</tspan>
+                                    <tspan x="0" y="57.6">and unpaid internship.</tspan>
+                                </text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="half">
+                    <h3>Macro-generated</h3>
+                        <pre><code class="jinja">{% verbatim %}
+{% set lines = [
+    "CEHD has scholarships",
+    "ranging from",
+    "$1,000-$20,000 for tuition, study abroad",
+    "and unpaid internships.",
+] %}
+{{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}{% endverbatim %}
+                        </code></pre>
+                    <div class="whole margin-top-1">
+                        {% set lines = [
+                            "CEHD has scholarships",
+                            "ranging from",
+                            "$1,000-$20,000 for tuition, study abroad",
+                            "and unpaid internships.",
+                        ] %}
+                        {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

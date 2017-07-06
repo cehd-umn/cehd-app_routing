@@ -1,0 +1,93 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Undergraduate Tuition" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+{% block extra_css %}
+<style>
+.speaker {
+    font-size: 14px;
+    float: right;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+}
+.quote-wrap{
+    margin-top: 50px;
+}
+.path {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #005d9a;
+}
+.containter-tight {
+    width: 75%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 0 2em;
+}
+</style>
+{% endblock %}
+<div class="row">
+  <div class="container">
+    <h1>Undergraduate costs, aid and scholarships </h1>
+    		<p class="half feature">If you’re a future freshman or transfer student, visit the <a href="http://admissions.tc.umn.edu/costsaid/index.html">Office of Admissions</a> for links to cost of attendance, residency and reciprocity guidelines, scholarships, and more. </p>
+        <p class="half feature">Current CEHD students are encouraged to apply for CEHDs cholarships. CEHD  awards scholarships ranging from $1,000-$20,000 fortuition, study abroad, and unpaid internships.</p>
+        <div class="margin-top-4">
+
+  </div>
+  <h2 class="text-center">Scholarships</h2>
+  <div class="row">
+      <div class="half">
+          <h3>Incoming freshmen </h3>
+    	        <p><a href="http://admissions.tc.umn.edu/costsaid/schol_campus.html">University-wide academic scholarships</a> are given to incoming freshmen students and do not require a separate scholarship application. For students applying to CEHD, you will also be considered for these <a href="http://admissions.tc.umn.edu/costsaid/schol_college.html#cehd">CEHD scholarships</a>. </p>
+      </div>
+      <div class="half">
+          <h3>Minnesota residents </h3>
+    	        <p>If you are a Minnesota resident and incoming freshman or transfer student, you will be automatically considered for a <a href="http://www.upromise.umn.edu/index.html">U Promise scholarship</a> at the time of application. </p>
+      </div>
+</div>
+      <div class="half feature">
+            <h3>Current CEHD students </h3>
+      	        <p><a href="/undergraduate/scholarships/general/">Scholarships for current CEHD students, </a>including <a href="/undergraduate/scholarships/study-abroad/">CEHD study abroad scholarships</a>, <a href="/undergraduate/scholarships/alumni/">alumni-sponsored scholarships</a>,  <a href="/undergraduate/scholarships/internship-grant/">CEHD internship grants</a>, and <a href="/undergraduate/scholarships/teacher-aid/">scholarships for prospective teachers</a>. <br/>
+      	        To be considered for most <strong>major specific</strong> scholarships, complete the <a href="/scholarships/general/">general scholarship application</a>. <br/>
+      	        The School of Kinesiology (Kinesiology, Sport Management and Recreation Administration majors) has additional <a href="http://www.cehd.umn.edu/kin/current/scholarships/default.html">major specific scholarships</a>. <br/>
+      	        <a href="http://onestop.umn.edu/finances/scholarships">One Stop Student Services</a> has additional scholarship resources. </p>
+        </div>
+      <div class="row">
+	      <div class="half">
+            <h2>Financial aid</h2>
+                <a href="http://onestop.umn.edu/finances/receiving-financial-aid">Find U of M  financial aid advising and information</a> at One Stop Student Services.
+            </div>
+        <div class="half">
+            <h2>International students</h2>
+                <p>Find information related to cost of attendance, scholarships, and visa information on the <a href="http://admissions.tc.umn.edu/admissioninfo/intl_costs.html">Office of Admissions website</a>.</p>
+          </div>
+        </div>
+  </div> <!-- ./container -->
+  <div class="row emphasis bg-cehd-multi">
+    <div class="span-9 feature">
+      <div class="third">
+          <img class="circular" src="/assets/images/headshots/student-features/Sq-2017-Genesis-Mendoza.jpg" alt="photo of Genesis Mendoza">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">Being a first-generation college student means that my family depends on me being successful and having a good career. I definitely appreciate what I have and know what hard work can get me. Knowing that I have this financial help truly means a lot.</blockquote>
+            <p align="right" class="speaker">Genesis Mendoza <br/>
+           Business and Marketing Education <br/>
+           minor in Youth Studies <br/>
+           Marx Sloane Scholarship recipient <br/></p>
+      </div>
+    </div>
+  </div>
+    <div class="span>"><br /></div> <!-- ./row -->
+    <div class="row emphasis cool">
+          <div class="half feature">
+            <div class="corner-borders-top"></div>
+              <div class="container">
+                <h2 class="text-center">Next steps </h2>
+                <p class="text-center"><a href="/undergraduate/">Learn with us</a> | <a href="/undergraduate/apply/">Apply</a> | <a href="/undergraduate/contact/">Contact</a></p>
+            </div>
+            <div class="corner-borders-bottom"></div>
+          </div>
+      </div>
+</div> <!-- ./row -->
+{% endblock %}

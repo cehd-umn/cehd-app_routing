@@ -1,0 +1,89 @@
+{% extends "cehd/layout/base.html" %}
+{% block extra_css %}
+<style>
+    .category-container {
+        background-color: #ffcc33;
+    }
+
+    #maincontent {
+        min-height: 900px;
+    }
+
+</style>
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        {% block intro_text %}
+        {% endblock %}
+        <div class="button-group filter-button-group">
+            <form action="">
+                <div class="category-filter-container">
+                    <ul class="category-filters">
+                        <div class="span-12">
+                        {% for category_group_title, category_group in categories %}
+                            <h2 class="text-center">{{ category_group_title }}</h2>
+                          {% for category_class, category in category_group %}
+                              {% set start_new_row = category == "Undergraduate Major" or
+                                  category == "Languages, Culture, and International" or
+                                  category == "Masters" %}
+                              {% if start_new_row %}
+                                  </div><div class="span-12">
+                              {% endif %}
+                              <li class="category-filter category-button">
+                                  <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
+                                      <label for="{{ category_class }}-filter">{{ category }}</label>
+                                  </input>
+                              </li>
+                          {% endfor %}
+                        {% endfor %}
+                        </div>
+                        <div class="span-12">
+                            <li class="clear-filters category-button">
+                                <input type="checkbox" checked name="clear-filter" id="clear-filters" data-filter="*">
+                                    <label for="clear-filters">No filters</label>
+                                </input>
+                            </li>
+                        </div>
+                    </ul>
+                </div><!-- / category-filter-container -->
+            </form>
+        </div><!-- button-group -->
+        <div class="span-3 push-8">
+            {# TODO make sure these forms are accessible #}
+            <form action="">
+                <input type="text" id="full-text-search-input" placeholder="Search">
+            </form>
+        </div>
+    </div><!-- / container -->
+</div><!-- / row -->
+{% include "cehd/includes/cards.html" %}
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    $(function() {
+        "use strict";
+        // var $select_button = $(".multi-select");
+        var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
+        var $s = $("#full-text-search-input");
+
+        // reads query params and filters on them
+        filterManager.setUIState();
+
+        window.onpopstate = function() {
+            filterManager.setUIState();
+        };
+
+        $s.focusin(function() {
+            $s = $(this);
+            $s.data("placeholder", $s.attr("placeholder"));
+            $s.attr("placeholder", "");
+        });
+
+        $s.focusout(function() {
+            $s = $(this);
+            $s.attr("placeholder", $s.data("placeholder"));
+        });
+    });
+</script>
+{% endblock %}

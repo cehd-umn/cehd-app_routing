@@ -1,0 +1,112 @@
+
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Giving" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>The Bergauer Fellowship helps OLPD graduate students<br /> engage with their communities</p>
+        </div>
+        <div class="third">
+            <p><a href="http://connect.cehd.umn.edu/giving-matters-fostering-educational-leadership/" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block main_content %}
+<div class="row has-hero-image">
+    <div class="container">
+        <h1>Giving</h1>
+        <div class="twothird feature">
+        <p>Private support makes a critical difference in what the College of Education and Human Development is able to do together as a community—in the research we are able to advance, the new programs we are able to create, and the talented students we are able to support. Your spirit of giving is a tremendous vote of confidence in our shared endeavor.
+        </p>
+        <p class="text-center"><a href="https://makingagift.umn.edu/onlinegiving/enterOnlineGiving.do?owner=O_CEHD&desc_source=UWXX_EDHD_SITE" class="button center">Give now</a></p>
+        </div>
+</div>
+        <div class="row emphasis margin-top-1">
+            <div class="half feature">
+                <blockquote class="quote-wrap">We are driven by our belief in the value of every child and adult, each with unique talents and challenges. We share our knowledge for public use to impact and improve lives. </blockquote>
+                <p align="right" class="speaker">Jean Quam, Dean</p>
+            </div>
+        </div>
+            <div class="container">
+        <div class="margin-top-3"></div>
+
+        <div class="row">
+            <div class="container">
+                <div class="span-12">
+                    <img src="/assets/images/wordmarks/wordmark-Improving-Lives.png" alt="Improving Lives wordmark" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="span-6">
+                    <h3>New perspectives on education and human development</h3>
+                        <p>The Improving Lives campaign seeks to increase private investment to expand our work and capacity for discovery and engagement. This support will ensure the college can attract and retain brilliant faculty thinkers and leaders, recruit the most promising students, and provide the facilities necessary to continue our vital research.<br /><small><a href="http://www.cehd.umn.edu/giving/improving-lives/default.html">Read more</a></small></p>
+                </div>
+                <div class="span-6">
+                    <h3>Impact of giving</h3>
+                    <h4>A Mooty Foundation gift helps foster math skills in North Minneapolis</h4>
+                        <div class="third">
+                            <img class="circular" src="/assets/images/headshots/faculty-features/sq-2016-Lesa-Clarkson.jpg" alt="photo of Lesa Clarkson" />
+                        </div>
+                        <div class="twothird">
+                            <!-- <h4>A Mooty Foundation gift helps foster math skills in North Minneapolis</h4> -->
+                            <p>Lesa Clarkson is the associate professor of mathematics education who created Prepare2Nspire, a near-peer tutoring program to motivate youth to love math like she does.<br /><small><a href="http://connect.cehd.umn.edu/giving-matters-inspiring-math-learners/">Read more</a></small></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top-3">
+        </div>
+        <div class="container">
+            <div class="span-12">
+                <h2 class="text-center">We believe that education plus human development<br/>
+                    equals virtually limitless possibility.</h2>
+            </div>
+        </div>
+</div>
+<div class="margin-top-2">
+<!-- HOLD UNTIL THERE IS CONTENT -->
+        <!-- <div class="row emphasis margin-top-1">
+            <div class="container">
+                <div class="span-12">
+                    <h2 class="text-center">Why give to CEHD?</h2>
+                </div>
+                <div class="span-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+                </div>
+                <div class="span-6">
+                    <img src="/assets/images/icons/M-giving-1.svg" alt="funding now" width="80%"/>
+                <div class="margin-top-4"></div>
+                    <img src="/assets/images/icons/M-giving-2.svg" alt="funding then" width="80%"/>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="margin-top-1"></div>
+
+        <div class="row">
+            <div class="container">
+
+                <div class="twothirds feature">
+                    <h2>Giving to departments and centers</h2>
+                    <p>Giving is powerful proof of an institution’s value. CEHD's leadership in education, human development, and research depends upon the generosity of countless supporters.</p>
+                    <p>The collective impact of your gifts fuels endless opportunities in the classroom, throughout the community, and across the globe.</p>
+                    <p>The form that your particular gift takes should reflect your specific needs and circumstances. If you would like to support a specific department or research center within CEHD, please visit their giving pages.</p>
+                </div>
+            </div>
+            <div class="span-12">
+                         {{ include('cehd/includes/connect.html') }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

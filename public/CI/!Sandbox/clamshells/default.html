@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><!-- #BeginTemplate "/Templates/standard.dwt" --><!-- DW6 -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- #BeginEditable "doctitle" -->
+<title>Postsecondary Teaching and Learning - CEHD - Univ. of Minn.</title>
+<!-- #EndEditable -->
+<!--#include virtual="/ci/attributes/includes/favicons.asp" -->
+<link rel="stylesheet" href="/ci/attributes/css/core2012.css" media="all" type="text/css" />
+<link rel="stylesheet" href="/ci/attributes/css/umn-header.css" media="all" type="text/css" />
+<link rel="stylesheet" href="/ci/attributes/css/CandI.css" media="all" type="text/css" />
+<link rel="stylesheet" href="/ci/attributes/css/candi-wide.css" media="all" type="text/css" />
+<link rel="stylesheet" href="/ci/Assets/Fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+<!--  This just makes HTML5 operate on old versions of IE -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="/ci/attributes/js/jquerry/js/jquery-1.9.0.js"></script>
+<script src="/ci/attributes/js/jquerry/js/jquery-ui-1.10.0.custom.min.js"></script>
+<link rel="stylesheet" href="/ci/attributes/js/jquerry/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" media="all" type="text/css" />
+<script src="/ci/attributes/js/responsive.js"></script>
+<script type="text/javascript" language="javascript" src="/attributes/js/globalnav.js" ></script>
+<script type="text/javascript" src="/attributes/js/ajaxRSS.js"></script>
+
+<!-- #BeginEditable "head" -->
+
+<!-- #EndEditable -->
+</head>
+
+<body> 
+<div id="container">
+<!--#include virtual="/ci/attributes/includes/campuslinks.asp" -->
+		<!--#include virtual="/ci/attributes/includes/umn-header.asp" -->
+  <!--#include virtual="/ci/attributes/includes/header.asp" -->
+<div id="restabs">
+
+<div id="tabnav"><span id="menuicon">Menu</span></div>
+
+
+<div id="tabextra"><!-- #BeginEditable "tabname" -->Forms<!-- #EndEditable --></div>
+
+</div>
+    <br class="clearfloat" />
+    <nav>
+    	<!--#include virtual="/ci/attributes/includes/nav.asp" -->
+    </nav>
+    <div id="maincontent"><!-- #BeginEditable "main-content" -->
+  					<h1>Adding a Clamshell Menu</h1>
+	  <p>Firelfy comes equipped with a clamshell menus built in and ready to go. If you want to see them in action, try the &quot;layouts&quot; section on the navigation</p>
+					<h2>How do they work?</h2>
+					<p>Just go into the navigation incldue file, found in</p>
+					<ul>
+					  <li>attributes&gt;includes&gt;nav.asp	</li>
+	  </ul>
+					<p>Open that up, and away you go. Everything is in unordered lists. Just edit it right in the design view. If you want a subsection, just hit the indent button, or hit the tab key, and you'll go in a level.	  </p>
+	  <h2>Keys to Success					</h2>
+					<p>Keep the ul structure of the navigation clean, the parent 
+					ul: &lt;ul id=&quot;navblock&quot;&gt;<br />
+	  Nested ul&#39;s are: &lt;ul class=&quot;submenu&quot;&gt;</p>
+	  <p>When adding more pages to the clamshell navigation keep 
+					in mind it will behave erratically if:</p>
+					<ul>
+									<li>List items are not linked to pages</li>
+									<li>Identical links appear in more than one 
+									place</li>
+									<li>The default page in a directory is not 
+									linked in the navigation</li>
+					</ul>
+					<h2>What if you want to take them out?<br />
+	  </h2>
+                    <p>Easy enough... 2 steps.</p>
+                    <ol>
+                      <li>Remove the java script file from the document header (it's where you find all the CSS files and stuff). It actually has a comment telling you which file to delete.</li>
+                      <li>Remove the java code from the navigation include (it lives at... attributes&gt;includes&gt;nav.asp), the code looks like...
+                        <ul>
+                          <li>&lt;script type="text/javascript"&gt; ddtreemenu.createTree("navblock")   					&lt;/script&gt; </li>
+                        </ul>
+                      </li>
+                    </ol>
+<p>&nbsp;</p>
+<p class="revised">Revised April 2010</p>
+	<!-- end #maincontent -->
+	
+					<!-- #EndEditable --></div>
+        <br class="clearfloat" />
+
+<!--#include virtual="/ci/attributes/includes/footer.asp" --></div>
+</body>
+<!-- #EndTemplate --></html>

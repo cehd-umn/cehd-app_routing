@@ -1,10 +1,11 @@
 {% extends "layout/base.html" %}
-{% block css %}<link href="{{ config.css_base }}/minified/cehd.css" rel="stylesheet" type="text/css">{% endblock %}
+{% block css %}<link href="{{ config.css_base }}/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
-{% block title_append %} | {{ config.dept_name|raw }} | University of Minnesota{% endblock %}
-{% block bottom_js %}<script src="{{ config.js_base }}/cehd.min.js"></script>{% endblock %}
+{% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
+{% block bottom_js %}<script src="{{ config.js_base }}/cehd.min.js{{ js_cachebuster }}"></script>{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+{# todo: add these font-face styles to inline.scss #}
 <style>
 @font-face {
   font-family: 'Lato';
@@ -16,7 +17,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
@@ -43,6 +44,12 @@
   src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
     font-family: 'FontAwesome';
     src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot');
     src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
@@ -54,38 +61,11 @@
 </style>
 {% endblock %}
 {% block section_wordmark %}
-    <nav id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
-        <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
-        <button id="navhide"><span class="accessible-hidden accessible-no-display">Hide Menu</span></button>
-        <ul id="navblock" role="tree" aria-labelledby="nav-main-heading">
-        {% for nav_item in nav_items %}
-            {% set has_sub = nav_item.subnav %}
-            <li role="treeitem" {% if has_sub %}class="has-more{% if section == nav_item.section %} open{% endif %}"{% endif %}>
-                <a href="{{ config.base_url }}{{ nav_item.href }}" tabindex="0">{{ nav_item.name }}</a>
-                {% if has_sub %}
-                    <ul role="group" aria-expanded="{% if section == nav_item.section %}true{% else %}false{% endif %}" class="group-{{ section }}" data-section="{{ section }}">
-                        {% for subnav_item in nav_item.subnav %}
-                            <li role="treeitem" class="tree-item tree-item-{{ section }}{% if loop.last %} last{% endif %}">
-                                <a href="{{ config.base_url }}{{ subnav_item.href }}" tabindex="{% if section == nav_item.section %}0{% else %}-1{% endif %}">
-                                    {{ subnav_item.name }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul>
-    </nav>
 {% endblock %}
 {% block nav %}
-<div id="menutab">
-    <div id="menuicon-wrapper">
-        <span id="menuicon" class="box-shadow-menu">
-        </span>
-        <span id="menulabel">Menu</span>
-    </div>
-</div>
+<div class="section-header-container row">
+    {% include "cehd/includes/nav/main.html" with {"nav_items": nav_items} %}
+</div><!-- // row -->
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">
@@ -98,13 +78,15 @@
                     </div>
                     <p><a href="{{config.base_url}}/"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
                     <address>
-                    <p><a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
+                        <a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
                         612-626-9252<br>
                         104 Burton Hall<br>
                         178 Pillsbury Dr. S.E.<br>
-                        Minneapolis, MN 55455
+                        Minneapolis, MN 55455<br>
+                        612-626-9252 | <a href="mailto:cehd@umn.edu">cehd@umn.edu</a>
                     </address>
-                    <p><a href="{{config.base_url}}/contact/">Contact form</a> | <a href="http://www.cehd.umn.edu/directory/">Directory</a></p>
+
+                    <!-- <p><a href="/directory/">College Directory</a> | <a href="/about/accreditation/">Accreditation</a></p> -->
                 </div>
             </div>
             <div class="span-4">

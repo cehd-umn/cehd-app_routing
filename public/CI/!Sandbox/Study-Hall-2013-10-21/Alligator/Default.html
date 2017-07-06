@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Big Form Sample - Alligator</title>
+<link rel="stylesheet" type="text/css" href="../attributes/css/sample.css"/>
+</head>
+
+<body>
+
+    <h1><img src="../attributes/images/Alligator.png" alt="An alligator" width="240" height="174" class="right">Alligator Dance</h1>
+    <p>Great! We will see you at the alligator dance in Anoka.</p>
+    <p>Just one more selection to submit.</p>
+    <div id="Form-Light">
+      <form method="post" action="https://apps.cehd.umn.edu/forms/afp.aspx?formid=33">
+        <!-- Called: Study Hall Sample in AFP - JFA 2013-10-15 -->
+        <input type="hidden" value="Alligator Dance" name="Pathway" />
+        <fieldset>
+          <legend>Entertainment</legend>
+          <p>What would you like to see for entertainment? Select as many as you like.</p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L1" name="Entertainment" type="checkbox" tabindex="1" value="Live Band" />
+            <label for="CB-L1">Live Band<span>As long as they don't play <em>Crocidile Rock</em></span></label>
+          </p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L2" name="Entertainment" type="checkbox" tabindex="2" value=" Poodle Juggling" />
+            <label for="CB-L2">Poodle Juggling</label>
+          </p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L3" name="Entertainment" type="checkbox" tabindex="3" value=" House DJ" />
+            <label for="CB-L3">House DJ</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Comments</legend>
+          <p>
+            <label for="Text1">Your feedback counts!</label>
+            <textarea id="Text1" name="Feedback" tabindex="4"></textarea>
+          </p>
+          <br class="clearfloat" />
+          <p>&nbsp;</p>
+        </fieldset>
+        <p>
+          <input name="Submit1" type="submit" value="submit" class="button" />
+        </p>
+        <br class="clearfloat" />
+        <input type="hidden" value="alligator" name="URL" />
+        <input type="hidden" value="Aly Alligator" name="FromName" />
+        <input type="hidden" value="Anoka County Municipal Ballroom" name="Message1" />
+        <input type="hidden" value="123 Anoka Road" name="Message2" />
+        <input type="hidden" value="Anoka, MN 55555" name="Message3" />
+        <input type="hidden" value="Aligator dance cancellation must be received two weeks before the event." name="Message4" />
+      </form>
+</div>
+</body>
+
+</html>

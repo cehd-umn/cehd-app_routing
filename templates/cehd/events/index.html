@@ -1,0 +1,91 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "Events" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block meta_og %}
+<meta property="og:url" content="http://www.cehd.umn.edu/events/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="CEHD Events" />
+<meta property="og:description" content="Events for the College of Education and human development" />
+{% endblock %}
+{% block extra_css %}
+<style>
+    .date {
+        background-color: #eeeeed;
+        font-size: 14px;
+        font-weight: normal;
+        height: 40px;
+        padding: 10px 0 0 15px;
+    }
+    .event-box {
+        background-color: #d9edf7;
+        height: 50px;
+        padding-top: 7px;
+    }
+    .event {
+        padding-left: 15px;
+    }
+
+    .event-details {
+        background: #fff;
+    }
+
+    .description {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+</style>
+{% endblock %}
+{% block main_content %}
+<div class="row">
+  <article class="container">
+    <section class="span-6 feature">
+    {{ loader.loader(
+        "CEHD events",
+        "h1",
+        "events-container"
+        ) }}
+    </section>
+    {#
+    <div class="span-5 push-1">
+        <h2 class="event-box text-center">Event details</h2>
+        <h3>Adverse Childhood Experiences: Longitudinal Outcomes in Context of
+            Environmental Risk &amp; Intervention</h3>
+        <p><strong>When:</strong> June 20 - 21, 2017</p>
+        <p><strong>Where:</strong> University of Minnesota West Bank Campus <a href="#">map</a></p>
+        <p><strong>Cost:</strong> Individual (before April 30): $100; Individual (after April 30): $125; Group (3 or more): $75/ea.; Student: $50</p>
+        <div class="text-center">
+            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/email.html" %}</div>
+            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/calendar.html" %}</div>
+            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/facebook.html" %}</div>
+            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/twitter.html" %}</div>
+        </div>
+        <p>Register now for the second University of Minnesota convening of
+        Minnesota's education leaders, researchers, policy makers, and
+        non-profit organizations committed to improving educational equity.</p>
+
+        <p>This year's theme is Working Across Schools and Communities to
+        Enhance Social Emotional Learning. University of Minnesota faculty,
+        school, community, and youth leaders will present the latest research
+        and programs that are making a difference in the lives of children and
+        youth across the state.</p>
+
+        <p>We'll explore the impact of chronic trauma on youth. We'll also
+        include a special focus on American Indian students. Get more
+        information on the event agenda, including keynote speakers.</p>
+
+        <p>Following the event: You'll leave with ideas for how to promote
+        social emotional learning in your organization and a support system of
+        others across the state focused on the same goal.</p>
+
+        <p><strong>REGISTRATION:</strong> <a href="#">Register now</a>. For
+        more information or to request disability accomodations, email <a
+        herf="mailto:edequity@umn.edu">edequity@umn.edu</a>.</p>
+  </article> <!-- ./container -->
+  #}
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ eventsfeed.events_feed_js(170, 1000, "#events-container", "/assets/dist/views/cehd/events", "events-page.html", 6, 12) }}
+{% endblock %}

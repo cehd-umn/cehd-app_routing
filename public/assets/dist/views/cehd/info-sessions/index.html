@@ -1,0 +1,7 @@
+<ul>
+{% for info_session in data.info_sessions %}
+    {% if loop.index0 < data.limit %}
+        <li><a href="">{{ info_session.dayOfWeek }} {{ info_session.dateFull }}</a> | {{ info_session.startTime }}</li>
+    {% endif %}
+{% endfor %}
+</ul>

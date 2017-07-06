@@ -10,11 +10,10 @@
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
-@import "nav";
 @import "variables";
 
 header {
-    margin-bottom: 48px;
+    margin-bottom: 0;
 }
 
 img {
@@ -26,9 +25,75 @@ img {
     }
 }
 
+.container,
+.row {
+    @include clearfix;
+}
+
+.emphasis {
+    background-color: $cehd-tertiary-gold;
+    padding: 2em;
+
+    &.subtle {
+        background-color: $cehd-light-grey;
+
+        .button {
+            border-color: $base-white;
+        }
+    }
+
+    &.cool {
+        background-color: $umn-light-blue-background;
+    }
+
+    &.earthy {
+        background-color: $umn-light-brown-foreground;
+    }
+}
+
+.pull-quote {
+    font-size: 1.5em;
+}
+
+.outer-bg-right {
+    background: $cehd-tertiary-gold;
+
+    &.right-third {
+        background: $cehd-tertiary-gold;
+
+        &.cool {
+            background: $umn-light-blue-background;
+        }
+    }
+
+    &.right-two-third {
+        background: $cehd-tertiary-gold;
+
+        &.cool {
+            background: $umn-light-blue-background;
+        }
+    }
+
+    &.cool {
+        background: $umn-light-blue-background;
+    }
+}
+
+.inner-bg-right {
+    &.cool {
+        background: $umn-light-blue-background;
+    }
+}
+
 @for $margin from 1 through 4 {
     .margin-top-#{ $margin } {
         margin-top: #{ $margin }em;
+    }
+}
+
+@each $size in 12, 14, 16, 18, 20, 24 {
+    .margin-bottom-#{ $size } {
+        margin-bottom: #{ $size }px;
     }
 }
 
@@ -44,6 +109,14 @@ img {
     li {
         margin-bottom: 10px;
         margin-left: 0;
+
+        &.news-item {
+            margin-bottom: 1em;
+        }
+    }
+
+    &.indent {
+        margin-left: 15px;
     }
 }
 
@@ -75,13 +148,11 @@ img {
 .container {
     @include outer-container;
     @include pad(0 2em 0 2em);
-}
 
-/// Container for main navigation
-/// @todo move this to _nav.scss
-.nav-container {
-    position: absolute;
-    top: 100px;
+    &.tight {
+        padding: 0 2em;
+        width: 75%;
+    }
 }
 
 /// Granular grid options for all breakpoints
@@ -93,11 +164,18 @@ img {
 }
 
 /// No `clear` for simple columns
+.always-half,
 .half,
 .third,
 .twothird,
 .twothirds {
     clear: none;
+    min-height: 1px;
+}
+
+// "half" style that never stacks for mobile
+.always-half {
+    @include span-columns(6);
 }
 
 .whole {
@@ -142,6 +220,29 @@ img {
     font-style: normal;
 }
 
+ol {
+    &.with-headings {
+        counter-reset: li; /* Initiate a counter */;
+        padding-left: 1.13em;
+
+        > li {
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: counter(li); /* Use the counter as content */
+                counter-increment: li; /* Increment the counter by 1 */
+                left: -2em;
+                margin-right: 8px;
+                padding: 4px;
+                position: absolute;
+                top: -4px;
+                width: 2em;
+            }
+        }
+    }
+}
+
 /// Iterates over map of heading sizes to generate heading styles and matching
 /// classes
 ///
@@ -154,6 +255,11 @@ img {
         margin: .7em 0;
         padding: 0;
 
+        li.#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+        }
+
         &.light {
             font-family: Lato, Verdana, Geneva, sans-serif;
             font-weight: normal;
@@ -161,6 +267,10 @@ img {
 
         &.no-margin-top {
             margin-top: 0;
+        }
+
+        &.no-margin-bottom {
+            margin-bottom: 0;
         }
     }
 
@@ -256,6 +366,46 @@ img {
 
         top: 1em;
     }
+
+    &.simple {
+        border: 0;
+        padding: .5em 1.5em;
+
+        &::after {
+            bottom: 6px;
+        }
+
+        &::before {
+            top: 6px;
+        }
+
+        &.green {
+            background-color: $cehd-green-button-background;
+            color: $base-white;
+        }
+
+        &.maroon {
+            background-color: $umn-maroon;
+            color: $base-white;
+        }
+    }
+
+    &.clear {
+        background: transparent;
+        border: 1px solid $base-white;
+        color: $base-white;
+        padding: 1em;
+        text-shadow: none;
+
+        &:focus,
+        &:hover {
+            background: transparent;
+            border: 1px solid $base-white;
+            text-decoration: none;
+        }
+
+    }
+
 }
 
 a {
@@ -263,9 +413,13 @@ a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             @if $pseudo-class != hover {
                 &:#{$pseudo-class} {
-                    color: $umn-charcoal;
+                    color: $umn-dark-grey-foreground;
                 }
             }
+        }
+
+        &.clear {
+            color: $base-white;
         }
 
         &:hover {
@@ -289,7 +443,7 @@ a {
     position: relative;
 }
 
- /// Text alignments
+ /// Text styles
 
 .text-left {
     text-align: left;
@@ -307,6 +461,12 @@ a {
     }
 }
 
+.text-plain {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+}
+
 #dept-footer {
     background-color: $umn-light-grey-foreground;
 }
@@ -319,7 +479,7 @@ footer {
     a {
         @each $pseudo-class, $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
-                color: $umn-charcoal;
+                color: $umn-dark-grey-foreground;
             }
         }
     }
@@ -348,13 +508,6 @@ footer {
 /// they're defined based on where things break in the *design*.
 ///
 /// @todo better organize these media breakpoints
-@media all and (min-width: 321px) {
-    .nav-container {
-        position: absolute;
-        top: 75px;
-    }
-}
-
 @media all and (max-width: 620px) {
     .wordmark-svg {
         float: left;
@@ -435,6 +588,15 @@ footer {
                 $offset: $offset - .5;
             }
         }
+
+        .push-#{$grid-span} {
+            @include shift($grid-span);
+        }
+
+        // .pull-#{$grid-span} {
+        //     @include shift(-$grid-span);
+        // }
+
     }
 
     .dept-footer-section {
@@ -490,11 +652,6 @@ footer {
         max-width: 400px;
     }
 
-    .container,
-    .row {
-        @include clearfix;
-    }
-
     .container {
         @include pad(0 3em 0 3em);
     }
@@ -504,8 +661,68 @@ footer {
     }
 
     .divider {
-        &.right {
-            border-right: 1px solid $base-black;
+        background-color: $base-black;
+        height: 80%;
+        left: calc(50%);
+        position: absolute;
+        top: 10%;
+        width: 1px;
+
+        // these percentages were all eyeballed and may need adjusting
+        &.one-third {
+            left: calc(32.55%);
+        }
+
+        &.one-half {
+            left: calc(50%);
+        }
+
+        &.two-third {
+            left: calc(67.4%);
+        }
+
+        &.one-fourth {
+            left: calc(23.9%);
+        }
+
+        &.three-fourth,
+        &.three-fourths {
+            left: calc(76.2%);
+        }
+
+        &.height-100 {
+            height: 100%;
+            top: 0;
+        }
+
+        &.height-90 {
+            height: 90%;
+            top: 5%;
+        }
+
+        &.height-70 {
+            height: 70%;
+            top: 15%;
+        }
+
+        &.height-60 {
+            height: 60%;
+            top: 20%;
+        }
+
+        &.height-50 {
+            height: 50%;
+            top: 25%;
+        }
+
+        &.height-40 {
+            height: 40%;
+            top: 30%;
+        }
+
+        &.height-30 {
+            height: 30%;
+            top: 35%;
         }
     }
 
@@ -520,6 +737,10 @@ footer {
 
     .third {
         @include span-columns(4);
+
+        &.feature {
+            @include shift(4);
+        }
     }
 
     .twothird,
@@ -535,6 +756,60 @@ footer {
         border-bottom: 0;
         float: right;
         padding: .9em 0 0;
+    }
+
+    .outer-bg-right {
+        background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
+
+        &.right-third {
+            background: linear-gradient(90deg, $base-white 65%, $cehd-tertiary-gold 65%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 65%, $umn-light-blue-background 65%);
+            }
+        }
+
+        &.right-two-third {
+            background: linear-gradient(90deg, $base-white 34%, $cehd-tertiary-gold 34%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 34%, $umn-light-blue-background 34%);
+            }
+        }
+
+        &.cool {
+            background: linear-gradient(90deg, $base-white 50%, $umn-light-blue-background 50%);
+        }
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        max-width: 640px;
     }
 }
 
@@ -577,4 +852,47 @@ footer {
     font-family: fontello;
     height: 39px;
     width: 12%;
+}
+
+.to-upper {
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+
+    &.align-bottom {
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
+    }
+
+    &.align-center {
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    &.column {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    &.wrap {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.flex-item {
+
+    flex: 1 0 auto;
+
+    &.vertical-stretch {
+        align-self: stretch;
+    }
+}
+
+.no-shrink {
+    flex-shrink: 0;
 }

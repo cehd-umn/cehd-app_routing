@@ -1,0 +1,110 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "News" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>News and events</h1>
+
+        <div class="span-6">
+            <h2>In the news</h2>
+            <iframe src="https://player.vimeo.com/video/208185523" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+            <p>In this Fox 9 story, child development expert Jed Elison describes how
+       his team of researchers is using brain scans to predict autism in
+       infants.</p>
+
+            <h2>Research in depth</h2>
+            <iframe src="https://player.vimeo.com/video/208185448" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+            <p>Kinesiology researcher J&uuml;rgen Konczak uses a WristBot and virtual
+       reality to help diagnose wrist movement problems and to create training
+       activities to improve lives for people with neurological diseases.</p>
+        </div>
+
+        <article class="span-4">
+            <section>
+                {{ loader.loader("CEHD news", "h2") }}
+            </section>
+
+            <section>
+                {{ loader.loader("CEHD events", "h2", "events-container") }}
+            </section>
+        </article>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="span-12">
+            <h2 class="text-center">Our expertise and knowledge guide</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row outer-bg-right emphasis">
+    <div class="container">
+        <div class="inner-bg-right">
+            <div class="half">
+                <p><a href="#">With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news, local and national trends, policy issues, and emerging research.</p>
+            </div>
+            <div class="half">{% include "includes/svg/for-the-media.html" %}</div>
+        </div>
+    </div>
+</div>
+
+<p class="text-center"><a href="/topics/" class="button center">Explore our research</a></p>
+<div class="row">
+    {{ include('cehd/includes/connect.html') }}
+</div>
+<div class="margin-top-3">
+
+</div>
+<div class="row emphasis cool">
+    <div class="container">
+        <div class="feature">
+
+            <div class="container">
+                <h2 class="text-center">Discover CEHD on social media</h2>
+                <div class="margin-top-3">
+
+                </div>
+                <div class="span-3">
+                    <div class="svg-social-media-icon size-40"><a href="https://twitter.com/UMN_CEHD" alt="Twitter icon" title="Twitter" >
+                        {% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+                    </div>
+                    <p class="text-center"><a href="https://twitter.com/UMN_CEHD">See breaking news and information from CEHD.</a></p>
+                </div>
+
+                <div class="span-3">
+                    <div class="svg-social-media-icon size-40"><a href="https://www.facebook.com/umcehd" alt="Facebook icon" title="Facebook">
+                        {% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                    </div>
+                    <p class="text-center"><a href="https://www.facebook.com/umcehd">Learn more about CEHD activities and events.</a></p>
+                </div>
+
+                <div class="span-3">
+                    <a href="https://www.youtube.com/user/UMCEHD"><img src="/assets/images/icons/YouTube.svg" alt="YouTube icon" title="YouTube icon" ></a>
+                    <p class="text-center"><a href="https://www.youtube.com/user/UMCEHD">View videos about CEHD research, programs, and community engagement.</a></p>
+                </div>
+
+
+                <div class="span-3">
+                    <a href="https://cehdvision2020.umn.edu/"><img src="/assets/images/icons/plus-gold.svg" alt="Plus symbol" title="Vision 2020 blog" width="20%" ></a>
+                    <p class="text-center"><a href="https://cehdvision2020.umn.edu/">Read CEHD faculty blog posts on their research, service, and teaching.</a></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/zz-special-use-college-hp/feed/", "#news-container", "index.html", 5) }}
+
+    {{ eventsfeed.events_feed_js(172, 5) }}
+{% endblock %}

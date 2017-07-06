@@ -1,0 +1,62 @@
+
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "Alumni" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/alumni/hero.jpg" alt="Belle Yaffe, ’70">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>Belle Yaffe, ’70, followed her values to a <br  />career in special education and social services</p>
+        </div>
+        <div class="third">
+            <p><a href="http://connect.cehd.umn.edu/a-force-for-families/" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block main_content %}
+<div class="row has-hero-image">
+  <div class="container">
+    <h1>Welcome, alumni</h1>
+    <div class="twothird feature">
+        <p>College of Education and Human Development alumni and friends are
+        invited to become members of the
+        <a href="http://umnalumni.org/home">University of Minnesota Alumni
+        Association</a> and the <a href="/alumni/society/">CEHD Alumni
+        Society</a>.</p>
+        <p>The college has over 70,000 living alumni in the United
+        States and abroad. With over 8,000 Alumni Association members, the CEHD
+        Alumni Society is the second largest alumni society at the University of
+        Minnesota.</p>
+      <div class="row">
+        <div class="span-6">
+          {{ loader.loader(
+            "Alumni News",
+            "h2",
+            "news-container"
+          ) }}
+        </div>
+        <div class="span-6">
+          {{ loader.loader(
+            "Alumni Events",
+            "h2",
+            "events-container"
+          ) }}
+        </div>
+      </div>
+    </div>
+ </div> <!-- ./container -->
+ <div class="span-12">
+              {{ include('cehd/includes/connect.html') }}
+ </div>
+
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+        {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
+        {{ eventsfeed.events_feed_js(182) }}
+{% endblock %}

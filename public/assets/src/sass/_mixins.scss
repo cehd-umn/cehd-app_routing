@@ -1,0 +1,12 @@
+@mixin cehd-meganav-dropdowns($margins) {
+    @for $i from 1 through length($margins) {
+        $margin: nth($margins, $i);
+
+        // Set the element margin to 0 if you want to skip making a class.
+        @if ($margin != 0) {
+            .dropdown-menu-#{$i} {
+                margin-left: $margin + px;
+            }
+        }
+    }
+}

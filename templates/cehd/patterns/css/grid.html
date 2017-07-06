@@ -1,0 +1,255 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "12-Column Grid" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>12-column Grid</h1>
+    <p>Some times you may need more granular control over column widths. There
+    is a set of classes for a 12-column grid system. Think of a grid of 12
+    columns like so:
+
+    <div class="span-12">
+        {% for i in 1..12 %}
+            <div class="span-1 grid-example">{{ i }}</div>
+        {% endfor %}
+    </div>
+    <div class="span-12 margin-top-3">
+        <h2>Spanning columns</h2>
+
+        <p>To span two of those columns, you would use the <samp>.span-2</samp>
+        class like this:</p>
+    </div>
+    <div class="span-12">
+        {% for i in 1..12 %}
+            <div class="span-1 grid-example">{{ i }}</div>
+        {% endfor %}
+    </div>
+    <div class="span-12 margin-top-1">
+        <div class="span-2 grid-example">.span-2</div>
+    </div>
+    <div class="span-12 margin-top-3">
+        <h2>Centered columns</h2>
+        <pre><code class="html">
+    &lt;div class=&quot;span-2&quot;&gt;.span-2&lt;/div&gt;
+        </code></pre>
+    <div class="span-12 margin-top-1">
+        <p>Just append the number of columns you wish to span to
+        <samp>.span-</samp>. (I.e, <samp>.span-1</samp>, <samp>.span-2</samp>,
+        <samp>.span-3</samp>, <samp>.span-4</samp>, etc.)</p>
+    </div>
+    <div class="span-12">
+        {% for i in 1..12 %}
+            <div class="span-1 grid-example">{{ i }}</div>
+        {% endfor %}
+    </div>
+
+    {% for i in 1..12 %}
+        <div class="margin-top-1 span-12">
+            <div class="span-{{ i }} grid-example">.span-{{ i }}</div>
+        </div>
+    {% endfor %}
+
+    <div class="span-12 margin-top-3">
+        <p>You can also use these in different combinations to achieve the result
+        you want <em>as long as the <samp>.span-x</samp> values add up to
+        12</em>.</p>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-10 grid-example">.span-10</div>
+        <div class="span-2 grid-example">.span-2</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-4 grid-example">.span-4</div>
+        <div class="span-8 grid-example">.span-8</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-6 grid-example">.span-6</div>
+        <div class="span-2 grid-example">.span-2</div>
+        <div class="span-2 grid-example">.span-2</div>
+        <div class="span-2 grid-example">.span-2</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <p>The <samp>.feature</samp> class will also work in conjunction with the
+        <samp>.span-x</samp> classes for very granular control over the width.</p>
+
+        <p><strong>Note:</strong> Each column here is wrapped in a
+        <samp>.span-12</samp> column so it clears content above and below it.</p>
+
+    <pre><code class="html">
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-1 feature&quot;&gt;.span-1.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-2 feature&quot;&gt;.span-2.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-3 feature&quot;&gt;.span-3.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-4 feature&quot;&gt;.span-4.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-5 feature&quot;&gt;.span-5.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-6 feature&quot;&gt;.span-6.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-7 feature&quot;&gt;.span-7.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-8 feature&quot;&gt;.span-8.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-9 feature&quot;&gt;.span-9.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-10 feature&quot;&gt;.span-10.feature&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-12&quot;&gt;
+    &lt;div class=&quot;span-11 feature&quot;&gt;.span-11.feature&lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+
+    <div class="margin-top-1 span-12">
+        <div class="span-1 feature grid-example">.span-1.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-2 feature grid-example">.span-2.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-3 feature grid-example">.span-3.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-4 feature grid-example">.span-4.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-5 feature grid-example">.span-5.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-6 feature grid-example">.span-6.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-7 feature grid-example">.span-7.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-8 feature grid-example">.span-8.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-9 feature grid-example">.span-9.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-10 feature grid-example">.span-10.feature</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="span-11 feature grid-example">.span-11.feature</div>
+    </div>
+    <div class="span-12 margin-top-3">
+        <h2>Offset classes</h2>
+        <p>Use the <samp>push</samp> class to push elements to the right.</p>
+        <div class="span-12">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+        <div class="margin-top-1 span-12">
+            <div class="span-2 grid-example">.span-2</div>
+        </div>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..10 %}
+                <div class="margin-top-1 span-12">
+                    <div class="push-{{ i }} span-2 grid-example">.span-2 .push-{{ i }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="span-12 margin-top-3">
+        <p>If you really want fine control over positioning your can combine
+        <samp>span-x</samp> and <samp>pull</samp> classes.</p>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+        <div class="span-12 margin-top-1">
+            <div class="span-4 grid-example"></div>
+        </div>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="span-12 margin-top-3">
+        <h2>Nesting grids</h2>
+        <p>Grids nest well.</p>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+        <div class="span-12 margin-top-1">
+            <div class="half">
+                <div>
+                    {% for i in 1..12 %}
+                        <div class="span-1 grid-example">{{ i }}</div>
+                    {% endfor %}
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-5 grid-example">.span-5</div>
+                    <div class="span-7 grid-example">.span-7</div>
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-9 grid-example">.span-9</div>
+                    <div class="span-3 grid-example">.span-3</div>
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-2 grid-example">.span-2</div>
+                    <div class="span-10 grid-example">.span-10</div>
+                </div>
+                <div class="margin-top-1">
+                    {% for i in 1..12 %}
+                        <div class="span-1 grid-example">{{ i }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="half">
+                <div>
+                    {% for i in 1..12 %}
+                        <div class="span-1 grid-example">{{ i }}</div>
+                    {% endfor %}
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-8 grid-example">.span-8</div>
+                    <div class="span-4 grid-example">.span-4</div>
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-3 grid-example">.span-3</div>
+                    <div class="span-9 grid-example">.span-9</div>
+                </div>
+                <div class="margin-top-1">
+                    <div class="span-10 grid-example">.span-10</div>
+                    <div class="span-2 grid-example">.span-2</div>
+                </div>
+                <div class="margin-top-1">
+                    {% for i in 1..12 %}
+                        <div class="span-1 grid-example">{{ i }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="span-12 margin-top-1">
+            {% for i in 1..12 %}
+                <div class="span-1 grid-example">{{ i }}</div>
+            {% endfor %}
+        </div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

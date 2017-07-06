@@ -4,4 +4,372 @@
 @import "core";
 @import "bourbon/bourbon";
 @import "loader";
-@import "form_hack";
+@import "events";
+
+.videojs-background-wrap {
+    z-index: -1;
+}
+
+.bg-video {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+#bg-video {
+    button,
+    div {
+        display: none;
+    }
+}
+
+.multi-select {
+    display: block;
+
+    &::after {
+        border-left: .3em solid transparent;
+        border-right: .3em solid transparent;
+        border-top: .3em solid;
+        content: "";
+        display: inline-block;
+        height: 0;
+        margin-left: .3em;
+        vertical-align: middle;
+        width: 0;
+    }
+}
+
+.text-notice {
+    color: $cehd-text-red;
+}
+
+// @todo put this variable in _variables.scss
+$corner-border-spacing: 5px;
+
+.corner-borders-top {
+    &::after {
+        border-right: 1px solid $base-black;
+        border-top: 1px solid $base-black;
+        content: "";
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: $corner-border-spacing;
+        top: $corner-border-spacing;
+        width: 20px;
+    }
+
+    &::before {
+        border-left: 1px solid $base-black;
+        border-top: 1px solid $base-black;
+        content: "";
+        display: block;
+        height: 20px;
+        left: $corner-border-spacing;
+        position: absolute;
+        top: $corner-border-spacing;
+        width: 20px;
+    }
+}
+
+.corner-borders-bottom {
+    &::before {
+        border-bottom: 1px solid $base-black;
+        border-left: 1px solid $base-black;
+        bottom: $corner-border-spacing;
+        content: "";
+        display: block;
+        height: 20px;
+        left: $corner-border-spacing;
+        position: absolute;
+        width: 20px;
+    }
+
+    &::after {
+        border-bottom: 1px solid $base-black;
+        border-right: 1px solid $base-black;
+        bottom: $corner-border-spacing;
+        content: "";
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: $corner-border-spacing;
+        width: 20px;
+    }
+}
+
+blockquote {
+    &.quote-wrap {
+        font-size: 20px;
+        font-style: inherit;
+        margin-top: 50px;
+        quotes: "“" "”" "‘" "’";
+
+        &::after,
+        &::before {
+            font-family: Macondo, sans-serif;
+            font-size: 80px;
+            line-height: .1em;
+            position: absolute;
+        }
+
+        &::after {
+            bottom: -30px;
+            content: close-quote;
+            right: -28px;
+        }
+
+        &::before {
+            content: open-quote;
+            left: -.5em;
+            top: .35em;
+        }
+    }
+}
+
+.speaker {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 80px 0 0;
+}
+
+.section-header-container {
+    background-color: $base-white;
+}
+
+.hero-image-container {
+    display: none;
+}
+
+img {
+    &.circular {
+        border-radius: 50%;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+
+.circular-thumbnail {
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+
+    img {
+        left: 0;
+        position: absolute;
+        top: -10px;
+    }
+}
+
+.row {
+    &.cards {
+        z-index: -1;
+    }
+}
+
+.emphasis {
+    &.bg-cehd-multi {
+        background-image: url("/assets/dist/images/background-cehd-multicolor.png");
+        background-repeat: repeat;
+    }
+
+    &.wplc {
+        background-color: transparent;
+        background-image: url("/assets/dist/images/background-wplc.svg");
+        background-position: 0 -100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.connect-with-us {
+    max-width: 600px;
+}
+
+#cehd-wordmark {
+    border-bottom: 0;
+    float: none;
+    margin: 0;
+    padding: .9em 0 0;
+}
+
+#maincontent {
+    z-index: 0;
+}
+
+.news-more-news-container {
+    float: right;
+    width: 50%;
+}
+
+.news-more-news-link {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-item {
+    line-height: 1.5;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.card {
+    @include transition(
+        background-color .5s,
+        max-height 1s,
+        max-width 1s,
+        opacity 1s);
+
+    align-self: stretch;
+    background-color: $base-white;
+    border: 1px solid $base-light-grey;
+    border-radius: 2px;
+    left: auto;
+    margin: 1em;
+    max-height: 500px;
+    max-width: 500px;
+    opacity: 1;
+    overflow: hidden;
+    padding: .5em;
+    visibility: visible;
+    width: 237px;
+
+    &:hover {
+        background-color: $umn-light-gold;
+    }
+
+    &.hidden {
+        background-color: $umn-light-gold;
+        border: 0;
+        margin: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+#full-text-search-input {
+    border-radius: 2px;
+    font-size: 1em;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.category-container {
+    background-color: $base-light-grey;
+    min-height: 90px;
+    padding: 0 1em;
+}
+
+.category-filter-container {
+    background-color: $base-white;
+    overflow: hidden;
+    padding: 0 1em;
+}
+
+.category-filters {
+    text-align: center;
+}
+
+li {
+    &.category-button {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+
+        &.clear {
+            clear: left;
+        }
+    }
+}
+
+.category-button {
+    overflow: hidden;
+
+    input {
+        left: -100px;
+        position: absolute;
+
+        &:checked + label {
+            background: $umn-light-gold;
+            color: $umn-maroon;
+        }
+    }
+
+    label {
+        background: $base-light-grey;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        padding: 7px;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $umn-medium-grey;
+        }
+    }
+}
+
+#clear-filters + label {
+    text-transform: uppercase;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media all and (min-width: 960px) {
+
+    .hero-image-container {
+        display: block;
+        margin: 0 auto;
+        min-height: 500px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+    }
+
+    .hero-image {
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .hero-overlay {
+        background-color: $cehd-hero-image-overlay-rgba;
+        bottom: 0;
+        color: $base-white;
+        font-size: 20px;
+        left: 0;
+        padding: 0 3em;
+        position: absolute;
+        text-shadow: 1px 1px 1px $base-black;
+        width: 100%;
+
+        .button {
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+    }
+
+    .row {
+        &.has-hero-image {
+            margin-top: 400px;
+        }
+    }
+}

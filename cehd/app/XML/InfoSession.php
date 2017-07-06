@@ -76,11 +76,23 @@ class InfoSession extends \CEHD\XML\Event\Event
      */
     function __construct($session)
     {
+        parent::__construct($session);
+
         $this->code = $this->getFromProperty($session->code);
 
         $this->contact = $this->getFromProperty($session->contact);
 
         $this->date = $this->getFromProperty($session->date);
+
+        $this->day = $this->getFromProperty($session->dateDay);
+
+        $this->month = $this->getFromProperty($this->getMonth());
+
+        $this->fullMonth = $this->getFromProperty($this->getFullMonth());
+
+        $this->shortMonth = $this->getFromProperty($this->getShortMonth());
+
+        $this->year = $this->getYear();
 
         $this->dateChange = $this->getBoolFromProperty($session->dateChange);
 
@@ -109,6 +121,8 @@ class InfoSession extends \CEHD\XML\Event\Event
         $this->dateTimeEnd = $this->date . " " . $this->endTime;
 
         $this->dateTimeStart = $this->date . " " . $this->startTime;
+
+        $this->timestamp = $this->getTimestamp();
     }
 }
 

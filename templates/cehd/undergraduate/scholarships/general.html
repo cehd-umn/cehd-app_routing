@@ -1,0 +1,155 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Undergraduate Scholarships" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Undergraduate scholarships</h1>
+    <div class="half feature">
+        <p>CEHD supports current undergraduate students through the general scholarships listed below, <a href="/undergraduate/scholarships/study-abroad/">study abroad scholarships</a>, <a href="/undergraduate/scholarships/teacher-aid">prospective teacher scholarships</a>, <a href="/undergraduate/scholarships/alumni/">alumni-sponsored scholarships</a>, and <a href="/undergraduate/scholarships/internship-grant/">internship grants</a>.</p>
+        <p>Below are  CEHD's general scholarships and application instructions; by completing the application below, you will be considered for all scholarships for which you are eligible. You are also encouraged to check with your department. </p>
+    </div>
+     <h2 class="text-center">How to apply for general scholarships</h2>
+     <div class="row">
+            <p class="text-center"><strong>Deadline</strong>: The 2017 deadline has passed. </p>
+            <ol class="twothirds feature">
+              <li>Complete the online application.
+              <li>Prepare the following materials in advance, which you will upload into the application:
+                  <ol>
+                      <li>A double-spaced statement no longer than two pages, responding to the following questions (with your full name on the upper right corner of page 1 and page 2).
+                      <strong> <br />
+                      Note</strong>:  Please save the document as a PDF or Word document (.doc or docx). Name the document with your name in this order: &quot;<strong>Last Name-First Name-Statement</strong>.&quot;
+                            <ul>
+                            <li>What inspired you to choose the profession you are preparing to enter?</li>
+                            <li> Looking ahead 10 years, how do you envision contributing to our increasingly diverse and global community as a professional and as a citizen?</li>
+                            </ul>
+                      </li>
+                      <li>A current resume that includes paid and volunteer professional experience and service. Please include names and contact  information (including email addresses) of two professional or academic references. <br />
+                      <strong>Note:</strong> Please save the document as a PDF or Word document (.doc or docx). Name the document with your name in this order: &quot;<strong>Last Name-First Name-Resume</strong>.&quot; If you need assistance with writing a resume, consult our <a href="/career/resumes/">Career Services webpage.</a><br />
+                      </li>
+                  </ol>
+              </li>
+              </li>
+            </ol>
+            </div>
+              </div> <!-- ./container -->
+            <div class="row emphasis margin-top-1 cool">
+                <div class="container">
+                    <div class="half feature">
+                        <div class="span-12">
+                          {% set lines = [
+                          "CEHD has scholarships raising from",
+                          "$1,000-$20,000 for tuition, study abroad",
+                          "and unpaid internships.",
+                          ] %}
+                          {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                           </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+  <div class="container">
+<div class="row">
+  <h2 class="text-center">General scholarships</h2>
+
+  <div class="half">
+      <p><strong>All Our Relations Scholarship</strong></p>
+        <ul>
+          <li>One $500 award</li>
+          <li>Undergraduate students who have successfully completed their first semester in the college and who would enhance diversity within the University. </li>
+          <li>A plus factor will be given to Native American students.</li>
+        </ul>
+
+      <p><strong>Carl and Ruth Warmington Scholarship (Youth Studies)</strong></p>
+        <ul>
+          <li>One $1,000 award</li>
+          <li>Youth Studies student planning a career in Social Work.</li>
+        </ul>
+
+      <p><strong>Elizabeth Cormack Endowed Scholarship (Family Social Science)</strong></p>
+        <ul>
+          <li>One $1,000 award</li>
+          <li>Family Social Science student </li>
+          <li>Based on character, leadership, extra-curricular activities, and the potential of contribution to the field.</li>
+        </ul>
+
+      <p><strong>Fred and Earline Estes Family Scholarship</strong></p>
+        <ul>
+          <li>One $1,700 award</li>
+          <li>Support for low-income students who would enhance diversity within the University. </li>
+          <li>A plus factor will be given to African-American students who are making academic progress in the college.</li>
+        </ul>
+
+      <p><strong>Gamma Omicron Beta Scholarship (Family Social Science)</strong></p>
+        <ul>
+          <li>One $1,500 award</li>
+          <li>Family Social Science student </li>
+        </ul>
+
+      <p><strong>Jane H. and Robert E. McNamara Scholarship</strong></p>
+        <ul>
+          <li>One or more awards at $1,000 each</li>
+          <li>Full-time undergraduate students in good academic standing, with promise in their field of study, and with financial need. </li>
+          <li>Preference will be given to students who have expressed and intention to pursue urban education or English as a Second Language as a major course of study.</li>
+        </ul>
+      </div>
+
+  <div class="half">
+      <p><strong>Jim and Karyn Goldstein Scholarship</strong></p>
+        <ul>
+          <li>One $2,000 award</li>
+          <li>Undergraduate students who have completed their first year in the college and are continuing their education towards a degree. </li>
+          <li>Students registered with Disability Resource Center are eligible.</li>
+        </ul>
+
+      <p><strong>Marx Sloan Scholarship</strong></p>
+        <ul>
+          <li> One $1,000 award</li>
+          <li>Academic accomplishment and financial need. </li>
+        </ul>
+
+      <p><strong>Mildred and Russell Gute Scholarship (Family Social Science)</strong></p>
+        <ul>
+          <li>One $1,000 award</li>
+          <li> Family Social Science student</li>
+        </ul>
+
+      <p><strong>Morse Scholarship</strong></p>
+        <ul>
+          <li> Up to two $1,000 awards</li>
+          <li>Student is in the PES program and has achieved the Dean's List twice in a row.</li>
+        </ul>
+
+
+      <p><strong>Phi Upsilon Omicron Award (Family Social Science or Youth Studies)</strong></p>
+        <ul>
+          <li>One $2,500 award</li>
+          <li>Family Social Science or Youth Studies majors</li>
+          <li>Academic merit and financial need; community involvement.</li>
+        </ul>
+
+      <p><strong>Rebecca Mann Pennell Dean Scholarship</strong></p>
+        <ul>
+          <li> One scholarship of $300</li>
+          <li>Academic accomplishment</li>
+        </ul>
+
+      <p><strong>Victor and Rachel Noll Scholarship (career objectives in teaching)</strong></p>
+        <ul>
+          <li> One $980 award</li>
+          <li>Awarded to a student with a GPA of 3.00 or higher who plans to enter teaching as a profession.<br />
+          </li>
+        </ul>
+
+      <p><strong>Wagner Scholarship</strong></p>
+      <ul>
+        <li>One $1,200 award</li>
+        <li>Upper division or transfer student</li>
+        <li>Academic promise and financial need</li>
+      </ul>
+      </div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

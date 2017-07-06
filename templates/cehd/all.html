@@ -1,0 +1,64 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Diversity and Inclusion" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class= "row">
+    <div class="container margin-top-2">
+        <article>
+            {{ loader.loader(
+                "Diversity",
+                "h1",
+                "people-container"
+                ) }}
+        </article>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    (function() {
+        "use strict";
+        var params = {
+            url: "/services/people-tool/",
+            data: {
+                tg: "460"
+            }
+        };
+        var client = new HTTPClient();
+        var $request = client.get(params);
+
+        Number.prototype.isMultipleOf = function(n) {
+            return (this % n) === 0;
+        };
+
+        $request.done(function() {
+            var people = client.getResults();
+            var renderer = new Renderer();
+            var people_data = [];
+            var group = [];
+
+            $.each(people, function(k, v) {
+                group.push(this);
+
+                if (group.length.isMultipleOf(3)) {
+                    people_data.push(group);
+                    group = [];
+                }
+            });
+
+            var template_params = {
+                "template_path": "/assets/dist/views/cehd/people/",
+                "template_name": "diversity_listing.html",
+                "$target_element": $("#people-container"),
+                "data": {
+                    people: people_data,
+                }
+            };
+
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
+</script>
+{% endblock %}

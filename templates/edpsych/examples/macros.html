@@ -21,7 +21,7 @@
             <h3>Step One: Include the macro</h3>
 
             <p>You have to include the macro to be able to use it. Macros are
-            organized in <code>app_routing/templates/edpsych/macros</code></p>
+            organized in <code>app_routing/templates/macros</code></p>
 
             <p>Make sure you put it at the top, preferably just after the "extends" declaration at the top:</p>
         </div>
@@ -29,10 +29,10 @@
 </div>
 <div class="row">
     <div class="container">
-        <pre><code class="twig">{%- raw -%}
+        <pre><code class="twig">{%- verbatim -%}
 {% extends "edpsych/layout/section.html" %}
-{%- import "edpsych/macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
-{% endraw %}</code></pre>
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+{% endverbatim %}</code></pre>
     </div>
 </div>
 <div class="row">
@@ -66,7 +66,7 @@
 </div>
 <div class="row">
     <div class="container">
-        <pre><code class="html">{%- raw -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endraw %}</code></pre>
+        <pre><code class="html">{%- verbatim -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endverbatim %}</code></pre>
     </div>
 </div>
 {% endblock %}

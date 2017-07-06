@@ -1,0 +1,240 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Images" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>{{ page_title }}</h1>
+    <h2>An image with caption</h2>
+    <p>This uses the <samp>figure</samp> and <samp>figcaption</samp>
+    elements.</p>
+    <pre><code class="html">
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/examples/example.jpg&quot; alt=&quot;Example image.&quot;&gt;
+    &lt;figcaption&gt;Example image&lt;/figcaption&gt;
+&lt;/figure&gt;
+    </code></pre>
+    <div class="span-6 margin-top-1">
+        <figure>
+            <img src="/assets/images/examples/example.jpg" alt="Example image.">
+            <figcaption>Example image</figcaption>
+        </figure>
+    </div>
+
+    <div class="span-12 margin-top-1">
+        <h2 class="margin-top-2">Aligning the top of a heading with an image</h2>
+        <div class="half">
+            <img src="/assets/images/examples/example.jpg" alt="Example image.">
+        </div>
+        <div class="half">
+            <h2 class="no-margin-top">Heading</h2>
+            <p>Use the <samp>.no-margin-top</samp> class to remove the top
+            margin from a heading so it aligns with the top of an image.</p>
+        </div>
+    </div>
+    <div class="span-12 margin-top-1">
+        <pre><code>
+&lt;div class=&quot;half&quot;&gt;
+&lt;img src=&quot;/assets/images/examples/example.jpg&quot; alt=&quot;Example image.&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;
+&lt;h5 class=&quot;no-margin-top&quot;&gt;Heading&lt;/h5&gt;
+&lt;p&gt;Use the &lt;samp&gt;.no-margin-top&lt;/samp&gt; class to remove the top margin
+from a heading so it aligns with the top of an image.&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+
+    <div class="span-12 margin-top-1">
+        <h2>Square images cropped to a circle</h2>
+        <p><strong>Images must be cropped to a square for this to work.</strong></p>
+        <p>Add the <samp>.circular</samp> class to the image element itself to crop it to a circle.</p>
+        <div class="margin-top-2">
+            <pre><code>
+&lt;img class=&quot;circular&quot; src=&quot;/assets/images/examples/example-square.jpg&quot; alt=&quot;Example image.&quot;&gt;
+            </code></pre>
+        </div>
+        <div class="span-3">
+            <img class="circular" src="/assets/images/examples/example-square.jpg" alt="Example image.">
+        </div>
+    </div>
+
+    <div class="span-12 margin-top-1">
+        <h2>Thumbnail images cropped to a circle</h2>
+
+        <p>Thumbnail images from the People tool will not be square. To crop
+        these to a circle, they must first be wrapped in a div <em>that is
+        equal to or less than the width of the image</em>. Then you need to
+        wrap the image in another div using the <samp>circular-thumbnail</samp>
+        class.</p>
+        <div class="span-2">
+            <div class="circular-thumbnail">
+                <img src="http://apps.cehd.umn.edu/people/Headshot/LochS-2007.jpg" alt="Example image.">
+            </div>
+        </div>
+        <div class="span-10">
+            <div class="margin-top-2">
+                <pre><code>
+&lt;div class=&quot;span-2&quot;&gt;
+    &lt;div class=&quot;circular-thumbnail&quot;&gt;
+        &lt;img src=&quot;http://apps.cehd.umn.edu/people/Headshot/LochS-2007.jpg&quot; alt=&quot;Example image.&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-10&quot;&gt;
+    &lt;p&gt;This class is designed to work with our thumbnail images from the people tool.&lt;/p&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="span-12 margin-top-1">
+        <h2>Positioning Images</h2>
+        <p>In general, we want to preserve text within a column rather than have it wrap around images.</p>
+        <p>This:</p>
+    </div>
+    <div class="span-12 margin-top-1">
+        <div class="third">
+            <img src="/assets/images/examples/example.jpg" alt="Example image.">
+        </div>
+        <div class="twothird">
+            <p class="no-margin-top">This is a no-brainer this vendor is
+            incompetent and please use "solutionise" instead of solution ideas!
+            :), so come up with something buzzworthy. We want to see more
+            charts. Innovation is hot right now herding cats, win-win please
+            use "solutionise" instead of solution ideas! :) and proceduralize
+            when does this sunset? no scraps hit the floor. Get buy-in. Message
+            the initiative herding cats driving the initiative forward. Organic
+            growth reach out baseline yet tbrand terrorists good optics curate
+            run it up the flagpole. Hit the ground running can we take this
+            offline put your feelers out, or idea shower, nor we need to dialog
+            around your choice of work attire hard stop organic growth. I have
+            zero cycles for this powerPointless, for where do we stand on the
+            latest client ask quick win when does this sunset?.</p>
+
+            <p>Usabiltiy win-win, nor fire up your browser. Red flag ultimate
+            measure of success. Pulling teeth organic growth, but gain
+            traction.  Quick-win. Killing it. Horsehead offer bench mark we
+            need to button up our approach yet we need to socialize the comms
+            with the wider stakeholder community cloud strategy productize, for
+            pull in ten extra bodies to help roll the tortoise. We need to
+            future-proof this those options are already baked in with this
+            model streamline UX. Hammer out powerPointless. Win-win-win pull in
+            ten extra bodies to help roll the tortoise move the needle we are
+            running out of runway but root-and-branch review. Collaboration
+            through advanced technlogy blue money. Time to open the kimono can
+            you ballpark the cost per unit for me. No scraps hit the floor
+            execute , and dog and pony show value-added close the loop. UX
+            programmatically, but hit the ground running strategic high-level
+            30,000 ft view run it up the flagpole, ping the boss and circle
+            back nor where do we stand on the latest client ask.</p>
+        </div>
+    </div>
+    <div class="span-12 margin-top-1">
+        <p>is preferred over this:</p>
+    </div>
+    <div class="span-12 margin-top-1">
+        <img src="/assets/images/examples/example.jpg" alt="Example image." style="float:left; margin-right:10px;">
+        <p class="no-margin-top" style="clear:right">This is a no-brainer this
+        vendor is incompetent and please use "solutionise" instead of solution
+        ideas! :), so come up with something buzzworthy. We want to see more
+        charts.  Innovation is hot right now herding cats, win-win please use
+        "solutionise" instead of solution ideas! :) and proceduralize when does
+        this sunset? no scraps hit the floor. Get buy-in. Message the
+        initiative herding cats driving the initiative forward. Organic growth
+        reach out baseline yet tbrand terrorists good optics curate run it up
+        the flagpole. Hit the ground running can we take this offline put your
+        feelers out, or idea shower, nor we need to dialog around your choice
+        of work attire hard stop organic growth. I have zero cycles for this
+        powerPointless, for where do we stand on the latest client ask quick
+        win when does this sunset?.</p>
+
+        <p style="clear:right">Usabiltiy win-win, nor fire up your browser. Red
+        flag ultimate measure of success. Pulling teeth organic growth, but
+        gain traction.  Quick-win. Killing it. Horsehead offer bench mark we
+        need to button up our approach yet we need to socialize the comms with
+        the wider stakeholder community cloud strategy productize, for pull in
+        ten extra bodies to help roll the tortoise. We need to future-proof
+        this those options are already baked in with this model streamline UX.
+        Hammer out powerPointless. Win-win-win pull in ten extra bodies to help
+        roll the tortoise move the needle we are running out of runway but
+        root-and-branch review. Collaboration through advanced technlogy blue
+        money. Time to open the kimono can you ballpark the cost per unit for
+        me. No scraps hit the floor execute , and dog and pony show value-added
+        close the loop. UX programmatically, but hit the ground running
+        strategic high-level 30,000 ft view run it up the flagpole, ping the
+        boss and circle back nor where do we stand on the latest client
+        ask.</p>
+    </div>
+    <div class="span-12 margin-top-1">
+        <h3>Using colums for image placement</h3>
+        <p>Images will never exceed 100% of the width of their parent element, but will not scale up if the parent is wider than the image.</p>
+    </div>
+    <div class="span-12 margin-top-1">
+        {% for class in ["third", "half", "twothird"] %}
+            {% if class == "third" %}
+                {% set subclass = "twothird" %}
+            {% elseif class == "twothird" %}
+                {% set subclass = "third" %}
+            {% else %}
+                {% set subclass = "half" %}
+            {% endif %}
+            <div class="span-12 margin-top-1">
+                <h4><samp>.{{ class }}</samp>/<samp>.{{ subclass }}</samp></h4>
+                <div class="{{ class }} grid-example">
+                    <figure>
+                        <img src="/assets/images/examples/example.jpg" alt="Example image.">
+                        <figcaption><samp>.{{ class }}</samp></figcaption>
+                    </figure>
+                </div><!-- /{{ class }} -->
+                <div class="{{ subclass }} grid-example">
+                    <p><samp>.{{ subclass }}</samp></p>
+                </div><!-- /{{ subclass }} -->
+            </div>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;div class=&quot;{{ class }}&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;/assets/images/examples/example.jpg&quot; alt=&quot;Example image.&quot;&gt;
+        &lt;figcaption&gt;&lt;samp&gt;.{{ class }}&lt;/samp&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;&lt;!-- /{{ class }} --&gt;
+&lt;div class=&quot;{{ subclass }}&quot;&gt;
+    &lt;p&gt;&lt;samp&gt;.{{ subclass }}&lt;/samp&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /{{ subclass }} --&gt;
+                </code></pre>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="span-12 margin-top-1">
+        {% for x in 1..11 %}
+            {% set subclass = 12 - x %}
+            <div class="span-12 margin-top-1">
+                <h4><samp>.span-{{ x }}</samp>/<samp>.span-{{ subclass }}</samp></h4>
+                <div class="span-{{ x }} grid-example">
+                    <figure>
+                        <img src="/assets/images/examples/example.jpg" alt="Example image.">
+                        <figcaption><samp>.span-{{ x }}</samp></figcaption>
+                    </figure>
+                </div><!-- /span-{{ x }} -->
+                <div class="span-{{ subclass }} grid-example">
+                    <p><samp>.span-{{ subclass }}</samp></p>
+                </div><!-- /span-{{ subclass }} -->
+            </div>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;div class=&quot;span-{{ x }}&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;/assets/images/examples/example.jpg&quot; alt=&quot;Example image.&quot;&gt;
+        &lt;figcaption&gt;&lt;samp&gt;.span-{{ x }}&lt;/samp&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;&lt;!-- /span-{{ x }} --&gt;
+&lt;div class=&quot;span-{{ subclass }}&quot;&gt;
+    &lt;p&gt;&lt;samp&gt;.span-{{ subclass }}&lt;/samp&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /span-{{ subclass }} --&gt;
+                </code></pre>
+            </div>
+        {% endfor %}
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

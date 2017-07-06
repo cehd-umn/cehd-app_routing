@@ -1,0 +1,178 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as events -%}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "McNair Scholars" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>McNair Scholars</h1>
+    <div class="twothird feature">
+
+      <p>The federally funded <a href="http://www2.ed.gov/programs/triomcnair/index.html">TRIO McNair Scholars program</a> seeks to increase doctoral program application, matriculation, and degree attainment by underrepresented and first-generation college
+        students.</p>
+      <p>The U of M McNair program is open to all Twin Cities students in all colleges and majors, U of M coordinate campuses (Crookston, Duluth, Morris, Rochester), and Minnesota colleges and universities that do not have their own McNair program: Carleton
+        College, Hamline University, Macalester College, Metropolitan State University, Saint Mary’s University of Minnesota, St. Catherine University, St. John’s University, and University of St. Thomas. </p>
+      <p>Through this summer experience and academic year programming, McNair Scholars develop higher-level academic and research skills necessary to gain admission to and successfully complete graduate study. </p>
+      <p>
+        <a href="/assets/docs/trio/2017-McNair-Scholars.pdf">View the 2017 McNair Scholars</a></p>
+
+      <p><a href="/trio/mcnair/about/">Read more about the program &raquo;</a></p>
+    </div>
+  </div>
+  <!-- ./container -->
+
+  <div class="row emphasis">
+    <div class="container">
+      <div class="row">
+        <div class="span-10 feature">
+          <h2>2016 Scholars</h2>
+          <div class="row">
+            <div class="span-3">
+              <p><a href="/trio/mcnair/2016/bonfil/">Karen Bonfil</a></p>
+              <p><a href="/trio/mcnair/2016/bradford/">Javaris Bradford</a></p>
+              <p><a href="/trio/mcnair/2016/chak/">Sokamarint Chak</a></p>
+              <p><a href="/trio/mcnair/2016/cotton/">Danielle B. Cotton</a></p>
+              <p><a href="/trio/mcnair/2016/culver/">Corey Culver</a></p>
+            </div>
+            <div class="span-3">
+              <p><a href="/trio/mcnair/2016/duerkop/">Aracely C. Duerkop</a></p>
+              <p><a href="/trio/mcnair/2016/idowu/">Victoria Y.Idowu</a></p>
+              <p><a href="/trio/mcnair/2016/lozano/">Ana V. Lozano</a></p>
+              <p><a href="/trio/mcnair/2016/mahamud/">Saida Mahamud</a></p>
+              <p><a href="/trio/mcnair/2016/mohamed/">Fadumo Mohamed</a></p>
+
+            </div>
+            <div class="span-3">
+              <p><a href="/trio/mcnair/2016/negussie/">Lydia Negussie</a></p>
+              <p><a href="/trio/mcnair/2016/nguyen/">Ryan Nguyen</a></p>
+              <p><a href="/trio/mcnair/2016/oberry/">Dorothy O’Berry</a></p>
+              <p><a href="/trio/mcnair/2016/penaloza/">Jackie Penaloza</a></p>
+              <p><a href="/trio/mcnair/2016/quitofernandez/">Vilma Quito Fernandez</a></p>
+
+            </div>
+
+            <div class="span-3">
+              <p><a href="/trio/mcnair/2016/vangc/">Chria Vang</a></p>
+              <p><a href="/trio/mcnair/2016/vangk/">Kee Vang</a></p>
+              <p><a href="/trio/mcnair/2016/vangr/">Ricky Vang</a></p>
+              <p><a href="/trio/mcnair/2016/watkins/">Jason Watkins</a></p>
+              <p><a href="/trio/mcnair/2016/youk/">Sim (Net) Youk</a></p>
+            </div>
+          </div>
+
+        </div>
+        <p class="text-center"><a href="/trio/mcnair/alumni/">* View McNair Alumni and past scholars</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="twothird feature">
+      <h2>Apply</h2>
+      <p> The McNair program is accepting applications for the 2017 cohort. Read more about <a href="/trio/mcnair/apply/">how to apply</a>. Students pursuing STEM programs are strongly encouraged to apply. <br />
+      </p>
+      <h2>Population served</h2>
+      <ul>
+        <li>Students enrolled in public or private colleges who have completed 90 quarter credits or 50 semester credits with at least 12 credits in area of research interest.</li>
+        <li>Students enrolled in public or private colleges who have completed 90 quarter credits or 50 semester credits with at least 12 credits in area of research interest.</li>
+        <li>One-third of the students may be from groups that are underrepresented in graduate school.</li>
+
+      </ul>
+      <h2>Preferred preparation</h2>
+      <ul>
+        <li>Creative, independent second- or third-year undergraduates with good writing skills and a GPA of 2.75 or higher who possess intellectual curiosity and are interested in conducting research under the guidance of a faculty mentor.</li>
+      </ul>
+      <h2>Faculty</h2>
+      <ul class="no-bullet">
+        <li>
+          McNair faculty members come from all disciplines, at rank of assistant professor or higher, and are interested in guiding summer research experiences of high-potential, first-generation, and minority undergraduates.</li>
+        <li>
+          <a href="/trio/mcnair/mentors/">
+				  <strong>McNair faculty</strong>
+			    </a>are recognized by their peers and students as valued mentors and exceptional teachers. Several members of the faculty have leadership positions in their departments, such as associate dean, director, and department chair.</li>
+        <li>
+          They are leaders in their field and serve as members of professional associations and editors of professional journals.</li>
+      </ul>
+      <h2>2017 faculty mentors</h2>
+      <div class="row">
+        <div class="half">
+          <ul class="no-bullet">
+            <li><a href="http://bme.umn.edu/people/faculty/alford-patrick.html">Patrick Alford</a></li>
+            <li><a href="https://cbs.umn.edu/contacts/yaniv-brandvain">Yaniv Brandvain</a></li>
+            <li><a href="https://fscn.cfans.umn.edu/faculty-staff/tammy-butterick">Tammy Butterick</a></li>
+            <li><a href="https://www.virology.umn.edu/bio/virology/sagargoyal">Sagar Goyal</a></li>
+            <li><a href="http://www.cehd.umn.edu/people/johnstone/">Christopher Johnstone</a></li>
+            <li><a href="http://www.me.umn.edu/people/kodandaramaiah.shtml">Suhasa Kodandaramaiah</a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/lavine">Howard Lavine</a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/richlee">Richard Lee</a></li>
+            <li><a href="http://www.cehd.umn.edu/OLPD/people/faculty/madyun.asp">Na'im Madyun</a></li>
+            <li><a href="https://www.dentistry.umn.edu/bio/orthodontics/kim-mansky">Kim Mansky</a></li>
+            <li><a href="http://www.cehd.umn.edu/icd/people/faculty/masten.html">Ann Masten</a></li>
+          </ul>
+        </div>
+        <div class="half">
+          <ul class="no-bullet">
+            <li><a href="http://danielmaxbauer.weebly.com/">Dan Maxbauer</a></li>
+            <li><a href="http://www.cehd.umn.edu/edpsych/people/smcconne/">Scott McConnell</a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/mere0032">Liza Meredith</a></li>
+            <li><a href="https://www.hhh.umn.edu/directory/samuel">Samuel Myers, Jr. </a></li>
+            <li><a href="http://www.myrbo.com/amy/">Amy Myrbo</a></li>
+            <li><a href="https://bmt.umn.edu/angela-panoskaltsis-mortari">Angela Panoskaltsis-Mortari</a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/phelps">Michelle Phelps</a></li>
+            <li><a href="http://www.cehd.umn.edu/icd/people/faculty/Sera.html">Maria Sera </a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/squir050">Catherine Squires</a></li>
+            <li><a href="https://cla.umn.edu/about/directory/profile/tswartz">Teresa Swartz</a></li>
+            <li><a href="http://www.cehd.umn.edu/fsos/people/faculty/XiongB.asp">Zha Blong Xiong</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <h2>Resources</h2>
+      <p><a href="/assets/docs/trio/2016-McNair-Application-Checklist.pdf">2016 Application Checklist</a> [PDF]</p>
+      <p><a href="/assets/docs/trio/2016-McNair-Recommendation-Form.pdf"> 2016 McNair Recommendation Form</a> [PDF]</p>
+      <p><a href="/assets/docs/trio/2016-McNair-Personal-Support-Letter.pdf">2016 McNair Personal Support Letter</a> [PDF]</p>
+      <p><a href="/assets/docs/trio/2017-McNair-Syllabus.pdf">2017 McNair Syllabus</a> [PDF]</p>
+      <p><a href="/trio/mcnair/resources/">Resources for current McNair Scholars</a></p>
+      <p><a href="https://diversity.umn.edu/gradeducation/mcnairresources">Resources for McNair Scholars interested in UMN graduate programs</a></p>
+      <p>
+        <a href="/assets/docs/trio/2017-McNair-Faculty-Handbook.pdf">Resources for			  faculty mentors</a> [PDF]</p>
+      <p><a href="http://gradvising.umn.edu/">U of M Graduate &amp; Professional Student Advising: For Students &amp; Faculty</a></p>
+
+
+      <h2>Alumni</h2>
+      <p>Stay connected to McNair by providing us with your <a href="https://docs.google.com/a/umn.edu/forms/d/1sLl8e4DdA1eVgFtGRddRIre6FjAQD-yCaGtMhwiNbmk/viewform">current contact information</a>. </p>
+      <p><a href="/trio/mcnair/alumni/">McNair Alumni</a></p>
+      <p>
+        <a href="/assets/docs/trio/McNairAlumniList.pdf">McNair Scholars, 1992-2015</a> [PDF]
+      </p>
+
+      <div>
+        <!-- 2017-06-14, check with Christina in the fall to see if the McNair info-session feed will be used. | JFA
+        <h2>Open Houses</h2> -->
+        <!-- Events feed -->
+        {{ loader.loader( "Events", "h2", "events-container" ) }}
+        <h2>Connect</h2>
+        <p class="last">
+          <a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">
+      TRIO McNair
+      Scholars on Facebook</a>: Keep updated about events, networking opportunities, and student and alumni news. </p>
+
+        <h2>Graduate study at UMN</h2>
+        <p class="last">Are you a McNair Scholar from another institution and interested in graduate study at the University of MN? The
+          <a href="https://diversity.umn.edu/gradeducation/mcnairresources">Office for Diversity in   Graduate Education</a> has resources for you!</p>
+      </div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ events.events_feed_js(
+        279, 6
+    ) }}
+
+{% endblock %}

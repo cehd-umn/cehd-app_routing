@@ -65,6 +65,29 @@ class EventTest extends TestCase
         $this->assertTrue(is_int($this->eventInstance->events[0]->getTimestamp()));
     }
 
+    public function testEventGetStartHour()
+    {
+        $expected = "11";
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getStartHour());
+    }
+
+    public function testEventGetEndHour()
+    {
+        $expected = "01";
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getEndHour());
+    }
+    public function testEventGetEndMinute()
+    {
+        $expected = "00";
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getEndMinute());
+    }
+
+    public function testEventGetStartMinute()
+    {
+        $expected = "00";
+        $this->assertEquals($expected, $this->eventInstance->events[0]->getStartMinute());
+    }
+
     public function testNoEventsReturned()
     {
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/events_empty.xml');

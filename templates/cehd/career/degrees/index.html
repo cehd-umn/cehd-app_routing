@@ -1,0 +1,50 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Researching Majors & Careers" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Careers by degree</h1>
+    <div class="row">
+    <div class="half">
+        <p>Students graduating with a degree from the College of Education and Human Development acquire many transferable skills and can use their education in a variety of fields. Each year we gather information on <a href="/career/degrees/majors/graduates-careers/">what our recent graduates are doing</a> with their CEHD degree.</p>
+        <p>Explore potential employers and career opportunities for
+        degrees and areas of study at CEHD. These lists are not exhaustive and the world of work is always evolving
+        as job titles and work settings continuously change.</p>
+    </div>
+
+    <div class="half">
+        <h2>Potential employers and careers</h2>
+        <ul class="no-bullet-no-indent">
+                <li><a href="/career/degrees/majors/business-marketing-ed/">Business and marketing education</a></li>
+                <li><a href="/career/degrees/majors/early-childhood-ed/">Early childhood education foundations</a></li>
+                <li><a href="/career/degrees/majors/elementary-ed/">Elementary education foundations</a></li>
+                <li><a href="/career/degrees/majors/family-social-science/">Family social science</a></li>
+                <li><a href="/career/degrees/majors/human-resource-dev/">Human resource development</a></li>
+                <li><a href="/career/degrees/majors/kinesiology/">Kinesiology</a></li>
+                <li><a href="/career/degrees/majors/rec-admin/">Recreation administration</a></li>
+                <li><a href="/career/degrees/majors/sped/">Special education</a></li>
+                <li><a href="/career/degrees/majors/sport-mgmt/">Sport management</a></li>
+                <li><a href="/career/degrees/majors/youth-studies/">Youth studies </a></li>
+        </ul>
+    </div>
+</div>
+  </div> <!-- ./container -->
+  <div class="margin-top-2">
+</div>
+
+<div class="row emphasis cool">
+    <div class="container">
+        <div class="half feature">
+              {% set lines = [
+              "80% of spring 2015 graduates reported",
+              "their job was related to their major.",
+              ] %}
+              {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+    </div>
+  </div>
+</div>
+
+</div> <!-- ./row -->
+{% endblock %}

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Big Form Sample - Bear</title>
+<link rel="stylesheet" type="text/css" href="../attributes/css/sample.css"/>
+</head>
+
+<body>
+
+    <h1><img src="../attributes/images/Bear.png" alt="A bear" width="240" height="168" class="right">Bear Jamboree</h1>
+    <p>Great! We will see you at the bear jamboree in Blaine.</p>
+    <p>Just one more selection to submit.</p>
+    <div id="Form-Light">
+      <form method="post" action="https://apps.cehd.umn.edu/forms/afp.aspx?formid=33">
+        <!-- Called: Study Hall Sample in AFP - JFA 2013-10-15 -->
+        <input type="hidden" value="Bear Jamboree" name="Pathway" />
+        <fieldset>
+          <legend>Entertainment</legend>
+          <p>What would you like to see for entertainment? Select as many as you like.</p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L1" name="Entertainment" type="checkbox" tabindex="1" value="Live Band" />
+            <label for="CB-L1">Live Band<span>As long as they don't play <em>Teddy Bear Picnic</em></span></label>
+          </p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L2" name="Entertainment" type="checkbox" tabindex="2" value=" Salmon Juggling" />
+            <label for="CB-L2">Salmon Juggling</label>
+          </p>
+          <p class="CheckorRadio-Long">
+            <input id="CB-L3" name="Entertainment" type="checkbox" tabindex="3" value=" Hibernation" />
+            <label for="CB-L3">Hibernation</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Comments</legend>
+          <p>
+            <label for="Text1">Your feedback counts!</label>
+            <textarea id="Text1" name="Feedback" tabindex="4"></textarea>
+          </p>
+          <br class="clearfloat" />
+          <p>&nbsp;</p>
+        </fieldset>
+        <p>
+          <input name="Submit1" type="submit" value="submit" class="button" />
+        </p>
+        <br class="clearfloat" />
+        <input type="hidden" value="Bear" name="URL" />
+        <input type="hidden" value="Paddington Bear" name="FromName" />
+        <input type="hidden" value="City of Blaine Arboretum" name="Message1" />
+        <input type="hidden" value="123 Blaine Road" name="Message2" />
+        <input type="hidden" value="Blaine, MN 55555" name="Message3" />
+        <input type="hidden" value="Bears can cancel anytime they like." name="Message4" />
+      </form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/// @author Tony Thomas
+///
+/// Styles for inline SVG graphics
+
+
+@import "../colors";
+
+// Elements
+text {
+    fill: $cehd-dark-grey;
+}
+
+// Class placeholders
+%titles {
+    font-family: Lato-Bold, Lato;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+%text {
+    font-family: Lato-Regular, Lato;
+    font-size: 24px;
+}
+
+%stroke {
+    stroke: $stroke-color-default;
+    stroke-width: 5px;
+}
+
+// Classes
+.svg-text-title {
+    @extend %titles;
+}
+
+.svg-text-text {
+    @extend %text;
+}
+
+.svg-stroke-vertical {
+    @extend %stroke;
+}

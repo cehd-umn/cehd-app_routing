@@ -1,0 +1,210 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Careers in Sport Management" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Careers in sport management</h1>
+      <h2 class="text-center">Potential employers</h2>
+        <div class="row">
+        <div class="third">
+              <ul class="no-bullet">
+                  <li>arenas/stadiums</li>
+                  <li>colleges/universities</li>
+                  <li>golf courses</li>
+                  <li>health clubs</li>
+                  <li>high schools</li>
+                  <li>intercollegiate athletics</li>
+                  <li>newspapers/magazines</li>
+              </ul>
+        </div>
+        <div class="third">
+              <ul class="no-bullet">
+                  <li>professional athletes</li>
+                  <li>professional teams</li>
+                  <li>recreation departments</li>
+                  <li>semi-professional sport teams</li>
+                  <li>sporting goods manufacturers</li>
+                  <li>sporting goods dealers</li>
+                  <li>sporting goods stores</li>
+              </ul>
+        </div>
+        <div class="third">
+              <ul class="no-bullet">
+                <li>sports associations</li>
+                <li>sports facilities</li>
+                <li>sports marketing-related firms</li>
+                <li>TV/radio stations</li>
+                <li>youth camps</li>
+                <li>youth sport programs</li>
+              </ul>
+        </div>
+        </div>
+    </div> <!-- ./container -->
+    <div class="margin-top-2">
+    </div>
+        <div class="row emphasis cool">
+            <div class="container">
+                <div class="half feature">
+                    {# create an array of 2-5 short lines of text #}
+                    {% set lines = [
+                        "100% of sport management    ",
+                        "students complete",
+                        "at least one internship.",
+                    ] %}
+                    {# call the macro #}
+                    {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+                </div>
+            </div>
+        </div>
+  <div class="container">
+    <h2 class="text-center">Career opportunities</h2>
+      <h3 class="text-center">Sport management</h3>
+        <div class="row">
+        <div class="third">
+            <ul class="no-bullet">
+                <li>account manager</li>
+                <li>athlete relations coordinator</li>
+                <li>athletic academic adviser</li>
+                <li>athletic administrator</li>
+                <li>community relations</li>
+                <li>compliance director</li>
+                <li>equipment manager</li>
+                <li>event coordinator</li>
+                <li>external relations</li>
+                <li>facilities manager</li>
+                <li>fundraiser</li>
+                <li>general manager</li>
+            </ul>
+        </div>
+        <div class="third">
+            <ul class="no-bullet">
+                <li>golf course manager</li>
+                <li>ice arena manager</li>
+                <li>marketing</li>
+                <li>promotions</li>
+                <li>marketing and promotions</li>
+                <li>operations</li>
+                <li>product development</li>
+                <li>product distribution</li>
+                <li>programming</li>
+                <li>public relations</li>
+                <li>publicity/media relations</li>
+                <li>recruiter</li>
+            </ul>
+        </div>
+        <div class="third">
+            <ul class="no-bullet">
+                <li>sales</li>
+                <li>sport agent</li>
+                <li>sport equipment retailing</li>
+                <li>sport store management</li>
+                <li>sports administration</li>
+                <li>sports broadcasting</li>
+                <li>sports information director</li>
+                <li>sports journalism</li>
+                <li>sports psychologist</li>
+                <li>stadium management</li>
+                <li>talent scout</li>
+                <li>ticket operations managers</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="half feature">
+            <div class="half">
+                <h3>Coaching</h3>
+
+            <ul class="no-bullet">
+                <li>assistant coaching</li>
+                <li>college coaching</li>
+                <li>head coaching</li>
+                <li>high school coaching</li>
+                <li>professional coaching</li>
+            </ul>
+                    </div>
+            <div class="half">
+                <h3>Youth services/development</h3>
+                    <ul class="no-bullet">
+                            <li>after school activities director</li>
+                            <li>boys club director</li>
+                            <li>girls club director</li>
+                            <li>summer camp director</li>
+                            <li>youth program director</li>
+                            <li>youth services provider</li>
+                    </ul>
+            </div>
+        </div>
+      </div>
+
+
+  <div class="row">
+    <h2 class="text-center">Job titles and employers of alumni</h2>
+        <div class="third">
+            <ul class="no-bullet">
+                <li>Account Executive, Clear Channel</li>
+                <li>Account Executive, Los Angeles Clippers</li>
+                <li>Account Executive, Inside Sales, Minnesota Wild</li>
+                <li>Assistant Coach, St. John's University</li>
+                <li>Assistant Golf Professional, Northern Hills Golf Club</li>
+                <li>Assistant Golf Pro, Chisago Lakes Country Club</li>
+                <li>Assistant Superintendent, Golden Valley Country Club</li>
+                <li>Associate Commissioner, Rocky Mountain Athletic Conference</li>
+                <li>Athletic Communications, Ohio State University</li>
+                <li>Athletic Department, Breck High School</li>
+                <li>Baseline Tennis Center, University of Minnesota</li>
+                <li>Board of Directors, MN Basketball Association</li>
+                <li>Coach, TAGS Gymnastics Club</li>
+                <li>Communications, University of Minnesota Athletics</li>
+                <li>Co-Curricular Coordinator, Mounds View Public Schools</li>
+            </ul>
+        </div>
+        <div class="third">
+            <ul class="no-bullet">
+                <li><a href="http://academics.cehd.umn.edu/career/success_story_nathan_jobe/">Community Relations, Minnesota Twins</a></li>
+                <li>Community Relations Associate, Minnesota Timberwolves</li>
+                <li>Corporate Loan Officer, Northern Lights Mortgage</li>
+                <li>Corporate Sales Assistant, Lansing Lugnuts</li>
+                <li>Customer Operations Analyst, SPS Commerce</li>
+                <li>Customer Service Manager, University of Minnesota Athletic Ticket Office</li>
+                <li>Director, Shjon Podein Children's Foundation</li>
+                <li>Event Coordinator, Class Act Event Coordinators</li>
+                <li>Fundraising and Development, Gillette Children’s</li>
+                <li>General Manager, Podium Sports Marketing</li>
+                <li>Graphic Design Contractor, Minnesota Vikings Football, LLC</li>
+                <li>Head Equipment Manager, Dubuque Fighting Saints</li>
+                <li>Inside Sales Specialist, Wells Fargo</li>
+                <li>Instructor, Anoka Ramsey Community College</li>
+                <li>Location Manager, Best Vendors Management, Inc.</li>
+                <li>Manager, Business Development, sportsdigita</li>
+            </ul>
+      </div>
+      <div class="third">
+            <ul class="no-bullet">
+                <li>Marketing/PR director, Today’s Groom</li>
+                <li>Men’s hockey, Michigan State</li>
+                <li>Merchandise Specialist, Target</li>
+                <li>Operations Coordinator, PGA Championship</li>
+                <li>Owner, The Spirit Shop Cheerleading Gym</li>
+                <li>President, ADS Sports Management</li>
+                <li>Pro Shop Manager, Minnesota Twins</li>
+                <li>Project Manager, Lifetime Fitness</li>
+                <li>Sales, Profit, and Operations Coach, Burger King Corporation</li>
+                <li>Senior Store Manager, GNC</li>
+                <li>Special Events Account Executive, Fresno Grizzlies</li>
+                <li>Strength and Conditioning Coordination, MSU, Mankato</li>
+                <li>Swim Instructor, Foss Swim School</li>
+                <li>Video Coordinator, MN Timberwolves</li>
+                <li>Women’s Tennis Coach, Virginia Tech</li>
+                <li>Writer, Beyond the Box Score</li>
+                <li>Youth Development Staff/Specialty Instructor, YMCA of the Greater Twin Cities</li>
+                <li>Youth Initiatives Coordinator, American Cancer Society</li>
+            </ul>
+      </div>
+      </div>
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Search Results" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <form action="{{ config.base_url }}/search/" method="get" name="gsearch" title="Search for U of M sites and people">
+            <input id="search-page-query-input" name="query" placeholder="Enter a search term" value="{{ query }}" class="search-form-element"><input
+            id="search-page-submit" type="submit" value="Search" class="search-form-element">{# keep the whitespace this way because this is inline-block and any whitespace will put space between the elements #}
+        </form>
+        {% for result_level, result_set in results %}
+            <h2 class="search-heading search-{{ result_level }}">{{ result_set.name }}</h2>
+            {% if result_set.results %}
+                <dl id="{{ result_level }}-search-results">
+                {% for result in result_set.results %}
+                    <dt><a href="{{ result.link }}">{{ result.title|raw }}</a></dt>
+                    <dd>{{ result.description|raw }}</dd>
+                {% endfor %}
+                </dl>
+                <p><a href="#" class="more-results-link" data-target="#{{ result_level }}-search-results" data-site="{{ result_level }}">View more</a></p>
+            {% else %}
+                <p>No results found.</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    (function() {
+        "use strict";
+        var http_client = new HTTPClient();
+        var search = new Search("{{ config.base_url }}");
+        var start = 10;
+
+        $(".more-results-link").on("click", function(event) {
+            event.preventDefault();
+            var $self = $(this);
+            var params = {
+                "q": encodeURIComponent("{{ query }}"),
+                "start": start,
+                "sites": [$self.data("site")]
+            };
+            var request_params = search.getParams(params);
+            var $target_element = $($self.data('target'));
+            var $request = http_client.get(request_params);
+
+            $request.done(function() {
+                var results = http_client.getResults();
+                var template_params = {
+                    "template_path": "{{ config.nunjucks_view_base }}/edpsych/search/",
+                    "template_name": "index.html",
+                    "$target_element": $target_element,
+                    "data": {
+                        results: results,
+                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                    }
+                };
+                var renderer = new Renderer();
+                renderer.init(template_params);
+                renderer.render(true);
+                start = start + 10;
+            });
+        });
+    })();
+</script>
+{% endblock %}

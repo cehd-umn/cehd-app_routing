@@ -1,0 +1,56 @@
+{% extends "cehd/layout/documentation.html" %}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "CEHD Code Examples" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>Connect with us</h2>
+        <div class="half">
+            <h3>Straight Markup from Illustrator</h3>
+
+            <div class="half">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.01 168.58"><defs><style>.cls-1{font-size:48px;fill:#333;font-family:Lato-Bold, Lato;font-weight:700;}.cls-2{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>ConnectWithUs</title><text class="cls-1" transform="translate(0 54.58)">Connect<tspan x="84.33" y="48">with</tspan><tspan x="132.91" y="96">us</tspan></text><line class="cls-2" x1="190.51" x2="190.51" y2="168.58"/></svg>
+            </div>
+            <div class="half">
+                <p>Contact info goes here.</p>
+            </div>
+        </div>
+
+        <div class="half">
+            <h3>Inline with less markup</h3>
+            <div class="half">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.01 168.58">
+                    <defs>
+                        <style>{{ inline_svg_styles|raw }}</style>
+                    </defs>
+                    <title>Connect With Us</title>
+                    <g id="img-connect">
+                        <text class="svg-text-title" transform="translate(0 54.58)">Connect
+                            <tspan x="84.33" y="48">with</tspan>
+                            <tspan x="132.91" y="96">us</tspan>
+                        </text>
+                        <line class="svg-stroke-vertical" x1="190.51" x2="190.51" y2="168.58"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="half">
+                <p>Contact info goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h4>As a Twig include</h4>
+        {% include "includes/svg/connect.html" %}
+    </div>
+</div>
+<div class="row">
+    <div class="container margin-top-2">
+        <pre><code class="jinja">
+{% verbatim %}{% include &quot;includes/svg/connect.html&quot; %}{% endverbatim %}
+        </code></pre>
+    </div>
+</div>
+{% endblock %}

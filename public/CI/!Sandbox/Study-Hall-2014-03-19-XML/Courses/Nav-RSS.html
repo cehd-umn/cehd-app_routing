@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Course Feed - RSS with Nav</title>
+<link rel="stylesheet" type="text/css" href="../core.css">
+</head>
+
+<body>
+<h1>Course Feed - RSS with Nav</h1>
+<!--#include virtual="/attributes/rssParser/Functions.asp"-->
+
+<%
+	GetRSSFeed "http://apps.cehd.umn.edu/programs/RSSFeed.aspx?t=cur,next,tan&p=CI&d=both&a=both&h=0","Courses-Nav-RSS.xslt","My Error Message"
+%>
+
+</body>
+</html>

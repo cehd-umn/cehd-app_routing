@@ -1,0 +1,125 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "Career Services" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1 class="h1">Career Services</h1>
+    <div class="row">
+      <div class="twothird feature">
+      <p>CEHD Career Services connects current CEHD students to their future. Career Services staff host on-campus events so you can find jobs and internships, meet with you to review your resume, help with major and career exploration, and prepare for interviews and graduate/professional school. Learn more about:</p>
+      <ul>
+        <li><a href="/career/resumes/">Writing  your resume</a></li>
+        <li><a href="/career/degrees/">Exploring majors and careers</a></li>
+        <li><a href="/career/internships/">Landing a great internship </a></li>
+        <li><a href="/career/search/">Finding a job</a></li><br>
+<p>Have questions about career planning? <a href="/career/staff/">Contact career services.</a></p>
+        <h2 class="h3">Looking for job and internship postings?</h2>
+        <p>Check out <a href="http://goldpass.umn.edu/">GoldPASS</a> and the <a href="http://academics.cehd.umn.edu/career/">career services blog</a>.</p>
+
+      </ul>
+    </div>
+</div>
+</div> <!-- ./row -->
+<div class="row emphasis margin-top-1">
+    <div class="container">
+
+        <div class="third feature">
+            <h2>Keep in touch</h2>
+            <div class="svg-social-media-icon size-40">
+                <a href="https://www.facebook.com/cehdcareers">
+            {% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+            </div>
+            <div class="svg-social-media-icon size-40">
+                <a href="https://www.linkedin.com/groups/2720034/profile">{% include "cehd/includes/svg/social-media/linkedin.html" %}</a>
+            </div>
+            <div class="svg-social-media-icon size-40">
+                <a href="https://twitter.com/hirecehd">{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+            </div>
+            <div class="svg-social-media-icon size-40">
+                <a href="https://www.pinterest.com/hirecehd/">{% include "cehd/includes/svg/social-media/pinterest.html" %}</a>
+            </div>
+<p>
+  Follow us on social media to stay up-to-date on career-related events, networking opportunities, job postings, and more.
+</p>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="margin-top-1">
+</div>
+  <div class="container">
+    <div class="row">
+    <div class="third">
+      <h2>Appointments</h2>
+            <p>Make an <a href="http://cehdcareer.appointments.umn.edu">appointment online</a> or call 612-625-3339.<br>
+              <br>
+              You can make an appointment for advice on exploring majors and careers, looking for a job or internship, preparing for graduate school, and reviewing your resume. <br>
+              <br>
+              The first step in getting your resume reviewed is to schedule an in-person appointment. <a href="/career/hours/">Drop-in hours</a> are also available. <br>
+            </p>
+    </div>
+    <div class="third">
+            <h2 class="h2">Hours/location</h2>
+            <p>8:00 a.m.-4:00 p.m., Monday-Friday</p>
+          <p>CEHD Student Services <br>
+            360 <a href="http://www1.umn.edu/twincities/maps/EdSciB/">Education Sciences Building</a><br>
+            56 East River Road<br>
+            Minneapolis, MN 55455
+        </p>
+
+               <h2>Drop-in hours </h2>
+            <p> Drop-in hours are held on Fridays  between 9:00 a.m.- 2:00 p.m. The last drop-in appointment will be taken at 1:45pm.</p>
+
+
+    </div>
+    <div class="third">
+      <!-- http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&x=6&r=3&q=6&l=y&t=231 -->
+                {{ loader.loader(
+                "Upcoming events",
+                "h2",
+                "events-container"
+) }}
+</div>
+</div>
+  </div> <!-- ./container -->
+  <div class="margin-top-2">
+  </div>
+  {# import the macro #}
+  {%- import "macros/svg.html" as svg -%}
+  <div class="row emphasis cool">
+      <div class="container">
+          <div class="half feature margin-top-1">
+              {# create an array of 2-5 short lines of text #}
+              {% set lines = [
+                  "94% of spring 2015",
+                  "graduates were satisfied",
+                  "overall with their experiences",
+                  "at the University of Minnesota",
+              ] %}
+              {# call the macro #}
+              {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+          </div>
+      </div>
+  </div>
+
+{% endblock %}
+
+{% block bottom_js %}{{ parent() }}
+
+
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+        231
+    ) }}
+
+{% endblock %}

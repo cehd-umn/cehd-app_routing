@@ -1,0 +1,34 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "Alumni Events" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Events</h1>
+    <div class="twothird feature">
+        <div class="span-6">
+          {{ loader.loader(
+            "Alumni events",
+            "h2",
+            "events-container"
+          ) }}
+        </div>
+        <div class="span-6">
+          {{ loader.loader(
+            "College-wide events",
+            "h2",
+            "events-container-college"
+          ) }}
+        </div>
+    </div>
+
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+        {{ eventsfeed.events_feed_js(182) }}
+        {{ eventsfeed.events_feed_js(182, 3, "#events-container-college", "/assets/dist/views/cehd/events") }}
+{% endblock %}

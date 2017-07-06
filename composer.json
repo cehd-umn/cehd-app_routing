@@ -4,8 +4,7 @@
         "klein/klein": "^2.1",
         "guzzlehttp/guzzle": "~6.0",
         "symfony/yaml": "^3.1",
-        "thoma127/dict": "^0.1.2",
-        "leafo/scssphp": "^0.6.6"
+        "thoma127/dict": "^0.1.2"
     },
     "require-dev": {
         "phpunit/php-code-coverage": "^4.0"

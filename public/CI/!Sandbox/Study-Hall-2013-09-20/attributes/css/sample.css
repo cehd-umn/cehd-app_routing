@@ -1,0 +1,211 @@
+﻿@charset "UTF-8";
+
+/*	College of Education and Human Development
+	Sample CSS for use with G5 and off-canvas templates
+	Authors: Jeff Abuzzahab
+	Created: 2013-09-18
+	Updated: 2013-09-18
+	*/
+
+
+
+body  {
+	background: #fff;
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	line-height:18px;
+	background-image: none;
+	width:800px;
+	margin:20px auto;
+} 
+
+/* -------------------- Headings  ------------------------ */
+h6{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h5{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h4{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h3{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h2{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h1{color:#990099;margin:10px 25px;padding:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none}
+h1 {font-size:155%;line-height:140%}
+h2 {font-size:135%;line-height:130%}
+h3 {font-size:115%;line-height:130%}
+h4 {font-size:105%;line-height:120%}
+h5 {font-size:105%;line-height:120%}
+h6 {font-size:100%;line-height:100%}
+
+a:link 		{color:#776548;text-decoration:none}
+a:visited	{color:#776548;text-decoration:none}
+a:hover		{color:#336699;text-decoration:underline}
+a:active	{color:#ffcc33;text-decoration:none}
+a.FauxLink	{color:#776548;text-decoration:none;cursor:pointer}
+h2 a:hover	{color:#336699;text-decoration:none}
+span.h-override-color {font-size: 90%}
+span.h-override-black {color:#000; font-size:80%}
+
+
+
+/* ----------------------------------------------------------- COLUMNS FOR LAYOUT */
+div.narrow	{width:120px;float:left;margin:0;padding:0;}
+div.quarter	{width:160px;float:left;margin:0;padding:0;}
+div.third 	{width:220px;float:left;margin:0;padding:0;}
+div.half 	{width:320px;float:left;margin:0;padding:0;}
+div.twothird{width:440px;float:left;margin:0;padding:0;}
+div.threequarter{width:480px;float:left;margin:0;padding:0;}
+div.whole 	{width:660px;float:left;margin:0;padding:0;}
+/* ----------------------------------------------------------- PARAGRAPHS */
+p {margin:10px 25px;padding:0;}
+p.revised {font-size: .8em;font-style: italic;text-align: right;padding: 16px 8px 16px 0;margin: 0;}
+p.citation {text-indent: -2.5em;margin-left: 5em;}
+p.journal {text-indent: 2em;}
+p.tinytype {font-size: .7em;}
+p.caption {font-size: 11px;}
+p.blockquote{font:bold 125%/100% Arial, sans-serif;color:#666666;line-height:1.3; margin:10px 25px;padding:10px 15px;}
+
+/* ----------------------------------------------------------- EXERPTS */
+div.excerpt	{border-top: 1px #ccc dotted;margin: 0 18px;padding: 2px 0;}
+div.excerpt h4 {margin: 10px 7px;}
+div.excerpt h3 {margin: 10px 7px;}
+div.excerpt h2 {margin: 10px 7px;}
+div.excerpt p {margin: 10px 7px;}
+
+/* ----------------------------------------------------------- LISTS */
+ol {margin:10px 25px 10px 25px;padding:0; list-style-type:decimal;}
+ul {margin:10px 25px 10px 25px;padding:0; list-style-type:disc; }
+li {margin: 10px 0 10px 20px;padding:0;}
+ul.no-bullet {list-style-type: none; list-style-image: none;}
+ul.no-bullet-no-indent {list-style-type: none; list-style-image: none; margin-left: 5px;padding-left: 0px}
+ol.tight li {margin:0 0 0 20px;}
+ul.tight li {margin:0 0 0 20px;}
+dl {margin:10px 25px 10px 25px;padding:0;}
+dt {margin: 10px 0 10px 0;padding:0;font-weight: bold;}
+dd {margin: 10px 0 10px 20px;padding:0;}
+/* ----------------------------------------------------------- MLA STYLES */
+ul { /*list-style: disc;*/list-style-image: url('../images/Dingbats/bullet.gif'); }
+ul ul { list-style-image: url('../images/Dingbats/circle.jpg'); margin:10px 0 10px 10px;}
+ul ul ul { list-style: square;  margin:10px 0 10px 10px;}
+ol { list-style: decimal; }
+ol ol { list-style: lower-alpha;  margin:10px 0 10px 10px;}
+ol ol ol { list-style: lower-roman;  margin:10px 0 10px 10px;}
+/* ----------------------------------------------------------- TABLES */
+/* SEE TABLE CLASSES LATER ON THIS SHEET */
+
+table	{margin:10px 25px;padding:0;}
+/*CheckThis&Delete*/td.label{padding: 2px;}
+/*CheckThis&Delete*/td.input{padding: 2px;}
+pre {margin: 10px;padding:0; display: block;}
+blockquote {font-style: italic; margin: 10px 40px;padding:0;display: block;}
+
+/* ----------------------------------------------------------- STRONG & EM */
+strong {font-weight:bold;}
+strong.alert {color: red;}
+strong.yes {color: green;}
+strong.muted {color: #666;}
+em {font-style:italic;}
+em.color {color: #039;background-color: transparent;font-weight: bold;font-style: normal;}
+em.new {color: #ff9933;background-color: transparent;font-weight: bold;font-style: italic;}
+/* ------------------------------------------------------ SUPER & SUBSCRIPTS */
+sup {font-size: .83em;vertical-align: super;}
+sub {font-size: .83em;vertical-align: sub;}
+/* ----------------------------------------------------------- IMAGE PLACEMENT */
+/* Legacy styles from G2 - G5 */
+/* Still in use throughout site, Connect, ResearchWorks 2011-09-19 JFA */
+a img {border:none;}
+img.right {position: relative;float: right;margin: 0 0 10px 10px;padding: 0;}
+img.left {position: relative;float: left;margin: 0 8px 8px 0;padding: 0;}
+img.center {display: block;margin-left: auto;margin-right:auto;}
+
+/* - WITH CAPTIONS - */
+p.pictnormal {font-size: .7em;color: #666666;}
+p.pictleft {position: relative;float: left;padding: 0;margin-right: 10px;font-size: .7em;color: #666;}
+p.pictright {position: relative;float: right;padding: 0;margin-left: 10px;font-size: .7em;color: #666;}
+
+
+/* ------------------------------------------------------------- video PLACEMENT */
+iframe {margin:10px 25px;padding:0;}
+embed {margin:10px 25px;padding:0;}
+object {margin:10px 25px;padding:0;}
+/* --------------------------------------------------------- end video PLACEMENT */
+
+/* ----------------------------------------------------------- TABLES FOR TABULAR CONTENT */
+/* Legacy styles from G4 and G5 */
+table.DisplayGrid {border:1px solid #ccc;border-collapse: collapse;empty-cells: show;width: 730px;}
+table.DisplayGrid th {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;}
+table.DisplayGrid td {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;}
+table.basic {border:1px solid #ccc;border-collapse: collapse;empty-cells: show;width: 600px;}
+table.basic th {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;background-color:#ccc;}
+table.basic td {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;background-color:transparent;}
+table.skinny {border:1px solid #ccc;border-collapse: collapse;empty-cells: show;width: 420px;}
+table.skinny th {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;background-color:#ccc;}
+table.skinny td {padding:4px;border-spacing: 4px;vertical-align:top;text-align:left;border:1px solid #ccc;background-color:transparent;}
+/*---- These are professional development feed stylings from a definition list - */
+dl.profdev {width: 600px;}
+dt.profdev {background-color:#ccc;padding:4px;margin:0;}
+dt.profdev a {cursor:pointer;text-decoration:underline;}
+dl.profdev p.profdev-date {font-style:italic;margin:10px 25px 10px 5px;}
+dl.profdev dd {border:1px solid #ccc;margin: 0;}
+/*table.PeopleResults {margin:10px 0; width:99%} THIS WAS A FIX FOR INSIDE TABS  */
+
+
+/* ------------------------------------------------------------ FORMS */
+
+fieldset {border:1px white solid;}
+fieldset legend  {margin:10px 25px;padding:0;color:#666;}
+
+div#Form-Light{margin:0 25px;width:600px;padding:0;}
+div#skinny-content div#Form-Light {width:420px;}
+div#Form-Light h2 {font-size:14px;font-weight:bold;margin-bottom:8px;}
+div#Form-Light {width: 580px;border-bottom:2px #ccc dotted;padding:0 0 20px 0;margin:0 0 20px 0;}
+div#skinny-content div#Form-Light fieldset {width:400px;}
+div#Form-Light fieldset legend {font-size:16px;width:570px;font-weight:bold;color:#900;margin:10px 25px;font-family:Verdana, Geneva, sans-serif;}
+div#skinny-content div#Form-Light fieldset legend {width:400px;}
+div#Form-Light label{display:block;font-weight:bold;text-align:right;width:160px;float:left;margin:0 0 10px 0;font-family:Verdana, Geneva, sans-serif;}
+div#skinny-content div#Form-Light label {width:400px;float:left;text-align:left;}
+div#Form-Light label.wide{text-align:left;width:540px;float:none;}
+div#skinny-content div#Form-Light label.wide {width:400px;}
+div#Form-Light span{color:#666666;display:block;font-size:11px;font-weight:normal;text-align:right;width:160px;}
+div#skinny-content div#Form-Light span {width:400px;}
+div#Form-Light label.wide span{text-align:left;width:540px;}
+div#skinny-content div#Form-Light label.wide span {width:400px;}
+div#Form-Light p.CheckorRadio-Long {border:thin #fff solid;margin:10px 25px;width:560px;}
+div#Form-Light p.CheckorRadio-Short {border:thin #fff solid;margin:10px 25px;width:560px;}
+div#skinny-content div#Form-Light p.CheckorRadio-Long {width:400px;}
+div#skinny-content div#Form-Light p.CheckorRadio-Short {width:400px;}
+div#Form-Light p.CheckorRadio-Long label{display:block;float:none;font-weight:bold;text-align:left;width:400px;margin:0 0 0 25px;}
+div#skinny-content div#Form-Light p.CheckorRadio-Long label{width:340px;float:none;}
+div#Form-Light p.CheckorRadio-Long label span{color:#666666;display:block;font-size:11px;font-weight:normal;text-align:left;width:400px;}
+div#skinny-content div#Form-Light p.CheckorRadio-Long label span{width:340px;}
+div#Form-Light input{float:left;font-size:12px;padding:4px 2px;border:solid 1px silver;width:350px;margin:2px 0 20px 10px;}
+div#Form-Light textarea{float:left;font-size:12px;padding:4px 2px;border:solid 1px #ccc;width:350px;height:70px;margin:2px 0 20px 10px;}
+div#Form-Light p.CheckorRadio-Short input {width:12px;height:12px;margin:2px 340px 20px 10px;padding:0;border:none;	}
+div#Form-Light p.CheckorRadio-Long input {width:12px;height:12px;margin:2px 10px 0 0;padding:0;border:none;	}
+div#Form-Light select {margin:0 0 20px 10px;padding:8px;}
+div#Form-Light .button{clear:both;margin-left:210px;width:125px;height:50px;background:#7a0019 none;text-align:center;line-height:31px;color:white;font-size:16px;font-weight:bold;cursor:pointer;}
+div#skinny-content div#Form-Light .button{clear:both;margin-left:50px;}
+
+/* ------------ End Main Content ---------------------------------------------*/
+
+/* ------------ Miscellaneous classes for reuse ------------------------------*/
+
+div.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+div.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+br.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+div.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+
+/* ----------- End Miscellaneous classes for reuse --------------------------*/
+

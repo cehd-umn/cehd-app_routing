@@ -1,0 +1,22 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Fall Assembly" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <!-- Called CEHD Block Party in Cognito - JFA  -->
+    <!-- Intro copy and form hosted in Cognito -->
+    <div class="span-4">
+        <img src="/assets/images/icons/plus-gold.svg" alt="Plus symbol">
+  </div>
+    <div class="row span-6 ">
+      <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=17" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="981" width="100%"></iframe>
+      <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+      <script>
+        Cognito.setCss('http://backstage.cehd.umn.edu/assets/dist/css/minified/forms.css');
+      </script>
+  </div>
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Assessment" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+          <h1>Foundations completion and CEU certificate</h1>
+    <div class="row">
+      <div class="span-4">
+        {{ include('cehd/teaching/co-teaching/foundations/aa-nav.html') }}
+      </div>
+      <div class="span-8">
+    <div class="margin-top-3">
+    </div>
+    <p>In order to record your completion of the Co-Teaching Foundations
+    online workshop, we require your contact information as well as your
+    responses to three reflective questions. Feel free to develop responses
+    to each question as a co-teaching pair.<br />
+    <br />
+    After you complete and submit
+    the required reflection form you will be able to download and print out
+    CEU certificates. Cooperating teachers, please keep a copy of submission confirmation message for
+    your records.</p>
+    <!-- IN Cognito from is named: OTE - Foundations Completion & CEU | 2017-05-05 JFA -->
+    <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=23" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="1544" width="100%"></iframe>
+    <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+    <script>
+      Cognito.setCss('http://backstage.cehd.umn.edu/assets/dist/css/minified/forms.css');
+    </script>
+    </div>
+  </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

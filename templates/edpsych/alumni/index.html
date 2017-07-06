@@ -1,7 +1,7 @@
 {% extends "edpsych/layout/section.html" %}
-{%- import "edpsych/macros/events-feed.html" as eventsfeed -%}
-{%- import "edpsych/macros/news-feed.html" as newsfeed %}
-{%- import "edpsych/macros/loader.html" as loader -%}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "Alumni" %}
 {% block title %}{{ page_title }}{% endblock %}
 
@@ -172,13 +172,19 @@
     {#- Alumni news -#}
     {{ newsfeed.news_feed_js(
         "category/alumni-educational-psychology/feed/",
-        "#alumni-news-container"
+        "#alumni-news-container",
+        null,
+        3,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#- Dept news -#}
     {{ newsfeed.news_feed_js(
         "category/departments/department-news-no-alumni/feed/",
-        "#dept-news-container"
+        "#dept-news-container",
+        null,
+        3,
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
 
     {#-
