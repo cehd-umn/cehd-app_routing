@@ -1255,6 +1255,11 @@
   template: cehd/graduate/funding.html
   template_data:
     - section: graduate
+/graduate/international/:
+  publish: true
+  template: cehd/graduate/international.html
+  template_data:
+    - section: graduate
 /graduate/policy/:
   publish: true
   template: cehd/graduate/policy.html

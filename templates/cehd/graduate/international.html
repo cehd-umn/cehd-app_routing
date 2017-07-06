@@ -1,0 +1,103 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "International Graduate Education" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>CEHD's international students</h1>
+  </div>
+</div>
+
+<div class="row">
+<div class="container">
+  <div class="twothird feature">
+    <p>CEHD strives to be an international college, believing that cultural and international scholarly exchange makes our community more vibrant and effective in our mission to improve lives. You bring your ideas, experiences, and efforts to our college and University community. We see that and profoundly appreciate it. We want you to know that you are respected and wanted on our campus and in our college.</p>
+
+    <p>Our international students bring valuable insights and passion to our research and classroom experiences; our international scholars bring new frameworks and expertise to our projects and programs; and our international partners bring a spirit of generosity, cooperation, and friendship to our collaborations.</p>
+
+    <p>We commit to:</p>
+    <ul>
+      <li>Prioritizing our students, scholars, and partners. We will take care of you first, ensuring you have the environment and services you need to be successful in your work with us.</li>
+      <li>Sharing up-to-date information in a timely manner. As changes occur in our political climate, we will offer thoughtful guidance and prompt responses to questions to the best of our ability.</li>
+      <li>Building a safe and accountable climate. You will have our support. We are your advocates and your friends. Should you experience anything here that makes you feel unsafe or unwanted, we will listen to you, believe in you, and uphold you as a member of our community.</li>
+    </ul>
+    <p>You are welcome here. Our differences drive our greatness.</p>
+
+  </div>
+  </div>
+  <div class="margin-top-2">
+  </div>
+{# import the macro #}
+{%- import "macros/svg.html" as svg -%}
+<div class="row emphasis cool">
+    <div class="container">
+        <div class="half feature margin-top-1">
+            {# create an array of 2-5 short lines of text #}
+            {% set lines = [
+                "In the fall of 2016, CEHD enrolled 240",
+                "international graduate students.",
+                "That's roughly 10% of our total",
+                "graduate enrollment.",
+            ] %}
+            {# call the macro #}
+            {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+        </div>
+    </div>
+</div>
+    <div class="margin-top-4">
+   </div>
+   <div class="row">
+     <div class="container">
+       <div class="half">
+         <h2>Resources: </h2>
+         <ul>
+         <li><a href="https://isss.umn.edu/">International Student and Scholar Services</a> and <a href="https://isss.umn.edu/office/announcements/exec-order.html">up-to-date information regarding changes to the United States&rsquo; immigration policy</a>.
+         </li>
+         <li>
+           <a href="http://immigration.umn.edu/">Immigration Response Team.</a>
+         </li>
+         <li>
+           <a href="http://bias-response.umn.edu/">Bias Response Referral Network.</a>
+         </li>
+         <li>
+           <a href="http://www.mentalhealth.umn.edu/">Mental health resources for current students.</a>
+         </li>
+         <li>
+         <a href="https://diversity.umn.edu/multicultural/">Multicultural Center for Academic Excellence</a>, <a href="https://diversity.umn.edu/women/home">Women&rsquo;s Center</a>, <a href="https://diversity.umn.edu/gsc/">Gender and Sexuality Center for Queer and Trans Life</a>, and the <a href="http://aurora.umn.edu/">Aurora Center.</a>
+         </li>
+         <li>
+           <a href="https://www.leg.state.mn.us/lrl/issues/issues?issue=immigration">Resources for Immigrants in Minnesota.</a>
+         </li>
+         <li>
+           <a href="https://www.ilcm.org/">Immigration Law Center of Minnesota.</a>
+         </li>
+         <li>
+           <a href="http://iimn.org/">International Institute of Minnesota.</a>
+         </li>
+         </ul>
+       </div>
+         <div class="half">
+           <div class="margin-top-4">
+          </div>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/v4Jq5ZLXryM" frameborder="0" allowfullscreen></iframe>
+             </div>
+           </div>
+         </div>
+
+             <div class="margin-top-4">
+             </div>
+                <div class="row emphasis cool">
+                  <div class="container">
+                      <div class="half feature">
+                        <div class="corner-borders-top"></div>
+                          <div class="container">
+                            <h2 class="text-center">Next steps </h2>
+                            <p class="text-center"><a href="/diversity/">Diversity and inclusion</a> | <a href="/global/">Global initiatives</a> | <a href="/graduate/contact/">Contact</a></p>
+                          </div>
+                        <div class="corner-borders-bottom"></div>
+                      </div>
+
+  </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
