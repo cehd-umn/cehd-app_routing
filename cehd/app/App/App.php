@@ -222,6 +222,18 @@ class BaseApp extends \CEHD\App\BaseClass
             }
         }
 
+        $path_components = $this->pathToArray($uri);
+        // If there is something like default.html in the path, it'll be the
+        // last element.
+        $potential_html_filename = array_pop($path_components);
+
+        if (in_array($potential_html_filename, ["default.html", "index.html"]))
+        {
+            // put the uri back together minus the html filename.
+            $new_uri = "/" . implode("/", $path_components) . "/";
+            $response->redirect($new_uri, 301)->send();
+        }
+
         // Most redirects will match a key that is the lowercase version of
         // the URI.
         $redirect_route = $this->_redirects->get(
