@@ -6,6 +6,7 @@ cache
 vendor
 completer.hist
 tags
+dwt
 
 # exclusions
 !cache/Readme.md
