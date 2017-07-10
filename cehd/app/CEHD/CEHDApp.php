@@ -254,7 +254,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $results = $search_client->getResults($search_client_query_data);
         $template_data = [
             "results" => $results,
-            "query" => $query_data["q"],
+            "query" => $search_query["q"],
         ];
 
         echo $this->_renderTemplate('cehd/search/index.html', $template_data);
