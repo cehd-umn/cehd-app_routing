@@ -111,9 +111,9 @@ Clinical Physiology and Movement Science:
   publish: true
   links:
     - title: Graduate Minor
-      href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+      href: http://ccms.umn.edu/academic-programs/program-description
     - title: Graduate Certificate
-      href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+      href: http://ccms.umn.edu/academic-programs/program-description
   description: null
   categories:
     - Recreation, Health, and Wellbeing
@@ -402,6 +402,7 @@ Kinesiology:
       href: http://www.cehd.umn.edu/kin/current/grad/phd.html
   description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness.
   categories:
+    - Disability and Aging
     - Languages, Culture, and International
     - Recreation, Health, and Wellbeing
 Leadership:
@@ -498,6 +499,19 @@ Outdoor Recreation and Education:
   categories:
     - Teaching, Learning, and Schools
     - Recreation, Health, and Wellbeing
+    - Community and Leadership
+    - Families, Youth, and Children
+Physical Activity and Health:
+  meta: null
+  publish: true
+  links:
+    - title: Masters
+      href: http://www.cehd.umn.edu/kin/current/grad/professional/med-pah.html
+  description: Learn about the leading-edge research, trends, and practices in physical activity as they relate to health. Discover techniques for implementing programs through population-based physical activity.
+  categories:
+    - Recreation, Health, and Wellbeing
+    - Community and Leadership
+    - Families, Youth, and Children
 PK-12 Administrative Licensure:
   meta: null
   publish: true
@@ -579,6 +593,8 @@ Recreation Administration:
   description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
   categories:
     - Recreation, Health, and Wellbeing
+    - Languages, Culture, and International
+    - Families, Youth, and Children
 School Psychology:
   meta: null
   publish: true
