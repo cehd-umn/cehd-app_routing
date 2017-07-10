@@ -1,0 +1,176 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2011
+	Authors: Dan Sagisser
+	Created: 2011-04-08
+	Updated: 2011-04-08
+*/
+
+
+body {background: #0072bc url(../images/firefly-gradient.png) repeat-x fixed}
+/* the gradient is a transparent PNG, so you set the color in the CSS, and the fade to white at the top comes from the PNG*/
+
+
+div#container {
+	background-color: #fff;
+	margin-bottom: 10px;
+	-moz-box-shadow: #333333 2px 2px 6px;
+	-webkit-box-shadow: #333333 2px 2px 6px;
+	box-shadow: 2px 2px 6px #333333;
+}
+
+/* ---------- Header -----------------------------------------*/
+header {
+	/*just for testing*/
+	background: transparent url(../banners/Green-Field.jpg);
+	height: 150px;
+	border-bottom: 10px solid #d96b0b;
+}
+header a {
+	background-color: transparent;
+	display:block;
+	overflow:hidden;
+	position: absolute;
+}
+
+header a#deptlink {
+	margin:55px 0 0 40px;
+	width:500px;
+	height:40px;
+	/*border: 1px fuchsia solid;*/
+}
+header a#cehdlink {
+	margin: 122px 0 0 560px;
+	width:400px;
+	height:25px;
+	/*border: 1px aqua solid;*/
+}
+
+/* ---------- End Header -------------------------------------*/
+
+
+/* -------------- Global Nav ---------------------------------*/
+nav {
+	/* nav is 210px normally, but we take off the amount from the width for the the left border */
+	width: 200px; 
+}
+
+/*the H1 should be "what's inside" or some version there of*/
+nav h1 {display:none;}
+
+nav ul {
+	margin: 25px 0 25px 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+nav li {
+	margin: 0;
+	list-style: none;
+	font-size: 1em;
+	padding: 8px 0 8px 15px;
+}
+nav li.URHere a{
+	color: green;
+}
+nav li.URHere li a{
+	color: black;
+}
+nav li.URHere li.URHere a{
+	color: green;
+}
+nav ul ul {
+	display: none;
+	margin: 5px 0 0 0;
+	font-weight: normal;
+}
+nav ul ul.URHere {
+	display: block;
+}
+
+nav li li.URHere {
+	font-weight: bold;
+}
+
+
+/* --------------- Contact Info for Department ------------*/
+nav address {
+	margin: 60px 0 30px 15px;
+	font-size: .8em;
+}
+/*if you want to put the contact info in the nav... this style is avalible*/
+/* --------------- End Contact Info for Department --------*/
+
+
+
+/* --------------- End Global Nav --------------------------*/
+
+
+/* --------------- Main Content ----------------------------*/
+div#maincontent {
+	width: 702px;
+	margin: 15px 0 15px 24px;
+} 
+/* --------------- End Main Content -----------------------*/
+
+
+
+/* ------------ Contact Info ------------------------------*/
+div#contactinfo { 
+	/*just for testing*/
+	background-color: white;
+	width: 960;
+	border-top: 1px #d4d4d4 solid;
+}
+
+div#contactinfo ul {
+	font-size: 10px;
+	text-align: center;
+	margin: 8px auto;
+}
+div#contactinfo li {
+	display: inline;
+}
+div#contactinfo li:after {
+	content: " | ";
+}
+div#contactinfo li:last-child:after {
+	content: "";
+}
+/*this just fixes a glitch for ie 8 and before*/
+div#contactinfo li:last {
+	content: "";
+}
+/* ------------ End Contact Info --------------------------*/
+
+
+
+
+/* ------------ Footer ------------------------------------*/
+footer { 
+	/*just for testing*/
+	background-color: white;
+	height: 50px;
+}
+/* ------------ End Footer --------------------------------*/
+
+
+div.half {
+	width: 351px; 
+}
+div.third {
+	width: 234px; 
+}
+div.twothird {
+	width: 468px; 
+}
+div.whole {
+	width: 702px;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/standard.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CEHD - University of Minnesota</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="attributes/css/core2011.css" type="text/css" />
+<link rel="stylesheet" href="attributes/css/umn-header.css" type="text/css" />
+<link rel="stylesheet" href="attributes/css/firefly.css" type="text/css" />
+<!-- This line is for the clamshell nav, if you aren't using it, you don't need it -->
+<script type="text/javascript" src="/attributes/js/globalnav.js" ></script>
+<!--  This just makes HTML5 operate on old versions of IE -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body> 
+<!--#include virtual="/dwt/firefly5/attributes/includes/campuslinks.asp" -->
+	<div id="container">
+		<!--#include virtual="/dwt/firefly5/attributes/includes/umn-header.asp" -->
+		<!--#include virtual="/dwt/firefly5/attributes/includes/firefly-header.asp" -->		
+		<nav id="globalnav">
+		  <!--#include virtual="/dwt/firefly5/attributes/includes/nav.asp" -->
+		</nav>
+	  <div id="maincontent"><!-- InstanceBeginEditable name="main-content" -->
+	    <h1>Modify These Templates!</h1>
+        <p>Congratulations on your recent implementation of the Firefly   		template. Created on April 2nd, 2010, Firefly is lightweight and easy   to   		implement. The Firefly template merges core.css and the design.css   		together into one easy to update style sheet. If you so chose, Firefly   also accepts core components such as jQuery, AJAX, clam shell menus and   even accordion menus. Read on for   		implementation tips.</p>
+        <h2>Do this first:</h2>
+      <h3>Rename Files</h3>
+      <p>Open up the attributes folder, anything named Firefly in   					the sub folders can   					be replace with the name or acronym of your site.   					CSS/Firefly.css for example.</p>
+      <h3>Point includes to youre site</h3>
+      <p>These includes are root relative, and pointing to the &quot;Firefly&quot; site, look for the includes in the two templates, they look like...</p>
+      <p>&lt;!--#include virtual=&quot;/dwt/firefly5/attributes/includes/nav.asp&quot; --&gt;</p>
+      <p>Notice that one starts at the &quot;dwt&quot; folder, so you need to update them to point to your site. For example, if you where in FSoS, they would be...</p>
+      <p>&lt;!--#include virtual=&quot;/fsos/attributes/includes/nav.asp&quot; --&gt;</p>
+      <p>&nbsp;</p>
+<h2>U of M Header<br>
+          /attributes/includes/umn-header.asp </h2>
+        <p>Firefly has the new U of M Header modified by CEHD to work in IE 6 &amp;   		7, Safari and Firefox. Check the search box to make sure you are   					pointing to the collection you want. By default it is set to   					the college search results page, the Google search can be redirected to take   		advantage of the tabbed search results. (Directions coming, Web Team can   		help for now)</p>
+        <h2>Unit Header<br>
+          /attributes/includes/Firefly-header.asp</h2>
+        <p>Set the link and title tag to reflect your site.<br>
+          Super easy to spot: &lt;a href="/" title="RESET THIS LINK AND   					TITLE TAG"&gt;&lt;/a&gt;</p>
+        <p>The picture is pulled in through CSS. Open Firefly.css   					and search for "Department Header Stuff" that will bring you   					to the section where the header image is called and the   					areas for the link areas floating over the image are   					defined. Note the orange bar under the header is also in   					this section as a border-bottom style.</p>
+      <h2>Left Navigation<br>
+        /attributes/includes/nav.asp</h2>
+        <p>Links on the left show how the layout divs work for your   					content. Open Firefly.css and search for "nav" that   					will bring you to the section where the style can be   					modified.</p>
+        <p>See also: <a href="clamshells/default.html">adding a clam   					shell menu</a>.</p>
+        <h2>U of M Footer<br>
+          /attributes/includes/footer.asp</h2>
+        <p>Address is located in the footer, make sure to update it for your department or center!</p>
+        <p>The timestamp is a Microsoft feature triggered off the   					server.</p>
+	  <!-- InstanceEndEditable --></div>
+    <br class="clearfloat" />
+		<!--#include virtual="/dwt/firefly5/attributes/includes/footer.asp" -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

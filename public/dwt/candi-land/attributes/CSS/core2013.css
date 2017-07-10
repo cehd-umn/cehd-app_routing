@@ -1,0 +1,1111 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2012r "Responsive"
+	Authors: Dan Sagisser, Jeff Abuzzahab and Susan Andre
+	Created: 2013-06-13
+	Updated: 2013-06-25
+*/
+/*test 05*/
+/* line 17, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 18, ../SASS/core2013.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 21, ../SASS/core2013.scss */
+body {
+  line-height: 1;
+}
+
+/* line 24, ../SASS/core2013.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 27, ../SASS/core2013.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 31, ../SASS/core2013.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 35, ../SASS/core2013.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End CSS Reset, Courtsey "A List Apart"   XXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* line 43, ../SASS/core2013.scss */
+nav {
+  float: left;
+  clear: none;
+  width: 20%;
+  position: relative;
+}
+/* line 49, ../SASS/core2013.scss */
+nav ul {
+  display: none ul;
+  display-display: none ul;
+  display-display-display: none;
+}
+
+/* line 56, ../SASS/core2013.scss */
+div#maincontent {
+  float: left;
+  clear: none;
+  width: 60%;
+  position: relative;
+}
+
+/* line 63, ../SASS/core2013.scss */
+div.half {
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 69, ../SASS/core2013.scss */
+div.third {
+  width: 33%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 75, ../SASS/core2013.scss */
+div.twothird {
+  width: 66%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 81, ../SASS/core2013.scss */
+div.whole {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 88, ../SASS/core2013.scss */
+div#extracontent {
+  float: left;
+  width: 20%;
+  position: relative;
+}
+/* line 92, ../SASS/core2013.scss */
+div#extracontent ul {
+  display: none ul;
+  display-display: none;
+}
+
+/* line 96, ../SASS/core2013.scss */
+footer {
+  display: block;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  background-color: #fff;
+  border-top: 1px #8dc73f solid;
+  margin: 0 0 1.5% 0;
+  padding: 0;
+  font-size: .8em;
+  color: #333;
+}
+/* line 108, ../SASS/core2013.scss */
+footer p#footccee {
+  float: left;
+  width: 50%;
+  margin: 1% 0 0 2%;
+  padding: 0;
+}
+/* line 115, ../SASS/core2013.scss */
+footer ul#footerlinks {
+  float: right;
+  width: 30%;
+  list-style-type: none;
+  text-align: right;
+  margin: 1% 2% 0 0;
+  padding: 0;
+}
+/* line 122, ../SASS/core2013.scss */
+footer ul#footerlinks li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+}
+/* line 126, ../SASS/core2013.scss */
+footer ul#footerlinks li a {
+  border-bottom: 1px #333 dotted;
+  text-decoration: none;
+  color: #333;
+}
+/* line 131, ../SASS/core2013.scss */
+footer ul#footerlinks li a:visited {
+  color: #333;
+}
+
+/* line 136, ../SASS/core2013.scss */
+.active-extra nav, .active-extra div#maincontent, .active-extra div#extracontent, .active-nav nav, .active-nav div#maincontent, .active-nav div#extracontent {
+  -webkit-transition: .2s all ease;
+  -moz-transition: .2s all ease;
+  -o-transition: .2s all ease;
+  -ms-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* ----------------------------------------------------------------------------- CORE ELEMENTS */
+/* -------------------- HEADINGS ------------------------ */
+/* line 150, ../SASS/core2013.scss */
+h1 {
+  font-size: 1.85em;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 151, ../SASS/core2013.scss */
+h2 {
+  font-size: 1.6em;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 152, ../SASS/core2013.scss */
+h3 {
+  font-size: 1.35em;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 153, ../SASS/core2013.scss */
+h4 {
+  font-size: 1em;
+  margin: 10px 25px;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* line 154, ../SASS/core2013.scss */
+h5 {
+  font-size: 1em;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 155, ../SASS/core2013.scss */
+h6 {
+  font-size: 1em;
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 157, ../SASS/core2013.scss */
+span.h-override-color {
+  font-size: 80%;
+}
+
+/* line 158, ../SASS/core2013.scss */
+span.h-override-black {
+  color: #000;
+  font-size: 80%;
+}
+
+/* -------------------- PARAGRAPHS ----------------------- */
+/* line 161, ../SASS/core2013.scss */
+p {
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 163, ../SASS/core2013.scss */
+.subhead {
+  margin: 0 25px 10px 25px;
+  padding: 0;
+}
+
+/* line 165, ../SASS/core2013.scss */
+p.revised {
+  font-size: .8em;
+  font-style: italic;
+  text-align: right;
+  width: 90%;
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+/* line 174, ../SASS/core2013.scss */
+p.citation {
+  text-indent: -2.5em;
+  margin-left: 5em;
+}
+
+/* line 176, ../SASS/core2013.scss */
+p.tinytype {
+  font-size: .7em;
+}
+
+/* -------------------- LISTS ---------------------------- */
+/* line 179, ../SASS/core2013.scss */
+ol {
+  margin: 10px 25px;
+  padding: 0;
+  list-style-type: decimal;
+}
+
+/* line 181, ../SASS/core2013.scss */
+ul {
+  margin: 10px 25px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+/* line 183, ../SASS/core2013.scss */
+li {
+  margin: 10px 0 10px 25px;
+  padding: 0;
+}
+
+/* line 185, ../SASS/core2013.scss */
+ul.no-bullet {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* line 187, ../SASS/core2013.scss */
+ol.tight li {
+  margin: 0 0 0 25px;
+}
+
+/* line 189, ../SASS/core2013.scss */
+ul.tight li {
+  margin: 0 0 0 25px;
+}
+
+/* line 191, ../SASS/core2013.scss */
+dl {
+  margin: 10px 25px;
+  padding: 0;
+}
+
+/* line 193, ../SASS/core2013.scss */
+dt {
+  margin: 10px 0 10px 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* line 195, ../SASS/core2013.scss */
+dd {
+  margin: 10px 0 10px 25px;
+  padding: 0;
+}
+
+/* line 198, ../SASS/core2013.scss */
+dl.DL-CardStack dt {
+  margin: 10px 0 0 0;
+  padding: 1%;
+  background-color: #09f;
+}
+/* line 199, ../SASS/core2013.scss */
+dl.DL-CardStack dd {
+  margin: 0 0 10px 0;
+  padding: 1%;
+  border: thin #09f solid;
+}
+
+/* line 202, ../SASS/core2013.scss */
+div#maincontent dl.DL-CardStack dt a {
+  color: #fff;
+}
+
+/* line 205, ../SASS/core2013.scss */
+dl.DL-Table dt {
+  margin: 0;
+  padding: 1%;
+  width: 45%;
+  float: left;
+}
+/* line 206, ../SASS/core2013.scss */
+dl.DL-Table dd {
+  margin: 0 0 0 50%;
+  padding: 1%;
+  width: 45%;
+}
+
+/* MLA STYLES FOR LISTS */
+/* line 210, ../SASS/core2013.scss */
+ul {
+  list-style: disc;
+}
+/* line 211, ../SASS/core2013.scss */
+ul ul {
+  list-style: circle;
+  margin: 10px 0 10px 10px;
+}
+/* line 212, ../SASS/core2013.scss */
+ul ul ul {
+  list-style: square;
+  margin: 10px 0 10px 10px;
+}
+
+/* line 216, ../SASS/core2013.scss */
+ol {
+  list-style: decimal;
+}
+/* line 217, ../SASS/core2013.scss */
+ol ol {
+  list-style: lower-alpha;
+  margin: 10px 0 10px 10px;
+}
+/* line 218, ../SASS/core2013.scss */
+ol ol ol {
+  list-style: lower-roman;
+  margin: 10px 0 10px 10px;
+}
+
+/* TABLES  */
+/* line 226, ../SASS/core2013.scss */
+table {
+  margin: 10px 25px;
+  padding: 0;
+  width: 90%;
+  border: 1px solid #e2e2e2;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+/* line 227, ../SASS/core2013.scss */
+caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+/* line 228, ../SASS/core2013.scss */
+th {
+  padding: 1%;
+  border-spacing: 1%;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #09f;
+  font-weight: bold;
+}
+
+/* line 229, ../SASS/core2013.scss */
+td {
+  padding: 1%;
+  border-spacing: 1%;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: transparent;
+}
+
+/* line 231, ../SASS/core2013.scss */
+address {
+  margin: 10px;
+  padding: 0;
+  font-style: normal;
+  display: block;
+}
+
+/* line 233, ../SASS/core2013.scss */
+pre {
+  margin: 10px;
+  padding: 0;
+  display: block;
+}
+
+/* line 235, ../SASS/core2013.scss */
+blockquote {
+  font-style: italic;
+  margin: 10px 40px;
+  padding: 0;
+  display: block;
+}
+
+/* line 237, ../SASS/core2013.scss */
+fieldset {
+  border: 1px white solid;
+}
+/* line 238, ../SASS/core2013.scss */
+fieldset legend {
+  margin: 10px 25px;
+  padding: 0;
+  color: #666;
+}
+
+/* line 241, ../SASS/core2013.scss */
+form {
+  display: block;
+  width: 100%;
+  padding: 1%;
+}
+/* line 242, ../SASS/core2013.scss */
+form p {
+  border: #fff thin solid;
+  min-height: 30px;
+}
+
+/* line 245, ../SASS/core2013.scss */
+fieldset {
+  border: 1px white solid;
+}
+/* line 246, ../SASS/core2013.scss */
+fieldset legend {
+  margin: 10px 25px;
+  padding: 0;
+  font-size: 1.4em;
+  width: 90%;
+  font-weight: bold;
+  color: #900;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+/* line 249, ../SASS/core2013.scss */
+label {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  float: left;
+  margin: 0 0 10px 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+/* line 250, ../SASS/core2013.scss */
+label span {
+  width: 100%;
+  color: #666666;
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+}
+
+/* line 253, ../SASS/core2013.scss */
+input {
+  width: 100%;
+  font-size: 1em;
+  padding: 1%;
+  border: solid thin silver;
+  margin: 0 0 10px 0;
+}
+
+/* line 254, ../SASS/core2013.scss */
+textarea {
+  width: 100%;
+  font-size: 1em;
+  padding: 1%;
+  border: solid thin #ccc;
+  height: 5em;
+  margin: 0 0 10px 0;
+}
+
+/* line 257, ../SASS/core2013.scss */
+label.wide {
+  text-align: left;
+  width: 100%;
+  float: none;
+}
+/* line 258, ../SASS/core2013.scss */
+label.wide span {
+  text-align: left;
+  width: 100%;
+}
+
+/* line 261, ../SASS/core2013.scss */
+p.CheckorRadio-Short {
+  border: thin #fff solid;
+  margin: 10px 25px;
+}
+/* line 262, ../SASS/core2013.scss */
+p.CheckorRadio-Short input {
+  float: left;
+  width: 1%;
+  height: 1%;
+  margin: 2px 340px 20px 10px;
+  padding: 0;
+  border: none;
+}
+
+/* line 265, ../SASS/core2013.scss */
+p.CheckorRadio-Long {
+  border: thin #fff solid;
+  margin: 10px 25px;
+}
+/* line 266, ../SASS/core2013.scss */
+p.CheckorRadio-Long label {
+  display: block;
+  float: none;
+  font-weight: bold;
+  text-align: left;
+  width: 80%;
+  margin: 0 0 0 25px;
+}
+/* line 267, ../SASS/core2013.scss */
+p.CheckorRadio-Long label span {
+  color: #666666;
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+  text-align: left;
+  width: 80%;
+}
+/* line 269, ../SASS/core2013.scss */
+p.CheckorRadio-Long input {
+  float: left;
+  width: 1%;
+  height: 1%;
+  margin: 2px 10px 0 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 272, ../SASS/core2013.scss */
+select {
+  margin: 0 0 20px 10px;
+  padding: 8px;
+}
+
+/* line 273, ../SASS/core2013.scss */
+.button {
+  clear: both;
+  margin-left: 40%;
+  width: 15%;
+  height: 8%;
+  background: #7a0019 none;
+  text-align: center;
+  line-height: 2em;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ------------------- INLINE ELEMENTS ------------------ */
+/* line 278, ../SASS/core2013.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 279, ../SASS/core2013.scss */
+strong.alert {
+  color: red;
+}
+
+/* line 280, ../SASS/core2013.scss */
+strong.yes {
+  color: green;
+}
+
+/* line 282, ../SASS/core2013.scss */
+em {
+  font-style: italic;
+}
+
+/* ----------- IMAGE PLACEMENT STARTS HERE -------------- */
+/* line 286, ../SASS/core2013.scss */
+img.img-right {
+  position: relative;
+  float: right;
+  margin: 1% 0 10px 10px;
+  padding: 0;
+}
+
+/* line 293, ../SASS/core2013.scss */
+img.img-left {
+  position: relative;
+  float: left;
+  margin: 1% 10px 10px 0;
+  padding: 0;
+}
+
+/* Bootstrap Styles */
+/*Alert Text*/
+/* line 304, ../SASS/core2013.scss */
+.muted {
+  color: #999999;
+}
+
+/* line 306, ../SASS/core2013.scss */
+a.muted:hover,
+a.muted:focus {
+  color: #808080;
+}
+
+/* line 308, ../SASS/core2013.scss */
+.text-warning {
+  color: #c09853;
+}
+
+/* line 310, ../SASS/core2013.scss */
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #a47e3c;
+}
+
+/* line 312, ../SASS/core2013.scss */
+.text-error {
+  color: #b94a48;
+}
+
+/* line 314, ../SASS/core2013.scss */
+a.text-error:hover,
+a.text-error:focus {
+  color: #953b39;
+}
+
+/* line 316, ../SASS/core2013.scss */
+.text-info {
+  color: #3a87ad;
+}
+
+/* line 318, ../SASS/core2013.scss */
+a.text-info:hover,
+a.text-info:focus {
+  color: #2d6987;
+}
+
+/* line 320, ../SASS/core2013.scss */
+.text-success {
+  color: #468847;
+}
+
+/* line 322, ../SASS/core2013.scss */
+a.text-success:hover,
+a.text-success:focus {
+  color: #356635;
+}
+
+/* line 324, ../SASS/core2013.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 325, ../SASS/core2013.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 326, ../SASS/core2013.scss */
+.text-center {
+  text-align: center;
+}
+
+/*Alert Boxes*/
+/* line 330, ../SASS/core2013.scss */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin: 10px 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 341, ../SASS/core2013.scss */
+.alert, .alert h4 {
+  color: #c09853;
+}
+
+/* line 342, ../SASS/core2013.scss */
+.alert h4, .alert p {
+  margin: 0;
+}
+
+/* line 343, ../SASS/core2013.scss */
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 20px;
+}
+
+/* line 344, ../SASS/core2013.scss */
+.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+/* line 345, ../SASS/core2013.scss */
+.alert-success h4 {
+  color: #468847;
+}
+
+/* line 346, ../SASS/core2013.scss */
+.alert-danger, .alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+/* line 347, ../SASS/core2013.scss */
+.alert-danger h4, .alert-error h4 {
+  color: #b94a48;
+}
+
+/* line 348, ../SASS/core2013.scss */
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+/* line 349, ../SASS/core2013.scss */
+.alert-question {
+  background-color: #ddd;
+  border-color: #cbcccd;
+}
+
+/* line 350, ../SASS/core2013.scss */
+.alert-question h1, .alert-question h2, .alert-question h3, .alert-question h4 {
+  color: black;
+  margin: 10px 10px 5px 10px;
+}
+
+/* line 351, ../SASS/core2013.scss */
+.alert-question p {
+  color: black;
+  margin: 5px 10px;
+}
+
+/* line 352, ../SASS/core2013.scss */
+.alert-question ul {
+  color: black;
+}
+
+/* line 353, ../SASS/core2013.scss */
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+/* line 354, ../SASS/core2013.scss */
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* line 355, ../SASS/core2013.scss */
+.alert-block > p, .alert-block > ul {
+  margin-bottom: 0;
+}
+
+/* line 356, ../SASS/core2013.scss */
+.alert-block p + p {
+  margin-top: 5px;
+}
+
+/*Image placement*/
+/* line 360, ../SASS/core2013.scss */
+.media, .media-body {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+/* line 361, ../SASS/core2013.scss */
+.media, .media .media {
+  margin-top: 15px;
+}
+
+/* line 362, ../SASS/core2013.scss */
+.media:first-child {
+  margin-top: 0;
+}
+
+/* line 363, ../SASS/core2013.scss */
+.media-object {
+  display: block;
+}
+
+/* line 364, ../SASS/core2013.scss */
+.media-heading {
+  margin: 0 0 5px;
+}
+
+/* line 365, ../SASS/core2013.scss */
+.media > .pull-left {
+  margin-right: 10px;
+}
+
+/* line 366, ../SASS/core2013.scss */
+.media > .pull-right {
+  margin-left: 10px;
+}
+
+/* line 367, ../SASS/core2013.scss */
+.media-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* END Bootstrap Styles */
+/* JQUERY Styles */
+/* line 371, ../SASS/core2013.scss */
+div.tabs {
+  margin: 10px 25px;
+}
+
+/* END JQUERY Styles */
+/*XXXXXXXXXXXXXXXXXXXXXX    End Content Styling   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* line 380, ../SASS/core2013.scss */
+body {
+  font: 80% Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+}
+
+/* line 386, ../SASS/core2013.scss */
+div#container {
+  width: 960px;
+  position: relative;
+  margin: 0 auto;
+  /* the auto margins (in conjunction with a width) center the page */
+  text-align: left;
+  /* this overrides the text-align: center on the body element. */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* call out boxes ----------------------*/
+/* line 396, ../SASS/core2013.scss */
+div#maincontent div.callout-right {
+  width: 180px;
+  border: #ccc solid 1px;
+  float: right;
+  margin: 15px 0 15px 15px;
+}
+/* line 401, ../SASS/core2013.scss */
+div#maincontent div.callout-right h2, div#maincontent div.callout-right h3 {
+  font-size: 1.25em;
+  margin: 10px 15px;
+}
+/* line 405, ../SASS/core2013.scss */
+div#maincontent div.callout-right p {
+  margin: 10px 15px;
+}
+/* line 406, ../SASS/core2013.scss */
+div#maincontent div.callout-right ul {
+  margin: 10px;
+}
+
+/* end call out boxes ------------------*/
+/*this media querry covers the first point at which things go bellow the desktop 960px */
+@media only screen and (max-width: 960px) {
+  /* line 418, ../SASS/core2013.scss */
+  div#container {
+    width: 100%;
+  }
+
+  /* line 419, ../SASS/core2013.scss */
+  footer {
+    width: 100%;
+  }
+}
+/* this media querry largley takes care of pulling out the extra right column when there isn't room for it anymore */
+@media all and (max-width: 830px) {
+  /* line 427, ../SASS/core2013.scss */
+  nav {
+    width: 30%;
+    margin-left: 0;
+  }
+
+  /* line 432, ../SASS/core2013.scss */
+  div#maincontent {
+    width: 70%;
+    margin-left: 0;
+  }
+
+  /* line 438, ../SASS/core2013.scss */
+  div#extracontent {
+    width: 30%;
+    float: left;
+    margin-right: -200%;
+    /*this is -200px because the transistions look weird in webkit if you don't use giant margins */
+  }
+
+  /* line 447, ../SASS/core2013.scss */
+  .active-extra nav {
+    margin-left: -30%;
+  }
+  /* line 448, ../SASS/core2013.scss */
+  .active-extra div#extracontent {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 520px) {
+  /* line 453, ../SASS/core2013.scss */
+  div#container {
+    min-width: 320px;
+  }
+
+  /* line 455, ../SASS/core2013.scss */
+  nav {
+    width: 80%;
+    margin-left: -200%;
+    /*this is -200px because the transistions look weird in webkit if you don't use giant margins*/
+    z-index: 3;
+  }
+
+  /* line 461, ../SASS/core2013.scss */
+  div#maincontent {
+    width: 100%;
+    margin-left: 0;
+    z-index: 2;
+  }
+  /* line 465, ../SASS/core2013.scss */
+  div#maincontent div.callout-right {
+    width: 90%;
+    margin: 0 0 0 25px;
+    float: none;
+  }
+  /* line 470, ../SASS/core2013.scss */
+  div#maincontent div#extracontent {
+    width: 80%;
+    z-index: 1;
+  }
+
+  /* line 479, ../SASS/core2013.scss */
+  .active-extra nav {
+    margin-left: -100%;
+  }
+  /* line 480, ../SASS/core2013.scss */
+  .active-extra div#maincontent {
+    margin-left: -80%;
+  }
+  /* line 481, ../SASS/core2013.scss */
+  .active-extra div#extracontent {
+    margin-right: 0;
+  }
+
+  /* line 485, ../SASS/core2013.scss */
+  .active-nav nav {
+    margin-left: 0;
+  }
+  /* line 486, ../SASS/core2013.scss */
+  .active-nav div#maincontent {
+    margin-left: 0;
+    margin-right: -80%;
+  }
+  /* line 490, ../SASS/core2013.scss */
+  .active-nav div#extracontent {
+    margin-right: -200%;
+  }
+}
+/* ------------ Miscellaneous classes for reuse ------------------------------*/
+/* line 496, ../SASS/core2013.scss */
+div.fltrt {
+  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+  float: right;
+  margin-left: 8px;
+}
+
+/* line 500, ../SASS/core2013.scss */
+div.fltlft {
+  /* this class can be used to float an element left in your page */
+  float: left;
+  margin-right: 8px;
+}
+
+/* line 504, ../SASS/core2013.scss */
+br.clearfloat {
+  /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+/* line 510, ../SASS/core2013.scss */
+div.clearfloat {
+  /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+/* ----------- End Miscellaneous classes for reuse --------------------------*/

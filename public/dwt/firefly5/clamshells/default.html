@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><!-- #BeginTemplate "/Templates/standard.dwt" --><!-- DW6 -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Postsecondary Teaching and Learning - CEHD - Univ. of Minn.</title>
+<!-- #EndEditable -->
+<link rel="stylesheet" href="../attributes/css/core2011.css" type="text/css" />
+<link rel="stylesheet" href="../attributes/css/umn-header.css" type="text/css" />
+<link rel="stylesheet" href="../attributes/css/firefly.css" type="text/css" />
+<!-- This line is for the clamshell nav, if you aren't using it, you don't need it -->
+<script type="text/javascript" src="/attributes/js/globalnav.js" ></script>
+<!--  This just makes HTML5 operate on old versions of IE -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- #BeginEditable "head" -->
+<!-- #EndEditable -->
+</head>
+
+<body> 
+<!--#include virtual="/dwt/firefly5/attributes/includes/campuslinks.asp" -->
+	<div id="container">
+		<!--#include virtual="/dwt/firefly5/attributes/includes/umn-header.asp" -->
+		<!--#include virtual="/dwt/firefly5/attributes/includes/firefly-header.asp" -->		
+		<nav id="globalnav">
+		  <!--#include virtual="/dwt/firefly5/attributes/includes/nav.asp" -->
+		</nav>
+	  <div id="maincontent"><!-- #BeginEditable "main-content" -->
+  					<h1>Adding a Clamshell Menu</h1>
+	  <p>Firelfy comes equipped with a clamshell menus built in and ready to go. If you want to see them in action, try the &quot;layouts&quot; section on the navigation</p>
+					<h2>How do they work?</h2>
+					<p>Just go into the navigation incldue file, found in</p>
+					<ul>
+					  <li>attributes&gt;includes&gt;nav.asp	</li>
+	  </ul>
+					<p>Open that up, and away you go. Everything is in unordered lists. Just edit it right in the design view. If you want a subsection, just hit the indent button, or hit the tab key, and you'll go in a level.	  </p>
+	  <h2>Keys to Success					</h2>
+					<p>Keep the ul structure of the navigation clean, the parent 
+					ul: &lt;ul id=&quot;navblock&quot;&gt;<br />
+	  Nested ul&#39;s are: &lt;ul class=&quot;submenu&quot;&gt;</p>
+	  <p>When adding more pages to the clamshell navigation keep 
+					in mind it will behave erratically if:</p>
+					<ul>
+									<li>List items are not linked to pages</li>
+									<li>Identical links appear in more than one 
+									place</li>
+									<li>The default page in a directory is not 
+									linked in the navigation</li>
+					</ul>
+					<h2>What if you want to take them out?<br />
+	  </h2>
+                    <p>Easy enough... 2 steps.</p>
+                    <ol>
+                      <li>Remove the java script file from the document header (it's where you find all the CSS files and stuff). It actually has a comment telling you which file to delete.</li>
+                      <li>Remove the java code from the navigation include (it lives at... attributes&gt;includes&gt;nav.asp), the code looks like...
+                        <ul>
+                          <li>&lt;script type="text/javascript"&gt; ddtreemenu.createTree("navblock")   					&lt;/script&gt; </li>
+                        </ul>
+                      </li>
+                    </ol>
+<p>&nbsp;</p>
+<p class="revised">Revised April 2010</p>
+	<!-- end #maincontent -->
+	
+					<!-- #EndEditable --></div>
+    <br class="clearfloat" />
+		<!--#include virtual="/dwt/firefly5/attributes/includes/footer.asp" -->
+	</div>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,439 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2012r "Responsive"
+	Authors: Dan Sagisser and Jeff Abuzzahab
+	Created: 2012-11-30
+	Updated: 2013-04-30
+*/
+
+body {background: fixed #7db9e8; /* Old browsers */
+background: fixed -moz-linear-gradient(top, #7db9e8 0%, #2545ba 100%); /* FF3.6+ */
+background: fixed -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#2545ba)); /* Chrome,Safari4+ */
+background: fixed -webkit-linear-gradient(top, #7db9e8 0%,#2545ba 100%); /* Chrome10+,Safari5.1+ */
+background: fixed -o-linear-gradient(top, #7db9e8 0%,#2545ba 100%); /* Opera 11.10+ */
+background: fixed -ms-linear-gradient(top, #7db9e8 0%,#2545ba 100%); /* IE10+ */
+background: fixed linear-gradient(to bottom, #7db9e8 0%,#2545ba 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#2545ba',GradientType=0 ); /* IE6-8 */}
+
+
+div#container {
+	background-color:#fff;
+}
+
+header {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+header a {
+	display: block;
+	clear: none;
+	float: left;
+}
+header div#headerimages {
+	margin: 0;
+	padding: 0;
+	padding-top: 16.354167%;
+	width: 100%;
+	background: 100% no-repeat url(/ci/attributes/header-banner-images/CI-2013-Interior-A.jpg);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+header a#deptlink {
+	margin: 0 0 20px 0;
+	padding: 0;
+	padding-top: 7.604167%;
+	width: 55%;
+	background: 100% no-repeat url(/ci/attributes/header-logos/CI-wordmark.jpg);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+header a#cehdlink {
+	margin: 0 0 20px 0;
+	padding: 0;
+	padding-top: 7.604167%;
+	width: 45%;
+	background: 100% no-repeat url(/ci/attributes/header-logos/CI-CEHDwordmark.jpg);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1),
+    only screen and (-o-min-device-pixel-ratio: 11/10),
+    only screen and (min--moz-device-pixel-ratio: 1.1),
+    only screen and (min-device-pixel-ratio: 1.1) {
+	header a#deptlink {background: 100% no-repeat url(/ci/attributes/header-logos/CI-wordmark@2x.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	}
+	header a#cehdlink {background: 100% no-repeat url(/ci/attributes/header-logos/CI-CEHDwordmark@2x.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	}
+}
+header a#deptlinkmobile {display: none;}
+
+div#restabs div#tabnav { display: none;}
+div#restabs div#tabextra { display: none;}
+
+
+body {font-family: Verdana, Geneva, sans-serif;}
+
+nav {
+	background-color:#fff;
+}
+
+nav h1 {position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+
+nav li {
+	margin: 5% 0;
+	text-transform: uppercase;
+}
+nav li li {
+	margin: 2% 0;
+	text-transform: none;
+}
+nav li li li.URHere {list-style-type: disc; color: #888;}
+nav li li li.URHere a {color: #333;}
+
+nav ul ul{margin: 2% 3% 2% 9%;}
+
+nav ul ul ul {
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+
+nav a {color: #333; text-decoration:none;}
+nav a:visited {color: #333;}
+nav a:active {color: black;}
+nav a:hover {color: #0072bc;}
+
+nav a.URHere {
+	font-weight: bold;
+	color: #0072bc;
+}
+
+
+
+
+div#maincontent {
+	background-color:#fff;
+}
+div#maincontent address {
+	float: right;
+	margin: 2.5%;
+	padding: 1%;
+	border-left: 1px #CCCCCC solid;
+}
+
+
+div#maincontent h1, div#maincontent h2, div#maincontent h3, div#maincontent h4, div#maincontent h5{
+	font-family: 'Averia Serif Libre', cursive;
+}
+
+ul {
+	list-style-image: url(../images/dingbats/bullet.gif);
+}
+div#maincontent a {
+	color: #0072bc; 
+	text-decoration: none; 
+}
+
+
+
+div#maincontent div.accordion {margin:2% 3%;padding:0;}
+div#maincontent div.flexdivs {margin:2% 3%;padding:0;}
+
+
+
+div#maincontent a:visited {
+	color: #0072bc; 
+	text-decoration: none;
+}
+div#maincontent a:hover {
+	color: #005389; 
+	text-decoration: none;
+	border-bottom: 1px dotted #005389;
+
+}
+@font-face {
+  font-family: 'fontello';
+  src: url("/CI/attributes/fonts/fontello.eot");
+  src: url("/CI/attributes/fonts/fontello.eot") format('embedded-opentype'), url("/CI/attributes/fonts/fontello.woff") format('woff'), url("/CI/attributes/fonts/fontello.ttf") format('truetype'), url("/CI/attributes/fonts/fontello.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+span#menuicon:before { font-family: 'fontello'; content: "\f0c9  "; }
+/*span#moreicon:after  { font-family: 'fontello'; content: "  \e024"; }*/
+span#moreicon:after  { font-family: 'fontello'; content: "  \e79d"; }
+
+
+
+/*
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/CI/attributes/fonts/fontawe/fontawesome-webfont.eot');
+  src: url('/CI/attributes/fonts/fontawe/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('/CI/attributes/fonts/fontawe/fontawesome-webfont.woff') format('woff'),
+    url('/CI/attributes/fonts/fontawe/fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+span#menuicon:before { font-family: 'FontAwesome'; content: "\f0c9  "; }
+span#moreicon:after  { font-family: 'fontello'; content: "  \e024"; }
+*/
+
+
+/*------------------ People Profile ----------------------------------*/
+div#maincontent div.peoplelist h2 {
+	font-size:1.35em;
+}
+
+
+
+
+div#maincontent div#Profile-Feed p.citation {
+	margin: 0 25px;
+	padding: 0;
+}
+
+div#maincontent div#Profile-Feed p img {
+	margin: 0 8%;
+	width: 150px;
+	height: 225px;
+}
+
+div#maincontent div#Profile-Feed div.third {
+	width: 180px;
+}
+/*div#maincontent div#Profile-Feed div.twothird {
+	width:;
+}*/
+
+div#Profile-Feed div.vcard p {
+	line-height:1.2em;
+}
+
+div#Profile-Feed div.CitationOL ol {
+	list-style-type: none;
+	text-indent: -2.5em;margin-left: 15px;
+}
+
+div#Profile-Feed br.clear-right {
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+	clear: right;
+}
+/*--------------------------------------------------------------------*/
+/* ------------------------------------------------------------ FOR COURSE FEED INTRODUCED 2009-03-01 */
+
+
+div#CourseFeed ul {
+	list-style-type:none;
+	margin-left:20px;
+}
+
+div#CourseFeed ul li.CourseTitle {
+	margin-left:0;
+}
+
+div#CourseFeed ul li.CourseTitle h2 {
+	margin-left:5px;
+	font-size:16px;
+}
+
+div#CourseFeed em.color {
+	color:#f60;
+	font-style:italic;
+}
+
+/*-----------------------------------------------------------------END COURSE FEED STYLE*/
+
+
+/*-------------------------------------------------------Home Page Fancy News Feed ------------*/
+
+div#maincontent div#featurebox div.HPNewsItem {
+	width: 23%;
+	flotat: left;
+	margin: 0;
+	padding: 0;
+	clear: none;
+	display: inline-block;
+	height: 150px;
+}
+div#maincontent div#featurebox div.HPNewsItem h3 {
+
+	margin: 0;
+	padding: 0;
+
+}
+
+
+/*-------------------------------------------------------END Home Page Fancy News Feed --------*/
+
+/*-----------------------------------------------------------------------------------------START EVENT FEED STYLE 2013-05-02 Kristin*/
+
+div#Events-list {
+	margin-top:30px;
+}
+
+div#Events-list p {
+	margin-left:50px;
+}
+
+div#Events-list p.Feed-Date {
+	font-weight:bold;
+	
+}
+/*-----------------------------------------------------------------------------------------END EVENT FEED STYLE*/
+
+div#extracontent {
+	background-color: transparent;
+}
+
+div#extracontent h1, div#extracontent h2, div#extracontent h3, div#extracontent h4, div#extracontent h5{
+	font-family: 'Averia Serif Libre', cursive;
+}
+
+div#extracontent p {
+	font-size: .8em;
+}
+
+div#extracontent a {
+	color: #0072bc;
+	text-decoration: none;
+}
+div#extracontent a:hover {
+	color: #0072bc;
+}
+
+
+
+div#extracontent .featurebox{
+	background-color: transparent;
+	border-left: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	padding: 3%;
+	margin-top: 50px;
+}
+
+
+@media all and (max-width: 830px) {	
+
+div#restabs div#tabextra {
+	background-color: rgba(0,0,0,.5);
+	/*width: 100px;*/
+	padding: 3px 15px;
+	margin: 0 0 15px 0;
+	display: block;
+	float:right;
+	cursor: pointer;
+	border-radius: 8px 0 0 8px;
+	color: white;
+	font-size: 1.8em;
+	/*position: fixed;*/
+}
+.active-extra div#restabs div#tabextra {
+	background-color: #00538a;
+}
+
+div#maincontent div#Profile-Feed p img {
+	width: 90%;
+	height: auto;
+}
+
+div#maincontent div#Profile-Feed div.third {
+	width: 33%;
+}
+
+/*this just makes the tabs look different when they are active*/
+.active-button {
+	background-color: black;
+}
+div.half {width: 100%;}
+div.half p {margin:2% 3%;padding:0;}
+
+}
+
+@media all and (max-width: 520px) {	
+
+div#restabs div#tabnav {
+	background-color: #777;
+	/*width: 100px;*/
+	padding: 3px 15px;
+	margin: 0 0 15px 0;
+	display: block;
+	float:left;
+	cursor: pointer;
+	color: white;
+	border-radius: 0 8px 8px 0;
+	font-size: 1.8em;
+}
+.active-nav div#restabs div#tabnav {
+	background-color: #00538a;
+}
+
+
+header div#headerimages {display: none;}
+header a#cehdlink {display: none;}
+header a#deptlink {
+	display: block;
+	width: 100%;
+	padding-top: 10.24%;
+	background-position: center top;
+	background: 100% no-repeat url(/ci/attributes/header-logos/CI-MobileWordmark.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+
+
+
+div#maincontent div#Profile-Feed p img {
+	margin: 0;
+	width: 100%;
+}
+
+div#maincontent address {
+	float: none;
+	border: 1px #CCCCCC dashed;
+}
+
+
+
+div#extracontent p {
+	font-size: 1em;
+}
+}
+@media all and (max-width: 520px) and (-webkit-min-device-pixel-ratio: 1.1) {
+	header a#deptlink {
+	background: 100% no-repeat url(/ci/attributes/header-logos/CI-MobileWordmark@2x.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+}
+	}

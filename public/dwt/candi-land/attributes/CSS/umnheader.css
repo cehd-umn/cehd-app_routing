@@ -1,0 +1,244 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2013 SCSS
+	Authors: Dan Sagisser
+	Created: 2013-06-13
+	Updated: 2013-08-01
+*/
+/* ---------- Campus Links -----------------------------------*/
+/* line 13, ../SASS/umnheader.scss */
+div#campuslinks {display: none;}
+
+/* ---------- end Campus Links -------------------------------*/
+/* ---------- U of M Header ----------------------------------*/
+/* line 61, ../SASS/umnheader.scss */
+div#umnheader {
+  background-color: #7a0019;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF7A0019', endColorstr='#FF610014');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7a0019), color-stop(100%, #610014));
+  background-image: -webkit-linear-gradient(top, #7a0019 0%, #610014 100%);
+  background-image: -moz-linear-gradient(top, #7a0019 0%, #610014 100%);
+  background-image: -o-linear-gradient(top, #7a0019 0%, #610014 100%);
+  background-image: linear-gradient(top, #7a0019 0%, #610014 100%);
+  height: 63px;
+  width: 960px;
+  margin: 0 auto;
+  font: Arial, Helvetica, sans-serif;
+}
+/* line 70, ../SASS/umnheader.scss */
+div#umnheader a#umnh-logos {
+  background: url(../images/umnheader/umnh-logos.png) no-repeat;
+  margin: 0 0 0 0;
+  width: 315px;
+  height: 63px;
+  background-color: transparent;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+/* line 80, ../SASS/umnheader.scss */
+div#umnheader a#umnh-myu {
+  background: url(../images/umnheader/umnh-myu.png) no-repeat;
+  margin: 5px 5px 4px 4px;
+  width: 73px;
+  height: 23px;
+  display: block;
+  float: right;
+  clear: none;
+}
+/* line 89, ../SASS/umnheader.scss */
+div#umnheader a#umnh-onestop {
+  background: url(../images/umnheader/umnh-onestop.png) no-repeat;
+  margin: 5px 5px 4px 4px;
+  width: 73px;
+  height: 23px;
+  display: block;
+  float: right;
+  clear: none;
+}
+/* line 98, ../SASS/umnheader.scss */
+div#umnheader a#mobilesearch {
+  display: none;
+}
+/* line 99, ../SASS/umnheader.scss */
+div#umnheader div#umnh-searchbox {
+  display: block;
+  overflow: hidden;
+  background: url(../images/umnheader/umnh-searchbox.png) no-repeat;
+  margin: 2px 6px 0 0;
+  padding: 0;
+  width: 249px;
+  height: 22px;
+  float: right;
+  clear: both;
+}
+
+/* line 113, ../SASS/umnheader.scss */
+input#umnh-searchfield {
+  background-color: white;
+  border-radius: 0;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 199px;
+  height: 15px;
+  margin: 3px 0 0 3px;
+  padding: 0px 0 0 0;
+  border: 0;
+  color: #777;
+  font-size: .85em;
+}
+
+/* line 127, ../SASS/umnheader.scss */
+input#umnh-searchbtn {
+  float: right;
+  margin: 4px 4px 0 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #7a0019;
+  font-weight: bold;
+  font-size: .75em;
+  font-family: Arial, sans-serif;
+  width: auto;
+}
+
+/* ---------- end U of M Header ------------------------------*/
+/* ---------- media querry for high dpi ----------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
+  /* line 155, ../SASS/umnheader.scss */
+  div#umnheader a#umnh-logos {
+    background: url(../images/umnheader/umnh-logos@2x.png) no-repeat;
+    background-size: 315px 65px;
+  }
+  /* line 159, ../SASS/umnheader.scss */
+  div#umnheader a#umnh-myu {
+    background: url(../images/umnheader/umnh-myu@2x.png) no-repeat;
+    background-size: 73px 23px;
+  }
+  /* line 163, ../SASS/umnheader.scss */
+  div#umnheader a#umnh-onestop {
+    background: url(../images/umnheader/umnh-onestop@2x.png) no-repeat;
+    background-size: 73px 23px;
+  }
+  /* line 167, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox {
+    background-image: none;
+    background-color: #ffcc33;
+    border-radius: 3px;
+  }
+}
+/* ---------- end media querry for high dpi ------------------*/
+/* ---------- media querry for medium Screen -----------------*/
+@media only screen and (max-width: 959px) {
+  /* line 179, ../SASS/umnheader.scss */
+  div#umnheader {
+    width: 100%;
+  }
+  /* line 180, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox {
+    background-image: none;
+    background-color: #ffcc33;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    width: 190px;
+  }
+
+  /* line 187, ../SASS/umnheader.scss */
+  div#campuslinks {
+    width: 100%;
+  }
+
+  /* line 190, ../SASS/umnheader.scss */
+  input#umnh-searchfield {
+    width: 140px;
+    margin: 1px 0 0 1px;
+  }
+
+  /* line 194, ../SASS/umnheader.scss */
+  input#umnh-searchbtn {
+    /*width: 38px;*/
+    /*height: 15px;*/
+    margin: 4px 5px 0 0;
+  }
+}
+/* ---------- end media querry for medium Screen -------------*/
+/* ---------- media querry for small Screen ------------------*/
+@media only screen and (max-width: 520px) {
+  /* line 207, ../SASS/umnheader.scss */
+  div#umnheader {
+    min-width: 320px;
+    height: 51px;
+  }
+  /* line 211, ../SASS/umnheader.scss */
+  div#umnheader a#umnh-logos {
+    width: 263px;
+    height: 51px;
+    background-size: 263px 51px;
+  }
+  /* line 216, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox {
+    margin: 0 auto 0 auto;
+    width: 300px;
+    float: none;
+    display: none;
+  }
+  /* line 221, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox input#umnh-searchfield {
+    width: 244px;
+    margin: 0;
+    display: block;
+  }
+  /* line 226, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox input#umnh-searchbtn {
+    /*height: 16px;*/
+    /*width: 50px;*/
+    float: right;
+    clear: none;
+    position: relative;
+    background: #ffcc33;
+    display: block;
+    border-radius: 0px;
+    margin: 0 8px 0 0;
+  }
+  /* line 237, ../SASS/umnheader.scss */
+  div#umnheader div#umnh-searchbox a#mobilesearch {
+    display: block;
+    font-size: 80%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #7a0019;
+    background: #fc3;
+    float: right;
+    margin: 14px 5px 0 0;
+    padding: 5px 6px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+  }
+
+  /* line 257, ../SASS/umnheader.scss */
+  div#campuslinks, div#umnheader a#umnh-myu, div#umnheader a#umnh-onestop {
+    display: none;
+  }
+
+  /* line 261, ../SASS/umnheader.scss */
+  body.show-msearch div#umnheader {
+    height: 90px;
+  }
+  /* line 262, ../SASS/umnheader.scss */
+  body.show-msearch div#umnheader div#umnh-searchbox {
+    display: block;
+  }
+  /* line 263, ../SASS/umnheader.scss */
+  body.show-msearch div#umnheader a#mobilesearch {
+    margin: 14px 5px 20px 0;
+  }
+}
+/* ---------- end media querry for small Screen --------------*/

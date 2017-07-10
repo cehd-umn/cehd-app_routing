@@ -1,0 +1,275 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2011
+	Authors: Dan Sagisser
+	Created: 2011-18-08
+	Updated: 2011-18-08
+*/
+
+/* ---------- Campus Links -----------------------------------*/
+div#campuslinks {
+	background-color: transparent;
+	text-align: right;
+	font-size: 11px;
+	font-family:Arial, Helvetica, sans-serif;
+	height: 18px;
+	padding: 4px 0 0 0;
+	margin: 0 auto;
+	width: 960px;
+	/*remember, this div is centered with margins in the core, so leave them be*/
+}
+div#campuslinks p {
+	display: inline;
+	color: black;
+	margin: 0 8px 0 0;
+}
+div#campuslinks ul {
+	display: inline;
+	padding: 0;
+	margin: 0 2px 0 0;
+}
+div#campuslinks li {
+	display: inline;
+	margin: 0 6px;
+}
+div#campuslinks li a {
+	display: inline;
+	color: #7a0019;
+	text-decoration: underline;
+}
+div#campuslinks li a:hover {
+	text-decoration: underline;
+}
+div#campuslinks li#umnh-camphome a {
+	color: black;
+}
+
+/* ---------- end Campus Links -------------------------------*/
+
+/* ---------- U of M Header ----------------------------------*/
+div#umnheader {
+	background: #7a0019; /* Old browsers */
+	background: -moz-linear-gradient(top, #7a0019 0%, #610014 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7a0019), color-stop(39%,#610014), color-stop(100%,#610014), color-stop(100%,#610014)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7a0019 0%,#610014 39%,#610014 100%,#610014 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7a0019 0%, #610014 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7a0019 0%, #610014 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #7a0019 0%, #610014 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a0019', endColorstr='#610014',GradientType=0 ); /* IE6-9 */	
+	height: 63px;
+	width: 960px;
+	margin: 0 auto;
+	font:Arial, Helvetica, sans-serif;
+}
+
+
+div#umnheader a#umnh-logos {
+	background: url(../images/umnheader/umnh-logos.png) no-repeat;
+	margin: 0 0 0 0;
+	width:315px;
+	height:63px;
+	background-color: transparent;
+	display:block;
+	overflow:hidden;
+	position: absolute;
+}
+div#umnheader a#umnh-myu {
+	background: url(../images/umnheader/umnh-myu.png) no-repeat;
+	margin: 5px 5px 4px 4px;
+	width:73px;
+	height:23px;
+	display:block;
+	float: right;
+	clear:none;
+}
+div#umnheader a#umnh-onestop {
+	background: url(../images/umnheader/umnh-onestop.png) no-repeat;
+	margin: 5px 5px 4px 4px;
+	width:73px;
+	height:23px;
+	display:block;
+	float: right;
+	clear:none;
+}
+div#umnheader a#mobilesearch {display:none}
+div#umnheader div#umnh-searchbox {
+	display: block;
+	overflow:hidden;
+	background: url(../images/umnheader/umnh-searchbox.png) no-repeat;
+	margin: 2px 6px 0 0;
+	padding: 0;
+	width:249px;
+	height:22px;
+	float: right;
+	clear: both;
+}
+input#umnh-searchfield {
+	background-color: white;
+	border-radius: 0;
+	display:block;
+	overflow:hidden;
+	position: absolute;
+	width: 199px;
+	height: 15px;
+	margin: 3px 0 0 3px;
+	padding: 0px 0 0 0;
+	border: 0;
+	color: #777;
+	font-size: .85em;
+}
+input#umnh-searchbtn {
+	float: right;
+	margin: 4px 4px 0 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	color: #7a0019;
+	font-weight: bold;
+	font-size: .75em;
+	font-family: Arial, sans-serif;
+	width: auto;
+}
+
+
+
+
+/* ---------- end U of M Header ------------------------------*/
+
+
+
+
+/* ---------- media querry for high dpi ----------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1),
+    only screen and (-o-min-device-pixel-ratio: 11/10),
+    only screen and (min--moz-device-pixel-ratio: 1.1),
+    only screen and (min-device-pixel-ratio: 1.1) {
+div#umnheader a#umnh-logos {
+	background: url(../images/umnheader/umnh-logos@2x.png) no-repeat;
+	background-size: 315px 65px;
+}
+div#umnheader a#umnh-myu {
+	background: url(../images/umnheader/umnh-myu@2x.png) no-repeat;
+	background-size: 73px 23px;
+}
+div#umnheader a#umnh-onestop {
+	background: url(../images/umnheader/umnh-onestop@2x.png) no-repeat;
+	background-size: 73px 23px;
+}
+div#umnheader div#umnh-searchbox {
+	background-image: none;
+	background-color: #ffcc33;
+	border-radius: 3px;
+}
+/*input#umnh-searchbtn {
+	background: url(../images/umnheader/umnh-searchbtn@2x.png);
+	background-size: 38px 15px;
+}*/
+	}
+
+/* ---------- end media querry for high dpi ------------------*/
+
+/* ---------- media querry for medium Screen -----------------*/
+@media only screen and (max-width: 959px){
+div#umnheader {
+	width: 100%;
+}
+div#campuslinks {
+	width: 100%;
+}
+div#umnheader div#umnh-searchbox {
+	background-image: none;
+	background-color: #ffcc33;
+	border-radius: 3px;
+	width:190px;
+}
+input#umnh-searchfield {
+	width: 140px;
+	margin: 1px 0 0 1px;
+}
+input#umnh-searchbtn {
+	/*width: 38px;*/
+	/*height: 15px;*/
+	margin: 4px 5px 0 0;
+}
+	}
+
+/* ---------- end media querry for medium Screen -------------*/
+
+
+/* ---------- media querry for small Screen ------------------*/
+@media only screen and (max-width: 520px){
+div#umnheader {
+	min-width: 320px;
+	height: 51px;
+}
+div#umnheader a#umnh-logos {
+	width:263px;
+	height:51px;
+	background-size: 263px 51px;
+}
+div#campuslinks, div#umnheader a#umnh-myu, div#umnheader a#umnh-onestop {
+	display: none;
+}
+
+
+
+div#umnheader {
+	height: 51px;
+}
+div#umnheader div#umnh-searchbox {
+	margin: 0 auto 0 auto;
+	width: 300px;
+	float: none;
+	display: none;
+}
+div#umnheader div#umnh-searchbox input#umnh-searchfield {
+	width: 244px;
+	margin: 0;
+	display: block;
+}
+div#umnheader div#umnh-searchbox input#umnh-searchbtn {
+	/*height: 16px;*/
+	/*width: 50px;*/
+	float: right;
+	clear: none;
+	position: relative;
+	background: #ffcc33;
+	display: block;
+	border-radius: 0px;
+	margin: 0 8px 0 0;
+}
+
+div#umnheader a#mobilesearch{
+	display:block;
+	font-size:80%;
+	font-weight:bold;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color:#7a0019;
+	background:#fc3;
+	float:right;
+	margin:14px 5px 0 0;
+	padding:5px 6px 4px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+
+body.show-msearch div#umnheader {
+	height: 90px;
+}
+body.show-msearch div#umnheader div#umnh-searchbox {
+	display: block;
+}
+body.show-msearch div#umnheader a#mobilesearch{
+		margin:14px 5px 20px 0;
+}
+}
+/* ---------- end media querry for small Screen --------------*/
+
+
+
+
+

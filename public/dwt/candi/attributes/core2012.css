@@ -1,0 +1,397 @@
+/*
+	College of Education and Human Development
+	CEHD Public Web - Core layout elements
+	Version: Core 2012r "Responsive"
+	Authors: Dan Sagisser and Jeff Abuzzahab
+	Created: 2012-11-30
+	Updated: 2012-11-30
+*/
+
+
+/*XXXXXXXXXXXXXXXXXXXXXX    CSS Reset, Courtsey "A List Apart"   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*XXXXXXXXXXXXXXXXXXXXXX    End CSS Reset, Courtsey "A List Apart"   XXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+nav {
+	float: left;
+	clear: none;
+	width: 20%;
+	position: relative;
+}
+div#maincontent {
+	float: left;
+	clear: none;
+	width: 60%;
+	position: relative;
+}
+div#extracontent {
+	float: left;
+	width: 20%;
+	position: relative;
+}
+footer {
+	display: block;
+	width: 960px;
+	clear: both;
+	overflow: hidden;
+}
+
+.active-extra nav, .active-extra div#maincontent, .active-extra div#extracontent, .active-nav nav, .active-nav div#maincontent, .active-nav div#extracontent{
+	-webkit-transition: .2s all ease;
+	-moz-transition: .2s all ease;
+	-o-transition: .2s all ease;		
+	-ms-transition: .2s all ease;
+	transition: .2s all ease;	
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+/* ----------------------------------------------------------------------------- CORE ELEMENTS */
+/* -------------------- HEADINGS ------------------------ */
+h1 {font-size:1.65em;margin:2% 3%;padding:0;}
+h2 {font-size:1.4em;margin:2% 3%;padding:0;}
+h3 {font-size:1.25em;margin:2% 3%;padding:0;}
+h4 {font-size:1em;margin:2% 3%;padding:0;}
+h5 {font-size:1em;margin:2% 3%;padding:0;}
+h6 {font-size:1em;margin:2% 3%;padding:0;}
+
+span.h-override-color {font-size: 80%;}
+span.h-override-black {color: #000; font-size: 80%;}
+
+/* -------------------- PARAGRAPHS ----------------------- */
+p {margin:2% 3%;padding:0;}
+
+.subhead {margin:-2% 3% 0 3%;padding:0;}
+
+p.revised {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	width: 90%;
+	padding: 2% 0 0 0;
+	margin: 0;
+}
+
+p.citation {text-indent: -2.5em;margin-left: 5em;}
+
+p.tinytype {font-size: .7em;}
+
+/* -------------------- LISTS ---------------------------- */
+ol {margin:2% 3%;padding:0; list-style-type:decimal;}
+
+ul {margin:2% 3%;padding:0; list-style-type:disc;}
+
+li {margin: 2% 0 2% 3%;padding:0;}
+
+ul.no-bullet {list-style-type: none;}
+
+ol.tight li {margin:0 0 0 3%;}
+
+ul.tight li {margin:0 0 0 3%;}
+
+dl {margin:2% 3%;padding:0;}
+
+dt {margin: 2% 0 2% 0;padding:0;font-weight: bold;}
+
+dd {margin: 2% 0 2% 3%;padding:0;}
+
+dl.DL-CardStack dt {margin: 2% 0 0 0;padding:1%;background-color:#09f;}
+dl.DL-CardStack dd {margin: 0 0 2% 0;padding:1%;border:thin #09f solid;}
+
+dl.DL-Table dt {margin: 0;padding:1%;width:45%;float:left}
+dl.DL-Table dd {margin: 0 0 0 50%;padding:1%;width:45%}
+
+/* MLA STYLES FOR LISTS */
+
+ul { list-style: disc; }
+ul ul { list-style: circle; margin:2% 0 2% 2%;}
+ul ul ul { list-style: square;  margin:2% 0 2% 2%;}
+ 
+ol { list-style: decimal; }
+ol ol { list-style: lower-alpha;  margin:2% 0 2% 2%;}
+ol ol ol { list-style: lower-roman;  margin:2% 0 2% 2%;}
+
+nav ul, nav ul ul, nav ul ul ul {list-style:none}
+div#extracontent ul, div#extracontent ul ul {list-style:none}
+
+
+/* TABLES  */
+
+table {margin:2% 3%;padding:0;width:90%;border:1px solid #e2e2e2;border-collapse: collapse;empty-cells: show;}
+caption {text-align:left;font-weight:bold;font-size:1.2em;margin-bottom:.5em;}
+th {padding:1%;border-spacing: 1%;vertical-align:top;text-align:left;border:1px solid #e2e2e2;background-color:#09f;font-weight:bold}
+td {padding:1%;border-spacing: 1%;vertical-align:top;text-align:left;border:1px solid #e2e2e2;background-color:transparent;}
+
+address {margin: 2%;padding:0; font-style: normal; display: block;}
+
+pre {margin: 2%;padding:0; display: block;}
+
+blockquote {font-style: italic; margin: 2% 4.5%;padding:0;display: block;}
+
+fieldset {border:1px white solid;}
+fieldset legend  {margin:10px 25px;padding:0;color:#666;}
+
+/*Pixels - Delete soon 2012-12-05 JFA
+fieldset legend {font-size:16px;width:570px;font-weight:bold;color:#900;margin:10px 25px;font-family:Verdana, Geneva, sans-serif;}
+label{display:block;font-weight:bold;text-align:right;width:160px;float:left;margin:0 0 10px 0;font-family:Verdana, Geneva, sans-serif;}
+label.wide{text-align:left;width:540px;float:none;}
+span{color:#666666;display:block;font-size:11px;font-weight:normal;text-align:right;width:160px;}
+label.wide span{text-align:left;width:540px;}
+p.CheckorRadio-Short, p.CheckorRadio-Long {border:thin #fff solid;margin:10px 25px;width:560px;}
+p.CheckorRadio-Long label{display:block;float:none;font-weight:bold;text-align:left;width:400px;margin:0 0 0 25px;}
+p.CheckorRadio-Long label span{color:#666666;display:block;font-size:11px;font-weight:normal;text-align:left;width:400px;}
+input{float:left;font-size:12px;padding:4px 2px;border:solid 1px silver;width:350px;margin:2px 0 20px 10px;}
+textarea{float:left;font-size:12px;padding:4px 2px;border:solid 1px #ccc;width:350px;height:70px;margin:2px 0 20px 10px;}
+p.CheckorRadio-Short input {width:12px;height:12px;margin:2px 340px 20px 10px;padding:0;border:none;	}
+p.CheckorRadio-Long input {width:12px;height:12px;margin:2px 10px 0 0;padding:0;border:none;	}
+select {margin:0 0 20px 10px;padding:8px;}
+.button{clear:both;margin-left:210px;width:125px;height:50px;background:#7a0019 none;text-align:center;line-height:31px;color:white;font-size:16px;font-weight:bold;cursor:pointer;}
+*/
+
+/* 2012-12-05 having trouble with percents and form layout
+Make labels stack, screw the left float
+*/
+form {display:block;width:100%;padding:1%}
+form p {border: #fff thin solid; min-height:30px;}
+fieldset {border:1px white solid;}
+fieldset legend  {margin:10px 25px;padding:0;color:#666;}
+
+fieldset legend {font-size:1.4em;width:90%;font-weight:bold;color:#900;margin:2% 3%;font-family:Verdana, Geneva, sans-serif;}
+label{width:100%;display:block;font-weight:bold;float:left;margin:0 0 2% 0;font-family:Verdana, Geneva, sans-serif;}
+label span{width:100%;color:#666666;display:block;font-size:.8emx;font-weight:normal;}
+input{width:100%;font-size:1em;padding:1%;border:solid thin silver;margin:0 0 2% 0;}
+textarea{width:100%;font-size:1em;padding:1%;border:solid thin #ccc;height:5em;margin:0 0 2% 0;}
+
+
+label.wide{text-align:left;width:100%;float:none;}
+label.wide span{text-align:left;width:100%;}
+
+p.CheckorRadio-Short, p.CheckorRadio-Long {border:thin #fff solid;margin:2% 3%;}
+p.CheckorRadio-Long label{display:block;float:none;font-weight:bold;text-align:left;width:80%;margin:0 0 0 25px;}
+p.CheckorRadio-Long label span{color:#666666;display:block;font-size:.8em;font-weight:normal;text-align:left;width:80%;}
+
+p.CheckorRadio-Short input {float:left;width:1%;height:1%;margin:2px 340px 20px 10px;padding:0;border:none;	}
+p.CheckorRadio-Long input {float:left;width:1%;height:1%;margin:2px 10px 0 0;padding:0;border:none;	}
+select {margin:0 0 20px 10px;padding:8px;}
+.button{clear:both;margin-left:40%;width:15%;height:8%;background:#7a0019 none;text-align:center;line-height:2em;color:white;font-size:1.2em;font-weight:bold;cursor:pointer;}
+
+
+/* ------------------- INLINE ELEMENTS ------------------ */
+
+strong {font-weight:bold;}
+strong.alert {color: red;}
+strong.yes {color: green;}
+
+em {font-style:italic;}
+
+/* ----------- IMAGE PLACEMENT STARTS HERE -------------- */
+
+img.img-right {
+	position: relative;
+	float: right;
+	margin: 1% 0 2% 2%;
+	padding: 0;
+}
+
+img.img-left {
+	position: relative;
+	float: left;
+	margin: 1% 2% 2% 0;
+	padding: 0;
+}
+
+/* - WITH CAPTIONS - */
+
+/* Dan to write this - 2012-11-30 */
+
+
+/* BASIC TABLE STYLE - YES... SOMETIMES YOU NEED A TABLE */
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End Content Styling   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+body  {
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+}
+
+
+div#container { 
+	width: 960px;
+	position: relative;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding: 0;
+	overflow:hidden;
+}
+
+/*this media querry covers the first point at which things go bellow the desktop 960px*/
+@media only screen and (max-width: 960px){
+	div#container {width: 100%;}
+	footer {width: 100%;}
+}
+
+
+/* this media querry largley takes care of pulling out the extra right column when there isn't room for it anymore*/
+@media all and (max-width: 830px) {	
+
+
+nav {
+	width: 30%;
+	margin-left: 0;
+}
+
+div#maincontent {
+	width: 70%;
+	margin-left: 0;
+}
+
+div#extracontent {
+	width: 30%;
+	float: left;
+	margin-right: -200%;/*this is 200px because the transistions look weird in webkit if you don't use giant margins*/
+}
+
+
+
+.active-extra nav {
+	margin-left: -30%;
+}
+.active-extra div#extracontent {
+	margin-right: 0;
+
+}
+	
+	
+}
+@media all and (max-width: 520px) {	
+div#container {min-width: 320px;}
+
+nav {
+	width: 80%;
+	margin-left: -200%;/*this is 200px because the transistions look weird in webkit if you don't use giant margins*/
+	z-index: 3;
+}
+
+div#maincontent {
+	width: 100%;
+	margin-left: 0;
+	z-index: 2;
+}
+
+div#extracontent {
+	width: 80%;
+	z-index: 1;
+}
+
+
+.active-extra nav {
+	margin-left: -100%;
+}
+.active-extra div#maincontent {
+	margin-left: -80%;
+}
+.active-extra div#extracontent {
+	margin-right: 0;
+}
+
+
+.active-nav nav {
+	margin-left: 0;
+}
+.active-nav div#maincontent {
+	margin-left: 0;
+	margin-right: -80%;
+}
+.active-nav div#extracontent {
+	margin-right: -200%;	
+}
+
+
+}
+
+
+/* ------------ Miscellaneous classes for reuse ------------------------------*/
+
+div.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+div.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+br.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+div.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+/* ----------- End Miscellaneous classes for reuse --------------------------*/
