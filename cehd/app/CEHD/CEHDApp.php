@@ -236,7 +236,16 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
-        $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+
+        if (array_key_exists("q", $query_data))
+        {
+            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+        }
+        elseif (array_key_exists("query", $query_data))
+        {
+            $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
+        }
+
         $search_client_query_data = [
             "q" => $search_query,
             "sites" => ["primary", "secondary"],
