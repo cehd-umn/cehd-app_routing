@@ -104,8 +104,3 @@ $app->router->respond("GET", "/graduate/licensing[**:trailing]", function($reque
     {
         $response->redirect("/teaching/license/", 301)->send();
     });
-
-$app->router->respond("GET", "/alumni/[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/alumni/", 301)->send();
-    });
