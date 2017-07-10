@@ -1,51 +1,82 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "Book Week" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
     <div class="row">
-      <div class="span-3">
-        {{ include('cehd/book-week/aa-nav.html') }}
-      </div>
-      <div class="span-9">
-        <h1>Book Week</h1>
+      <h1>Book Week<small class="clear"><em>A celebration of children's literature</em></small></h1> {{ include('cehd/book-week/aa-nav.html') }}
+      <div class="twothird">
+
         <p>Since the 1940s Book Week has celebrated the best of children’s literature with teachers, librarians, and others who devote themselves to literacy for young readers. Over the past 74 years Book Week has hosted some of the most notable writers
           of books for young readers, including Marguerite Henry, Madeleine L’Engle, and Beverly Cleary. Each year, faculty and graduate students from the children’s literature program in the
           <a href="http://www.cehd.umn.edu/ci/Programs/Literacy/">Department of Curriculum and
           Instruction</a> review the best in books for young readers. The author&#39;s books are also made available for sale and autographing. </p>
 
-        <div class="row">
-          <div class="span-9">
-            <h2>2017 Book Week featured Thanhha Lai</h2>
-            <p>The guest speaker of this year’s Book Week is the award-winning young adult author Thanhha Lai. Lai's debut novel Inside Out & Back Again won the 2011 National Book Award for Young People's Literature and a Newbery Honor. Her second novel,
-              Listen, Slowly is a New York Times bestseller, Publisher's Weekly Best Book and has been heralded in Booklist's starred review as "a superb, sometimes humorous, always thought-provoking coming-of-age story."</p>
-            <p>Please join us on Tuesday, October 17 at the McNamara Alumni Center, to hear Thanhha Lai talk about "Telling Stories from the Inside Out".</p>
 
-            <h3>Schedule</h3>
-            <p>
-              <ul class="no-bullet">
-                <li>5:00-5:30 Reception</li>
-                <li>5:30 Introductions and Announcements</li>
-                <li>6:00-6:45 Book Week Lecture: Telling Stories from the Inside Out</li>
-                <li>6:45-7:15 Q&amp;A and discussion</li>
-                <li>7:15-8:00 Book signing</li>
-              </ul>
-            </p>
-
-
-            <iframe src="//player.vimeo.com/video/75440946" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-
-
-        <h2>Sponsors</h2>
-        <p>Book Week is sponsored by the Ruth Mitchell endowment, the Children&#39;s Literature Area of the
-          <a href="http://www.cehd.umn.edu/CI/">Department of Curriculum and Instruction</a>, CEHD, the Red Balloon Bookshop, and the Children’s Literature Research Collections of the University of Minnesota Libraries. </p>
-        <h3>Contact</h3>
-        <p>Questions may be directed to Emily Midkiff <a href="mailto:midki003@umn.edu">midki003@umn.edu</a>.</p>
       </div>
+      <div class="third">
+        {{ loader.loader( "Events", "h2", "events-container" ) }}
+
+      </div>
+    </div>
+  </div>
+  <div class="row emphasis margin-top-1">
+    <div class="container">
+
+      <div class="twothird">
+        <h2>2017 Book Week features Thanhha Lai</h2>
+        <p>The guest speaker of this year’s Book Week is the award-winning young adult author Thanhha Lai. Lai's debut novel <em>Inside Out &amp; Back Again</em> won the 2011 National Book Award for Young People's Literature and a Newbery Honor. Her second
+          novel, <em>Listen, Slowly</em> is a New York Times bestseller, Publisher's Weekly Best Book and has been heralded in Booklist's starred review as "a superb, sometimes humorous, always thought-provoking coming-of-age story."</p>
+      </div>
+      <div class="third">
+        <img class="circular" src="/assets/images/book-week/Lai/sq-Thanhha-Lai.jpg" alt="photo of Thanhha-Lai">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="twothird feature">
+      <p>Please join us on Tuesday, October 17 at the McNamara Alumni Center, to hear Thanhha Lai talk about "Telling Stories from the Inside Out".</p>
+      <h3>Schedule</h3>
+      <p>
+        <ul class="no-bullet">
+          <li>5:00-5:30 Reception</li>
+          <li>5:30 Introductions and Announcements</li>
+          <li>6:00-6:45 Book Week Lecture: Telling Stories from the Inside Out</li>
+          <li>6:45-7:15 Q&amp;A and discussion</li>
+          <li>7:15-8:00 Book signing</li>
+        </ul>
+      </p>
+      <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=49" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="595" width="100%"></iframe>
+      <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+      <script>
+        Cognito.setCss('http://backstage.cehd.umn.edu/assets/dist/css/minified/forms.css');
+      </script>
+
+
+      <iframe src="//player.vimeo.com/video/75440946" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+      <h2>Sponsors</h2>
+      <p>Book Week is sponsored by the Ruth Mitchell endowment, the Children&#39;s Literature Area of the
+        <a href="http://www.cehd.umn.edu/CI/">Department of Curriculum and Instruction</a>, CEHD, the Red Balloon Bookshop, and the Children’s Literature Research Collections of the University of Minnesota Libraries. </p>
+      <h3>Contact</h3>
+      <p>Questions may be directed to Emily Midkiff <a href="mailto:midki003@umn.edu">midki003@umn.edu</a>.</p>
     </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
+{%- block bottom_js %}{{ parent() }}
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+       256
+    ) }}
+    {% endblock %}

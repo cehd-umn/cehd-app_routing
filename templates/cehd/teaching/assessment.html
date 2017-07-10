@@ -1,6 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/table/table.html" as table -%}
-{% set page_title = "Assesment and Accreditation" %}
+{% set page_title = "Assessment and Accreditation" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
@@ -42,8 +42,8 @@
 
         <h3>Initial licensure program </h3>
         <ul>
-            <li><strong>2016/2017</strong>: 351 new enrollments, 261 candidates completed</li>
-            <li><strong>2015/2016</strong>: 400 new enrollments, 261 candidates completed</li>
+            <li><strong>2016/2017</strong>: 388 new enrollments, completion N/A</li>
+            <li><strong>2015/2016</strong>: 400 new enrollments, 356 candidates completed</li>
             <li><strong>2014/2015</strong>: 351 new enrollments, 261 candidates completed</li>
         </ul>
 
@@ -59,35 +59,34 @@
         initial licenses take tests in basic skills, content-area knowledge,
         and pedagogy.</p>
 
-        <p><strong>2010 - Current (June 1, 2016)</strong></p>
 
-        {{ table.start_table("Exam pass rates") }}
+        {{ table.start_table("MTLE Aggregate Pass Rates for Completers") }}
         {{ table.heading_row(
             ["MTLE Exam",
             "Institutional Pass Rate (UMN)",
             "MN Statewide Pass Rate"]) }}
         {{ table.row(
-            ["Basic Skills",
-            "92%",
-            "79%"]) }}
+            ["2014/15",
+            "96%",
+            "90%"]) }}
         {{ table.row(
-            ["Content-Area",
-            "97%",
-            "94%"]) }}
+            ["2013/14",
+            "95%",
+            "92%"]) }}
         {{ table.row(
-            ["Pedagogy",
-            "98%",
-            "96%"]) }}
+            ["2012/13",
+            "99%",
+            "91%"]) }}
         {{ table.end_table() }}
 
     <p>Data was developed from Pearson MTLE Analyzer Site. For more information on initial licensure program enrollments and completion, see <a href="https://title2.ed.gov/Public/Home.aspx">Title II Reports</a>.</p>
 
     <h3>Jobs after program completion</h3>
-    <p><strong>92.4%</strong> of students reported that they had a teaching position within six months of completing the initial licensure program requirements. (Teachers who completed initial licensure in 2014/2015</p>
-    <p><em>(from Transition to Teaching Survey 2015, response rate 85.8%)</em></p>
+    <p><strong>93.7%</strong> of students reported that they had a teaching position within six months of completing the initial licensure program requirements. (Teachers who completed initial licensure in 2015/2016</p>
+    <p><em>(from 2016 Transition to Teaching Survey of 2014/15 completers, response rate 93.7%)</em></p>
 
     <h3>Student loan default rate</h3>
-    <p>The campus-wide student loan default rate for the University of Minnesota - Twin Cities is 3.8% in Fiscal Year 2010. To search default rates of other postsecondary institutions, please visit <a href="http://nces.ed.gov/collegenavigator/?s=MN&zc=55455&zd=0&of=3&id=174066#fedloans">the National Student Loan Data System</a>.</p>
+    <p>The campus-wide student loan default rate for the University of Minnesota - Twin Cities is 2.2% in Fiscal Year 2013. To search default rates of other postsecondary institutions, please visit <a href="http://nces.ed.gov/collegenavigator/?s=MN&zc=55455&zd=0&of=3&id=174066#fedloans">the National Student Loan Data System</a>.</p>
 
     </div>
   </div> <!-- ./container -->

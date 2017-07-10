@@ -26,8 +26,36 @@
       <li>Reach out to the <a href="http://www.sos.umn.edu/">Student Conflict Resolution Center</a> or the <a href="https://diversity.umn.edu/eoaa/">Equal Opportunity and Affirmative Action Office</a> for a consultation. </li>
       <li>Report a bias incident to the <a href="https://bias-response.umn.edu/">Bias Response Referral Network.</a></li>
     </ul>
-    <h2>Student mental health</h2>
+  </div>
+</div>
+</div>
 
+    <div class="margin-top-2">
+    </div>
+  {# import the macro #}
+  {%- import "macros/svg.html" as svg -%}
+  <div class="row emphasis cool">
+      <div class="container">
+          <div class="half feature margin-top-1">
+              {# create an array of 2-5 short lines of text #}
+              {% set lines = [
+                  "According to the American Psychological",
+                  "Association, in 2013, 48.7% of college",
+                  "students across the U.S. attended",
+                  "counseling for mental health concerns.",
+              ] %}
+              {# call the macro #}
+              {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+</div>
+</div>
+</div>
+<div class="margin-top-2">
+</div>
+<div class="row">
+<div class="container">
+<div class="twothird">
+  <h2>Student mental health</h2>
+  <p>CEHD is committed to your mental health and wellbeing. We understand that sometimes, the pressure of pending papers and final projects can lead to unmanaged stress or diminished mental health. If you or someone you know is struggling, it's important to know that you are not alone. Help is available.</p>
     <p><strong>If you or someone you know is having a mental health crisis and/or is in immediate danger, please call 911.</strong></p>
     <p>If the mental health crisis you are experiencing is not dangerous, but you wish to talk to someone immediately for assistance about what to do next, call this 24-hour help line:</p>
     <p><a href="http://www.canvashealth.org/crisis-support/crisis-connection/">Crisis Connection</a> | 612-301-4673 | U of M Textline: Text "UMN" to 61222</p>
@@ -48,8 +76,24 @@
     <ul>
       <li><a href="https://www.helpguide.org/">https://www.helpguide.org/</a></li>
       <li><a href="https://www.mentalhealth.gov/">https://www.mentalhealth.gov/</a></li>
-      <li><a href="https://www.youtube.com/watch?v=U7ORySKdCCo">My Story: Depression in Graduate Studies (by UMN's CSE Associate Dean Chris Cramer)</a>S</li>
+      <li><a href="https://www.youtube.com/watch?v=U7ORySKdCCo">My Story: Depression in Graduate Studies (by UMN's CSE Associate Dean Chris Cramer)</a></li>
     </ul>
+  </div>
+  <div class="third">
+    <h2>Resources</h2>
+    <p>We will always find someone for you to talk with.</p>
+    <p><a href="http://www.bhs.umn.edu/east-bank-clinic/mental-health-services.html">Boynton Mental Health Clinic</a><br />
+(612) 624-1444</p>
+<p><a href="http://www.uccs.umn.edu/">Student Counseling Services</a><br />
+(612) 624-3323</p>
+<p><a href="https://diversity.umn.edu/disability/">Disability Resource Center</a><br />
+(612) 626-1333</p>
+<p><a href="http://www1.umn.edu/aurora/">Aurora Center</a><br />
+(612) 626-9111</p>
+<p><a href="http://mentalhealth.umn.edu/facstaff/behavioral-consultation.html">Behavioral Consultation Team</a><br />
+(612) 626-3030</p>
+<p><a href="http://caremanager.umn.edu/">Office for Student Affairs<br> Care Manager</a><br />
+  (612) 625-2517</p>
   </div>
   </div>
 
@@ -66,8 +110,9 @@
                </div>
              <div class="corner-borders-bottom"></div>
            </div>
+         </div>
 
-    </div>
+
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
