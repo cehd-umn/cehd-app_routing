@@ -44,6 +44,8 @@
                 if (group.length.isMultipleOf(3)) {
                     people_data.push(group);
                     group = [];
+                } else if (people.length - k == 1) {
+                    people_data.push(group);
                 }
             });
 

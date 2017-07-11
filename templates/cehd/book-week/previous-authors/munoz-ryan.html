@@ -5,12 +5,11 @@
 <div class="row">
   <div class="container">
     <div class="row">
-      <div class="span-3">
-        {{ include('cehd/book-week/aa-nav.html') }}
-      </div>
-      <div class="span-9">
-        <h1>2015 Book Week author</h1>
-        <h2>Pam Muñoz Ryan</h2>
+        <h1>Book Week<small class="clear"><em>A celebration of children's literature</em></small></h1>
+                {{ include('cehd/book-week/aa-nav.html') }}
+
+      <div class="twothird feature">
+        <h2>2015 author: Pam Muñoz Ryan</h2>
 
         <img alt="Pam Muñoz Ryan" src="/assets/images/book-week/Ryan/Ryan.jpg"/>
 
@@ -18,13 +17,38 @@
         <p>She is the author recipient of the NEA's Civil and Human Rights Award, the Virginia Hamilton Literary Award for Multicultural Literature, and is twice the recipient of the Pura Belpré Medal.</p>
         <p>Other selected honors include the PEN USA Award, the Américas Award, the Boston Globe-Horn Book Honor, the Orbis Pictus Award, the ALA Siebert Honor, and the Schneider Family Award.</p>
         <p>She was born and raised in Bakersfield, California, holds a bachelor's and master's degree from San Diego State University and lives near San Diego with her family.</p>
+        </div>
+      </div> <!-- ./row -->
+    </div> <!-- ./container -->
 
+
+    <div class="row emphasis margin-top-1">
+        <div class="container">
+          <div class="row">
+            <h2 class="text-center">Featured books</h2>
+            <div class="span-2 push-4">
+            <img alt="Book Jacket: Esperanza Rising" src="/assets/images/book-week/Ryan/esperanza-rising.jpg"/>
+            <figcaption>Esperanza Rising</figcaption>
+            </div>
+
+          <div class="span-2">
+            <img alt="Book Jacket: Becoming Naomi Leon" src="/assets/images/book-week/Ryan/becoming-naomi-leon.jpg"/>
+            <figcaption>Becoming Naomi León</figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="twothird feature">
         <h2>Book Week highlights</h2>
-        <p><iframe src="//player.vimeo.com/video/141191337" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+      <iframe src="//player.vimeo.com/video/141191337" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
       </div>
     </div>
 
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+
 {% endblock %}

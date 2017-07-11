@@ -32,8 +32,7 @@
                               {% endif %}
                               <li class="category-filter category-button">
                                   <input type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
-                                      <label for="{{ category_class }}-filter">{{ category }}</label>
-                                  </input>
+                                  <label for="{{ category_class }}-filter">{{ category }}</label>
                               </li>
                           {% endfor %}
                         {% endfor %}
@@ -41,8 +40,7 @@
                         <div class="span-12">
                             <li class="clear-filters category-button">
                                 <input type="checkbox" checked name="clear-filter" id="clear-filters" data-filter="*">
-                                    <label for="clear-filters">No filters</label>
-                                </input>
+                                <label for="clear-filters">No filters</label>
                             </li>
                         </div>
                     </ul>

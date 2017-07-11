@@ -1011,8 +1011,13 @@
   template_data:
     - section: career
 /career/teacher/success/:
-  publish: false
+  publish: true
   template: cehd/career/teacher/success.html
+  template_data:
+    - section: career
+/career/teacher/teach-minn/:
+  publish: true
+  template: cehd/career/teacher/teach-minn.html
   template_data:
     - section: career
 /commencement/:
@@ -1276,17 +1281,17 @@
   template_data:
     - section: graduate
 /graduate/wellbeing/:
-  publish: false
+  publish: true
   template: cehd/graduate/wellbeing.html
   template_data:
     - section: graduate
 /graduation/:
-  publish: false
+  publish: true
   template: cehd/graduation/index.html
   template_data:
     - section: graduation
 /graduation/med/:
-  publish: false
+  publish: true
   template: cehd/graduation/med.html
   template_data:
     - section: graduation
@@ -2100,9 +2105,9 @@
   template: cehd/trio/mcnair/2015/bah.html
   template_data:
     - section: trio
-/trio/mcnair/2015/chuw/:
+/trio/mcnair/2015/chu/:
   publish: true
-  template: cehd/trio/mcnair/2015/chuw.html
+  template: cehd/trio/mcnair/2015/chu.html
   template_data:
     - section: trio
 /trio/mcnair/2015/cory/:

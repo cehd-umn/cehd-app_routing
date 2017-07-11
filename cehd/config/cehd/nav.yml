@@ -69,8 +69,7 @@
 
       - name: GRADUATION
         href: "/graduation/"
-      - name: Commencement
-        href: "/commencement/"
+
     -
       - name: CAREER SERVICES
         href: "/career/"
@@ -101,7 +100,7 @@
         href: "/research/research-day/"
       - name: Grantsmanship
         href: "/research/grantsmanship/"
-      - name: PI Elligibility
+      - name: PI Eligibility
         href: "/research/pi/"
       - name: Policy Breakfast Series
         href: "/policy-breakfast/"
@@ -126,7 +125,7 @@
   subsections:
     -
       - name: Improving Lives
-        href: "http://www.cehd.umn.edu/giving/improving-lives/default.html"
+        href: "/improving-lives/"
       - name: Gifts at work
         href: "/giving/gifts/"
       - name: Ways to give
