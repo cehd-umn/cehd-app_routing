@@ -55,7 +55,7 @@
         }
 
         #maincontent {
-            background: url("/assets/images/home/horizontal-{{ random([1,2,3,4,5]) }}.jpg") no-repeat 0 47px;
+            background: url("/assets/images/home/horizontal-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
         }
 
         .main-heading-box {
@@ -70,9 +70,14 @@
         }
 
         .button a {
+            background-color: rgba(255, 255, 255, .5);
             color: #333;
             font-size: 10px;
             padding: 9px;
+        }
+
+        .nav-toggle {
+            margin-bottom: 10px;
         }
 
         .vertical-center {
@@ -81,7 +86,7 @@
 
         .main-heading-box {
             background-color: transparent;
-            top: -67px;
+            top: -79px;
         }
 
         .main-heading-box h1 {
@@ -95,14 +100,14 @@
 
         .vertical-center {
             height: auto;
-            margin-top: -106px;
+            margin-top: -100px;
             padding-top: 0;
         }
 
         #video-container {
             background-color: #ffec99;
             max-width: 100%;
-            min-height: 48px;
+            min-height: 59px;
             padding: 1em;
             top: -51px;
         }
@@ -113,8 +118,13 @@
             top: 80px;
             width: 100%;
         }
+
         #base-wordmarks-container {
             padding: 0 1em;
+        }
+
+        #cehd-wordmark {
+            margin: 0 auto;
         }
     }
 
@@ -143,7 +153,7 @@
 
     @media all and (max-width: 414px) {
         #maincontent {
-            background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat 0 47px;
+            background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
         }
 
     }
