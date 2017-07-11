@@ -1,1 +1,0 @@
-attrib -r D:\WebServer\drydock.cehd.umn.edu\dhh-resources\*.* /s
