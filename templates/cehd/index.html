@@ -49,24 +49,19 @@
         width: 100vw;
     }
 
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 767px) {
+        .videojs-background-wrap, #bg-video {
+            display: none;
+        }
+
+        #maincontent {
+            background: url("/assets/images/home/horizontal-{{ random([1,2,3,4,5]) }}.jpg") no-repeat 0 47px;
+        }
+
         .main-heading-box {
             display: block;
             position: relative;
             width: 100%;
-        }
-
-        .always-third {
-            clear: none;
-            float: left;
-            display: block;
-            margin-right: 4.72458%;
-            min-height: 105px;
-            width: 30.18362%;
-        }
-
-        .always-third.last {
-            margin-right: 0;
         }
 
         .button {
@@ -77,15 +72,11 @@
         .button a {
             color: #333;
             font-size: 10px;
-            padding: 10px;
+            padding: 9px;
         }
 
         .vertical-center {
             padding-top: 246px;
-        }
-
-        .videojs-background-wrap, #bg-video {
-            display: none;
         }
 
         .main-heading-box {
@@ -95,7 +86,7 @@
 
         .main-heading-box h1 {
             color: rgb(51, 51, 51);
-            font-size: 16px;
+            font-size: 14px;
         }
 
         #mainnav {
@@ -104,15 +95,16 @@
 
         .vertical-center {
             height: auto;
-            margin-top: -107px;
+            margin-top: -106px;
             padding-top: 0;
         }
 
         #video-container {
             background-color: #ffec99;
+            max-width: 100%;
             min-height: 48px;
             padding: 1em;
-            top: -47px;
+            top: -51px;
         }
 
         #video-row {
@@ -133,6 +125,29 @@
         }
     }
 
+    @media all and (max-width: 768px) and (min-width: 768px) {
+        #maincontent {
+            top: 32px;
+        }
+
+        .always-third {
+            width: 33%;
+        }
+
+        .button {
+            font-size: 14px;
+            margin: 0 16px;
+            max-width: 100%;
+        }
+    }
+
+    @media all and (max-width: 414px) {
+        #maincontent {
+            background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat 0 47px;
+        }
+
+    }
+
     .videojs-background-wrap {
         background-color: #222;
         max-width: 100%;
@@ -141,7 +156,18 @@
         top: 169px;
     }
 
+        .always-third {
+            clear: none;
+            float: left;
+            display: block;
+            margin-right: 4.72458%;
+            min-height: 105px;
+            width: 30.18362%;
+        }
 
+        .always-third.last {
+            margin-right: 0;
+        }
 </style>
 {% endblock %}
 {% block main_content %}
