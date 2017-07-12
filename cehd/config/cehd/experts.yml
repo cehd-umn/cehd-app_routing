@@ -51,7 +51,7 @@ Art Education:
         - Educational Equity and the Achievement Gap
     description: "Examining art, theater, and performance education in schools, museums, and community arts organizations."
     tag_id: 353
-Autism Spectrum Disorders:
+Autism Spectrum Disorder:
     meta: null
     publish: true
     categories:
@@ -215,7 +215,7 @@ Culture and Education:
         - Education Practice and Theory
     categories_internal:
         - Educational Equity and the Achievement Gap
-    description: "Examining education across broad social, cultural, and poltical contexts, with a focus on equity, democracy, and social justice."
+    description: "Examining education across broad social, cultural, and political contexts, with a focus on equity, democracy, and social justice."
     tag_id: 369
 Decision Making:
     meta: null
