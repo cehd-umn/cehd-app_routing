@@ -43,9 +43,11 @@ Applied Child and Adolescent Development:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/ICD/Programs/ACAD/default.html
-  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings.
+  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings. (Online degree)
   categories:
     - Families, Youth, and Children
+    - Community and Leadership
+    - Recreation, Health, and Wellbeing
     - Evaluation and Methods
 Applied psychology in educational and community settings (APECS):
   meta: null
@@ -77,7 +79,7 @@ Autism Spectrum Disorders:
     - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
     - title: License
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
     - title: Graduate Certificate
@@ -145,7 +147,9 @@ Counseling and Student Personnel Psychology:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/EdPsych/Programs/CSPP/default.html
+      href: http://www.cehd.umn.edu/edpsych/programs/cspp/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Counsel others throughout the lifespan. Work in schools, colleges, or community organizations, and help people develop personally and socially, in their academic or career pursuits.
   categories:
     - Teaching, Learning, and Schools
@@ -560,6 +564,8 @@ Psychological Foundations of Education:
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/foundations/talent/
   description: Study the psychological processes critical to education, focusing on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan.
   categories:
     - Teaching, Learning, and Schools
@@ -568,8 +574,10 @@ Quantitative Methods in Education:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/future-students/qme/
-  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics"
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics.
   categories:
     - Teaching, Learning, and Schools
     - Evaluation and Methods
@@ -603,6 +611,8 @@ School Psychology:
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/master/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/doctor/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Through work in schools settings or research, help students succeed academically, socially, emotionally, and behaviorally.
   categories:
     - Teaching, Learning, and Schools
@@ -680,13 +690,19 @@ Special Education:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/SpEd-BS.html
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     - title: License
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/masters/
     - title: Graduate Minor
       href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
+    - title: Graduate Certificate
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/phd/
   description: Prepare to teach students with mild-moderate disabilities in grade K through age 21. Improve outcomes for individuals who require specialized support to achieve success throughout their lifespan.
   categories:
     - Teaching, Learning, and Schools
