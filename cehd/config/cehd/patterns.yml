@@ -1387,6 +1387,60 @@ did you know SVG with brown background:
       name: half
     - group: css
       name: brown background
+Plus icon SVG include:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Plus symbol
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/plus.html
+      type: include
+  type: include
+  uses: null
+Vimeo icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Vimeo logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/vimeo.html
+      type: include
+  type: include
+  uses: null
+YouTube icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the YouTube logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/youtube.html
+      type: include
+  type: include
+  uses: null
 Twitter icon SVG:
   publish: true
   meta: null
