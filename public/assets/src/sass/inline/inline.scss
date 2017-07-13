@@ -433,6 +433,31 @@ figure {
     }
 }
 
+.icon-vimeo {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $vimeo-blue;
+    }
+}
+
+.icon-youtube {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $youtube-red;
+    }
+}
+
+.icon-plus {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $base-white;
+    }
+}
+
+
 @media all and (max-width: 560px) {
     .svg-social-media-icon {
         max-width: 40px;

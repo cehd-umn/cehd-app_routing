@@ -48,6 +48,8 @@
 $corner-border-spacing: 5px;
 
 .corner-borders-top {
+    min-height: 1px;
+
     &::after {
         border-right: 1px solid $base-black;
         border-top: 1px solid $base-black;

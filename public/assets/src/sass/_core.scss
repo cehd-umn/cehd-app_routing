@@ -32,7 +32,7 @@ img {
 
 .emphasis {
     background-color: $cehd-tertiary-gold;
-    padding: 2em;
+    padding: 10px;
 
     &.subtle {
         background-color: $cehd-light-grey;
@@ -517,6 +517,10 @@ footer {
 @media all and (min-width: 768px) {
     body {
         font-size: 18px;
+    }
+
+    .emphasis {
+        padding: 2em;
     }
 
     .dept-footer-container {
