@@ -151,6 +151,14 @@
         "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
     {#- events feed -#}
+    {# 	http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&q=6&r=3&t=130 #}
     {{ eventsfeed.events_feed_js(
+        130,
+        4,
+        "#events-container",
+        "/assets/dist/views/cehd/events",
+        "index.html",
+        6,
+        3
     ) }}
 {% endblock %}

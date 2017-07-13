@@ -25,7 +25,30 @@
         max-width: 80%;
         padding: 0;
         text-align: center;
+        transition: none;
         top: 50%;
+    }
+
+    .button:active,
+    .button:focus,
+    .button:hover {
+        background: transparent;
+    }
+
+    .button::after,
+    .button::before {
+        background: transparent;
+        height: 0;
+    }
+
+    .button:active::before,
+    .button:hover::before {
+        transform: translateY(-10px);
+    }
+
+    .button:active::after,
+    .button:hover::after {
+        transform: translateY(10px);
     }
 
     .button a {
@@ -91,7 +114,7 @@
 
         .main-heading-box h1 {
             color: rgb(51, 51, 51);
-            font-size: 14px;
+            font-size: 13px;
         }
 
         #mainnav {
@@ -120,7 +143,7 @@
         }
 
         #base-wordmarks-container {
-            padding: 0 1em;
+            padding: 0 10px;
         }
 
         #cehd-wordmark {

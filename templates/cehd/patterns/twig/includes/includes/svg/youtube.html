@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="jinja">
+&lt;div class=&quot;svg-social-media-icon&quot;&gt;
+    {% verbatim %}{% include &quot;cehd/includes/svg/social-media/youtube.html&quot; %}{% endverbatim %}
+&lt;/div&gt;
+            </code></pre>
+            <div class="whole">
+                <div class="svg-social-media-icon">
+                    {% include "cehd/includes/svg/social-media/youtube.html" %}
+                </div>
+            </div>
+            <div class="whole margin-top-1">
+                <h3>Multiple sizes</h3>
+                <pre><code class="html">
+{%- for size in [40, 50, 60, 70, 80, 90, 100] %}
+&lt;div class=&quot;svg-social-media-icon size-{{ size }}&quot;&gt;
+    {% verbatim %}{% include "cehd/includes/svg/social-media/youtube.html" %}{% endverbatim %}
+&lt;/div&gt;
+
+{% endfor -%}
+                </code></pre>
+            </div><!-- /whole -->
+            <div class="whole margin-top-1">
+                {% for size in [40, 50, 60, 70, 80, 90, 100] %}
+                <div class="svg-social-media-icon size-{{ size }}">
+                    {% include "cehd/includes/svg/social-media/youtube.html" %}
+                </div>
+                {% endfor %}
+            </div><!-- /whole -->
+        </div>
+    </div>
+</div>
