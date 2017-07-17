@@ -102,10 +102,11 @@ $corner-border-spacing: 5px;
 }
 
 blockquote {
+    margin: 10px;
+
     &.quote-wrap {
         font-size: 20px;
         font-style: inherit;
-        margin-top: 50px;
         quotes: "“" "”" "‘" "’";
 
         &::after,
@@ -334,6 +335,11 @@ li {
 }
 
 @media all and (min-width: 960px) {
+    blockquote {
+        &.quote-wrap {
+            margin-top: 50px;
+        }
+    }
 
     .speaker {
         margin: 40px 80px 0 0;
