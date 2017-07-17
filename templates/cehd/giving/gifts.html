@@ -1,6 +1,13 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Gifts" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .appointment-dept {
+        font-size: 16px;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
@@ -59,7 +66,7 @@
         {% for appointment_group in appointments %}
         <div class="span-12">
           {% for appointment in appointment_group %}
-            <div class="appointment third">
+            <div class="appointment half">
                 <h4>{{ appointment.heading }}</h4>
                 <div class="span-4 thumbnail-img">
                     <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
@@ -71,7 +78,7 @@
                             {{ appointment.titles|join(", ") }}
                         </small>
                     </h5>
-                    <p><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></p>
+                    <p><small class="appointment-dept"><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></small></p>
                 </div>
             </div>
           {% endfor %}
