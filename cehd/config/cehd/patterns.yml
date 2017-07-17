@@ -150,8 +150,6 @@ centered elements:
       name: Blue background
     - group: css
       name: Grey background
-    - group: css
-      name: Brown background
 12-column grid:
   publish: true
   meta: null
@@ -224,27 +222,6 @@ grey background:
   template: null
   twig_files:
     - path: cehd/patterns/css/includes/grey-background.html
-      type: include
-  type: include
-  uses:
-    - group: css
-      name: row
-    - group: css
-      name: container
-    - group: css
-      name: half
-brown background:
-  publish: true
-  meta: null
-  categories:
-    - background color
-  description: Gives an element a consistent brown background.
-  group: css
-  example_page_url: null
-  handler: null
-  template: null
-  twig_files:
-    - path: cehd/patterns/css/includes/brown-background.html
       type: include
   type: include
   uses:
@@ -1359,34 +1336,6 @@ did you know SVG with grey background:
       name: half
     - group: css
       name: grey background
-did you know SVG with brown background:
-  publish: true
-  meta: null
-  categories:
-    - background color
-    - macros
-    - svg
-    - twig
-  description: Creates an inline SVG for "Did you know?" with a brown background
-  group: svg
-  example_page_url: null
-  handler: null
-  template: null
-  twig_files:
-    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-brown.html
-      type: include
-  type: include
-  uses:
-    - group: css
-      name: row
-    - group: css
-      name: container
-    - group: css
-      name: centered elements
-    - group: css
-      name: half
-    - group: css
-      name: brown background
 Plus icon SVG include:
   publish: true
   meta: null
