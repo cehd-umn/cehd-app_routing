@@ -134,7 +134,7 @@ blockquote {
     float: right;
     font-size: 14px;
     font-weight: bold;
-    margin: 40px 80px 0 0;
+    margin: 40px 0 0;
 }
 
 .section-header-container {
@@ -334,6 +334,10 @@ li {
 }
 
 @media all and (min-width: 960px) {
+
+    .speaker {
+        margin: 40px 80px 0 0;
+    }
 
     .hero-image-container {
         display: block;
