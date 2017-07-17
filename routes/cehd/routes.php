@@ -85,11 +85,6 @@ $app->router->respond("GET", "/research/grantwriting[**:trailing]", function($re
         $response->redirect("/research/grantsmanship/", 301)->send();
     });
 
-$app->router->respond("GET", "/undergraduate/scholarships/[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/undergraduate/scholarships/", 301)->send();
-    });
-
 $app->router->respond("GET", "/international[**:trailing]", function($request, $response, $service, $app)
     {
         $response->redirect("/global/", 301)->send();
