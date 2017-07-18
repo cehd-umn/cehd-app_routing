@@ -45,6 +45,8 @@ $app->router->respond("GET", "/people/[:internetId]/", [$app, "personPageHandler
 
 $app->router->respond("GET", "/events/[i:id]/", [$app, "eventPageHandler"]);
 
+$app->router->respond("GET", "/directory/search/", [$app, "peopleSearchResultsPageHandler"]);
+
 // Services
 $app->router->with("/services", function() use ($app)
 {

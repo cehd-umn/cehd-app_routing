@@ -485,4 +485,21 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $event = $this->getEvent($request->id, $response);
         echo $this->_renderTemplate("cehd/events/event.html", ["event" => $event]);
     }
+
+    public function peopleSearchResultsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        $nm = null;
+
+        if (array_key_exists("nm", $query_data))
+        {
+            $nm = $query_data["nm"];
+        }
+
+        $template_data = [
+            "section" => null,
+            "nm" => $nm,
+        ];
+        echo $this->_renderTemplate("cehd/directory/results.html", $template_data);
+    }
 }
