@@ -46,7 +46,7 @@
   template_data:
     - section: home
 /directory/:
-  template: cehd/directory.html
+  template: cehd/directory/index.html
   publish: true
   template_data:
     - section: home

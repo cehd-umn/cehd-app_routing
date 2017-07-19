@@ -1,22 +1,25 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Directory" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    #nm {
+        font-size: 16px;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
     <h1>Directory and college contacts</h1>
 
-    <!-- <div class="third">
+    <div class="third">
         <div class="whole">
-            <form action="/directory/" method="get" id="directory-search">
-                <label for="nm">Search</label>
-                <input type="text" placeholder="Search" id="nm" name="nm">
-            </form>
+            {% include "cehd/directory/includes/people-search-form.html" %}
         </div>
-        <div class="whole" id="search-results"></div>
-    </div> -->
+    </div>
     <div class="row">
-      <div class="half">
+      <div class="half margin-top-1">
         <div class="span-4">
           <p class="mobile-hide"><img src="/assets/images/headshots/Sq-ErnstDavid-5541-2015.jpg" class="mobile-hide circular" alt="David Ernst" /></p>
         </div>
@@ -241,6 +244,7 @@
   </div> <!-- ./container -->
 </div> <!-- ./row -->
 {% endblock %}
+{#
 {% block bottom_js %}{{ parent() }}
 <script>
     (function() {
@@ -283,3 +287,4 @@
     })();
 </script>
 {% endblock %}
+#}
