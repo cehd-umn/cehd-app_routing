@@ -168,6 +168,24 @@ centered elements:
       name: row
     - group: css
       name: container
+12-column grid that never breaks:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - grid
+  description: Classes for using the 12-column grid with no breakpoints
+  group: css
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/css/grid-no-break.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
 yellow background:
   publish: true
   meta: null
