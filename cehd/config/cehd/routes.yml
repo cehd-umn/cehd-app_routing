@@ -1065,6 +1065,11 @@
   template: cehd/events/fall-assembly.html
   template_data:
     - section: events
+/events/homecoming/:
+  publish: true
+  template: cehd/events/homecoming.html
+  template_data:
+    - section: events
 /events/slifer/:
   publish: true
   template: cehd/events/slifer.html
@@ -1350,9 +1355,9 @@
   template: cehd/reads/previous-books/index.html
   template_data:
     - section: reads
-/reads/previous-books/gains/:
+/reads/previous-books/gaines/:
   publish: true
-  template: cehd/reads/previous-books/gains.html
+  template: cehd/reads/previous-books/gaines.html
   template_data:
     - section: reads
 /reads/previous-books/moore/:
