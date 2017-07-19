@@ -1,5 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Upward Bound - TRiO " %}
+{%- import "macros/svg.html" as svg -%}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 
@@ -25,6 +26,30 @@
           Email <a href="mailto:trio@umn.edu">trio@umn.edu</a></p>
       </div>
     </div>
+    <div class="row emphasis margin-top-1">
+        <div class="container">
+
+            <div class="third feature">
+                <h2>Keep in touch</h2>
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://www.facebook.com/upwardboundumntc">
+                {% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                </div>
+
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://twitter.com/ubtrio">{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+                </div>
+
+    <p>
+      Follow us on social media!
+    </p>
+
+
+            </div>
+
+        </div>
+    </div>
+
     <div class="row">
         <div class="twothird feature">
           <h2>TRIO UB services</h2>

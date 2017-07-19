@@ -70,9 +70,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function errorPageHandler($code, $router)
+    public function errorPageHandler($code=404, $router)
     {
-        echo $this->_renderTemplate('cehd/error/404.html', []);
+        $html = $this->_renderTemplate('cehd/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function homePageHandler($request, $response, $service, $app)
