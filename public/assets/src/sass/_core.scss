@@ -192,7 +192,7 @@ img {
 }
 
 /// CEHD Wordmark
-#cehd-wordmark {
+.cehd-wordmark {
     border-bottom: 1px solid $base-black;
     padding: .9em 0 .7em;
 }
@@ -756,7 +756,7 @@ footer {
         }
     }
 
-    #cehd-wordmark {
+    .cehd-wordmark {
         border-bottom: 0;
         float: right;
         padding: .9em 0 0;
