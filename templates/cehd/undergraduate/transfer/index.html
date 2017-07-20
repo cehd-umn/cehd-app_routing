@@ -1,20 +1,29 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/info-sessions-feed.html" as info_session %}
 {% set page_title = "Undergraduate Transfer Admissions" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
     <h1>Transfer admissions</h1>
-      <h2>Application Deadlines</h2>
 <div class="row">
   <div class="half">
+    <h2>Application Deadlines</h2>
       <p><strong>Spring semester deadline</strong><br />Priority: October 1 / Final: December 1</p>
       <p><strong>Fall semester deadline</strong><br />Priority: February 1 / Final: June 1</p>
-        <p><span style="color:red">Note: Many majors fill by the priority deadline.</span></p>
-      <p><a href="/undergraduate/info-sessions/">Sign up for an information session </a>to learn more about our majors, understand the application process, and have your questions answered.</p>
+      <p><span style="color:red">Note: Many majors fill by the priority deadline.</span></p>
+      <p>Applications must be submitted by these deadlines to be given full consideration for admission. CEHD is committed to providing a comfortable, inclusive, and respectful environment for all members of our communities. If you need accommodations, in the admission process, please contact CEHD Student Services, <a href="mailto:cehdtrfr@umn.edu">cehdtrfr@umn.edu</a> or 612-625-3339.</p>
     </div>
     <div class="half">
-      <p>Applications must be submitted by these deadlines to be given full consideration for admission. CEHD is committed to providing a comfortable, inclusive, and respectful environment for all members of our communities. If you need accommodations, in the admission process, please contact CEHD Student Services, <a href="mailto:cehdtrfr@umn.edu">cehdtrfr@umn.edu</a> or 612-625-3339.</p>
+      <h2>Get your questions answered in person</h2>
+      <h3>Drop-in advising hours</h3>
+<p>
+  Check in at the front desk in 360 Education Sciences Building.
+</p>
+        <!-- Feed displays in following div -->
+        <div id="info-sessions-container"></div>
+        <p><a href="/undergraduate/info-sessions/">Sign up for an information session </a>to learn more about our majors, understand the application process, and have your questions answered.</p>
     </div>
     </div>
     <div class= "half feature">
@@ -177,27 +186,17 @@
 
 </div>
       <div class="container">
-<div class="span-6">
-  <h2>Get your questions answered in person </h2>
-<ul>
-<li> Sign up for an <a href="/undergraduate/info-sessions/">information
-  session</a> where you&#39;ll learn more about our majors, understand the application
-  process, and have your questions answered.</li>
-<li>Visit us during <a href="/undergraduate/transfer/">drop-in hours</a>. </li>
-</ul>
-</div>
-
-<div class="span-6">
-<div class="margin-top-1">
-</div>
+<div class="span-8 feature">
 <h3>Contact</h3>
 <p><a href="/undergraduate/transfer/contact/">Sheri Beck</a>, Prospective Transfer Student Adviser &amp; Transfer Admissions Coordinator<br />
   CEHD Student Services <br />
   360 Education Sciences Building<br />
   612-625-3339<br />
 <a href="mailto:sbeck@umn.edu">sbeck@umn.edu</a></p>
-</div>
-</div>
 </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("Drop-in","4","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "start-end-time.html") }}
 {% endblock %}
