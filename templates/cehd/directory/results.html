@@ -3,38 +3,20 @@
 {% set page_title = "Directory" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
-<style>
-    .working-title {
-        font-family: Lato, sans-serif;
-        font-weight: normal;
-    }
-
-    hr {
-        background: transparent;
-        border: 1px solid #666;
-        border-bottom: 0;
-    }
-
-    h3.h6 {
-        font-size: 16px;
-    }
-
-    #nm {
-        font-size: 16px;
-    }
-</style>
+{% include "cehd/directory/includes/styles.html" %}
 {% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <div class="whole">
-            {% include "cehd/directory/includes/people-search-form.html" %}
+        <h1>Directory and college contacts</h1>
+        {% include "cehd/directory/includes/people-search-form.html" %}
+        <div class="twothird feature">
+            {{ loader.loader(
+                false,
+                "h1",
+                "search-results"
+            ) }}
         </div>
-        {{ loader.loader(
-            "Search results",
-            "h1",
-            "search-results"
-        ) }}
     </div>
 </div>
 {% endblock %}

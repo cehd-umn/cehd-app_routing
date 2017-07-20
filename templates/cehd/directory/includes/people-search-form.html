@@ -1,4 +1,5 @@
 <form action="/directory/search/" method="get" id="directory-search">
-    <label for="nm">Search</label>
-    <input type="text" placeholder="Search" id="nm" name="nm">
+    <label for="nm" class="accessible-no-display accessible-hidden">Search</label>
+    <input type="text" placeholder="Search" id="nm" name="nm" value="{{ nm }}">
+    <input id="directory-search-button" type="submit" name="directory-search" value="&#xe803;">
 </form>
