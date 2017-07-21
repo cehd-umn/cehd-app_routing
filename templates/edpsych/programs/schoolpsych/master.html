@@ -1,19 +1,20 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}
-{% set page_title = "M.A. & specialist certificate (S.C.) in education & school psychological services" %}
-{% block title %}School Psychology M.A. &amp; S.C. in Education &amp; School Psychological Services{% endblock %}
+{% set page_title = "School psychological services M.A. & specialist certificate" %}
+{% block title %}School Psychology M.A. &amp; S.C. in Education &amp{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-      <h2>{{ page_title }}</h2>
+      <h2 class="text-center">School psychological services<br/>M.A. &amp; specialist certificate</h2>
       <section>
+        <div class="half">
+        <h3 class="no-margin-top">Become certified to practice school psychology</h3>
+        <p>The M.A. and specialist certificate (S.C.) in education & school psychological services program is designed for future practicing school psychologists. Upon completion of the program, you’ll be eligible to receive your state and national school psychologist credential to work with students in schools, teachers, and families to help help all students succeed&mdash;academically, socially, emotionally, and behaviorally.</p>
+        <p>Our program is approved by the National Association of School Psychologists (NASP).</p>
+        <p><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">Learn about fellowships available to M.A./specialist students.</a></p>
+        </div>
       <div class="half"><p><iframe src="https://player.vimeo.com/video/140834612" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen {{ analytics.add_tracking("send", "event", "feature", "click", "schpsy master feature") }}></iframe>
 </p></div>
-      <div class="half">
-      <h3 class=".no-margin-top">Earn your M.A. and become certified to practice in schools</h3>
-      <p>Approved by the National Association of School Psychologists (NASP), the M.A. and specialist certificate (S.C.) in education & school psychological services program in school psychology is designed for students who seek to become competent practitioners. Upon completion of the program, you’ll be eligible to receive your state and national school psychologist credential to work with students in schools to help them succeed academically, socially, emotionally, and behaviorally.</p>
-      <p><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">Learn about fellowships available to M.A./specialist students.</a></p>
-      </div>
       </section>
   <section>
   <p class="text-center"><a href="{{ config.base_url }}/future-students/school-psych/"  {{ analytics.add_tracking("send", "event", "how to apply", "click", "schoolpsychmaster") }} class="button center">How to apply</a></p>
@@ -45,7 +46,6 @@
               <ul>
               <li>Expected employment growth: 11% between 2012 and 2022*</li>
               <li>Mean 9-month salary (full-time, school-based practitioner): $64,000-$71,000**</li>
-              <li>Mean 9-month salary (university faculty): $77,800**</li>
               <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/outcomes.html">Student Admissions, Outcomes and Other Data</a></li>
           </ul>
         </div>

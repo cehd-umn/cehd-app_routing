@@ -8,7 +8,7 @@
       <section>
         <h2>{{ page_title }}</h2>
           <div class="half">
-            <h3>Inspire positive social change by studying human relationships and growth</h3>
+            <h3 class="no-margin-top">Inspire positive social change by studying human relationships and growth</h3>
               <p>The way we work, think, and play in groups and alone affects our personal success as well as the success of our schools, workplaces, and communities. As a Ph.D. or M.A. student, you’ll study the social and social developmental processes experienced across the lifespan, with a primary focus on processes during the years of schooling. You’ll apply what you learn to further the development of groups and organizations as well as individuals, particularly in educational and related settings.</p>
           </div>
           <div class="half">
@@ -18,51 +18,54 @@
           </fig>
           </div>
       </section>
-        <section>
-        <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "socialfoundationsmain") }} class="button center">How to apply</a></p>
-      </div>
+      <section>
+        <div class="twothirds feature">
+          <br/>
+          <h3 class="text-center">What you'll study:</h3>
+            <ul>
+              <li>Social influence processes</li>
+              <li>Group dynamics/cooperative learning</li>
+              <li>Theories of intergroup relations</li>
+              <li>Methods of organizational change and conflict resolution</li>
+              <li>Action research models and engaged research</li>
+              <li>Impacts of disparities on educational and life outcomes</li>
+              <li>Social emotional development</li>
+              <li>Prosocial and antisocial behavior in schools</li>
+            </ul>
+          <br/>
+          </div>
         </section>
         <section>
-        <div class="twothirds feature">
-          <div class="third">
-            <h3>Careers</h3>
-              <ul>
-                <li>Faculty (Ph.D only)</li>
-                <li>Research scientists at universities and companies</li>
-                <li>Other educational settings (e.g., K-12 school research offices)</li>
-                <li>Human and social service organizations</li>
-                <li>Health care organization evaluator/researcher</li>
-                <li>Government agencies</li>
-                <li>Research and development centers</li>
-              </ul>
-        </div>
-        <div class="third">
-          <h3>Degrees &amp; coursework</h3>
-          <p><em>A master's degree is not required to apply for the doctoral program.</em></p>
-          <p><strong>Master's of Arts (M.A.)</strong></p>
-          <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7541">M.A. curriculum (33-34 credits)</a></p>
-          <p><strong>Doctor of Philosophy (Ph.D)</strong></p>
-          <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7542">Ph.D. curriculum (72 credits)</a></p>
+      <div class="half">
+        <h3 class="text-center">Degrees &amp; coursework</h3>
+        <p><em>A master's degree is not required to apply for the doctoral program.</em></p>
+        <p><strong>Master's of Arts (M.A.)</strong></p>
+        <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7541">M.A. curriculum (33-34 credits)</a></p>
+        <p><strong>Doctor of Philosophy (Ph.D)</strong></p>
+        <p><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=7542">Ph.D. curriculum (72 credits)</a></p>
       </div>
-      <div class="third">
-          <h3 class="text-center">What you'll study</h3>
+      <div class="half">
+        <h3 class="text-center">Careers</h4>
           <ul>
-            <li>Social influence processes</li>
-            <li>Group dynamics/cooperative learning</li>
-            <li>Theories of intergroup relations</li>
-            <li>Methods of organizational change and conflict resolution</li>
-            <li>Action research models and engaged research</li>
-            <li>Impacts of disparities on educational and life outcomes</li>
-            <li>Social emotional development</li>
-            <li>Prosocial and antisocial behavior in schools</li>
+            <li>Faculty (Ph.D only)</li>
+            <li>Research scientists at universities and companies</li>
+            <li>Other educational settings (e.g., K-12 school research offices)</li>
+            <li>Human and social service organizations</li>
+            <li>Health care organization evaluator/researcher</li>
+            <li>Government agencies</li>
+            <li>Research and development centers</li>
           </ul>
-        <br />
+        </ul>
       </div>
-    </div>
     </section>
-    <div class="row emphasis margin-top-1">
+    <section>
+    <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "socialfoundationsmain") }} class="button center">How to apply</a></p>
+    </section>
+  </div>
+</div>
+<div class="row emphasis margin-top-1">
         <div class="container">
-            <p class="pull-quote">"I want to help all students feel socially and emotionally equipped to learn."</p>
+            <p class="pull-quote">&quot;I want to help all students feel socially and emotionally equipped to learn.&quot;</p>
             <div class="twothirds feature margin-2">
                 <div class="third">
                     <img src="{{ config.asset_base }}/dist/images/Programs/foundations/Lara_Westerhof_headshot.jpg" class="mobile-hide" alt="Lara Westerhof headshot">
@@ -72,9 +75,9 @@
                     <p><strong>Interests:</strong> How social and emotional factors affect student learning and development</p>
                     <p><strong>Work:</strong> Partnerships with local non-profit organizations, including a job training program for low-income adults and a network of afterschool programs for urban youth</p>
                 </div>
-            </div>
+              </div>
+          </div>
         </div>
-      </div>
   <div class="row">
     <div class="container">
       <h3 class="text-center">Faculty</h3>
@@ -103,5 +106,6 @@
     </section>
     </div>
   </div>
-
+</div>
+</div>
 {% endblock %}
