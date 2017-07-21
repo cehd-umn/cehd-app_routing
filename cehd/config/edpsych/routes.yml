@@ -435,6 +435,12 @@
     template_data:
         meta_description: "Study school psychology and create educational environments where students, families and school staff feel safe, welcome and supported."
         section: programs-degrees
+/edpsych/programs/schoolpsych/index-copy/:
+    publish: false
+    template: edpsych/programs/schoolpsych/index-copy.html
+    template_data:
+        meta_description: "Study school psychology and create educational environments where students, families and school staff feel safe, welcome and supported."
+        section: programs-degrees
 /edpsych/programs/schoolpsych/diversity/:
     publish: true
     template: edpsych/programs/schoolpsych/diversity.html
