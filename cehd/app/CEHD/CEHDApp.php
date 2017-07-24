@@ -16,7 +16,7 @@ use CEHD\App\Card\PatternCard\PatternCards;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
-    private $_sites = [
+    protected $_searchApplianceSites = [
                 "primary" => [
                     "name" => "College of Education + Human Development",
                     "url" => "www.cehd.umn.edu",
@@ -236,42 +236,13 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
-        $query_data = $request->params();
-        $filter = $this->_sites["primary"]["name"];
-
-        if ($this->arrayContains("q", $query_data))
-        {
-            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        }
-        elseif ($this->arrayContains("query", $query_data))
-        {
-            $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
-        }
-
-        if ($this->arrayContains("filter", $query_data))
-        {
-            $filter = $query_data["filter"];
-        }
-
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary"],
-        ];
-
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "filter" => $filter,
-            "query" => $search_query,
-        ];
-
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate('cehd/search/index.html', $template_data);
     }
 
     public function searchEndpointHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
+        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
         $query_data = $request->params();
         $results = $search_client->getResults($query_data);
         return $response->sendJSONResponse(json_encode($results));
