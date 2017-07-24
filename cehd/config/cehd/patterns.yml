@@ -1027,12 +1027,12 @@ column divider:
       name: two third
     - group: css
       name: 12-column grid
-hero image:
+hero image page:
   publish: true
   meta: null
   categories:
     - layout
-    - hero image
+    - hero image page
     - images
   description: Code sample for a page with a hero image
   group: page
