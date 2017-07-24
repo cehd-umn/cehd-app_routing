@@ -40,6 +40,15 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
 
         $this->template->addGlobal("cehd_edpsych_nav_open", $this->nav_open);
+
+        $this->router->onHttpError([$this, 'errorPageHandler']);
+    }
+
+    public function errorPageHandler($code=404, $router)
+    {
+        $html = $this->_renderTemplate('edpsych/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
