@@ -482,6 +482,18 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    public function eventsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        if ($this->arrayContains("z", $query_data))
+        {
+            $route = "/events/" . $query_data["z"] . "/";
+            $response->redirect($route, 301)->send();
+        }
+
+        echo $this->_renderTemplate("cehd/events/index.html", ["section" => "events"]);
+    }
+
     public function eventPageHandler($request, $response, $service, $app)
     {
         $event = $this->getEvent($request->id, $response);
