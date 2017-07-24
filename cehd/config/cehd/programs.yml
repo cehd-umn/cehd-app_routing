@@ -583,7 +583,7 @@ Quantitative Methods in Education:
     - Evaluation and Methods
 Racial Justice in Urban Schooling:
   meta: race, language, social class, gender, sexual orientation, LGBT
-  publish: false
+  publish: true
   links:
     - title: Undergraduate Minor
       href: https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=21880&strm=1179&campus=UMNTC
