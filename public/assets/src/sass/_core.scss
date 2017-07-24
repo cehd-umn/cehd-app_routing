@@ -818,47 +818,6 @@ footer {
     }
 }
 
-.search-form-element {
-    display: inline-block;
-    height: 39px;
-}
-
-.search-result-set {
-    display: none;
-
-    &.active {
-        display: block;
-    }
-}
-
-.search-button {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    color: $base-dark-grey;
-    font-family: "fontello";
-    font-size: 1em;
-}
-
-.search-result-set-link {
-    &.active {
-        border-bottom: 6px solid;
-    }
-}
-
-#search-page-query-input {
-    border: 1px solid $base-light-grey;
-    font-size: 16px;
-    padding: .55em;
-
-    &:focus {
-        background: $base-white;
-    }
-}
-
-#search-page-submit {
-    font-size: 30px;
-}
 
 .to-upper {
     text-transform: uppercase;

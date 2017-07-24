@@ -7,9 +7,20 @@
 @import "bourbon/bourbon";
 @import "loader";
 @import "form_hack";
+@import "../../../../assets/src/sass/search";
 
 .news-more-news-link {
     margin-right: 10px;
+}
+
+.h2 {
+    &.search-result-filters {
+        font-size: 16px;
+
+        .search-result-set-link {
+            font-size: 16px;
+        }
+    }
 }
 
 .emphasis {

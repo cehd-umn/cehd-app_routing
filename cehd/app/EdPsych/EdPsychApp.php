@@ -13,7 +13,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     private $_search_client;
 
-    private $_searchApplianceSites;
+    protected $_searchApplianceSites;
 
     function __construct($file_paths)
     {
@@ -53,20 +53,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        // Lazily load the search client so it"s not loaded on unrelated
-        // requests
-        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
-        $query_data = $request->params();
-        $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary", "tertiary"],
-        ];
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "query" => $query_data["q"],
-        ];
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate("edpsych/search.html", $template_data);
     }
 
