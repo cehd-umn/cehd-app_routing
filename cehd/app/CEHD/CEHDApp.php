@@ -18,11 +18,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 {
     private $_sites = [
                 "primary" => [
-                    "name" => "College of Education + Human Development",
+                    "name" => "CEHD",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
-                    "name" => "University of Minnesota",
+                    "name" => "UMN",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -238,14 +238,20 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
+        $filter = "CEHD";
 
-        if (array_key_exists("q", $query_data))
+        if ($this->arrayContains("q", $query_data))
         {
             $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
         }
-        elseif (array_key_exists("query", $query_data))
+        elseif ($this->arrayContains("query", $query_data))
         {
             $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
+        }
+
+        if ($this->arrayContains("filter", $query_data))
+        {
+            $filter = $query_data["filter"];
         }
 
         $search_client_query_data = [
@@ -256,6 +262,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $results = $search_client->getResults($search_client_query_data);
         $template_data = [
             "results" => $results,
+            "filter" => $filter,
             "query" => $search_query,
         ];
 
