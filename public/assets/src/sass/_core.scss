@@ -842,7 +842,8 @@ footer {
 
 .search-result-set-link {
     &.active {
-        border-bottom: 6px solid;
+        background: $nav-hover-border-top-color;
+        padding: 3px;
     }
 }
 

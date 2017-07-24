@@ -11,15 +11,18 @@
                 <input id="search-page-submit" type="submit" value="&#xe803;" class="search-button search-form-element">
             </form>
         </div>
-        <div class="span-7">
-            <p class="h2 text-center">Filter by:
+        <div class="span-9">
+            <p class="h2">Filter by:<br>
             {% for result_level, result_set in results %}
-                <a href="/search/?q={{ query }}&filter={{ result_set.name|lower }}" class="{% if result_set.name|lower == filter|lower %}active {% endif %}search-result-set-link">{{ result_set.name }}</a>
+                <a href="/search/?q={{ query|url_encode }}&filter={{ result_set.name|lower|url_encode }}" class="{% if result_set.name|lower == filter|lower %}active {% endif %}search-result-set-link h4">{{ result_set.name }}</a>
+                {% if not loop.last %}
+                    |
+                {% endif %}
             {% endfor %}
             </p>
 
             {% for result_level, result_set in results %}
-            <div class="{% if result_set.name|lower == filter|lower %}active {% endif %}{{ result_set.name|lower }}-search-result-set search-result-set">
+            <div class="{% if result_set.name|lower == filter|lower %}active {% endif %}{{ result_set.name|lower|hyphenate }}-search-result-set search-result-set margin-top-2">
                 {% if result_set.results %}
                     <dl id="{{ result_level }}-search-results">
                     {% for result in result_set.results %}

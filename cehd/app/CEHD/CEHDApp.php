@@ -18,11 +18,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 {
     private $_sites = [
                 "primary" => [
-                    "name" => "CEHD",
+                    "name" => "College of Education + Human Development",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
-                    "name" => "UMN",
+                    "name" => "University of Minnesota",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -238,7 +238,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $search_client = new \CEHD\App\Search\Search($this->_sites);
         $query_data = $request->params();
-        $filter = "CEHD";
+        $filter = $this->_sites["primary"]["name"];
 
         if ($this->arrayContains("q", $query_data))
         {
