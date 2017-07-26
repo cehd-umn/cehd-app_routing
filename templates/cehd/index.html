@@ -218,13 +218,13 @@
             </video>
             <div class="row vertical-center">
                 <div class="always-third">
-                    <p class="button"><a href="/programs/">Programs</a></p>
+                    <p class="button"><a href="/programs/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-programs") }}>Programs</a></p>
                 </div>
                 <div class="always-third">
-                    <p class="button"><a href="/news/">News &amp; events</a></p>
+                    <p class="button"><a href="/news/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-news and events") }}>News &amp; events</a></p>
                 </div>
                 <div class="always-third last">
-                    <p class="button"><a href="/research/">Research</a></p>
+                    <p class="button"><a href="/research/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-research") }}>Research</a></p>
                 </div>
             </div>
         </div>
