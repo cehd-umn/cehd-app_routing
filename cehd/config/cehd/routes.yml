@@ -1060,14 +1060,29 @@
   template: cehd/events/fall-assembly.html
   template_data:
     - section: events
+/events/grad-networking/:
+  publish: true
+  template: cehd/events/grad-networking.html
+  template_data:
+    - section: events
 /events/homecoming/:
   publish: true
   template: cehd/events/homecoming.html
   template_data:
     - section: events
+/events/saturday-scholars/:
+  publish: true
+  template: cehd/events/saturday-scholars.html
+  template_data:
+    - section: events
 /events/slifer/:
   publish: true
   template: cehd/events/slifer.html
+  template_data:
+    - section: events
+/events/undergrad-networking/:
+  publish: true
+  template: cehd/events/undergrad-networking.html
   template_data:
     - section: events
 
