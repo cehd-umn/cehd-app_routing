@@ -27,6 +27,7 @@
         };
         var client = new HTTPClient();
         var $request = client.get(params);
+        var analytics = new GA();
 
         $request.done(function() {
             var results = client.getResults();
@@ -34,10 +35,11 @@
             var news_category_uri = Helpers.feedPathToLinkPath("{{ feed_path }}");
             var news_link = news_site_base_url + news_category_uri;
             var news_text = "{{ more_news_text }}";
+            var $target = $("{{ target_element_selector }}");
             var template_params = {
                 "template_path": "{{ template_path }}",
                 "template_name": "{{ template_name }}",
-                "$target_element": $("{{ target_element_selector }}"),
+                "$target_element": $target,
                 "data": {
                     news: results,
                     more_news_link: news_link,
@@ -49,6 +51,12 @@
             var renderer = new Renderer();
             renderer.init(template_params);
             renderer.render();
+
+            var $ga_elements = analytics.getElementsWithGAData($target);
+
+            if ($ga_elements.length > 0 ) {
+                $ga_elements.on("click", analytics.trackingElementClickHandler);
+            }
         });
     })();
 </script>

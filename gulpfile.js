@@ -57,9 +57,10 @@ gulp.task("cehd-javascript", function () {
   var b = browserify({
     entries: [
         "./public/assets/src/js/cehd.js",
+        "./public/assets/src/js/ga.js",
+        "./public/assets/src/js/helpers.js",
         "./public/assets/src/js/http_client.js",
         "./public/assets/src/js/renderer.js",
-        "./public/assets/src/js/helpers.js",
         "./public/assets/src/js/search_client.js",
     ],
     debug: true
@@ -112,6 +113,7 @@ gulp.task("edpsych-javascript", function () {
         "./public/edpsych/assets/src/js/renderer.js",
         "./public/edpsych/assets/src/js/helpers.js",
         "./public/edpsych/assets/src/js/search_client.js",
+        "./public/assets/src/js/ga.js",
     ],
     debug: true
   });
