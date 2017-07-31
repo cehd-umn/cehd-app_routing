@@ -2,7 +2,7 @@
     <h3>{{ decade }}s</h3>
     {% for yr, notes in year %}
         {% for note in notes %}
-            <p>{{ note.encoded|safe }}</p>
+            <div>{{ note.encoded|safe }}</div>
         {% endfor %}
     {% endfor %}
 {% endfor %}
