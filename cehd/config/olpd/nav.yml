@@ -1,0 +1,16 @@
+---
+- name: About Us
+  href: "/about/"
+  section: about
+  subsections: none
+- name: People
+  href: "/people/"
+  section: people
+  subsections: none
+- name: Future Students
+  href: "/future-students/"
+  section: future-students
+  subsections:
+    -
+      - name: Visit & Apply
+        href: "/future-students/apply/"

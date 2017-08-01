@@ -5,7 +5,7 @@
         "guzzlehttp/guzzle": "~6.0",
         "symfony/yaml": "^3.1",
         "thoma127/dict": "^0.1.2",
-        "truetone/peloton": "^0.1.0"
+        "truetone/peloton": "dev-master"
     },
     "require-dev": {
         "phpunit/php-code-coverage": "^4.0"
