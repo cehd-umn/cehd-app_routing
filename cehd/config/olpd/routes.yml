@@ -40,12 +40,12 @@
 ####################################
 ## This system is case-sensitive! ##
 ####################################
-/:
+/olpd-new/:
   template: olpd/index.html
   publish: true
   template_data:
     - section: home
-/about/:
+/olpd-new/about/:
   template: olpd/about.html
   publish: true
   template_data:

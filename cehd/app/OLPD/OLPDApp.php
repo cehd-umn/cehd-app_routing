@@ -3,9 +3,9 @@ namespace CEHD\App\OLPD;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-use \Peloton;
+// use Peloton;
 
-class OLPDApp extends Peloton
+class OLPDApp extends \Peloton\Peloton
 {
     protected $_searchApplianceSites = [
                 "primary" => [
@@ -22,9 +22,9 @@ class OLPDApp extends Peloton
                 ]
             ];
 
-    function __construct($file_paths)
+    function __construct($file_paths, $templates_dir)
     {
-        parent::__construct($file_paths);
+        parent::__construct($file_paths, $templates_dir);
 
         $this->router->onHttpError([$this, 'errorPageHandler']);
     }
