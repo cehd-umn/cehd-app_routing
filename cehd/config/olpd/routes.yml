@@ -42,11 +42,11 @@
 ####################################
 /olpd-new/:
   template: olpd/index.html
-  publish: true
+  publish: false
   template_data:
     - section: home
 /olpd-new/about/:
   template: olpd/about.html
-  publish: true
+  publish: false
   template_data:
     - section: about

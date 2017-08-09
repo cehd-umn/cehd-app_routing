@@ -3,8 +3,6 @@ namespace CEHD\App\OLPD;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-// use Peloton;
-
 class OLPDApp extends \Peloton\Peloton
 {
     protected $_searchApplianceSites = [
