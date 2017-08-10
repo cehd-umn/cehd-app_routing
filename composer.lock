@@ -393,12 +393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/truetone/Peloton.git",
-                "reference": "41a7632470f7569a5328b4bcc429047215254f84"
+                "reference": "971bb2ebcf0fd0e40e1aa14e25157ccbd125830f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/truetone/Peloton/zipball/41a7632470f7569a5328b4bcc429047215254f84",
-                "reference": "41a7632470f7569a5328b4bcc429047215254f84",
+                "url": "https://api.github.com/repos/truetone/Peloton/zipball/971bb2ebcf0fd0e40e1aa14e25157ccbd125830f",
+                "reference": "971bb2ebcf0fd0e40e1aa14e25157ccbd125830f",
                 "shasum": ""
             },
             "require": {
@@ -428,7 +428,7 @@
                 }
             ],
             "description": "A fast, secure, minimal PHP application for content-focused websites",
-            "time": "2017-08-03 15:02:22"
+            "time": "2017-08-03 16:58:01"
         },
         {
             "name": "twig/twig",
