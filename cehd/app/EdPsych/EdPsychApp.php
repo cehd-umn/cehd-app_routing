@@ -19,17 +19,24 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     {
         parent::__construct($file_paths);
 
+        // @todo put this into the config file
         $this->_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "Educational Psychology",
+                    "site" => "tc_education",
                     "url" => "www.cehd.umn.edu/edpsych/",
                 ],
                 "secondary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "tertiary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
