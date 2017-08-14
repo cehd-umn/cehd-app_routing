@@ -7,15 +7,21 @@ class OLPDApp extends \Peloton\Peloton
 {
     protected $_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "Organizational Leadership, Policy and Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "tertiary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
