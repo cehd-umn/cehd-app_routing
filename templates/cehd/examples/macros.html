@@ -257,13 +257,15 @@
                 {{ table.row([
                     "sixth",
                     "q parameter value",
-                    "the value to use for the <samp>q</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;<strong>q=6</strong>&amp;t=355</samp>",
-                    "6"]) }}
+                    "the value to use for the <samp>q</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;<strong>q=6</strong>&amp;t=355</samp>,
+                    End date: 6 = no end date",
+                    "6 (no end date)"]) }}
                 {{ table.row([
                     "seventh",
                     "r parameter value",
-                    "the value to use for the <samp>r</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;<strong>r=3</strong>&amp;q=6&amp;t=355</samp>",
-                    "3"]) }}
+                    "the value to use for the <samp>r</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;<strong>r=3</strong>&amp;q=6&amp;t=355</samp>,
+                    Start date: 1 = no start date | 3 = start from today.",
+                    "3 (start from today)"]) }}
             {{ table.end_table() }}
 
             <p>Just set up the feed you want to pull in and review the

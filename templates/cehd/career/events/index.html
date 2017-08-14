@@ -1,56 +1,52 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
-{% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/loader.html" as loader -%}
 {% set page_title = "Career Services" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .date {
+        background-color: #eeeeed;
+        font-size: 14px;
+        font-weight: normal;
+        height: 40px;
+        padding: 10px 0 0 15px;
+    }
+    .event-box {
+        background-color: #d9edf7;
+        height: 50px;
+        padding-top: 7px;
+    }
+    .event {
+        padding-left: 15px;
+    }
+
+    .event-details {
+        background: #fff;
+    }
+
+    .description {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
     <h1>Career services events</h1>
-    <p>Prepare for career and employer events with these <a href="/career/events/career-fairs/">helpful tips</a>. </p><p>
-      Dates listed below are tentative. Registration for events will begin July 1st.
-    </p>
+    <p>Prepare for career and employer events with these <a href="/career/events/career-fairs/">helpful tips</a>. </p>
     <div class="twothirds feature">
-    <div class="half">
     {{ loader.loader(
     "Events",
     "h2",
     "events-container"
     ) }}
-</div>
-    <div class="half">
-      <!-- <h2>News</h2>
-      <ul class="no-bullet">
-        <li><a href="http://academics.cehd.umn.edu/career/success-story-hayley-chartier-family-social-science/">Success Story | Hayley Chartier, Family Social Science</a></li>
-        <li><a href="http://academics.cehd.umn.edu/career/success_story_mykenna_yesnes_whitney_zahn_elementary_education/">Success Story | Mykenna Yesnes &amp; Whitney Zahn, Elementary Education</a></li>
-    </ul> -->
-    {{ loader.loader(
-      "News",
-      "h2",
-      "career-container"
-    ) }}
-    <!-- {# getRssFeed("CareerNewsFeed","http://academics.cehd.umn.edu/career/feed/","/attributes/XSLT/CareerS-News-HP.xslt","My Error Message") #} -->
-</div>
-</div>
+    </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+<!-- Change the second number below, the number just after 231, to adjust number of events. | 2017-08-03 JFA -->
 {% endblock %}
-{%- block bottom_js %}{{ parent() }}
-    {#-
-        Events feed
-        * the first value passed in for for the t query param
-    -#}
-    {{ eventsfeed.events_feed_js(
-       231
-    ) }}
-    {{ newsfeed.news_feed_js(
-      "feed/",
-      "#career-container",
-      "index.html",
-      3,
-      "http://academics.cehd.umn.edu/career/",
-      "More career news",
-      "/assets/dist/views/cehd/newsfeeds/"
-      ) }}
-{%- endblock -%}
+{% block bottom_js %}{{ parent() }}
+    {{ eventsfeed.events_feed_js(231, 8, "#events-container", "/assets/dist/views/cehd/events", "events-page.html", 6, 3) }}
+{% endblock %}

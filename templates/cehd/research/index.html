@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Research" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block hero_image %}
@@ -109,7 +110,15 @@
           <p><a href="http://www.cehd.umn.edu/carei/research-assessment.html">See all of CAREI's research and assessment services.</a></p>
         </div>
       </div>
-
+        </div> <!-- ./container -->
+      <div class="row emphasis cool margin-top-2">
+          <div class="container">
+              <div class="half feature">
+                  {% set lines = [ "CEHD has 20+ research centers", "focused on topics ranging from", "children’s mental health", "to women in sports." ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+              </div>
+          </div>
+      </div>
+      <div class="container">
       <div class="row">
         <h2>Leadership and staff</h2>
         <div class="span-2">
