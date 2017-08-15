@@ -16,13 +16,18 @@ use CEHD\App\Card\PatternCard\PatternCards;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
+    // @todo put this into the config file
     protected $_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
