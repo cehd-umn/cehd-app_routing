@@ -3,6 +3,7 @@
 import "babel-polyfill";
 import $ from "jquery";
 import filterManager from "./filterManager.js";
+import GA from "./ga.js";
 import helpers from "./helpers.js";
 import renderer from "./renderer.js";
 import http_client from "./http_client.js";
@@ -18,9 +19,11 @@ class App {
 
         this.renderer = renderer;
 
-        this.http_client = http_client;
+        this.httpClient = http_client;
 
-        this.search_client = search_client;
+        this.searchClient = search_client;
+
+        this.GA = GA;
 
         $(".nav-toggle").on("click touch", function() {
             const $nav = $("nav");

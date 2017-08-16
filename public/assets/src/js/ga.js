@@ -2,6 +2,10 @@
 import $ from "jquery";
 
 class GA {
+    constructor() {
+        return this;
+    }
+
     getElementsWithGAData($target) {
         var $tracking_elements = $target.find("[data-ga-command]");
         return $tracking_elements;
@@ -26,4 +30,4 @@ class GA {
     }
 }
 
-window.GA = GA;
+module.exports = GA;
