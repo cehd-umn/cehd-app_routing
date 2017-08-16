@@ -1,0 +1,52 @@
+---
+# Use spaces and 2-space indentation. Tab indentation will break this file.
+# Also the indentation structure here is #very important#. This will also break
+# if things aren't indented with the same pattern. Finally, it's a good idea to
+# install a YAML linter to help catch duplicate keys. (Routes are keys in this
+# case.)
+#
+# The preferred style for routes (i.e., /about/) is lowercase, hyphenated,
+# unabbreviated words.
+#
+# For more information see:
+# https://support.google.com/webmasters/answer/76329?hl=en
+#
+# Good:
+#
+# /this/is/a/registration/page/
+# /registration-page/
+#
+# Not so good:
+#
+# /reg-pg/
+# /RegistrationPage/
+#
+# Try to organize your templates in a way that matches the route. Main section
+# templates should be named index.html
+#
+# Examples:
+#
+# route: /about/
+# template: /about/index.html
+#
+# route: /really/long/nested/route/
+# template: /really/long/nested/route/index.html
+#
+# route: /really/long/nested/route/sub-section/
+# template: /really/long/nested/route/sub-section.html
+#
+# Be judicious. The goal is to make templates easy to find.
+#
+####################################
+## This system is case-sensitive! ##
+####################################
+/olpd-new/:
+  template: olpd/index.html
+  publish: false
+  template_data:
+    - section: home
+/olpd-new/about/:
+  template: olpd/about.html
+  publish: false
+  template_data:
+    - section: about
