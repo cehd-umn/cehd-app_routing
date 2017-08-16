@@ -1,4 +1,6 @@
 ---
 
-dept_name: "Organizational Leadership, Policy, and Development"
+asset_base: "/olpd-new"
 base_url: "/olpd-new/"
+debug: true
+dept_name: "Organizational Leadership, Policy, and Development"
