@@ -1070,6 +1070,11 @@
   template: cehd/events/homecoming.html
   template_data:
     - section: events
+/events/thanksgiving/:
+  publish: true
+  template: cehd/events/thanksgiving.html
+  template_data:
+    - section: events
 /events/saturday-scholars/:
   publish: true
   template: cehd/events/saturday-scholars.html
@@ -1598,6 +1603,11 @@
 /teaching/co-teaching/pairs/triad/:
   publish: true
   template: cehd/teaching/co-teaching/pairs/triad.html
+  template_data:
+    - section: teaching
+/teaching/partner/network-day/:
+  publish: false
+  template: cehd/teaching/partner/network-day.html
   template_data:
     - section: teaching
 /teaching/workshop/new-teacher/:

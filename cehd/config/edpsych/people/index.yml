@@ -42,9 +42,9 @@
     param: tg
     value: 321
   titles:
-    - x500: rcodding
+    - x500: asulliva
       section: School psychology
-      title: acting program coordinator
+      title: program coordinator
 - section: Special education
   query:
     param: tg
