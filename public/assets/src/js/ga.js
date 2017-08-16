@@ -1,21 +1,21 @@
 "use strict";
-var $ = require("jquery");
+import $ from "jquery";
 
-var GA = function() {
-    this.getElementsWithGAData = function($target) {
+class GA {
+    getElementsWithGAData($target) {
         var $tracking_elements = $target.find("[data-ga-command]");
         return $tracking_elements;
-    };
+    }
 
-    this.trackingElementClickHandler = function(event) {
+    trackingElementClickHandler(event) {
         event.preventDefault();
-        var $element = $(this);
-        var command = $element.data("ga-command");
-        var hit_type = $element.data("ga-hit-type");
-        var category = $element.data("ga-category");
-        var action = $element.data("ga-action");
-        var label = $element.data("ga-label");
-        var href = window.Helpers.getHref($element);
+        const $element = $(this);
+        const command = $element.data("ga-command");
+        const hit_type = $element.data("ga-hit-type");
+        const category = $element.data("ga-category");
+        const action = $element.data("ga-action");
+        const label = $element.data("ga-label");
+        const href = window.Helpers.getHref($element);
 
         window.ga(command, hit_type, category, action, label);
 
@@ -23,7 +23,7 @@ var GA = function() {
                 location.href = href;
             },
         400);
-    };
-};
+    }
+}
 
 window.GA = GA;

@@ -1,13 +1,15 @@
-var browserify = require("browserify");
-var buffer = require("vinyl-buffer");
-var gulp = require("gulp");
-var gutil = require("gulp-util");
-var rename = require("gulp-rename");
-var runSequence = require("run-sequence");
-var sass = require("gulp-sass");
-var source = require("vinyl-source-stream");
-var sourcemaps = require("gulp-sourcemaps");
-var uglify = require("gulp-uglify");
+const browserify = require("browserify");
+const babel = require("gulp-babel");
+const buffer = require("vinyl-buffer");
+// const concat = require("gulp-concat");
+const gulp = require("gulp");
+const gutil = require("gulp-util");
+const rename = require("gulp-rename");
+const runSequence = require("run-sequence");
+const sass = require("gulp-sass");
+const source = require("vinyl-source-stream");
+const sourcemaps = require("gulp-sourcemaps");
+const uglify = require("gulp-uglify");
 
 // CEHD
 gulp.task("default", function() {
@@ -53,29 +55,32 @@ gulp.task("cehd-svg-sass-task", function() {
 });
 
 gulp.task("cehd-javascript", function () {
-  // set up the browserify instance on a task basis
-  var b = browserify({
-    entries: [
-        "./public/assets/src/js/cehd.js",
-        "./public/assets/src/js/ga.js",
-        "./public/assets/src/js/helpers.js",
-        "./public/assets/src/js/http_client.js",
-        "./public/assets/src/js/renderer.js",
-        "./public/assets/src/js/search_client.js",
-    ],
-    debug: true
-  });
+    /**
+     * Babelify es6 first then bundle it?
+     */
+    const entries = {
+        entries: [
+            "./public/assets/src/js/cehd.js",
+            "./public/assets/src/js/ga.js",
+            "./public/assets/src/js/helpers.js",
+            "./public/assets/src/js/http_client.js",
+            "./public/assets/src/js/renderer.js",
+            "./public/assets/src/js/search_client.js",
+        ]
+    };
+    const bundler = browserify(entries);
 
-  return b.bundle()
-    .pipe(source("./public/assets/src/js/cehd.js"))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-        // Add transformation tasks to the pipeline here.
-        .pipe(uglify())
-        .on("error", gutil.log)
-    .pipe(rename("js/cehd.min.js"))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("./public/assets/dist"));
+    return bundler.bundle()
+        .pipe(source("cehd.min.js"))
+        .pipe(buffer())
+        .pipe(babel({
+            presets: ["env"]
+        }))
+        .pipe(uglify().on("error", function(err) {
+            gutil.log(gutil.colors.red("[Error]"), err.toString());
+            this.emit("end");
+        }))
+        .pipe(gulp.dest("./public/assets/dist/js/"));
 });
 
 // CEHD watch task
