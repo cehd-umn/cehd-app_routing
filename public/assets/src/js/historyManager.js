@@ -40,4 +40,4 @@ class HistoryManager {
     }
 }
 
-module.exports.historyManager = HistoryManager;
+module.exports = HistoryManager;

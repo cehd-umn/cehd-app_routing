@@ -61,8 +61,8 @@
 <script>
     $(function() {
         "use strict";
-        // var $select_button = $(".multi-select");
-        var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
+        var app = new App();
+        var filterManager = new app.filterManager(".card-container", ".card-select", "#full-text-search-input");
         var $s = $("#full-text-search-input");
 
         // reads query params and filters on them

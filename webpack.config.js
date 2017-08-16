@@ -26,11 +26,11 @@ module.exports = {
     ]
  };
 
- module.rules = [{
-    test: require.resolve("jquery"),
-    use: [{
-            loader: "expose-loader",
-            options: "$"
-        },
-    ]
-}];
+// module.rules = [{
+//     test: require.resolve("jquery"),
+//     use: [{
+//             loader: "expose-loader",
+//             options: "$"
+//         },
+//     ]
+// }];

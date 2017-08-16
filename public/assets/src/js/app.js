@@ -60,3 +60,4 @@ class App {
 }
 
 window.App = App;
+window.$ = $;

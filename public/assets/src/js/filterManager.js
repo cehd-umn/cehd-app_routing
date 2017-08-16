@@ -2,16 +2,12 @@ import elasticlunr from "elasticlunr";
 import filterUIManager from "./filterUIManager.js";
 import historyManager from "./historyManager.js";
 import queryString from "query-string";
-
-// const elasticlunr = require("elasticlunr");
-// const historyManager = require("./historyManager.js");
-// const queryString = require("query-string");
-// const filterUIManager = require("./filterUIManager.js");
+import $ from "jquery";
 
 class FilterManager {
 
     constructor(cardContainerSelector, filterInputSelector, searchInputSelector) {
-        const self = this;
+        let self = this;
         this.filterInputSelector = filterInputSelector;
         this.clearFiltersInputSelector = "#clear-filters";
         this.historyManager = new historyManager();
@@ -116,13 +112,14 @@ class FilterManager {
     filterCards(filter_classes) {
 
         const filters = filter_classes.split(".").slice(1);
+        const self = this;
 
         $(".hidden").removeClass("hidden");
         $.each(filters, function(k, v) {
             if (v === "*" || v === "") {
                 $(".hidden").removeClass("hidden");
             } else {
-                const $elements = self.$cardsContainer.find(":not(." + v + ")");
+                let $elements = self.$cardsContainer.find(":not(." + v + ")");
 
                 $elements.each(function() {
                     $(this).addClass("hidden");
@@ -154,7 +151,7 @@ class FilterManager {
         return $(selector + ":checked");
     }
 
-    getQueryDatafunction() {
+    getQueryData() {
         const search = window.location.search;
         let query_data = queryString.parse(search);
 
