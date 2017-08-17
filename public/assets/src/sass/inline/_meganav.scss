@@ -15,9 +15,6 @@ nav {
     font-size: 15px;
     max-height: 0;
     overflow: hidden;
-    transition-duration: .5s;
-    transition-property: max-height;
-    transition-timing-function: ease-out;
 
     .dropdown-header-repeated {
         font-size: 17px;
@@ -177,7 +174,6 @@ nav {
         padding: 0;
         position: absolute;
         top: 23px;
-        transition: max-height .3s;
         width: 1310px;
 
         ul {

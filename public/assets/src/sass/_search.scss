@@ -22,8 +22,13 @@
 
 .search-result-set-link {
     &.active {
-        background: $nav-hover-border-top-color;
+        border-bottom: 3px solid $nav-hover-border-top-color; // @todo rename this var
         padding: 3px;
+    }
+
+    &:hover {
+        border-bottom: 3px solid $nav-hover-border-top-color;
+        text-decoration: none;
     }
 }
 
