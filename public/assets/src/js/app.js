@@ -1,6 +1,5 @@
 require("babel-polyfill");
 const $ = require("jquery");
-const filterManager = require("./filterManager.js");
 const GA = require("./ga.js");
 const helpers = require("./helpers.js");
 const renderer =require("./renderer.js");
@@ -10,8 +9,6 @@ const search_client = require("./search_client.js");
 class App {
     constructor() {
         const $tracking_elements = $("[data-ga-command]");
-
-        this.filterManager = filterManager;
 
         this.helpers = helpers;
 
@@ -64,4 +61,3 @@ class App {
 }
 
 window.App = App;
-// window.$ = $;

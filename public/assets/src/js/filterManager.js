@@ -70,6 +70,7 @@ class FilterManager {
                 const category = $(this).data("ga-category");
                 const action = "filter";
                 const label = category + "-filter";
+                //XXX this may not be working
                 window.ga(command, hit_type, category, action, label);
             });
 
@@ -189,4 +190,4 @@ class FilterManager {
     }
 }
 
-module.exports = FilterManager;
+window.FilterManager = FilterManager;
