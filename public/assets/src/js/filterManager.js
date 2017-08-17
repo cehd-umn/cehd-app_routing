@@ -1,8 +1,8 @@
-import elasticlunr from "elasticlunr";
-import filterUIManager from "./filterUIManager.js";
-import historyManager from "./historyManager.js";
-import queryString from "query-string";
-import $ from "jquery";
+const elasticlunr = require("elasticlunr");
+const filterUIManager = require("./filterUIManager.js");
+const historyManager = require("./historyManager.js");
+const queryString = require("query-string");
+const $ = require("jquery");
 
 class FilterManager {
 

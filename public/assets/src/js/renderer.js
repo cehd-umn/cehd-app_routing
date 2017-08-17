@@ -1,7 +1,5 @@
-"use strict";
-
-import nunjucks from "nunjucks";
-import $ from "jquery";
+const nunjucks = require("nunjucks");
+const $ = require("jquery");
 
 class Renderer {
 

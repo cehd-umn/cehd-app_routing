@@ -1,41 +1,16 @@
-var moment = require("moment");
-var $ = require("jquery");
-"use strict";
+class Helpers {
+    constructor() {
+        return this;
+    }
 
-var Helpers = {
-    parseEvents: function(events) {
-        var event_data = {};
-
-        $.each(events, function() {
-            "use strict";
-            var event_date = moment(this.date);
-            var month = event_date.format("MMMM");
-            var day = event_date.format("D");
-            var event_obj = {};
-
-            event_obj.month = month;
-            event_obj.day = day;
-            event_obj.link = this.url;
-            event_obj.location = this.location;
-            event_obj.title = this.title;
-
-            if (typeof event_data[month] === "undefined") {
-                event_data[month] = [];
-            }
-
-            event_data[month].push(event_obj);
-        });
-        return event_data;
-    },
-
-    feedPathToLinkPath: function(feed_path) {
+    feedPathToLinkPath(feed_path) {
         return feed_path.replace("feed/", "");
-    },
+    }
 
-    getHref: function($element) {
+    getHref($element) {
         href = (typeof($element.attr("href")) !== "undefined") ? $element.attr("href") : "";
         return href;
     }
-};
+}
 
-window.Helpers = Helpers;
+module.exports = Helpers;

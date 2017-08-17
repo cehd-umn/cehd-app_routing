@@ -1,36 +1,41 @@
 const path = require("path");
-const webpack = require("webpack");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-     entry: "./public/assets/src/js/app.js",
-     output: {
-         path: path.resolve(__dirname, "public/assets/dist/js"),
-         filename: "cehd.min.js"
-     },
-     module: {
-         loaders: [{
-             test: /\.js$/,
-             exclude: /node_modules/,
-             loader: "babel-loader"
-         }]
-     },
-     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
+    entry: "./public/assets/src/js/app.js",
+    output: {
+        path: path.resolve(__dirname, "public/assets/dist/js"),
+        filename: "cehd.min.js"
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                        loader: "babel-loader",
+                        options: {
+                        presets: ["env"]
+                        }
+                    }
             },
-            output: {
-                comments: false,
-            },
-        }),
-    ]
- };
-
-// module.rules = [{
-//     test: require.resolve("jquery"),
-//     use: [{
-//             loader: "expose-loader",
-//             options: "$"
-//         },
-//     ]
-// }];
+            {
+                test: require.resolve("jquery"),
+                use: [{
+                loader: "expose-loader",
+                options: "$"
+                }],
+            }
+        ],
+    },
+    plugins: [
+    new UglifyJSPlugin({
+        compress: {
+            warnings: false,
+        },
+        output: {
+            comments: false,
+        },
+        sourceMap: true
+    })]
+};

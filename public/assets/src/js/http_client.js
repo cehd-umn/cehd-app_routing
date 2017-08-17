@@ -1,5 +1,4 @@
-"use strict";
-import $ from "jquery";
+const $ = require("jquery");
 
 class HTTPClient {
 

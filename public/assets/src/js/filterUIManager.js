@@ -1,3 +1,5 @@
+const $ = require("jquery");
+
 class FilterUIManager {
 
     setChecked(element_selector, checked) {

@@ -1,13 +1,11 @@
-"use strict";
-
-import "babel-polyfill";
-import $ from "jquery";
-import filterManager from "./filterManager.js";
-import GA from "./ga.js";
-import helpers from "./helpers.js";
-import renderer from "./renderer.js";
-import http_client from "./http_client.js";
-import search_client from "./search_client.js";
+require("babel-polyfill");
+const $ = require("jquery");
+const filterManager = require("./filterManager.js");
+const GA = require("./ga.js");
+const helpers = require("./helpers.js");
+const renderer =require("./renderer.js");
+const http_client = require("./http_client.js");
+const search_client = require("./search_client.js");
 
 class App {
     constructor() {
@@ -25,20 +23,23 @@ class App {
 
         this.GA = GA;
 
-        $(".nav-toggle").on("click touch", function() {
+        $(".nav-toggle").off().on("click touch", function(e) {
+            e.preventDefault();
             const $nav = $("nav");
             $nav.toggleClass("open");
         });
 
         $tracking_elements.on("click", function(event) {
             event.preventDefault();
+
             const $element = $(this);
-            const  command = $element.data("ga-command");
-            const  hit_type = $element.data("ga-hit-type");
-            const  category = $element.data("ga-category");
-            const  action = $element.data("ga-action");
-            const  label = $element.data("ga-label");
-            const  href = window.Helpers.getHref($element);
+            const command = $element.data("ga-command");
+            const hit_type = $element.data("ga-hit-type");
+            const category = $element.data("ga-category");
+            const action = $element.data("ga-action");
+            const label = $element.data("ga-label");
+            const helpers = new helpers();
+            const href = helpers.getHref($element);
 
             window.ga(command, hit_type, category, action, label, {
                 hitCallback: function () {
@@ -63,4 +64,4 @@ class App {
 }
 
 window.App = App;
-window.$ = $;
+// window.$ = $;
