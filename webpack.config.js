@@ -44,7 +44,7 @@ module.exports = {
             output: {
                 comments: false,
             },
-            sourceMap: true
+            sourceMap: false
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "common"
