@@ -50,6 +50,11 @@
   publish: false
   template_data:
     - section: about
+/olpd-new/test/:
+  template: olpd/test.html
+  publish: false
+  template_data:
+    - section: test
 /olpd-new/courses/:
   template: olpd/courses/index.html
   publish: false
@@ -57,6 +62,16 @@
     - section: courses
 /olpd-new/graduate-programs/:
   template: olpd/graduate-programs/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/olpd-new/graduate-programs/epl/:
+  template: olpd/graduate-programs/epl/test2.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/olpd-new/graduate-programs/epl/phd/:
+  template: olpd/graduate-programs/epl/phd.html
   publish: false
   template_data:
     - section: graduate-programs
