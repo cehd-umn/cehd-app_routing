@@ -5,7 +5,7 @@
             <dt class="date">
                 {{ event.dayOfWeek }},
                 {{ event.fullMonth }}
-                {{ event.day }}
+                {{ event.day }}, {{ event.year }}
                 {% if event.startTime and event.endTime %}
                     | {{ event.startTime }} - {{ event.endTime }}
                 {% endif %}
