@@ -175,8 +175,11 @@ class BaseApp extends \CEHD\App\BaseClass
         // Finally, we get to the actual routes
         foreach($this->_routes as $route => $route_info)
         {
-            $this->router->respond(
-                'GET', $route, [$this, 'renderStaticTemplate']);
+            if ($this->_routeIsLive($route_info))
+            {
+                $this->router->respond(
+                    'GET', $route, [$this, 'renderStaticTemplate']);
+            }
         }
     }
 
@@ -370,13 +373,10 @@ class BaseApp extends \CEHD\App\BaseClass
     public function renderStaticTemplate($request, $response, $service, $app)
     {
         $route_info = $this->_routes->get($request->pathname());
-        if ($this->_routeIsLive($route_info))
-        {
-            echo $this->template->render(
-                $route_info["template"],
-                $route_info["template_data"]
-            );
-        };
+        echo $this->template->render(
+            $route_info["template"],
+            $route_info["template_data"]
+        );
     }
 
     /**
