@@ -1,10 +1,26 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Involvement and Opportunities" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
       <h1>Involvement &amp; opportunities</h1>
+  </div>
+      <div class="row emphasis">
+        <div class="span-9 feature">
+          <div class="third">
+                        <img class="circular" src="/assets/images/headshots/student-features/Sq-2016-Jennifer-S.jpg" alt="Jennifer" />
+          </div>
+          <div class="twothird">
+                <blockquote class="quote-wrap">My advice to other students is to get involved. It makes a big university feel small. Making those connections inside and outside of the classroom is great. There are so many different clubs and organizations, so you’ll definitely be able to find your fit.</blockquote>
+                <p align="right" class="speaker">Jennifer S., '18 <br/>
+               Business and Marketing Education
+              </p>
+          </div>
+        </div>
+      </div>
+        <div class="container">
     <div class="row">
         <div class="span-4">
             <h2>Leadership opportunities</h2>
@@ -34,7 +50,14 @@
         </div>
     </div>
   </div> <!-- ./container -->
-  <div class="row emphasis bg-cehd-multi">
+  <div class="row emphasis cool margin-top-2">
+      <div class="container">
+          <div class="half feature">
+              {% set lines = [ "Up to $1500 in scholarships are available", "to undergraduate students interested", "in doing research." ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+          </div>
+      </div>
+  </div>
+  <!-- <div class="row emphasis bg-cehd-multi">
     <div class="span-9 feature">
       <div class="third">
                     <img class="circular" src="/assets/images/headshots/student-features/Sq-2016-Jennifer-S.jpg" alt="Jennifer" />
@@ -46,6 +69,6 @@
           </p>
       </div>
     </div>
-  </div>
+  </div> -->
 </div> <!-- ./row -->
 {% endblock %}

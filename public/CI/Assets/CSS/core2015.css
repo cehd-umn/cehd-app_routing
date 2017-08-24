@@ -47,11 +47,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*XXXXXXXXXXXXXXXXXXXXXX    End CSS Reset, Courtsey "A List Apart"   XXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
-body {font: 90% Verdana, Arial, Helvetica, sans-serif;}
+body {font: 90% 'Lato', Verdana, Geneva, sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: 'Montserrat', Verdana, Geneva, sans-serif;}
 
 div#container {
   width: 960px;
- 
   position: relative;
   margin: 0 auto;
   /* the auto margins (in conjunction with a width) center the page */
@@ -76,12 +76,24 @@ width increase
 */
 div#maincontent {float: left;clear: none;width: 100%;position: relative;}
 
-div.half, div.third, div.twothird, div.whole {float: left;margin: 0;padding: 0;}
+div.half, div.third, div.twothird, div.whole, div.quarter, div.threequarter, div.twenty, div.sixty {float: left;margin: 0;padding: 0;}
 
 div.half {width: 50%;}
 div.third {width: 33%;}
 div.twothird {width: 66%;}
 div.whole {width: 100%;}
+div.quarter {width: 25%;}
+div.threequarter {width: 75%;}
+div.twenty {width: 20%;}
+div.sixty {width: 60%;}
+
+div.whole80 {
+  margin: 0 50px 0 50px;
+  padding: 5px 0 5px 0;
+}
+
+
+/* This handles the navigation transition speed ------ */
 
 .active-extra nav, .active-extra div#maincontent, .active-extra div#extracontent, .active-nav nav, .active-nav div#maincontent, .active-nav div#extracontent {
   -webkit-transition: .2s all ease;
@@ -144,8 +156,8 @@ dl {margin: 10px 25px;padding: 0;}
 dt {margin: 10px 0 10px 0;padding: 0;font-weight: bold;}
 dd {margin: 10px 0 10px 25px;padding: 0;}
 
-dl.DL-CardStack dt {margin: 10px 0 0 0;padding: 1%;background-color: #09f;}
-dl.DL-CardStack dd {margin: 0 0 10px 0;padding: 1%;border: thin #09f solid;}
+dl.DL-CardStack dt {margin: 10px 0 0 0;padding: 1%;background-color: #3a87ad;}
+dl.DL-CardStack dd {margin: 0 0 10px 0;padding: 1%;border: thin #3a87ad solid;}
 div#maincontent dl.DL-CardStack dt a {color: #fff;}
 
 dl.DL-Table dt {margin: 0;padding: 1%;width: 45%;float: left;}
@@ -187,8 +199,9 @@ th {
   vertical-align: top;
   text-align: left;
   border: 1px solid #e2e2e2;
-  background-color: #09f;
+  background-color: #3a87ad;
   font-weight: bold;
+  color: #fff;
 }
 
 td {
@@ -223,7 +236,7 @@ fieldset legend {
   font-size: 1.4em;
   width: 90%;
   font-weight: bold;
-  color: #09f;
+  color: #3a87ad;
   font-family: Verdana, Geneva, sans-serif;
 }
 

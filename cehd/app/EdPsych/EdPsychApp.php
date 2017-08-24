@@ -13,23 +13,30 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     private $_search_client;
 
-    private $_searchApplianceSites;
+    protected $_searchApplianceSites;
 
     function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
+        // @todo put this into the config file
         $this->_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "Educational Psychology",
+                    "site" => "tc_education",
                     "url" => "www.cehd.umn.edu/edpsych/",
                 ],
                 "secondary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "tertiary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -40,24 +47,20 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
 
         $this->template->addGlobal("cehd_edpsych_nav_open", $this->nav_open);
+
+        $this->router->onHttpError([$this, 'errorPageHandler']);
+    }
+
+    public function errorPageHandler($code=404, $router)
+    {
+        $html = $this->_renderTemplate('edpsych/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        // Lazily load the search client so it"s not loaded on unrelated
-        // requests
-        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
-        $query_data = $request->params();
-        $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary", "tertiary"],
-        ];
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "query" => $query_data["q"],
-        ];
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate("edpsych/search.html", $template_data);
     }
 

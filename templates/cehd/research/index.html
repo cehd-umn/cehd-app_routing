@@ -1,4 +1,5 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/svg.html" as svg -%}
 {% set page_title = "Research" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block hero_image %}
@@ -10,7 +11,7 @@
                 in the School of Kinesiology's Human Performance Research Laboratory</p>
         </div>
         <div class="third">
-            <p><a href="/research/centers/" class="to-upper button clear">Our centers and labs</a></p>
+            <p><a href="/research/centers/" class="to-upper button clear" {{ analytics.add_tracking("send", "event", "research", "click", "research splash-our centers and labs") }}>Our centers and labs</a></p>
         </div>
     </div>
 </div>
@@ -33,15 +34,13 @@
       <h2>High impact research that improves lives</h2>
       <dl>
       <dt><a href="/topics/?filters=educational-equity-and-the-achievement-gap">Educational equity and the achievement gap</a></dt>
-      <dd>Dramatic demographic changes are increasing the number of children who are
-less prepared for the future. Minnesota’s future depends on educational success for all its children so that
-they can meet the challenges of the 21st century.</dd>
+      <dd>Dramatic demographic changes are increasing the number of children who are less prepared for the future. CEHD research contributes to educational success strategies for all children so that they can meet the challenges of the 21st century.</dd>
       <dt><a href="/topics/?filters=autism-and-developmental-disabilities">Autism and developmental disabilities</a></dt>
-      <dd>Leading research in early diagnosis for autism spectrum disorders (ASD) to increase intervention impact, leading to improved outcomes and lowered costs.</dd>
+      <dd>CEHD research focuses on the lives of people with intellectual and developmental disabilities and the community services and supports that help them thrive. Our faculty and staff are leaders in the study of early diagnosis and intervention for autism spectrum disorders.</dd>
       <dt><a href="/topics/?filters=children-s-mental-health-and-welfare">Children's mental health and welfare</a></dt>
-      <dd>About 110,000 children and adolescents in Minnesota need mental health treatment and numbers are increasing annually. We translate new discoveries and transform treatment methods with evidence-based interventions.</dd>
+      <dd>About 110,000 children and adolescents in Minnesota need mental health treatment each year, and many more interact with the child protection system in some way. CEHD research translates basic science discoveries into transformative treatment methods and evidence-based interventions.</dd>
       <dt><a href="/topics/?filters=living-better-living-longer">Living better, living longer</a></dt>
-      <dd>Health and wellness physically, emotionally, and in relationships, with a particular focus on older adults.</dd>
+      <dd>CEHD research studies individuals’ health and wellness physically, emotionally, and in relationships, with a particular focus on older adults.</dd>
       </dl>
 
 <h3><small><a href="/topics/">Explore all of our areas of expertise and research</a></small></h3>
@@ -111,7 +110,15 @@ they can meet the challenges of the 21st century.</dd>
           <p><a href="http://www.cehd.umn.edu/carei/research-assessment.html">See all of CAREI's research and assessment services.</a></p>
         </div>
       </div>
-
+        </div> <!-- ./container -->
+      <div class="row emphasis cool margin-top-2">
+          <div class="container">
+              <div class="half feature">
+                  {% set lines = [ "CEHD has 20+ research centers", "focused on topics ranging from", "children’s mental health", "to women in sports." ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+              </div>
+          </div>
+      </div>
+      <div class="container">
       <div class="row">
         <h2>Leadership and staff</h2>
         <div class="span-2">

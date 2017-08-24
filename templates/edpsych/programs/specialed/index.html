@@ -11,8 +11,8 @@
         <h2 class="h1">{{ page_title }}</h2>
             <section>
               <div class="half">
-                  <h3 class="no-margin-top">Making a difference with data</h3>
                   <img src="{{ config.asset_base }}/dist/images/Research/robbinsdale-chalk.jpg" alt="kids play outside New Hope Learning Center">
+                  <h4>Making a difference with data</h4>
                   <p>Assistant professor LeAnne Johnson and her students are simplifying the way early educators collect and analyze data to help kids with and without emotional and behavioral challenges succeed in school. <a href="http://www.cehd.umn.edu/edpsych/research/making-a-difference-with-data/" {{ analytics.add_tracking("send", "event", "feature", "click", "spedmainfeature") }}>Read more.</a></p>
               </div>
                 <div class="half">
@@ -23,8 +23,11 @@
                     in meaningful research&mdash;and to bridging research and
                     practice&mdash;to improve the lives of children and
                     families in diverse contexts, and to have a lasting impact
-                    on teacher education, leadership, and policy. Watch videos
-                    on our research in special education.</p>
+                    on teacher education, leadership, and policy. <a href="{{ config.base_url }}/programs/specialed/videos/">Watch videos
+                    on our research in special education.</a></p>
+                    <div class="margin-top-2">
+                    </div>
+                    <p class="rankings">Rated #8 in the nation among special education graduate programs by <em>U.S. News &amp; World Report</em> in 2017</p>
                 </div>
               </section>
               <section>
@@ -37,13 +40,13 @@
               </div>
               <div class="half">
                         {{ loader.loader(
-                            "Events & deadlines",
+                            "Dates & deadlines",
                             "h3",
                             "events-container"
                         ) }}
               </div>
                 </section>
-                <section>
+                <!-- <section>
                   <div class="half">
                       <p class="rankings"><em>U.S. News &amp; World Report</em> recently rated our program &#35;8 in the nation among special education graduate programs.</p>
                   </div>
@@ -51,29 +54,22 @@
                     <p class="rankings">We were recently ranked the &#35;6 "Most Innovative" master's
                     degree by <em>Masters in Special Education Program Guide</em>.</p>
                 </div>
-              </section>
+              </section> -->
     </div>
 </div>
-<div class="row emphasis subtle">
-    <div class="container">
-        <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedphdmain") }} class="button center">How to apply (M.A.&#47;Ph.D.)</a></p>
-        </div>
-        <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedmedmain") }} class="button center">How to apply (M.Ed.)</a></p>
-        </div>
-        <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedbsmain") }}class="button center">Apply &#47; transfer (B.S.)</a>
-        </div>
-    </div>
-</div>
+<section>
+  <div class="twothird feature">
+    <h3 class="text-center">Like us on Facebook</h3>
+    <p class="text-center">Get a feel for what it's like to be an educational psychology student at the U of M. Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
+  </div>
+</section>
 <div class="row">
     <div class="container">
     <section>
       <h3 class="text-center">Programs &amp; degrees</h3>
             <div class="third">
                 <h5>Graduate degrees</h5>
-                <h4 class="h6"><a href="{{ config.base_url }}/programs/specialed/phd/">Doctor of philosophy (Ph.D.)</a></h4>
+                <h4 class="h6"><a href="{{ config.base_url }}/programs/specialed/phd/">Doctor of Philosophy (Ph.D.)</a></h4>
                 <p>Conduct research in special education and train other researchers and special educators.</p>
                 <h4 class="h6"><a href="{{ config.base_url }}/programs/specialed/masters/">Master's of Arts (M.A.)</a></h4>
                 <p>Conduct research and work toward your Ph.D.</p>
@@ -85,31 +81,31 @@
             </div>
             <div class="third">
                 <h5>Teaching licensures</h5>
-                <p>Our <a href="{{ config.base_url }}/programs/specialed/abs-licensure/">Academic Behavior Strategist (ABS) license</a> qualifies you
+                <p>Our <strong><a href="{{ config.base_url }}/programs/specialed/abs-licensure/">Academic Behavior Strategist (ABS) license</a></strong> qualifies you
                 to work with students with mild to moderate disabilities. Once
                 enrolled in the ABS licensure program, you will choose an area
                 of moderate-severe disabilities to specialize in to add to your
                 ABS, including:</p>
                 <ul>
-                    <li>Autism Spectrum Disorder</li>
-                    <li>Developmental Disabilities</li>
-                    <li>Learning Disabilities</li>
+                    <li>Autism spectrum disorder</li>
+                    <li>Developmental disabilities</li>
+                    <li>Learning disabilities</li>
                 </ul>
-                <p>We also offer core licenses which do not require an ABS
+                <p>We also offer <strong>core licenses</strong> which do not require an ABS
                 license and allow for specialization in the following
                 areas:</p>
                 <ul>
-                    <li><a href="{{ config.base_url }}/programs/specialed/asd/">Autism Spectrum Disorder (ASD)</a></li>
+                    <li><a href="{{ config.base_url }}/programs/specialed/asd/">Autism spectrum disorder (ASD)</a></li>
                     <li><a href="{{ config.base_url }}/programs/specialed/dhh-licensure/">Deaf/Hard of Hearing (DHH)</a></li>
-                    <li><a href="{{ config.base_url }}/programs/specialed/dd-licensure/">Developmental Disabilities</a></li>
-                    <li><a href="{{ config.base_url }}/programs/specialed/ebd-residency-based/">Emotional &amp; Behavioral Disorders (EBD) - Residency Based</a></li>
-                    <li><a href="{{ config.base_url }}/programs/specialed/esce-licensure/">Early Childhood Special Education (ECSE)</a></li>
+                    <li><a href="{{ config.base_url }}/programs/specialed/dd-licensure/">Developmental disabilities</a></li>
+                    <li><a href="{{ config.base_url }}/programs/specialed/ebd-residency-based/">Emotional &amp; behavioral disorders (EBD) - residency based</a></li>
+                    <li><a href="{{ config.base_url }}/programs/specialed/esce-licensure/">Early childhood special education (ECSE)</a></li>
                     <li><a href="{{ config.base_url }}/programs/specialed/ld-licensure/">Learning disabilities</a></li>
                 </ul>
             </div>
             <div class="third">
                 <h5>Professional certificate</h5>
-                <h6><a href="{{ config.base_url }}/programs/specialed/certificate/autism/">Autism Spectrum Disorder (ASD) certificate</a></h6>
+                <h6><a href="{{ config.base_url }}/programs/specialed/certificate/autism/">Autism spectrum disorder (ASD) certificate</a></h6>
                 <p>Assist children and youth with ASD and their families. This program
                 offers professional development opportunities for autism resource
                 specialists, public and private social service agency staff, personnel
@@ -117,9 +113,46 @@
                 psychology and education professionals.</p>
             </div>
         </section>
+        <section>
+          <div class="feature twothirds">
+          <h3 class="text-center">Tuition</h3>
+            <p>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for information on tuition.</p>
+          <h3 class="text-center">Funding</h3>
+            <h4>Fellowships &amp; awards</h4>
+              <p>Submit your application materials by Dec. 1, and you’ll automatically be considered for Graduate School fellowships and departmental awards based on scholastic achievement. Notification of awards will be sent in March.</p>
+            <h4>National Center for Leadership in Intensive Intervention (NCLii)</h4>
+              <p><a href="http://nclii.org/">The National Center for Leadership in Intensive Intervention (NCLii)</a>, a new consortium funded by the Office of Special Education Programs (OSEP), will prepare special education leaders to become experts in research on intensive intervention for students with disabilities who have persistent and severe academic (e.g., reading and math) and behavioral difficulties.</p>
+              <p><strong>Contact&#58; </strong> <a href="mailto&#58; symon007@umn.edu">Frank Symons</a>, associate dean for research and policy, College of Education and Human Development</p>
+            <h4>Financial aid</h4>
+              <p><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
+            <h4>Scholarships</h4>
+              <p><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
+            </div>
+          </section>
+          <section>
+            <div class="feature twothirds">
+              <h3 class="text-center">Diversity</h3>
+              <p>The Department of Educational Psychology is deeply committed to increasing the diversity of our undergraduate and graduate programs, of our teaching and learning, of our research and clinical practice, and of our outreach and service across fields of educational psychology. Visit our <a href="{{ config.base_url }}/about/diversity-inclusion/">diversity page</a> to learn more about our commitment to diversity and resources for supporting diversity and inclusion.</p>
+            </div>
+          </section>
     </div>
 </div>
-<div class="row emphasis margin-top-1">
+<div class="margin-top-2">
+</div>
+<div class="row emphasis subtle">
+    <div class="container">
+        <div class="third">
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedphdmain") }} class="button center">How to apply <br />(M.A.&#47;Ph.D.)</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedmedmain") }} class="button center">How to apply <br />(M.Ed.)</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedbsmain") }}class="button center">Apply &#47; transfer <br />(B.S.)</a>
+        </div>
+    </div>
+</div>
+<div class="row emphasis margin-top-4">
     <div class="container">
         <p class="pull-quote">&quot;After working in schools for five years, I
         realized that I wanted to contribute to research and training
@@ -129,7 +162,7 @@
 
         <div class="twothirds feature margin-2">
             <div class="third">
-                <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Kyle_Wagner_headshot.jpg" class="mobile-hide" alt="Kyle Wagner headshot">
+                <img src="{{ config.asset_base }}/dist/images/Programs/specialed/Kyle_Wagner_headshot.jpg" alt="Kyle Wagner headshot">
             </div>
             <div class="twothird">
                 <h4 class="no-margin-top">Kyle Wagner<small class="clear h5">Ph.D. student | <a href="mailto:wagn0524@umn.edu">wagn0524@umn.edu</a></small></h4>
@@ -154,7 +187,7 @@
         <p class="text-center">For general questions, contact <a href="mailto:sped-adm@umn.edu">sped-adm@umn.edu</a>.</p>
         <section>
             <div class="half">
-                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/CavenJ.jpg" class="mobile-hide" alt="Janet Caven headshot"></div>
+                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/CavenJ.jpg" alt="Janet Caven headshot"></div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jcaven/">Janet Caven</a> <small class="clear h6 light"><a href="mailto:jcaven@umn.edu">jcaven@umn.edu</a></small></h4>
                     <ul>
@@ -165,7 +198,7 @@
             </div>
             <div class="half">
                 <div class="span-3">
-                    <img src="http://apps.cehd.umn.edu/people/Headshot/EdwardsDave.jpg" class="mobile-hide" alt="Dave Edwards headshot">
+                    <img src="http://apps.cehd.umn.edu/people/Headshot/EdwardsDave.jpg" alt="Dave Edwards headshot">
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/edwar375/">Dave Edwards</a> <small class="clear h6 light"><a href="mailto:edwar375@umn.edu">edwar375@umn.edu</a></small></h4>
@@ -180,7 +213,7 @@
         <section class="margin-top-1">
             <div class="half">
                 <div class="span-3">
-                    <img src="https://apps.cehd.umn.edu/people/Headshot/FleuryVeronica-2014.jpg" class="mobile-hide" alt="Veronica Fleury headshot">
+                    <img src="https://apps.cehd.umn.edu/people/Headshot/FleuryVeronica-2014.jpg" alt="Veronica Fleury headshot">
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/vpfleury/">Veronica Fleury</a><small class="clear h6 light">Autism Spectrum Disorder licensure &amp; M.Ed. coordinator<br />
@@ -193,7 +226,7 @@
                 </div>
             </div>
             <div class="half">
-                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/GolosD_2016.jpg" class="mobile-hide" alt="Debbie Golos headshot"></div>
+                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/GolosD_2016.jpg" alt="Debbie Golos headshot"></div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/dgolos/">Debbie Golos</a>
                         <small class="clear h6 light">Deaf/Hard of Hearing licensure &amp; M.Ed. coordinator<br />
@@ -209,7 +242,7 @@
         <section class="margin-top-1">
             <div class="half">
               <div class="span-3">
-                <img src="https://apps.cehd.umn.edu/people/Headshot/JitendraA-2008.jpg" class="mobile-hide" alt="Asha Jitendra headshot">
+                <img src="https://apps.cehd.umn.edu/people/Headshot/JitendraA-2008.jpg" alt="Asha Jitendra headshot">
               </div>
               <div class="span-9">
                 <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jiten001/">Asha Jitendra</a><small class="clear h6 light">
@@ -223,7 +256,7 @@
             </div>
               <div class="half">
                   <div class="span-3">
-                    <img src="http://apps.cehd.umn.edu/people/Headshot/JohnsonLeAnne-2012.jpg" class="mobile-hide" alt="LeAnne Johnson headshot">
+                    <img src="http://apps.cehd.umn.edu/people/Headshot/JohnsonLeAnne-2012.jpg" alt="LeAnne Johnson headshot">
               </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/chaf0032/">LeAnne Johnson</a><small class="clear h6 light">Early childhood special education licensure &amp; M.Ed. coordinator<br />
@@ -240,7 +273,7 @@
           <section class="margin-top-1">
             <div class="half">
                 <div class="span-3">
-                  <img src="http://apps.cehd.umn.edu/people/Headshot/kunkel-amy.jpg" class="mobile-hide" alt="Amy Kunkel headshot">
+                  <img src="http://apps.cehd.umn.edu/people/Headshot/kunkel-amy.jpg" alt="Amy Kunkel headshot">
                 </div>
                 <div class="span-9">
                   <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/hear0045/">Amy Kunkel</a><small class="clear h6 light">Special education B.S. &amp; ABS licensure advisor<br />
@@ -252,9 +285,27 @@
                     </ul>
                 </div>
             </div>
+            <div class="half">
+               <div class="span-3">
+                 <img src="http://apps.cehd.umn.edu/people/Headshot/Marchant-WoodM-2016.jpg" alt="Michelle Marchant-Wood headshot">
+               </div>
+               <div class="span-9">
+                 <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mmarchan/">Michelle Marchant-Wood</a><small class="clear h6 light">ABS licensure &amp; M.Ed. coordinator, lecturer<br />
+                   <a href="mailto:mmarchan@umn.edu">mmarchan@umn.edu</a></small></h4>
+                   <ul>
+                     <li>Positive behavior support</li>
+                     <li>Social and emotional learning</li>
+                     <li>Multi-tiered systems of support</li>
+                     <li>Teacher pedagogy</li>
+                     <li>Applied behavior analysis</li>
+                   </ul>
+               </div>
+             </div>
+           </section>
+           <section class="margin-top-1">
              <div class="half">
                 <div class="span-3">
-                  <img src="http://apps.cehd.umn.edu/people/Headshot/McComas-2015.jpg" class="mobile-hide" alt="Jennifer McComas headshot">
+                  <img src="http://apps.cehd.umn.edu/people/Headshot/McComasJ_2017.jpg" alt="Jennifer McComas headshot">
                 </div>
                 <div class="span-9">
                   <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jmccomas/">Jennifer McComas</a><small class="clear h6 light">Associate department chair, emotional behavioral disorders licensure &amp; M.Ed. coordinator<br />
@@ -267,11 +318,9 @@
                     </ul>
                 </div>
               </div>
-            </section>
-            <section class="margin-top-t">
              <div class="half">
                   <div class="span-3">
-                    <img src="https://apps.cehd.umn.edu/people/Headshot/McConnellS-2009.jpg" class="mobile-hide" alt="Scott McConnell headshot">
+                    <img src="https://apps.cehd.umn.edu/people/Headshot/McConnellS-2009.jpg" alt="Scott McConnell headshot">
                   </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/smcconne/">Scott McConnell</a><small class="clear h6 light">
@@ -285,9 +334,11 @@
                     </ul>
                   </div>
               </div>
+            </section>
+            <section class="margin-top-1">
                <div class="half">
                   <div class="span-3">
-                    <img src="https://apps.cehd.umn.edu/people/Headshot/McMasterKristen-2014.jpg" class="mobile-hide" alt="Kristen McMaster headshot">
+                    <img src="https://apps.cehd.umn.edu/people/Headshot/McMasterKristen-2014.jpg" alt="Kristen McMaster headshot">
                   </div>
                   <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mcmas004/">Kristen McMaster</a><small class="clear h6 light">Program coordinator<br />
@@ -299,11 +350,9 @@
                       </ul>
                   </div>
                 </div>
-              </section>
-              <section class="margin-top-1">
                <div class="half">
                     <div class="span-3">
-                        <img src="http://apps.cehd.umn.edu/people/Headshot/O'neillCV-2017.jpg" class="mobile-hide" alt="Charissa O'Neill headshot">
+                        <img src="http://apps.cehd.umn.edu/people/Headshot/O'neillCV-2017.jpg" alt="Charissa O'Neill headshot">
                     </div>
                     <div class="span-9">
                       <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/coneill/">Charissa O'Neill</a><small class="clear h6 light">Field placement coordinator<br />
@@ -315,9 +364,11 @@
                       </ul>
                     </div>
                   </div>
+                </section>
+                <section class="margin-top-1">
                      <div class="half">
                         <div class="span-3">
-                          <img src="https://apps.cehd.umn.edu/People/Headshot/SeifertK-2005.jpg" class="mobile-hide" alt="Kathy Seifert headshot">
+                          <img src="https://apps.cehd.umn.edu/People/Headshot/SeifertK-2005.jpg" alt="Kathy Seifert headshot">
                         </div>
                         <div class="span-9">
                           <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/seif0074/">Kathy Seifert</a><small class="clear h6 light">Learning disabilities licensure &amp; M.Ed. coordinator<br />
@@ -328,11 +379,9 @@
                             </ul>
                         </div>
                       </div>
-                    </section>
-                    <section class="margin-top-1">
                       <div class="half">
                           <div class="span-3">
-                            <img src="https://apps.cehd.umn.edu/people/Headshot/SymonsF-2005.jpg" class="mobile-hide" alt="Frank Symons headshot">
+                            <img src="https://apps.cehd.umn.edu/people/Headshot/SymonsF-2005.jpg" alt="Frank Symons headshot">
                       </div>
                           <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/symon007/">Frank Symons</a><small class="clear h6 light">CEHD Associate Dean for Research and Policy<br />
@@ -345,9 +394,11 @@
                             </ul>
                           </div>
                       </div>
+                    </section>
+                    <section class="margin-top-1">
                        <div class="half">
                           <div class="span-3">
-                            <img src="https://apps.cehd.umn.edu/people/Headshot/VukovicR-2014.jpg" class="mobile-hide" alt="Rose Vukovic headshot">
+                            <img src="https://apps.cehd.umn.edu/people/Headshot/VukovicR-2014.jpg" alt="Rose Vukovic headshot">
                           </div>
                           <div class="span-9">
                             <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/rvukovic/">Rose Vukovic</a><small class="clear h6 light">Director of undergraduate studies<br />
@@ -361,11 +412,9 @@
                                 </ul>
                           </div>
                         </div>
-                      </section>
-                      <section class="margin-top-1">
                         <div class="half">
                            <div class="span-3">
-                             <img src="https://apps.cehd.umn.edu/people/Headshot/WolffJason-2014.jpg" class="mobile-hide" alt="Jason Wolff headshot">
+                             <img src="https://apps.cehd.umn.edu/people/Headshot/WolffJason-2014.jpg" alt="Jason Wolff headshot">
                            </div>
                            <div class="span-9">
                              <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jjwolff/">Jason Wolff</a><small class="clear h6 light">Autism Spectrum Disorder certificate coordinator<br />

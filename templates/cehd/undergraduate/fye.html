@@ -1,5 +1,7 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/svg.html" as svg -%}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "First Year Experience" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
@@ -7,143 +9,155 @@
     <div class="container">
         <h1>First Year Experience (FYE)</h1>
         <div class="twothird feature">
-            <p>The First Year Experience is a unique curriculum that all freshmen in CEHD are a part of, designed to build community and help you transition from high school into college. FYE’s rigorous and innovative curriculum includes two semesters: a
-                First- Year Inquiry course in the fall and Learning Communities in the spring. FYE courses help you reach your four-year graduation goals, support the completion of U of M’s liberal education requirements, and meet prerequisites for the
-                majors in CEHD. <br />
-            </p>
+            <p>The First Year Experience is a unique curriculum that all
+            freshmen in CEHD are a part of, designed to build community and
+            help you transition from high school into college. FYE’s rigorous
+            and innovative curriculum includes two semesters: a First- Year
+            Inquiry course in the fall and Learning Communities in the spring.
+            FYE courses help you reach your four-year graduation goals, support
+            the completion of U of M’s liberal education requirements, and meet
+            prerequisites for the majors in CEHD.</p>
+
             <h3>Highlights:</h3>
             <ul>
-                <li>Small class sizes </li>
+                <li>Small group discussions, encouraging you to get to know your peers and instructor</li>
                 <li>Curriculum focused on multiple perspectives and social justice </li>
                 <li>Collaborative projects with peers</li>
                 <li>Service learning and community engagement</li>
-                <li>Faculty who research the best practices in teaching and learning </li>
+                <li>Faculty who research the best practices in teaching and learning</li>
             </ul>
         </div>
     </div>
-    <div class="margin-top-2">
+    <div class="row emphasis cool margin-top-2">
+        <div class="container">
+            <div class="half feature">
+                {% set lines = [ "93% of our 2015", "first-year students returned in 2016", "for their sophomore year.", ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
+            </div>
+        </div>
     </div>
-<div class="row emphasis cool">
-    <div class="container">
+
+    <div class="row">
+        <article class="container">
+            <section class="third">
+                <h2>First Year Inquiry (FYI)</h2>
+                <p>In the fall semester, you’ll enroll in the First-Year Inquiry
+                course, a discussion-based class with a seminar atmosphere focused
+                on developing your reading, critical thinking, and academic writing
+                skills.</p>
+
+                <p>The FYI class addresses the shared inquiry: “How can one person
+                make a difference?” by discussing a common book. The fall 2017 book
+                is <em>Just Mercy</em> by Bryan Stevenson, and you will examine the
+                book through additional readings, writings, and a collaborative
+                iPad project. Stevenson will be <a
+                href="http://www.cehd.umn.edu/events/6933/">on campus in the
+                fall</a> for a public presentation and discussion. Find out more on
+                the <a href="/reads/">CEHD Reads website</a>.</p>
+
+                {{ loader.loader(
+                    "FYI Faculty",
+                    "h2",
+                    "fyi-news-container"
+                    ) }}
+
+                <div class="fyi-news-container"></div>
+            </section><!-- /.third -->
+            <section class="third">
+                <h2>Learning Communities (LC)</h2>
+                <p>In the spring semester, you’ll enroll in a learning
+                community, two separate classes that are linked by shared
+                themes. You will create connections in your academics and work
+                closely with fellow students and faculty. Learning communities
+                include introductory courses in your major to help you
+                transition into your second year.</p>
+
+                {{ loader.loader(
+                    "LC Faculty",
+                    "h3",
+                    "lc-news-container"
+                    ) }}
+
+                <div class="lc-news-container"></div>
+            </section><!-- /.third -->
+            <section class="third">
+                <h2>President's Emerging Scholars </h2>
+                <p>CEHD students in the <a
+                href="http://prezscholars.umn.edu/">President's Emerging
+                Scholars program</a>, including students selected for the <a
+                href="/trio/">TRIO Student Support Services program</a>,
+                participate in CEHD's first-year curriculum.</p>
+            </section><!-- ./third -->
+        </article><!-- /.container -->
+    </div><!-- /.row -->
+    <div class="row emphasis cool margin-top-2">
         <div class="half feature">
-            {% set lines = [ "93% of our 2015", "first-year students returned in 2016", "for their sophomore year.", ] %} {# call the macro #} {{ svg.did_you_know(_context, "Did you know facts", "Did you know", lines) }}
-        </div>
+            <div class="corner-borders-top"></div>
+                <div class="container">
+                    <h2 class="text-center">Next steps</h2>
+                        <p class="text-center"><a
+                        href="/undergraduate/apply/">How to apply</a> | <a
+                        href="/undergraduate/scholarships/">Costs and aid</a> |
+                        <a href="/undergraduate/contact/">Contact</a></p>
+                </div>
+            <div class="corner-borders-bottom"></div>
+        </div><!-- /.feature -->
     </div>
-</div>
+</div><!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    (function() {
+        "use strict";
+        var params = {
+            url: "/services/people-tool/",
+            data: {
+                tg: "310"
+            }
+        };
+        var client = new HTTPClient();
+        var $request = client.get(params);
 
-        <div class="row">
-    <div class="container">
+        $request.done(function() {
+            var people = client.getResults();
+            var renderer = new Renderer();
+            var template_params = {
+                'template_path': '/assets/dist/views/cehd/people/',
+                'template_name': 'list.html',
+                "$target_element": $("#fyi-news-container"),
+                'data': {
+                    people: people
+                }
+            };
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
 
-        <div class="third">
-            <h2>First Year Inquiry (FYI)</h2>
-            <p>In the fall semester, you’ll enroll in the First-Year Inquiry course, a discussion-based class with a seminar atmosphere focused on developing your reading, critical thinking, and academic writing skills.</p>
-            <p>The FYI class addresses the shared inquiry: “How can one person make a difference?” by discussing a common book. The fall 2017 book is <em>Just Mercy</em> by Bryan Stevenson, and you will examine the book through additional readings, writings,
-                and a collaborative iPad project. The book’s author also visits campus in the fall for a public presentation and discussion. Find out more on the <a href="/reads/">CEHD Reads website</a>. </p>
+    (function() {
+        "use strict";
+        var params = {
+            url: "/services/people-tool/",
+            data: {
+                tg: "311"
+            }
+        };
+        var client = new HTTPClient();
+        var $request = client.get(params);
 
-        <h3>FYI faculty</h3>
-        <!-- Uses tag 310 -->
-        <ul class="no-bullet">
-          <li><a href="http://www.cehd.umn.edu/CI/People/profiles/cory.html">Cory, Kris</a></li>
-          <li>
-          <a href="http://www.cehd.umn.edu/OLPD/people/faculty/dorsey.asp">Dorsey, Heather Jane</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/ssw/people/profiles/HarrisonKC.html">Harrison, K.C.  </a>
-          </li>
-          <li>
-          <a href="https://cehdvision2020.umn.edu/authors/ezra-hyland-ph-d/">Hyland, Ezra</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/OLPD/people/faculty/jehangir.asp">Jehangir, Rashne Rustom</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/fsos/people/faculty/KellyM.asp">Kelly, Margaret Ellen Delehanty</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/OLPD/people/faculty/peter.asp">Peter, Gary E</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/SSW/People/profiles/RojasCollinsM.html">Rojas Collins, Molly C</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/OLPD/people/faculty/stahl.asp">Stahl, Jason Michael</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/OLPD/people/faculty/stebleton.asp">Stebleton, Michael J</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/fsos/people/faculty/TritesJ.asp">Trites, Jill K</a>
-          </li>
-          <li>
-          <a href="http://www.cehd.umn.edu/fsos/people/faculty/WilliamsR.asp">Williams, Rhiannon</a>
-          </li>
-</ul>
-        </div>
-
-                <div class="third">
-                    <h2>Learning Communities (LC)</h2>
-                    <p>In the spring semester, you’ll enroll in a learning community, two separate classes that are linked by shared themes. You will create connections in your academics and work closely with fellow students and faculty. Learning communities
-                        include introductory courses in your major to help you transition into your second year. </p>
-
-                <h3>LC faculty</h3>
-                <!-- Tag 311 -->
-                <ul class="no-bullet">
-                    <li>
-                    <a href="http://www.cehd.umn.edu/CI/People/profiles/buturian.html">Buturian, Linda J</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/CI/People/profiles/cory.html">Cory, Kris  </a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/OLPD/people/faculty/dorsey.asp">Dorsey, Heather Jane</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/ssw/people/profiles/HarrisonKC.html">Harrison, K.C.  </a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/fsos/people/faculty/KellyM.asp">Kelly, Margaret Ellen Delehanty</a>
-                    </li>
-                    <li>
-                    <a href="http://www.umn.edu/lookup?UID=kend0040">Kendeou, Panayiota A.</a>
-                    </li>
-                    <li>
-                    <a href="http://www.umn.edu/lookup?UID=mason">Mason, Annie Mogush</a>
-                    </li>
-                    <li>
-                    <a href="http://cehd.umn.edu/icd/people/faculty/Masten.html">Masten, Ann S.</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/fsos/people/faculty/MendenhallT.asp">Mendenhall, Tai Justin</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/CI/People/profiles/poch.html">Poch, Robert Karl</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/SSW/People/profiles/RojasCollinsM.html">Rojas Collins, Molly C</a>
-                    </li>
-                    <li>
-                    <a href="http://www.cehd.umn.edu/CI/People/profiles/staats.html">Staats, Susan K</a>
-                    </li>
-                    </ul>
-                </div>
-                        <div class="third">
-                            <h2>President's Emerging Scholars </h2>
-                            <p>CEHD students in the <a href="http://prezscholars.umn.edu/">President's Emerging Scholars program</a>, including students selected for the <a href="/trio/">TRIO Student Support Services program</a>, participate in CEHD's first-year
-                                curriculum.</p><br />
-                        </div><!-- ./container -->
-                    </div>
-                </div>
-                <div class="margin-top-2">
-                </div>
-                  <div class="row emphasis cool">
-                        <div class="half feature">
-                          <div class="corner-borders-top"></div>
-                            <div class="container">
-                              <h2 class="text-center">Next steps </h2>
-                              <p class="text-center"><a href="/undergraduate/apply/">How to apply</a> | <a href="/undergraduate/scholarships/">Costs and aid</a> | <a href="/undergraduate/contact/">Contact</a></p>
-                          </div>
-                          <div class="corner-borders-bottom"></div>
-                        </div>
-                    </div>
-            </div><!-- ./row -->
+        $request.done(function() {
+            var people = client.getResults();
+            var renderer = new Renderer();
+            var template_params = {
+                'template_path': '/assets/dist/views/cehd/people/',
+                'template_name': 'list.html',
+                "$target_element": $("#lc-news-container"),
+                'data': {
+                    people: people
+                }
+            };
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
+</script>
 {% endblock %}

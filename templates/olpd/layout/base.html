@@ -1,0 +1,109 @@
+{% extends "layout/base.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+{% block css %}<link href="/assets/dist/css/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">{% endblock %}
+{% block heading_1 %}{{ config.dept_name }}{% endblock %}
+{% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
+{% block bottom_js %}<script src="/assets/dist/js/cehd.min.js{{ js_cachebuster }}"></script>{% endblock %}
+{% block inline_css %}
+{# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+{# todo: add these font-face styles to inline.scss #}
+<style>
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot');
+    src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+{{ inline_styles|raw }}
+</style>
+{% endblock %}
+{% block section_wordmark %}
+{% endblock %}
+{% block nav %}
+<div class="section-header-container row">
+<p>Nav will go here.</p>
+</div><!-- // row -->
+{% endblock %}
+{% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
+<div id="dept-footer">
+    <div class="row">
+        <div class="container">
+            <div class="span-8">
+                <div class="dept-footer-section first">
+                    <div class="dept-footer-container contact">
+                        <h2 class="dept-footer-heading h4">Contact Us</h2>
+                    </div>
+                    <p><a href="{{config.base_url}}/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
+                    <address>
+                        <a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
+                        612-626-9252<br>
+                        104 Burton Hall<br>
+                        178 Pillsbury Dr. S.E.<br>
+                        Minneapolis, MN 55455<br>
+                        612-626-9252 | <a href="mailto:cehd@umn.edu">cehd@umn.edu</a>
+                    </address>
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="dept-footer-section last">
+                    <div class="dept-footer-container campus">
+                        <h2 class="dept-footer-heading h4">Visit Campus</h2>
+                    </div>
+                    <div class="dept-footer-campus-container">
+                        <p><a href="http://umn.edu/"><img class="university-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-uofm-black-and-white.svg" alt="University of Minnesota wordmark."></a></p>
+                        <ul id="footerlinks" class="no-bullet">
+                            <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
+                            <li><a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a></li>
+                            <li><a href="https://admissions.tc.umn.edu/visit/">Schedule a tour</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

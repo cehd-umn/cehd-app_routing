@@ -4,30 +4,24 @@
 		<span class="breaker" itemprop="name">Department of Curriculum and Instruction</span>
      		<div id="postal" itemscope itemprop="Address" itemtype="http://schema.org/PostalAddress">
 				<span class="breaker" itemprop="streetAddress">125 Peik Hall</span>
-				<span class="breaker" itemprop="streetAddress">159 Pillsbury DR SE</span>
+				<span class="breaker" itemprop="streetAddress">159 Pillsbury Drive SE</span>
 				<span class="breaker" ><span itemprop="addressLocality">Minneapolis</span>, <span itemprop="addressRegion">MN</span> <span itemprop="postalCode">55455</span></span>
 			</div>
-		<span id="emailus"><a href="mailto:CIinfo@umn.edu">Email Curriculum and Instruction</a></span>
-		<span id="telecom" itemscope itemtype="http://schema.org/ContactPoint">P: 612.625.4006 Fax: 612.624.8277</span>
+		<span id="emailus"><a href="mailto:ciinfo@umn.edu">Email Curriculum and Instruction</a></span>
+		<span id="telecom" itemscope itemtype="http://schema.org/ContactPoint">P: 612-625-4006 | F: 612-624-8277</span>
 	</address>
-	<address itemscope itemtype="http://schema.org/Organization">
-	</address>
-	<address itemscope itemtype="http://schema.org/Organization">
-    <a href="https://www.facebook.com/teachereducationumn/" target="_blank"><img src="http://drydock.cehd.umn.edu/ci/assets/images/UMN-social-FACEBOOK-dark_32x32.png" width="32" height="32" alt=""/></a>
-    <a href="https://twitter.com/UMN_CI" target="_blank"><img src="http://drydock.cehd.umn.edu/ci/assets/images/UMN-social-TUMBLR_32x32.png" width="32" height="32" alt=""/></a>
-	</address>
-  <p class="actionbutton"><a href="/ci/Give.html">Give <i class="fa fa-heart fa-1x"></i></a></p>
   <ul id="footerlinks">
+    <li><a id="fbicon" href="https://www.facebook.com/teachereducationumn/"><img id="fbicon" src="/ci/assets/images/social/faebook.svg"></a><a href="https://twitter.com/UMN_CI"><img id="twiticon" src="/ci/assets/images/social/Twitter.svg"></a></li>
   	<li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
   	<li><a href="http://campusmaps.umn.edu/tc/">Maps &amp; Directions</a></li>
   	<li><a href="/directory/">College Directory</a></li>
+  	<li><a href="/">CEHD</a> | <a href="http://www.umn.edu">U of M</a></li>
   </ul>
 </footer>
 <footer id="umnfoot">
 	<p><%response.write("&copy;"&Year(Date))%> Regents of the University of Minnesota. All rights reserved. 
 		The University of Minnesota is an equal opportunity educator and employer. 
-		<br />
-		<a href="/privacy/">Privacy Policy</a> | Last Modified on 
+		<br /><a href="/privacy/">Privacy Policy</a> | Last Modified on 
 		<%
 			Dim fs,f,myPath
 			Set fs=Server.CreateObject("Scripting.FileSystemObject")

@@ -8,23 +8,22 @@
 {%- block main_content %}
 <div class="row">
     <div class="container">
-      <section>
         <h2 class="h1">{{ page_title }}</h2>
             <section>
               <div class="half">
-                <div class="whole">
-                <h3 class="no-margin-top">Keep dancing</h3>
                   <div class="whole">
-                    <img src="{{ config.asset_base }}/dist/images/Programs/cspp/Kirsten_Lind_Seal_feature.jpg" alt="Kirsten Lind Seal in her office">
-                      <p>After 25 years of performing everything from modern dance to stand-up comedy, Kirsten Lind Seal began teaching ballet to teenage girls. "These girls needed women in their lives&mdash;women who weren't their moms," she says. It was then that Lind Seal decided to go back to school.
-                        <a href="http://connect.cehd.umn.edu/keep-dancing/" {{ analytics.add_tracking("send", "event", "feature", "click", "CSPPmainfeature") }}>Read more.</a></p>
+                    <img src="{{ config.asset_base }}/dist/images/Programs/cspp/carolyn_berger-feature.jpg" alt="Carolyn Berger at professional development workshop">
+                    <div class="whole">
+                      <h4>CSPP and College Readiness Consortium host college and career readiness workshop</h4>
+                      <p>Counselors working in both rural and urban areas across Minnesota attended a half-day workshop, where they were presented with current data that support the need for greater attention to college and career readiness.
+                        <a href="http://news.cehd.umn.edu/cspp-and-college-readiness-consortium-host-college-and-career-readiness-workshop/" {{ analytics.add_tracking("send", "event", "feature", "click", "CSPPmainfeature") }}>Read more.</a></p>
                   </div>
               </div>
             </div>
             <div class="half">
               <div class="whole">
                   <h3 class="no-margin-top">Help others grow academically and professionally</h3>
-                    <p>With a Masters of Arts in counseling and student personnel psychology (CSPP), you’ll be qualified to counsel others throughout the lifespan. Become a school counselor and help students develop academically, personally/socially, and in their careers. Study to be a college and student personnel counselor and work in a higher education setting. Or become a mental health professional and work in a community setting. Whatever you decide, a master's in CSPP leads to a fulfilling career that allows you to do well by doing good.</p>
+                    <p>With a Masters of Arts in counseling and student personnel psychology (CSPP), you’ll be qualified to counsel others throughout their lifespan. Become a school counselor and help students develop academically, personally/socially, and in their careers. Study to be a college and student personnel counselor and work in a higher education setting. Or become a mental health professional and work in a community setting. Whatever you decide, a master's in CSPP leads to a fulfilling career that allows you to do well by doing good.</p>
                   <h4 class="no-margin-top">Careers</h4>
                     <ul>
                       <li>Licensed K-12 school counselor</li>
@@ -50,9 +49,12 @@
           ) }}
         </div>
       </section>
-        <section>
-          <p class="text-center"><a href="{{ config.base_url }}/future-students/cspp/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "CSPPmain") }} class="button center">How to apply</a></p>
-        </section>
+      <section>
+        <div class="twothird feature">
+          <h3 class="text-center">Like us on Facebook</h3>
+          <p class="text-center">Get a feel for what it's like to be an educational psychology student at the U of M. Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
+        </div>
+      </section>
     <section>
       <h3 class="text-center">Coursework &amp; related licensures</h3>
           <div class="twothird">
@@ -73,24 +75,54 @@
       </p>
             </div>
       <div class="third">
-        <h4>Related licensures</h4>
+        <h4>Licenses you'll prepare for</h4>
             <p>Successful completion of the CSPP M.A. program prepares you to pursue the following Minnesota licensures:</p>
               <ul>
-                <li><a href="http://education.state.mn.us/MDE/EdExc/Licen/">Licensed School Counselor (K-12)</a></li>
+                <li><a href="https://www.revisor.mn.gov/rules/?id=8710.6400">Licensed School Counselor (K-12)</a></li>
                 <li><a href="http://mn.gov/elicense/a-z/#/detail/appId/0/id/231433">Licensed Professional Counselor (LPC)</a></li>
                 <li><a href="http://mn.gov/elicense/a-z/#/detail/appId/0/id/231145">Licensed Professional Clinical Counselor (LPCC)</a></li>
               </ul>
       </div>
     </section>
+    <section>
+      <div class="twothirds feature">
+        <h3 class="text-center">Tuition</h3>
+          <p>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for information on tuition.</p>
+        <h3 class="text-center">Funding</h3>
+            <h4>Scholarships</h4>
+              <ul>
+                <li><a href="{{ config.base_url }}/programs/cspp/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
+                <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship / Practicum with Children &amp; Families</a></li>
+                <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid &amp; Scholarships</a></li>
+              </ul>
+            <h4>Financial aid</h4>
+            <ul>
+              <li>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for more information on funding.</li>
+              <li><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services</a> for more information on available financial aid.</li>
+            </ul>
+        </div>
+      </section>
+      <section>
+        <div class="feature twothirds">
+          <h3 class="text-center">Diversity</h3>
+          <p>The Department of Educational Psychology is deeply committed to increasing the diversity of our undergraduate and graduate programs, of our teaching and learning, of our research and clinical practice, and of our outreach and service across fields of educational psychology. Visit our <a href="{{ config.base_url }}/about/diversity-inclusion/">diversity page</a> to learn more about our commitment to diversity and resources for supporting diversity and inclusion.</p>
+        </div>
+      </section>
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="container">
 <section>
+  <p class="text-center"><a href="{{ config.base_url }}/future-students/cspp/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "CSPPmain") }} class="button center">How to apply</a></p>
+</section>
+</div>
+</div>
   <div class="row emphasis margin-top-1">
     <div class="container">
       <p class="pull-quote">&quot;I am energized by the amount of learning that takes place within the CSPP program. The pairing of academic instruction from committed and knowledgeable professors with the sharing of varied experiences only a cohort model can provide, has made for a uniquely positive and engaging environment.&quot;</p>
           <div class="twothirds feature margin-2">
               <div class="third">
-                  <img src="{{ config.asset_base }}/dist/images/future-students/Cristina_SilvaGleason_headshot.jpg" class="mobile-hide" alt="Cristina Silva Gleason headshot">
+                  <img src="{{ config.asset_base }}/dist/images/future-students/Cristina_SilvaGleason_headshot.jpg" alt="Cristina Silva Gleason headshot">
               </div>
               <div class="twothird">
                 <h4 class="no-margin-top">Cristina Silva Gleason<small class="clear h5">M.A. student | <a href="mailto:silva263@umn.edu">silva263@umn.edu</a></small></h4>
@@ -100,13 +132,12 @@
                 </div>
             </div>
           </div>
-</section>
 <div class="row">
     <div class="container">
         <h3 class="text-center">Faculty &amp; staff</h3>
         <section>
             <div class="half">
-                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BergerC-2016.jpg" class="mobile-hide" alt="Carolyn Berger headshot"></div>
+                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BergerC-2016.jpg" alt="Carolyn Berger headshot"></div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/caberger/">Carolyn Berger</a> <small class="clear h6 light"><a href="mailto:caberger@umn.edu">caberger@umn.edu</a></small></h4>
                     <ul>
@@ -119,7 +150,7 @@
             </div>
             <div class="half">
                 <div class="span-3">
-                    <img src="http://apps.cehd.umn.edu/people/Headshot/HowardK-2016.jpg" class="mobile-hide" alt="Kelli Howard headshot">
+                    <img src="http://apps.cehd.umn.edu/people/Headshot/HowardK-2016.jpg" alt="Kelli Howard headshot">
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top" ><a href="{{ config.base_url }}/people/howar473/">Kelli Howard</a><small class="clear h6 light"><a href="mailto:howar473@umn.edu">howar473@umn.edu</a></small></h4>
@@ -135,7 +166,7 @@
         <section class="margin-top-1">
             <div class="half">
                 <div class="span-3">
-                    <img src="http://apps.cehd.umn.edu/people/Headshot/McConnellS-2009.jpg" class="mobile-hide" alt="Scott McConnell headshot">
+                    <img src="http://apps.cehd.umn.edu/people/Headshot/McConnellS-2009.jpg" alt="Scott McConnell headshot">
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/smcconne/">Scott McConnell</a>
@@ -151,7 +182,7 @@
                 </div>
             </div>
             <div class="half">
-                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/OhrtmanMarguerite-2016.jpg" class="mobile-hide" alt="Marguerite Ohrtman headshot"></div>
+                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/OhrtmanMarguerite-2016.jpg" alt="Marguerite Ohrtman headshot"></div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/mohrtman/">Marguerite Ohrtman</a><small class="clear h6 light"><a href="mailto:mohrtman@umn.edu">mohrtman@umn.edu</a></small></h4>            <ul>
                         <ul>
@@ -166,7 +197,7 @@
         <section class="margin-top-1">
             <div class="half">
                 <div class="span-3">
-                    <img src="https://apps.cehd.umn.edu/people/Headshot/skovholtt.jpg" class="mobile-hide" alt="Thomas Skovholt headshot">
+                    <img src="https://apps.cehd.umn.edu/people/Headshot/skovholtt.jpg" alt="Thomas Skovholt headshot">
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/skovh001/">Thomas Skovholt</a><small class="clear h6 light"><a href="mailto:skovh001@umn.edu">skovh001@umn.edu</a></small></h4>
@@ -178,7 +209,7 @@
                 </div>
             </div>
             <div class="half">
-                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/TurnerS-2005.jpg" class="mobile-hide" alt="Sherri Turner headshot"></div>
+                <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/TurnerS-2005.jpg" alt="Sherri Turner headshot"></div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/turne047/">Sherri Turner</a><small class="clear h6 light"><a href="mailto:turne047@umn.edu">turne047@umn.edu</a></small></h4>
                         <ul>

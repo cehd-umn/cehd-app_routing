@@ -1,5 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Upward Bound - TRiO " %}
+{%- import "macros/svg.html" as svg -%}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 
@@ -22,9 +23,40 @@
           <br />
           Phone: 612-625-3021<br />
           Fax: 612-625-0704<br />
-          Email <a href="mailto:trio@umn.edu">trio@umn.edu</a></p>
+          Email: <a href="mailto:trioub@umn.edu">trioub@umn.edu</a></p>
       </div>
     </div>
+      </div> <!-- ./container -->
+    <div class="row emphasis margin-top-1">
+        <div class="container">
+
+            <div class="third feature">
+                <h2>Keep in touch</h2>
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://www.facebook.com/upwardboundumntc">
+                {% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                </div>
+
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://twitter.com/ubtrio">{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+                </div>
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://www.youtube.com/channel/UCIjmORyAIZyPoNi7_K7KlgA">{% include "cehd/includes/svg/social-media/youtube.html" %}</a>
+                </div>
+                <div class="svg-social-media-icon size-40">
+                    <a href="https://www.instagram.com/trioupwardboundumn/">{% include "cehd/includes/svg/social-media/instagram.html" %}</a>
+                </div>
+
+    <p>
+      Follow us on social media!
+    </p>
+
+
+            </div>
+
+        </div>
+    </div>
+  <div class="container">
     <div class="row">
         <div class="twothird feature">
           <h2>TRIO UB services</h2>

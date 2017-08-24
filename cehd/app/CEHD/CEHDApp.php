@@ -16,13 +16,18 @@ use CEHD\App\Card\PatternCard\PatternCards;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
-    private $_sites = [
+    // @todo put this into the config file
+    protected $_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -70,9 +75,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function errorPageHandler($code, $router)
+    public function errorPageHandler($code=404, $router)
     {
-        echo $this->_renderTemplate('cehd/error/404.html', []);
+        $html = $this->_renderTemplate('cehd/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function homePageHandler($request, $response, $service, $app)
@@ -234,35 +241,13 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
-        $query_data = $request->params();
-
-        if (array_key_exists("q", $query_data))
-        {
-            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        }
-        elseif (array_key_exists("query", $query_data))
-        {
-            $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
-        }
-
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary"],
-        ];
-
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "query" => $search_query,
-        ];
-
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate('cehd/search/index.html', $template_data);
     }
 
     public function searchEndpointHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
+        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
         $query_data = $request->params();
         $results = $search_client->getResults($query_data);
         return $response->sendJSONResponse(json_encode($results));
@@ -480,9 +465,38 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
+    public function eventsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        if ($this->arrayContains("z", $query_data))
+        {
+            $route = "/events/" . $query_data["z"] . "/";
+            $response->redirect($route, 301)->send();
+        }
+
+        echo $this->_renderTemplate("cehd/events/index.html", ["section" => "events"]);
+    }
+
     public function eventPageHandler($request, $response, $service, $app)
     {
         $event = $this->getEvent($request->id, $response);
         echo $this->_renderTemplate("cehd/events/event.html", ["event" => $event]);
+    }
+
+    public function peopleSearchResultsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        $nm = null;
+
+        if (array_key_exists("nm", $query_data))
+        {
+            $nm = $query_data["nm"];
+        }
+
+        $template_data = [
+            "section" => null,
+            "nm" => $nm,
+        ];
+        echo $this->_renderTemplate("cehd/directory/results.html", $template_data);
     }
 }

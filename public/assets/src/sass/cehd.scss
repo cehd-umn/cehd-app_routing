@@ -5,6 +5,7 @@
 @import "bourbon/bourbon";
 @import "loader";
 @import "events";
+@import "search";
 
 .videojs-background-wrap {
     z-index: -1;
@@ -48,6 +49,8 @@
 $corner-border-spacing: 5px;
 
 .corner-borders-top {
+    min-height: 1px;
+
     &::after {
         border-right: 1px solid $base-black;
         border-top: 1px solid $base-black;
@@ -100,10 +103,11 @@ $corner-border-spacing: 5px;
 }
 
 blockquote {
+    margin: 10px;
+
     &.quote-wrap {
         font-size: 20px;
         font-style: inherit;
-        margin-top: 50px;
         quotes: "“" "”" "‘" "’";
 
         &::after,
@@ -132,7 +136,7 @@ blockquote {
     float: right;
     font-size: 14px;
     font-weight: bold;
-    margin: 40px 80px 0 0;
+    margin: 40px 0 0;
 }
 
 .section-header-container {
@@ -190,7 +194,7 @@ img {
     max-width: 600px;
 }
 
-#cehd-wordmark {
+.cehd-wordmark {
     border-bottom: 0;
     float: none;
     margin: 0;
@@ -332,6 +336,15 @@ li {
 }
 
 @media all and (min-width: 960px) {
+    blockquote {
+        &.quote-wrap {
+            margin-top: 50px;
+        }
+    }
+
+    .speaker {
+        margin: 40px 80px 0 0;
+    }
 
     .hero-image-container {
         display: block;

@@ -1,22 +1,71 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}
-{% set page_title = "M.A. & specialist certificate (S.C.) in education & school psychological services" %}
-{% block title %}School Psychology M.A. &amp; S.C. in Education &amp; School Psychological Services{% endblock %}
+{% set page_title = "School psychological services M.A. & specialist certificate" %}
+{% block title %}School Psychology M.A. &amp; S.C. in Education &amp{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-      <h2>{{ page_title }}</h2>
+      <h2 class="text-center">School psychological services<br/>M.A. &amp; specialist certificate</h2>
       <section>
+        <div class="half">
+        <h3 class="no-margin-top">Become certified to practice school psychology</h3>
+        <p>The M.A. and specialist certificate (S.C.) in education & school psychological services program is designed for future practicing school psychologists. Upon completion of the program, you’ll be eligible to receive your state and national school psychologist credential to work with students, teachers, families, and other school staff to help help all students succeed&mdash;academically, socially, emotionally, and behaviorally.</p>
+        <p>Our program is approved by the National Association of School Psychologists (NASP).</p>
+        <p><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">Learn about fellowships available to M.A./specialist students.</a></p>
+        </div>
       <div class="half"><p><iframe src="https://player.vimeo.com/video/140834612" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen {{ analytics.add_tracking("send", "event", "feature", "click", "schpsy master feature") }}></iframe>
 </p></div>
-      <div class="half">
-      <h3 class=".no-margin-top">Earn your M.A. and become certified to practice in schools</h3>
-      <p>Approved by the National Association of School Psychologists (NASP), the M.A. and specialist certificate (S.C.) in education & school psychological services program in school psychology is designed for students who seek to become competent practitioners. Upon completion of the program, you’ll be eligible to receive your state and national school psychologist credential to work with students in schools to help them succeed academically, socially, emotionally, and behaviorally.</p>
-      <p><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">Learn about fellowships available to M.A./specialist students.</a></p>
-      </div>
       </section>
+  </div>
+<div class="row">
+  <div class="container">
+    <section>
+        <div class="twothirds feature">
+          <h3 class="text-center">Careers</h3>
+            <p>As a specialist-level school psychologist, you’ll work in public and private schools, preschools, and state departments of education. Recently, our students have found internship placements with Minneapolis Public Schools, Mahtomedi Public Schools, Burnsville-Eagan-Savage School District, North Suburban Special Education District (IL), and Summit School District (CO).</p>
+              <h4 class="text-center">School psychologists:
+              <br>
+              in-demand and well-compensated</h4>
+              <ul>
+              <li>100% of our students are fully-funded and employed graduation*</li>
+              <li>Expected employment growth: 11% between 2012 and 2022**</li>
+              <li>Mean 9-month salary (full-time, school-based practitioner): $64,000-$71,000***</li>
+              <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/outcomes.html">Student Admissions, Outcomes and Other Data</a></li>
+          </ul>
+          <p class="text-center"><small>*Percentages of students since 2012
+          <br />
+          **U.S. Bureau of Labor Statistics
+          <br/>
+          ***National Association of School Psychologists</small></p>
+        </div>
+  </section>
   <section>
-  <p class="text-center"><a href="{{ config.base_url }}/future-students/school-psych/"  {{ analytics.add_tracking("send", "event", "how to apply", "click", "schoolpsychmain") }} class="button center">How to apply</a></p>
+        <h3 class="text-center">Coursework</h3>
+          <div class="twothirds feature">
+            <p>School psychology M.A. &amp; Specialist Certificate (S.C) in Education &amp; School Psychological Services students complete two years of coursework followed by a year-long internship. All students are prepared to be scientist-practitioners through courses and fieldwork emphasizing research-based practices, coursework in research methods and statistics, and completion of a supervised research project.</p>
+             <ul>
+               <li>See the <a href="http://www.cehd.umn.edu/edpsych/current/school-psychology/">program handbook</a> for a full description of research expectations and thesis requirements.</li>
+               <li><a href="{{ config.asset_base }}/dist/documents/programs/schoolpsych/school-psychology-ma-program-sequence_061317.pdf">Download the program sequence</a> for more information on required coursework, fieldwork, exams and research activities by quarter.</li>
+               <li>Visit the <a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=8444">M.A. & S.C. course catalog</a> for full course listings and descriptions.</li>
+             </ul>
+            <p><a href="http://www.cehd.umn.edu/edpsych/programs/schoolpsych/focus/">More information on program goals and competencies</a></p>
+          </div>
+  </section>
+  <section>
+    <div ="twothirds feature">
+      <h3 class="text-center">Tuition</h3>
+        <p>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for information on tuition.</p>
+    <h3 class="text-center">Funding</h3>
+        <ul>
+          <li><a href="{{ config.base_url }}/programs/schoolpsych/pride-fellow/">School Psychology fellowships for M.A./Specialist students</a></li>
+          <li><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">College of Education and Human Development funding</a></li>
+          <li><a href="http://www.grad.umn.edu/funding-tuition/fellowshipsandgrants">Graduate School fellowships</a></li>
+          <li><a href="https://diversity.umn.edu/gradeducation/dove">Diversity of Views and Experiences (DOVE) Fellowship</a></li>
+        </ul>
+  </div>
+</section>
+  <section>
+  <p class="text-center"><a href="{{ config.base_url }}/future-students/school-psych/"  {{ analytics.add_tracking("send", "event", "how to apply", "click", "schoolpsychmaster") }} class="button center">How to apply</a></p>
   </section>
   </div>
 </div>
@@ -26,57 +75,21 @@
       </div>
       <div class="twothirds feature margin-2">
           <div class="third">
-              <img src="{{ config.asset_base }}/dist/images/Programs/schoolpsych/elena_kwong.jpg" class="mobile-hide" alt="Elena Kwong headshot">
+              <img src="{{ config.asset_base }}/dist/images/Programs/schoolpsych/elena_kwong.jpg"  alt="Elena Kwong headshot">
           </div>
           <div class="twothird">
-              <h4 class="no-margin-top">Elena Kwong<small class="clear h5">M.A. student | <a href="mailto:kwong027@umn.edu">kwong027@umn.edu</a></small> </h4>
+              <h4 class="no-margin-top">Elena Kwong<small class="clear h5">M.A. alumni </small></h4>
               <p><strong>Interests:</strong> Reading interventions for students of color</p>
-              <p><strong>Post-grad plans:</strong> Become a school psychologist and researcher for students with learning disabilities.</p>
+              <p><strong>Career:</strong> School psychologist and researcher for students with learning disabilities.</p>
           </div>
       </div>
   </div>
-<section>
-<div class="row">
-  <div class="container">
-      <div class="feature half">
-              <h3>School psychologists:
-              <br>
-              in-demand and well-compensated</h3>
-              <ul>
-              <li>Expected employment growth: 11% between 2012 and 2022*</li>
-              <li>Mean 9-month salary (full-time, school-based practitioner): $64,000-$71,000**</li>
-              <li>Mean 9-month salary (university faculty): $77,800**</li>
-              <li><a href="http://www.cehd.umn.edu/EdPsych/Programs/SchoolPsych/outcomes.html">Student Admissions, Outcomes and Other Data</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-          <div class="twothirds feature">
-          <h3 class="text-center">Coursework &amp; careers</h3>
-      <section>
-            <div class="half">
-              <h4>Coursework</h4>
-            <p>School psychology M.A. &amp; Specialist Certificate (S.C) in Education &amp; School Psychological Services students complete two years of coursework followed by a year-long internship. All students are prepared to be scientist-practitioners through courses and fieldwork emphasizing research-based practices, coursework in research methods and statistics, and completion of a supervised research project.</p>
-             <ul>
-               <li>See the <a href="http://www.cehd.umn.edu/edpsych/current/school-psychology/">program handbook</a> for a full description of research expectations and thesis requirements.</li>
-               <li><a href="{{ config.asset_base }}/dist/documents/programs/schoolpsych/school-psychology-ma-program-sequence_061317.pdf">Download the program sequence</a> for more information on required coursework, fieldwork, exams and research activities by quarter.</li>
-               <li>Visit the <a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=8444">M.A. & S.C. course catalog</a> for full course listings and descriptions.</li>
-             </ul>
-            <p><a href="http://www.cehd.umn.edu/edpsych/programs/schoolpsych/focus/">More information on program goals and competencies</a></p>
-          </div>
-          <div class="half">
-            <h4>Careers</h4>
-              <p>As a specialist-level school psychologist, you’ll work in public and private schools, preschools, and state departments of education. Recently, our students have found Ed.S. internship placements with Minneapolis Public Schools, Mahtomedi Public Schools, Burnsville-Eagan-Savage School District, North Suburban Special Education District (IL), and Summit School District (CO).</p>
-          </div>
-        </section>
-      </div>
         <section>
           <div class="row">
             <div class="container">
             <h3 class="text-center">Faculty</h3>
           <div class="half">
-            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/ChristT-2016.jpg" class="mobile-hide" alt="Theodore J. Christ headshot"></div>
+            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/ChristT-2016.jpg" alt="Theodore J. Christ headshot"></div>
             <div class="span-9">
               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/tchrist/">Theodore J. Christ </a><small class="clear h6 light"><a href="mailto:tchrist@umn.edu">tchrist@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/christ/">Lab</a></small></h4>
                 <p><small>Not currently accepting advisees</small></p>
@@ -89,8 +102,8 @@
               </div>
             </div>
           <div class="half">
-            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/CoddingR_2016.jpg" class="mobile-hide" alt="Robin Codding headshot"></div>
-            <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/rcodding/">Robin Codding</a><small class="clear h6 light">Acting program coordinator<br />
+            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/CoddingR_2016.jpg" alt="Robin Codding headshot"></div>
+            <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/rcodding/">Robin Codding</a><small class="clear h6 light">
               <a href="mailto:rcodding@umn.edu">rcodding@umn.edu</a>| <a href="{{ config.base_url }}/research/labs/codding/">Lab</a></small></h4>
                 <ul>
                   <li>Prevention and intervention of academic problems</li>
@@ -107,7 +120,7 @@
     <div class="row">
       <div class="container">
     <div class="half">
-            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/CookC_2015.jpg" class="mobile-hide" alt="Clayton Cook headshot"></div>
+            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/CookC_2015.jpg" alt="Clayton Cook headshot"></div>
     <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/crcook/">Clayton Cook</a> <small class="clear h6 light"><a href="mailto:crcook@umn.edu">crcook@umn.edu</a></small></h4>
     <ul>
         <li>School mental health</li>
@@ -118,7 +131,7 @@
   </div>
 </div>
     <div class="half">
-            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/MillerF-2014.jpg" class="mobile-hide" alt="Faith Miller headshot"></div>
+            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/MillerF-2014.jpg" alt="Faith Miller headshot"></div>
             <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/fgmiller/">Faith Miller</a> <small class="clear h6 light"><a href="mailto:fgmiller@umn.edu">fgmiller@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/miller/">Lab</a></small></h4>
               <ul>
                 <li>School-based social, emotional, and behavioral assessment and intervention</li>
@@ -132,8 +145,8 @@
       <div class="row">
         <div class="container">
     <div class="half">
-            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/SullivanA-2011.jpg" class="mobile-hide" alt="Amanda Sullivan headshot"></div>
-    <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/asulliva/">Amanda Sullivan</a> <small class="clear h6 light"><a href="mailto:asulliva@umn.edu">asulliva@umn.edu</a>| <a href="{{ config.base_url }}/research/labs/sullivan/">Lab</a></small></h4>
+            <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/SullivanA-2011.jpg" alt="Amanda Sullivan headshot"></div>
+    <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/asulliva/">Amanda Sullivan</a><small class="clear h6 light">Program coordinator<br /><a href="mailto:asulliva@umn.edu">asulliva@umn.edu</a>| <a href="{{ config.base_url }}/research/labs/sullivan/">Lab</a></small></h4>
     <ul>
       <li>Education and health disparities affecting individuals with and at-risk for special needs</li>
       <li>Characteristics and outcomes of children and adolescents with disabilities</li>
@@ -152,7 +165,7 @@
 
         <h3 class="text-center">Instructors</h3>
         <div class="half">
-            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/Hansen-BurkeA-2008.jpg" class="mobile-hide" alt="Annie Hansen-Burke headshot"></div>
+            <div class="span-3"><img src="https://apps.cehd.umn.edu/people/Headshot/Hansen-BurkeA-2008.jpg" alt="Annie Hansen-Burke headshot"></div>
             <div class="span-9"><h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/hans1498/">Annie Hansen-Burke</a><small class="clear h6 light">Field placement coordinator<br />
               <a href="mailto:hans1498@umn.edu">hans1498@umn.edu</a></small></h4>
             </div>

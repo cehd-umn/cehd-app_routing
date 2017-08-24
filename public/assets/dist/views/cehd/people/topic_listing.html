@@ -1,5 +1,5 @@
 {% if data.people|length > 0 %}
-<h2>Our expert{% if data.people|length > 1 %}s{% endif %}</h2>
+<h2>Our expert{% if data.people[0]|length > 1 %}s{% endif %}</h2>
 {% set column_class = "third" %}
 {% for group in data.people %}
     {% if group|length == 2 %}{% set column_class = "half" %}{% endif %}

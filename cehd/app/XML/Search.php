@@ -176,7 +176,7 @@ class Search extends \CEHD\App\XML\XML
      * request to the search appliance
      * @return array - An associative array of the search results
      */
-    private function _get($query_params, $site)
+    private function _get($query_params, $url, $client, $site)
     {
         $start = $this->_getStart($query_params);
 
@@ -188,7 +188,9 @@ class Search extends \CEHD\App\XML\XML
             'query' => [
                 'q' => $query,
                 'start' => $start,
-                'as_sitesearch' => $site,
+                'in_url' => $url,
+                'site' => $site,
+                'client' => $client,
                 'num' => $num,
             ]
         ];
@@ -219,7 +221,11 @@ class Search extends \CEHD\App\XML\XML
             foreach ($site_keys as $site_key)
             {
                 $result =$this->_get(
-                    $query_params, $this->_sites[$site_key]["url"]);
+                    $query_params,
+                    $this->_sites[$site_key]["url"],
+                    $this->_sites[$site_key]["client"],
+                    $this->_sites[$site_key]["site"]
+                );
 
                 $results[$site_key] = [
                     "name" => $this->_sites[$site_key]["name"],

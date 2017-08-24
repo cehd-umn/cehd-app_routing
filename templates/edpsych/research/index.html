@@ -1,22 +1,41 @@
 {% extends "edpsych/layout/section.html" %}
-{%- import "macros/news-feed.html" as newsfeed %}
-{%- import "macros/loader.html" as loader -%}
-{% set page_title = "Latest research news" %}
+{% set page_title = "Research topics in educational psychology" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <div class="feature twothird">
-            {{ loader.loader(page_title, "h2") }}
+      <section>
+        <h2 class="text-center">{{ page_title }}</h2>
+        <div class="twothirds feature">
+          <p>Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes.</p>
         </div>
-    </div>
+          <div class="third right divider">
+              <h3>Identify &amp; define problems</h3>
+                <ul>
+                  <li><a href="{{ config.base_url }}/research/topics/achievementgap">Achievement gap</a></li>
+                  <li><a href="{{ config.base_url }}/research/topics/autism/">Autism</a></li>
+                  <li><a href="{{ config.base_url }}/research/topics/mathematical-thinking/">Mathematical thinking</a></li>
+                  <li><a href="{{ config.base_url }}/research/topics/language-literacy-reading/">Language, literacy &amp; reading</a></li>
+                  <li><a href="{{ config.base_url }}/research/topics/behavioral-social/">Behavioral &amp; social-emotional development</a></li>
+                </ul>
+          </div>
+          <div class="third right divider">
+            <h3>Create new tools for research &amp; practice</h3>
+              <ul>
+                <li><a href="{{ config.base_url }}/research/topics/statistical-techniques/">Statistical techniques</a></li>
+                <li><a href="{{ config.base_url }}/research/topics/test-and-measures/">Tests &amp; measures</a></li>
+                <li><a href="{{ config.base_url }}/research/topics/neurobehavioral-methods/">Neurobehavioral methods</a></li>
+              </ul>
+            </div>
+          <div class="third">
+            <h3>Develop &amp; evaluate solutions</h3>
+              <ul>
+                <li><a href="{{ config.base_url }}/research/topics/prevention/">Prevention &amp; multi-tiered systems of support</a></li>
+                <li><a href="{{ config.base_url }}/research/topics/instruction-intervention/">Instruction &amp; intervention</a></li>
+                <li><a href="{{ config.base_url }}/research/topics/progress/">Progress monitoring/assessment</a></li>
+                <li><a href="{{ config.base_url }}/research/topics/professional-development/">Professional development</a></li>
+              </ul>
+          </div>
+  </section>
 </div>
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js(
-        "category/educational-psychology/research-educational-psychology/feed/",
-        "#news-container",
-        "research.html",
-        5
-    ) }}
 {% endblock %}

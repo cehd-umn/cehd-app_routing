@@ -1,0 +1,35 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Welcome to our Homepage" %}
+{% block title %}
+     Undergraduate Programs
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Undergraduate programs</h1>
+    </div>
+    <div class="container">
+        <h2>Overview</h2>
+    </div>
+    <div class="container">
+        <p>Write blurb</p>
+
+    </div>
+
+<div class="container">
+        <div class="half">
+            <h2>Business and marketing education</h2>
+            <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.<a href="{{ config.asset_base }}/undergraduate-programs/advising/">Purple flying dragons</a></p>
+        </div>
+
+        <div class="half">
+            <h2>when crazy stuff goes down</h2>
+            <p>U of MN Safety and Security Website. A helpful resource for signing up to TXT-U, safety escort service, Gopher Chauffeur, and more.
+            </p>
+        </div>
+
+</div>
+</div><!-- close row -->
+{% endblock %}

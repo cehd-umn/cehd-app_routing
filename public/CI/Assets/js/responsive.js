@@ -44,6 +44,7 @@ $(document).ready(function(){
   mode: "fade",
   ease: true,
   slideMargin: 5,
+  pager: false,
   autoHover: true
 });
 });

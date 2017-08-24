@@ -10,7 +10,7 @@
 <xsl:if test="headshotAddr!=''">
 <div class="third">
 <p>
-	<img class="left">
+	<img class="left" >
 		<xsl:attribute name="src"><xsl:value-of select= "headshotAddr" /></xsl:attribute>
 		<xsl:attribute name="alt"><xsl:value-of select= "lastName" /></xsl:attribute>
 	</img>
@@ -25,8 +25,7 @@
     <xsl:text>, </xsl:text><xsl:value-of select="nameSuffix" />
 	</xsl:if>
 	</h1>
-	
-	
+
 	
 	<p><xsl:value-of select= "workingTitle" />
 	<xsl:if test="degrees!=''">

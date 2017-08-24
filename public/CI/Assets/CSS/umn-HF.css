@@ -7,14 +7,10 @@
 	Dependencies: This file should be placed after "core2015.css" to use @font-face declaration.
 	Authors: Dan Sagisser and Jeff Abuzzahab
 	Created: 2013-06-13
-	Updated: 2015-04-28
+	Updated: 2016-02-23
 	
 */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
-/*
-import grabs the google font Raleway for use for MyU and OneStop links
-import needs to be the first thing on the stylesheet to work
-*/
 
 
 
@@ -35,7 +31,7 @@ div#umnheader {
 }
 
 div#umnheader a#umnh-logos {
-  background: url(../images/umnheader/umnh-logos.png) no-repeat;
+  background: url(/assets-2015/images/umnheader/umnh-logos.png) no-repeat;
   margin: 5px 0 0 20px;
   width: 315px;
   height: 63px;
@@ -109,20 +105,7 @@ input#umnh-searchbtn {
   width: auto;
   font-family: Verdana, Geneva, sans-serif;
 }
-/* 
-	This custom icon font is included in the Core style sheet.
-	If you're using the header somewhere outside the "starter files",
-	then you should uncomment this font-face block.
-*/
-/*
-@font-face {
-  font-family: 'fontello';
-  src: url("/assets-2015/fonts/fontello-2015/fontello.eot");
-  src: url("/assets-2015/fonts/fontello-2015/fontello.eot") format('embedded-opentype'), url("/assets-2015/fonts/fontello-2015/fontello.woff") format('woff'), url("/assets-2015/fonts/fontello-2015fontello.ttf") format('truetype'), url("/assets-2015/fonts/fontello-2015/fontello.svg") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
+
 input#umnh-searchbtn  { font-family: 'fontello'; }
 
 /* ---------- end U of M Header ------------------------------*/
@@ -153,7 +136,7 @@ footer#umnfoot p {
 /* ---------- media querry for high dpi ----------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
   div#umnheader a#umnh-logos {
-    background: url(../images/umnheader/umnh-logos@2x.png) no-repeat;
+    background: url(/assets-2015/images/umnheader/umnh-logos@2x.png) no-repeat;
     background-size: 315px 65px;
   }
 }

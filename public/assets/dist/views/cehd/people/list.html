@@ -1,0 +1,11 @@
+<ul class="no-bullet">
+{% for person in data.people %}
+    <li>
+        {% if person.internetId|is_string %}
+            <a href="{{ data.config.base_url }}/people/{{ person.internetId }}/">{{ person.lastName }}, {{ person.firstName }}</a>
+        {% else %}
+            {{ person.lastName }}, {{ person.firstName }}
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
