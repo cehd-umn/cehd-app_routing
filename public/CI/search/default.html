@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search Results - Candi Land - CEHD - U of M</title>
+<link rel="icon" type="image/png" href="/assets-2015/favicons/favicon-gold.ico"/><!--  global asset  -->
+<link rel="stylesheet" href="../assets/css/core2015.css" media="all" type="text/css" /><!--  local asset  -->
+<link rel="stylesheet" href="../assets/CSS/umn-HF.css" media="all" type="text/css" /><!--  local asset  -->
+<link rel="stylesheet" href="../assets/CSS/Theme-CandI-Land.css" media="all" type="text/css" /><!--  local asset  -->
+<link rel="stylesheet" href="../assets/CSS/tabbed-search.css" media="all" type="text/css" /><!--  local asset  -->
+<!--  This just makes HTML5 operate on old versions of IE -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="../assets/js/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" media="all" type="text/css" /><!--  local asset  -->
+<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-1.9.0.js"></script><!--  global asset  -->
+<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js"></script><!--  global asset  -->
+
+<script src="/ci/assets/js/responsive-fromICD.js"></script>
+
+<script type="text/javascript" src="/assets-2015/js/globalnav.js" ></script><!--  global asset  -->
+<script type="text/javascript" src="/assets-2015/js/ajaxRSS.js"></script><!--  global asset  -->
+<script type="text/javascript" src="/attributes/js/search-jquery-1.10.js"></script><!--  global asset  -->
+
+<script type="text/javascript">
+//no need to edit
+var query = getQueryVariable(window.location.search.substring(1), 'query');
+
+var rs_names = new Array();
+//rs_names[X] = [TabName, SearchURL, XSLT, CustomErrorMessage]
+rs_names[0] = ["CEHD","http://google.umn.edu/search?&q="+query+"&site=tc_education&client=tc_education&output=xml_no_dtd", "/attributes/XSLT/Search.xslt", "Custom Error Message"];
+rs_names[1] = ["U of M","http://google.umn.edu/search?&q="+query+"&num=10&output=xml_no_dtd&client=searchumn&site=default_collection", "/attributes/XSLT/Search.xslt", "Custom Error Message"];
+rs_names[2] = ["People","http://apps.cehd.umn.edu/people/admin/RSSFeed.aspx?&nm="+query, "/attributes/XSLT/People-SearchResults.xslt", "Custom Error Message"];
+rs_names[3] = ["Events","http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&r=3&q=6&t=170&k="+query, "/attributes/XSLT/Events-SearchResults.xslt", "Custom Error Message"];
+</script>
+</head>
+<body> 
+	<div id="container">
+		<!--#include file="../assets/includes/umn-header.asp" -->
+  	<!--#include file="../assets/includes/dept-header.asp" -->
+			<div id="restabs">
+				<div id="tabnav"><span id="menuicon">Menu</span></div>
+			</div><!-- ./restabs -->
+    	<br class="clearfloat" />
+    	<nav>
+    	<!--#include file="../assets/includes/nav.asp" -->
+    	</nav>
+    	<div id="maincontent">
+<h1>Search Results</h1>
+			<!-- Dynamically draw the search result tabs -->
+			<script type="text/javascript">
+				showResults()
+			</script>
+      </div><!-- ./maincontent -->
+        <br class="clearfloat" />
+			<!--#include file="../assets/includes/footer.asp" -->
+	</div><!-- ./container -->
+</body>
+</html>
