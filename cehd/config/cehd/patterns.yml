@@ -851,6 +851,21 @@ lists without bullets or numbers:
       type: include
   type: include
   uses: null
+indented lists without bullets or numbers:
+  publish: true
+  meta: null
+  categories:
+    - lists
+  description: Gives extra indentation to no-bullet lists
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/lists-no-bullets-indented.html
+      type: include
+  type: include
+  uses: null
 lists with headings:
   publish: true
   meta: null

@@ -80,3 +80,18 @@
   publish: false
   template_data:
     - section: undergraduate-programs
+/olpd-new/undergraduate-programs/hrd/:
+  template: olpd/undergraduate-programs/hrd.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs
+/olpd-new/undergraduate-programs/bme/:
+  template: olpd/undergraduate-programs/bme.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs
+/olpd-new/undergraduate-programs/advising/:
+  template: olpd/undergraduate-programs/advising.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs

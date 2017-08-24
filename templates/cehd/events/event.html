@@ -19,7 +19,7 @@
         <div class="span-8 feature">
             <h1>{{ event.title }}
                 <small class="clear h2">
-                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}
+                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}
                     {% if event.endTime %}
                         | {{ event.startTime }}
                     {% endif %}
