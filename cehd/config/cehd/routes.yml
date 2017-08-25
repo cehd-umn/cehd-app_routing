@@ -1136,7 +1136,31 @@
     section: null
 /docs/macros/:
   publish: false
-  template: cehd/docs/macros.html
+  template: cehd/docs/macros/index.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/macros/events/:
+  publish: false
+  template: cehd/docs/macros/events.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/macros/loader/:
+  publish: false
+  template: cehd/docs/macros/loader.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/macros/news/:
+  publish: false
+  template: cehd/docs/macros/news.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/macros/info-sessions/:
+  publish: false
+  template: cehd/docs/macros/info-sessions.html
   template_data:
     meta_description: null
     section: null

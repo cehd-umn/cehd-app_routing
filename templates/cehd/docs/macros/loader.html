@@ -1,0 +1,140 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "CSS loader macro" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% import "macros/table/table.html" as table %}
+{% import "macros/loader.html" as loader %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+        <h2 id="loader-instructions">Step one: include the loader macro</h2>
+
+        <p>We're using a fancy animated loader for feeds. Using the loader
+        macro ensures you'll get all the right markup and styles to create
+        it without copying and pasting a bunch of <samp>div</samp>s.</p>
+
+        <p><strong>Note:</strong> We use this same loader for all COPE
+        tools including the people, research, events and info sessions.</p>
+
+        <p>This code should go near the top of the page before the
+        <samp>main_content</samp> block.</p>
+
+        <pre><code class="jinja">{% verbatim %}
+{%- import "macros/loader.html" as loader -%}{% endverbatim %}
+        </code></pre>
+
+        <h2>Step two: Place the loader on the page where your feed will go</h2>
+
+        <pre><code class="jinja">{% verbatim %}
+&lt;article class=&quot;third&quot;&gt;
+{{ loader.loader(
+    &quot;Alumni in the news&quot;,
+    &quot;h3&quot;,
+    &quot;alumni-news-container&quot;
+    ) }}{% endverbatim %}
+&lt;/article&gt;
+            </code></pre>
+
+            <p>The loader macro will render HTML like this:</p>
+            <pre><code>
+&lt;h3&gt;Alumni in the news&lt;/h3&gt;
+&lt;div id=&quot;alumni-news-container&quot;&gt;
+    &lt;div class=&quot;loader small&quot;&gt;
+        &lt;div class=&quot;loader-figure small&quot;&gt;&lt;/div&gt;
+        &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+
+        <p>And it looks like this:</p>
+
+        <div class="third" style="min-height:200px;">{{ loader.loader(
+            "Alumni in the news",
+            "h3",
+            "alumni-news-container"
+            ) }}
+        </div>
+
+        <p>You might have noticed that the content and markup in the
+        rendered HTML matches the parameters we passed into the macro.</p>
+
+        <p>We passed in "Alumni in the news" and you can see that gets
+        inserted into the heading.</p>
+
+        <p>You may also have noticed that the second parameter we passed in
+        is "h3" and our heading is an <samp>h3</samp>.</p>
+
+        <p>Finally, we passed in "alumni-news-container" and that's what
+        the <samp>id</samp> is for our alumni news container.  (That'll be
+        important later on, because we're going to tell the newsfeed macro
+        to put the rendered newsfeed there.)</p>
+
+        <p>The loader macro has a few more parameters. Below is a list of
+        parameters and their default values:</p>
+
+        {{ table.start_table("Loader macro parameters") }}
+            {{ table.heading_row(
+                ["Order",
+                "Parameter",
+                "Description",
+                "Default"]) }}
+            {{ table.row(
+                ["first",
+                "Heading text",
+                "What you want the heading to say",
+                "Latest news"]) }}
+            {{ table.row(
+                ["second",
+                "Heading tag",
+                "Which heading tag to use",
+                "h3"]) }}
+            {{ table.row(
+                ["third",
+                "Container id",
+                "The id of the element where the feed will go",
+                "news-container"]) }}
+            {{ table.row(
+                ["fourth",
+                "Heading classes",
+                "Any classes you want to add to the heading; i.e., <samp>margin-top-1</samp>",
+                "None (no classes will be added)"]) }}
+            {{ table.row(
+                ["fifth",
+                "Additional loader classes",
+                "Any classes you want to add to the loader element",
+                "small"]) }}
+            {{ table.row(
+                ["sixth",
+                "Loader text",
+                "Text to display while the feed is loading",
+                "Loading&hellip;"]) }}
+            {{ table.row(
+                ["seventh",
+                "Additional container classes",
+                "Any additional classes you wish to add to the container for the feed content",
+                "None (no classes will be added)"]) }}
+            {{ table.row(
+                ["eighth",
+                "Use a heading",
+                "Insert a heading before the container for the feed content",
+                "<samp>true</samp>"]) }}
+        {{ table.end_table() }}
+
+        <p>Parameters <em>must be passed in order</em>. If you wish to
+        override just some of the defaults, you can pass in
+        <samp>null</samp> for the others like so:</p>
+
+        <pre><code class="jinja">
+{% verbatim %}
+{# This example will only override the default for the third parameter #}
+{{ loader.loader(
+    null,
+    null,
+    "alumni-news-container",
+    ) }}
+{% endverbatim %}
+        </code></pre>
+    </div><!-- container -->
+</div><!-- row -->
+{% endblock %}
