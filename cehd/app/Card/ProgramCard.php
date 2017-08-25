@@ -25,8 +25,7 @@ class ProgramCard extends Card
     {
         $degrees = [];
 
-        foreach($this->links as $key => $link)
-        {
+        foreach ($this->links as $key => $link) {
             $degrees[$this->hyphenate($link->title)] = $link->title;
         }
 
@@ -52,8 +51,7 @@ class ProgramCards extends CardGroup
     {
         $programs = $this->loadYaml($yaml_file_path);
 
-        foreach($programs as $title => $program)
-        {
+        foreach ($programs as $title => $program) {
             $card = $this->setCard($title, $program);
             $this->_cards[$title] = $card;
         }
@@ -71,10 +69,8 @@ class ProgramCards extends CardGroup
         $category_groups["Areas of study"] = $this->getCategories();
         $degrees = [];
 
-        foreach ($this->_cards as $card)
-        {
-            foreach ($card->links as $degree)
-            {
+        foreach ($this->_cards as $card) {
+            foreach ($card->links as $degree) {
                 $key = $this->hyphenate($degree->title);
                 $degrees[$key] = $degree->title;
                 // @todo this works for now, but it muddies the purpose of this method, which is a getter and not a setter

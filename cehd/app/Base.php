@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App;
+
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/../../cehd/app/Config/Config.php";
 
@@ -51,8 +52,7 @@ abstract class BaseClass
             "autoescape" => true,
         ));
 
-        if ($debug)
-        {
+        if ($debug) {
             $twig->addExtension(new \Twig_Extension_Debug());
         }
         return $twig;
@@ -126,13 +126,11 @@ abstract class BaseClass
      */
     public function stripDotHtml($uri, $lowercase=false)
     {
-        if (strrpos($uri, ".html") > 0)
-        {
+        if (strrpos($uri, ".html") > 0) {
             // strip .html (last 5 characters)
             $stripped = substr($uri, 0, -5);
 
-            if ($lowercase)
-            {
+            if ($lowercase) {
                 $stripped = strtolower($stripped);
             }
             return $stripped;
@@ -172,8 +170,7 @@ abstract class BaseClass
     {
         $error_msgs = [];
 
-        foreach($errors as $error)
-        {
+        foreach ($errors as $error) {
             $msg = str_repeat('-', $error->column) . "^\n";
 
             switch ($error->level) {
@@ -210,9 +207,8 @@ abstract class BaseClass
      */
     public function get($property_name, $default=null)
     {
-        if (property_exists($this, $property_name))
-        {
-           return $this->$property_name;
+        if (property_exists($this, $property_name)) {
+            return $this->$property_name;
         }
         return $default;
     }
@@ -230,8 +226,7 @@ abstract class BaseClass
     {
         $new_data = [];
 
-        foreach ($original_data as $key => $data)
-        {
+        foreach ($original_data as $key => $data) {
             $hyphenated = $this->hyphenate($key);
             $new_data[$hyphenated] = $data;
             $new_data[$hyphenated]["keyTitle"] = $key;
@@ -249,12 +244,9 @@ abstract class BaseClass
     {
         $result = false;
 
-        try
-        {
+        try {
             $result = filemtime($file_path);
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             echo $e->getMessage();
         }
 
@@ -271,8 +263,7 @@ abstract class BaseClass
     {
         $mod_time = $this->getFileModTime($file_path);
 
-        if (!$mod_time)
-        {
+        if (!$mod_time) {
             $msg = "Unable to determine mod time for " . $file_path .
                 ". Using current timestamp which will always brake the " .
                 "cache. Check to make sure your file_path is correct";
@@ -292,8 +283,7 @@ abstract class BaseClass
     public function createHyphenatedKeys($data)
     {
         $results = [];
-        foreach ($data as $index => $datum)
-        {
+        foreach ($data as $index => $datum) {
             $hyphenated = $this->hyphenate($datum);
             $results[$hyphenated] = $datum;
         }
@@ -308,7 +298,7 @@ abstract class BaseClass
      */
     public function arrayContains($needle, $haystack)
     {
-       return array_key_exists($needle, $haystack);
+        return array_key_exists($needle, $haystack);
     }
 
     public function isDigit($string)
@@ -320,13 +310,10 @@ abstract class BaseClass
     {
         $int = (int)$string;
 
-        if ($int === 0 and $string !== "0")
-        {
+        if ($int === 0 and $string !== "0") {
             throw new \Exception("Received '" . $string . "' which "
                 . "can't be converted to an integer.");
-        }
-        else
-        {
+        } else {
             return $int;
         }
     }

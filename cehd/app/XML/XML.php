@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App\XML;
+
 require_once __DIR__ . "/../../../cehd/app/Base.php";
 require_once __DIR__ . "/../../../vendor/autoload.php";
 
@@ -33,20 +34,17 @@ class XML extends \CEHD\App\BaseClass
     {
         // Make errors internal
         libxml_use_internal_errors(true);
-        if (trim($xml) === "")
-        {
+        if (trim($xml) === "") {
             return null;
         } else {
             $obj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
-            if (!$obj)
-            {
+            if (!$obj) {
                 // Throw exceptions if the XML was invalid
                 $xml_errors = libxml_get_errors();
 
                 $errors = $this->parseXMLErrors($xml_errors);
 
-                foreach($errors as $msg)
-                {
+                foreach ($errors as $msg) {
                     throw new \Exception($msg);
                 }
             }
@@ -88,8 +86,7 @@ class XML extends \CEHD\App\BaseClass
     {
         $stringified = strtolower($this->getFromProperty($property));
 
-        switch($stringified)
-        {
+        switch ($stringified) {
             case "true":
                 return true;
             case "false":

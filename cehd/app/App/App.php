@@ -133,7 +133,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * @param mixed[] $file_paths - array of file paths
      * @todo can some of this instantiation be lazily loaded?
      */
-    function __construct($file_paths)
+    public function __construct($file_paths)
     {
         $twig_filters = [
             "hyphenate",
@@ -154,8 +154,7 @@ class BaseApp extends \CEHD\App\BaseClass
         $twig->addGlobal('inline_styles', $this->inline_styles);
         $twig->addGlobal('inline_svg_styles', $this->inline_svg_styles);
 
-        foreach ($twig_filters as $filter_method)
-        {
+        foreach ($twig_filters as $filter_method) {
             // @xxx Will change in version 2 of Twig
             $filter = new \Twig_SimpleFilter($filter_method, [$this, $filter_method]);
             $twig->addFilter($filter);
@@ -164,7 +163,8 @@ class BaseApp extends \CEHD\App\BaseClass
 
         $this->response = new \CEHD\App\Response\BaseResponse();
         $this->_routes =  new Dict\Dict(
-            $this->loadYaml($this->file_paths["routes"]));
+            $this->loadYaml($this->file_paths["routes"])
+        );
 
         // load the redirects from the yaml file provided or set and empty Dict object
         $this->_redirects = array_key_exists("redirects", $this->file_paths) ? $this->_setFromYAML($this->file_paths["redirects"]) : $this->_loadDict([]);
@@ -173,10 +173,12 @@ class BaseApp extends \CEHD\App\BaseClass
         $this->router->respond('GET', null, [$this, 'genericResponseHandler']);
 
         // Finally, we get to the actual routes
-        foreach($this->_routes as $route => $route_info)
-        {
+        foreach ($this->_routes as $route => $route_info) {
             $this->router->respond(
-                'GET', $route, [$this, 'renderStaticTemplate']);
+                'GET',
+                $route,
+                [$this, 'renderStaticTemplate']
+            );
         }
     }
 
@@ -185,8 +187,11 @@ class BaseApp extends \CEHD\App\BaseClass
     // preserves query params if they exist
     // runs on *every* request
     public function genericResponseHandler(
-        $request, $response, $service, $app)
-    {
+        $request,
+        $response,
+        $service,
+        $app
+    ) {
         // split the uri into the url and the query params
         $uri_components = explode("?", $request->uri());
 
@@ -194,19 +199,15 @@ class BaseApp extends \CEHD\App\BaseClass
         // the first element in the new array will be the uri
         $uri = $uri_components[0];
 
-        if (count($uri_components) > 1)
-        {
+        if (count($uri_components) > 1) {
             // preserve the query string
             $query_str = "?" . $uri_components[1];
-        }
-        else
-        {
+        } else {
             $query_str = "";
         }
 
         // Don't do this for services
-        if (!strpos($uri, "services"))
-        {
+        if (!strpos($uri, "services")) {
             // grab the last character in the uri to see if it's a slash
             $last = substr($uri, -1);
 
@@ -214,8 +215,7 @@ class BaseApp extends \CEHD\App\BaseClass
             // .html is likely to need a specific redirect
             $file_extension = substr($uri, -4);
 
-            if ($last !== "/" && !in_array($file_extension, ["html", ".xml"]))
-            {
+            if ($last !== "/" && !in_array($file_extension, ["html", ".xml"])) {
                 // put it all back together and redirect
                 $redirect_uri = $uri . "/" . $query_str;
                 $response->redirect($redirect_uri, 301)->send();
@@ -227,8 +227,7 @@ class BaseApp extends \CEHD\App\BaseClass
         // last element.
         $potential_html_filename = array_pop($path_components);
 
-        if (in_array($potential_html_filename, ["default.html", "index.html"]))
-        {
+        if (in_array($potential_html_filename, ["default.html", "index.html"])) {
             // put the uri back together minus the html filename.
             $new_uri = "/" . implode("/", $path_components) . "/";
             $response->redirect($new_uri, 301)->send();
@@ -237,21 +236,19 @@ class BaseApp extends \CEHD\App\BaseClass
         // Most redirects will match a key that is the lowercase version of
         // the URI.
         $redirect_route = $this->_redirects->get(
-            strtolower($request->uri()));
+            strtolower($request->uri())
+        );
 
-        if ($redirect_route)
-        {
+        if ($redirect_route) {
             $response->redirect($redirect_route, 301)->send();
-        }
-        else
-        {
+        } else {
             // Some redirects need to be checked using camelCase or
             // PascalCase routes because their lowercase versions match
             // existing routes
             $redirect_route = $this->_redirects_camelcase->get(
-                $request->uri());
-            if ($redirect_route)
-            {
+                $request->uri()
+            );
+            if ($redirect_route) {
                 $response->redirect($redirect_route, 301)->send();
             }
         }
@@ -277,18 +274,14 @@ class BaseApp extends \CEHD\App\BaseClass
      */
     protected function _setFromYAML($file_path, $as_dict=true)
     {
-        try
-        {
+        try {
             $data_array = $this->loadYaml($file_path);
-            if ($as_dict)
-            {
+            if ($as_dict) {
                 return $this->_loadDict($data_array);
             }
 
             return $data_array;
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             echo "Problem loading YAML file: " .
                 "File path: " . $file_path . "\n" .
                 $e->getMessage() . "\n";
@@ -314,13 +307,25 @@ class BaseApp extends \CEHD\App\BaseClass
 
         // build a few more in
         $config->asset_base = $this->_setSubBasePath(
-            $config, "base_url", "/assets");
+            $config,
+            "base_url",
+            "/assets"
+        );
         $config->nunjucks_view_base = $this->_setSubBasePath(
-            $config, "asset_base", "/dist/views");
+            $config,
+            "asset_base",
+            "/dist/views"
+        );
         $config->css_base = $this->_setSubBasePath(
-            $config, "asset_base", "/dist/css");
+            $config,
+            "asset_base",
+            "/dist/css"
+        );
         $config->js_base = $this->_setSubBasePath(
-            $config, "asset_base", "/dist/js");
+            $config,
+            "asset_base",
+            "/dist/js"
+        );
         $config->nav_open = false;
 
         // Check for main nav state
@@ -370,8 +375,7 @@ class BaseApp extends \CEHD\App\BaseClass
     public function renderStaticTemplate($request, $response, $service, $app)
     {
         $route_info = $this->_routes->get($request->pathname());
-        if ($this->_routeIsLive($route_info))
-        {
+        if ($this->_routeIsLive($route_info)) {
             echo $this->template->render(
                 $route_info["template"],
                 $route_info["template_data"]
@@ -409,14 +413,12 @@ class BaseApp extends \CEHD\App\BaseClass
     public function nameToHyphenatedKey($names, $sort=true)
     {
         $new_names = [];
-        foreach ($names as $idx => $name)
-        {
+        foreach ($names as $idx => $name) {
             $hyphenated = $this->helpers->hyphenate($name);
             $new_names[$hyphenated] = $name;
         }
 
-        if ($sort)
-        {
+        if ($sort) {
             sort($new_names);
             return $new_names;
         }
@@ -430,17 +432,13 @@ class BaseApp extends \CEHD\App\BaseClass
         $query_data = $request->params();
         $filter = $this->_searchApplianceSites["primary"]["name"];
 
-        if ($this->arrayContains("q", $query_data))
-        {
+        if ($this->arrayContains("q", $query_data)) {
             $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        }
-        elseif ($this->arrayContains("query", $query_data))
-        {
+        } elseif ($this->arrayContains("query", $query_data)) {
             $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
         }
 
-        if ($this->arrayContains("filter", $query_data))
-        {
+        if ($this->arrayContains("filter", $query_data)) {
             $filter = $query_data["filter"];
         }
 
