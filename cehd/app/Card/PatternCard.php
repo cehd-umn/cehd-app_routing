@@ -50,10 +50,8 @@ class PatternCards extends CardGroup
     {
         $patterns = [];
 
-        foreach ($this->_cards as $pattern)
-        {
-            if ($pattern->group === $group)
-            {
+        foreach ($this->_cards as $pattern) {
+            if ($pattern->group === $group) {
                 array_push($patterns, $pattern);
             }
         }
@@ -64,8 +62,7 @@ class PatternCards extends CardGroup
     {
         $groups = [];
 
-        foreach($this->_cards as $pattern)
-        {
+        foreach ($this->_cards as $pattern) {
             array_push($groups, $pattern->group);
         }
         sort($groups);
@@ -74,12 +71,9 @@ class PatternCards extends CardGroup
 
     public function buildRouteFromPattern($group, $title, $group_route=false)
     {
-        if ($group_route)
-        {
+        if ($group_route) {
             return "/patterns/v1/" . $group . "/";
-        }
-        else
-        {
+        } else {
             return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
         }
     }
@@ -88,16 +82,14 @@ class PatternCards extends CardGroup
     {
         $routes = [];
 
-        foreach ($this->_cards as $title => $pattern)
-        {
+        foreach ($this->_cards as $title => $pattern) {
             $route = $this->buildRouteFromPattern($pattern->group, $title);
             $routes[$route] = $pattern;
         }
 
         $groups = $this->getGroupNames();
 
-        foreach($groups as $group)
-        {
+        foreach ($groups as $group) {
             $route = $this->buildRouteFromPattern($group, $group, true);
             $routes[$route] = new Dict\Dict(["handler" => "patternGroupHandler"]);
         }
@@ -116,8 +108,7 @@ class PatternCards extends CardGroup
     {
         $patterns = $this->loadYaml($yaml_file_path);
 
-        foreach($patterns as $title => $pattern)
-        {
+        foreach ($patterns as $title => $pattern) {
             $card = $this->setCard($title, $pattern);
             $this->_cards[$title] = $card;
         }

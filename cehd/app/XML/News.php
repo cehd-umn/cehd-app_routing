@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App\XML\News;
+
 require_once __DIR__ . '/RSS.php';
 
 /**
@@ -81,7 +82,7 @@ class Story extends \CEHD\App\XML\RSS\RSS
      *
      * @param obj $story - XML object representing a single story
      */
-    function __construct($story)
+    public function __construct($story)
     {
         $this->description = $this->toString($story->description[0]);
 
@@ -95,12 +96,11 @@ class Story extends \CEHD\App\XML\RSS\RSS
 
         $this->title = $this->toString($story->title[0]);
 
-        $this->title_override = $this->getContentAttr($story, "titleinternal" );
+        $this->title_override = $this->getContentAttr($story, "titleinternal");
 
-        $this->encoded = $this->getContentAttr($story, "encoded" );
+        $this->encoded = $this->getContentAttr($story, "encoded");
 
-        foreach ($story->category as $category)
-        {
+        foreach ($story->category as $category) {
             array_push($this->categories, $this->toString($category));
         }
     }
@@ -138,12 +138,11 @@ class News extends \CEHD\App\XML\RSS\RSS
      *
      * @param str $xml_string - XML
      */
-    function __construct($xml_string)
+    public function __construct($xml_string)
     {
         $stories = $this->xmlStringToObject($xml_string);
 
-        if ($stories)
-        {
+        if ($stories) {
             $this->_setStories($stories);
         }
     }
@@ -155,8 +154,7 @@ class News extends \CEHD\App\XML\RSS\RSS
      */
     private function _setStories($xml)
     {
-        foreach ($xml->channel->item as $story)
-        {
+        foreach ($xml->channel->item as $story) {
             array_push($this->stories, new Story($story));
         }
     }
@@ -167,12 +165,9 @@ class News extends \CEHD\App\XML\RSS\RSS
         $result = [];
 
         // Build up an array of year categories to use as array keys
-        foreach ($this->stories as $story)
-        {
-            foreach ($story->categories as $category)
-            {
-                if ($this->isDigit($category))
-                {
+        foreach ($this->stories as $story) {
+            foreach ($story->categories as $category) {
+                if ($this->isDigit($category)) {
                     array_push($years, $category);
                 }
             }
@@ -182,32 +177,26 @@ class News extends \CEHD\App\XML\RSS\RSS
         sort($years);
 
         // build decade keys
-        foreach ($years as $year)
-        {
+        foreach ($years as $year) {
             $decade_min = $this->toDeca($year);
             $decade_max = $decade_min + 9;
             $result[$decade_min] = [];
         }
 
         // Now add year keys
-        foreach ($years as $year)
-        {
+        foreach ($years as $year) {
             $decade_min = $this->toDeca($year);
             $decade_max = $decade_min + 9;
             $result[$decade_min][$year] = [];
         }
 
-        foreach ($this->stories as $story)
-        {
-            foreach ($story->categories as $category)
-            {
-                if ($this->isDigit($category))
-                {
+        foreach ($this->stories as $story) {
+            foreach ($story->categories as $category) {
+                if ($this->isDigit($category)) {
                     $decade_min = $this->toDeca($category);
                     $decade_max = $decade_min + 9;
 
-                    if ($this->inRange($category, $decade_min, $decade_max))
-                    {
+                    if ($this->inRange($category, $decade_min, $decade_max)) {
                         array_push($result[$decade_min][$category], $story);
                     }
                 }
