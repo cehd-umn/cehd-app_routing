@@ -8,7 +8,7 @@ use UMN\CEHD\Dict;
 
 class CEHDApp extends BaseApp
 {
-    function __construct($yaml_file_paths)
+    public function __construct($yaml_file_paths)
     {
         parent::__construct($yaml_file_paths);
     }

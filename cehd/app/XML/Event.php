@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\XML\Event;
+
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
 /**
@@ -148,7 +149,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @param obj $person - XML object representing a person
      */
-    function __construct($event)
+    public function __construct($event)
     {
         $this->date = $this->getFromProperty($event->eventDate);
 
@@ -295,8 +296,7 @@ class Event extends \CEHD\App\XML\XML
      */
     public function getTimestamp($end=false)
     {
-        if ($end)
-        {
+        if ($end) {
             return strtotime($this->dateTimeEnd);
         }
         return strtotime($this->dateTimeStart);
@@ -333,25 +333,19 @@ class Events extends \CEHD\App\XML\XML
      *
      * @param str $xml_string - XML
      */
-    function __construct($xml_string)
+    public function __construct($xml_string)
     {
         $xml = $this->xmlStringToObject($xml_string);
         $count = (int) $xml->attributes()["totalCount"];
 
-        if ($xml)
-        {
-            if ($count > 0)
-            {
-                foreach($xml->event as $event)
-                {
+        if ($xml) {
+            if ($count > 0) {
+                foreach ($xml->event as $event) {
                     array_push($this->events, new Event($event));
                 }
             }
-        }
-        else
-        {
-            foreach($this->_errors as $msg)
-            {
+        } else {
+            foreach ($this->_errors as $msg) {
                 throw new \Exception($msg);
             }
 
@@ -364,13 +358,14 @@ class Events extends \CEHD\App\XML\XML
      *
      * @return int
      */
-    public function get_count() {
+    public function get_count()
+    {
         return count($this->events);
     }
 
-    public function parse() {
-        foreach ($this->events as $event)
-        {
+    public function parse()
+    {
+        foreach ($this->events as $event) {
             // do stuff
         }
     }
