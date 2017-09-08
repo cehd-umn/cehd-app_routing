@@ -414,6 +414,19 @@ nav {
     }
 }
 
+@media all and (max-width: 768px) {
+    #top-level-diversity-inclusion {
+        .top-level-link {
+            display: block;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+
 #main-nav-home-link {
     height: 23px;
     margin: 0 auto;

@@ -1641,7 +1641,7 @@
   template_data:
     - section: teaching
 /teaching/workshop/co-teaching-pairs/:
-  publish: false
+  publish: true
   template: cehd/teaching/workshop/co-teaching-pairs.html
   template_data:
     - section: teaching
@@ -2405,6 +2405,16 @@
   template: cehd/trio/services/academics.html
   template_data:
     - section: trio
+/trio/services/andicoechea/:
+  publish: true
+  template: cehd/trio/services/andicoechea.html
+  template_data:
+    - section: trio
+/trio/services/correale/:
+  publish: true
+  template: cehd/trio/services/correale.html
+  template_data:
+    - section: trio
 /trio/services/finances/:
   publish: true
   template: cehd/trio/services/finances.html
@@ -2413,6 +2423,11 @@
 /trio/services/munoz/:
   publish: true
   template: cehd/trio/services/munoz.html
+  template_data:
+    - section: trio
+/trio/services/ortiz/:
+  publish: true
+  template: cehd/trio/services/ortiz.html
   template_data:
     - section: trio
 /trio/services/services/:
