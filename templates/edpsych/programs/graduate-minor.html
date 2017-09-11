@@ -1,11 +1,11 @@
 {% extends "edpsych/layout/section.html" %}
-{% set page_title = "Graduate minor: educational psychology" %}
+{% set page_title = "Graduate minor in educational psychology" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="h1">{{ page_title }}</h2>
-          <div class="twothirds">
+        <h2 class="text-center">{{ page_title }}</h2>
+          <div class="twothirds feature">
             <p>The Department of Educational Psychology's graduate minor is for M.A. and Ph.D. students in another program at the University of Minnesota who are interested in a minor in educational psychology.</p>
           </div>
     </div>
@@ -15,14 +15,14 @@
     <section>
     <div class="half">
           <h3 class="margin-top-1">Requirements</h3>
-          <p class="pull-quote">Minor at a master's level</p>
-          <p>Requires at least 6 credits of graduate-level EPSY sources</p>
-          <p class="pull-quote">Doctoral minor</p>
+          <h4>Minor at a master's level</h4>
+          <p>Requires at least 6 credits of graduate-level EPSY courses</p>
+          <h4>Doctoral minor</h4>
             <ul>
               <li>Requires at least 12 credits of graduate-level EPSY courses</li>
               <li>9 credits must be in 8xxx courses</li>
             </ul>
-          <p class="pull-quote">All minors</p>
+          <h4>All minors</h4>
             <ul>
               <li>A-F grading only</li>
               <li>Note: <a href="{{ config.base_url }}/programs/qme/minor/">specific requirements</a> for minor with an emphasis in QME.</li>
@@ -43,8 +43,10 @@
         </div>
     </section>
     <section>
-    <h3>Contact</h3>
-    <p>For more information, email: <a href="mailto:epsy-adm@umn.edu">epsy-adm@umn.edu.</a></p>
+      <div class="twothirds feature">
+        <h3 class="text-center">Contact</h3>
+        <p>For more information, email <a href="mailto:epsy-adm@umn.edu">epsy-adm@umn.edu.</a></p>
+      </div>
   </section>
   </div>
 </div>

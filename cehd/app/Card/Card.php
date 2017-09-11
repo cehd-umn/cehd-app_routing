@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App\Card;
+
 require_once __DIR__ . "/../../../vendor/autoload.php";
 require_once __DIR__ . '/../../../cehd/app/Base.php';
 
@@ -56,14 +57,11 @@ abstract class Card extends BaseClass
     {
         $valid = true;
 
-        if (!is_array($card))
-        {
+        if (!is_array($card)) {
             $msg = "card data must be in an associative array" . "\n\n" . var_export($card, true) . "\n";
             $valid = false;
             throw new InvalidTypeException($msg);
-        }
-        else if ($this->arrayContains("publish", $card) && !is_bool($card["publish"]))
-        {
+        } elseif ($this->arrayContains("publish", $card) && !is_bool($card["publish"])) {
             $msg = "card data must contain a publish status that is boolean" . "\n\n" . var_export($card, true) . "\n";
             $valid = false;
             throw new InvalidTypeException($msg);
@@ -76,10 +74,8 @@ abstract class Card extends BaseClass
             "meta",
         ];
 
-        foreach ($cards_should_have as $card_should_have)
-        {
-            if ($this->arrayDoesNotContain($card_should_have, $card))
-            {
+        foreach ($cards_should_have as $card_should_have) {
+            if ($this->arrayDoesNotContain($card_should_have, $card)) {
                 $msg = "card data must contain a " . $card_should_have . " element" . "\n\n" . var_export($card, true) . "\n";
                 $valid = false;
                 throw new MissingElementException($msg);
@@ -93,13 +89,10 @@ abstract class Card extends BaseClass
     {
         $valid = true;
 
-        if ($this->categoryKeyExists($key))
-        {
+        if ($this->categoryKeyExists($key)) {
             $valid = false;
             throw new InvalidKeyException("The key " . $key . " is already in use.");
-        }
-        else if (gettype($category) !== "string")
-        {
+        } elseif (gettype($category) !== "string") {
             $valid = false;
             throw new InvalidTypeException("'" . $category .
                 "' should be a string. Got " . gettype($category) .
@@ -116,28 +109,19 @@ abstract class Card extends BaseClass
 
     public function addCategory($category, $key=null)
     {
-        try
-        {
-            if ($this->_validateCategory($category, $key))
-            {
-                if (!$key)
-                {
+        try {
+            if ($this->_validateCategory($category, $key)) {
+                if (!$key) {
                     $key = $this->hyphenate($category);
                 }
 
                 $this->_categories[$key] = $category;
             }
-        }
-        catch (InvalidKeyException $e)
-        {
+        } catch (InvalidKeyException $e) {
             echo "Invalid key: " . $e->getMessage();
-        }
-        catch (InvalidTypeException $e)
-        {
+        } catch (InvalidTypeException $e) {
             echo "Invalid type: " . $e->getMessage();
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             echo "Exception: " . $e->getMessage();
         }
     }
@@ -149,8 +133,7 @@ abstract class Card extends BaseClass
 
     public function getCategory($key)
     {
-        if (array_key_exists($key, $this->_categories))
-        {
+        if (array_key_exists($key, $this->_categories)) {
             return $this->_categories[$key];
         }
     }
@@ -174,30 +157,23 @@ abstract class Card extends BaseClass
 
     public function getLink($key)
     {
-        if (array_key_exists($key, $this->links))
-        {
+        if (array_key_exists($key, $this->links)) {
             return $this->links[$key];
         }
     }
 
     public function setCard($title, $card)
     {
-        try
-        {
-            if ($this->_validateCard($card) === true)
-            {
-                if ($card["categories"])
-                {
-                    foreach($card["categories"] as $category)
-                    {
+        try {
+            if ($this->_validateCard($card) === true) {
+                if ($card["categories"]) {
+                    foreach ($card["categories"] as $category) {
                         $this->addCategory($category);
                     }
                 }
 
-                if (array_key_exists("links", $card) && $card["links"])
-                {
-                    foreach($card["links"] as $link)
-                    {
+                if (array_key_exists("links", $card) && $card["links"]) {
+                    foreach ($card["links"] as $link) {
                         $this->addLink($link);
                     }
                     asort($this->links);
@@ -217,21 +193,13 @@ abstract class Card extends BaseClass
 
                 return $this;
             }
-        }
-        catch (InvalidKeyException $e)
-        {
+        } catch (InvalidKeyException $e) {
             echo "Invalid key: " . $e->getMessage() . "\n";
-        }
-        catch (MissingElementException $e)
-        {
+        } catch (MissingElementException $e) {
             echo "Missing element: " . $e->getMessage() . "\n";
-        }
-        catch (InvalidTypeException $e)
-        {
+        } catch (InvalidTypeException $e) {
             echo "Invalid type: " . $e->getMessage() . "\n";
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             echo "Exception: " . $e->getMessage() . "\n";
         }
     }
@@ -263,8 +231,7 @@ abstract class CardGroup extends BaseClass
 
     public function getCard($key)
     {
-        if ($this->cardExists($key))
-        {
+        if ($this->cardExists($key)) {
             return $this->_cards[$key];
         }
     }
@@ -276,8 +243,7 @@ abstract class CardGroup extends BaseClass
 
     public function putCard($key, $card)
     {
-        if ($this->cardExists($key) && $this->_isValidCardInstance($card))
-        {
+        if ($this->cardExists($key) && $this->_isValidCardInstance($card)) {
             $this->_cards[$key] = $card;
         }
         return $this;
@@ -286,11 +252,9 @@ abstract class CardGroup extends BaseClass
     public function getCategories()
     {
         $results = [];
-        foreach ($this->_cards as $card)
-        {
+        foreach ($this->_cards as $card) {
             $categories = $card->getCategories();
-            foreach ($categories as $key => $category)
-            {
+            foreach ($categories as $key => $category) {
                 $results[$key] = $category;
             }
         }
@@ -300,8 +264,7 @@ abstract class CardGroup extends BaseClass
 
     public function nullifyDescriptions()
     {
-        foreach ($this->_cards as &$card)
-        {
+        foreach ($this->_cards as &$card) {
             $card->description = null;
         }
         return $this;

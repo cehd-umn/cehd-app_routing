@@ -1,54 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Ooops! No Page Here" %}
 {% block title %}{{ page_title }}{% endblock %}
-{% block extra_css %}
-<style>
-@media all and (min-width: 1200px) {
-    @keyframes circle {
-        from {
-            transform: scale(6);
-            border-color: #900021;
-        }
-        to {
-            transform: scale(0);
-            border-color: #fff;
-        }
-    }
-
-    .circle {
-        border-radius: 50%;
-        border: 20px solid #ebebeb;
-        height: 300px;
-        left: 25%;
-        margin: 0 auto;
-        position: absolute;
-        top: 5%;
-        width: 300px;
-    }
-
-    .one {
-        animation: circle 4s infinite linear;
-    }
-
-    .two {
-        animation: circle 3s infinite linear;
-    }
-
-    .three {
-        animation: circle 2s infinite linear;
-    }
-
-    .container {
-        z-index: 1;
-    }
-
-    .circle-container {
-        min-height: 600px;
-        z-index: 0;
-    }
-}
-</style>
-{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
@@ -56,9 +8,6 @@
             <div class="circle-container">
                 <h1>{{ page_title }}</h1>
                 <p>Try the search bar at the top.</p>
-                <div class="circle one"></div>
-                <div class="circle two"></div>
-                <div class="circle three"></div>
             </div>
         </div>
     </div>

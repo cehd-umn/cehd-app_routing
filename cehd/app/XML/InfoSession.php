@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\XML\InfoSession;
+
 require_once __DIR__ . '/../../../cehd/app/XML/Event.php';
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
@@ -25,45 +26,45 @@ class InfoSession extends \CEHD\XML\Event\Event
      * Class properties
      */
 
-     /**
-      * @type string
-      */
-     public $code;
+    /**
+     * @type string
+     */
+    public $code;
 
-     /**
-      * @type string
-      */
-     public $contact;
+    /**
+     * @type string
+     */
+    public $contact;
 
-     /**
-      * @type string
-      */
-     public $dateChange;
+    /**
+     * @type string
+     */
+    public $dateChange;
 
-     /**
-      * @type string
-      */
-     public $degree;
+    /**
+     * @type string
+     */
+    public $degree;
 
-     /**
-      * @type string
-      */
-     public $email;
+    /**
+     * @type string
+     */
+    public $email;
 
-     /**
-      * @type string
-      */
-     public $eventId;
+    /**
+     * @type string
+     */
+    public $eventId;
 
-     /**
-      * @type string
-      */
-     public $openSeats;
+    /**
+     * @type string
+     */
+    public $openSeats;
 
-     /**
-      * @type string
-      */
-     public $phone;
+    /**
+     * @type string
+     */
+    public $phone;
 
     /**
      * Class methods
@@ -74,7 +75,7 @@ class InfoSession extends \CEHD\XML\Event\Event
      *
      * @param obj $session - XML object representing an info session
      */
-    function __construct($session)
+    public function __construct($session)
     {
         parent::__construct($session);
 
@@ -156,21 +157,16 @@ class InfoSessions extends \CEHD\App\XML\XML
      *
      * @param str $xml_string - XML
      */
-    function __construct($xml_string)
+    public function __construct($xml_string)
     {
         $xml = $this->xmlStringToObject($xml_string);
 
-        if ($xml)
-        {
-            foreach($xml->channel->item as $infoSession)
-            {
+        if ($xml) {
+            foreach ($xml->channel->item as $infoSession) {
                 array_push($this->infoSessions, new infoSession($infoSession));
             }
-        }
-        else
-        {
-            foreach($this->_errors as $msg)
-            {
+        } else {
+            foreach ($this->_errors as $msg) {
                 throw new \Exception($msg);
             }
 
@@ -183,7 +179,8 @@ class InfoSessions extends \CEHD\App\XML\XML
      *
      * @return int
      */
-    public function get_count() {
+    public function get_count()
+    {
         return count($this->infoSessions);
     }
 }

@@ -46,7 +46,7 @@
   template_data:
     - section: home
 /directory/:
-  template: cehd/directory.html
+  template: cehd/directory/index.html
   publish: true
   template_data:
     - section: home
@@ -1050,11 +1050,6 @@
   template: cehd/diversity/cgc.html
   template_data:
     - section: diversity
-/events/:
-  publish: true
-  template: cehd/events/index.html
-  template_data:
-    - section: events
 /events/block-party/:
   publish: true
   template: cehd/events/block-party.html
@@ -1065,9 +1060,34 @@
   template: cehd/events/fall-assembly.html
   template_data:
     - section: events
+/events/grad-networking/:
+  publish: true
+  template: cehd/events/grad-networking.html
+  template_data:
+    - section: events
+/events/homecoming/:
+  publish: true
+  template: cehd/events/homecoming.html
+  template_data:
+    - section: events
+/events/thanksgiving/:
+  publish: true
+  template: cehd/events/thanksgiving.html
+  template_data:
+    - section: events
+/events/saturday-scholars/:
+  publish: true
+  template: cehd/events/saturday-scholars.html
+  template_data:
+    - section: events
 /events/slifer/:
   publish: true
   template: cehd/events/slifer.html
+  template_data:
+    - section: events
+/events/undergrad-networking/:
+  publish: true
+  template: cehd/events/undergrad-networking.html
   template_data:
     - section: events
 
@@ -1350,9 +1370,9 @@
   template: cehd/reads/previous-books/index.html
   template_data:
     - section: reads
-/reads/previous-books/gains/:
+/reads/previous-books/gaines/:
   publish: true
-  template: cehd/reads/previous-books/gains.html
+  template: cehd/reads/previous-books/gaines.html
   template_data:
     - section: reads
 /reads/previous-books/moore/:
@@ -1583,6 +1603,21 @@
 /teaching/co-teaching/pairs/triad/:
   publish: true
   template: cehd/teaching/co-teaching/pairs/triad.html
+  template_data:
+    - section: teaching
+/teaching/partner/network-day/:
+  publish: false
+  template: cehd/teaching/partner/network-day.html
+  template_data:
+    - section: teaching
+/teaching/workshop/co-teaching-pairs/:
+  publish: true
+  template: cehd/teaching/workshop/co-teaching-pairs.html
+  template_data:
+    - section: teaching
+/teaching/workshop/new-teacher/:
+  publish: true
+  template: cehd/teaching/workshop/new-teacher.html
   template_data:
     - section: teaching
 /teri/:
@@ -2340,6 +2375,16 @@
   template: cehd/trio/services/academics.html
   template_data:
     - section: trio
+/trio/services/andicoechea/:
+  publish: true
+  template: cehd/trio/services/andicoechea.html
+  template_data:
+    - section: trio
+/trio/services/correale/:
+  publish: true
+  template: cehd/trio/services/correale.html
+  template_data:
+    - section: trio
 /trio/services/finances/:
   publish: true
   template: cehd/trio/services/finances.html
@@ -2348,6 +2393,11 @@
 /trio/services/munoz/:
   publish: true
   template: cehd/trio/services/munoz.html
+  template_data:
+    - section: trio
+/trio/services/ortiz/:
+  publish: true
+  template: cehd/trio/services/ortiz.html
   template_data:
     - section: trio
 /trio/services/services/:
@@ -2380,6 +2430,11 @@
   template: cehd/trio/upward-bound/apply.html
   template_data:
     - section: trio
+/trio/upward-bound/cooper/:
+  publish: true
+  template: cehd/trio/upward-bound/cooper.html
+  template_data:
+    - section: trio
 /trio/upward-bound/hollenback/:
   publish: true
   template: cehd/trio/upward-bound/hollenback.html
@@ -2388,11 +2443,6 @@
 /trio/upward-bound/jobs/:
   publish: true
   template: cehd/trio/upward-bound/jobs.html
-  template_data:
-    - section: trio
-/trio/upward-bound/nelson/:
-  publish: true
-  template: cehd/trio/upward-bound/nelson.html
   template_data:
     - section: trio
 /trio/upward-bound/people/:

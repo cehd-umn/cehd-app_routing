@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App\Search;
+
 require_once __DIR__ . '/../../../vendor/autoload.php';
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
@@ -69,7 +70,7 @@ class Search extends \CEHD\App\XML\XML
      * </code>
      *
      */
-    function __construct($sites)
+    public function __construct($sites)
     {
         $this->_http_client = $this->bootstrapHTTPClient([]);
         $this->_sites = $sites;
@@ -97,8 +98,7 @@ class Search extends \CEHD\App\XML\XML
      */
     private function _getStart($params)
     {
-        if (array_key_exists('start', $params))
-        {
+        if (array_key_exists('start', $params)) {
             return $params['start'];
         }
 
@@ -114,8 +114,7 @@ class Search extends \CEHD\App\XML\XML
      */
     private function _getSites($params)
     {
-        if (array_key_exists('sites', $params))
-        {
+        if (array_key_exists('sites', $params)) {
             return $params['sites'];
         }
 
@@ -131,8 +130,7 @@ class Search extends \CEHD\App\XML\XML
      */
     private function _getNum($params)
     {
-        if (array_key_exists('num', $params))
-        {
+        if (array_key_exists('num', $params)) {
             return $params['num'];
         }
 
@@ -150,10 +148,8 @@ class Search extends \CEHD\App\XML\XML
         $results = [];
         $i = 0;
 
-        if ($obj->RES->R)
-        {
-            foreach ($obj->RES->R as $result_set)
-            {
+        if ($obj->RES->R) {
+            foreach ($obj->RES->R as $result_set) {
                 $results[$i] = [
                     "title" => (string) $result_set->T,
                     "description" => (string) $result_set->S,
@@ -176,7 +172,7 @@ class Search extends \CEHD\App\XML\XML
      * request to the search appliance
      * @return array - An associative array of the search results
      */
-    private function _get($query_params, $site)
+    private function _get($query_params, $url, $client, $site)
     {
         $start = $this->_getStart($query_params);
 
@@ -188,13 +184,18 @@ class Search extends \CEHD\App\XML\XML
             'query' => [
                 'q' => $query,
                 'start' => $start,
-                'as_sitesearch' => $site,
+                'in_url' => $url,
+                'site' => $site,
+                'client' => $client,
                 'num' => $num,
             ]
         ];
 
         $client_response = $this->_http_client->request(
-            "GET", $this->_base_url, $client_query_data);
+            "GET",
+            $this->_base_url,
+            $client_query_data
+        );
 
         $xml_obj = $this->xmlStringToObject($client_response->getBody());
 
@@ -212,14 +213,16 @@ class Search extends \CEHD\App\XML\XML
     {
         $results = [];
 
-        if ($this->_validateQueryParams($query_params))
-        {
+        if ($this->_validateQueryParams($query_params)) {
             $site_keys = $this->_getSites($query_params);
 
-            foreach ($site_keys as $site_key)
-            {
+            foreach ($site_keys as $site_key) {
                 $result =$this->_get(
-                    $query_params, $this->_sites[$site_key]["url"]);
+                    $query_params,
+                    $this->_sites[$site_key]["url"],
+                    $this->_sites[$site_key]["client"],
+                    $this->_sites[$site_key]["site"]
+                );
 
                 $results[$site_key] = [
                     "name" => $this->_sites[$site_key]["name"],

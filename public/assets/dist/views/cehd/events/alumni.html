@@ -3,7 +3,7 @@
         {% for event in data.events %}
             {% if loop.index0 < data.limit %}
                 <li>
-                    {{ event.dateMD }}: <a href="{{ event.link }}">{{ event.title }}</a>
+                    {{ event.dateMD }}: <a href="{{ event.link }}">{{ event.title }}, {{ event.year }}</a>
                 </li>
             {% endif %}
         {% endfor %}

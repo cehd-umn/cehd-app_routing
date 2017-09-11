@@ -20,7 +20,7 @@ gulp.task("default", function() {
     );
 });
 
-gulp.task("cehd-sass-task", function() {
+gulp.task("cehd-sass-task-dev", function() {
     return gulp.src("./public/assets/src/sass/cehd.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
@@ -28,27 +28,27 @@ gulp.task("cehd-sass-task", function() {
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
+gulp.task("cehd-sass-task", function() {
+    return gulp.src("./public/assets/src/sass/cehd.scss")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
 gulp.task("cehd-inline-sass-task", function() {
     return gulp.src("./public/assets/src/sass/inline/inline.scss")
-    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(sourcemaps.write("assets/maps"))
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
 gulp.task("cehd-forms-sass-task", function() {
     return gulp.src("./public/assets/src/sass/forms/forms.scss")
-    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(sourcemaps.write("assets/maps"))
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
 gulp.task("cehd-svg-sass-task", function() {
     return gulp.src("./public/assets/src/sass/svg/svg.scss")
-    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(sourcemaps.write("assets/maps"))
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
@@ -57,9 +57,31 @@ gulp.task("cehd-javascript", function () {
   var b = browserify({
     entries: [
         "./public/assets/src/js/cehd.js",
+        "./public/assets/src/js/ga.js",
+        "./public/assets/src/js/helpers.js",
         "./public/assets/src/js/http_client.js",
         "./public/assets/src/js/renderer.js",
+        "./public/assets/src/js/search_client.js",
+    ],
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source("./public/assets/src/js/cehd.js"))
+    .pipe(buffer())
+    .pipe(rename("js/cehd.min.js"))
+    .pipe(gulp.dest("./public/assets/dist"));
+});
+
+gulp.task("cehd-javascript-dev", function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: [
+        "./public/assets/src/js/cehd.js",
+        "./public/assets/src/js/ga.js",
         "./public/assets/src/js/helpers.js",
+        "./public/assets/src/js/http_client.js",
+        "./public/assets/src/js/renderer.js",
         "./public/assets/src/js/search_client.js",
     ],
     debug: true
@@ -112,6 +134,28 @@ gulp.task("edpsych-javascript", function () {
         "./public/edpsych/assets/src/js/renderer.js",
         "./public/edpsych/assets/src/js/helpers.js",
         "./public/edpsych/assets/src/js/search_client.js",
+        "./public/assets/src/js/ga.js",
+    ],
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source("./public/edpsych/assets/src/js/edpsych.js"))
+    .pipe(buffer())
+    .pipe(rename("js/edpsych.min.js"))
+    .pipe(gulp.dest("./public/edpsych/assets/dist"));
+});
+
+gulp.task("edpsych-javascript-dev", function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: [
+        "./public/edpsych/assets/src/js/edpsych.js",
+        "./public/edpsych/assets/src/js/http_client.js",
+        "./public/edpsych/assets/src/js/renderer.js",
+        "./public/edpsych/assets/src/js/helpers.js",
+        "./public/edpsych/assets/src/js/search_client.js",
+        "./public/assets/src/js/ga.js",
     ],
     debug: true
   });
@@ -129,6 +173,12 @@ gulp.task("edpsych-javascript", function () {
 });
 
 gulp.task("edpsych-sass-minified-task", function() {
+    return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(gulp.dest("./public/edpsych/assets/dist/css/minified/"));
+});
+
+gulp.task("edpsych-sass-minified-task-dev", function() {
     return gulp.src("./public/edpsych/assets/src/sass/edpsych.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))

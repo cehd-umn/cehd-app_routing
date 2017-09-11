@@ -13,23 +13,30 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     private $_search_client;
 
-    private $_searchApplianceSites;
+    protected $_searchApplianceSites;
 
-    function __construct($file_paths)
+    public function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
+        // @todo put this into the config file
         $this->_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "Educational Psychology",
+                    "site" => "tc_education",
                     "url" => "www.cehd.umn.edu/edpsych/",
                 ],
                 "secondary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "tertiary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -40,24 +47,20 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         }
 
         $this->template->addGlobal("cehd_edpsych_nav_open", $this->nav_open);
+
+        $this->router->onHttpError([$this, 'errorPageHandler']);
+    }
+
+    public function errorPageHandler($code=404, $router)
+    {
+        $html = $this->_renderTemplate('edpsych/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        // Lazily load the search client so it"s not loaded on unrelated
-        // requests
-        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
-        $query_data = $request->params();
-        $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary", "tertiary"],
-        ];
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "query" => $query_data["q"],
-        ];
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate("edpsych/search.html", $template_data);
     }
 
@@ -77,18 +80,15 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $query = [];
 
         // Strip out extraneous query params
-        if (array_key_exists("en", $query_data))
-        {
+        if (array_key_exists("en", $query_data)) {
             $query["en"] = $query_data["en"];
         };
 
-        if (array_key_exists("tg", $query_data))
-        {
+        if (array_key_exists("tg", $query_data)) {
             $query["tg"] = $query_data["tg"];
         };
 
-        if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data))
-        {
+        if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => $query];
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
@@ -103,8 +103,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $query_data = $request->params();
         $base_url =  "https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx";
 
-        if (array_key_exists("internetId", $query_data))
-        {
+        if (array_key_exists("internetId", $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => [
                 "id" => $query_data["internetId"
@@ -120,8 +119,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
-        if (array_key_exists("feed-path", $query_data))
-        {
+        if (array_key_exists("feed-path", $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $request_url = $base_url . $query_data["feed-path"];
             $client_response = $http_client->request("GET", $request_url);
@@ -145,7 +143,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 "q" => $query_data["q"],
                 ]
             ];
-            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $events =  new \CEHD\XML\Event\Events($client_response->getBody());
             $response->sendJSONResponse(json_encode($events->events));
         }
@@ -163,16 +161,13 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "t",
         ];
 
-        foreach ($valid_query_params as $valid_query_param)
-        {
-            if (array_key_exists($valid_query_param, $query_data))
-            {
+        foreach ($valid_query_params as $valid_query_param) {
+            if (array_key_exists($valid_query_param, $query_data)) {
                 $client_query_data["query"][$valid_query_param] = $query_data[$valid_query_param];
             }
         }
 
-        if (!empty($client_query_data))
-        {
+        if (!empty($client_query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
@@ -216,8 +211,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . "/../../../cehd/config/edpsych/people/index.yml";
         $section_data = $this->loadYaml($yaml_file_path);
 
-        foreach ($section_data as $key => $section)
-        {
+        foreach ($section_data as $key => $section) {
             $section_data[$key]["section_hyphenated"] = $this->hyphenate($section_data[$key]["section"]);
         };
 

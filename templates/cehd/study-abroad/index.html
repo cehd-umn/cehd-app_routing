@@ -3,56 +3,62 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
+  <div class="container">
+    <h1>Study and research abroad</h1>
+    <div class="row">
+      <div class="twothird feature">
+        <h2>Transform yourself and your future. </h2>
+        <p>Time abroad is more than just travel. Experiencing a new culture first-hand will expand and deepen how you think about the world, and yourself.</p>
+        <p>In addition to fostering in-demand "soft skills" like empathy and cross-cultural communication, study abroad has been shown to <a href="http://globaledresearch.com/study-abroad-impact.asp">contribute to better grades and on-time graduation.</a></p>
+      </div>
+    </div>
+  </div>
+  {# import the macro #} {%- import "macros/svg.html" as svg -%}
+  <div class="row emphasis">
     <div class="container">
-        <h1>Study and research abroad</h1>
-        <div class="row">
-            <div class="twothird feature">
-                <h2>Transform yourself and your future. </h2>
-                <p>Time abroad is more than just travel. Experiencing a new culture first-hand will expand and deepen how you think about the world, and yourself.</p>
-                <p>In addition to fostering in-demand "soft skills" like empathy and cross-cultural communication, study abroad has been shown to <a href="http://globaledresearch.com/study-abroad-impact.asp">contribute to better grades and on-time graduation.</a></p>
-            </div>
-        </div>
+      <div class="half feature margin-top-1">
+        {# create an array of 2-5 short lines of text #} {% set lines = [ "Your financial aid may transfer", "to a study abroad program.", "Over 275 scholarships", "are available, ranging from", " $750 to over $10,000.", ] %} {# call the macro #} {{ svg.did_you_know(_context,
+        "Did you know facts", "Did you know", lines) }}
+      </div>
     </div>
-    {# import the macro #} {%- import "macros/svg.html" as svg -%}
-    <div class="row emphasis">
-        <div class="container">
-            <div class="half feature margin-top-1">
-                {# create an array of 2-5 short lines of text #} {% set lines = [ "Your financial aid may transfer", "to a study abroad program.", "Over 275 scholarships", "are available, ranging from", " $750 to over $10,000.", ] %} {# call the macro #} {{ svg.did_you_know(_context,
-                "Did you know facts", "Did you know", lines) }}
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 <div class="margin-top-2">
 </div>
 <div class="row emphasis cool margin-top-1">
-    <div class="container">
-        <h2>Upcoming destinations</h2>
-        <div class="third">
-            <img class="circular" src="/assets/images/global/thailand-sq2.jpg" alt="Women in Thailand">
-            <h3><a href="https://umabroad.umn.edu/programs/asia-oceania/thailand-change/">Global change, community, and families in Thailand</a></h3>
-            <p><strong>Summer 2017</strong><br />
-                <strong>Instructors:</strong> Dr. Catherin Solheim and Linda Buturian </p>
-            <p>This interdisciplinary course uses a human ecological lens and a sustainability studies framework to examine global change that is occurring at the intersection of the natural environment in Thailand; particularly rivers and water, community,
-                families, and culture. Students will contribute through service learning to the social change work that is being enacted through key non-governmental organizations in Thailand. </p>
-        </div>
-        <div class="third">
-            <img class="circular" src="/assets/images/global/france-sq1.jpg" alt="Street scene in France">
-            <h3><a href="https://umabroad.umn.edu/programs/europe/london-olympics/about">Impact of the London Olympics: 1908, 1948, 2012</a></h3>
-            <p><strong>Winter 2018</strong><br />
-                <strong>Instructor:</strong> Don Dengel </p>
-            <p>The city of London, England has hosted the Summer Olympic Games on three separate occasions (e.g., 1908, 1948 &amp; 2012). This is more than any other city in the history of the modern Olympics. More importantly in hosting the three Olympic
-                Games is the timing of these Olympic Games in relationship to the history of the United Kingdom.
-            </p>
-        </div>
-        <div class="third">
-            <img class="circular" src="/assets/images/global/brazil-sq1.jpg" alt="Brazillian city buildings">
-            <h3><a href="https://umabroad.umn.edu/programs/americas/cgp-jamaica/about">Jamaica: Colonization, Black Identity, Slavery, and Education</a></h3>
-            <p><strong>Winter 2018</strong><br />
-                <strong>Instructor:</strong> Na'im Madyun </p>
-            <p>This course explores issues related to African Heritage and Slavery in the context of Jamaica. It aims to provide students with an opportunity to reflect on the history of slavery and its impact on today's social, political, and economic context.
-                Additionally, the course hopes to create a space for students to reflect on their global identity in the historical context of African Heritage and slavery.</p>
-        </div>
+  <div class="container">
+    <h2>Upcoming destinations</h2>
+    <div class="third">
+      <img class="circular" src="/assets/images/global/brazil-sq1.jpg" alt="Brazillian city buildings">
+      <h3>History and Culture of Cuba</h3>
+      <p><strong>Fall 2017/Winter 2018</strong><br />
+        <strong>Instructors:</strong> Associate Professor Laura Coffin Koch; Adjunct faculty Melisa Riviere; and Keitha-Gail Martin-Kerr, Lecturer</p>
+      <p>The two components of this course are a Fall B-term class (11/20/2017 – 12/14/2017) on campus and winter break (12/27/2017-1/14/2018) spent in Cuba. </p>
+      <p>
+        This course will focus on the history and culture of Cuba from 1959 to present. How could a country, the size of California, which has been isolated and ignored by many developed countries have one of the highest literacy rates in the world? Seminars
+        and site visits will emphasize the historical and contemporary roles of Cuba’s literacy campaigns.
+      </p>
+    </div>
+
+    <div class="third">
+      <img class="circular" src="/assets/images/global/jamaica-sq3.jpg" alt="Jamaican City">
+      <h3><a href="https://umabroad.umn.edu/programs/americas/cgp-jamaica/about">Jamaica: Colonization, Black Identity, Slavery, and Education</a></h3>
+      <p><strong>Winter 2018</strong><br />
+        <strong>Instructor:</strong> Associate Professors Na’im Madyun and Muhammad Khalifa. </p>
+      <p>The two components of this course are a Fall B-term class (11/20/2017 – 12/14/2017) on campus and winter break (12/27/2017-1/14/2018) spent in in Jamaica. </p>
+      <p>This course explores issues related to African Heritage and Slavery in the context of Jamaica. It aims to provide students with an opportunity to reflect on the history of slavery and its impact on today's social, political, and economic context.
+        Additionally, the course hopes to create a space for students to reflect on their global identity in the historical context of African Heritage and slavery.</p>
+    </div>
+    <div class="third">
+      <img class="circular" src="/assets/images/global/france-sq1.jpg" alt="Street scene in France">
+      <h3>Surprising Singapore: Cultural Intelligence, Innovation and Educatiom</h3>
+      <p><strong>Fall 2017/Winter 2018</strong><br />
+        <strong>Instructor:</strong>TBD </p>
+      <p>The two components of this course are a Fall B-term class (11/27/2017 – 12/14/2017) on campus and winter break (12/27/2017-1/14/2018) spent in Singapore.</p>
+      <p>Singapore is a dynamic, cosmopolitan city-state where diverse cultures, ethnic groups and religions blend harmoniously, offering a rich spectrum of experiences. Students will literally and figuratively feast on the sights, sounds, cultures, food,
+        festivals, and religions and be surprised by Singapore. </p>
+    </div>
+
     </div><!--container-->
     <div>
         <p class="text-center"><a href="/study-abroad/locations" class="button center">View more study abroad programs</a></p>
@@ -71,7 +77,7 @@
     <a href="https://umabroad.umn.edu/students/maps/cehd/busmktgedu">Business and marketing education</a></strong></li>
                 <li>
                     <strong>
-    <a href="https://umabroad.umn.edu/students/maps/cehd/earlychildhood">Early childhood education foundations</a></strong></li>
+    <a href="https://umabroad.umn.edu/students/maps/cehd/earlychildhood">Early childhood</a></strong></li>
                 <li>
                     <strong>
     <a href="https://umabroad.umn.edu/students/maps/cehd/elementary">Elementary education foundations</a></strong></li>

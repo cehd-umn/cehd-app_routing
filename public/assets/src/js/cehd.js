@@ -19,12 +19,11 @@ $tracking_elements.on("click", function(event) {
     var label = $element.data("ga-label");
     var href = window.Helpers.getHref($element);
 
-    window.ga(command, hit_type, category, action, label);
-
-    setTimeout(function() {
+    window.ga(command, hit_type, category, action, label, {
+        hitCallback: function () {
             location.href = href;
-        },
-    400);
+        }
+    });
 });
 
 $.fn.extend({

@@ -20,6 +20,7 @@
       headshot: /assets/images/giving/appointments/LewisC-2016.jpg
       profile: http://www.cehd.umn.edu/ci/people/profiles/lewis.html
       department: http://www.cehd.umn.edu/ci/
+-
   - heading: Guy Bond Chair in Reading
     name: Deborah Dillon
     titles:
@@ -30,7 +31,6 @@
       headshot: /assets/images/giving/appointments/DillonD-2005.jpg
       profile: http://www.cehd.umn.edu/ci/People/profiles/dillon.html
       department: http://www.cehd.umn.edu/ci/
--
   - heading: Guy Bond Chair in Reading
     name: Panayiota Kendeou
     titles:
@@ -41,6 +41,7 @@
       headshot: /assets/images/giving/appointments/kendeou_2.jpeg
       profile: http://www.cehd.umn.edu/edpsych/people/kend0040/
       department: http://www.cehd.umn.edu/edpsych/
+-
   - heading: Campbell Leadership Chair in Education and Human Development
     name: Michael Rodriguez
     titles:
@@ -82,6 +83,7 @@
       headshot: /assets/images/giving/appointments/ArdichviliA-2013.jpg
       profile: http://www.cehd.umn.edu/olpd/people/faculty/ardichvili.asp
       department: http://www.cehd.umn.edu/olpd/
+-
   - heading: Bonnie Westby Huebner Endowed Chair in Education and Technology
     name: Aaron Doering
     titles:
@@ -92,7 +94,6 @@
       headshot: /assets/images/giving/appointments/DoeringA-2014.jpg
       profile: http://www.cehd.umn.edu/ci/people/profiles/doering.html
       department: http://www.cehd.umn.edu/ci/
--
   - heading: Irving Harris Professor of Child Development
     name: Ann Masten
     titles:
@@ -104,6 +105,7 @@
       headshot: /assets/images/giving/appointments/MastenA-Pref.jpg
       profile: http://www.cehd.umn.edu/icd/people/faculty/masten.html
       department: http://www.cehd.umn.edu/icd/
+-
   - heading: William Harris Professor of Child Development and Psychiatry
     name: Dante Cicchetti
     titles:
@@ -145,6 +147,7 @@
       headshot: /assets/images/giving/appointments/KaneMJ-2005.jpg
       profile: http://www.cehd.umn.edu/kin/people/maryjo.html
       department: http://www.cehd.umn.edu/kin/
+-
   - heading: John W. and Nancy E. Peyton Faculty Fellow in Child and Adolescent Wellbeing
     name: Clayton Cook
     titles:
@@ -155,7 +158,6 @@
       headshot: /assets/images/giving/appointments/CookC_2015.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/crcook/
       department: http://www.cehd.umn.edu/edpsych/
--
   - heading: Sidney and Marguerite Henry Professor of Children's and Young Adult Literature
     name: Marek Oziewicz
     titles:
@@ -166,6 +168,7 @@
       headshot: /assets/images/giving/appointments/OziewiczMarek-2014.jpg
       profile: http://www.cehd.umn.edu/ci/people/profiles/oziewicz.html
       department: http://www.cehd.umn.edu/ci/
+-
   - heading: Rodney S. Wallace Professor for the Advancement of Teaching and Learning
     name: Bic Ngo
     titles:
@@ -196,4 +199,4 @@
     urls:
       headshot: /assets/images/giving/appointments/DavisonM-2004.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/mld/
-      department: http://www.cehd.umn.edu/edpsy/
+      department: http://www.cehd.umn.edu/edpsych/

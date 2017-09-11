@@ -16,13 +16,18 @@ use CEHD\App\Card\PatternCard\PatternCards;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
-    private $_sites = [
+    // @todo put this into the config file
+    protected $_searchApplianceSites = [
                 "primary" => [
+                    "client" => "tc_education",
                     "name" => "College of Education + Human Development",
+                    "site" => "tc_education_students",
                     "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
+                    "client" => "searchumn",
                     "name" => "University of Minnesota",
+                    "site" => "default_collection",
                     "url" => "www.umn.edu",
                 ]
             ];
@@ -31,7 +36,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     private $_patternCardsInstance;
 
-    function __construct($file_paths)
+    public function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
@@ -39,30 +44,32 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal(
             "css_cachebuster",
             $this->getCacheBusterQueryString(
-                __DIR__ . "/../../../public/assets/dist/css/minified/cehd.css"));
+                __DIR__ . "/../../../public/assets/dist/css/minified/cehd.css"
+            )
+        );
 
         // Add a cachebuster for the js
         $this->template->addGlobal(
             "js_cachebuster",
             $this->getCacheBusterQueryString(
-                __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"));
+                __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"
+            )
+        );
 
         $this->router->onHttpError([$this, 'errorPageHandler']);
 
-        if (!$this->config["is_prod"])
-        {
+        if (!$this->config["is_prod"]) {
             $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/patterns.yml';
             $this->_patternCardsInstance = new PatternCards();
             $this->_patternCardsInstance->setCards($yaml_file_path);
 
-            $this->_patternLibraryData = $this->_patternCardsInstance->buildRoutesFromPatternData();;
+            $this->_patternLibraryData = $this->_patternCardsInstance->buildRoutesFromPatternData();
+            ;
 
-            foreach ($this->_patternLibraryData as $route => $card)
-            {
+            foreach ($this->_patternLibraryData as $route => $card) {
                 $handler = "patternPageHandler";
 
-                if ($card->handler)
-                {
+                if ($card->handler) {
                     $handler = $card->handler;
                 }
                 $this->router->respond('GET', $route, [$this, $handler]);
@@ -70,9 +77,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function errorPageHandler($code, $router)
+    public function errorPageHandler($code=404, $router)
     {
-        echo $this->_renderTemplate('cehd/error/404.html', []);
+        $html = $this->_renderTemplate('cehd/error/404.html', []);
+        $router->response()->status($code);
+        $router->response()->body($html);
     }
 
     public function homePageHandler($request, $response, $service, $app)
@@ -80,8 +89,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . '/../../../cehd/config/cehd/homepage_videos.yml';
         $video_data = $this->loadYaml($yaml_file_path);
 
-        foreach ($video_data as $key => $video)
-        {
+        foreach ($video_data as $key => $video) {
             $file_path = __DIR__ . "/../../../public" . $video["source"];
             $video_data[$key]["cachebuster"] = $this->getCacheBusterQueryString($file_path);
         }
@@ -100,25 +108,20 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $categories = [];
         $links = [];
 
-        foreach ($data as $item_index => $item)
-        {
+        foreach ($data as $item_index => $item) {
             $data[$item_index]["categories_hyphenated"] = [];
             $data[$item_index]["links_hyphenated"] = [];
 
-            if ($item["categories"])
-            {
-                foreach ($item["categories"] as $category_index => $category)
-                {
+            if ($item["categories"]) {
+                foreach ($item["categories"] as $category_index => $category) {
                     $hyphenated = $this->hyphenate($category);
                     array_push($data[$item_index]["categories_hyphenated"], $hyphenated);
                     $categories[$hyphenated] = $category;
                 }
             }
 
-            if (array_key_exists("links", $item) && $item["links"])
-            {
-                foreach ($item["links"] as $degree_index => $degree)
-                {
+            if (array_key_exists("links", $item) && $item["links"]) {
+                foreach ($item["links"] as $degree_index => $degree) {
                     $hyphenated = $this->hyphenate($degree["title"]);
                     array_push($data[$item_index]["links_hyphenated"], $hyphenated);
                     $links[$hyphenated] = $degree["title"];
@@ -180,8 +183,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
         $topic_data = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
 
-        if ($topic_data)
-        {
+        if ($topic_data) {
             $template_data = [
                 "section" => "topics",
                 "topic_data" => $topic_data,
@@ -193,13 +195,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function patternsHomePageHandler($request, $response, $service, $app)
     {
-        if (!$this->config["is_prod"])
-        {
+        if (!$this->config["is_prod"]) {
             $cards = $this->_patternCardsInstance->getCards();
 
             // @todo this should probably go in the pattern card class
-            foreach ($cards as $title => $pattern)
-            {
+            foreach ($cards as $title => $pattern) {
                 $path = $this->_patternCardsInstance->buildRouteFromPattern($pattern->group, $title);
                 $link = [
                     "href" => $path,
@@ -226,43 +226,20 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $group = $uri_parts[3];
         $patterns = $this->_patternCardsInstance->getGroup($group);
 
-        if ($patterns)
-        {
+        if ($patterns) {
             echo $this->_renderTemplate("cehd/patterns/patterns.html", ["patterns" => $patterns, "page_title" => $group]);
         }
     }
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
-        $query_data = $request->params();
-
-        if (array_key_exists("q", $query_data))
-        {
-            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        }
-        elseif (array_key_exists("query", $query_data))
-        {
-            $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
-        }
-
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => ["primary", "secondary"],
-        ];
-
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "query" => $search_query,
-        ];
-
+        $template_data = $this->searchRequestHandler($request);
         echo $this->_renderTemplate('cehd/search/index.html', $template_data);
     }
 
     public function searchEndpointHandler($request, $response, $service, $app)
     {
-        $search_client = new \CEHD\App\Search\Search($this->_sites);
+        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
         $query_data = $request->params();
         $results = $search_client->getResults($query_data);
         return $response->sendJSONResponse(json_encode($results));
@@ -275,26 +252,22 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $query = [];
 
         // Strip out extraneous query params
-        if (array_key_exists('en', $query_data))
-        {
+        if (array_key_exists('en', $query_data)) {
             $query['en'] = $query_data['en'];
         };
 
-        if (array_key_exists('tg', $query_data))
-        {
+        if (array_key_exists('tg', $query_data)) {
             $query['tg'] = $query_data['tg'];
         };
 
-        if (array_key_exists('nm', $query_data))
-        {
+        if (array_key_exists('nm', $query_data)) {
             $query['nm'] = $query_data['nm'];
         };
 
         if (
             array_key_exists('en', $query_data) ||
             array_key_exists('tg', $query_data) ||
-            array_key_exists('nm', $query_data))
-        {
+            array_key_exists('nm', $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => $query];
             $client_response = $http_client->request('GET', $base_url, $client_query_data);
@@ -309,8 +282,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $query_data = $request->params();
         $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
 
-        if (array_key_exists('internetId', $query_data))
-        {
+        if (array_key_exists('internetId', $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ['query' => [
                 'id' => $query_data['internetId'
@@ -327,21 +299,18 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
 
-        if (array_key_exists("feed_url", $query_data) && !empty($query_data["feed_url"]))
-        {
+        if (array_key_exists("feed_url", $query_data) && !empty($query_data["feed_url"])) {
             $base_url = $query_data["feed_url"];
         }
 
-        if (array_key_exists("feed-path", $query_data))
-        {
+        if (array_key_exists("feed-path", $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $request_url = $base_url . $query_data["feed-path"];
             $client_response = $http_client->request("GET", $request_url);
             $xml = $client_response->getBody();
             $news = new \CEHD\App\XML\News\News($xml);
 
-            if ($this->arrayContains("sortBy", $query_data) && $query_data["sortBy"] == "categoryDecade")
-            {
+            if ($this->arrayContains("sortBy", $query_data) && $query_data["sortBy"] == "categoryDecade") {
                 $news->sortByCategoryDecade();
             }
             $response->sendJSONResponse(json_encode($news->stories));
@@ -352,15 +321,14 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "https://apps.cehd.umn.edu/Students/Infosession/Admin/RSSFeed.aspx";
         $query_data = $request->params();
-        if (array_key_exists("code", $query_data))
-        {
+        if (array_key_exists("code", $query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => [
                 "code" => $query_data["code"],
                 ]
             ];
             $request_url = $base_url;
-            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $xml = $client_response->getBody();
             $infoSessions = new \CEHD\XML\InfoSession\InfoSessions($xml);
             $response->sendJSONResponse(json_encode($infoSessions->infoSessions));
@@ -388,8 +356,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function eventEndpointHandler($request, $response, $service, $app)
     {
         $query_data = $request->params();
-        if (array_key_exists("z", $query_data))
-        {
+        if (array_key_exists("z", $query_data)) {
             return $this->getEventJSON($query_data["z"], $response);
         }
     }
@@ -408,7 +375,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                 "q" => $query_data["q"],
                 ]
             ];
-            $client_response = $http_client->request("GET",$base_url, $client_query_data);
+            $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $events =  new \CEHD\XML\Event\Events($client_response->getBody());
             $response->sendJSONResponse(json_encode($events->events));
         }
@@ -426,16 +393,13 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             't',
         ];
 
-        foreach ($valid_query_params as $valid_query_param)
-        {
-            if (array_key_exists($valid_query_param, $query_data))
-            {
+        foreach ($valid_query_params as $valid_query_param) {
+            if (array_key_exists($valid_query_param, $query_data)) {
                 $client_query_data['query'][$valid_query_param] = $query_data[$valid_query_param];
             }
         }
 
-        if (!empty($client_query_data))
-        {
+        if (!empty($client_query_data)) {
             $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
             $client_response = $http_client->request('GET', $base_url, $client_query_data);
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
@@ -467,22 +431,45 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $path = $request->pathname();
         $pattern = $this->_patternLibraryData[$path];
 
-        if ($pattern)
-        {
-            if ($pattern->type === "include")
-            {
+        if ($pattern) {
+            if ($pattern->type === "include") {
                 echo $this->_renderTemplate("cehd/patterns/pattern.html", ["pattern" => $pattern]);
-            }
-            else if ($pattern->type === "template")
-            {
+            } elseif ($pattern->type === "template") {
                 echo $this->_renderTemplate($pattern->template, ["pattern" => $pattern]);
             }
         }
+    }
+
+    public function eventsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        if ($this->arrayContains("z", $query_data)) {
+            $route = "/events/" . $query_data["z"] . "/";
+            $response->redirect($route, 301)->send();
+        }
+
+        echo $this->_renderTemplate("cehd/events/index.html", ["section" => "events"]);
     }
 
     public function eventPageHandler($request, $response, $service, $app)
     {
         $event = $this->getEvent($request->id, $response);
         echo $this->_renderTemplate("cehd/events/event.html", ["event" => $event]);
+    }
+
+    public function peopleSearchResultsPageHandler($request, $response, $service, $app)
+    {
+        $query_data = $request->params();
+        $nm = null;
+
+        if (array_key_exists("nm", $query_data)) {
+            $nm = $query_data["nm"];
+        }
+
+        $template_data = [
+            "section" => null,
+            "nm" => $nm,
+        ];
+        echo $this->_renderTemplate("cehd/directory/results.html", $template_data);
     }
 }

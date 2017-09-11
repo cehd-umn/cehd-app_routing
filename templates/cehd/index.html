@@ -16,33 +16,52 @@
         margin: 0 auto;
     }
 
+    .button {
+        background: none;
+        border: 1px solid #fff;
+        box-shadow: 1px 1px 1px;
+        color: #fff;
+        margin-top: -25%;
+        max-width: 80%;
+        padding: 0;
+        text-align: center;
+        transition: none;
+        top: 50%;
+    }
+
+    .button:active,
+    .button:focus,
+    .button:hover {
+        background: transparent;
+    }
+
+    .button::after,
+    .button::before {
+        background: transparent;
+        height: 0;
+    }
+
+    .button:active::before,
+    .button:hover::before {
+        transform: translateY(-10px);
+    }
+
+    .button:active::after,
+    .button:hover::after {
+        transform: translateY(10px);
+    }
+
+    .button a {
+        background-color: rgba(0, 0, 0, .3);
+        color: #fff;
+        display: block;
+        padding: 2em;
+    }
+
     .vertical-center {
         display: block;
         height: 100vh;
         padding-top: 25%;
-    }
-
-    @media all and (max-width: 768px) {
-        .third {
-            clear: both;
-            min-height: 105px;
-        }
-
-        .third .button {
-            margin: 0 auto;
-            max-width: 95%;
-        }
-
-        .vertical-center {
-            padding-top: 246px;
-        }
-    }
-
-    @media all and (min-width: 768px) {
-        .vertical-center {
-            align-items: center;
-            display: flex;
-        }
     }
 
     .main-heading-box {
@@ -53,6 +72,115 @@
         width: 100vw;
     }
 
+    @media all and (max-width: 767px) {
+        .videojs-background-wrap, #bg-video {
+            display: none;
+        }
+
+        #maincontent {
+            background: url("/assets/images/home/horizontal-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
+        }
+
+        .main-heading-box {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+        .button {
+            margin-top: 1em;
+            max-width: 100%;
+        }
+
+        .button a {
+            background-color: rgba(255, 255, 255, .5);
+            color: #333;
+            font-size: 10px;
+            padding: 9px;
+        }
+
+        .nav-toggle {
+            margin-bottom: 10px;
+        }
+
+        .vertical-center {
+            padding-top: 246px;
+        }
+
+        .main-heading-box {
+            background-color: transparent;
+            top: -79px;
+        }
+
+        .main-heading-box h1 {
+            color: rgb(51, 51, 51);
+            font-size: 13px;
+        }
+
+        #mainnav {
+            margin-top: 25px;
+        }
+
+        .vertical-center {
+            height: auto;
+            margin-top: -100px;
+            padding-top: 0;
+        }
+
+        #video-container {
+            background-color: #ffec99;
+            max-width: 100%;
+            min-height: 59px;
+            padding: 1em;
+            top: -51px;
+        }
+
+        #video-row {
+            clear: both;
+            float: left;
+            top: 80px;
+            width: 100%;
+        }
+
+        #base-wordmarks-container {
+            padding: 0 10px;
+        }
+
+        #cehd-wordmark {
+            margin: 0 auto;
+        }
+    }
+
+    @media all and (min-width: 768px) {
+        .vertical-center {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    @media all and (max-width: 768px) and (min-width: 768px) {
+        #maincontent {
+            top: 32px;
+        }
+
+        .always-third {
+            width: 33%;
+        }
+
+        .button {
+            font-size: 14px;
+            margin: 0 16px;
+            max-width: 100%;
+        }
+    }
+
+    @media all and (max-width: 414px) {
+        #maincontent {
+            background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
+        }
+
+    }
+
     .videojs-background-wrap {
         background-color: #222;
         max-width: 100%;
@@ -61,26 +189,18 @@
         top: 169px;
     }
 
-    .button {
-        background: none;
-        border: 1px solid #fff;
-        box-shadow: 1px 1px 1px;
-        color: #fff;
-        margin-top: -25%;
-        max-width: 80%;
-        padding: 0;
-        text-align: center;
-        top: 50%;
-    }
+        .always-third {
+            clear: none;
+            float: left;
+            display: block;
+            margin-right: 4.72458%;
+            min-height: 105px;
+            width: 30.18362%;
+        }
 
-    .button a {
-        background-color: rgba(0, 0, 0, .3);
-        color: #fff;
-        display: block;
-        padding: 2em;
-    }
-
-
+        .always-third.last {
+            margin-right: 0;
+        }
 </style>
 {% endblock %}
 {% block main_content %}
@@ -88,8 +208,8 @@
     <div class="main-heading-box">
         <h1 class="text-center">Problem solvers, advocates, and leaders</h1>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="container" id="video-container">
+        <div class="row" id="video-row">
             <video id="bg-video"
                 class="video-js vjs-default-skin"
                 height="100%"
@@ -97,14 +217,14 @@
                 src="/assets/dist/video/home-01.mp4">
             </video>
             <div class="row vertical-center">
-                <div class="third">
-                    <p class="button"><a href="/programs/">Programs</a></p>
+                <div class="always-third">
+                    <p class="button"><a href="/programs/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-programs") }}>Programs</a></p>
                 </div>
-                <div class="third">
-                    <p class="button"><a href="/news/">News &amp; events</a></p>
+                <div class="always-third">
+                    <p class="button"><a href="/news/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-news and events") }}>News &amp; events</a></p>
                 </div>
-                <div class="third">
-                    <p class="button"><a href="/research/">Research</a></p>
+                <div class="always-third last">
+                    <p class="button"><a href="/research/" {{ analytics.add_tracking("send", "event", "homepage", "click", "HP-research") }}>Research</a></p>
                 </div>
             </div>
         </div>
@@ -115,43 +235,46 @@
 <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
 <script src="/assets/dist/js/lib/videojs-background.min.js"></script>
 <script>
-    var videojs_options = {
-        loop: false,
-        preload: "auto"
-    };
-    var player = videojs("bg-video", videojs_options);
-    player.ready(function() {
-        var idx = 0;
-        var playlist = [
-          {% for video in videos %}
-            {
-                sources: [
-                    {
-                        src: "{{ video.source }}{{ video.cachebuster }}",
-                        type: "{{ video.type }}"
-                    }
-                ],
-                poster: "http://media.w3.org/2010/05/sintel/poster.png"
-            }{% if not loop.last %},{% endif %}
-          {% endfor %}
-        ];
+    if ($("#bg-video").is(":visible")) {
 
-        // Activate background video plugin
-        this.Background();
+        var videojs_options = {
+            loop: false,
+            preload: "auto"
+        };
+        var player = videojs("bg-video", videojs_options);
+        player.ready(function() {
+            var idx = 0;
+            var playlist = [
+            {% for video in videos %}
+                {
+                    sources: [
+                        {
+                            src: "{{ video.source }}{{ video.cachebuster }}",
+                            type: "{{ video.type }}"
+                        }
+                    ],
+                    poster: "http://media.w3.org/2010/05/sintel/poster.png"
+                }{% if not loop.last %},{% endif %}
+            {% endfor %}
+            ];
 
-        this.on("ended", function() {
+            // Activate background video plugin
+            this.Background();
 
-            // Update the index
-            if (idx < {{ videos|length - 1 }}) {
-                idx++;
-            } else {
-                idx = 0;
-            }
+            this.on("ended", function() {
 
-            // Set a new src and play
-            this.src(playlist[idx].sources[0].src);
-            this.play();
+                // Update the index
+                if (idx < {{ videos|length - 1 }}) {
+                    idx++;
+                } else {
+                    idx = 0;
+                }
+
+                // Set a new src and play
+                this.src(playlist[idx].sources[0].src);
+                this.play();
+            });
         });
-    });
+    }
 </script>
 {% endblock %}

@@ -150,8 +150,6 @@ centered elements:
       name: Blue background
     - group: css
       name: Grey background
-    - group: css
-      name: Brown background
 12-column grid:
   publish: true
   meta: null
@@ -163,6 +161,24 @@ centered elements:
   example_page_url: null
   handler: null
   template: cehd/patterns/css/grid.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+12-column grid that never breaks:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - grid
+  description: Classes for using the 12-column grid with no breakpoints
+  group: css
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/css/grid-no-break.html
   twig_files: null
   type: template
   uses:
@@ -224,27 +240,6 @@ grey background:
   template: null
   twig_files:
     - path: cehd/patterns/css/includes/grey-background.html
-      type: include
-  type: include
-  uses:
-    - group: css
-      name: row
-    - group: css
-      name: container
-    - group: css
-      name: half
-brown background:
-  publish: true
-  meta: null
-  categories:
-    - background color
-  description: Gives an element a consistent brown background.
-  group: css
-  example_page_url: null
-  handler: null
-  template: null
-  twig_files:
-    - path: cehd/patterns/css/includes/brown-background.html
       type: include
   type: include
   uses:
@@ -856,6 +851,21 @@ lists without bullets or numbers:
       type: include
   type: include
   uses: null
+indented lists without bullets or numbers:
+  publish: true
+  meta: null
+  categories:
+    - lists
+  description: Gives extra indentation to no-bullet lists
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/lists-no-bullets-indented.html
+      type: include
+  type: include
+  uses: null
 lists with headings:
   publish: true
   meta: null
@@ -1032,12 +1042,12 @@ column divider:
       name: two third
     - group: css
       name: 12-column grid
-hero image:
+hero image page:
   publish: true
   meta: null
   categories:
     - layout
-    - hero image
+    - hero image page
     - images
   description: Code sample for a page with a hero image
   group: page
@@ -1359,34 +1369,60 @@ did you know SVG with grey background:
       name: half
     - group: css
       name: grey background
-did you know SVG with brown background:
+Plus icon SVG include:
   publish: true
   meta: null
   categories:
-    - background color
     - macros
     - svg
     - twig
-  description: Creates an inline SVG for "Did you know?" with a brown background
+    - social media icons
+  description: Creates an accessible inline SVG with the Plus symbol
   group: svg
   example_page_url: null
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/twig/macros/includes/svg/did-you-know-background-brown.html
+    - path: cehd/patterns/twig/includes/includes/svg/plus.html
       type: include
   type: include
-  uses:
-    - group: css
-      name: row
-    - group: css
-      name: container
-    - group: css
-      name: centered elements
-    - group: css
-      name: half
-    - group: css
-      name: brown background
+  uses: null
+Vimeo icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Vimeo logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/vimeo.html
+      type: include
+  type: include
+  uses: null
+YouTube icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the YouTube logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/twig/includes/includes/svg/youtube.html
+      type: include
+  type: include
+  uses: null
 Twitter icon SVG:
   publish: true
   meta: null

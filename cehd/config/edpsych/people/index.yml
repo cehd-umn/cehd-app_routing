@@ -34,17 +34,17 @@
     - x500: lqr6576
       section: Quantitative methods in education
       title: director of graduate studies
-    - x500: harwe001
+    - x500: delma001
       section: Quantitative methods in education
-      title: acting program coordinator
+      title: program coordinator
 - section: School psychology
   query:
     param: tg
     value: 321
   titles:
-    - x500: rcodding
+    - x500: asulliva
       section: School psychology
-      title: acting program coordinator
+      title: program coordinator
 - section: Special education
   query:
     param: tg
@@ -53,7 +53,7 @@
     - x500: jmccomas
       section: Special education
       title: associate department chair
-    - x500: mcmas004
+    - x500: jiten001
       section: Special education
       title: program coordinator
     - x500: coneill

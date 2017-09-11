@@ -32,7 +32,7 @@ img {
 
 .emphasis {
     background-color: $cehd-tertiary-gold;
-    padding: 2em;
+    padding: 10px;
 
     &.subtle {
         background-color: $cehd-light-grey;
@@ -127,6 +127,7 @@ img {
 
 /// Accessibly hides entire element
 .accessible-no-display {
+    font-size: 0;
     height: 0;
     margin: 0;
     opacity: 0;
@@ -192,7 +193,7 @@ img {
 }
 
 /// CEHD Wordmark
-#cehd-wordmark {
+.cehd-wordmark {
     border-bottom: 1px solid $base-black;
     padding: .9em 0 .7em;
 }
@@ -519,6 +520,10 @@ footer {
         font-size: 18px;
     }
 
+    .emphasis {
+        padding: 2em;
+    }
+
     .dept-footer-container {
         &.campus {
             left: -80px;
@@ -752,7 +757,7 @@ footer {
         }
     }
 
-    #cehd-wordmark {
+    .cehd-wordmark {
         border-bottom: 0;
         float: right;
         padding: .9em 0 0;
@@ -813,46 +818,6 @@ footer {
     }
 }
 
-.search-heading {
-    color: $base-white;
-    font-size: 2em;
-    padding: .1em .5em;
-}
-
-.search-primary {
-    background: $search-primary-blue;
-}
-
-.search-secondary {
-    background: $search-secondary-blue;
-}
-
-.search-tertiary {
-    background: $search-tertiary-maroon;
-}
-
-.search-form-element {
-    display: inline-block;
-    height: 39px;
-}
-
-#search-page-query-input {
-    background: $base-light-grey;
-    border: 1px solid $base-light-grey;
-    padding: .55em;
-    width: 88%;
-
-    &:focus {
-        background: $base-white;
-    }
-}
-
-#search-page-submit {
-    border-radius: 0;
-    font-family: fontello;
-    height: 39px;
-    width: 12%;
-}
 
 .to-upper {
     text-transform: uppercase;

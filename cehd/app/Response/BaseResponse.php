@@ -47,7 +47,8 @@ class BaseResponse extends \Klein\Response
         return simplexml_load_string(
             $xml_string,
             null,
-            LIBXML_NOCDATA);
+            LIBXML_NOCDATA
+        );
     }
 
     /**

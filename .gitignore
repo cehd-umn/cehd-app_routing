@@ -1,5 +1,6 @@
 .DS_Store
 bower_components
+composer.lock
 node_modules
 .sass-cache
 cache
@@ -41,6 +42,7 @@ public/SSW
 public/STEM
 public/TARDIS
 public/The-Changing-Story
+public/TRIO-History
 public/assets-2015
 public/attributes
 public/atributesG05

@@ -1,1 +1,0 @@
-<link rel="icon" type="image/png" href="/ci/attributes/favicon/favicon14.ico"/>
