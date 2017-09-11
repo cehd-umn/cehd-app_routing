@@ -43,9 +43,11 @@ Applied Child and Adolescent Development:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/ICD/Programs/ACAD/default.html
-  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings.
+  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings. (Online degree)
   categories:
     - Families, Youth, and Children
+    - Community and Leadership
+    - Recreation, Health, and Wellbeing
     - Evaluation and Methods
 Applied psychology in educational and community settings (APECS):
   meta: null
@@ -77,7 +79,7 @@ Autism Spectrum Disorder:
     - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
     - title: License
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/asd/ 
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
     - title: Graduate Certificate
@@ -98,6 +100,10 @@ Child Psychology:
   meta: null
   publish: true
   links:
+    - title: Undergraduate Major
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/programs.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
   description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience.
@@ -145,7 +151,9 @@ Counseling and Student Personnel Psychology:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/EdPsych/Programs/CSPP/default.html
+      href: http://www.cehd.umn.edu/edpsych/programs/cspp/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Counsel others throughout the lifespan. Work in schools, colleges, or community organizations, and help people develop personally and socially, in their academic or career pursuits.
   categories:
     - Teaching, Learning, and Schools
@@ -195,12 +203,20 @@ Dual Language and Immersion Education:
   categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
-Early Childhood Education:
+Early Childhood:
   meta: null
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/icd/programs/ece/undergraduate/
+      href: http://www.cehd.umn.edu/icd/programs/ECE/Undergraduate/overview.html
+  description: Prepare to enter a master’s level teaching licensure program for ages birth to 3rd grade, or prepare to work in educational settings where a teaching license is not required.
+  categories:
+    - Teaching, Learning, and Schools
+    - Families, Youth, and Children
+Early Childhood Education:
+  meta: null
+  publish: true
+  links:
     - title: License
       href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
     - title: Masters
@@ -282,21 +298,6 @@ Family and Community Engagement:
   categories:
     - Families, Youth, and Children
     - Community and Leadership
-Parent and Family Education:
-  meta: null
-  publish: true
-  links:
-    - title: License
-      href: http://www.cehd.umn.edu/FSoS/programs/license.asp
-    - title: Masters
-      href: http://www.cehd.umn.edu/FSoS/programs/med.asp
-    - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/fsos/programs/cert.asp
-  description: Prepare to design, deliver, and evaluate educational programs in a variety of settings that support and educate parents and families.
-  categories:
-    - Teaching, Learning, and Schools
-    - Families, Youth, and Children
-    - Languages, Culture, and International
 Family Financial Studies:
   meta: null
   publish: false
@@ -324,20 +325,10 @@ Family Social Science:
       href: http://www.cehd.umn.edu/FSoS/programs/phd-fs.asp
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/FSoS/programs/minor-fs.asp
-  description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work."
+  description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work.
   categories:
     - Families, Youth, and Children
     - Languages, Culture, and International
-    - Disability and Aging
-Couple and Family Therapy (C/MFT):
-  meta: null
-  publish: true
-  links:
-    - title: Ph.D.
-      href: http://www.cehd.umn.edu/FSoS/programs/phd-cft.asp
-  description: Educate and mentor the next generation of leaders and agents of social change, working systemically with diverse families and communities locally and internationally.
-  categories:
-    - Families, Youth, and Children
     - Disability and Aging
 Family Violence Prevention:
   meta: null
@@ -345,8 +336,6 @@ Family Violence Prevention:
   links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
-    - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/FSoS/programs/minor-ps.asp
   description: Expand your knowledge of preventing family violence through this minor in the School of Social Work.
   categories:
     - Families, Youth, and Children
@@ -405,15 +394,6 @@ Kinesiology:
     - Disability and Aging
     - Languages, Culture, and International
     - Recreation, Health, and Wellbeing
-Leadership:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
-  description: Prepare for real-life leadership opportunities by examining leadership from several perspectives.
-  categories:
-    - Community and Leadership
 Leadership in Education:
   meta: null
   publish: true
@@ -501,6 +481,21 @@ Outdoor Recreation and Education:
     - Recreation, Health, and Wellbeing
     - Community and Leadership
     - Families, Youth, and Children
+Parent and Family Education:
+  meta: null
+  publish: true
+  links:
+    - title: License
+      href: http://www.cehd.umn.edu/FSoS/programs/license.asp
+    - title: Masters
+      href: http://www.cehd.umn.edu/FSoS/programs/med.asp
+    - title: Graduate Certificate
+      href: http://www.cehd.umn.edu/fsos/programs/cert.asp
+  description: Prepare to design, deliver, and evaluate educational programs in a variety of settings that support and educate parents and families.
+  categories:
+    - Teaching, Learning, and Schools
+    - Families, Youth, and Children
+    - Languages, Culture, and International
 Physical Activity and Health:
   meta: null
   publish: true
@@ -528,6 +523,8 @@ Prevention Science:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/FSoS/programs/prevsci.asp
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/FSoS/programs/minor-ps.asp
   description: The scientific study of systematic efforts to reduce the incidence of unhealthy or maladaptive behavior, and to promote health and adaptive behavior in populations across the life span.
   categories:
     - Evaluation and Methods
@@ -560,6 +557,8 @@ Psychological Foundations of Education:
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/foundations/talent/
   description: Study the psychological processes critical to education, focusing on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan.
   categories:
     - Teaching, Learning, and Schools
@@ -568,17 +567,19 @@ Quantitative Methods in Education:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/future-students/qme/
-  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics"
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics.
   categories:
     - Teaching, Learning, and Schools
     - Evaluation and Methods
 Racial Justice in Urban Schooling:
   meta: race, language, social class, gender, sexual orientation, LGBT
-  publish: false
+  publish: true
   links:
     - title: Undergraduate Minor
-      href: https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=21880&strm=1179&campus=UMNTC
+      href: http://www.cehd.umn.edu/ci/academics/CAT/racialjustice-minor.html
   description: Analyze educational practices that marginalize students from non-dominant social groups and learn how to support those students.
   categories:
     - Teaching, Learning, and Schools
@@ -603,6 +604,8 @@ School Psychology:
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/master/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/doctor/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Through work in schools settings or research, help students succeed academically, socially, emotionally, and behaviorally.
   categories:
     - Teaching, Learning, and Schools
@@ -668,6 +671,8 @@ Social Work:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/ssw/Graduate/msw.html
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/ssw/Graduate/phd.html
   description: Advanced social work practice and leadership, with focus areas of Clinical Mental Health, Community Practice, Families and Children, and Health, Disability and Aging.
   categories:
     - Families, Youth, and Children
@@ -680,13 +685,19 @@ Special Education:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/SpEd-BS.html
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     - title: License
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/masters/
     - title: Graduate Minor
       href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
+    - title: Graduate Certificate
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/phd/
   description: Prepare to teach students with mild-moderate disabilities in grade K through age 21. Improve outcomes for individuals who require specialized support to achieve success throughout their lifespan.
   categories:
     - Teaching, Learning, and Schools

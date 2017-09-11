@@ -1,0 +1,22 @@
+{% extends "edpsych/layout/section.html" %}
+{%- import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Latest research news" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            {{ loader.loader(page_title, "h2") }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js(
+        "category/educational-psychology/research-educational-psychology/feed/",
+        "#news-container",
+        "research.html",
+        5
+    ) }}
+{% endblock %}

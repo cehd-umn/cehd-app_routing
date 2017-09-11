@@ -33,23 +33,17 @@ var Renderer = function () {
 
     // TODO improve performance by making this async? https://mozilla.github.io/nunjucks/api.html#asynchronous-support
     this.render = function(append) {
-        if (!append) {
-            this.settings.$target_element.html(
-                this.env.render(this.settings.template_name,
-                    {
-                        data: this.settings.data
-                    }
-                )
-            );
-        } else {
-            this.settings.$target_element.append(
-                this.env.render(this.settings.template_name,
-                    {
-                        data: this.settings.data
-                    }
-                )
-            );
+        var html = this.env.render(this.settings.template_name,
+            {
+                data: this.settings.data
+            }
+        );
+
+        var function_name = "html";
+        if (append) {
+            function_name = "append";
         }
+        this.settings.$target_element[function_name](html);
     };
 
     this._mergeOptions = function(params) {

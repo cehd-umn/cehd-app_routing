@@ -1,12 +1,25 @@
 {% extends "cehd/layout/base.html" %}
 {% block title %}{{ event.title }}{% endblock %}
+{% block extra_css %}
+<style>
+    h1 small.clear {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
         <div class="span-8 feature">
             <h1>{{ event.title }}
                 <small class="clear h2">
-                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}
+                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}
                     {% if event.endTime %}
                         | {{ event.startTime }}
                     {% endif %}
@@ -15,6 +28,9 @@
                     {% endif %}
                 </small>
             </h1>
+            <h2 class="h3 no-margin-top">
+                {{ event.location }}
+            </h2>
 
             <div class="svg-social-media-icon">
                 <a href="mailto:?&subject={{ event.title|url_encode }}&body=http%3A//www.cehd.umn.edu/events/{{ event.id }}/">

@@ -12,11 +12,12 @@
         <section>
         <div class="half">
           <div class="whole">
-            <h3 class="no-margin-top">Debunking misinformation</h3>
+            <img src="{{ config.asset_base }}/dist/images/Programs/foundations/foundations_feature.jpg" alt="Psych foundations research team collects surveys at Minnesota State Fair">
           </div>
           <div class="whole">
-            <img src="{{ config.asset_base }}/dist/images/Programs/foundations/foundations_feature.jpg" alt="Psych foundations research team collects surveys at Minnesota State Fair">
+            <h4>Debunking misinformation</h4>
             <p>Educational psychology researchers strive to find the best ways to cut through misconceptions about the causes and treatments of autism spectrum disorder. <a href="http://connect.cehd.umn.edu/debunking-misinformation/" {{ analytics.add_tracking("send", "event", "feature", "click", "foundationsmainfeature") }}>Read more.</a></p>
+            <br/>
           </div>
         </div>
         <div class="half">
@@ -34,6 +35,7 @@
                   <li>Research and development centers</li>
                 </ul>
           </div>
+        </div>
       </section>
       <section>
         <div class="half right divider">
@@ -52,23 +54,85 @@
       </div>
         <div class="half">
           {{ loader.loader(
-            "Events & deadlines",
+            "Dates & deadlines",
             "h3",
             "events-container"
           ) }}
         </div>
-    </div>
+      </section>
+    <section>
+      <div class="twothird feature">
+        <h3 class="text-center">Like us on Facebook</h3>
+        <p class="text-center">Get a feel for what it's like to be an educational psychology student at the U of M.
+        </br/>Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Department of Educational Psychology Facebook page</a>
+      </br/>for updates on research, work, and other happenings.</p>
+      </div>
+    </section>
+    <div class="row">
+      <div class="container">
+    <section>
+      <h3 class="text-center">Programs &amp; degrees</h3>
+          <div class="half">
+            <h4>Graduate</h4>
+              <p>Masters and Ph.D. students choose between two areas of emphasis:
+              <h5><a href="{{ config.base_url }}/programs/foundations/learning/">Learning and cognition / educational technology<br/>(M.A., Ph.D.)</a></h5>
+                <ul>
+                  <li>Study how people think and learn</li>
+                  <li>Research how people learn with technology and design research-based technologies to improve learning</li>
+                </ul>
+              </p>
+              <h5><a href="{{ config.base_url }}/programs/foundations/social-psych/">Social psychological and developmental processes<br/>(M.A., Ph.D)</a></h5>
+              <p>Study how social processes contribute to the success of schools and other educational organizations</p>
+            </div>
+      <div class="half">
+        <h4>Professional</h4>
+            <h5><a href="{{ config.base_url }}/programs/foundations/talent/">Talent development and gifted education certificate</a></h5>
+              <p>Develop, implement, and supervise programs to teach gifted and talented students in K-12 and postsecondary schools and other settings</p>
+            <h5><a href="{{ config.base_url }}/programs/foundations/5135/">EPSY 5135&#58;  Human relations workshop</a></h5>
+              <ul>
+                <li>Four credit course approved to meet the Minnesota Department of Education requirement for licensure</li>
+                <li>Includes simulation activities, curriculum writing, and supervised practice in basic human relations skills emphasizing social psychological principles involved in stereotyping and prejudice and their implications for educational practice</li>
+              </ul>
+      </div>
+    </section>
+      <section>
+        <div class="twothirds feature">
+          <h3 class="text-center">Tuition</h3>
+            <p>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for information on tuition.</p>
+          <h3 class="text-center">Funding</h3>
+            <h4>Fellowships &amp; awards</h4>
+              <p>Submit your application materials by Dec. 1, and you’ll automatically be considered for Graduate School fellowships and departmental awards based on scholastic achievement. Notification of awards will be sent in March.</p>
+            <h4>Graduate assistantships</h4>
+              <p>Get paid to work as a teaching assistant, graduate instructor or research assistant. Graduate assistantships are available through the department, College of Education and Human Development, and the University.</p>
+              <ul>
+                <li><a href="{{ config.base_url }}/programs/foundations/funding/yackel/">John P. Yackel/Pearson Graduate Internship</a></li>
+                <li><a href="{{ config.base_url }}/programs/foundations/funding/merwin/">Jack Merwin Graduate Assistantship</a></li>
+                <li><a href="http://humanresources.umn.edu/find-job/graduate-assistant-jobs">All University of Minnesota graduate assistantships</a></li>
+              </ul>
+              <p><em>Note: Applicants who complete their applications by the March 1 deadline will be less likely to receive graduate assistantships than students who meet the Dec. 1 deadline.</em></p>
+          <h4>Financial aid</h4>
+            <p><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
+          <h4>Scholarships</h4>
+            <p><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">Visit the College of Education and Human Development’s Awards page for scholarship information.</a></p>
+          </div>
+        </section>
+        <section>
+          <div class="feature twothirds">
+            <h3 class="text-center">Diversity</h3>
+            <p>The Department of Educational Psychology is deeply committed to increasing the diversity of our undergraduate and graduate programs, of our teaching and learning, of our research and clinical practice, and of our outreach and service across fields of educational psychology. Visit our <a href="{{ config.base_url }}/about/diversity-inclusion/">diversity page</a> to learn more about our commitment to diversity and resources for supporting diversity and inclusion.</p>
+          </div>
+        </section>
+    <section>
       <p class="text-center"><a href="{{ config.base_url }}/future-students/foundations/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "foundationsmain") }} class="button center">How to apply</a></p>
       </section>
     </div>
   </div>
   <section>
   <div class="row emphasis margin-top-1">
-      <div class="container">
               <p class="pull-quote">&ldquo;I help build a meaningful foundation of support for educators' instructional strategies and the development of students' learning skills using neuroscience.&rdquo;</p>
       <div class="twothirds feature margin-2">
               <div class="third">
-                <img src="{{ config.asset_base }}/dist/images/research/Soo-hyun_Im_headshot.jpg" class="mobile-hide" alt="Soo Hyun Im headshot">
+                <img src="{{ config.asset_base }}/dist/images/research/Soo-hyun_Im_headshot.jpg" alt="Soo Hyun Im headshot">
               </div>
         <div class="twothird">
                   <h4 class="no-margin-top">Soo-Hyun Im<small class="clear h5">Ph.D. student | <a href="mailto:imxxx045@umn.edu">imxxx045@umn.edu</a></small></h4>
@@ -78,44 +142,14 @@
         </div>
           </div>
   </div>
-  </div>
   </section>
-      <div class="row">
-        <div class="container">
-      <section>
-        <h3 class="text-center">Programs &amp; degrees</h3>
-            <div class="half">
-              <h4>Graduate</h4>
-                <p>Masters and Ph.D. students choose between two areas of emphasis:
-                <p><a href="{{ config.base_url }}/programs/foundations/learning/">Learning and cognition / educational technology (M.A., Ph.D.)</a></p>
-                  <ul>
-                    <li>Study how people think and learn</li>
-                    <li>Research how people learn with technology and design research-based technologies to improve learning</li>
-                  </ul>
-                </p>
-                <p><a href="{{ config.base_url }}/programs/foundations/social-psych/">Social psychological and developmental processes (M.A., Ph.D)</a>
-                  <br />Study how social processes contribute to the success of schools and other educational organizations
-              </p>
-              </div>
-        <div class="half">
-          <h4>Professional</h4>
-              <p><a href="{{ config.base_url }}/programs/foundations/talent/">Talent Development and Gifted Education Certificate</a>
-                <br />Develop, implement, and supervise programs to teach gifted and talented students in K-12 and postsecondary schools and other settings
-              </p>
-              <p><a href="{{ config.base_url }}/programs/foundations/5135/">EPSY 5135&#58;  Human relations workshop</a></p>
-                <ul>
-                  <li>Four credit course approved to meet the Minnesota Department of Education requirement for licensure</li>
-                  <li>Includes simulation activities, curriculum writing, and supervised practice in basic human relations skills emphasizing social psychological principles involved in stereotyping and prejudice and their implications for educational practice</li>
-                </ul>
-        </div>
-      </section>
           <div class="row">
               <div class="container">
                   <h3 class="text-center">Faculty &amp; staff</h3>
                   <h4 class="text-center">Learning and cognition / educational technology</h4>
                   <section>
                       <div class="half">
-                          <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BartB-2003.jpg" class="mobile-hide" alt="William M. Bart headshot"></div>
+                          <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BartB-2003.jpg" alt="William M. Bart headshot"></div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/bartx001/">William M. Bart</a><small class="clear h6 light"><a href="mailto:bartx001@umn.edu">bartx001@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/bart/">Lab</a></small></h4>
                               <ul>
@@ -127,7 +161,7 @@
                       </div>
                       <div class="half">
                           <div class="span-3">
-                              <img src="https://apps.cehd.umn.edu/people/Headshot/kendeou_2.jpg" class="mobile-hide" alt="Panayiota Andrea Kendeou headshot">
+                              <img src="https://apps.cehd.umn.edu/people/Headshot/kendeou_2.jpg" alt="Panayiota Andrea Kendeou headshot">
                           </div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top" ><a href="{{ config.base_url }}/people/kend0040/">Panayiota Andrea Kendeou</a><small class="clear h6 light"><a href="mailto:kend0040@umn.edu">kend0040@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/kendeou/">Lab</a></small></h4>
@@ -142,7 +176,7 @@
                   <section class="margin-top-1">
                       <div class="half">
                           <div class="span-3">
-                              <img src="http://apps.cehd.umn.edu/people/Headshot/TennysonR-2009.jpg" class="mobile-hide" alt="Robert D. Tennyson headshot">
+                              <img src="http://apps.cehd.umn.edu/people/Headshot/TennysonR-2009.jpg" alt="Robert D. Tennyson headshot">
                           </div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/rtenny/">Robert D. Tennyson</a><small class="clear h6 light"><a href="mailto:rtenny@umn.edu">rtenny@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/tennyson/">Lab</a></small></h4>
@@ -155,7 +189,7 @@
                       </div>
                       <div class="half">
                           <div class="span-3">
-                            <img src="http://apps.cehd.umn.edu/people/Headshot/VarmaK.jpg" class="mobile-hide" alt="Keisha Varma" />
+                            <img src="http://apps.cehd.umn.edu/people/Headshot/VarmaK.jpg" alt="Keisha Varma" />
                           </div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/keisha/">Keisha Varma</a><small class="clear h6 light"><a href="mailto:keisha@umn.edu">keisha@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/kvarma/">Lab</a></small></h4>
@@ -170,7 +204,7 @@
                   <section class="margin-top-1">
                       <div class="half">
                           <div class="span-3">
-                              <img src="http://apps.cehd.umn.edu/people/Headshot/VarmaS-2011.jpg" class="mobile-hide" alt="Sashank Varma headshot">
+                              <img src="http://apps.cehd.umn.edu/people/Headshot/VarmaS-2011.jpg" alt="Sashank Varma headshot">
                           </div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/sashank/">Sashank Varma</a>
@@ -184,7 +218,7 @@
                           </div>
                       </div>
                       <div class="half">
-                          <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/YussenS_2015.jpg" class="mobile-hide" alt="Steve Yussen headshot"></div>
+                          <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/YussenS_2015.jpg" alt="Steve Yussen headshot"></div>
                           <div class="span-9">
                               <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/syussen/">Steve Yussen</a><small class="clear h6 light"><a href="mailto:syussen@umn.edu">syussen@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/yussen/">Lab</a></small></h4>
                                   <ul>
@@ -199,7 +233,7 @@
                     <h4 class="text-center">Social psychological &amp; developmental processes</h4>
                       <div class="half">
                         <div class="span-3">
-                          <img src="http://apps.cehd.umn.edu/people/Headshot/MaruyamaGeoff-2013.jpg" class="mobile-hide" alt="Geoffrey Maruyama headshot"></div>
+                          <img src="http://apps.cehd.umn.edu/people/Headshot/MaruyamaGeoff-2013.jpg" alt="Geoffrey Maruyama headshot"></div>
                         <div class="span-9">
                           <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/geoff/">Geoffrey Maruyama</a><small class="clear h6 light">Department chair<br />
                               <a href="mailto:geoff@umn.edu">geoff@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/maruyama/">Lab</a></small></h4>

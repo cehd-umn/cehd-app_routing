@@ -1,11 +1,16 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "macros/loader.html" as loader %}
-{% set page_title = "Faculty & Instructors" %}
+{% set page_title = "Faculty & instructors" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>{{ page_title }}</h2>
+        <h2 class="text-center">{{ page_title }}</h2>
+        <div class="row">
+          <div class="container">
+              <p class="text-center">Interested in learning more about our faculty's research? Visit the <a href="{{ config.base_url }}/research/">research page</a>.</p>
+          </div>
+        </div>
         {# This uses a JavaScript template located at:
         app_template/public/edpsych/assets/dist/views/edpsych/people/index.html #}
         {% for section in section_data %}

@@ -1,6 +1,13 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Gifts" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+    .appointment-dept {
+        font-size: 16px;
+    }
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
@@ -22,7 +29,7 @@
             <div class="third">
                 <h3>Inspiring math learners</h3>
 
-                <img src="/assets/images/giving/math.jpg" alt= "Example image." />
+                <img src="/assets/images/giving/math.jpg" alt= "Lesa Clarkson" />
 
                 <p>A Mooty Foundation gift helps Lesa Clarkson foster math skills in North
                 Minneapolis.<br />
@@ -32,15 +39,15 @@
             </div>
             <div class="third">
                 <h3>Support for women scholars</h3>
-                <img src="/assets/images/giving/scholar.jpg" alt="Example image." />
-
+                <img src="/assets/images/giving/scholar.jpg" alt="Graduate student I-Ling Yeh and assistant professor LeAnne Johnson" />
                 <p>With the Women&rsquo;s Philanthropic Leadership Circle, small gifts make a big
                 difference.<br />
                 <small><a href="http://connect.cehd.umn.edu/wplc/">Continue reading</a></small></p>
             </div>
             <div class="third">
                 <h3>Dreams to teach come true</h3>
-                <img src="/assets/images/giving/teach.jpg" alt="Example image." />
+                <img src="/assets/images/giving/teach.jpg" alt="Josh Oxborough, M.Ed. student, initial licensure program, and Kelsie Meyer, senior, English as a second language program
+" />
 
                 <p>The Schulze Family Foundation supports future teachers who have a passion for
                 subjects in short supply.<br />
@@ -49,7 +56,7 @@
                 reading</a></small></p>
             </div>
         </div><!-- /span-12 -->
-        <p class="text-center"><a href="https://makingagift.umn.edu/onlinegiving/enterOnlineGiving.do?owner=O_CEHD&desc_source=UWXX_EDHD_SITE" class="button center">Give now</a></p>
+        <p class="text-center"><a href="https://makingagift.umn.edu/onlinegiving/enterOnlineGiving.do?owner=O_CEHD&desc_source=UWXX_EDHD_SITE" class="button center" {{ analytics.add_tracking("send", "event", "giving", "click", "give now") }}>Give now</a></p>
         <div class="span-12">
             <div class="half feature">
                 <h2 class="text-center">Endowed chairs and professorships</h2>
@@ -57,21 +64,21 @@
             </div>
         </div><!-- ./span-12 -->
         {% for appointment_group in appointments %}
-        <div class="span-12">
+        <div class="span-11 feature">
           {% for appointment in appointment_group %}
-            <div class="appointment third">
+            <div class="appointment half">
                 <h4>{{ appointment.heading }}</h4>
-                <div class="span-4 thumbnail-img">
+                <div class="span-3 thumbnail-img">
                     <img src="{{ appointment.urls.headshot}}" alt="{{ appointment.name}} headshot">
                 </div>
-                <div class="span-8">
+                <div class="span-9">
                     <h5 class="no-margin-top no-margin-bottom">
                         <a href="{{ appointment.urls.profile }}">{{ appointment.name }}</a>
                         <small class="clear h6 light no-margin-top no-margin-bottom">
                             {{ appointment.titles|join(", ") }}
                         </small>
                     </h5>
-                    <p><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></p>
+                    <p><small class="appointment-dept"><a href="{{ appointment.urls.department }}">{{ appointment.department }}</a></small></p>
                 </div>
             </div>
           {% endfor %}

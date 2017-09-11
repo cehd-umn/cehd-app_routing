@@ -43,7 +43,11 @@ $app->router->respond("GET", "/search/", [$app, "searchPageHandler"]);
 
 $app->router->respond("GET", "/people/[:internetId]/", [$app, "personPageHandler"]);
 
+$app->router->respond("GET", "/events/", [$app, "eventsPageHandler"]);
+
 $app->router->respond("GET", "/events/[i:id]/", [$app, "eventPageHandler"]);
+
+$app->router->respond("GET", "/directory/search/", [$app, "peopleSearchResultsPageHandler"]);
 
 // Services
 $app->router->with("/services", function() use ($app)
@@ -83,11 +87,6 @@ $app->router->with("/services", function() use ($app)
 $app->router->respond("GET", "/research/grantwriting[**:trailing]", function($request, $response, $service, $app)
     {
         $response->redirect("/research/grantsmanship/", 301)->send();
-    });
-
-$app->router->respond("GET", "/undergraduate/scholarships/[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/undergraduate/scholarships/", 301)->send();
     });
 
 $app->router->respond("GET", "/international[**:trailing]", function($request, $response, $service, $app)

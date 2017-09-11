@@ -4,24 +4,7 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <form action="{{ config.base_url }}/search/" method="get" name="gsearch" title="Search for U of M sites and people">
-            <input id="search-page-query-input" name="query" placeholder="Enter a search term" value="{{ query }}" class="search-form-element"><input
-            id="search-page-submit" type="submit" value="&#xe803;" class="search-form-element">{# keep the whitespace this way because this is inline-block and any whitespace will put space between the elements #}
-        </form>
-        {% for result_level, result_set in results %}
-            <h2 class="search-heading search-{{ result_level }}">{{ result_set.name }}</h2>
-            {% if result_set.results %}
-                <dl id="{{ result_level }}-search-results">
-                {% for result in result_set.results %}
-                    <dt><a href="{{ result.link }}">{{ result.title|raw }}</a></dt>
-                    <dd>{{ result.description|raw }}</dd>
-                {% endfor %}
-                </dl>
-                <p><a href="#" class="more-results-link" data-target="#{{ result_level }}-search-results" data-site="{{ result_level }}">View more</a></p>
-            {% else %}
-                <p>No results found.</p>
-            {% endif %}
-        {% endfor %}
+        {% include "includes/search-results.html" %}
     </div>
 </div>
 {% endblock %}

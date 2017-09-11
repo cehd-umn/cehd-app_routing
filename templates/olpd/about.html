@@ -1,0 +1,34 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "About the Department" %}
+{% block title %}
+     {{ page_title }}
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+    </div>
+    <div class="container">
+        <h2>Mission Statement</h2>
+        <p>The Department of Organizational Leadership, Policy, and Development is a leader in advancing knowledge about educational and organizational change in local, national, and international contexts. Our research, teaching, and outreach reflect a commitment to interdisciplinary and intercultural engagement with educators, scholars, and policy makers seeking to enhance leadership, policy, and development around the globe.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="half">
+            <h2>If you have a problem, call the ghost busters</h2>
+            <p>OLPD is committed to the policy that all persons shall have equal access to its programs, facilities and employment without regard to race, color, creed, religion, national origin, gender identity, gender expression, age, marital status, disability, public assistance status, veteran status or sexual orientation. If a student has a grievance issue with an OLPD faculty or staff member based on any of the above, the department recommends the following options [PDF].
+            </p>
+            <p>Read <a href="{{ config.asset_base }}/documents/AdviserChange.pdf">this document</a> for interesting things.
+            </p>
+        </div>
+        <div class="half">
+            <h2>when crazy stuff goes down</h2>
+            <p>U of MN Safety and Security Website. A helpful resource for signing up to TXT-U, safety escort service, Gopher Chauffeur, and more.
+            </p>
+        </div>
+</div>
+</div><!-- close row -->
+{% endblock %}
