@@ -51,8 +51,7 @@ class TopicCards extends CardGroup
     {
         $topics = $this->loadYaml($yaml_file_path);
 
-        foreach($topics as $title => $topic)
-        {
+        foreach ($topics as $title => $topic) {
             $card = $this->setCard($title, $topic);
             $this->_cards[$title] = $card;
         }
@@ -64,8 +63,7 @@ class TopicCards extends CardGroup
     {
         $new_cards = [];
 
-        foreach ($this->_cards as $key => $card)
-        {
+        foreach ($this->_cards as $key => $card) {
             $new_cards[$this->hyphenate($key)] = $card;
         }
 
@@ -75,12 +73,9 @@ class TopicCards extends CardGroup
     public function getInternalCategories()
     {
         $results = [];
-        foreach($this->_cards as $card)
-        {
-            if ($card->categories_internal)
-            {
-                foreach($card->categories_internal as $internal_category)
-                {
+        foreach ($this->_cards as $card) {
+            if ($card->categories_internal) {
+                foreach ($card->categories_internal as $internal_category) {
                     $results[$this->hyphenate($internal_category)] = $internal_category;
                 }
             }

@@ -10,6 +10,7 @@
  */
 
 namespace CEHD\App\Config;
+
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 /**
@@ -38,10 +39,8 @@ class Config
             "drydock" => "test",
         ];
 
-        foreach ($possible_environments as $env_substr => $env_name)
-        {
-            if (strpos($server_name, $env_substr) !== false)
-            {
+        foreach ($possible_environments as $env_substr => $env_name) {
+            if (strpos($server_name, $env_substr) !== false) {
                 return $env_name;
             }
         }
@@ -92,8 +91,7 @@ class Config
      */
     private function _load_from_yaml($file_path)
     {
-        if (file_exists($file_path))
-        {
+        if (file_exists($file_path)) {
             $yaml = new \Symfony\Component\Yaml\Yaml;
             return $yaml::parse(file_get_contents($file_path));
         }
@@ -121,8 +119,7 @@ class Config
             "is_dev" => $this->_is_dev(),
         ];
 
-        foreach ($config_files as $key => $config_file)
-        {
+        foreach ($config_files as $key => $config_file) {
             $config = array_merge($config, $this->_load_from_yaml($config_file));
         }
 

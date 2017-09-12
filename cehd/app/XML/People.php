@@ -9,6 +9,7 @@
  */
 
 namespace CEHD\App\People;
+
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
 /**
@@ -346,7 +347,7 @@ class Person extends \CEHD\App\XML\XML
      *
      * @param obj $person - XML object representing a person
      */
-    function __construct($person)
+    public function __construct($person)
     {
         $this->name =                $this->getFromProperty($person->name);
 
@@ -436,30 +437,24 @@ class Person extends \CEHD\App\XML\XML
     {
         $objects = [];
 
-        foreach($tagData->$nodeName as $tagData)
-        {
+        foreach ($tagData->$nodeName as $tagData) {
             $qualified_class_name = __NAMESPACE__ . "\\" . ucfirst($nodeName);
             $class = new $qualified_class_name;
 
-            foreach($tagData->attributes() as $property_name => $property_value)
-            {
-                if (strpos($property_name, "Id"))
-                {
+            foreach ($tagData->attributes() as $property_name => $property_value) {
+                if (strpos($property_name, "Id")) {
                     $property_name = "id";
                 }
 
-                if (strpos($property_name, "Descr"))
-                {
+                if (strpos($property_name, "Descr")) {
                     $property_name = "description";
                 }
 
-                if (strpos($property_name, "Abbr"))
-                {
+                if (strpos($property_name, "Abbr")) {
                     $property_name = "abbreviation";
                 }
 
-                if (property_exists($class, $property_name))
-                {
+                if (property_exists($class, $property_name)) {
                     $class->$property_name = $this->toString($property_value);
                 }
             }
@@ -505,11 +500,8 @@ class Person extends \CEHD\App\XML\XML
      */
     private function _setJobs($jobsData)
     {
-        if (property_exists($jobsData, "job"))
-        {
-
-            foreach($jobsData->job as $jobData)
-            {
+        if (property_exists($jobsData, "job")) {
+            foreach ($jobsData->job as $jobData) {
                 array_push($this->jobs, $this->_createJob($jobData));
             }
         }
@@ -525,19 +517,14 @@ class Person extends \CEHD\App\XML\XML
     {
         $works = [];
 
-        if ($this->isIterable($worksData))
-        {
-            foreach($worksData->{$name} as $workData)
-            {
+        if ($this->isIterable($worksData)) {
+            foreach ($worksData->{$name} as $workData) {
                 $stringified = trim((string) $workData);
-                if (!empty($stringified))
-                {
+                if (!empty($stringified)) {
                     array_push($works, $stringified);
                 }
             }
-        }
-        else
-        {
+        } else {
             $stringified = trim((string) $worksData->{$name});
             array_push($works, $stringified);
         }
@@ -576,21 +563,16 @@ class People extends \CEHD\App\XML\XML
      *
      * @param str $xml_string - XML
      */
-    function __construct($xml_string)
+    public function __construct($xml_string)
     {
         $xml = $this->xmlStringToObject($xml_string);
 
-        if ($xml)
-        {
-            foreach($xml->person as $person)
-            {
+        if ($xml) {
+            foreach ($xml->person as $person) {
                 array_push($this->people, new Person($person));
             }
-        }
-        else
-        {
-            foreach($this->_errors as $msg)
-            {
+        } else {
+            foreach ($this->_errors as $msg) {
                 throw new \Exception($msg);
             }
 
@@ -603,7 +585,8 @@ class People extends \CEHD\App\XML\XML
      *
      * @return int
      */
-    public function get_count() {
+    public function get_count()
+    {
         return count($this->people);
     }
 }
