@@ -1620,6 +1620,11 @@
   template: cehd/teaching/workshop/new-teacher.html
   template_data:
     - section: teaching
+/teaching/workshop/supershop/:
+  publish: true
+  template: cehd/teaching/workshop/supershop.html
+  template_data:
+    - section: teaching
 /teri/:
   publish: true
   template: cehd/teri/index.html
