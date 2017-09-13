@@ -1092,81 +1092,111 @@
     - section: events
 
 # Examples section (note: keep publish "false" for these")
-/examples/:
+/docs/:
   publish: false
-  template: cehd/examples/index.html
+  template: cehd/docs/index.html
   template_data:
     meta_description: null
     section: null
-/examples/cheats/:
+/docs/cheats/:
   publish: false
-  template: cehd/examples/cheats.html
+  template: cehd/docs/cheats.html
   template_data:
     meta_description: null
     section: null
-/examples/divider/:
+/docs/divider/:
   publish: false
-  template: cehd/examples/divider.html
+  template: cehd/docs/divider.html
   template_data:
     meta_description: null
     section: null
-/examples/events/:
+/docs/events/:
   publish: false
-  template: cehd/examples/events.html
+  template: cehd/docs/events.html
   template_data:
     meta_description: null
     section: null
-/examples/grid/:
+/docs/grid/:
   publish: false
-  template: cehd/examples/grid.html
+  template: cehd/docs/grid.html
   template_data:
     meta_description: null
     section: null
-/examples/hero/:
+/docs/hero/:
   publish: false
-  template: cehd/examples/hero.html
+  template: cehd/docs/hero.html
   template_data:
     meta_description: null
     section: null
-/examples/images/:
+/docs/images/:
   publish: false
-  template: cehd/examples/images.html
+  template: cehd/docs/images.html
   template_data:
     meta_description: null
     section: null
-/examples/macros/:
+/docs/macros/:
   publish: false
-  template: cehd/examples/macros.html
+  template: cehd/docs/macros/index.html
   template_data:
     meta_description: null
     section: null
-/examples/routes/:
+/docs/macros/events/:
   publish: false
-  template: cehd/examples/routes.html
+  template: cehd/docs/macros/events.html
   template_data:
     meta_description: null
     section: null
-/examples/svg/:
+/docs/macros/loader/:
   publish: false
-  template: cehd/examples/svg/index.html
+  template: cehd/docs/macros/loader.html
   template_data:
     meta_description: null
     section: null
-/examples/svg/connect/:
+/docs/macros/news/:
   publish: false
-  template: cehd/examples/svg/connect.html
+  template: cehd/docs/macros/news.html
   template_data:
     meta_description: null
     section: null
-/examples/svg/for-the-media/:
+/docs/macros/info-sessions/:
   publish: false
-  template: cehd/examples/svg/for-the-media.html
+  template: cehd/docs/macros/info-sessions.html
   template_data:
     meta_description: null
     section: null
-/examples/svg/social-media/:
+/docs/macros/table/:
   publish: false
-  template: cehd/examples/svg/social-media.html
+  template: cehd/docs/macros/table.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/routes/:
+  publish: false
+  template: cehd/docs/routes.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/svg/:
+  publish: false
+  template: cehd/docs/svg/index.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/svg/connect/:
+  publish: false
+  template: cehd/docs/svg/connect.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/svg/for-the-media/:
+  publish: false
+  template: cehd/docs/svg/for-the-media.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/svg/social-media/:
+  publish: false
+  template: cehd/docs/svg/social-media.html
   template_data:
     meta_description: null
     section: null
@@ -1611,13 +1641,18 @@
   template_data:
     - section: teaching
 /teaching/workshop/co-teaching-pairs/:
-  publish: false
+  publish: true
   template: cehd/teaching/workshop/co-teaching-pairs.html
   template_data:
     - section: teaching
 /teaching/workshop/new-teacher/:
   publish: true
   template: cehd/teaching/workshop/new-teacher.html
+  template_data:
+    - section: teaching
+/teaching/workshop/supershop/:
+  publish: true
+  template: cehd/teaching/workshop/supershop.html
   template_data:
     - section: teaching
 /teri/:
@@ -2325,6 +2360,111 @@
   template: cehd/trio/mcnair/2016/youk.html
   template_data:
     - section: trio
+/trio/mcnair/2017/abzhabarov/:
+  publish: true
+  template: cehd/trio/mcnair/2017/abzhabarov.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/amen/:
+  publish: true
+  template: cehd/trio/mcnair/2017/amen.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/crowley/:
+  publish: true
+  template: cehd/trio/mcnair/2017/crowley.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/dalmeida/:
+  publish: true
+  template: cehd/trio/mcnair/2017/dalmeida.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/hyde/:
+  publish: true
+  template: cehd/trio/mcnair/2017/hyde.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/lussier/:
+  publish: true
+  template: cehd/trio/mcnair/2017/lussier.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/lynn/:
+  publish: true
+  template: cehd/trio/mcnair/2017/lynn.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/mintz/:
+  publish: true
+  template: cehd/trio/mcnair/2017/mintz.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/mossazghi/:
+  publish: true
+  template: cehd/trio/mcnair/2017/mossazghi.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/okelola/:
+  publish: true
+  template: cehd/trio/mcnair/2017/okelola.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/onchiri/:
+  publish: true
+  template: cehd/trio/mcnair/2017/onchiri.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/phetsamone/:
+  publish: true
+  template: cehd/trio/mcnair/2017/phetsamone.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/reed/:
+  publish: true
+  template: cehd/trio/mcnair/2017/reed.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/reynolds/:
+  publish: true
+  template: cehd/trio/mcnair/2017/reynolds.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/richards/:
+  publish: true
+  template: cehd/trio/mcnair/2017/richards.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/sanchez/:
+  publish: true
+  template: cehd/trio/mcnair/2017/sanchez.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/thor/:
+  publish: true
+  template: cehd/trio/mcnair/2017/thor.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/vue/:
+  publish: true
+  template: cehd/trio/mcnair/2017/vue.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/westfall/:
+  publish: true
+  template: cehd/trio/mcnair/2017/westfall.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/yusuf/:
+  publish: true
+  template: cehd/trio/mcnair/2017/yusuf.html
+  template_data:
+    - section: trio
+/trio/mcnair/2017/zazay/:
+  publish: true
+  template: cehd/trio/mcnair/2017/zazay.html
+  template_data:
+    - section: trio
 /trio/mcnair/:
   publish: true
   template: cehd/trio/mcnair/index.html
@@ -2375,6 +2515,16 @@
   template: cehd/trio/services/academics.html
   template_data:
     - section: trio
+/trio/services/andicoechea/:
+  publish: true
+  template: cehd/trio/services/andicoechea.html
+  template_data:
+    - section: trio
+/trio/services/correale/:
+  publish: true
+  template: cehd/trio/services/correale.html
+  template_data:
+    - section: trio
 /trio/services/finances/:
   publish: true
   template: cehd/trio/services/finances.html
@@ -2383,6 +2533,11 @@
 /trio/services/munoz/:
   publish: true
   template: cehd/trio/services/munoz.html
+  template_data:
+    - section: trio
+/trio/services/ortiz/:
+  publish: true
+  template: cehd/trio/services/ortiz.html
   template_data:
     - section: trio
 /trio/services/services/:

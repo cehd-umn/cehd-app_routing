@@ -3,7 +3,16 @@
 {% block css %}<link href="{{ config.css_base }}/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
-{% block bottom_js %}<script src="{{ config.js_base }}/cehd.min.js{{ js_cachebuster }}"></script>{% endblock %}
+{% block bottom_js %}
+    <script src="{{ config.js_base }}/common.min.js{{ js_cachebuster }}"></script>
+    <script src="{{ config.js_base }}/app.min.js{{ js_cachebuster }}"></script>
+    <script>
+        (function() {
+            "use strict";
+            var app = new App();
+        }());
+    </script>
+{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 {# todo: add these font-face styles to inline.scss #}

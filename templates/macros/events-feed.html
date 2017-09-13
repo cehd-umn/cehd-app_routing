@@ -20,7 +20,8 @@
                 "x": "{{ limit }}",
             }
         };
-        var client = new HTTPClient();
+        var app = new App();
+        var client = new app.httpClient();
         var $response = client.get(params);
 
         $response.done(function() {
@@ -36,7 +37,7 @@
                 }
             };
 
-            var renderer = new Renderer();
+            var renderer = new app.renderer();
             renderer.init(template_params);
             renderer.render();
         });

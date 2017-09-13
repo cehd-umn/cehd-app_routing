@@ -1,0 +1,107 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Events macro" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% import "macros/table/table.html" as table %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <h2>Include the eventsfeed macro</h2>
+        <pre><code>{% verbatim %}
+{%- import "macros/events-feed.html" as eventsfeed -%}{% endverbatim %}
+        </code></pre>
+
+        <h2>Call the macro inside a <samp>bottom_js</samp> block</h2>
+        <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+{# The call to parent() above is *very* important #}
+{{ eventsfeed.events_feed_js(355) }}
+{% endblock %}{% endverbatim %}
+        </pre></code>
+
+        <p><a
+        href="https://apps.cehd.umn.edu/events/admin/LinkPro.aspx">The
+        events calendar "Link Pro"</a> sets up query parameters to pull
+        in different feeds. For example, an XML feed will look
+        something like this:
+        <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;q=6&amp;t=355</samp></p>
+
+        <p><samp>t=355</samp> above is the id for the tag we want to
+        use. In many cases you won't need any more information than
+        that. Thus, the tag id is the first parameter for pulling in
+        events. So we call the macro like: <br><samp>{% verbatim %}{{
+        events.events_feed_js(355) }}{% endverbatim
+        %}</samp>.
+
+        <p>The table below lists all the parameters for the
+        <samp>events_feed_js</samp> macro.</p>
+
+        {{ table.start_table("events_feed_js macro parameters") }}
+            {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+            {{ table.row([
+                "first",
+                "t parameter value",
+                "the tag id",
+                "None (value required)"]) }}
+            {{ table.row([
+                "second",
+                "limit",
+                "The number of results to retrieve from the calendar",
+                "3"]) }}
+            {{ table.row([
+                "third",
+                "target element selector",
+                "The JQuery selector for the element where events should be rendered",
+                "<samp>#events-container</samp>"]) }}
+            {{ table.row([
+                "fourth",
+                "path to template",
+                "The path to the directory where the Nunjucks template is",
+                "<samp>/assets/dist/views/cehd/events</samp>"]) }}
+            {{ table.row([
+                "fifth",
+                "Nunjucks<sup>&dagger;</sup> template name",
+                "The name of the Nunjucks template used to render the events",
+                "index.html"]) }}
+            {{ table.row([
+                "sixth",
+                "q parameter value",
+                "the value to use for the <samp>q</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;<strong>q=6</strong>&amp;t=355</samp>,
+                End date: 6 = no end date",
+                "6 (no end date)"]) }}
+            {{ table.row([
+                "seventh",
+                "r parameter value",
+                "the value to use for the <samp>r</samp> query parameter in the request to the events calendar. E.g., <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;<strong>r=3</strong>&amp;q=6&amp;t=355</samp>,
+                Start date: 1 = no start date | 3 = start from today.",
+                "3 (start from today)"]) }}
+        {{ table.end_table() }}
+
+        <p>Just set up the feed you want to pull in and review the
+        <samp>r</samp>, <samp>q</samp> and <samp>t</samp> query
+        parameters to see if you need to override the defaults.</p>
+
+        <h2>Calling macro with all parameters</h2>
+        <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+{# The call to parent() above is *very* important #}
+{{ events.events_feed_js(
+    255,
+    2,
+    "#events-container",
+    "/assets/dist/views/cehd/events",
+    "special-template.html",
+    6,
+    3
+) }}
+{% endblock %}
+            {% endverbatim %}</code></pre>
+
+        <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
+        is a JavaScript template engine that has a syntax almost identical
+        to Twig</a>.</p>
+    </div><!-- container -->
+</div><!-- row -->
+{% endblock %}

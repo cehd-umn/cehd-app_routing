@@ -52,7 +52,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal(
             "js_cachebuster",
             $this->getCacheBusterQueryString(
-                __DIR__ . "/../../../public/assets/dist/js/cehd.min.js"
+                __DIR__ . "/../../../public/assets/dist/js/app.min.js"
             )
         );
 

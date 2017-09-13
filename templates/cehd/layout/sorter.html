@@ -58,10 +58,10 @@
 {% include "cehd/includes/cards.html" %}
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
+<script src="{{ config.js_base }}/sorter.min.js{{ js_cachebuster }}"></script>
 <script>
     $(function() {
         "use strict";
-        // var $select_button = $(".multi-select");
         var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
         var $s = $("#full-text-search-input");
 

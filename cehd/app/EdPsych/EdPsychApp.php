@@ -15,7 +15,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     protected $_searchApplianceSites;
 
-    public function __construct($file_paths)
+    function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
@@ -80,15 +80,18 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $query = [];
 
         // Strip out extraneous query params
-        if (array_key_exists("en", $query_data)) {
+        if (array_key_exists("en", $query_data))
+        {
             $query["en"] = $query_data["en"];
         };
 
-        if (array_key_exists("tg", $query_data)) {
+        if (array_key_exists("tg", $query_data))
+        {
             $query["tg"] = $query_data["tg"];
         };
 
-        if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data)) {
+        if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data))
+        {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => $query];
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
@@ -103,7 +106,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $query_data = $request->params();
         $base_url =  "https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx";
 
-        if (array_key_exists("internetId", $query_data)) {
+        if (array_key_exists("internetId", $query_data))
+        {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_query_data = ["query" => [
                 "id" => $query_data["internetId"
@@ -119,7 +123,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
     {
         $base_url = "http://news.cehd.umn.edu/";
         $query_data = $request->params();
-        if (array_key_exists("feed-path", $query_data)) {
+        if (array_key_exists("feed-path", $query_data))
+        {
             $http_client = $this->bootstrapHTTPClient([]);
             $request_url = $base_url . $query_data["feed-path"];
             $client_response = $http_client->request("GET", $request_url);
@@ -143,7 +148,7 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 "q" => $query_data["q"],
                 ]
             ];
-            $client_response = $http_client->request("GET", $base_url, $client_query_data);
+            $client_response = $http_client->request("GET",$base_url, $client_query_data);
             $events =  new \CEHD\XML\Event\Events($client_response->getBody());
             $response->sendJSONResponse(json_encode($events->events));
         }
@@ -161,13 +166,16 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
             "t",
         ];
 
-        foreach ($valid_query_params as $valid_query_param) {
-            if (array_key_exists($valid_query_param, $query_data)) {
+        foreach ($valid_query_params as $valid_query_param)
+        {
+            if (array_key_exists($valid_query_param, $query_data))
+            {
                 $client_query_data["query"][$valid_query_param] = $query_data[$valid_query_param];
             }
         }
 
-        if (!empty($client_query_data)) {
+        if (!empty($client_query_data))
+        {
             $http_client = $this->bootstrapHTTPClient([]);
             $client_response = $http_client->request("GET", $base_url, $client_query_data);
             $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
@@ -211,7 +219,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $yaml_file_path = __DIR__ . "/../../../cehd/config/edpsych/people/index.yml";
         $section_data = $this->loadYaml($yaml_file_path);
 
-        foreach ($section_data as $key => $section) {
+        foreach ($section_data as $key => $section)
+        {
             $section_data[$key]["section_hyphenated"] = $this->hyphenate($section_data[$key]["section"]);
         };
 

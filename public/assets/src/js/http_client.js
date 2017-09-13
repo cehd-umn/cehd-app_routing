@@ -1,10 +1,13 @@
-"use strict";
-var $ = require("jquery");
+const $ = require("jquery");
 
-var HTTPClient = function() {
+class HTTPClient {
 
-    this.get = function(params) {
-        var self = this;
+    constructor() {
+        return this;
+    }
+
+    get(params) {
+        const self = this;
         self.results = null;
 
         return $.ajax({
@@ -16,13 +19,11 @@ var HTTPClient = function() {
             },
             error: function() {}
         });
-    };
+    }
 
-    this.getResults = function() {
+    getResults() {
         return this.results;
-    };
+    }
+}
 
-    return this;
-};
-
-window.HTTPClient = HTTPClient;
+module.exports = HTTPClient;
