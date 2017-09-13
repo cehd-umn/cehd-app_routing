@@ -1,3 +1,4 @@
+const helpers = require("./helpers.js");
 const $ = require("jquery");
 
 class GA {
@@ -18,7 +19,7 @@ class GA {
         const category = $element.data("ga-category");
         const action = $element.data("ga-action");
         const label = $element.data("ga-label");
-        const href = window.Helpers.getHref($element);
+        const href = helpers.getHref($element);
 
         window.ga(command, hit_type, category, action, label);
 

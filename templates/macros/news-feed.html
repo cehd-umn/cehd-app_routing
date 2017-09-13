@@ -29,12 +29,11 @@
         var client = new app.httpClient();
         var $request = client.get(params);
         var analytics = new app.GA();
-        var helpers = new app.helpers();
 
         $request.done(function() {
             var results = client.getResults();
             var news_site_base_url = "{{ news_site_base_url }}";
-            var news_category_uri = helpers.feedPathToLinkPath("{{ feed_path }}");
+            var news_category_uri = app.helpers.feedPathToLinkPath("{{ feed_path }}");
             var news_link = news_site_base_url + news_category_uri;
             var news_text = "{{ more_news_text }}";
             var $target = $("{{ target_element_selector }}");

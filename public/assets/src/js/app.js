@@ -2,7 +2,7 @@ require("babel-polyfill");
 const $ = require("jquery");
 const GA = require("./ga.js");
 const helpers = require("./helpers.js");
-const renderer =require("./renderer.js");
+const renderer = require("./renderer.js");
 const http_client = require("./http_client.js");
 const search_client = require("./search_client.js");
 
@@ -10,13 +10,15 @@ class App {
     constructor() {
         const $tracking_elements = $("[data-ga-command]");
 
-        this.helpers = helpers;
+        const self = this;
 
         this.renderer = renderer;
 
         this.httpClient = http_client;
 
         this.searchClient = search_client;
+
+        this.helpers = helpers;
 
         this.GA = GA;
 
@@ -35,8 +37,7 @@ class App {
             const category = $element.data("ga-category");
             const action = $element.data("ga-action");
             const label = $element.data("ga-label");
-            const helpers = new helpers();
-            const href = helpers.getHref($element);
+            const href = self.helpers.getHref($element);
 
             window.ga(command, hit_type, category, action, label, {
                 hitCallback: function () {
