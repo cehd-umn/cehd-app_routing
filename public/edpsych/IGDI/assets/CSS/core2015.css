@@ -1,0 +1,486 @@
+bac@charset "UTF-8";
+/*
+	Owner: College of Education and Human Development - U of M
+	Title: CEHD Public Web - Core layout elements
+	Version: Core 2015
+	What's it do?: This creates the core structure, layout elements, and styles for CEHD web pages
+	Dependencies: Full function requires CandI-Land.css, umn-HF.css, and tabbed-search.css
+                @font-face calls root /assets/fonts/
+	Media Breaks: 960, 760, 520
+	Authors: Dan Sagisser, Jeff Abuzzahab, and Susan Andre
+	Created: 2013-06-13
+	Updated: 2015-05-05 "Cinco de CSS"
+*/
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+html, body {line-height: 1;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: normal; vertical-align: middle;}
+q, blockquote {quotes: none;}
+q:before, q:after, blockquote:before, blockquote:after {content: ""; content: none;}
+a img {border: none;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {display: block;}
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End CSS Reset, Courtsey "A List Apart"   XXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+body {font: 90% Verdana, Arial, Helvetica, sans-serif;}
+
+div#container {
+  width: 960px;
+  position: relative;
+  margin: 0 auto;
+  /* the auto margins (in conjunction with a width) center the page */
+  text-align: left;
+  /* this overrides the text-align: center on the body element. */
+  padding: 0;
+  overflow: hidden;
+}
+
+nav {float: left;clear: none;width: 20%;position: relative;}
+
+div#maincontent {float: left;clear: none;width: 80%;position: relative;}
+
+div.half, div.third, div.twothird, div.whole {float: left;margin: 0;padding: 0;}
+
+div.half {width: 50%;}
+div.third {width: 33%;}
+div.twothird {width: 66%;}
+div.whole {width: 100%;}
+
+.active-extra nav, .active-extra div#maincontent, .active-extra div#extracontent, .active-nav nav, .active-nav div#maincontent, .active-nav div#extracontent {
+  -webkit-transition: .2s all ease;
+  -moz-transition: .2s all ease;
+  -o-transition: .2s all ease;
+  -ms-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXX    End Main Structure   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* ----------------------------------------------------------------------------- CORE ELEMENTS */
+
+/* icon font for reponsive panes, and UMN header */
+@font-face {
+  font-family: 'fontello';
+  src: url("/assets-2015/fonts/fontello-2015/fontello.eot");
+  src: url("/assets-2015/fonts/fontello-2015/fontello.eot") format('embedded-opentype'), url("/assets-2015/fonts/fontello-2015/fontello.woff") format('woff'), url("/assets-2015/fonts/fontello-2015fontello.ttf") format('truetype'), url("/assets-2015/fonts/fontello-2015/fontello.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ---------------------------------------- HEADINGS ---- */
+
+h1,h2,h3,h4,h5,h6 {margin: 10px 25px;padding: 0;}
+
+h1 {font-size: 1.85em;}
+h2 {font-size: 1.6em;}
+h3 {font-size: 1.35em;}
+h4 {font-size: 1em;}
+h5 {font-size: 1em;}
+h6 {font-size: 1em;}
+
+span.h-override-color {font-size: 80%;}
+span.h-override-black {color: #000;font-size: 80%;}
+
+/* ---------------------------------------- PARAGRAPHS ---- */
+p {margin: 10px 25px;padding: 0;}
+.subhead {margin: 0 25px 10px 25px; padding: 0;}
+p.revised {font-size: .8em; font-style: italic; text-align: right; width: 90%; padding: 10px 0 0 0; margin: 0;}
+p.citation {text-indent: -2.5em;margin-left: 5em;}
+p.tinytype {font-size: .7em;}
+
+/* ---------------------------------------- LISTS ---- */
+ul {list-style: disc;margin:10px 25px 10px 25px;padding:0;}
+ul ul {list-style: circle;margin: 10px 0 10px 10px;}
+ul ul ul {list-style: square;margin: 10px 0 10px 10px;}
+
+ol {list-style: decimal;margin:10px 25px 10px 25px;padding:0;}
+ol ol {list-style: lower-alpha;margin: 10px 0 10px 10px;}
+ol ol ol {list-style: lower-roman;margin: 10px 0 10px 10px;}
+
+li {margin: 10px 0 10px 20px;padding:0;}
+
+ul.no-bullet {list-style-type: none;list-style-image: none;}
+ol.tight li {margin: 0 0 0 25px;}
+ul.tight li {margin: 0 0 0 25px;}
+
+dl {margin: 10px 25px;padding: 0;}
+dt {margin: 10px 0 10px 0;padding: 0;font-weight: bold;}
+dd {margin: 10px 0 10px 25px;padding: 0;}
+
+dl.DL-CardStack dt {margin: 10px 0 0 0;padding: 1%;background-color: #09f;}
+dl.DL-CardStack dd {margin: 0 0 10px 0;padding: 1%;border: thin #09f solid;}
+div#maincontent dl.DL-CardStack dt a {color: #fff;}
+
+dl.DL-Table dt {margin: 0;padding: 1%;width: 45%;float: left;}
+dl.DL-Table dd {margin: 0 0 0 50%;padding: 1%;width: 45%;}
+
+/* ---------------------------------------- BLOCK ELEMENTS ---- */
+
+address {margin: 10px;padding: 0;font-style: normal;display: block;}
+pre {margin: 10px;padding: 0;display: block;}
+blockquote {font-style: italic;margin: 10px 40px;padding: 0;display: block;}
+
+/* ---------------------------------------- INLINE ELEMENTS ---- */
+
+strong {font-weight: bold;}
+strong.alert {color: red;}
+strong.yes {color: green;}
+em {font-style: italic;}
+
+/* ---------------------------------------- TABLES ---- */
+table {
+  margin: 10px 25px;
+  padding: 0;
+  width: 90%;
+  border: 1px solid #e2e2e2;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+th {
+  padding: 1%;
+  border-spacing: 1%;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #09f;
+  font-weight: bold;
+}
+
+td {
+  padding: 1%;
+  border-spacing: 1%;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: transparent;
+}
+
+
+/* ---------------------------------------- FORMS ---- */
+
+form {
+  display: block;
+  width: 100%;
+  padding: 1%;
+}
+form p {
+  border: #fff thin solid;
+  min-height: 30px;
+}
+
+fieldset {
+  border: 1px white solid;
+	margin: 0 25px 0 0;
+}
+fieldset legend {
+  margin: 10px 25px 10px 0;
+  padding: 0;
+  font-size: 1.4em;
+  width: 90%;
+  font-weight: bold;
+  color: #09f;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+label {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  float: left;
+  margin: 0 0 10px 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+label span {
+  width: 100%;
+  display: block;
+  font-weight: normal;
+  color: #666666;
+  font-size: .8em;
+}
+
+input {
+  width: 100%;
+  font-size: 1em;
+  padding: 1%;
+  border: solid thin silver;
+  margin: 0 0 10px 0;
+}
+
+textarea {
+  width: 100%;
+  font-size: 1em;
+  padding: 1%;
+  border: solid thin #ccc;
+  height: 5em;
+  margin: 0 0 10px 0;
+}
+
+label.wide {
+  text-align: left;
+  width: 100%;
+  float: none;
+}
+label.wide span {
+  text-align: left;
+  width: 100%;
+}
+
+p.CheckorRadio-Short {
+  border: thin #fff solid;
+  margin: 10px 25px;
+}
+p.CheckorRadio-Short label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 30%;
+  margin: 0;
+  border: none;
+}
+p.CheckorRadio-Short input {
+  display: block;
+  float: none;
+  width: 15px;
+  height: 15px;
+  margin: 2px 25px 20px 32%;
+  padding: 0;
+  border: none;
+}
+
+p.CheckorRadio-Long {
+  border: thin #fff solid;
+  margin: 10px 25px;
+}
+p.CheckorRadio-Long label {
+  display: block;
+  float: none;
+  font-weight: bold;
+  text-align: left;
+  width: 80%;
+  margin: 0 0 0 25px;
+}
+p.CheckorRadio-Long label span {
+  color: #666666;
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+  text-align: left;
+  width: 80%;
+}
+p.CheckorRadio-Long input {
+  float: left;
+  width: 1%;
+  height: 1%;
+  margin: 2px 10px 0 0;
+  padding: 0;
+  border: none;
+}
+
+select {
+  margin: 0 0 20px 10px;
+  padding: 8px;
+}
+
+.button {
+  clear: both;
+  margin-left: 40%;
+  width: 15%;
+  height: 8%;
+  background: #7a0019 none;
+  text-align: center;
+  line-height: 2em;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------------------------------------- IMAGE PLACEMENT STARTS HERE ---- */
+img.img-right {
+  position: relative;
+  float: right;
+  margin: 1% 0 10px 10px;
+  padding: 0;
+}
+
+img.img-left {
+  position: relative;
+  float: left;
+  margin: 1% 10px 10px 0;
+  padding: 0;
+}
+/* ---------------------------------------- ALIGNMENT, FLOATS, CLEAR FLOAT ---- */
+
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+div.fltrt {
+  /* this class can be used to float an element right in your page.
+  The floated element must precede the element it should be next to on the page. */
+  float: right;
+  margin-left: 8px;
+}
+
+div.fltlft {
+  /* this class can be used to float an element left in your page */
+  float: left;
+  margin-right: 8px;
+}
+
+br.clearfloat {
+  /* this class should be placed on a div or break element and should be the final
+  element before the close of a container that should fully contain a float */
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+div.clearfloat {
+  /* this class should be placed on a div or break element and should be the
+  final element before the close of a container that should fully contain a float */
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+/* ---------------------------------------- Bootstrap Styles ---- */
+/* ---------------------------------------- Alert Text */
+.muted {color: #999999;}
+a.muted:hover, a.muted:focus {color: #808080;}
+.text-warning {color: #c09853;}
+a.text-warning:hover, a.text-warning:focus {color: #a47e3c;}
+.text-error {color: #b94a48;}
+a.text-error:hover, a.text-error:focus {color: #953b39}
+.text-info {color: #3a87ad;}
+a.text-info:hover, a.text-info:focus {color: #2d6987;}
+.text-success {color: #468847;}
+a.text-success:hover, a.text-success:focus {color: #356635;}
+
+/* ---------------------------------------- Alert Boxes */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin: 10px 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert, .alert h4 {color: #c09853;}
+.alert h4, .alert p {margin: 0;}
+.alert .close {position: relative;top: -2px;right: -21px;line-height: 20px;}
+.alert-success {color: #468847;background-color: #dff0d8;border-color: #d6e9c6;}
+.alert-success h4 {color: #468847;}
+.alert-danger, .alert-error {color: #b94a48;background-color: #f2dede;border-color: #eed3d7;}
+.alert-danger h4, .alert-error h4 {color: #b94a48;}
+.alert-info {color: #3a87ad;background-color: #d9edf7;border-color: #bce8f1;}
+.alert-question {background-color: #ddd;border-color: #cbcccd;}
+.alert-question h1, .alert-question h2, .alert-question h3, .alert-question h4 {color: black;margin: 10px 10px 5px 10px;}
+.alert-question p {color: black;margin: 5px 10px;}
+.alert-question ul {color: black;}
+.alert-info {color: #3a87ad;background-color: #d9edf7;border-color: #bce8f1;}
+.alert-block {padding-top: 14px;padding-bottom: 14px;}
+.alert-block > p, .alert-block > ul {margin-bottom: 0;}
+.alert-block p + p {margin-top: 5px;}
+
+/* ---------------------------------------- Image placement*/
+.media, .media-body {overflow: hidden;*overflow: visible;zoom: 1;}
+.media, .media .media {margin-top: 15px;}
+.media:first-child {margin-top: 0;}
+.media-object {display: block;}
+.media-heading {margin: 0 0 5px;}
+.media > .pull-left {margin-right: 10px;}
+.media > .pull-right {margin-left: 10px;}
+.media-list {margin-left: 0;list-style: none;}
+
+/* ---------------------------------------- END Bootstrap Styles */
+/* ---------------------------------------- JQUERY Styles */
+div.tabs {margin: 10px 25px;}
+
+/* ---------------------------------------- END JQUERY Styles */
+/*XXXXXXXXXXXXXXXXXXXXXX    End Content Styling   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXX    Begin Media Breaks   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*this media querry covers the first point at which things go bellow the desktop 960px */
+@media only screen and (max-width: 960px) {
+	div#container {width: 100%;}
+	footer {width: 100%;}
+}
+/* this media querry largley takes care of pulling out the extra right column when there isn't room for it anymore */
+@media all and (max-width: 760px) {
+	nav {width: 25%;margin-left: 0;}
+	div#maincontent {width: 75%;margin-left: 0;}
+}
+@media all and (max-width: 520px) {
+	div#container {
+		min-width: 320px;
+	}
+	nav {
+		width: 70%;
+		margin-left: -200%;
+		/*this is -200px because the transistions look weird in webkit if you don't use giant margins*/
+		z-index: 3;
+	}
+	div#maincontent {
+		width: 100%;
+		margin-left: 0;
+		z-index: 2;
+	}
+	div#maincontent div.callout-right {
+		width: 90%;
+		margin: 0 0 0 25px;
+		float: none;
+	}
+	.active-nav nav {
+		margin-left: 0;
+	}
+	.active-nav div#maincontent {
+		margin-left: 0;
+		margin-right: -80%;
+	}
+	.active-nav div#extracontent {
+		margin-right: -200%;
+	}
+}
+
+
+/* ---------------------------------------- End Miscellaneous classes for reuse --------------------------*/

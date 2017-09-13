@@ -1,0 +1,969 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "CEHD Code Examples" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="feature twothird margin-top-2">
+            <h1>Table of Contents</h1>
+            <p><strong class="text-notice">This examples is deprecated in lieu
+            of the <a href="/patterns/v1/">pattern library</a>.</strong> Updates
+            to styles and patterns will go there from now on.</p>
+            <div>
+                <div class="half">
+                    <div id="toc-container">
+                        <ul id="toc">
+                        </ul>
+                    </div>
+                </div>
+                <div class="half">
+                    <h2>See Also</h2>
+                    <ul>
+                        <li><a href="macros/">Macros</a></li>
+                        <li><a href="routes/">Setting up routes and templates</a></li>
+                        <li><a href="divider/">Column divider</a></li>
+                        <li><a href="cheats/">Pre-baked cheats</a></li>
+                        <li><a href="grid/">12-column grid</a></li>
+                        <li><a href="hero/">Page with hero image example</a></li>
+                        <li><a href="images/">Styling and positioning images</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>The CEHD site has several custom CSS classes to make it easy to
+            generate pages that match their designs. Most of the time you
+            should be able to use a combination and HTML elements and CSS
+            classes to make a page look the way it should.</p>
+
+            <div>
+                <h2 class="toc">Page Title Block</h2>
+
+                <p>The <a href="http://twig.sensiolabs.org/doc/templates.html">Twig template
+                engine</a> is configured to build off of a "base" template that includes a lot
+                of code that you shouldn't have to worry about.</p>
+
+                <p>Blocks start with <samp>{% verbatim %}{%{% endverbatim %}</samp>, the word
+                <samp>block</samp>, and the block name and <samp>{% verbatim %}%}{% endverbatim %}</samp>.</p>
+
+                <p>For example, the "title" block looks like this: <samp>{% verbatim %}{% block title %}{% endverbatim %}</samp>.
+
+                <p>Blocks must be closed with <samp>{% verbatim %}{% endblock %}{% endverbatim %}</samp>.</p>
+
+                <p>All together now, the <samp>title</samp> block looks like this:</p>
+
+                <pre><code class="twig">{%- verbatim -%}
+{# Set the title #}
+{% block title %}
+    My Page Title
+{% endblock %}
+{%- endverbatim -%}</code></pre>
+
+                <p>The code above will generate this html on the page:</p>
+
+                <pre><code class="html">&lt;title&gt;My Page Title&lt;/title&gt;</code></pre>
+            </div>
+
+            <h2 class="toc">Other Blocks</h2>
+
+            <h3><samp>main_content</samp></h3>
+
+            <p>Use the <samp>main_content</samp> block for the content of the page.</p>
+
+            <p>Every template already has this block set up.</p>
+
+            <pre><code class="jinja">{% verbatim %}
+{% block main_content %}
+    Your html content goes here.
+{% endblock %}
+    {% endverbatim %}</code></pre>
+
+            <h3><samp>title_prepend</samp> and <samp>title_append</samp></h3>
+
+            <p><samp>title_prepend</samp> allows us to prepend the same thing to
+            multiple page titles. E.g., every page title can be prepended with
+            "Department of Educational Psychology".</p>
+
+            <p><samp>title_append</samp> is the same as <samp>title_prepend</samp>, but
+            for appending, obviously.
+
+            <h3><samp>meta_content</samp></h3>
+
+            <p>Much like the <samp>title</samp> and <samp>heading_1</samp> blocks, you
+            can insert a <samp>meta_content</samp> block on a template to populate a
+            <samp>&lt;meta name=&quot;description&quot;&gt;</samp> tag.
+
+            <pre><code class="jinja">{% verbatim %}
+{% meta_content %}This is my page description for search engines to read{% endblock %}{% endverbatim %}
+            </code></pre>
+
+            <pre><code class="jinja">
+&lt;meta name=&quot;description&quot; content=&quot;This is my page description for search engines to read&quot;&gt;
+            </code></pre>
+
+            <h3><samp>extra_css</samp></h3>
+
+            <p>If you need to create a brand new style that you can't find here,
+            there's <a
+            href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">a
+            Twig template block</a> for that.</p>
+
+            <pre><code class="html">
+{% verbatim %}{% block extra_css %}
+&lt;style&gt;
+    .special-snowflake {
+        color: white;
+    }
+&lt;/style&gt;
+{% endblock %}{% endverbatim %}
+            </code></pre>
+        </div>
+
+        <div class="half feature margin-top-3">
+                <h2 class="toc">Template Variables</h2>
+
+            <p>There are a handful of variables set up for use in all templates. You
+            can insert variables anywhere using double curly braces: <samp>
+            {% verbatim %}{{ }}{% endverbatim %}</samp>.</p>
+
+            <p>The department name is probably the one that is most useful. You can
+            insert that anywhere by doing this:</p>
+
+            <pre><code class="jinja">{% verbatim %}{{ config.dept_name }}{% endverbatim %}</code></pre>
+
+            <p>Inserting that code will output "{{ config.dept_name }}".</p>
+
+            <p>Hopefully that will help with using the department name in a consistent way.</p>
+
+            <h3>Setting Your Own Variables</h3>
+
+            <p>If you find that you're repeating yourself, you can define <a
+            href="http://twig.sensiolabs.org/doc/templates.html#variables">a
+            variable</a> using <samp>set</samp>, and insert it anywhere in the template.
+            <pre><code class="twig">{%- verbatim -%}
+{% set page_title = "Alumni" %}{# set the variable #}
+{% block title %}
+    {{ page_title }}{# use the page title variable for both the title and h1 #}
+{% endblock %}
+{% block heading_1 %}
+    {{ page_title }}
+{% endblock %}
+{%- endverbatim -%}</code></pre>
+        </div>
+
+        <div class="half feature margin-top-2">
+            <p>Put all together a beginning template will look something like this:</p>
+            <pre><code class="jinja">{% verbatim %}{# this is important, don't delete it #}
+{% extends "edpsych/layout/section.html" %}
+
+{# Set a variable so we can use the same text for the title element and the h1 element #}
+{% set page_title = "Current" %}
+
+{# Use the variable for the page title #}
+{% block title %}{{ page_title }}{% endblock %}
+
+{# Use the same variable for the h1 #}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+
+{# Insert custom CSS #}
+{% block extra_css %}
+    &lt;style&gt;
+        .special-snowflake {
+            color: white;
+        }
+    &lt;/style&gt;
+{% endblock %}
+
+{# Put all the content in the main_content block #}
+{% block main_content %}
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+
+    &lt;p&gt;This is where my content goes.&lt;/p&gt;
+{% endblock %}{% endverbatim %}</code></pre>
+        </div>
+
+        <div class="half feature margin-top-3">
+            <h2>Heading Classes</h2>
+
+            <p>In order to maintain a <em>visual</em> hierarchy,
+            headings have matching CSS classes to control their sizes. For
+            example:</p>
+
+            <pre><code class="html">
+&lt;h2&gt;This is what an &lt;h2&gt; would look like&lt;/h2&gt;
+&lt;h2&gt;This is what an &lt;h2&gt; would look like&lt;/h2&gt;
+&lt;h2 class=&quot;h2&quot;&gt;This is an &lt;h2&gt; with the .h2 class&lt;/h2&gt;
+            </code></pre>
+
+            <h1 class="no-toc">This is what an <samp>&lt;h1&gt;</samp> would look like</h1>
+            <h2 class="no-toc">This is what an <samp>&lt;h2&gt;</samp> would look like</h2>
+            <h1 class="h2 no-toc">This is an <samp>&lt;h1&gt;</samp> with the <samp>.h2</samp> class</h1>
+
+            <p>This provides control over the <em>styles</em> while
+            maintaining good document structure.</p>
+        </div>
+        <div class="feature twothird">
+
+            <pre><code class="html">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+                </code></pre>
+
+            <pre><code class="html">
+&lt;h2 class=&quot;h1&quot;&gt;h2 with &lt;samp&gt;.h1&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h3&quot;&gt;h2 with &lt;samp&gt;.h3&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h4&quot;&gt;h2 with &lt;samp&gt;.h4&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h5&quot;&gt;h2 with &lt;samp&gt;.h5&lt;/samp&gt; class&lt;/h2&gt;
+&lt;h2 class=&quot;h6&quot;&gt;h2 with &lt;samp&gt;.h6&lt;/samp&gt; class&lt;/h2&gt;
+            </code></pre>
+
+            <div class="half">
+                <h2>Default Heading Sizes</h2>
+                <h1>Heading 1</h1>
+                <h2 class="no-toc">Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+            <div class="half">
+                <h2 class="h2">h2 With Classes</h2>
+                <h2 class="h1">h2 with <samp>.h1</samp> class</h2>
+                <h2 class="h3">h2 with <samp>.h3</samp> class</h2>
+                <h2 class="h4">h2 with <samp>.h4</samp> class</h2>
+                <h2 class="h5">h2 with <samp>.h5</samp> class</h2>
+                <h2 class="h6">h2 with <samp>.h6</samp> class</h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="half feature">
+            <h2 class="toc">Layout and Grid</h2>
+            <p>All columns must be contained in two <samp>div</samp>s with
+            <samp>.row</samp> and <samp>.container</samp> classes
+            respectively.</p>
+
+            <p>Rows will create an element that always extends to 100% of the
+            browser window. That can be handy as demonstrated below.</p>
+
+            <p>The container element will limit width to a maximum width of
+            1400px and center the layout on the page.</p>
+
+            <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;p&gt;All columns must be contained in a &lt;samp&gt;.row&lt;/samp&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <h2>Column classes</h2>
+            <p>Most pages will need elements laid out at half, one third or two thirds
+            of the page. You can also create narrower, centered columns at half or
+            two-thirds widths.</p>
+
+            <h3>Two Columns at Equal Widths</h3>
+            <pre><code class="html">
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+            </code></pre>
+            <div class="margin-top-3">
+                <div class="half grid-example">50%</div>
+                <div class="half grid-example">50%</div>
+            </div>
+
+            <h3>Three Columns at Equal Widths</h3>
+            <pre><code class="html">
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+            </code></pre>
+            <div class="margin-top-1">
+                <div class="third grid-example">33%</div>
+                <div class="third grid-example">33%</div>
+                <div class="third grid-example">33%</div>
+            </div>
+
+            <h3>Two Thirds/One Third Columns</h3>
+            <pre><code class="html">
+&lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+            </code></pre>
+            <div class="margin-top-1">
+                <div class="twothird grid-example">66%</div>
+                <div class="third grid-example">33%</div>
+            </div>
+
+            <h3>Important information about columns</h3>
+            <p>Columns will not display correctly unless the last column is the
+            <em>last child element</em>.</p>
+
+            <h4 class="no-toc">Works</h4>
+
+            <pre><code class="html">
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;&lt;!-- last child --&gt;
+&lt;/div&gt;
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;&lt;!-- last child --&gt;
+&lt;/div&gt;
+            </code></pre>
+            <div class="margin-top-3">
+                <div class="half grid-example">child</div>
+                <div class="half grid-example">child</div>
+            </div>
+            <div class="margin-top-1">
+                <div class="half grid-example">child</div>
+                <div class="half grid-example">child</div>
+            </div>
+
+            <h4 class="no-toc">Does not work</h4>
+            <pre><code class="html">
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child (this element will have an extra right margin so it wraps)&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            <div class="margin-top-3">
+                <div class="half grid-example">child</div>
+                <div class="half grid-example margin-top-1">child (this element will have an extra right margin so it wraps)</div>
+                <div class="half grid-example margin-top-1">child</div>
+                <div class="half grid-example margin-top-1">child</div>
+            </div>
+
+            <h3>Centered columns</h3>
+            <p>To make a half-width or two-thirds width column that is centered, use
+            the <samp>.feature</samp> class.</p>
+
+            <pre><code class="html">
+&lt;div class=&quot;half feature&quot;&gt;
+    &lt;p&gt;Half-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <p>Half-width column that is centered</p>
+
+            <pre><code class="html">
+&lt;div class=&quot;twothirds feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- note: &quot;twothirds&quot; and &quot;twothird&quot; will both work. (I
+kept forgetting which was correct.) --&gt;
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+        <div class="twothirds feature grid-example margin-top-1">
+            <p>Two thirds-width column that is centered</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <h3>Yellow background</h3>
+            <p>To add a background with the correct shade of yellow and bigger margins
+            to one of these, add the <samp>.emphasis</samp> class.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="half feature margin-top-1">
+        <pre><code class="html">
+&lt;div class=&quot;row emphasis margin-top-1&quot;&gt;
+    &lt;div class=&quot;half feature&quot;&gt;
+        &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+<div class="row emphasis margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with yellow background</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-1">
+            <h2>Multi-color CEHD background</h2>
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis bg-cehd-multi&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with yellow background and the multi-color CEHD background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row emphasis bg-cehd-multi margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with yellow background and the multi-color CEHD background</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <p>Building on this further, you can use the <samp>.pull-quote</samp> class
+            to bump up the font size for things like, well, pull quotes.</p>
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis margin-top-1&quot;&gt;
+    &lt;div class=&quot;half feature&quot;&gt;
+        &lt;p&gt;A half-width column with yellow background&lt;/p&gt;
+        &lt;p class=&quot;pull-quote&quot;&gt;&quot;This is an important quote.&quot;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row emphasis margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with yellow background</p>
+            <p class="pull-quote">"This is an important quote."</p>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>You can also add the <samp>.subtle</samp> class to change the
+            background color to light grey.</p>
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis subtle&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with grey background&lt;/p&gt;
+            &lt;p class=&quot;pull-quote&quot;&gt;&quot;This is an important quote.&quot;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+<div class="row emphasis subtle margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with grey background</p>
+            <p class="pull-quote">"This is an important quote."</p>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>Here's that same grey background with three buttons:</p>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <pre><code class="html">
+&lt;div class=&quot;row emphasis subtle&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 1&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 2&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;Button 3&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+</div>
+<div class="row emphasis subtle margin-top-1">
+    <div class="container">
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 1</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 2</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="" class="button center">Button 3</a></p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h2>Blue backgrounds</h2>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis cool&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with blue background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row emphasis cool margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with blue background</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <h2>Brown (earthy) backgrounds</h2>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="html">
+&lt;div class=&quot;row emphasis earthy&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;half feature&quot;&gt;
+            &lt;p&gt;A half-width column with blue background&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row emphasis earthy margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <p>A half-width column with earthy background</p>
+        </div>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="html">
+&lt;div class=&quot;row outer-bg-right cool&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;inner-bg-right emphasis cool&quot;&gt;
+            &lt;div class=&quot;third&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;twothird&quot;&gt;A two-third column with a 80% width blue background&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row outer-bg-right cool margin-top-1">
+    <div class="container">
+        <div class="inner-bg-right emphasis cool">
+            <div class="third"></div>
+            <div class="twothird">A two-third column with a 80% width blue background</div>
+        </div>
+    </div>
+</div>
+
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <pre><code class="html">
+&lt;div class=&quot;row margin-top-1 outer-bg-right emphasis&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;inner-bg-right&quot;&gt;
+            &lt;div class=&quot;half&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;half&quot;&gt;A half column with a 50% width yellow background&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row margin-top-1 outer-bg-right emphasis">
+    <div class="container">
+        <div class="inner-bg-right">
+            <div class="half"></div>
+            <div class="half">A half column with a 50% width yellow background</div>
+        </div>
+    </div>
+</div>
+
+<div class="row margin-top-1 outer-bg-right emphasis right-third">
+    <div class="container">
+        <div class="inner-bg-right">
+            <div class="twothird">twothird</div>
+            <div class="third">third</div>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1 outer-bg-right emphasis right-two-third">
+    <div class="container">
+        <div class="inner-bg-right">
+            <div class="third">third</div>
+            <div class="twothird">twothird</div>
+        </div>
+    </div>
+</div>
+<div class="row margin-top-1">
+    <div class="container">
+        <div class="half feature">
+            <h2>Box corners</h2>
+            <pre><code class="html">
+&lt;div class=&quot;half feature&quot;&gt;
+    &lt;div class=&quot;corner-borders-top&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;p&gt;A box with corners.&lt;/p&gt;
+        &lt;p&gt;And some more text&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;corner-borders-bottom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+            <div class="half feature">
+                <div class="corner-borders-top"></div>
+                <div class="container">
+                    <p>A box with corners.</p>
+                    <p>And some more text</p>
+                </div>
+                <div class="corner-borders-bottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="half feature margin-top-3">
+        </div>
+        <div class="twothirds feature margin-top-3">
+            <h2 class="toc">Other Styles</h2>
+
+            <h3>Centering Text</h3>
+            <pre><code class="html">&lt;h3 class=&quot;text-center&quot;&gt;This heading will be centered&lt;/h3&gt;</code></pre>
+            <h3 class="text-center">This heading will be centered</h3>
+
+            <h3>Fancy Centered Button With Hover Effect</h3>
+            <pre><code class="html">&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;button center&quot;&gt;How to apply&lt;/a&gt;&lt;/p&gt;</code></pre>
+            <p class="text-center"><a href="" class="button center">How to apply</a></p>
+
+        <h3>Adding top margin</h3>
+        <div class="span-12">
+                <pre><code class="html">
+&lt;div&gt;
+    (empty)
+&lt;/div&gt;
+&lt;div&gt;
+    No margin-top class
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-1&quot;&gt;
+    .margin-top-1
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-2&quot;&gt;
+    .margin-top-2
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-3&quot;&gt;
+    .margin-top-3
+&lt;/div&gt;
+&lt;div class=&quot;margin-top-4&quot;&gt;
+    .margin-top-4
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div class="grid-example margin-top-1 span-12">
+                (empty)
+            </div>
+            <div class="grid-example span-12">
+                No margin-top class
+            </div>
+            <div class="grid-example margin-top-1 span-12">
+                .margin-top-1
+            </div>
+            <div class="grid-example margin-top-2 span-12">
+                .margin-top-2
+            </div>
+            <div class="grid-example margin-top-3 span-12">
+                .margin-top-3
+            </div>
+            <div class="grid-example margin-top-4 span-12">
+                .margin-top-4
+            </div>
+
+            <div class="span-12">
+                <h3>Smaller text</h3>
+                <p>Use the <samp>&lt;small&gt;</samp> element.</p>
+
+                <pre><code class="html">
+&lt;p&gt;&lt;small&gt;Prime number tendrils of gossamer clouds intelligent beings
+cosmic fugue Tunguska event. Astonishment. Dispassionate extraterrestrial
+observer consciousness citizens of distant epochs. White dwarf rich in
+mystery tingling of the spine. The carbon in our apple pies ship of the
+imagination. Laws of physics, with pretty stories for which there's little
+good evidence, cosmic ocean made in the interiors of collapsing stars
+circumnavigated. Stirred by starlight Orion's sword billions upon billions,
+consciousness! Billions upon billions and billions upon billions upon
+billions upon billions upon billions upon billions upon
+billions.&lt;/small&gt;&lt;/p&gt;
+                </code></code>
+            </div>
+
+            <p><small>Prime number tendrils of gossamer clouds intelligent beings
+            cosmic fugue Tunguska event. Astonishment. Dispassionate extraterrestrial
+            observer consciousness citizens of distant epochs. White dwarf rich in
+            mystery tingling of the spine. The carbon in our apple pies ship of the
+            imagination. Laws of physics, with pretty stories for which there's little
+            good evidence, cosmic ocean made in the interiors of collapsing stars
+            circumnavigated. Stirred by starlight Orion's sword billions upon billions,
+            consciousness! Billions upon billions and billions upon billions upon
+            billions upon billions upon billions upon billions upon
+            billions.</small></p>
+
+            <h3>Sub headings</h3>
+
+            <div class="span-12">
+                <pre><code class="html">
+&lt;h5&gt;Heading &lt;small&gt;smaller text&lt;/small&gt;&lt;/h5&gt;
+&lt;h5&gt;Heading &lt;small class=&quot;clear&quot;&gt;smaller text that clears&lt;/small&gt;&lt;/h5&gt;
+&lt;h5&gt;Heading &lt;small class=&quot;clear normal&quot;&gt;smaller text that clears and will always be 16px&lt;/small&gt;&lt;/h5&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <h4>Heading <small>smaller text</small></h4>
+                <h4>Heading <small class="clear">smaller text that clears</small></h4>
+                <h4>Heading <small class="clear normal">smaller text that clears and will always be 16px</small></h4>
+            </div>
+            <div class="span-12 margin-top-1">
+                <p>You can bump the small text size up or down just like you do heading sizes.</p>
+            </div>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear&quot;&gt;smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h3&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h4&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
+&lt;h3&gt;Heading 2 &lt;small class=&quot;clear h6&quot;&gt;even smaller text&lt;/small&gt;&lt;/h3&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <h3>Heading 2 <small class="clear">smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h3">even smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h4">even smaller text</small></h3>
+                <h3>Heading 2 <small class="clear h6">even smaller text</small></h3>
+            </div>
+
+            <h3>Hiding images for mobile</h3>
+            <p>Use the <samp>.mobile-hide</samp> class.</p>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;img class=&quot;mobile-hide&quot; src=&quot;/assets/images/examples/example.jpg&quot; alt=&quot;Example image.&quot;&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <img class="mobile-hide" src="/assets/images/examples/example.jpg" alt="Example image.">
+            </div>
+
+            <div class="span-12 margin-top-1">
+                <h3>Red text for important information</h3>
+                <p>Use the <samp>.text-notice</samp> class.</p>
+                <div class="span-12 margin-top-1">
+                    <pre><code class="html">
+    &lt;p class=&quot;text-notice&quot;&gt;Here is some text that is important.&lt;/p&gt;
+                    </code></pre>
+                </div>
+                <div class="span-12 margin-top-1">
+                    <p class="text-notice">Here is some text that is important.</p>
+                </div>
+            </div>
+            <h3>Wrapping quotes with fancy quotation marks</h3>
+            <pre><code class="html">
+&lt;blockquote class=&quot;quote-wrap&quot;&gt;Then maybe you should consider this:
+if anything happens to them, Starfleet is going to want a full
+investigation.  This is not about revenge. This is about justice. I
+recommend you don't fire until you're within 40,000 kilometers.
+That might've been one of the shortest assignments in the history
+of Starfleet.  Ensign Babyface! Well, that's certainly good to
+know.  Congratulations - you just destroyed the
+Enterprise.&lt;/blockquote&gt;
+            </code></pre>
+
+            <div class="span-12 margin-top-2"></div>
+
+            <blockquote class="quote-wrap">Then maybe you should consider this:
+            if anything happens to them, Starfleet is going to want a full
+            investigation.  This is not about revenge. This is about justice. I
+            recommend you don't fire until you're within 40,000 kilometers.
+            That might've been one of the shortest assignments in the history
+            of Starfleet.  Ensign Babyface! Well, that's certainly good to
+            know.  Congratulations - you just destroyed the
+            Enterprise.</blockquote>
+
+            <div class="span-12 margin-top-2"></div>
+
+            <h3>Simple green button</h3>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;a href=&quot;&quot; class=&quot;simple green button&quot;&gt;Join&lt;/a&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1"></div>
+            <div class="margin-top-3">
+                <p><a href="" class="simple green button">Join</a></p>
+            </div>
+
+            <h4>Simple green button uppercase</h4>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;a href=&quot;&quot; class=&quot;simple green button to-upper&quot;&gt;Join&lt;/a&gt;
+                </code></pre>
+            </div>
+
+            <div class="span-12 margin-top-1"></div>
+            <p><a href="" class="simple green button to-upper">Join</a></p>
+
+            <h3>Simple maroon button</h3>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;a href=&quot;&quot; class=&quot;simple maroon button&quot;&gt;Join&lt;/a&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1"></div>
+            <div class="margin-top-3">
+                <p><a href="" class="simple maroon button">Join</a></p>
+            </div>
+
+            <h4>Simple maroon button uppercase</h4>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;a href=&quot;&quot; class=&quot;simple maroon button to-upper&quot;&gt;Join&lt;/a&gt;
+                </code></pre>
+            </div>
+
+            <div class="span-12 margin-top-1"></div>
+            <p><a href="" class="simple maroon button to-upper">Join</a></p>
+            <div class="span-12 margin-top-3"></div>
+            <h3>Plus icon</h3>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;div class=&quot;span-2&quot;&gt;
+        &lt;img src=&quot;/assets/images/icons/plus-gold.svg&quot; alt=&quot;Plus symbol&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;span-10&quot;&gt;
+        &lt;p&gt;Adding a plus icon.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <div class="span-2">
+                    <img src="/assets/images/icons/plus-gold.svg" alt="Plus symbol">
+                </div>
+                <div class="span-10">
+                    <p>Adding a plus icon.</p>
+                </div>
+            </div>
+            <h3>Lists without bullets</h3>
+            <div class="span-12 margin-top-1">
+                <pre><code class="html">
+&lt;ul class=&quot;no-bullet&quot;&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+&lt;/ul&gt;
+                </code></pre>
+            </div>
+            <div class="span-12 margin-top-1">
+                <ul class="no-bullet">
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    $(function() {
+        var $main_headings = $('.toc');
+        var $toc_container = $('#toc-container');
+        var $toc = $toc_container.find('ul');
+        var nav_structure = [];
+
+        $main_headings.each(function(idx, element) {
+            var nav_obj = {};
+            var $heading = $(this);
+            var $subheadings = $heading.siblings('h3').filter(function() {
+                return !$(this).hasClass('no-toc');
+            });
+            var heading_id = 'toc-' + idx;
+
+            $heading.attr('id', heading_id);
+            nav_obj.title = $heading.text();
+            nav_obj.link = "#" + heading_id;
+            nav_obj.sub = [];
+
+            $subheadings.each(function(idx, element) {
+                var sub_id = heading_id + '-sub-' + idx;
+                var $sub = $(this);
+                var sub_obj = {};
+
+                $sub.attr('id', sub_id);
+                sub_obj.title = $sub.text();
+                sub_obj.link = "#" + sub_id;
+                nav_obj.sub.push(sub_obj);
+            });
+
+            nav_structure.push(nav_obj);
+        });
+
+        $.each(nav_structure, function(k, v) {
+            var $list_item = $('<li><a href="' + v.link + '">' + v.title + '</a><ul></ul></li>')
+            $toc.append($list_item);
+
+            $.each(v.sub, function(k, v) {
+                var $sub = $list_item.find('ul');
+                $sub.append('<li><a href="' + v.link + '">' + v.title + '</a></li>');
+            });
+        });
+    });
+</script>
+{% endblock %}

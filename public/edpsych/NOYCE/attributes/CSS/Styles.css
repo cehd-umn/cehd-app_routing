@@ -1,0 +1,113 @@
+/* Default CSS Stylesheet for a new Web Application project */
+
+
+BODY
+{
+    FONT-FAMILY: Times New Roman, Arial;
+    FONT-SIZE: smaller;
+    FONT-WEIGHT: normal;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}
+
+SPAN.reallyBig
+{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    COLOR: #990000;
+    FONT-SIZE: xx-large
+}
+
+SPAN.heading
+{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: larger;
+    FONT-WEIGHT: normal;
+    COLOR: #990000;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}
+
+SPAN.title
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: medium;
+    FONT-WEIGHT: normal;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}
+
+SPAN.category
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: smaller;
+    FONT-WEIGHT: bold;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}	
+
+SPAN.definition
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: 1em;
+    FONT-STYLE: italic;
+    color: Blue;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}	
+
+SPAN.footer
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: xx-small;
+}	
+
+
+tr.SubTitle
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: smaller;
+    FONT-WEIGHT: bold;
+    COLOR: #ffffcc;
+    BACKGROUND-COLOR:#990000;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}
+
+a
+{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	COLOR: Blue;
+    FONT-SIZE: smaller;
+}
+a:link 
+{
+	COLOR: Blue;
+}
+a:active 
+{
+	COLOR: Purple;
+}
+a:hover 
+{
+	COLOR: Blue;
+}
+a:visited 
+{
+	COLOR: Purple;
+}
+
+hr
+{
+COLOR: "#cc9966";
+HEIGHT: 1px
+}
+
+hr.sidenav {
+	margin: 0px .4em 0px .4em ;
+}
