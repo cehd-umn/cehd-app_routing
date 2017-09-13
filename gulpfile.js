@@ -1,7 +1,5 @@
 const browserify = require("browserify");
-const babel = require("gulp-babel");
 const buffer = require("vinyl-buffer");
-// const concat = require("gulp-concat");
 const gulp = require("gulp");
 const gutil = require("gulp-util");
 const rename = require("gulp-rename");
@@ -10,6 +8,7 @@ const sass = require("gulp-sass");
 const source = require("vinyl-source-stream");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
+const webpack = require("webpack-stream");
 
 // CEHD
 gulp.task("default", function() {
@@ -54,33 +53,9 @@ gulp.task("cehd-svg-sass-task", function() {
     .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
+// JavaScript is now compiled using webpack
 gulp.task("cehd-javascript", function () {
-    /**
-     * Babelify es6 first then bundle it?
-     */
-    const entries = {
-        entries: [
-            "./public/assets/src/js/cehd.js",
-            "./public/assets/src/js/ga.js",
-            "./public/assets/src/js/helpers.js",
-            "./public/assets/src/js/http_client.js",
-            "./public/assets/src/js/renderer.js",
-            "./public/assets/src/js/search_client.js",
-        ]
-    };
-    const bundler = browserify(entries);
-
-    return bundler.bundle()
-        .pipe(source("cehd.min.js"))
-        .pipe(buffer())
-        .pipe(babel({
-            presets: ["env"]
-        }))
-        .pipe(uglify().on("error", function(err) {
-            gutil.log(gutil.colors.red("[Error]"), err.toString());
-            this.emit("end");
-        }))
-        .pipe(gulp.dest("./public/assets/dist/js/"));
+    return webpack(require("./webpack.config.js"));
 });
 
 // CEHD watch task
