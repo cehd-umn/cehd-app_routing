@@ -26,7 +26,7 @@ class OLPDApp extends \Peloton\Peloton
                 ]
             ];
 
-    public function __construct($file_paths, $templates_dir)
+    function __construct($file_paths, $templates_dir)
     {
         parent::__construct($file_paths, $templates_dir);
 
