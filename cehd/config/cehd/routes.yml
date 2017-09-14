@@ -1090,6 +1090,11 @@
   template: cehd/events/undergrad-networking.html
   template_data:
     - section: events
+/events/wplc-fall/:
+  publish: true
+  template: cehd/events/wplc-fall.html
+  template_data:
+    - section: events
 
 # Examples section (note: keep publish "false" for these")
 /docs/:
