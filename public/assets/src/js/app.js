@@ -10,7 +10,15 @@ class App {
     constructor() {
         const $tracking_elements = $("[data-ga-command]");
 
+        const page_url = window.location.href;
+
         const self = this;
+
+        let $report_problem_link = $("#footer-report-problem-link");
+
+        let report_problem_link_href = $report_problem_link.attr("href");
+
+        $report_problem_link.attr("href",  report_problem_link_href + page_url);
 
         this.renderer = renderer;
 

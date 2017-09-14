@@ -1445,6 +1445,11 @@
   template: cehd/reads/previous-books/yang.html
   template_data:
     - section: reads
+/report-a-problem/:
+  publish: true
+  template: cehd/report-a-problem.html
+  template_data:
+    - section: null
 /research/:
   publish: true
   template: cehd/research/index.html
