@@ -1,0 +1,81 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "The info sessions macro" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% import "macros/table/table.html" as table %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Info sessions macro</h1>
+        <h2>Import the macro</h2>
+        <pre><code class="jinja">
+            {% verbatim %}
+{% import "macros/info-sessions-feed.html" as info_session %}
+            {% endverbatim %}
+        </code></pre>
+
+        <h2>Call the macro inside a <samp>bottom_js</samp> block</h2>
+        <pre><code class="jinja">
+            {% verbatim %}
+{% block bottom_js %}{{ parent() }}
+{# The call to parent() above is *very* important #}
+{{ info_session.info_sessions_feed_js("McNair") }}
+{% endblock %}
+            {% endverbatim %}
+        </code></pre>
+        <p>The parameter we passed in above is the value for the
+        <samp>code</samp> query parameter in the feed. I.e.,
+        <samp>https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?<strong>code=McNair</strong></samp>
+
+        <p>The macro accepts other parameters as well. See the table
+        below.</p>
+
+        {{ table.start_table("info_sessions_feed_js macro parameters") }}
+            {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
+            {{ table.row([
+                "first",
+                "code",
+                "The value for the code query parameter in the info sessions feed. I.e., <samp><small>https://apps.cehd.umn.edu/students/infosession/admin/RSSFeed.aspx?<strong>code=McNair</strong></small></samp>",
+                "None (required)"]) }}
+            {{ table.row([
+                "second",
+                "limit",
+                "The number of results to display",
+                "4"]) }}
+            {{ table.row([
+                "third",
+                "target element selector",
+                "The JQuery selector for the element where info sesssion should be rendered",
+                "<samp>#info-sessions-container</samp>"]) }}
+            {{ table.row([
+                "fourth",
+                "path to template",
+                "The path to the directory where the Nunjucks&dagger; template is",
+                "<samp>/assets/dist/views/cehd/info-sessions</samp>"]) }}
+            {{ table.row([
+                "fifth",
+                "Nunjucks<sup>&dagger;</sup> template name",
+                "The name of the Nunjucks template used to render the events",
+                "index.html"]) }}
+        {{ table.end_table() }}
+
+        <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
+        is a JavaScript template engine that has a syntax almost identical
+        to Twig</a>.</p>
+
+        <h2>Calling macro with all parameters</h2>
+        <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+{# The call to parent() above is *very* important #}
+{{ info_session.info_sessions_feed_js(
+    "McNair",
+    2,
+    "#info-sessions-container",
+    "/assets/dist/views/cehd/info-sessions",
+    "special-template.html"
+) }}
+{% endblock %}
+            {% endverbatim %}</code></pre>
+    </div><!-- container -->
+</div><!-- row -->
+{% endblock %}

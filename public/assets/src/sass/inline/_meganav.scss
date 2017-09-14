@@ -378,6 +378,10 @@ nav {
     .dropdown-menu-wrapper {
         top: 20px;
         width: 858px;
+
+        .h6 {
+            font-size: 14px;
+        }
     }
 
     .meganav-deck {
@@ -411,6 +415,19 @@ nav {
 
     .top-level-link {
         display: none;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #top-level-diversity-inclusion {
+        .top-level-link {
+            display: block;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            text-transform: uppercase;
+        }
     }
 }
 

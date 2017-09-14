@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/standard.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Starter File - Candi Land - CEHD - U of M</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" type="image/png" href="/assets-2015/favicons/favicon-gold.ico"/><!--  global asset  -->
+<link rel="stylesheet" href="../assets/css/core2015.css" media="all" type="text/css" /><!--  local asset  -->
+<link rel="stylesheet" href="../assets/CSS/umn-HF.css" media="all" type="text/css" /><!--  local asset  -->
+<link rel="stylesheet" href="../assets/CSS/Theme-CandI-Land.css" media="all" type="text/css" /><!--  local asset  -->
+<!--  This just makes HTML5 operate on old versions of IE -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-1.9.0.js"></script><!--  global asset  -->
+<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js"></script><!--  global asset  -->
+				<link rel="stylesheet" href="../assets/js/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" media="all" type="text/css" /><!--  local asset  -->
+<script type="text/javascript" src="../assets/js/responsive.js"></script><!--  local asset  -->
+<script type="text/javascript" src="/assets-2015/js/globalnav.js" ></script><!--  global asset  -->
+<script type="text/javascript" src="/assets-2015/js/ajaxRSS.js"></script><!--  global asset  -->
+
+<!-- InstanceBeginEditable name="head" -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body> 
+	<div id="container">
+		<!--#include file="../assets/includes/umn-header.asp" -->
+  	<!--#include file="../assets/includes/dept-header.asp" -->
+			<div id="restabs">
+				<div id="tabnav"><span id="menuicon">Menu</span></div>
+			</div><!-- ./restabs -->
+    	<br class="clearfloat" />
+    	<nav>
+    	<!--#include file="../assets/includes/nav.asp" -->
+    	</nav>
+    	<div id="maincontent"><!-- InstanceBeginEditable name="main-content" --> 
+
+      <h1>This is the page to test jQuery stuff</h1>
+  	<p>jQuery is built into this framework, here are some widgets to use sparingly. <a href="http://jqueryui.com/">More options are availbe at jQuery UI</a>. </p>
+   <h2>Accordian</h2>
+       <script>
+$(function() {
+$( ".accordion" ).accordion({
+heightStyle: "content",
+active: false,
+collapsible: true,
+});
+});
+</script>
+<div class="accordion">
+<h3>Section 1</h3>
+<div>
+<p>
+Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+</p>
+</div>
+<h3>Section 2</h3>
+<div>
+<p>
+Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+suscipit faucibus urna.
+</p>
+</div>
+<h3>Section 3</h3>
+<div>
+<p>
+Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+</p>
+<ul>
+<li>List item one</li>
+<li>List item two</li>
+<li>List item three</li>
+</ul>
+</div>
+<h3>Section 4</h3>
+<div>
+<p>
+Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+mauris vel est.
+</p>
+<p>
+Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+inceptos himenaeos.
+</p>
+</div>
+</div>
+<h2>Tabs</h2>
+<p>Keep in mind horizontal tabs are falling out of favor quickly. Users are now more comfortable with scrolling a long page of logical sections.</p>
+ <script>
+$(function() {
+$( ".tabs" ).tabs();
+});
+</script>
+
+<div class="tabs">
+<ul>
+<li><a href="#tabs-1">Nunc tincidunt</a></li>
+<li><a href="#tabs-2">Proin dolor</a></li>
+<li><a href="#tabs-3">Aenean lacinia</a></li>
+</ul>
+<div id="tabs-1">
+<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+</div>
+<div id="tabs-2">
+<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+</div>
+<div id="tabs-3">
+<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+</div>
+</div>
+
+
+<!-- InstanceEndEditable -->
+      </div><!-- ./maincontent -->
+        <br class="clearfloat" />
+			<!--#include file="../assets/includes/footer.asp" -->
+	</div><!-- ./container -->
+</body>
+<!-- InstanceEnd --></html>

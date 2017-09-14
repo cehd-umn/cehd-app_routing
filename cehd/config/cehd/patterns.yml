@@ -680,7 +680,7 @@ removing top margin:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/css/includes/top-margin-remove.html
+    - path: cehd/patterns/css/includes/margin-top-remove.html
       type: include
   type: include
   uses: null
@@ -696,7 +696,23 @@ adding top margin:
   handler: null
   template: null
   twig_files:
-    - path: cehd/patterns/css/includes/top-margin.html
+    - path: cehd/patterns/css/includes/margin-top.html
+      type: include
+  type: include
+  uses: null
+adding bottom margin:
+  publish: true
+  meta: null
+  categories:
+    - margin-bottom
+    - element vertical alignment
+  description: adds bottom margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: cehd/patterns/css/includes/margin-bottom.html
       type: include
   type: include
   uses: null

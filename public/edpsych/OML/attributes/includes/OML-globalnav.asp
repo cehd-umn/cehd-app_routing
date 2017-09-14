@@ -1,0 +1,19 @@
+﻿    <h1>Page Navigation</h1>
+	<ul>
+		<li><a href="/EdPsych/OML/Default.html">Home</a></li>
+		<li><a href="/EdPsych/OML/About.html">About the OML</a></li>
+		<li><a href="/EdPsych/OML/Contact.html">Contact Us</a></li>
+		<li><a href="/EdPsych/OML/Resources.html">Resources</a></li>
+		<li><a href="/EdPsych/OML/Facilities.html">Facilities</a></li>
+		<li><a href="/EdPsych/OML/Projects.html">Projects</a></li>
+		<li><a href="/EdPsych/OML/Links.html">Related Links</a></li>
+	</ul>
+		<h2>Contact us:</h2>	
+<address class="vcard" id="hcard-oml">	
+<span class="org fn email"><a href="mailto:oml@umn.edu">oml@umn.edu</a></span><br />
+			<span class="fn org">Observational Methods Lab</span><br />
+			<span class="adr"><span class="extended-address">150 Ed Sciences</span> <br />
+			<span class="street-address">56 East River Road</span> <br />
+			<span class="locality">Minneapolis</span>, <span class="region">MN</span> <span class="postal-code">55455</span> <br />
+			<span class="country-name">USA</span></span><br />
+</address>

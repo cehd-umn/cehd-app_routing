@@ -100,6 +100,10 @@ Child Psychology:
   meta: null
   publish: true
   links:
+    - title: Undergraduate Major
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/programs.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
   description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience.
@@ -390,15 +394,6 @@ Kinesiology:
     - Disability and Aging
     - Languages, Culture, and International
     - Recreation, Health, and Wellbeing
-Leadership:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
-  description: Prepare for real-life leadership opportunities by examining leadership from several perspectives.
-  categories:
-    - Community and Leadership
 Leadership in Education:
   meta: null
   publish: true
@@ -500,7 +495,7 @@ Parent and Family Education:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
-    - Languages, Culture, and International    
+    - Languages, Culture, and International
 Physical Activity and Health:
   meta: null
   publish: true

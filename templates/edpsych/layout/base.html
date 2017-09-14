@@ -2,7 +2,17 @@
 {% block css %}<link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | University of Minnesota{% endblock %}
-{% block bottom_js %}<script src="{{ config.js_base }}/edpsych.min.js"></script>{% endblock %}
+{% block bottom_js %}
+    <script src="{{ config.js_base }}/edpsych.min.js"></script>
+    <script src="/assets/dist/js/common.min.js{{ js_cachebuster }}"></script>
+    <script src="/assets/dist/js/app.min.js{{ js_cachebuster }}"></script>
+    <script>
+        (function() {
+            "use strict";
+            var app = new App();
+        }());
+    </script>
+{% endblock %}
 {% block inline_css %}
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 <style>
