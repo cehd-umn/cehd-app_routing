@@ -4,6 +4,7 @@
     "curly": true,
     "eqeqeq": true,
     "eqnull": true,
+    "esversion": 6,
     "expr": true,
     "immed": true,
     "noarg": true,

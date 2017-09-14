@@ -1,12 +1,11 @@
-"use strict";
+class Search {
 
-var Search = function(base_url) {
+    constructor(base_url) {
+        this.params = null;
+        this.base_url = base_url + "/services/search/";
+    }
 
-    this.params = null;
-
-    this.base_url = base_url + "/services/search/";
-
-    this.getParams = function(params) {
+    getParams(params) {
         if (typeof params.start === "undefined") {
             params.start = 0;
         }
@@ -15,13 +14,13 @@ var Search = function(base_url) {
             params.num = 10;
         }
 
-        var request_params = {
+        const request_params = {
             url: this.base_url,
             data: params
         };
 
         return request_params;
-    };
-};
+    }
+}
 
-window.Search = Search;
+module.exports = Search;

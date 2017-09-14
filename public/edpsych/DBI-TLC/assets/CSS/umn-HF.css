@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/*
+	Owner: College of Education and Human Development - U of M
+	Title: CEHD Public Web - Core layout elements
+	Version: UMN Header 2015 (this is an update of the UMN header made to work with core 2013)
+	What's it do?: These are all of the styles for the U of M header, which was updated in 2015
+	Dependencies: This file should be placed after "core2015.css" to use @font-face declaration.
+	Authors: Dan Sagisser and Jeff Abuzzahab
+	Created: 2013-06-13
+	Updated: 2015-04-28
+	
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+/*
+import grabs the google font Raleway for use for MyU and OneStop links
+import needs to be the first thing on the stylesheet to work
+*/
+
+
+
+/* ---------- Campus Links -----------------------------------*/
+/*this hides the campus links div, just in case some old version of HTML sill has it*/
+div#campuslinks { display: none;}
+/* ---------- end Campus Links -------------------------------*/
+
+
+
+/* ---------- U of M Header ----------------------------------*/
+div#umnheader {
+  background-color: #79111a;
+  height: 75px;
+  width: 960px;
+  margin: 0 auto;
+  font: Arial, Helvetica, sans-serif;
+}
+
+div#umnheader a#umnh-logos {
+  background: url(../images/umnheader/umnh-logos.png) no-repeat;
+  margin: 5px 0 0 20px;
+  width: 315px;
+  height: 63px;
+  background-color: transparent;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+div#umnheader a {color: #EEE; text-decoration:none; font-size: 14px; font-family: 'Raleway', sans-serif;}
+
+
+
+div#umnheader a:hover {color: #EEE; text-decoration: underline; }
+div#umnheader a:active {color: #EEE; text-decoration:none;}
+div#umnheader a:visited {color: #EEE; text-decoration:none; }
+
+div#umnheader a#umnh-myu {
+  margin: 14px 23px 4px 4px;
+  height: 15px;
+  display: block;
+  float: right;
+  clear: none;
+  font-size: .8em;
+}
+div#umnheader a#umnh-onestop {
+  margin: 14px 5px 4px 4px;
+  height: 15px;
+  display: block;
+  float: right;
+  clear: none;
+  font-size: .8em;
+}
+
+
+div#umnheader div#umnh-searchbox {
+  display: block;
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 220px;
+  height: 30px;
+  float: right;
+  clear: both;
+  /*border: 1px solid #fff;*/
+  text-align: right;
+}
+
+input#umnh-searchfield {
+  background-color: white;
+  border-radius: 0;
+  display: inline;
+  width: 150px;
+  height: 18px;
+  margin: 3px 0 0 3px;
+  padding: 0 0 0 5px;
+  border: 0;
+  color: #777;
+  font-size: .85em;
+}
+
+input#umnh-searchbtn {
+  display: inline;
+  margin: 4px 4px 0 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #CCC;
+  font-weight: normal;
+  font-size: 1em;
+  width: auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+/* 
+	This custom icon font is included in the Core style sheet.
+	If you're using the header somewhere outside the "starter files",
+	then you should uncomment this font-face block.
+*/
+/*
+@font-face {
+  font-family: 'fontello';
+  src: url("/assets-2015/fonts/fontello-2015/fontello.eot");
+  src: url("/assets-2015/fonts/fontello-2015/fontello.eot") format('embedded-opentype'), url("/assets-2015/fonts/fontello-2015/fontello.woff") format('woff'), url("/assets-2015/fonts/fontello-2015fontello.ttf") format('truetype'), url("/assets-2015/fonts/fontello-2015/fontello.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input#umnh-searchbtn  { font-family: 'fontello'; }
+div#umnheader a#umnh-myu:after { font-family: 'fontello'; content: "  \e801"; }
+*/
+input#umnh-searchbtn  { font-family: 'fontello'; }
+
+/* ---------- end U of M Header ------------------------------*/
+
+/* ---------- start U of M Footer ----------------------------*/
+footer#umnfoot {
+  display: block;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  background-color: #fff;
+  border-top: 1px #CCC solid;
+  padding: 0;
+  font-size: .8em;
+  color: #333;
+  text-align: center;
+}
+footer#umnfoot p {
+  margin: 15px;
+  padding: 0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+
+/* ---------- end   U of M Footer ----------------------------*/
+
+/* ---------- media querry for high dpi ----------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
+  div#umnheader a#umnh-logos {
+    background: url(../images/umnheader/umnh-logos@2x.png) no-repeat;
+    background-size: 315px 65px;
+  }
+}
+/* ---------- end media querry for high dpi ------------------*/
+/* ---------- media querry for medium Screen -----------------*/
+@media only screen and (max-width: 959px) {
+  div#umnheader {
+    width: 100%;
+  }
+}
+/* ---------- end media querry for medium Screen -------------*/
+/* ---------- media querry for small Screen ------------------*/
+@media only screen and (max-width: 620px) {
+  div#umnheader {
+    min-width: 320px;
+    height: 100px;
+  }
+  div#umnheader a#umnh-logos {
+    margin: 0 auto;
+	float: none;
+	width: 263px;
+    height: 51px;
+	position: static;
+    background-size: 263px 51px;
+  }
+  div#umnheader a#umnh-myu, div#umnheader a#umnh-onestop {display: none;}
+
+  div#umnheader div#umnh-searchbox {
+    margin: 0 auto 0 auto;
+    float: none;
+	display: block;
+	position: static;
+  }
+}
+/* ---------- end media querry for small Screen --------------*/
