@@ -1,0 +1,32 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "Twig includes" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <p><a
+        href="https://twig.symfony.com/doc/1.x/templates.html#including-other-templates">Twig
+        includes</a> are a good way to avoid repetition. Especially if a chunk
+        of code needs to be repeated on multiple pages.</p>
+
+        <p>Here are some pre-built includes you might find handy:</p>
+
+        <ul>
+            <li><a href="/patterns/v1/svg/plus-icon-svg-include/">Plus symbol</a></li>
+            <li><a href="/patterns/v1/svg/calendar-icon-svg/">Calendar icon</a></li>
+            <li><a href="/patterns/v1/svg/email-icon-svg/">Email icon</a></li>
+            <li><a href="/patterns/v1/svg/facebook-icon-svg/">Facebook icon</a></li>
+            <li><a href="/patterns/v1/svg/instagram-icon-svg/">Instagram icon</a></li>
+            <li><a href="/patterns/v1/svg/linkedin-icon-svg/">LinkedIn icon</a></li>
+            <li><a href="/patterns/v1/svg/pinterest-icon-svg/">Pinterest icon</a></li>
+            <li><a href="/patterns/v1/svg/twitter-icon-svg/">Twitter icon</a></li>
+            <li><a href="/patterns/v1/svg/vimeo-icon-svg/">Vimeo icon</a></li>
+            <li><a href="/patterns/v1/svg/youtube-icon-svg/">YouTube icon</a></li>
+            <li><a href="connect/">Connect</a></li>
+        </ul>
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

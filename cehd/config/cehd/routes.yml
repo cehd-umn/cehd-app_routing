@@ -1121,6 +1121,18 @@
   template_data:
     meta_description: null
     section: null
+/docs/includes/:
+  publish: false
+  template: cehd/docs/includes/index.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/includes/connect/:
+  publish: false
+  template: cehd/docs/includes/connect.html
+  template_data:
+    meta_description: null
+    section: null
 /docs/grid/:
   publish: false
   template: cehd/docs/grid.html

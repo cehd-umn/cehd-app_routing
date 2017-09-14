@@ -1,0 +1,18 @@
+{% extends "cehd/layout/documentation.html" %}
+{% set page_title = "The Connect include" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+        <pre><code>{% verbatim %}
+&lt;div class=&quot;row&quot;&gt;
+    {{ include('cehd/includes/connect.html') }}
+&lt;/div&gt;{% endverbatim %}
+        </code></pre>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+<div class="row">
+    {{ include('cehd/includes/connect.html') }}
+</div>
+{% endblock %}
