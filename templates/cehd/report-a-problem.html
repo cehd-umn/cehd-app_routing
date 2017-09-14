@@ -7,7 +7,15 @@
     <h1>Report a problem</h1>
     <div class="cognito">
         <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
-        <script>Cognito.load("forms", { id: "85" });</script>
+        <script>
+            var url = window.location.search.split("=")[1];
+            Cognito.load("forms", {
+                id: "85",
+                entry: {
+                    "Url": url
+                }
+            });
+        </script>
     </div>
       
   </div> <!-- ./container -->
