@@ -1,0 +1,31 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "JSON data feeds" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title}}</h1>
+
+        <p> All endpoints accept GET requests only and return JSON. For
+        information about parameters and data points see the links below.</p>
+
+        <p>All of these endpoints pull from our current COPE tools and parse
+        the XML into JSON. Some formatting and processing happens on the back
+        end to keep the data consistent and tidy.</p>
+
+        <p>JSON is preferred over XML because it converts seamlessly into a
+        JavaScript object. It's also easy to parse using PHP or other backend
+        languages.</p>
+
+        <ul>
+            <li><a href="events/">Events</a></li>
+            <li>Info Sessions</li>
+            <li>News</li>
+            <li>People</li>
+            <li>Person</li>
+            <li>Programs</li>
+            <li>Search</li>
+        </ul>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
