@@ -275,6 +275,18 @@ siebe007:
     category: instructor
     content: null
     video_embed_code: "<iframe src=\"https://player.vimeo.com/video/138111119?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+mpolvere:
+    meta_description: null
+    section: American Sign Language (ASL)
+    category: instructor
+    content: null
+    video_embed_code: "<iframe src=\"https://player.vimeo.com/video/233381555?title=0&amp;byline=0&amp;portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+nmcclusk:
+    meta_description: null
+    section: American Sign Language (ASL)
+    category: instructor
+    content: null
+    video_embed_code: "<iframe src=\"https://player.vimeo.com/video/233383649?title=0&amp;byline=0&amp;portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 davidrei:
     meta_description: null
     section: American Sign Language (ASL)
@@ -329,7 +341,7 @@ zeye0002:
     section: Special Education
     category: instructor
     quote: "My passion is to give educators the tools to provide students of all disabilities the instruction, accommodations and adaptations for success in school and their post school hopes and dreams."
-    video_embed_code: null    
+    video_embed_code: null
 chris002:
     meta_description: null
     section: Emeritus Faculty
