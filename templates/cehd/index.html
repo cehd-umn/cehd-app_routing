@@ -72,7 +72,11 @@
         width: 100vw;
     }
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 1024px) {
+        html, body, main {
+            height: 375px;
+        }
+
         .videojs-background-wrap, #bg-video {
             display: none;
         }
@@ -123,7 +127,7 @@
 
         .vertical-center {
             height: auto;
-            margin-top: -100px;
+            margin-top: -86px;
             padding-top: 0;
         }
 
@@ -177,6 +181,12 @@
     @media all and (max-width: 414px) {
         #maincontent {
             background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
+        }
+
+        .vertical-center {
+            height: auto;
+            margin-top: -100px;
+            padding-top: 0;
         }
 
     }
