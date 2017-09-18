@@ -3,34 +3,22 @@
 
 #menuicon-wrapper {
     background: $umn-medium-grey;
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
     display: inline-block;
     height: 75px;
     left: -15px;
+    opacity: .8;
     top: 213px;
     width: 45px;
     z-index: 999;
 }
 
-#menuicon {
-    display: inline-block;
-    left: 13px;
-    position: absolute;
-    top: 13px;
-    z-index: 999;
 
-    &::before {
-        background: $base-black;
-        box-shadow: 0 8px 0 0 $base-black, 0 16px 0 0 $base-black;
-        content: "";
-        display: block;
-        height: 4px;
-        left: -4px;
-        position: absolute;
-        top: 15px;
-        width: 29px;
-    }
+#main-nav-icon {
+    margin-left: 16px;
+    margin-top: 24px;
+    width: 60%;
 }
 
 #menulabel {
@@ -181,31 +169,33 @@ nav {
 }
 
 @media all and (min-width: 960px) {
-    #menuicon {
-        top: 17%;
-    }
 
     #menulabel {
         background-color: transparent;
+        bottom: 30px;
         display: block;
-        font-size: 12px;
-        margin-left: 15px;
-        margin-top: 45px;
+        font-size: 20px;
+        margin-left: 26px;
+        position: absolute;
+
+    }
+
+    #main-nav-icon {
+        margin-left: 14px;
+        margin-top: 16px;
+        width: 75%;
     }
 
     #menuicon-wrapper {
-        font-size: 12px;
+        font-size: 18px;
+        height: 155px;
         left: -10px;
         top: 196px;
-        width: 52px;
+        width: 100px;
     }
 
     #menutab {
         background-color: transparent;
-    }
-
-    #menuicon {
-        left: 20px;
     }
 
     nav {
