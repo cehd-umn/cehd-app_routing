@@ -114,12 +114,13 @@
                 tg: "310"
             }
         };
-        var client = new HTTPClient();
+        var app = new App();
+        var client = new app.httpClient();
         var $request = client.get(params);
 
         $request.done(function() {
             var people = client.getResults();
-            var renderer = new Renderer();
+            var renderer = new app.renderer();
             var template_params = {
                 'template_path': '/assets/dist/views/cehd/people/',
                 'template_name': 'list.html',
@@ -141,12 +142,13 @@
                 tg: "311"
             }
         };
-        var client = new HTTPClient();
+        var app = new App();
+        var client = new app.httpClient();
         var $request = client.get(params);
 
         $request.done(function() {
             var people = client.getResults();
-            var renderer = new Renderer();
+            var renderer = new app.renderer();
             var template_params = {
                 'template_path': '/assets/dist/views/cehd/people/',
                 'template_name': 'list.html',
