@@ -172,7 +172,8 @@
                 tg: "460"
             }
         };
-        var client = new HTTPClient();
+        var app = new App();
+        var client = new app.httpClient();
         var $request = client.get(params);
 
         Number.prototype.isMultipleOf = function(n) {
@@ -181,7 +182,7 @@
 
         $request.done(function() {
             var people = client.getResults();
-            var renderer = new Renderer();
+            var renderer = new app.renderer();
             var people_data = [];
             var group = [];
 
