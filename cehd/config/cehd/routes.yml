@@ -2425,6 +2425,11 @@
   template: cehd/trio/mcnair/2017/hyde.html
   template_data:
     - section: trio
+/trio/mcnair/2017/leikvoll/:
+  publish: true
+  template: cehd/trio/mcnair/2017/leikvoll.html
+  template_data:
+    - section: trio
 /trio/mcnair/2017/lussier/:
   publish: true
   template: cehd/trio/mcnair/2017/lussier.html
