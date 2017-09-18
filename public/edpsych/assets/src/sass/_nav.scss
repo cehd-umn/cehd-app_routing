@@ -3,11 +3,12 @@
 
 #menuicon-wrapper {
     background: $umn-medium-grey;
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
     display: inline-block;
     height: 75px;
     left: -15px;
+    opacity: .8;
     top: 213px;
     width: 45px;
     z-index: 999;
@@ -27,6 +28,7 @@
         display: block;
         height: 4px;
         left: -4px;
+        opacity: .8;
         position: absolute;
         top: 15px;
         width: 29px;
@@ -182,22 +184,24 @@ nav {
 
 @media all and (min-width: 960px) {
     #menuicon {
-        top: 17%;
+        // top: 17%;
     }
 
     #menulabel {
         background-color: transparent;
         display: block;
-        font-size: 12px;
-        margin-left: 15px;
-        margin-top: 45px;
+        font-size: 20px;
+        margin-left: 26px;
+        margin-top: 61px;
+        padding-top: 40px;
     }
 
     #menuicon-wrapper {
-        font-size: 12px;
+        font-size: 18px;
+        height: 155px;
         left: -10px;
         top: 196px;
-        width: 52px;
+        width: 100px;
     }
 
     #menutab {
@@ -206,6 +210,12 @@ nav {
 
     #menuicon {
         left: 20px;
+
+        &::before {
+            margin-left: 12px;
+            margin-top: 50px;
+            padding-top: -30px;
+        }
     }
 
     nav {
