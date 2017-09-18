@@ -1,0 +1,98 @@
+{% extends "cehd/layout/documentation.html" %}
+{% import "macros/table/table.html" as table %}
+{% set page_title = "People JSON feed" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <h2>Data points</h2>
+
+        {{ table.start_table("Events feed data points") }}
+        {{ table.heading_row(
+            ["key",
+            "description",
+            "type",
+            "example"]) }}
+        {{ table.row(
+            ["date",
+            "event date",
+            "string",
+            "9/15/2017"]) }}
+        {{ table.end_table() }}
+
+        <h2>Request parameters</h2>
+        <p>Request parameters match parameters from the <a
+        href="https://apps.cehd.umn.edu/people/admin/LinkPro.aspx">Events
+        Calendar Tool LinkPro</a>. It's best to use that that to find the
+        combination of events you want and then pass the matching parameters to
+          <samp>http://www.cehd.umn.edu/services/events/feed/</samp>.
+
+        <p>For example, if I check <strong>Start > Today</strong> and then check "Public Calendar" under "Collegewide Calendar" in LinkPro and click the
+        "generate xml link" button, I get
+        <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&<strong>q</strong>=6&amp;<strong>r</strong>=3&amp;<strong>t</strong>=170</samp>.
+
+        <p>We just need the "r", "q" and "tg" parameters from that link and send
+        a GET request to <a href="http://www.cehd.umn.edu/services/events/feed/?q=6&r=3&t=170">http://www.cehd.umn.edu/services/events/feed/?<strong>q</strong>=6&amp;<strong>r</strong>=3&amp;<strong>t</strong>=170</a>
+        to return the same data in JSON format.
+
+        <h2>JSON example</h2>
+        <pre><code>
+[
+    {
+        &quot;date&quot;: &quot;9/15/2017&quot;,
+        &quot;dateTimeEnd&quot;: &quot;9/15/2017 12:30 PM&quot;,
+        &quot;dateTimeStart&quot;: &quot;9/15/2017 8:30 AM&quot;,
+        &quot;day&quot;: &quot;15&quot;,
+        &quot;dayOfWeek&quot;: &quot;Friday&quot;,
+        &quot;description&quot;: null,
+        &quot;endHour&quot;: &quot;12&quot;,
+        &quot;endMinute&quot;: &quot;30&quot;,
+        &quot;endTime&quot;: &quot;12:30 PM&quot;,
+        &quot;fullMonth&quot;: &quot;September&quot;,
+        &quot;id&quot;: &quot;7165&quot;,
+        &quot;location&quot;: &quot;U.S. Bank Stadium Hyundai Room&quot;,
+        &quot;locationURL&quot;: &quot;https://www.google.com/maps/place/U.S.+Bank+Stadium/@44.973603,-93.2573068,15z/data=!4m5!3m4!1s0x0:0xe5359d25498abfd3!8m2!3d44.973603!4d-93.2573068&quot;,
+        &quot;month&quot;: &quot;9&quot;,
+        &quot;shortDescription&quot;: &quot;&lt;div&gt;\n\tA growing body of research has shown how working with parents can improve mental health outcomes for children exposed to traumatic stress. A half-day conference from the University of Minnesota&rsquo;s Ambit Network and Center for Resilient Families will highlight cutting edge work in this field.&lt;/div&gt;\n&lt;div&gt;\n\t&amp;nbsp;&lt;/div&gt;\n&lt;div&gt;\n\tThe conference will feature keynote presenter Dr. Marion Forgatch, a key developer of &lt;em&gt;Parent Management Training &ndash; the Oregon Model (PMTO)&lt;/em&gt;, a landmark evidence-based prevention intervention that has been implemented around the world. Center for Resilient Families Director Abi Gewirtz and clinical psychologist Dr. BraVada Garrett-Akinsanya will also present. Minnesota Department of Human Services Commissioner Emily Piper and Minnesota House Representative for District 60B, Ilhan Omar, will make opening remarks.&lt;/div&gt;\n&lt;div&gt;\n\t&amp;nbsp;&lt;/div&gt;\n&lt;div&gt;\n\t&lt;div&gt;\n\t\t&lt;a href=\&quot;https://www.eventbrite.com/e/ambit-fall-conference-importance-of-parenting-in-highly-stressed-families-tickets-35053992435\&quot;&gt;REGISTRATION INFORMATION&lt;/a&gt;&lt;/div&gt;\n\t&lt;div&gt;\n\t\t&amp;nbsp;&lt;/div&gt;\n\t&lt;div&gt;\n\t\t&lt;a href=\&quot;http://itr.umn.edu/2017/06/ambit-network-fall-conference-the-importance-of-parenting-in-highly-stressed-children-and-families/\&quot;&gt;SPEAKER BIOS&lt;/a&gt;&lt;/div&gt;\n\t&lt;div&gt;\n\t\t&amp;nbsp;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div&gt;\n\t&amp;nbsp;&lt;/div&gt;\n&lt;div&gt;\n\tThe Center for Resilient Families and the Ambit Network are part of the &lt;a href=\&quot;http://itr.umn.edu\&quot;&gt;Institute for Translational Research in Children&rsquo;s Mental Health&lt;/a&gt; at the University of Minnesota.&lt;/div&gt;\n&lt;div&gt;\n\t&amp;nbsp;&lt;/div&gt;&quot;,
+        &quot;shortMonth&quot;: &quot;Sep&quot;,
+        &quot;startHour&quot;: &quot;08&quot;,
+        &quot;startMinute&quot;: &quot;30&quot;,
+        &quot;startTime&quot;: &quot;8:30 AM&quot;,
+        &quot;timestamp&quot;: false,
+        &quot;title&quot;: &quot;Ambit Network Fall Conference: The Importance of Parenting in Highly Stressed Children and Families&quot;,
+        &quot;url&quot;: &quot;http://www.cehd.umn.edu/events/?z=7165&amp;dt=9/15/2017&quot;,
+        &quot;year&quot;: &quot;2017&quot;
+    },
+    {
+        &quot;date&quot;: &quot;9/19/2017&quot;,
+        &quot;dateTimeEnd&quot;: &quot;9/19/2017 1:00 PM&quot;,
+        &quot;dateTimeStart&quot;: &quot;9/19/2017 12:00 PM&quot;,
+        &quot;day&quot;: &quot;19&quot;,
+        &quot;dayOfWeek&quot;: &quot;Tuesday&quot;,
+        &quot;description&quot;: null,
+        &quot;endHour&quot;: &quot;01&quot;,
+        &quot;endMinute&quot;: &quot;00&quot;,
+        &quot;endTime&quot;: &quot;1:00 PM&quot;,
+        &quot;fullMonth&quot;: &quot;September&quot;,
+        &quot;id&quot;: &quot;7262&quot;,
+        &quot;location&quot;: &quot;Humphrey School of Public Affairs, Room 215&quot;,
+        &quot;locationURL&quot;: &quot;https://www.hhh.umn.edu&quot;,
+        &quot;month&quot;: &quot;9&quot;,
+        &quot;shortDescription&quot;: &quot;&lt;p&gt;\n\tNancy Sherwood from the&amp;nbsp;&lt;a href=\&quot;http://www.opc.umn.edu\&quot;&gt;Obesity Prevention Center&lt;/a&gt;&amp;nbsp;at the University of Minnesota will present \&quot;The NET-Works Trial: Linking families, communities, and primary care to prevent obesity in preschool-age children.\&quot;&lt;/p&gt;\n&lt;p&gt;\n\tThe NET-Works (Now Everybody Together for Amazing and Healthful Kids) study is one of four obesity prevention and/or treatment trials that are part of the National Heart, Lung, and Blood Institute and National Institute of Child Health and Human Development-funded Childhood Obesity Prevention and Treatment (COPTR) Consortium. The goal of NET-Works is to design an intervention that integrates strategies that promote healthy eating, activity patterns, and positive parenting into existing organizations and community-based programmatic initiatives utilized, trusted and valued by parents.&lt;/p&gt;\n&lt;p&gt;\n\tThe multi-component, multi-setting intervention includes home visiting, parenting classes (based on the ECFE model), pediatric primary care, and neighborhood connections. More than 500 racially/ethnically diverse and low-income two- to four-year-old children and their parent or primary caregiver were randomized to the multi-component intervention or to a usual care comparison group for a three-year period.&lt;/p&gt;&quot;,
+        &quot;shortMonth&quot;: &quot;Sep&quot;,
+        &quot;startHour&quot;: &quot;12&quot;,
+        &quot;startMinute&quot;: &quot;00&quot;,
+        &quot;startTime&quot;: &quot;12:00 PM&quot;,
+        &quot;timestamp&quot;: false,
+        &quot;title&quot;: &quot;HCRC Brown Bag Seminar: The NET-Works Trial: Linking families, communities, and primary care to prevent obesity in preschool-age children&quot;,
+        &quot;url&quot;: &quot;http://www.cehd.umn.edu/events/?z=7262&amp;dt=9/19/2017&quot;,
+        &quot;year&quot;: &quot;2017&quot;
+    }
+]
+        </code></pre>
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
