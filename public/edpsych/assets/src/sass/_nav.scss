@@ -14,25 +14,11 @@
     z-index: 999;
 }
 
-#menuicon {
-    display: inline-block;
-    left: 13px;
-    position: absolute;
-    top: 13px;
-    z-index: 999;
 
-    &::before {
-        background: $base-black;
-        box-shadow: 0 8px 0 0 $base-black, 0 16px 0 0 $base-black;
-        content: "";
-        display: block;
-        height: 4px;
-        left: -4px;
-        opacity: .8;
-        position: absolute;
-        top: 15px;
-        width: 29px;
-    }
+#main-nav-icon {
+    margin-left: 16px;
+    margin-top: 24px;
+    width: 60%;
 }
 
 #menulabel {
@@ -183,17 +169,21 @@ nav {
 }
 
 @media all and (min-width: 960px) {
-    #menuicon {
-        // top: 17%;
-    }
 
     #menulabel {
         background-color: transparent;
+        bottom: 30px;
         display: block;
         font-size: 20px;
         margin-left: 26px;
-        margin-top: 61px;
-        padding-top: 40px;
+        position: absolute;
+
+    }
+
+    #main-nav-icon {
+        margin-left: 14px;
+        margin-top: 16px;
+        width: 75%;
     }
 
     #menuicon-wrapper {
@@ -206,16 +196,6 @@ nav {
 
     #menutab {
         background-color: transparent;
-    }
-
-    #menuicon {
-        left: 20px;
-
-        &::before {
-            margin-left: 12px;
-            margin-top: 50px;
-            padding-top: -30px;
-        }
     }
 
     nav {
