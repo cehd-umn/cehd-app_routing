@@ -12,8 +12,9 @@
 <script>
     (function() {
         "use strict";
-        var http_client = new HTTPClient();
-        var search = new Search("{{ config.base_url }}");
+        var app = new App();
+        var http_client = new app.httpClient();
+        var search = new app.searchClient("{{ config.base_url }}");
         var start = 10;
 
         $(".more-results-link").on("click", function(event) {
@@ -39,7 +40,7 @@
                         config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                     }
                 };
-                var renderer = new Renderer();
+                var renderer = new app.renderer();
                 renderer.init(template_params);
                 renderer.render(true);
                 start = start + 10;
