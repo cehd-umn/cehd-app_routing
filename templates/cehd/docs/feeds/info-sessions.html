@@ -1,0 +1,256 @@
+{% extends "cehd/layout/documentation.html" %}
+{% import "macros/table/table.html" as table %}
+{% set page_title = "Info sessions JSON feed" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <h2>Data points</h2>
+
+        {{ table.start_table("Info Sessions feed data points") }}
+        {{ table.heading_row(
+            ["key",
+            "description",
+            "type",
+            "example"]) }}
+        {{ table.row(
+            ["code",
+            "Info session code",
+            "string",
+            "TA-NonEd"]) }}
+        {{ table.row(
+            ["contact",
+            "Info session contact",
+            "string",
+            "Student Services"]) }}
+        {{ table.row(
+            ["dateChange",
+            "Date has changed",
+            "boolean",
+            "False"]) }}
+        {{ table.row(
+            ["date",
+            "info session date",
+            "string",
+            "9/15/2017"]) }}
+        {{ table.row(
+            ["dateTimeEnd",
+            "info session end date and time",
+            "string",
+            "9/15/2017 12:30 PM"]) }}
+        {{ table.row(
+            ["day",
+            "two digit numerical day of month",
+            "string",
+            "21"]) }}
+        {{ table.row(
+            ["dayOfWeek",
+            "day of week",
+            "string",
+            "Thursday"]) }}
+        {{ table.row(
+            ["degree",
+            "Degree description",
+            "string",
+            "Bachelor of Science"]) }}
+        {{ table.row(
+            ["description",
+            "info session description",
+            "string",
+            "n/a"]) }}
+        {{ table.row(
+            ["email",
+            "Info session contact email",
+            "string",
+            "cehdinfo@umn.edu"]) }}
+        {{ table.row(
+            ["endTime",
+            "info session end time",
+            "string",
+            "4:30 PM"]) }}
+        {{ table.row(
+            ["endHour",
+            "two digit hour of info session end time",
+            "string",
+            "04"]) }}
+        {{ table.row(
+            ["endMinute",
+            "two digit minute of info session end time",
+            "string",
+            "30"]) }}
+        {{ table.row(
+            ["eventId",
+            "ID for an info session in the Events calendar",
+            "string",
+            "61"]) }}
+        {{ table.row(
+            ["fullMonth",
+            "month",
+            "string",
+            "September"]) }}
+        {{ table.row(
+            ["id",
+            "unique id for the info session",
+            "string",
+            "6368"]) }}
+        {{ table.row(
+            ["location",
+            "info session location",
+            "string",
+            "Education Sciences Building Room 325"]) }}
+        {{ table.row(
+            ["locationURL",
+            "info session location url",
+            "string",
+            "http://campusmaps.umn.edu/education-sciences-building"]) }}
+        {{ table.row(
+            ["month",
+            "numerical month",
+            "string",
+            "9"]) }}
+        {{ table.row(
+            ["openSeats",
+            "Seats are available",
+            "boolean",
+            "True"]) }}
+        {{ table.row(
+            ["phone",
+            "Contact phone number",
+            "string",
+            "(612) 625-3339"]) }}
+        {{ table.row(
+            ["shortDescription",
+            "short description",
+            "string",
+            "&lt;p&gt;\n\tSpecifically for TRIO Students looking for on campus jobs! This event is open to all TRIO Students.&amp;nbsp;&lt;/p&gt;"]) }}
+        {{ table.row(
+            ["shortMonth",
+            "abbreviated month",
+            "string",
+            "Sep"]) }}
+        {{ table.row(
+            ["startTime",
+            "info session start time",
+            "string",
+            "2:30 PM"]) }}
+        {{ table.row(
+            ["startHour",
+            "two digit hour of info session start time",
+            "string",
+            "04"]) }}
+        {{ table.row(
+            ["startMinute",
+            "two digit minute of info session start time",
+            "string",
+            "30"]) }}
+        {{ table.row(
+            ["timestamp",
+            "Unix timestamp for info session date and time",
+            "integer",
+            "1506693600"]) }}
+        {{ table.row(
+            ["title",
+            "info session title",
+            "string",
+            "Information Session for Transfer Admission to CEHD majors"]) }}
+        {{ table.row(
+            ["url",
+            "Info session registration url",
+            "string",
+            "https://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4497"]) }}
+        {{ table.row(
+            ["year",
+            "4 digit year",
+            "string",
+            "2017"]) }}
+        {{ table.end_table() }}
+
+        <h2>Request parameters</h2>
+        <p>Request parameters match parameters from the <a
+        href="https://apps.cehd.umn.edu/students/infosession/admin/LinkPro.aspx">
+        Info Session LinkPro</a>. It's best to use that that to find the
+        combination of events you want and then pass the matching parameters to
+          <samp>http://www.cehd.umn.edu/services/info-sessions/</samp>.
+
+        <p>For example, if I want a feed that matches the data in the "TA-NonEd"
+        RSS feed in the page linked above, all I need is the value for the
+        "code" query parameter. So
+        <samp>RSSFeed.aspx?<strong>code=TA-NonEd</strong></samp> translates to
+        <samp><a href="http://www.cehd.umn.edu/services/info-sessions/?code=TA-NonEd">http://www.cehd.umn.edu/services/info-sessions/?<strong>code=TA-NonEd</strong><a/></samp>.
+
+        <h2>JSON example</h2>
+        <pre><code class="json">
+[
+    {
+        &quot;code&quot;: &quot;TA-NonEd&quot;,
+        &quot;contact&quot;: &quot;Student Services&quot;,
+        &quot;date&quot;: &quot;9/29/2017&quot;,
+        &quot;dateChange&quot;: false,
+        &quot;dateTimeEnd&quot;: &quot;9/29/2017 3:00 PM&quot;,
+        &quot;dateTimeStart&quot;: &quot;9/29/2017 2:00 PM&quot;,
+        &quot;day&quot;: &quot;29&quot;,
+        &quot;dayOfWeek&quot;: &quot;Friday&quot;,
+        &quot;degree&quot;: &quot;Bachelor of Science&quot;,
+        &quot;description&quot;: null,
+        &quot;email&quot;: &quot;cehdinfo@umn.edu&quot;,
+        &quot;endHour&quot;: &quot;03&quot;,
+        &quot;endMinute&quot;: &quot;00&quot;,
+        &quot;endTime&quot;: &quot;3:00 PM&quot;,
+        &quot;eventId&quot;: &quot;61&quot;,
+        &quot;fullMonth&quot;: &quot;September&quot;,
+        &quot;id&quot;: &quot;4497&quot;,
+        &quot;location&quot;: &quot;330 Education Sciences Building&quot;,
+        &quot;locationURL&quot;: null,
+        &quot;month&quot;: &quot;9&quot;,
+        &quot;openSeats&quot;: &quot;True&quot;,
+        &quot;phone&quot;: &quot;(612) 625-3339&quot;,
+        &quot;shortDescription&quot;: null,
+        &quot;shortMonth&quot;: &quot;Sep&quot;,
+        &quot;startHour&quot;: &quot;02&quot;,
+        &quot;startMinute&quot;: &quot;00&quot;,
+        &quot;startTime&quot;: &quot;2:00 PM&quot;,
+        &quot;timestamp&quot;: 1506693600,
+        &quot;title&quot;: &quot;Information Session for Transfer Admission to CEHD majors&quot;,
+        &quot;url&quot;: &quot;http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4497&quot;,
+        &quot;year&quot;: &quot;2017&quot;
+    },
+    {
+        &quot;code&quot;: &quot;TA-NonEd&quot;,
+        &quot;contact&quot;: &quot;Student Services&quot;,
+        &quot;date&quot;: &quot;10/10/2017&quot;,
+        &quot;dateChange&quot;: false,
+        &quot;dateTimeEnd&quot;: &quot;10/10/2017 12:00 PM&quot;,
+        &quot;dateTimeStart&quot;: &quot;10/10/2017 11:00 AM&quot;,
+        &quot;day&quot;: &quot;10&quot;,
+        &quot;dayOfWeek&quot;: &quot;Tuesday&quot;,
+        &quot;degree&quot;: &quot;Bachelor of Science&quot;,
+        &quot;description&quot;: null,
+        &quot;email&quot;: &quot;cehdinfo@umn.edu&quot;,
+        &quot;endHour&quot;: &quot;12&quot;,
+        &quot;endMinute&quot;: &quot;00&quot;,
+        &quot;endTime&quot;: &quot;12:00 PM&quot;,
+        &quot;eventId&quot;: &quot;61&quot;,
+        &quot;fullMonth&quot;: &quot;October&quot;,
+        &quot;id&quot;: &quot;4498&quot;,
+        &quot;location&quot;: &quot;330 Education Sciences Building&quot;,
+        &quot;locationURL&quot;: null,
+        &quot;month&quot;: &quot;10&quot;,
+        &quot;openSeats&quot;: &quot;True&quot;,
+        &quot;phone&quot;: &quot;(612) 625-3339&quot;,
+        &quot;shortDescription&quot;: null,
+        &quot;shortMonth&quot;: &quot;Oct&quot;,
+        &quot;startHour&quot;: &quot;11&quot;,
+        &quot;startMinute&quot;: &quot;00&quot;,
+        &quot;startTime&quot;: &quot;11:00 AM&quot;,
+        &quot;timestamp&quot;: 1507633200,
+        &quot;title&quot;: &quot;Information Session for Transfer Admission to CEHD majors&quot;,
+        &quot;url&quot;: &quot;http://apps.cehd.umn.edu/students/infosession/UGRform.aspx?infoSessionId=4498&quot;,
+        &quot;year&quot;: &quot;2017&quot;
+    }
+]
+        </code></pre>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

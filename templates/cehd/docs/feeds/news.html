@@ -1,0 +1,145 @@
+{% extends "cehd/layout/documentation.html" %}
+{% import "macros/table/table.html" as table %}
+{% set page_title = "Events JSON feed" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <h2>Data points</h2>
+
+        {{ table.start_table("Events feed data points") }}
+        {{ table.heading_row(
+            ["key",
+            "description",
+            "type",
+            "example"]) }}
+        {{ table.row(
+            ["encoded",
+            "HTML-encoded news story",
+            "string",
+            "&lt;figure id=\&quot;attachment_7511\&quot; style=\&quot;width: 150px\&quot; class=\&quot;wp-caption alignright\&quot;&gt;&lt;a href=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/01/Koenig-Pref.jpg\&quot;&gt;&lt;img class=\&quot;size-full wp-image-7511\&quot; src=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/01/Koenig-Pref.jpg\&quot; alt=\&quot;Melissa Koenig\&quot; width=\&quot;150\&quot; height=\&quot;225\&quot; /&gt;&lt;/a&gt;&lt;figcaption class=\&quot;wp-caption-text\&quot;&gt;Melissa Koenig, Ph.D.&lt;/figcaption&gt;&lt;/figure&gt;\n&lt;p&gt;&lt;a href=\&quot;http://www.cehd.umn.edu/icd/people/faculty/Koenig.html\&quot;&gt;Melissa Koenig, Ph.D.&lt;/a&gt;, professor in the &lt;a href=\&quot;http://www.cehd.umn.edu/ICD/\&quot;&gt;Institute of Child Development&lt;/a&gt;, is the recipient of a 2017 &lt;a href=\&quot;https://diversity.umn.edu/women/saraevansaward\&quot;&gt;Sara Evans Faculty Woman Scholar/Leader Award&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;The award is sponsored by the University of Minnesota&amp;#8217;s &lt;a href=\&quot;https://provost.umn.edu/\&quot;&gt;Office of the Executive Vice President and Provost&lt;/a&gt; and the &lt;a href=\&quot;https://diversity.umn.edu/women/home\&quot;&gt;Women&amp;#8217;s Center&lt;/a&gt;. It recognizes women faculty at the University of Minnesota-Twin Cities who have achieved significant scientific accomplishments, national and international reputations, and who contribute as leaders on campus.&lt;/p&gt;\n&lt;p&gt;Up to two awards are offered per year, one in science and engineering and one in humanities, arts, and social sciences. As a recipient of a 2017 award, Koenig will receive $5,000 to support her &lt;a href=\&quot;http://www.cehd.umn.edu/icd/research/elel/\&quot;&gt;research&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;Koenig will be honored during the &lt;a href=\&quot;https://diversity.umn.edu/women/awardsprogram\&quot;&gt;Celebrating Changemakers 2017&lt;/a&gt; awards program, which will take place on Oct. 19.&lt;/p&gt;"]) }}
+        {{ table.row(
+            ["description",
+            "Story description",
+            "string",
+            "Melissa Koenig, Ph.D., professor in the Institute of Child Development, is the recipient of a 2017 Sara Evans Faculty Woman Scholar/Leader Award. The award is sponsored by the University of Minnesota&amp;#8217;s Office of the Executive Vice President and Provost and the Women&amp;#8217;s Center. It recognizes women faculty at the University of Minnesota-Twin Cities who have achieved &amp;#8230; &lt;a href=\&quot;http://news.cehd.umn.edu/koenig-receives-woman-scholar-and-leadership-award/\&quot; class=\&quot;more-link\&quot;&gt;Continue reading &lt;span class=\&quot;screen-reader-text\&quot;&gt;Koenig receives Sara Evans Woman Scholarship and Leadership Award&lt;/span&gt; &lt;span class=\&quot;meta-nav\&quot;&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;"]) }}
+        {{ table.row(
+            ["link",
+            "Link to the story",
+            "string",
+            "http://news.cehd.umn.edu/koenig-receives-woman-scholar-and-leadership-award/"]) }}
+        {{ table.row(
+            ["link_override",
+            "A link to use instead of the default story link",
+            "string",
+            "http://google.com"]) }}
+        {{ table.row(
+            ["teaser",
+            "Story teaser",
+            "string",
+            "Melissa Koenig, Ph.D., professor in the Institute of Child Development, is the recipient of a 2017 Sara Evans Faculty Woman Scholar/Leader Award."]) }}
+        {{ table.row(
+            ["thumbnail",
+            "URL for a story thumbnail image",
+            "string",
+            "http://www.cehd.umn.edu/images/link/to/image.jpg"]) }}
+        {{ table.row(
+            ["title",
+            "Story title",
+            "string",
+            "Koenig receives Sara Evans Woman Scholarship and Leadership Award"]) }}
+        {{ table.row(
+            ["title_override",
+            "Title to use instead of the default title",
+            "string",
+            "Koenig receives woman scholar and leadership award"]) }}
+        {{ table.row(
+            ["categories",
+            "An array of story categories",
+            "array",
+            "<pre>[
+    &quot;Faculty &amp; Staff&quot;,
+    &quot;ICD Homepage&quot;,
+    &quot;Institute of Child Development&quot;,
+    &quot;ZZ Special Use - College HP&quot;,
+    &quot;ZZ Special Use - College Internal&quot;,
+    &quot;ZZ Special Use - News Homepage&quot;
+]</pre>"]) }}
+        {{ table.end_table() }}
+
+        <h2>Request parameters</h2>
+
+        <p>The base URL for the news JSON feed is <samp>http://www.cehd.umn.edu/services/news/feed/</samp></p>
+
+        <dl>
+            <dt>Example of a feed that pulls from the Vision 2020 blog</dt>
+            <dd><samp><a href="http://www.cehd.umn.edu/services/news/feed/?feed-path=feed%2F&feed_url=https%3A%2F%2Fcehdvision2020.umn.edu%2F">http://www.cehd.umn.edu/services/news/feed/?feed-path=feed%2F&amp;feed_url=https%3A%2F%2Fcehdvision2020.umn.edu%2F</a></samp></dd>
+            <dt>Example of a feed that pulls from the News blog</dt>
+            <dd><samp><a href="http://www.cehd.umn.edu/services/news/feed/?feed-path=category%2Fzz-special-use-college-hp%2Ffeed%2F">http://www.cehd.umn.edu/services/news/feed/?feed-path=category%2Fzz-special-use-college-hp%2Ffeed%2F</a></samp></dd>
+        </dl>
+
+        {{ table.start_table("News feed parameters") }}
+        {{ table.heading_row(
+            ["key",
+            "description",
+            "required",
+            "example",
+            "default"]) }}
+        {{ table.row(
+            ["feed_url",
+            "The base URL of the Wordpress RSS feed",
+            "No",
+            "https%3A%2F%2Fcehdvision2020.umn.edu%2F",
+            "http%3A%2F%2Fnews.cehd.umn.edu%2F"]) }}
+        {{ table.row(
+            ["feed_path",
+            "The path of the feed on the provided base url",
+            "Yes",
+            "category%2Fzz-special-use-college-hp%2Ffeed%2F",
+            "None"]) }}
+        {{ table.end_table() }}
+
+        <h2>JSON example</h2>
+        <pre><code class="json">
+[
+    {
+        &quot;categories&quot;: [
+            &quot;Faculty &amp; Staff&quot;,
+            &quot;ICD Homepage&quot;,
+            &quot;Institute of Child Development&quot;,
+            &quot;ZZ Special Use - College HP&quot;,
+            &quot;ZZ Special Use - College Internal&quot;,
+            &quot;ZZ Special Use - News Homepage&quot;
+        ],
+        &quot;description&quot;: &quot;Melissa Koenig, Ph.D., professor in the Institute of Child Development, is the recipient of a 2017 Sara Evans Faculty Woman Scholar/Leader Award. The award is sponsored by the University of Minnesota&amp;#8217;s Office of the Executive Vice President and Provost and the Women&amp;#8217;s Center. It recognizes women faculty at the University of Minnesota-Twin Cities who have achieved &amp;#8230; &lt;a href=\&quot;http://news.cehd.umn.edu/koenig-receives-woman-scholar-and-leadership-award/\&quot; class=\&quot;more-link\&quot;&gt;Continue reading &lt;span class=\&quot;screen-reader-text\&quot;&gt;Koenig receives Sara Evans Woman Scholarship and Leadership Award&lt;/span&gt; &lt;span class=\&quot;meta-nav\&quot;&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;&quot;,
+        &quot;encoded&quot;: &quot;&lt;figure id=\&quot;attachment_7511\&quot; style=\&quot;width: 150px\&quot; class=\&quot;wp-caption alignright\&quot;&gt;&lt;a href=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/01/Koenig-Pref.jpg\&quot;&gt;&lt;img class=\&quot;size-full wp-image-7511\&quot; src=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/01/Koenig-Pref.jpg\&quot; alt=\&quot;Melissa Koenig\&quot; width=\&quot;150\&quot; height=\&quot;225\&quot; /&gt;&lt;/a&gt;&lt;figcaption class=\&quot;wp-caption-text\&quot;&gt;Melissa Koenig, Ph.D.&lt;/figcaption&gt;&lt;/figure&gt;\n&lt;p&gt;&lt;a href=\&quot;http://www.cehd.umn.edu/icd/people/faculty/Koenig.html\&quot;&gt;Melissa Koenig, Ph.D.&lt;/a&gt;, professor in the &lt;a href=\&quot;http://www.cehd.umn.edu/ICD/\&quot;&gt;Institute of Child Development&lt;/a&gt;, is the recipient of a 2017 &lt;a href=\&quot;https://diversity.umn.edu/women/saraevansaward\&quot;&gt;Sara Evans Faculty Woman Scholar/Leader Award&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;The award is sponsored by the University of Minnesota&amp;#8217;s &lt;a href=\&quot;https://provost.umn.edu/\&quot;&gt;Office of the Executive Vice President and Provost&lt;/a&gt; and the &lt;a href=\&quot;https://diversity.umn.edu/women/home\&quot;&gt;Women&amp;#8217;s Center&lt;/a&gt;. It recognizes women faculty at the University of Minnesota-Twin Cities who have achieved significant scientific accomplishments, national and international reputations, and who contribute as leaders on campus.&lt;/p&gt;\n&lt;p&gt;Up to two awards are offered per year, one in science and engineering and one in humanities, arts, and social sciences. As a recipient of a 2017 award, Koenig will receive $5,000 to support her &lt;a href=\&quot;http://www.cehd.umn.edu/icd/research/elel/\&quot;&gt;research&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;Koenig will be honored during the &lt;a href=\&quot;https://diversity.umn.edu/women/awardsprogram\&quot;&gt;Celebrating Changemakers 2017&lt;/a&gt; awards program, which will take place on Oct. 19.&lt;/p&gt;&quot;,
+        &quot;link&quot;: &quot;http://news.cehd.umn.edu/koenig-receives-woman-scholar-and-leadership-award/&quot;,
+        &quot;link_override&quot;: null,
+        &quot;teaser&quot;: &quot;Melissa Koenig, Ph.D., professor in the Institute of Child Development, is the recipient of a 2017 Sara Evans Faculty Woman Scholar/Leader Award.&quot;,
+        &quot;thumbnail&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;Koenig receives Sara Evans Woman Scholarship and Leadership Award&quot;,
+        &quot;title_override&quot;: &quot;Koenig receives woman scholar and leadership award&quot;
+    },
+    {
+        &quot;categories&quot;: [
+            &quot;Uncategorized&quot;,
+            &quot;ZZ Special Use - College HP&quot;,
+            &quot;ZZ Special Use - News Homepage&quot;
+        ],
+        &quot;description&quot;: &quot;Two organizations that are committed to healthy child development and parenting have formed a partnership to expand their promotion of easy-to-understand tips and resources for moms, dads, and professionals. Mom Enough®, founded by Twin Cities child and family health professionals Marti and Erin Erickson, and the University of Minnesota’s College of Education and Human Development &amp;#8230; &lt;a href=\&quot;http://news.cehd.umn.edu/mom-enough-u-of-m-college-of-education-and-human-development-team-up-to-help-kids-parents/\&quot; class=\&quot;more-link\&quot;&gt;Continue reading &lt;span class=\&quot;screen-reader-text\&quot;&gt;Mom Enough, U of M College of Education and Human Development team up to help kids, parents&lt;/span&gt; &lt;span class=\&quot;meta-nav\&quot;&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;&quot;,
+        &quot;encoded&quot;: &quot;&lt;p&gt;&lt;a href=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2017/08/1mom.jpg\&quot;&gt;&lt;img class=\&quot;size-medium wp-image-50265 alignright\&quot; src=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2017/08/1mom-300x73.jpg\&quot; alt=\&quot;\&quot; width=\&quot;300\&quot; height=\&quot;73\&quot; srcset=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2017/08/1mom-300x73.jpg 300w, http://news.cehd.umn.edu/wp-content/uploads/2017/08/1mom.jpg 343w\&quot; sizes=\&quot;(max-width: 300px) 100vw, 300px\&quot; /&gt;&lt;/a&gt;Two organizations that are committed to healthy child development and parenting have formed a partnership to expand their promotion of easy-to-understand tips and resources for moms, dads, and professionals.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\&quot;http://momenough.com/\&quot;&gt;Mom Enough®&lt;/a&gt;, founded by Twin Cities child and family health professionals Marti and Erin Erickson, and the University of Minnesota’s &lt;a href=\&quot;http://www.cehd.umn.edu/news/\&quot;&gt;College of Education and Human Development&lt;/a&gt; (CEHD) are joining forces to present evidence-based research on effective child-rearing at a time when myth-busting and innovative solutions are needed more than ever.&lt;/p&gt;\n&lt;p&gt;The Mom Enough/CEHD partnership will expand the dissemination of world-class research from the University of Minnesota through all Mom Enough communications, including CEHD experts featured in weekly podcasts (available on iTunes and MomEnough.com), e-newsletters, events, and social media. CEHD experts also will create new tips and resources that will be available through both University and Mom Enough websites, social media, and in print.&lt;/p&gt;\n&lt;p&gt;Mom Enough aims to provide reliable, research-based information on child development, parenting, and maternal health and well-being. Often delivered with personal anecdotes from the mother-daughter co-hosts, the information is accessible and useful for helping all moms and dads become the parents that their children need.&lt;/p&gt;\n&lt;p&gt;CEHD is focused on the value of every child as an individual with unique talents and challenges. The college features more than 180 faculty members engaged in research, teaching, and service across Minnesota and around the world. They are represented in the departments of child development; curriculum and instruction; educational psychology; family social science; kinesiology; organizational leadership, policy, and development; and social work.&lt;/p&gt;\n&lt;p&gt;“CEHD is uniquely positioned to address many of our toughest challenges in society, such as teaching and learning innovations, children’s mental health and development, family resilience, and healthy living across the lifespan,” said Dean Jean K. Quam. “This partnership with Mom Enough is another step in our efforts to collaborate with important community organizations that are dedicated to improving lives.”&lt;/p&gt;\n&lt;p&gt;Mom Enough’s Marti Erickson, who earned her master’s degree and Ph.D. from CEHD, said, “CEHD was my academic home throughout my long career at the University of Minnesota and is where I developed my passion for bringing research-based information to parents and other caring adults. So it is especially exciting for me to enter into this formal partnership to help Mom Enough’s large and diverse audience tap into CEHD’s extraordinary resources.”&lt;/p&gt;\n&lt;p&gt;For more information on this new partnership, contact Steve Baker (s-bake@umn.edu, 612-624-3430) or Stacy Downs (stacy@momenough.com, 763-234-4054).&lt;/p&gt;&quot;,
+        &quot;link&quot;: &quot;http://news.cehd.umn.edu/mom-enough-u-of-m-college-of-education-and-human-development-team-up-to-help-kids-parents/&quot;,
+        &quot;link_override&quot;: null,
+        &quot;teaser&quot;: null,
+        &quot;thumbnail&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;Mom Enough, U of M College of Education and Human Development team up to help kids, parents&quot;,
+        &quot;title_override&quot;: null
+    }
+]
+        </code></pre>
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
