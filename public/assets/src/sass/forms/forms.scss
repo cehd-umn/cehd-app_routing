@@ -12,7 +12,7 @@
 }
 
 @each $heading, $size in $heading-map-mobile {
-    .cognito .c-forms-heading $heading {
+    .c-forms-heading $heading {
         font-family: 'Montserrat', Verdana, Geneva, sans-serif;
         font-size: $size;
         margin: .7em 0;
