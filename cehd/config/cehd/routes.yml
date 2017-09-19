@@ -1133,6 +1133,18 @@
   template_data:
     meta_description: null
     section: null
+/docs/feeds/info-sessions/:
+  publish: false
+  template: cehd/docs/feeds/info-sessions.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/feeds/news/:
+  publish: false
+  template: cehd/docs/feeds/news.html
+  template_data:
+    meta_description: null
+    section: null
 /docs/includes/:
   publish: false
   template: cehd/docs/includes/index.html
