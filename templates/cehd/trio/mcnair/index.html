@@ -9,20 +9,22 @@
   <div class="container">
   <h1>McNair Scholars</h1>
   <div class="row">
-      <div class="span-8">
+      <div class="span-4">
             <div class="fb-like-box fltrt" data-href="https://www.facebook.com/studentsupportservicesumntc" data-width="130" data-show-faces="true" data-stream="true" data-header="true" style="margin:0 35px 0 10px"></div>
           <h2>Mission</h2>
           <p>The federally funded <a href="http://www2.ed.gov/programs/triomcnair/index.html">TRIO McNair Scholars program</a> seeks to increase doctoral program application, matriculation, and degree attainment by underrepresented and first-generation college
-            students.</p>
+            students. <a href="/trio/mcnair/about/">Read more about the program &raquo;</a></p>
           <p>The U of M McNair program is open to all Twin Cities students in all colleges and majors, U of M coordinate campuses (Crookston, Duluth, Morris, Rochester), and Minnesota colleges and universities that do not have their own McNair program: Carleton
             College, Hamline University, Macalester College, Metropolitan State University, Saint Mary’s University of Minnesota, St. Catherine University, St. John’s University, and University of St. Thomas. </p>
           <p>Through this summer experience and academic year programming, McNair Scholars develop higher-level academic and research skills necessary to gain admission to and successfully complete graduate study. </p>
           <p>
             <a href="/assets/docs/trio/2017-McNair-Scholars.pdf">View the 2017 McNair Scholars</a></p>
 
-          <p><a href="/trio/mcnair/about/">Read more about the program &raquo;</a></p>
-        </div>
 
+        </div>
+        <div class="span-4">  <!-- Events feed -->
+        {{ loader.loader( "Events", "h2", "events-container" ) }}
+      </div>
           <div class="span-4">
           <h2>Contact</h2>
     <h3><a href="/trio/mcnair/staff/">McNair staff</a></h3>
@@ -168,7 +170,7 @@
         <!-- 2017-06-14, check with Christina in the fall to see if the McNair info-session feed will be used. | JFA
         <h2>Open Houses</h2> -->
         <!-- Events feed -->
-        {{ loader.loader( "Events", "h2", "events-container" ) }}
+
         <h2>Connect</h2>
         <p class="last">
           <a href="https://www.facebook.com/mcnairscholarsumntc" onclick="javascript: pageTracker._trackPageview('/social/mcnair-facebook/');">
