@@ -1145,6 +1145,18 @@
   template_data:
     meta_description: null
     section: null
+/docs/feeds/people/:
+  publish: false
+  template: cehd/docs/feeds/people.html
+  template_data:
+    meta_description: null
+    section: null
+/docs/feeds/person/:
+  publish: false
+  template: cehd/docs/feeds/person.html
+  template_data:
+    meta_description: null
+    section: null
 /docs/includes/:
   publish: false
   template: cehd/docs/includes/index.html

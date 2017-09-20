@@ -1,0 +1,492 @@
+{% extends "cehd/layout/documentation.html" %}
+{% import "macros/table/table.html" as table %}
+{% set page_title = "People JSON feed" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <h2>Data points</h2>
+
+        {{ table.start_table("Events feed data points") }}
+        {{ table.heading_row(
+            ["key",
+            "description",
+            "type",
+            "example"]) }}
+
+        {% for i in 1..4 %}
+            {% set key = "address_" ~ i %}
+            {% set desc = "Address " ~ i %}
+            {{ table.row(
+                [key,
+                desc,
+                "string",
+                desc]) }}
+        {% endfor %}
+
+        {{ table.row(
+            ["areasOfInterest",
+            "Areas of interest",
+            "string",
+            "Prevention Science&lt;br/&gt;\nAttention and Behavior Problems&lt;br/&gt;\nAdolescent Psychiatry&lt;br/&gt;\nAntisocial Behavior&lt;br/&gt;\nAttention-Deficit/Hyperactivity Disorder&lt;br/&gt;\nDrug Abuse Prevention&lt;br/&gt;"]) }}
+        {{ table.row(
+            ["briefBio",
+            "Short bio",
+            "string",
+            "&lt;h2&gt;\n\tRecent News&lt;/h2&gt;\n&lt;p&gt;\n\t&lt;a href=\&quot;http://www.minnpost.com/mental-health-addiction/2015/02/gerald-august-preventing-mental-illness-and-drug-abuse-tailor-interv\&quot;&gt;MinnPost: Gerald August on preventing mental illness and drug abuse&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;\n\t&lt;a href=\&quot;http://cehdvision2020.umn.edu/cehd-blog/mental-health-prevention/\&quot;&gt;Personalized Mental Health Prevention and Intervention&lt;/a&gt;&lt;/p&gt;"]) }}
+        {{ table.row(
+            ["city",
+            "City",
+            "string",
+            "St. Paul"]) }}
+        {{ table.row(
+            ["curriculumVitaeAddr",
+            "Curriculum Vitae URL",
+            "string",
+            "https://apps.cehd.umn.edu/people/CV/AugustG-CV2015.pdf"]) }}
+        {{ table.row(
+            ["dateDisplay",
+            "Formatted date",
+            "string",
+            "June 22, 2017"]) }}
+        {{ table.row(
+            ["dateISO",
+            "Date in ISO format",
+            "string",
+            "2017-06-22"]) }}
+        {{ table.row(
+            ["degrees",
+            "Degrees",
+            "string",
+            "Ph.D., Developmental-Child Psychology, Purdue University&lt;br/&gt;M.S., Research Methodology, Statistics, and Measurement, Southern Connecticut State University&lt;br/&gt;B.A., Biological Sciences, Central Connecticut State University"]) }}
+        {{ table.row(
+            ["expertise",
+            "Expertise",
+            "string",
+            "Developing theory, practice that support retention and graduation for black college students. &lt;br /&gt; Her research addresses educational disparities by developing theory and practice that support retention and graduation for black college students at predominantly white institutions."]) }}
+        {{ table.row(
+            ["fax",
+            "Fax",
+            "string",
+            "123-456-7890"]) }}
+        {{ table.row(
+            ["firstName",
+            "First Name",
+            "string",
+            "Gerald"]) }}
+        {{ table.row(
+            ["fullBio",
+            "Full bio",
+            "string",
+            "&lt;h2&gt;\n\tResearch &amp;amp; Discovery&lt;/h2&gt;\n&lt;p&gt;\n\tOver the past 30 years Dr. August has published numerous papers addressing issues of diagnosis and classification, comorbidity, natural history and treatment pertaining to children and adolescents with Attention Deficit Hyperactivity Disorder (ADHD). In recent years, he has expanded his research program to include the prevention of antisocial behavior and drug abuse, where early childhood disruptive behavior is conceptualized as a risk factor. During this period, he has developed and validated an early-age-targeted prevention program that has been recognized as an exemplary drug abuse prevention program by the Center for Substance Abuse Prevention&amp;rsquo;s National Registry of Effective Prevention Programs, a model program by the Office of Juvenile Justice and Delinquency Model Program&amp;rsquo;s Guide Database, and a research-based program by the National Institute on Drug Abuse. Dr. August is currently principal investigator on several prevention projects, supported by NIDA and NIMH addressing issues pertaining to the transportability and dissemination of evidence-based revention program to community systems of care. He was recently awarded a Center grant from NIMH to study the adaptation of preventive interventions to fit the needs and preferences of children at risk for serious conduct problems.&lt;/p&gt;"]) }}
+        {{ table.row(
+            ["headShot",
+            "Headshot url",
+            "string",
+            "https://apps.cehd.umn.edu/people/Headshot/AugustG-2015.jpg"]) }}
+        {{ table.row(
+            ["headShotAddress",
+            "Headshot url (duplicate)",
+            "string",
+            "https://apps.cehd.umn.edu/people/Headshot/AugustG-2015.jpg"]) }}
+        {{ table.row(
+            ["internetId",
+            "U of M X500 id",
+            "string",
+            "augus001"]) }}
+        {{ table.row(
+            ["jobs",
+            "Array of jobs",
+            "array",
+            "<pre>[
+    {
+        &quot;deptId&quot;: &quot;&quot;,
+        &quot;deptIdDescription&quot;: &quot;&quot;,
+        &quot;status&quot;: &quot;Tenured&quot;,
+        &quot;description&quot;: &quot;Professor&quot;,
+        &quot;umZDeptId&quot;: &quot;Z0174&quot;,
+        &quot;umZDeptIdDescription&quot;: &quot;Department of Family Social Science&quot;
+    },
+    {
+        &quot;deptId&quot;: &quot;11217&quot;,
+        &quot;deptIdDescription&quot;: &quot;FSoS Administration&quot;,
+        &quot;status&quot;: &quot;Active&quot;,
+        &quot;description&quot;: &quot;Professor&quot;,
+        &quot;umZDeptId&quot;: &quot;Z0174&quot;,
+        &quot;umZDeptIdDescription&quot;: &quot;Department of Family Social Science&quot;
+    }
+]</pre>"]) }}
+        {{ table.row(
+            ["lastName",
+            "Last name",
+            "string",
+            "August"]) }}
+        {{ table.row(
+            ["middleName",
+            "Middle name",
+            "string",
+            "Middle"]) }}
+        {{ table.row(
+            ["name",
+            "Comma separated name, Last,First",
+            "string",
+            "August,Gerald"]) }}
+        {{ table.row(
+            ["nameFirstLast",
+            "Concatenated space-separated first and last name",
+            "string",
+            "Gerald August"]) }}
+        {{ table.row(
+            ["nameSuffix",
+            "Name suffix",
+            "string",
+            "Jr."]) }}
+        {{ table.row(
+            ["phone",
+            "Phone",
+            "string",
+            "612/626-4091"]) }}
+        {{ table.row(
+            ["presentations",
+            "Array of presentations. (These will vary depending on how presentations are entered.)",
+            "string",
+            "[
+    &quot;&lt;p&gt;&lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2017, February).&amp;nbsp;Shaping Executive Function Skills: What Can Caregivers Do?&amp;nbsp;Invited speaker at the&amp;nbsp; &lt;em&gt;Simms/Mann Institute Think Tank&lt;/em&gt;. Beverly Hills, CA.&lt;/p&gt;&quot;
+]"]) }}
+        {{ table.row(
+            ["publications",
+            "Array of publications. (These will vary depending on how presentations are entered.)",
+            "string",
+            "[
+      &quot;&lt;p&gt;*Students&lt;/p&gt;\n&lt;p&gt;\n\tCasey, E. C.*, Finsaas, M., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Zelazo, P. D., Murphy, B., Durkin, F., Lister, M., &amp;amp; Masten, A. S. (2014). Promoting resilience through executive function training for homeless and highly mobile preschoolers. In S. Prince-Embury &amp;amp; D. Saklofske (Eds.) &lt;em&gt;Resilience Interventions in Diverse Populations&lt;/em&gt; (pp. 133-158). New York: Springer.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Faja, S.*, &amp;amp; Beck, D. M.* (2015). Incorporating early development into measurement approaches: The need for a continuum of measures across development. In J. A. Griffin, P. McCardle, &amp;amp; L. S. Freund (Eds.), &lt;em&gt;Executive function in preschool age children: Integrating measurement, neurodevelopment, and translational research&lt;/em&gt; (pp. 45-64). Washington, DC: American Psychological Association.&lt;/p&gt;\n&lt;p&gt;\n\tGrenell, A.*, &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2016). Pretense. &lt;em&gt;Sage Encyclopedia of Contemporary Early Childhood Education&lt;/em&gt; (pp. 1075-1077). New York: Sage. http://dx.doi.org/10.4135/9781483340333.n319&lt;/p&gt;\n&lt;p&gt;\n\tMorton, J. B., &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2017). The bilingual advantage: Evidence and alternative views. In M. Hoskyn, G. Iarocci, &amp;amp; A. Ruth (Eds.), &lt;em&gt;Executive functions in children&amp;rsquo;s everyday lives&lt;/em&gt;. New York: Oxford University Press.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Bernier, A., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Desch&amp;ecirc;nes, M.*, &amp;amp; Matte-Gagne, C.* (2012). Social precursors of preschoolers&amp;rsquo; executive functioning: A closer look at the early caregiving environment. &lt;em&gt;Developmental Science, 15&lt;/em&gt;, 12-24.&lt;/p&gt;\n&lt;p&gt;\n\tZelazo, P. D., &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2012). Hot and cool executive function in childhood and adolescence: Development and plasticity. &lt;em&gt;Child Development Perspectives&lt;/em&gt;. doi: 10.1111/j.1750-8606.2012.00246.x&lt;/p&gt;\n&lt;p&gt;\n\tHostinar, C. E.*, Stellern, S. S.*, Schaefer, C. M., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Gunnar, M. R. (2012). The impact of early life adversity on executive function in children adopted internationally from orphanages. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;109&lt;/em&gt;, 17208-17212.&lt;/p&gt;\n&lt;p&gt;\n\tImada, T.*, &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Itakura, S. (2012). East-West differences in context-sensitivity are evident in early childhood. &lt;em&gt;Developmental Science&lt;/em&gt;,&lt;em&gt; 16&lt;/em&gt;, 198-208.&lt;/p&gt;\n&lt;p&gt;\n\tClaxton, L. J.*, Strasser, J., Leung, E., &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2012). Individual differences in the development of executive functioning and motor control in preschool-aged children. &lt;em&gt;Journal of Sport and Exercise Psychology, 34, &lt;/em&gt;S156-S157.&lt;/p&gt;\n&lt;p&gt;\n\tBenson, J.*, Sabbagh, M. A., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Zelazo, P. D. (2013). Individual differences in executive functioning predict preschoolers&amp;rsquo; improvement from theory-of-mind training. &lt;em&gt;Developmental Psychology&lt;/em&gt;, &lt;em&gt;49&lt;/em&gt;, 1615-1627.&lt;/p&gt;\n&lt;p&gt;\n\tBernier, A., Beauchamp, M., Bouvette-Turcot, A.*, &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Carrier, J. (2013). Sleep and cognition in the preschool years: Specific links to executive functioning. &lt;em&gt;Child Development&lt;/em&gt;, &lt;em&gt;84&lt;/em&gt;, 1542-1553.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Koenig, M., &amp;amp; Harms, M.* (2013). Theory of mind. &lt;em&gt;Wiley Interdisciplinary Reviews: Cognitive Science&lt;/em&gt;, &lt;em&gt;4&lt;/em&gt;, 391-402. DOI:&amp;nbsp;10.1002/wcs.1232&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Claxton, L. J.*, &amp;amp; Moses, L. J. (2013). The relation between executive function and theory of mind is more than skin deep&lt;em&gt;. Journal of Cognition and Development&lt;/em&gt;. DOI: 10.1080/15248372.2013.824883&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; White, R. E.* (2013). Executive function, pretend play, and imagination. In M. Taylor (Ed.), &lt;em&gt;The Oxford handbook of the development of imagination &lt;/em&gt;(pp. 161-174). New York: Oxford University Press.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Zelazo, P. D., &amp;amp; Faja, S.* (2013). Executive function. In P. D. Zelazo (Ed.), &lt;em&gt;The Oxford handbook of developmental psychology, Vol. 1: Body and mind &lt;/em&gt;(pp. 706-743). New York: Oxford University Press.&lt;/p&gt;\n&lt;p&gt;\n\tDuckworth, A. L., &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2014). Self-regulation and school success. In B. W. Sokol, F. M. E. Grouzet, &amp;amp; U. Mueller (Eds.), &lt;em&gt;Self-regulation and Autonomy: Exploring the Social, Developmental, Educational, and Neurological Dimensions of Human Conduct&lt;/em&gt; (pp. 208-230). New York: Cambridge.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., White, R. E.*, &amp;amp; Davis-Unger, A. C.* (2014). Evidence for a relation between executive function and pretense representation in preschool children. &lt;em&gt;Cognitive Development&lt;/em&gt;, &lt;em&gt;29&lt;/em&gt;, 1-16.&lt;/p&gt;\n&lt;p&gt;\n\tHarms, M.*, Zayas, V., Meltzoff, A. N., and &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2014). Stability of executive function and predictions to adaptive behavior from middle childhood to pre-adolescence. &lt;em&gt;Frontiers in Psychology: Developmental Psychology&lt;/em&gt;. DOI: 10.3389/fpsyg.2014.00331&lt;/p&gt;\n&lt;p&gt;\n\tLaranjo, J.*, Bernier, A., Meins, E., &amp;amp; &lt;strong&gt;Carlson&lt;/strong&gt;, S. M. (2014). The roles of maternal mind-mindedness and infant security of attachment in preschoolers&amp;rsquo; understanding of visual perspectives and false belief. &lt;em&gt;Journal of Experimental Child Psychology&lt;/em&gt;, &lt;em&gt;125&lt;/em&gt;, 48-62.&lt;/p&gt;\n&lt;p&gt;\n\tFuglestad, A. J.*, Whitley, M. L., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Boys, C. J., Eckerle, J. K., Fink, B. A., &amp;amp; Wozniak, J. R. (2014). Executive functioning deficits in preschool children with Fetal Alcohol Spectrum Disorders. &lt;em&gt;Child Neuropsychology&lt;/em&gt;. DOI: 10.1080/09297049.2014.933792&lt;/p&gt;\n&lt;p&gt;\n\tDoom, J.*, Gunnar, M. R., Georgieff, M. K., Kroupina, M. G., Frenn, K., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., &amp;amp; Fuglestad, A. J. (in press). Beyond stimulus deprivation: Iron deficiency and cognitive deficits in post-institutionalized children. &lt;em&gt;Child Development&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;\n\tTahiroglu, D.*, Moses, L. J., &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Olofson, E. L., &amp;amp; Sabbagh, M. A. (in press). The Children&amp;rsquo;s Social Understanding Scale: Construction and validation of a parent-report theory-of-mind scale. &lt;em&gt;Developmental Psychology&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Faja, S.*, &amp;amp; Beck, D. M.* (in press). Incorporating early development into measurement approaches: The need for a continuum of measures across development. To appear in J. A. Griffin, L. S. Freund, and P. McCardle (Eds.), &lt;em&gt;Executive function in preschool age children: Integrating measurement, neurodevelopment, and translational research&lt;/em&gt;. Washington, DC: American Psychological Association.&lt;/p&gt;\n&lt;p align=\&quot;left\&quot;&gt;\n\tCasey, E. C.*, Finsaas, M.*, &lt;strong&gt;Carlson&lt;/strong&gt;, S. M., Zelazo, P. D., Murphy, B., Durkin, F., Lister, M., &amp;amp; Masten, A. S. (in press). Promoting resilience through executive function training for homeless and highly mobile preschoolers. In S. Prince-Embury &amp;amp; D. Saklofske (Eds.) &lt;em&gt;Resilience Interventions in Diverse Populations.&lt;/em&gt; New York City: Springer.&lt;/p&gt;\n&lt;p align=\&quot;left\&quot;&gt;\n\t&amp;nbsp;&lt;/p&gt;&quot;
+    ]"]) }}
+        {{ table.row(
+            ["state",
+            "State",
+            "string",
+            "MN"]) }}
+        {{ table.row(
+            ["tags",
+            "Array of tags",
+            "array",
+            "<pre>[
+    {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;350&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Achievement Gap&quot;
+    },
+    {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;416&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Mental Health&quot;
+    }
+]</pre>"]) }}
+        {{ table.row(
+            ["tagGroups",
+            "Array of tag groups",
+            "array",
+            "<pre>[
+    {
+        &quot;query_key&quot;: &quot;en&quot;,
+        &quot;abbreviation&quot;: &quot;ICD&quot;,
+        &quot;id&quot;: &quot;12&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Institute of Child Development&quot;
+    },
+    {
+        &quot;query_key&quot;: &quot;en&quot;,
+        &quot;abbreviation&quot;: &quot;Research&quot;,
+        &quot;id&quot;: &quot;54&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Research topic tags&quot;
+    }
+]</pre>"]) }}
+        {{ table.row(
+            ["twitterName",
+            "Twitter handle",
+            "string",
+            "truetone"]) }}
+        {{ table.row(
+            ["webPage",
+            "Website URL",
+            "string",
+            "http://www.cehd.umn.edu/icd/people/faculty/Carlson.html"]) }}
+        {{ table.row(
+            ["workingTitle",
+            "Working title",
+            "string",
+            "Distinguished McKnight University Professor"]) }}
+        {{ table.row(
+            ["zip",
+            "ZIP code",
+            "string",
+            "55455"]) }}
+        {{ table.end_table() }}
+
+        <h2>Request parameters</h2>
+        <p>Request parameters match parameters from the <a
+        href="https://apps.cehd.umn.edu/people/admin/LinkPro.aspx">People Tool
+        LinkPro</a>. It's best to use that that to find the combination of
+        events you want and then pass the matching parameters to
+        <samp>http://www.cehd.umn.edu/services/people-tool/</samp>.
+
+        <p>For example, if I check <strong>Research - Research topic tags >
+        Access to Education</strong> in LinkPro and click the "generate xml
+        link" button, I get
+        <samp>http://apps.cehd.umn.edu/people/admin/XmlFeed.aspx?<strong>tg=349</strong></samp>.
+
+        <p>We just need the "en", "nm" or "tg" parameters from that link and send
+        a GET request to <a href="http://www.cehd.umn.edu/services/people-tool/?tg=349">http://www.cehd.umn.edu/services/people-tool/?<strong>tg=349</strong></a>
+        to return the same data in JSON format.
+
+        <h2>JSON example</h2>
+        <pre><code>
+[
+    {
+        &quot;address_1&quot;: &quot;Family Social Science&quot;,
+        &quot;address_2&quot;: &quot;284 McNH&quot;,
+        &quot;address_3&quot;: null,
+        &quot;address_4&quot;: &quot;1985 Buford Ave&quot;,
+        &quot;areasOfInterest&quot;: &quot;Prevention Science&lt;br/&gt;\nAttention and Behavior Problems&lt;br/&gt;\nAdolescent Psychiatry&lt;br/&gt;\nAntisocial Behavior&lt;br/&gt;\nAttention-Deficit/Hyperactivity Disorder&lt;br/&gt;\nDrug Abuse Prevention&lt;br/&gt;&quot;,
+        &quot;briefBio&quot;: &quot;&lt;h2&gt;\n\tRecent News&lt;/h2&gt;\n&lt;p&gt;\n\t&lt;a href=\&quot;http://www.minnpost.com/mental-health-addiction/2015/02/gerald-august-preventing-mental-illness-and-drug-abuse-tailor-interv\&quot;&gt;MinnPost: Gerald August on preventing mental illness and drug abuse&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;\n\t&lt;a href=\&quot;http://cehdvision2020.umn.edu/cehd-blog/mental-health-prevention/\&quot;&gt;Personalized Mental Health Prevention and Intervention&lt;/a&gt;&lt;/p&gt;&quot;,
+        &quot;city&quot;: &quot;St Paul&quot;,
+        &quot;curriculumVitaeAddr&quot;: &quot;http://apps.cehd.umn.edu/people/CV/AugustG-CV2015.pdf&quot;,
+        &quot;dateDisplay&quot;: &quot;June 22, 2017&quot;,
+        &quot;dateISO&quot;: &quot;2017-06-22&quot;,
+        &quot;degrees&quot;: &quot;Ph.D., Developmental-Child Psychology, Purdue University&lt;br/&gt;M.S., Research Methodology, Statistics, and Measurement, Southern Connecticut State University&lt;br/&gt;B.A., Biological Sciences, Central Connecticut State University&quot;,
+        &quot;expertise&quot;: null,
+        &quot;fax&quot;: null,
+        &quot;firstName&quot;: &quot;Gerald&quot;,
+        &quot;fullBio&quot;: &quot;&lt;h2&gt;\n\tResearch &amp;amp; Discovery&lt;/h2&gt;\n&lt;p&gt;\n\tOver the past 30 years Dr. August has published numerous papers addressing issues of diagnosis and classification, comorbidity, natural history and treatment pertaining to children and adolescents with Attention Deficit Hyperactivity Disorder (ADHD). In recent years, he has expanded his research program to include the prevention of antisocial behavior and drug abuse, where early childhood disruptive behavior is conceptualized as a risk factor. During this period, he has developed and validated an early-age-targeted prevention program that has been recognized as an exemplary drug abuse prevention program by the Center for Substance Abuse Prevention&amp;rsquo;s National Registry of Effective Prevention Programs, a model program by the Office of Juvenile Justice and Delinquency Model Program&amp;rsquo;s Guide Database, and a research-based program by the National Institute on Drug Abuse. Dr. August is currently principal investigator on several prevention projects, supported by NIDA and NIMH addressing issues pertaining to the transportability and dissemination of evidence-based revention program to community systems of care. He was recently awarded a Center grant from NIMH to study the adaptation of preventive interventions to fit the needs and preferences of children at risk for serious conduct problems.&lt;/p&gt;&quot;,
+        &quot;headShot&quot;: null,
+        &quot;headshotAddress&quot;: &quot;http://apps.cehd.umn.edu/people/Headshot/AugustG-2015.jpg&quot;,
+        &quot;internetId&quot;: &quot;augus001&quot;,
+        &quot;jobs&quot;: [
+            {
+                &quot;deptId&quot;: &quot;&quot;,
+                &quot;deptIdDescription&quot;: &quot;&quot;,
+                &quot;description&quot;: &quot;Professor&quot;,
+                &quot;status&quot;: &quot;Tenured&quot;,
+                &quot;umZDeptId&quot;: &quot;Z0174&quot;,
+                &quot;umZDeptIdDescription&quot;: &quot;Department of Family Social Science&quot;
+            },
+            {
+                &quot;deptId&quot;: &quot;11217&quot;,
+                &quot;deptIdDescription&quot;: &quot;FSoS Administration&quot;,
+                &quot;description&quot;: &quot;Professor&quot;,
+                &quot;status&quot;: &quot;Active&quot;,
+                &quot;umZDeptId&quot;: &quot;Z0174&quot;,
+                &quot;umZDeptIdDescription&quot;: &quot;Department of Family Social Science&quot;
+            }
+        ],
+        &quot;lastName&quot;: &quot;August&quot;,
+        &quot;middleName&quot;: null,
+        &quot;name&quot;: &quot;August,Gerald&quot;,
+        &quot;nameFirstLast&quot;: &quot;Gerald August&quot;,
+        &quot;nameSuffix&quot;: null,
+        &quot;officeHours&quot;: null,
+        &quot;phone&quot;: &quot;612/626-4091&quot;,
+        &quot;presentations&quot;: [],
+        &quot;publications&quot;: [
+            &quot;&lt;p&gt;Gewritz, A., DeGarmo, D., Lee, S.S., &amp;amp; August, G.J. Two-year outcomes of the Early Risers prevention trial with formerly homeless families residing in supportive housing. &lt;em&gt;Journal of Family Psychology&lt;/em&gt;, under review.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Piehler, T.F., Bloomquist, M.L., Lee, S.S., &amp;amp; August, G.J. Moderating effects of parental well-being on parenting efficacy outcomes by intervention delivery model of the Early Risers conduct problems prevention program. &lt;em&gt;Journal of Primary Prevention&lt;/em&gt;, in press.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;August, G.J., Piehler, T.F., &amp;amp; Bloomquist, M.L. Being &amp;ldquo;SMART&amp;rdquo; about adolescent conduct problems prevention: Executing a SMART pilot trial in a juvenile diversion agency. &lt;em&gt;Journal of Clinical Child &amp;amp; Adolescent Psychology&lt;/em&gt;, in press.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Bryer, J. Lee, S., Winters, K.C., August, G.J., &amp;amp; Realmuto, G.M. A longitudinal study of childhood ADHD and substance dependence disorders in early adulthood. &lt;em&gt;Psychology of Addictive Behaviors&lt;/em&gt;, in press.&amp;nbsp;&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Piehler, T. F., Bloomquist, M.L., August, G.J., Gewirtz, A.H., Lee, S.H., &amp;amp; Lee, W.&amp;nbsp; Executive functioning as a mediator of conduct problems prevention in children of Homeless families residing in temporary supportive housing: A parallel process latent growth modeling approach, under review.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Hektner, J. M., August, G. J. (2014). A 10-year randomized controlled trial of the Early Risers conduct problems preventive intervention. &lt;em&gt;Journal of Counseling and Consulting Psychology&lt;/em&gt;, &lt;em&gt;82&lt;/em&gt;, 355-360.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Bloomquist, M.L., August, G.J., Lee, S.S. Lee, C.Y., Realmuto, G.R., &amp;amp; Klimes-Dougan, B. (2013). Going-to-scale with the Early Risers conduct problems prevention program: Use of a comprehensive implementation support systems to optimize fidelity, participation, and child outcomes. &lt;em&gt;Evaluation and Program Planning&lt;/em&gt;, &lt;em&gt;38&lt;/em&gt;, 19-27.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Bloomquist, M.L., August, G.J., Lee, S.S., Piehler, T.F., &amp;amp; Jensen, M. (2011). Parent Participation within community center or in-home outreach delivery models of the Early Risers conduct problems prevention program. &lt;em&gt;Journal of Child and Family Studies&lt;/em&gt;, &lt;em&gt;21&lt;/em&gt;, 368-383.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Winters, K.C., Lee, S., Botzet, A.M., Fahnhorst, Realmuto, G.M., &amp;amp; August, G.J. (2011). A Prospective examination of the association of stimulant medication history and drug abuse: Outcomes among community samples of ADHD youth. &lt;em&gt;Journal of Child &amp;amp; Adolescent Substance Abuse&lt;/em&gt;, &lt;em&gt;20&lt;/em&gt;(&lt;em&gt;4&lt;/em&gt;), 314-329.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Lee, S.S., August, G.J., Gewirtz, A.H., Klimes-Dougan, B., Bloomquist, M.L., &amp;amp; Realmuto, G.M. (2010). Identifying unmet mental health needs in children of formerly homeless mothers in a Supportive housing community sector of care. &lt;em&gt;Journal of Abnormal Child Psychology&lt;/em&gt;, &lt;em&gt;38&lt;/em&gt;, 421-432.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;August, G.J., Gewirtz, A., &amp;amp; Realmuto, G.R. (2010). Moving the field of prevention from Science to service: Integrating evidence-based preventive interventions into community practice through adapted and adaptive models. &lt;em&gt;Applied and Preventive Psychology&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 72-85.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Klimes-Dougan, B., August, G.J., Lee, C&amp;mdash;Y, S., Realmuto, G.M., Bloomquist, M.L., Horowitz, J.L., &amp;amp; Eisenberg, T.L. (2009). Practitioner and site characteristics that relate to fidelity of Implementation: The Early Risers prevention program in a going-to-scale intervention trial. &lt;em&gt;Professional Psychology: Research and Practice&lt;/em&gt;, &lt;em&gt;40&lt;/em&gt;, 467-475. &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Gewirtz, A.H., DeGarmo, D.S., Plowman, E.J., August, G.J., &amp;amp; Realmuto, G.M. (2009). Parenting, parental mental health, and child functioning in families residing in supportive housing. &lt;em&gt;American Journal of Orthopsychiatry&lt;/em&gt;, &lt;em&gt;79&lt;/em&gt;, 336-347.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Lee, C-Y. S., Anderson, J. R., Horowitz, J.L. &amp;amp; August, G.J. (2009). Family income and parenting: The role of parental depression and social support. &lt;em&gt;Family Relations&lt;/em&gt;, &lt;em&gt;58&lt;/em&gt;, 417-430.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;Bloomquist, M.L., Horowitz, J.L., August, G.J., Lee, C-Y.S., Realmuto, G.M.,&amp;amp; Klimes-Dougan, B. (2009). Understanding parent participation in a going-to-scale implementation trial of the Early Risers conduct problems prevention program. &lt;em&gt;Journal of Child and Family Studies&lt;/em&gt;, &lt;em&gt;18&lt;/em&gt;, 710-718.&lt;/p&gt;&quot;,
+            &quot;&lt;p&gt;&lt;a href=\&quot;https://apps.cehd.umn.edu/people/CV/AugustG-CV2015.pdf\&quot;&gt;See CV for more publications&lt;/a&gt;.&lt;/p&gt;&quot;
+        ],
+        &quot;state&quot;: &quot;MN&quot;,
+        &quot;tagGroups&quot;: [
+            {
+                &quot;abbreviation&quot;: &quot;FSoS&quot;,
+                &quot;description&quot;: &quot;Family Social Science&quot;,
+                &quot;id&quot;: &quot;35&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;en&quot;
+            },
+            {
+                &quot;abbreviation&quot;: &quot;Research&quot;,
+                &quot;description&quot;: &quot;Research topic tags&quot;,
+                &quot;id&quot;: &quot;54&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;en&quot;
+            }
+        ],
+        &quot;tags&quot;: [
+            {
+                &quot;description&quot;: &quot;Adolescents and Youth&quot;,
+                &quot;id&quot;: &quot;351&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Behavioral Psychology&quot;,
+                &quot;id&quot;: &quot;355&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Child Welfare&quot;,
+                &quot;id&quot;: &quot;359&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Childrens Mental Health&quot;,
+                &quot;id&quot;: &quot;360&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;FSOSfaculty&quot;,
+                &quot;id&quot;: &quot;215&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Mental Health&quot;,
+                &quot;id&quot;: &quot;416&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Psychological Stress&quot;,
+                &quot;id&quot;: &quot;429&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            }
+        ],
+        &quot;twitterName&quot;: null,
+        &quot;webPage&quot;: &quot;http://www.cehd.umn.edu/FSoS/people/faculty/AugustG.asp&quot;,
+        &quot;workingTitle&quot;: &quot;Professor&quot;,
+        &quot;zip&quot;: &quot;55108&quot;
+    },
+    {
+        &quot;address_1&quot;: &quot;Child Development&quot;,
+        &quot;address_2&quot;: &quot;Room 104C ChDev&quot;,
+        &quot;address_3&quot;: null,
+        &quot;address_4&quot;: &quot;51 E River Pkwy&quot;,
+        &quot;areasOfInterest&quot;: &quot;Self-regulation of attention and emotion in childhood; interplay of experience, stress physiology, and self-regulation; longitudinal quantitative methods&quot;,
+        &quot;briefBio&quot;: &quot;&lt;p&gt;\n\tSelf-regulation of attention and emotion in childhood; interplay of experience, stress physiology, and self-regulation; longitudinal quantitative methods&lt;/p&gt;\n&lt;p&gt;\n\t&lt;a href=\&quot;http://www.cehd.umn.edu/icd/BSL/\&quot;&gt;The Bioecology, Self-Regulation and Learning Lab&lt;/a&gt;&lt;/p&gt;&quot;,
+        &quot;city&quot;: &quot;Minneapolis&quot;,
+        &quot;curriculumVitaeAddr&quot;: null,
+        &quot;dateDisplay&quot;: &quot;June 22, 2017&quot;,
+        &quot;dateISO&quot;: &quot;2017-06-22&quot;,
+        &quot;degrees&quot;: &quot;Ed.D., 2010, Harvard University&quot;,
+        &quot;expertise&quot;: null,
+        &quot;fax&quot;: null,
+        &quot;firstName&quot;: &quot;Daniel&quot;,
+        &quot;fullBio&quot;: &quot;&lt;p&gt;\n\tMy research focuses on clarifying the processes&amp;mdash;mind, brain and environment&amp;mdash;through which children&amp;rsquo;s experiences with their parents, teachers and peers shape their abilities to control their impulses, purposely maintain and shift their attention, and hold and manipulate information in mind. Broadly, this set of inter-related skills is referred to as &amp;quot;self-regulation.&amp;quot;&lt;/p&gt;\n&lt;p&gt;\n\tA good deal of research indicates that these skills play a critical role in the way children understand and get along with others, as well as how they learn at home and school. In my lab, we are particularly interested in clarifying the experiential and physiological mechanisms through which these processes emerge.&lt;/p&gt;\n&lt;p&gt;\n\tSome questions that motivate my work and the work of my lab include:&lt;/p&gt;\n&lt;ul&gt;\n\t&lt;li&gt;\n\t\tWhat do we mean when we use the term self-regulation? What is it? And, in an evolutionary sense, why is it?&lt;/li&gt;\n\t&lt;li&gt;\n\t\tWhy do some kids (and adults) show rapid and pronounced physiological and behavioral responses to challenge, whereas others do much less so?&lt;/li&gt;\n\t&lt;li&gt;\n\t\tWhen, how, and for whom do such physiological stress promote or undermine effective &amp;quot;real-time&amp;quot;&amp;nbsp;regulation and learning?&lt;/li&gt;\n\t&lt;li&gt;\n\t\tWhat early experiences might calibrate these physiological and behavioral regulatory systems?&lt;/li&gt;\n\t&lt;li&gt;\n\t\tHow do children&amp;rsquo;s social relationships at home and in their classrooms function to support or hinder these processes?&lt;/li&gt;\n\t&lt;li&gt;\n\t\tCollectively, how can we leverage this information to support kids at home and school&amp;mdash;particularly those facing the environmental risks common to economic adversity?&lt;/li&gt;\n&lt;/ul&gt;&quot;,
+        &quot;headShot&quot;: null,
+        &quot;headshotAddress&quot;: &quot;http://apps.cehd.umn.edu/people/Headshot/BerryD-2016-2.jpg&quot;,
+        &quot;internetId&quot;: &quot;dberry&quot;,
+        &quot;jobs&quot;: [
+            {
+                &quot;deptId&quot;: &quot;&quot;,
+                &quot;deptIdDescription&quot;: &quot;&quot;,
+                &quot;description&quot;: &quot;Assistant Professor&quot;,
+                &quot;status&quot;: &quot;Tenure Track&quot;,
+                &quot;umZDeptId&quot;: &quot;Z0175&quot;,
+                &quot;umZDeptIdDescription&quot;: &quot;Institute of Child Development&quot;
+            },
+            {
+                &quot;deptId&quot;: &quot;11219&quot;,
+                &quot;deptIdDescription&quot;: &quot;Child Development Admin, Inst&quot;,
+                &quot;description&quot;: &quot;Assistant Professor&quot;,
+                &quot;status&quot;: &quot;Active&quot;,
+                &quot;umZDeptId&quot;: &quot;Z0175&quot;,
+                &quot;umZDeptIdDescription&quot;: &quot;Institute of Child Development&quot;
+            }
+        ],
+        &quot;lastName&quot;: &quot;Berry&quot;,
+        &quot;middleName&quot;: null,
+        &quot;name&quot;: &quot;Berry,Daniel&quot;,
+        &quot;nameFirstLast&quot;: &quot;Daniel Berry&quot;,
+        &quot;nameSuffix&quot;: null,
+        &quot;officeHours&quot;: null,
+        &quot;phone&quot;: &quot;612/626-4126&quot;,
+        &quot;presentations&quot;: [],
+        &quot;publications&quot;: [
+            &quot;&lt;p&gt;(*student)&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D. &amp;amp; Willoughby, M. T. (in press). On the practical interpretability of cross-lagged panel models: Re-visiting a developmental workhorse &lt;em&gt;Child Development&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;\n\t*Serdiouk, M., Berry, D., &amp;amp; Gest, S. D. (2016). Teacher-child relationships and friendships and peer victimization across the school year.&amp;nbsp;&lt;em&gt;Journal of Applied Developmental Psychology&lt;/em&gt;,&amp;nbsp;46, 63-72.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Blair, C., Willoughby, M., Mills-Koonce, R., Granger, D., &amp;amp; The Family Life Project Key Investigators (2016). Maternal sensitivity and adrenocortical functioning across infancy and toddlerhood: Physiological adaptation to context?&lt;em&gt; Development and Psychopathology&lt;/em&gt;. Advance online publication. doi:10.1037/a0028240&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Blair, C., Willoughby, M., Garrett-Peters, P., Vernon-Feagans, L., Mills-Koonce, W. R., &amp;amp; Family Life Project Key Investigators. (2016). Household chaos and children&amp;rsquo;s cognitive and socio-emotional development in early childhood: Does childcare play a buffering role? &lt;em&gt;Early Childhood Research Quarterly&lt;/em&gt;, 34, 115-127.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D. Blair, C., Willoughby, M., Granger, D.A. &amp;amp; the Family Life Project Key Investigators (2016). Childcare and cortisol across infancy and toddlerhood: Poverty, peers, and developmental timing. &lt;em&gt;Family Relations&lt;/em&gt;. 65(1), 51-72.&lt;/p&gt;\n&lt;p&gt;\n\t*Merrin, G., *Davis, J.P., Berry, D., D&amp;rsquo;Amico, E.J., &amp;amp; Duman, T. (2016). Longitudinal associations between substance use, criminal behavior, and environmental risk among emerging adults: A longitudinal within- and between-person latent variables analysis.&lt;em&gt; Drug and Alcohol Addiction&lt;/em&gt;. Advance online publication. doi: http://dx.doi.org/10.1016/j.drugalcdep.2016.05.009&lt;/p&gt;\n&lt;p&gt;\n\t*Davis, J., *Merrin, G., Berry, D., Dumas, T., Hong, J.S., &amp;amp; Smith, D.C. (2016). Examining within-person and between-person effects of victimization and social risk on cannabis use among emerging adults in substance-use treatment. &lt;em&gt;Psychology of Addictive Behaviors&lt;/em&gt;, 30, 52-63.&lt;/p&gt;\n&lt;p&gt;\n\tSulik, M., Blair, C., Berry, D., Greenberg, M., &amp;amp; The Family Life Project Key Investigators (2015). Early parenting and the development of externalizing symptoms: Longitudinal mediation through children&amp;rsquo;s executive function. &lt;em&gt;Child Development&lt;/em&gt;, 86(5), 1588-1603.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Blair, C., Ursache, A., Willoughby, M. T., &amp;amp; Granger, D. A. (2014). Early childcare, executive functioning, and the moderating role of early stress physiology. &lt;em&gt;Developmental Psychology&lt;/em&gt;, 50, 1250 -1261.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Blair, C., Ursache, A., Willoughby, M., Garrett-Peters, P., Vernon-Feagans, L.,&amp;hellip; (2014). Child care and cortisol across early childhood: Context matters. &lt;em&gt;Developmental Psychology&lt;/em&gt;, 50, 514-525.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., McCartney, K., Petrill, S., Deater-Deckard, K., &amp;amp; Blair, C. (2014). Gene&amp;ndash;environment interaction between DRD4 7-repeat VNTR and early child-care experiences predicts self-regulation abilities in prekindergarten. &lt;em&gt;Developmental Psychobiology&lt;/em&gt;, 56(3), 373-391.&lt;/p&gt;\n&lt;p&gt;\n\tBlair, C., Raver, C.C., Berry, D. &amp;amp; the Family Life Project Key Investigators (2014). Two approaches to estimating the effect of parenting on the development of executive function in early childhood. &lt;em&gt;Developmental Psychology&lt;/em&gt;, 50, 554-565.&lt;/p&gt;\n&lt;p&gt;\n\tBelsky, J., Fraley, C., Pluess, M., Newman, D.A., Widaman, K. F., Helm, J. L., Rodkin, P., Berry, D. &amp;amp; Roisman, G. I. (2014). Differential susceptibility to effects of maternal sensitivity? A study of candidate plasticity genes. &lt;em&gt;Development and Psychopathology&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Deater-Deckard, K., McCartney, K., Wang, Z., &amp;amp; Petrill, S. A. (2013). Gene&amp;ndash;environment interaction between dopamine receptor D4 7-repeat polymorphism and early maternal sensitivity predicts inattention trajectories across middle childhood. &lt;em&gt;Development and Psychopathology&lt;/em&gt;, 25, 291-306.&lt;/p&gt;\n&lt;p&gt;\n\tBlair, C., Berry, D., Mills-Koonce, R., &amp;amp; Granger, D. (2013). Cumulative effects of early poverty on cortisol in young children: Moderation by autonomic nervous system activity. &lt;em&gt;Psychoneuroendocrinology&lt;/em&gt;, 38, 2666-2675.&lt;/p&gt;\n&lt;p&gt;\n\tKieffer, M. J., Vukovic, R. K., &amp;amp; Berry, D. (2013). Roles of attention shifting and inhibitory control in fourth-grade reading comprehension. &lt;em&gt;Reading Research Quarterly&lt;/em&gt;, 48, 333-348.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D., Blair, C., Willoughby, M., Granger, D., &amp;amp; The Family Life Project Key Investigators (2012). Resting salivary alpha-amylase and cortisol in infancy and toddlerhood: Direct and indirect relations with executive functioning in early childhood and academic ability in pre-kindergarten. &lt;em&gt;Psychoneuroendocrinology&lt;/em&gt;, 37, 1700-1711.&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D. (2012). Inhibitory control and teacher&amp;ndash;child conflict: Reciprocal associations across the elementary-school years. &lt;em&gt;Journal of Applied Developmental Psychology&lt;/em&gt;, 33(1), 66-76&lt;/p&gt;\n&lt;p&gt;\n\tBerry, D. &amp;amp; O&amp;rsquo;Connor, E. (2010). Behavioral risk, teacher-child relationships, and social skill development across middle childhood: A child-by-environment analysis of change. &lt;em&gt;Journal of Applied Developmental Psychology&lt;/em&gt;, 31, 1-14.&lt;/p&gt;\n&lt;p&gt;\n\tMcCartney, K. &amp;amp; Berry, D. (2005). Commentary: Gene-environment processes in task persistence. &lt;em&gt;Trends in Cognitive Science&lt;/em&gt;, 9, 407-408.&lt;/p&gt;&quot;
+        ],
+        &quot;state&quot;: &quot;MN&quot;,
+        &quot;tagGroups&quot;: [
+            {
+                &quot;abbreviation&quot;: &quot;ICD&quot;,
+                &quot;description&quot;: &quot;Institute of Child Development&quot;,
+                &quot;id&quot;: &quot;12&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;en&quot;
+            },
+            {
+                &quot;abbreviation&quot;: &quot;Research&quot;,
+                &quot;description&quot;: &quot;Research topic tags&quot;,
+                &quot;id&quot;: &quot;54&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;en&quot;
+            }
+        ],
+        &quot;tags&quot;: [
+            {
+                &quot;description&quot;: &quot;Childrens Mental Health&quot;,
+                &quot;id&quot;: &quot;360&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Directory&quot;,
+                &quot;id&quot;: &quot;274&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Executive Function&quot;,
+                &quot;id&quot;: &quot;388&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Faculty/Instructors&quot;,
+                &quot;id&quot;: &quot;235&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Mental Health&quot;,
+                &quot;id&quot;: &quot;416&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            },
+            {
+                &quot;description&quot;: &quot;Psychological Stress&quot;,
+                &quot;id&quot;: &quot;429&quot;,
+                &quot;name&quot;: null,
+                &quot;query_key&quot;: &quot;tg&quot;
+            }
+        ],
+        &quot;twitterName&quot;: null,
+        &quot;webPage&quot;: &quot;http://www.cehd.umn.edu/icd/people/faculty/berry.html&quot;,
+        &quot;workingTitle&quot;: &quot;Assistant Professor&quot;,
+        &quot;zip&quot;: &quot;55455&quot;
+    },
+]
+        </code></pre>
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
