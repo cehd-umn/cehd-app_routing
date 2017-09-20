@@ -1391,6 +1391,11 @@
   template: cehd/news/index.html
   template_data:
     - section: news
+/parenting/:
+  publish: false
+  template: cehd/parenting.html
+  template_data:
+    - section: parenting
 /policy-breakfast/:
   publish: true
   template: cehd/policy-breakfast/index.html
