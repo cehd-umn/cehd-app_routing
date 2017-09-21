@@ -1,0 +1,9 @@
+---
+events:
+    path: /events/
+    defaults: {_controller: "ServicesApp::eventsAction"}
+    methods: [GET]
+event:
+    path: /event/
+    defaults: {_controller: "ServicesApp::eventController"}
+    methods: [GET]
