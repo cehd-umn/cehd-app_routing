@@ -2,8 +2,8 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require '../../vendor/autoload.php';
-require '../../cehd/app/Services/ServicesApp.php';
+require_once '../../vendor/autoload.php';
+require_once '../../cehd/app/Services/ServicesApp.php';
 
 $app = new \Slim\App(
 [
@@ -12,6 +12,6 @@ $app = new \Slim\App(
     ]
 ]);
 
-$app->get('/events/', '\CEHD\Services\ServicesApp:eventsHandler');
+$app->get('/events/feed/', '\CEHD\Services\ServicesApp:eventsHandler');
 
 $app->get('/event/', '\CEHD\Services\ServicesApp:eventHandler');

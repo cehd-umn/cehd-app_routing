@@ -70,11 +70,6 @@ $app->router->with("/services", function() use ($app)
         $app->router->respond("GET", "/", [$app, "infoSessionsEndpointHandler"]);
     });
 
-    $app->router->with("/events", function() use ($app) {
-        $app->router->respond("GET", "/", [$app, "eventEndpointHandler"]);
-        $app->router->respond("GET", "/feed/", [$app, "eventsFeedEndpointHandler"]);
-    });
-
     $app->router->with("/programs", function() use ($app) {
         $app->router->respond("GET", "/", [$app, "programsFeedEndpointHandler"]);
     });

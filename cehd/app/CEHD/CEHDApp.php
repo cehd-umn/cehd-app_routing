@@ -335,52 +335,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function getEvent($event_id)
-    {
-        $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
-        $http_client = $this->bootstrapHTTPClient([]);
-        $client_query_data = ["query" => [
-            "z" => $event_id,
-            ]
-        ];
-        $client_response = $http_client->request("GET", $base_url, $client_query_data);
-        $events =  new \CEHD\XML\Event\Events($client_response->getBody());
-        return $events->events[0];
-    }
-
-    public function getEventJSON($event_id, $response)
-    {
-        return $response->sendJSONResponse(json_encode($this->getEvent($event_id)));
-    }
-
-    public function eventEndpointHandler($request, $response, $service, $app)
-    {
-        $query_data = $request->params();
-        if (array_key_exists("z", $query_data)) {
-            return $this->getEventJSON($query_data["z"], $response);
-        }
-    }
-
-    public function eventsFeedEndpointHandler($request, $response, $service, $app)
-    {
-        $base_url =  "https://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx";
-        $query_data = $request->params();
-        if (array_key_exists("r", $query_data) &&
-                array_key_exists("t", $query_data) &&
-                array_key_exists("q", $query_data)) {
-            $http_client = $this->bootstrapHTTPClient([]);
-            $client_query_data = ["query" => [
-                "r" => $query_data["r"],
-                "t" => $query_data["t"],
-                "q" => $query_data["q"],
-                ]
-            ];
-            $client_response = $http_client->request("GET", $base_url, $client_query_data);
-            $events =  new \CEHD\XML\Event\Events($client_response->getBody());
-            $response->sendJSONResponse(json_encode($events->events));
-        }
-    }
-
     public function programsFeedEndpointHandler($request, $response, $service, $app)
     {
         $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
