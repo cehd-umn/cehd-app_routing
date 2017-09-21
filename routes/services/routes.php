@@ -17,3 +17,5 @@ $app->get('/events/feed/', '\CEHD\Services\ServicesApp:eventsHandler');
 $app->get('/event/', '\CEHD\Services\ServicesApp:eventHandler');
 
 $app->get('/info-sessions/', '\CEHD\Services\ServicesApp:infoSessionsHandler');
+
+$app->get('/news/feed/', '\CEHD\Services\ServicesApp:newsFeedHandler');

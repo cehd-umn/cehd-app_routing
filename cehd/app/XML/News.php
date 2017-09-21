@@ -8,7 +8,7 @@
  *
  */
 
-namespace CEHD\App\XML\News;
+namespace CEHD\XML\News;
 
 require_once __DIR__ . '/RSS.php';
 

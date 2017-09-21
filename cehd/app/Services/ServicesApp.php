@@ -4,12 +4,14 @@ namespace CEHD\Services;
 require_once __DIR__ . "/../../../cehd/app/Base.php";
 require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
 require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
+require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\BaseClass;
 use \CEHD\XML\Event\Events;
 use \CEHD\XML\InfoSession\InfoSessions;
+use \CEHD\XML\News\News;
 
 class ServicesApp extends BaseClass
 {
@@ -83,5 +85,36 @@ class ServicesApp extends BaseClass
             return $response->withJson($infoSessions->infoSessions);
         }
         return $response->withJson([]);
+    }
+
+    public function newsFeedHandler(Request $request, Response $response)
+    {
+        $base_url = "http://news.cehd.umn.edu/";
+        $query_data = $request->getQueryParams();
+
+        if (array_key_exists("feed_url", $query_data) && !empty($query_data["feed_url"])) {
+            $client_query_data = ["query" => [
+                "feed_url" => $query_data["feed_url"],
+                ]
+            ];
+        }
+
+        if (array_key_exists("feed-path", $query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $request_url = $base_url . $query_data["feed-path"];
+            $client_query_data = ["query" => [
+                "feed-path" => $query_data["feed-path"],
+                ]
+            ];
+            $client_response = $http_client->request("GET", $request_url);
+            $news = new News($client_response->getBody());
+
+            if ($this->arrayContains("sortBy", $query_data) && $query_data["sortBy"] == "categoryDecade") {
+                $news->sortByCategoryDecade();
+            }
+
+            return $response->withJson($news->stories);
+        }
+        $response->withJson([]);
     }
 }

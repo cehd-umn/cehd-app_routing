@@ -319,24 +319,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function infoSessionsEndpointHandler($request, $response, $service, $app)
-    {
-        $base_url = "https://apps.cehd.umn.edu/Students/Infosession/Admin/RSSFeed.aspx";
-        $query_data = $request->params();
-        if (array_key_exists("code", $query_data)) {
-            $http_client = $this->bootstrapHTTPClient([]);
-            $client_query_data = ["query" => [
-                "code" => $query_data["code"],
-                ]
-            ];
-            $request_url = $base_url;
-            $client_response = $http_client->request("GET", $base_url, $client_query_data);
-            $xml = $client_response->getBody();
-            $infoSessions = new \CEHD\XML\InfoSession\InfoSessions($xml);
-            $response->sendJSONResponse(json_encode($infoSessions->infoSessions));
-        }
-    }
-
     public function programsFeedEndpointHandler($request, $response, $service, $app)
     {
         $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
