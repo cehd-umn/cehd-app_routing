@@ -12,7 +12,7 @@
 
         <h2>Step one: import the macro</h2>
         <pre><code class="jinja">{% verbatim %}{% import "macros/news-feed.html" as newsfeed %}{% endverbatim %}</code></pre>
-        <p>(<a href="loader/">See information about the loader above</a>.)</p>
+        <p>(<a href="../loader/">See information about the loader above</a>.)</p>
 
         <h2>Step two: Call the macro inside a <samp>bottom_js</samp> block</h2>
         <pre><code class="jinja">{% verbatim %}
@@ -24,7 +24,7 @@
 
         <p>By default, <samp>news_feed_js</samp> renders the news stories in an
         element with an id of "news-container". <a
-        href="loader/">The loader creates that by default</a>.</p>
+        href="../loader/">The loader creates that by default</a>.</p>
 
         <p>Once you have the loader set up, you might only need to pass in the
         path to the feed on the news site as shown above. The macro defaults to
@@ -38,7 +38,7 @@
         <p>To recap:</p>
 
         <ol>
-            <li><a href="loader/">Set up your loader</a>.</li>
+            <li><a href="../loader/">Set up your loader</a>.</li>
             <li>Call the <samp>news_feed_js</samp> macro and pass in the
             path to the feed.</li>
         </ol>

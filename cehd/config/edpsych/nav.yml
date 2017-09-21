@@ -44,10 +44,10 @@
   subnav:
     - name: News
       href: /research/news/
-    - name: Labs
-      href: /research/labs/
     - name: Topics
       href: /research/topics/
+    - name: Labs
+      href: /research/labs/
     - name: Student Dissertations
       href: /research/student-dissertations/
 - name: Giving
