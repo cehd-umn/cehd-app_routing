@@ -31,7 +31,7 @@
                 "template_name": "{{ template_name }}",
                 "$target_element": $("{{ target_element_selector }}"),
                 "data": {
-                    events: events.events,
+                    events: events,
                     limit: {{ limit }},
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
