@@ -32,7 +32,7 @@ class TopicCardTest extends TestCase
         $categories = $this->cardsInstance->getCategoriesAndInternalCategories();
         $expected_research_count = 11;
         $expected_critical_count = 4;
-        $this->assertCount($expected_research_count, $categories["Research Areas"]);
-        $this->assertCount($expected_critical_count, $categories["Critical Issues"]);
+        $this->assertCount($expected_research_count, $categories["Research areas"]);
+        $this->assertcount($expected_critical_count, $categories["Critical issues"]);
     }
 }
