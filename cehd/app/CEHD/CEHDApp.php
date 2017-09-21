@@ -10,9 +10,11 @@ require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 require_once __DIR__ . '/../../../cehd/app/Card/ProgramCard.php';
 require_once __DIR__ . '/../../../cehd/app/Card/TopicCard.php';
 require_once __DIR__ . '/../../../cehd/app/Card/PatternCard.php';
+require_once __DIR__ . '/../../../cehd/app/Services/ServicesApp.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use CEHD\App\Card\PatternCard\PatternCards;
+use CEHD\Services\ServicesApp;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
@@ -407,7 +409,8 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function eventPageHandler($request, $response, $service, $app)
     {
-        $event = $this->getEvent($request->id, $response);
+        $services = new ServicesApp();
+        $event = $services->getEvent($request->id, $response);
         echo $this->_renderTemplate("cehd/events/event.html", ["event" => $event]);
     }
 

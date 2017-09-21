@@ -39,7 +39,7 @@ class ServicesApp extends BaseClass
         $query_data = $request->getQueryParams();
 
         if (array_key_exists("z", $query_data)) {
-            return $this->getEventJSON($query_data["z"], $response);
+            return $response->withJson($this->getEventJSON($query_data["z"], $response));
         }
         return $response->withJson([]);
     }
