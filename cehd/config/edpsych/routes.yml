@@ -573,7 +573,7 @@
     publish: true
     template: edpsych/research/index.html
     template_data:
-        meta_description: "Catch up on the latest research news at the Department of Educational Psychology at the University of Minnesota."
+        meta_description: Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes."
         section: research
 /edpsych/research/500-under-five/:
     publish: true
@@ -725,6 +725,12 @@
     template_data:
         meta_description: "LeAnne Johnson, assistant professor in special education and coordinator for the early childhood special education M.Ed. and licensure program, is dedicated to ensuring teachers have the tools they need to decide what interventions they should use with kids."
         section: research
+/edpsych/research/news/:
+    publish: true
+    template: edpsych/research/news/index.html
+    template_data:
+        meta_description: "Catch up on the latest research news at the Department of Educational Psychology at the University of Minnesota."
+        section: research
 /edpsych/research/pnrc/:
     publish: true
     template: edpsych/research/pnrc.html
@@ -753,7 +759,7 @@
     publish: true
     template: edpsych/research/topics/index.html
     template_data:
-        meta_description: null
+        meta_description: "Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes."
         section: research
 /edpsych/research/topics/achievementgap/:
     publish: true

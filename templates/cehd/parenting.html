@@ -1,6 +1,9 @@
 {% extends "cehd/layout/base.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% set page_title = "Parenting" %}
 {% block title %}{{ page_title }}{% endblock %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
 {% block main_content %}
 <div class="row">
   <div class="container">
@@ -9,19 +12,75 @@
         <p> The University of Minnesota’s College of Education and Human Development is the leader in advancing knowledge of how our children develop and learn, how we interact with our families and communities, and how we can maximize human potential.
         </p>
       </div>
+  </div>
+      <div class="row emphasis">
+        <div class="container span-10 feature">
+              <div class="third">
+                <img class="circular" src="/assets/images/headshots/Sq-Goldy.jpg" alt="">
+            </div>
+            <div class="third">
+              <img class="circular" src="/assets/images/headshots/Sq-Goldy.jpg" alt="">
+          </div>
+          <div class="third">
+            <img class="circular" src="/assets/images/headshots/Sq-Goldy.jpg" alt="">
+        </div>
+
+        </div>
+      </div>
       <div class="row">
+          <div class="container">
+
         <div class="half">
-           <h2>left</h2>
-           <p>stuff
+           <h2>Academic/professional program opportunites</h2>
+
+           <p>The college is uniquely positioned to address many of our toughest challenges, especially in areas such as children’s mental health and development, family resilience, educational equity, teaching and learning innovations, health across the lifespan, and preparation of graduates who can solve intercultural and global problems. Learn more about the educational and professional opportunities that we offer.</p>
+           <p>Explore our areas of study in the field of <a href="/programs/?filters=families-youth-and-children">Families, Youth, and Children.</a>
            </p>
+
+           <p>CEHD advances research, teaching, and community engagement to increase opportunities for all individuals to have a successful start in life and to foster healthy human development, and provides programs that meet the demands of the 21st century.</p>
+           <p>Explore our <a href="/departments-centers/">departments and centers</a> to learn about futhering your education</p>
+
         </div>
         <div class="half">
-            <h2>right</h2>
-            <p>Stuff
-            </p>
+            <h2>Parenting: tips and research</h2>
+            <p>The college's Improving Lives blog shares our faculty’s knowledge and insights on education and human development research with practical tips to improve readers’ lives.</p>
+            <article >
+                {{ loader.loader("Autism Spectrum Disorder", "h4", "autism-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Back to school", "h4", "school-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Early Child Development", "h4", "development-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Family Social Science", "h4", "fsos-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Health and Resilience", "h4", "health-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Infant Mental Health", "h4", "infant-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Special Education", "h4", "special-container") }}
+            </article>
+            <article >
+                {{ loader.loader("Youth Sports and Coaching Education", "h4", "sports-container") }}
+            </article>
         </div>
       </div>
     </div> <!-- ./container -->
 </div> <!-- ./row -->
 
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("feed/", "#autism-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/autism-spectrum-disorder/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#school-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/back-to-school/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#development-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/early-child-development/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#fsos-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/family-social-science/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#health-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/health-resilience/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#infant-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/infant-mental-health/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#special-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/special-education/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#sports-container", "index.html", 2, "https://cehdvision2020.umn.edu/blog/topic/youth-sports-coaching-education/", "More stories") }}
 {% endblock %}
