@@ -180,4 +180,37 @@ class ServicesApp extends BaseClass
         }
         return $response->withJson([]);
     }
+
+    public function programsHandler(Request $request, Response $response)
+    {
+        $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
+        $query_data = $request->getQueryParams();
+        $client_query_data = ['query' => []];
+        $valid_query_params = [
+            'a',
+            'd',
+            'p',
+            't',
+        ];
+
+        foreach ($valid_query_params as $valid_query_param) {
+            if (array_key_exists($valid_query_param, $query_data)) {
+                $client_query_data['query'][$valid_query_param] = $query_data[$valid_query_param];
+            }
+        }
+
+        if (!empty($client_query_data)) {
+            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+            $client_response = $http_client->request('GET', $base_url, $client_query_data);
+
+            // @todo create a programs XML model like the others
+            $xml = simplexml_load_string(
+                $client_response->getBody(),
+                null,
+                LIBXML_NOCDATA
+            );
+            return $response->withJson($xml);
+        }
+        return $response->withJson([]);
+    }
 }

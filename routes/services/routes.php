@@ -24,3 +24,5 @@ $app->get('/news/feed/', '\CEHD\Services\ServicesApp:newsFeedHandler');
 $app->get('/people-tool/', '\CEHD\Services\ServicesApp:peopleHandler');
 
 $app->get('/people-tool/person/', '\CEHD\Services\ServicesApp:personHandler');
+
+$app->get('/programs/', '\CEHD\Services\ServicesApp:programsHandler');
