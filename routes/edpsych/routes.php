@@ -32,36 +32,36 @@ $app->router->respond('GET', '/edpsych/search/', [$app, 'searchPageHandler']);
 $app->router->respond(
     'GET',
     '/edpsych/programs/courses/[asl|qme|psyf:course]/',
-    [$app, 'programsCoursePageHandler']);
+    [$app, 'programsCoursePageHandler']
+);
 
-$app->router->with('/edpsych/people', function() use ($app)
-{
+$app->router->with('/edpsych/people', function () use ($app) {
     $app->router->respond('GET', '/', [$app, 'peoplePageHandler']);
     $app->router->respond(
         'GET',
         '/[:internetId]/',
-        [$app, 'personPageHandler']);
+        [$app, 'personPageHandler']
+    );
 });
 
 // Services endpoints
-$app->router->with('/edpsych/services', function() use ($app)
-{
+$app->router->with('/edpsych/services', function () use ($app) {
     $app->router->respond('GET', '/search/', [$app, 'searchEndpointHandler']);
 
-    $app->router->with('/people-tool', function() use ($app) {
+    $app->router->with('/people-tool', function () use ($app) {
         $app->router->respond('GET', '/', [$app, 'peopleEndpointHandler']);
         $app->router->respond('GET', '/person/', [$app, 'personEndpointHandler']);
     });
 
-    $app->router->with('/news', function() use ($app) {
+    $app->router->with('/news', function () use ($app) {
         $app->router->respond('GET', '/feed/', [$app, 'newsFeedEndpointHandler']);
     });
 
-    $app->router->with('/events', function() use ($app) {
+    $app->router->with('/events', function () use ($app) {
         $app->router->respond('GET', '/feed/', [$app, 'eventsFeedEndpointHandler']);
     });
 
-    $app->router->with('/programs', function() use ($app) {
+    $app->router->with('/programs', function () use ($app) {
         $app->router->respond('GET', '/', [$app, 'programsFeedEndpointHandler']);
     });
 });
