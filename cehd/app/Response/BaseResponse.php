@@ -30,7 +30,7 @@ class BaseResponse extends \Klein\Response
      */
     public function xmlToJSON($xml_string)
     {
-        trigger_error("BaseResponse::xmlToJSON is deprecated and will soon go away. Use BaseClass::toJSON instead.");
+        // trigger_error("BaseResponse::xmlToJSON is deprecated and will soon go away. Use BaseClass::toJSON instead.");
         $xml = simplexml_load_string($xml_string);
         return json_encode($xml);
     }
