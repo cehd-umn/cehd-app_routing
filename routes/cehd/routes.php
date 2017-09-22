@@ -41,8 +41,6 @@ $app->router->respond("GET", "/topics/[:topic]/", [$app, "topicPageHandler"]);
 
 $app->router->respond("GET", "/search/", [$app, "searchPageHandler"]);
 
-$app->router->respond("GET", "/people/[:internetId]/", [$app, "personPageHandler"]);
-
 $app->router->respond("GET", "/events/", [$app, "eventsPageHandler"]);
 
 $app->router->respond("GET", "/events/[i:id]/", [$app, "eventPageHandler"]);
@@ -50,43 +48,29 @@ $app->router->respond("GET", "/events/[i:id]/", [$app, "eventPageHandler"]);
 $app->router->respond("GET", "/directory/search/", [$app, "peopleSearchResultsPageHandler"]);
 
 // Services
-$app->router->with("/services", function() use ($app)
-{
+$app->router->with("/services", function () use ($app) {
     $app->router->respond("GET", "/search/", [$app, "searchEndpointHandler"]);
 
-    $app->router->with("/people-tool", function() use ($app) {
-        // returns a JSON list of people by tag combination
-        $app->router->respond("GET", "/", [$app, "peopleEndpointHandler"]);
-
-        // returns JSON data for a single person based on their internet id (X.500)
-        $app->router->respond("GET", "/person/", [$app, "personEndpointHandler"]);
-    });
-
-    $app->router->with("/programs", function() use ($app) {
+    $app->router->with("/programs", function () use ($app) {
         $app->router->respond("GET", "/", [$app, "programsFeedEndpointHandler"]);
     });
 });
 
-
 // A handful of hard-coded redirects. These are special cases where we want
 // possessive catching of all sub directory and files
 
-$app->router->respond("GET", "/research/grantwriting[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/research/grantsmanship/", 301)->send();
-    });
+$app->router->respond("GET", "/research/grantwriting[**:trailing]", function ($request, $response, $service, $app) {
+    $response->redirect("/research/grantsmanship/", 301)->send();
+});
 
-$app->router->respond("GET", "/international[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/global/", 301)->send();
-    });
+$app->router->respond("GET", "/international[**:trailing]", function ($request, $response, $service, $app) {
+    $response->redirect("/global/", 301)->send();
+});
 
-$app->router->respond("GET", "/direct/[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/teaching/directrack/", 301)->send();
-    });
+$app->router->respond("GET", "/direct/[**:trailing]", function ($request, $response, $service, $app) {
+    $response->redirect("/teaching/directrack/", 301)->send();
+});
 
-$app->router->respond("GET", "/graduate/licensing[**:trailing]", function($request, $response, $service, $app)
-    {
-        $response->redirect("/teaching/license/", 301)->send();
-    });
+$app->router->respond("GET", "/graduate/licensing[**:trailing]", function ($request, $response, $service, $app) {
+    $response->redirect("/teaching/license/", 301)->send();
+});

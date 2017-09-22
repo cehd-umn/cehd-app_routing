@@ -8,7 +8,7 @@
  *
  */
 
-namespace CEHD\App\People;
+namespace CEHD\XML\People;
 
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 

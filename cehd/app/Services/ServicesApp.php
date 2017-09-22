@@ -5,6 +5,7 @@ require_once __DIR__ . "/../../../cehd/app/Base.php";
 require_once __DIR__ . "/../../../cehd/app/XML/Event.php";
 require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
+require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -12,6 +13,7 @@ use \CEHD\App\BaseClass;
 use \CEHD\XML\Event\Events;
 use \CEHD\XML\InfoSession\InfoSessions;
 use \CEHD\XML\News\News;
+use \CEHD\XML\People\People;
 
 class ServicesApp extends BaseClass
 {
@@ -116,5 +118,66 @@ class ServicesApp extends BaseClass
             return $response->withJson($news->stories);
         }
         $response->withJson([]);
+    }
+
+    public function peopleHandler(Request $request, Response $response)
+    {
+        $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
+        $query_data = $request->getQueryParams();
+        $query = [];
+
+        /**
+         * Requests that get here in IIS have lots of extraneous query params
+         * tacked on. So many that the HTTP client (Guzzle) pukes because the
+         * byte-size of the URL is too large. Strip out extraneous query params
+         * to prevent that.
+         */
+        if (array_key_exists('en', $query_data)) {
+            $query['en'] = $query_data['en'];
+        };
+
+        if (array_key_exists('tg', $query_data)) {
+            $query['tg'] = $query_data['tg'];
+        };
+
+        if (array_key_exists('nm', $query_data)) {
+            $query['nm'] = $query_data['nm'];
+        };
+
+        if (
+            array_key_exists('en', $query_data) ||
+            array_key_exists('tg', $query_data) ||
+            array_key_exists('nm', $query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_query_data = ['query' => $query];
+            $client_response = $http_client->request('GET', $base_url, $client_query_data);
+            $people_obj = new People($client_response->getBody());
+            return $response->withJson($people_obj->people);
+        }
+        return $response->withJson([]);
+    }
+
+    public function personHandler(Request $request, Response $response)
+    {
+        $query_data = $request->getQueryParams();
+        $base_url =  'https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx';
+
+        if (array_key_exists('internetId', $query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_query_data = ['query' => [
+                'id' => $query_data['internetId'
+                ]
+            ]];
+            $client_response = $http_client->request('GET', $base_url, $client_query_data);
+            $people_obj = new People($client_response->getBody());
+
+            /**
+             * People::people is always an array for consistency. Since we're
+             * targeting an ID here, it's mostly harmless to just return the
+             * first one. (There should only be one.)
+             */
+            return $response->withJson($people_obj->people[0]);
+        }
+        return $response->withJson([]);
     }
 }
