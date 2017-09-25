@@ -19,6 +19,14 @@ use \CEHD\XML\People\People;
 use \CEHD\XML\Search\Search;
 use \CEHD\Validator\Validator;
 
+class InvalidParameterException extends \Exception
+{
+}
+
+class MissingParameterException extends \Exception
+{
+}
+
 class ServicesApp extends BaseClass
 {
     public function eventsHandler(Request $request, Response $response)
@@ -218,29 +226,66 @@ class ServicesApp extends BaseClass
         return $response->withJson([]);
     }
 
-    // Front end sends the list of sites as query data
-    // This endpoint decodes those and loops over them to make requests to the GSA
-    // XML from the GSA is parsed into a new Search instance
-    // The Search instance data is parsed back into a JSON array with all the sites and sent back to the font end
+    private function _validateRequestHasRequiredParams($required, $received)
+    {
+        $missing_params = array_diff(array_keys($required), $received);
+        if (count($missing_params) > 0) {
+            $msg = "";
+            foreach ($missing_params as $key) {
+                $msg = $msg . "Missing parameter: " . $key . "\n";
+                $msg = $msg . $key . " info: " . $required[$key]["description"] . " and should be a " . $required[$key]["type"] . "\n";
+            }
+            throw new MissingParameterException($msg);
+            return false;
+        }
+        return true;
+    }
+
     public function searchHandler(Request $request, Response $response)
     {
         $base_url = "http://google.umn.edu/search";
         $results = [];
         $http_client = $this->bootstrapHTTPClient([]);
-        $query_data = $request->getQueryParams();
-        $query_names = [
-            "client",
-            "in_url",
-            "num",
-            "q",
-            "site",
-            "start",
+        $query_data = (array) $request->getQueryParams();
+        $valid_query_params = [
+            "client" => [
+                "description" => "client is the short name of a GSA organization. E.g. tc_education",
+                "type" => "string"
+            ],
+            "in_url" => [
+                "description" => "The specific url to search. E.g., www.cehd.umn.edu",
+                "type" => "string"
+            ],
+            "num" => [
+                "description" => "The number of results to return",
+                "type" => "integer"
+            ],
+            "q" => [
+                "description" => "A URI encoded search string",
+                "type" => "string"
+            ],
+            "site" => [
+                "description" => "The GSA collection name. E.g., tc_education_students",
+                "type" => "string"
+            ],
+            "start" => [
+                "description" => "Index of where to start in the results.",
+                "type" => "integer"
+            ],
         ];
+
+        try  {
+            $this->_validateRequestHasRequiredParams($valid_query_params, array_keys($query_data));
+        } catch (MissingParameterException $e) {
+            $newResponse = $response->withStatus(400);
+            $newResponse->getBody()->write($e->getMessage());
+            return $newResponse;
+        }
+
         $client_query_data = ["query" => []];
 
         // strips out any unnecessary query params
-        // @todo validate the request to make sure all params are present and valid
-        foreach ($query_names as $name) {
+        foreach (array_keys($valid_query_params) as $name) {
             $client_query_data["query"][$name] = $query_data[$name];
         }
 

@@ -5,13 +5,23 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require_once '../../vendor/autoload.php';
 require_once '../../cehd/app/Services/ServicesApp.php';
 
-$app = new \Slim\App(
-[
+$config = [
     "settings" => [
         "displayErrorDetails" => true,
     ]
-]
-);
+];
+
+$c = new \Slim\Container($config);
+
+$c['errorHandler'] = function ($c) {
+    return function ($request, $response, $exception) use ($c) {
+        return $c['response']->withStatus(500)
+                             ->withHeader('Content-Type', 'text/html')
+                             ->write($exception->getMessage());
+    };
+};
+
+$app = new \Slim\App($c);
 
 $app->get('/events/feed/', '\CEHD\Services\ServicesApp:eventsHandler');
 
