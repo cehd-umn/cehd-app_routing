@@ -14,20 +14,27 @@
         "use strict";
         var app = new App();
         var http_client = new app.httpClient();
-        var search = new app.searchClient("{{ config.base_url }}");
         var start = 10;
 
         $(".more-results-link").on("click", function(event) {
             event.preventDefault();
             var $self = $(this);
-            var params = {
+            var query_params = {
+                "client": "{{ client }}",
+                "num": 10,
+                "in_url": "{{ in_url }}",
+                "filter": "{{ filter }}",
                 "q": encodeURIComponent("{{ query }}"),
-                "start": start,
-                "sites": [$self.data("site")]
+                "site": $self.data("site"),
+                "start": start
             };
-            var request_params = search.getParams(params);
+            var params = {
+                "url": "/services/search/",
+                "method": "GET",
+                "data": query_params
+            };
             var $target_element = $($self.data('target'));
-            var $request = http_client.get(request_params);
+            var $request = http_client.get(params);
 
             $request.done(function() {
                 var results = http_client.getResults();

@@ -7,7 +7,7 @@
         <input type="hidden" name="site" value="{{ gsa_sites.primary.site }}">
         <input type="hidden" name="start" value="0">
         <input type="hidden" name="in_url" value="{{ gsa_sites.primary.url }}">
-        <input id="search-page-filter-input" type="hidden" name="filter" value="{{ filter }}">
+        <input id="search-page-filter-input" type="hidden" name="filter" value="primary">
         <input id="search-page-submit" type="submit" value="&#xe803;" class="search-button search-form-element">
     </form>
 </div>
@@ -24,13 +24,13 @@
 
     <div class="{{ result_set.name|lower|hyphenate }}-search-result-set active search-result-set margin-top-2">
         {% if results %}
-            <dl id="{{ results.filter }}-search-results">
+            <dl id="search-results">
             {% for result in results %}
                 <dt><a href="{{ result.link }}">{{ result.title|raw }}</a></dt>
                 <dd>{{ result.description|raw }}</dd>
             {% endfor %}
             </dl>
-            <p><a href="#" class="more-results-link" data-target="#{{ result_level }}-search-results" data-site="{{ result_level }}">View more</a></p>
+            <p><a href="#" class="more-results-link" data-target="#search-results" data-site="{{ site }}">View more</a></p>
         {% else %}
             <p>No results found.</p>
         {% endif %}

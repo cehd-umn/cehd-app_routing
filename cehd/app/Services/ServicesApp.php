@@ -218,103 +218,35 @@ class ServicesApp extends BaseClass
         return $response->withJson([]);
     }
 
-    public function validateSearhParam(string $name, string $type, boolean $required, $value)
-    {
-        $validator = new Validator(
-            $name,
-            $type,
-            $required,
-            $value
-        );
-
-        return $validator->isValidType();
-    }
-
-    public function validateSearchParmams($params)
-    {
-        $invalid_params = [];
-        $missing_params = [];
-
-        $valid_params = [
-            [
-                "name" => "client",
-                "type" => "string",
-                "required" => true,
-            ],
-            [
-                "name" => "num",
-                "type" => "integer",
-                "required" => true,
-            ],
-            [
-                "name" => "site",
-                "type" => "string",
-                "required" => true,
-            ],
-            [
-                "name" => "start",
-                "type" => "integer",
-                "required" => true,
-            ],
-            [
-                "name" => "in_url",
-                "type" => "string",
-                "required" => true,
-            ],
-            [
-                "name" => "filter",
-                "type" => "string",
-                "required" => true,
-            ],
-        ];
-
-        foreach($valid_params as $valid_param) {
-            if (!$this->arrayContains($valid_param["name"])) {
-                array_push($missing_params, $valid_param);
-            } elseif (!$this->validateParam(
-                $valid_param["name"],
-                $valid_param["type"],
-                $valid_param["required"],
-                $params[$valid_param["name"]])) {
-                array_push($invalid_params, $params[$valid_param["name"]]);
-            }
-        }
-
-        return [
-            "invalid" => $invalid_params,
-            "missing" => $missing_params,
-        ];
-
-    }
-
     // Front end sends the list of sites as query data
     // This endpoint decodes those and loops over them to make requests to the GSA
     // XML from the GSA is parsed into a new Search instance
     // The Search instance data is parsed back into a JSON array with all the sites and sent back to the font end
     public function searchHandler(Request $request, Response $response)
     {
+        $base_url = "http://google.umn.edu/search";
         $results = [];
+        $http_client = $this->bootstrapHTTPClient([]);
         $query_data = $request->getQueryParams();
+        $query_names = [
+            "client",
+            "in_url",
+            "num",
+            "q",
+            "site",
+            "start",
+        ];
+        $client_query_data = ["query" => []];
 
-        $missing_or_invalid = $this->validateParams($query_data);
-
-        if (!empty($missing_or_invalid["missing"]) || !empty($missing_or_invalid)) {
-            // @todo throw a real exception here
-            trigger_error("Missing or invalid parameters in the request");
+        // strips out any unnecessary query params
+        // @todo validate the request to make sure all params are present and valid
+        foreach ($query_names as $name) {
+            $client_query_data["query"][$name] = $query_data[$name];
         }
 
-        if ($this->arrayContains("sites", $query_data)) {
-            $http_client = $this->bootstrapHTTPClient([]);
-            $base_url = "http://google.umn.edu/search";
-
-            $client_response = $this->_http_client->request(
-                "GET", $base_url, $query_data);
-
-            //@xxx Check to make sure this structure works in the class.
-            array_push($results, new Search($client_response->getBody()));
-            return $response->withJson($results);
-        }
-
-        return $response->withJson([]);
+        $client_response = $http_client->request("GET", $base_url,
+            $client_query_data);
+        $resultSet = new Search($client_response->getBody());
+        return $response->withJson($resultSet->results);
     }
 }

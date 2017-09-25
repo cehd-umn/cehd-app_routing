@@ -45,11 +45,11 @@ class Result extends \CEHD\App\XML\XML
 
     function __construct($xml)
     {
-        $this->description = $xml->S;
+        $this->description = $this->getFromProperty($xml->S);
 
-        $this->link = $xml->U;
+        $this->link = $this->getFromProperty($xml->U);
 
-        $this->title = $xml->T;
+        $this->title = $this->getFromProperty($xml->T);
     }
 }
 
