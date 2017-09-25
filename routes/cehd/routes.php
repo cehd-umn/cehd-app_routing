@@ -47,15 +47,6 @@ $app->router->respond("GET", "/events/[i:id]/", [$app, "eventPageHandler"]);
 
 $app->router->respond("GET", "/directory/search/", [$app, "peopleSearchResultsPageHandler"]);
 
-// Services
-$app->router->with("/services", function () use ($app) {
-    $app->router->respond("GET", "/search/", [$app, "searchEndpointHandler"]);
-
-    $app->router->with("/programs", function () use ($app) {
-        $app->router->respond("GET", "/", [$app, "programsFeedEndpointHandler"]);
-    });
-});
-
 // A handful of hard-coded redirects. These are special cases where we want
 // possessive catching of all sub directory and files
 

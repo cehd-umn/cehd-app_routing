@@ -30,6 +30,12 @@
                         <form action="{{ config.base_url }}/search/" method="get" name="gsearch" id="gsearch" title="Search for U of M sites and people">
                             <!-- TODO evaluate use of tabindex -->
                             <input id="umnh-searchfield" type="text" name="q" placeholder="Search" title="Search text" tabindex="80">
+                            <input type="hidden" name="client" value="{{ gsa_sites.primary.client }}">
+                            <input type="hidden" name="num" value="10">
+                            <input type="hidden" name="site" value="{{ gsa_sites.primary.site }}">
+                            <input type="hidden" name="start" value="0">
+                            <input type="hidden" name="in_url" value="{{ gsa_sites.primary.url }}">
+                            <input id="search-page-filter-input" type="hidden" name="filter" value="primary">
                             <input id="umnh-searchbtn" type="submit" name="Search" value="&#xe803;">
                         </form>
                     </div><!-- /#umnh-searchbox -->

@@ -15,10 +15,12 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use CEHD\App\Card\PatternCard\PatternCards;
 use CEHD\Services\ServicesApp;
+use CEHD\XML\Search\Search;
 
 class CEHDApp extends \CEHD\App\App\BaseApp
 {
     // @todo put this into the config file
+    // @todo this can be public
     protected $_searchApplianceSites = [
                 "primary" => [
                     "client" => "tc_education",
@@ -41,6 +43,11 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     public function __construct($file_paths)
     {
         parent::__construct($file_paths);
+
+        $this->template->addGlobal(
+            "gsa_sites",
+            $this->_searchApplianceSites
+        );
 
         // Add a cachebuster for the css
         $this->template->addGlobal(
@@ -235,41 +242,54 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 
     public function searchPageHandler($request, $response, $service, $app)
     {
-        $template_data = $this->searchRequestHandler($request);
-        echo $this->_renderTemplate('cehd/search/index.html', $template_data);
-    }
-
-    public function searchEndpointHandler($request, $response, $service, $app)
-    {
-        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
+        $base_url = "http://google.umn.edu/search";
+        $results = [];
+        $http_client = $this->bootstrapHTTPClient([]);
         $query_data = $request->params();
-        $results = $search_client->getResults($query_data);
-        return $response->sendJSONResponse(json_encode($results));
-    }
+        $gsa_defaults = $this->_searchApplianceSites["primary"];
+        $search_query = "";
 
-    public function programsFeedEndpointHandler($request, $response, $service, $app)
-    {
-        $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
-        $query_data = $request->params();
-        $client_query_data = ['query' => []];
-        $valid_query_params = [
-            'a',
-            'd',
-            'p',
-            't',
+        if ($this->arrayContains("q", $query_data)) {
+            $search_query = $query_data["q"];
+        } elseif ($this->arrayContains("query", $query_data)) {
+            $search_query = $query_data["query"];
+        }
+
+        $start =  $this->arrayContains("start", $query_data) ? $query_data["start"] : 0;
+        $url =    $this->arrayContains("url", $query_data) ? $query_data["url"] : $gsa_defaults["url"];
+        $site =   $this->arrayContains("site", $query_data) ? $query_data["site"] : $gsa_defaults["site"];
+        $client = $this->arrayContains("client", $query_data) ? $query_data["client"] : $gsa_defaults["client"];
+        $num =    $this->arrayContains("num", $query_data) ? $query_data["num"] : 10;
+        $name =   $this->arrayContains("name", $query_data) ? $query_data["name"] : $gsa_defaults["name"];
+        $filter = $this->arrayContains("filter", $query_data) ? $query_data["filter"] : "primary";
+
+        $client_query_data = [
+            'query' => [
+                'q' => $search_query,
+                'start' => $start,
+                'in_url' => $url,
+                'site' => $site,
+                'client' => $client,
+                'num' => $num,
+            ]
+        ];
+        $client_response = $http_client->request("GET", $base_url,
+            $client_query_data);
+        $resultSet = new Search($client_response->getBody());
+
+        $template_data = [
+            "client" => $client,
+            "num" => $num,
+            "site" => $site,
+            "start" => $start,
+            "in_url" => $url,
+            "filter" => $filter,
+            "query" => $search_query,
+            "results" => $resultSet->results,
         ];
 
-        foreach ($valid_query_params as $valid_query_param) {
-            if (array_key_exists($valid_query_param, $query_data)) {
-                $client_query_data['query'][$valid_query_param] = $query_data[$valid_query_param];
-            }
-        }
-
-        if (!empty($client_query_data)) {
-            $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-            $client_response = $http_client->request('GET', $base_url, $client_query_data);
-            $response->sendJSONResponse($response->xmlToJSON($client_response->getBody()));
-        }
+        // var_dump($client_query_data);
+        echo $this->_renderTemplate('cehd/search/index.html', $template_data);
     }
 
     public function personPageHandler($request, $response, $service, $app)

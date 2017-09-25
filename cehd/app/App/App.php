@@ -426,34 +426,32 @@ class BaseApp extends \CEHD\App\BaseClass
         return $new_names;
     }
 
-    public function searchRequestHandler($request)
-    {
-        $search_client = new \CEHD\App\Search\Search($this->_searchApplianceSites);
-        $query_data = $request->params();
-        $filter = $this->_searchApplianceSites["primary"]["name"];
+    // public function searchApplianceRequestHandler($request)
+    // {
+    //     $base_url = "http://google.umn.edu/search";
+    //     $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
+    //     $query_data = $request->params();
+    //     $filter = $this->_searchApplianceSites["primary"]["name"];
+    //     $sites = $query_data["sites"];
 
-        if ($this->arrayContains("q", $query_data)) {
-            $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-        } elseif ($this->arrayContains("query", $query_data)) {
-            $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
-        }
+    //     if ($this->arrayContains("q", $query_data)) {
+    //         $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
+    //     } elseif ($this->arrayContains("query", $query_data)) {
+    //         $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
+    //     }
 
-        if ($this->arrayContains("filter", $query_data)) {
-            $filter = $query_data["filter"];
-        }
+    //     if ($this->arrayContains("filter", $query_data)) {
+    //         $filter = $query_data["filter"];
+    //     }
 
-        $search_client_query_data = [
-            "q" => $search_query,
-            "sites" => array_keys($this->_searchApplianceSites),
-        ];
+    //     $client_query_data = [
+    //         "q" => $search_query,
+    //         "sites" => array_keys($sites),
+    //     ];
 
-        $results = $search_client->getResults($search_client_query_data);
-        $template_data = [
-            "results" => $results,
-            "filter" => $filter,
-            "query" => $search_query,
-        ];
+    //     $client_response = $this->_http_client->request("GET", $base_url,
+    //         $client_query_data);
 
-        return $template_data;
-    }
+    //     return $$client_response->getBody();
+    // }
 }
