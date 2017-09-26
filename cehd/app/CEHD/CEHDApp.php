@@ -240,50 +240,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         }
     }
 
-    public function searchPageHandler($request, $response, $service, $app)
-    {
-        $http_client = $this->bootstrapHTTPClient([]);
-        $query_data = $request->paramsGet();
-        $base_url = "http://" . $_SERVER['SERVER_NAME'] . "/services/search/";
-        $gsa_defaults = $this->_searchApplianceSites["primary"];
-        $start =  $this->arrayContains("start", $query_data) ? $query_data["start"] : 0;
-        $url =    $this->arrayContains("url", $query_data) ? $query_data["url"] : $gsa_defaults["url"];
-        $site =   $this->arrayContains("site", $query_data) ? $query_data["site"] : $gsa_defaults["site"];
-        $client = $this->arrayContains("client", $query_data) ? $query_data["client"] : $gsa_defaults["client"];
-        $num =    $this->arrayContains("num", $query_data) ? $query_data["num"] : 10;
-        $name =   $this->arrayContains("name", $query_data) ? $query_data["name"] : $gsa_defaults["name"];
-        $filter = $this->arrayContains("filter", $query_data) ? $query_data["filter"] : "primary";
-        $search_query = $query_data->q;
-
-        $client_query_data = [
-            'query' => [
-                'client' => $client,
-                'in_url' => $url,
-                'num' => $num,
-                'q' => $search_query,
-                'site' => $site,
-                'start' => $start,
-            ]
-        ];
-
-        $client_response = $http_client->request("GET", $base_url,
-           $client_query_data);
-
-        $template_data = [
-            "client" => $client,
-            "num" => $num,
-            "site" => $site,
-            "start" => $start,
-            "in_url" => $url,
-            "filter" => $filter,
-            "query" => $search_query,
-            "results" => json_decode($client_response->getBody()),
-        ];
-
-        // var_dump($client_query_data);
-        echo $this->_renderTemplate('cehd/search/index.html', $template_data);
-    }
-
     public function personPageHandler($request, $response, $service, $app)
     {
         $template_data = [

@@ -13,6 +13,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
 
     private $_search_client;
 
+    protected $_search_template;
+
     protected $_searchApplianceSites;
 
     function __construct($file_paths)
@@ -41,6 +43,11 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 ]
             ];
 
+        $this->template->addGlobal(
+            "gsa_sites",
+            $this->_searchApplianceSites
+        );
+
         // Check for main nav state
         if (array_key_exists("cehd-edpsych-navOpen", $_COOKIE)) {
             $this->nav_open = $_COOKIE["cehd-edpsych-navOpen"];
@@ -49,6 +56,8 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $this->template->addGlobal("cehd_edpsych_nav_open", $this->nav_open);
 
         $this->router->onHttpError([$this, 'errorPageHandler']);
+
+        $this->_search_template = "edpsych/search.html";
     }
 
     public function errorPageHandler($code=404, $router)
@@ -56,12 +65,6 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $html = $this->_renderTemplate('edpsych/error/404.html', []);
         $router->response()->status($code);
         $router->response()->body($html);
-    }
-
-    public function searchPageHandler($request, $response, $service, $app)
-    {
-        $template_data = $this->searchRequestHandler($request);
-        echo $this->_renderTemplate("edpsych/search.html", $template_data);
     }
 
     // @todo remove all these endpoints and point Ed Psych stuff to college-level ones

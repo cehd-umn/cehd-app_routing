@@ -426,32 +426,50 @@ class BaseApp extends \CEHD\App\BaseClass
         return $new_names;
     }
 
-    // public function searchApplianceRequestHandler($request)
-    // {
-    //     $base_url = "http://google.umn.edu/search";
-    //     $http_client = $this->bootstrap_helpers->bootstrap_http_client([]);
-    //     $query_data = $request->params();
-    //     $filter = $this->_searchApplianceSites["primary"]["name"];
-    //     $sites = $query_data["sites"];
+    public function searchPageHandler($request, $response, $service, $app)
+    {
+        $http_client = $this->bootstrapHTTPClient([]);
+        $query_data = $request->params();
+        $base_url = "http://" . $_SERVER['SERVER_NAME'] . "/services/search/";
+        $gsa_defaults = $this->_searchApplianceSites["primary"];
+        $start =  $this->arrayContains("start", $query_data) ? $query_data["start"] : 0;
+        $url =    $this->arrayContains("url", $query_data) ? $query_data["url"] : $gsa_defaults["url"];
+        $site =   $this->arrayContains("site", $query_data) ? $query_data["site"] : $gsa_defaults["site"];
+        $client = $this->arrayContains("client", $query_data) ? $query_data["client"] : $gsa_defaults["client"];
+        $num =    $this->arrayContains("num", $query_data) ? $query_data["num"] : 10;
+        $name =   $this->arrayContains("name", $query_data) ? $query_data["name"] : $gsa_defaults["name"];
+        $filter = $this->arrayContains("filter", $query_data) ? $query_data["filter"] : "primary";
+        $search_query = $query_data["q"];
 
-    //     if ($this->arrayContains("q", $query_data)) {
-    //         $search_query = array_key_exists("q", $query_data) ? $query_data["q"] : "";
-    //     } elseif ($this->arrayContains("query", $query_data)) {
-    //         $search_query = array_key_exists("query", $query_data) ? $query_data["query"] : "";
-    //     }
+        $client_query_data = [
+            'query' => [
+                'client' => $client,
+                'in_url' => $url,
+                'num' => $num,
+                'q' => $search_query,
+                'site' => $site,
+                'start' => $start,
+            ]
+        ];
 
-    //     if ($this->arrayContains("filter", $query_data)) {
-    //         $filter = $query_data["filter"];
-    //     }
+        $client_response = $http_client->request("GET", $base_url,
+           $client_query_data);
 
-    //     $client_query_data = [
-    //         "q" => $search_query,
-    //         "sites" => array_keys($sites),
-    //     ];
+        $template_data = [
+            "client" => $client,
+            "num" => $num,
+            "site" => $site,
+            "start" => $start,
+            "in_url" => $url,
+            "filter" => $filter,
+            "query" => $search_query,
+            "results" => json_decode($client_response->getBody()),
+        ];
 
-    //     $client_response = $this->_http_client->request("GET", $base_url,
-    //         $client_query_data);
-
-    //     return $$client_response->getBody();
-    // }
+        $template = 'cehd/search/index.html';
+        if (property_exists($this, "_search_template")) {
+            $template = $this->_search_template;
+        }
+        echo $this->_renderTemplate($template, $template_data);
+    }
 }
