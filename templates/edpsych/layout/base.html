@@ -108,12 +108,14 @@
                         <h2 class="dept-footer-heading h4">Contact Us</h2>
                     </div>
                     <p><a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a></p>
+                    {% block dept_footer_address %}
                     <address>
                         250 Education Sciences Bldg<br>
                         56 East River Road<br>
                         Minneapolis, MN 55455<br>
                         P: 612-624-6083 | F: 612-624-8241<br>
                     </address>
+                    {% endblock %}
                     <p><a href="{{config.base_url}}/contact/">Contact form</a> | <a href="http://www.cehd.umn.edu/directory/">Directory</a></p>
                 </div>
             </div>
