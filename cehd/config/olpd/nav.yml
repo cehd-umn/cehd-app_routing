@@ -1,16 +1,65 @@
 ---
-- name: About Us
-  href: "/about/"
-  section: about
-  subsections: none
+- name: Undergraduate
+  href: "/undergraduate/"
+  section: undergraduate
+  subsections:
+    - name: Majors & Programs
+      href: "/undergraduate/majors-and-programs/"
+    - name: Undergraduate Advising
+      href: "/undergraduate/advising/"
+    - name: Internship & Applied Experience
+      href: "/undergraduate/internship-and-applied-experience/"
+    - name: Resources
+      href: "/undergraduate/resources/"
+- name: Graduate
+  href: "/graduate/"
+  section: graduate
+  subsections:
+    - name: Degrees & Programs
+      href: "/graduate/degrees-and-programs/"
+    - name: Admissions
+      href: "/graduate/admissions/"
+    - name: Forms & Handbooks
+      href: "/graduate/forms-and-handbooks/"
+    - name: Resources
+      href: "/undergraduate/resources/"
+- name: Research & Engagement
+  href: "/research-and-engagement/"
+  section: research
+  subsections:
+    - name: Expertise
+      href: "/research-and-engagement/expertise/"
+    - name: Recent Publications
+      href: "/research-and-engagement/recent-publications/"
+    - name: Student Dissertations
+      href: "/research-and-engagement/student-dissertations/"
+    - name: Student Research Conference
+      href: "/research-and-engagement/student-research-conference/"
+- name: Courses
+  href: "/courses/"
+  section: courses
+  subsections:
+    - name: Offerings
+      href: "/courses/offerings/"
+    - name: Special Topics
+      href: "/courses/special-topics/"
+    - name: Past Designators
+      href: "/courses/paste-designators/"
 - name: People
   href: "/people/"
   section: people
-  subsections: none
-- name: Future Students
-  href: "/future-students/"
-  section: future-students
   subsections:
-    -
-      - name: Visit & Apply
-        href: "/future-students/apply/"
+    - name: Faculty & Instructional Staff
+      href: "/people/faculty-and-instrucional-staff/"
+    - name: Departmental Staff
+      href: "/people/departmental-staff/"
+    - name: Emeriti Faculty
+      href: "/people/emeriti-faculty/"
+- name: Giving
+  href: "/giving/"
+  section: giving
+  subsections: null
+- name: About Us
+  href: "/about/"
+  section: about
+  subsections: null
