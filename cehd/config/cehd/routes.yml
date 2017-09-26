@@ -1410,7 +1410,7 @@
   template_data:
     - section: news
 /parenting/:
-  publish: false
+  publish: true
   template: cehd/parenting.html
   template_data:
     - section: parenting

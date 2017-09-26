@@ -1,5 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/events-feed.html" as events -%}
+{% import "macros/info-sessions-feed.html" as info_session %}
 {%- import "macros/loader.html" as loader -%}
 {%- import "macros/svg.html" as svg -%}
 {% set page_title = "McNair Scholars" %}
@@ -17,16 +18,19 @@
           <p>The U of M McNair program is open to all Twin Cities students in all colleges and majors, U of M coordinate campuses (Crookston, Duluth, Morris, Rochester), and Minnesota colleges and universities that do not have their own McNair program: Carleton
             College, Hamline University, Macalester College, Metropolitan State University, Saint Mary’s University of Minnesota, St. Catherine University, St. John’s University, and University of St. Thomas. </p>
           <p>Through this summer experience and academic year programming, McNair Scholars develop higher-level academic and research skills necessary to gain admission to and successfully complete graduate study. </p>
-          <p>
 
 
-        </div>
-        <div class="span-4">  <!-- Events feed -->
+      </div>
+      <div class="span-4">  <!-- Events feed -->
         {{ loader.loader( "Events", "h2", "events-container" ) }}
       </div>
-          <div class="span-4">
-          <h2>Contact</h2>
-    <h3><a href="/trio/mcnair/staff/">McNair staff</a></h3>
+      <div class="span-4">
+        <h2>Information sessions</h2>
+          <div id="info-sessions-container">
+
+          </div>
+        <h2>Contact</h2>
+        <h3><a href="/trio/mcnair/staff/">McNair staff</a></h3>
       <p><b>TRIO McNair</b><br />
         40 Education Sciences Building<br />
         56 East River Road<br />
@@ -166,9 +170,6 @@
       </p>
 
       <div>
-        <!-- 2017-06-14, check with Christina in the fall to see if the McNair info-session feed will be used. | JFA
-        <h2>Open Houses</h2> -->
-        <!-- Events feed -->
 
         <h2>Connect</h2>
         <p class="last">
@@ -192,5 +193,5 @@
     {{ events.events_feed_js(
         279, 6
     ) }}
-
+    {{ info_session.info_sessions_feed_js("McNair","6","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "undergraduate.html") }}
 {% endblock %}

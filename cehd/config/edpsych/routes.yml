@@ -531,6 +531,12 @@
     template_data:
         meta_description: "As an M.A. student in the special education program, you'll be trained to find solutions to problems that help individuals with disabilities learn and grow. Many of our special education M.A. students go on to earn their Ph.D. in special education."
         section: programs-degrees
+/edpsych/programs/specialed/masters-aba/:
+    publish: true
+    template: edpsych/programs/specialed/masters-aba.html
+    template_data:
+        meta_description: "The M.A. in special education with applied behavioral analysis (A.B.A.) program, prepares you to become a board certified behavior analyst. You’ll work with people with disabilities—such as autism spectrum disorder and developmental disabilities—to recognize and analyze problem behaviors and recommend actions to improve their day-to-day lives."
+        section: programs-degrees
 /edpsych/programs/specialed/phd/:
     publish: true
     template: edpsych/programs/specialed/phd.html
