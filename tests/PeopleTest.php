@@ -17,19 +17,19 @@ class PeopleTest extends TestCase
     {
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/person_caberger.xml');
 
-        $this->people_obj_multiple_presentations = new \CEHD\App\People\People($xmlStr);
+        $this->people_obj_multiple_presentations = new \CEHD\XML\People\People($xmlStr);
 
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/person_kwahl.xml');
 
-        $this->people_obj_single_presentation = new \CEHD\App\People\People($xmlStr);
+        $this->people_obj_single_presentation = new \CEHD\XML\People\People($xmlStr);
 
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/people_tag.xml');
 
-        $this->people_multiple_from_tag = new \CEHD\App\People\People($xmlStr);
+        $this->people_multiple_from_tag = new \CEHD\XML\People\People($xmlStr);
 
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/person_christ.xml');
 
-        $this->people_christ = new \CEHD\App\People\People($xmlStr);
+        $this->people_christ = new \CEHD\XML\People\People($xmlStr);
     }
 
     public function testCreate()
@@ -80,6 +80,6 @@ class PeopleTest extends TestCase
     public function testNoJobs()
     {
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/people_tag_no_jobs.xml');
-        $people = new \CEHD\App\People\People($xmlStr);
+        $people = new \CEHD\XML\People\People($xmlStr);
     }
 }

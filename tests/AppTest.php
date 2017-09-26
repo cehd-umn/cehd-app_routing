@@ -121,7 +121,7 @@ class AppTest extends TestCase
     public function testIsIterable()
     {
         $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/person_caberger.xml');
-        $classInstance = new \CEHD\App\People\People($xmlStr);
+        $classInstance = new \CEHD\XML\People\People($xmlStr);
 
         // strings will iterate, but not in a way we expect so we want false
         $this->assertFalse($this->appInstance->isIterable("string"));

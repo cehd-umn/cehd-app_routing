@@ -10,112 +10,20 @@ class SearchTest extends TestCase
 
     protected function setUp()
     {
-        $this->search = new \CEHD\App\Search\Search(
-            [
-                "primary" => [
-                    "client" => "tc_education",
-                    "name" => "College of Education + Human Development",
-                    "site" => "tc_education_students",
-                    "url" => "www.cehd.umn.edu",
-                ],
-                "secondary" => [
-                    "client" => "searchumn",
-                    "name" => "University of Minnesota",
-                    "site" => "default_collection",
-                    "url" => "www.umn.edu",
-                ]
-            ]
-        );
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/search.xml');
+        $this->search = new \CEHD\XML\Search\Search($xmlStr);
     }
 
-    /**
-    * Call protected/private method of a class.
-    *
-    * @param object &$object    Instantiated object that we will run method on.
-    * @param string $methodName Method name to call
-    * @param array  $parameters Array of parameters to pass into method.
-    * @link https://jtreminio.com/2013/03/unit-testing-tutorial-part-3-testing-protected-private-methods-coverage-reports-and-crap/
-    *
-    * @todo Create a BaseTest class for this method
-    * @return mixed Method return.
-    */
-    public function invokeMethod(&$object, $methodName, array $parameters = array())
+    public function testCreate()
     {
-        $reflection = new \ReflectionClass(get_class($object));
-        $method = $reflection->getMethod($methodName);
-        $method->setAccessible(true);
+        $count = count($this->search->results);
+        $expected_title = "<b>Brain</b> imaging | AHC Research Services - University of <b>...</b>";
+        $expected_description = "<b>...</b> You are here. Home ; <b>Brain</b> imaging. ▾ Section sub-menu ▾. <b>Brain</b> imaging.<br> Category: Facilities and equipment. University Imaging Centers. <b>...</b>";
+        $expected_link = "https://www.researchservices.umn.edu/auto-created-vocabulary/brain-imaging";
 
-        return $method->invokeArgs($object, $parameters);
-    }
-
-    public function testValidateQueryParams()
-    {
-        $this->assertTrue(
-            $this->invokeMethod(
-                $this->search,
-                '_validateQueryParams',
-                [
-                    ["q" => "query"],
-                ]
-            )
-        );
-
-        $this->assertFalse(
-            $this->invokeMethod(
-                $this->search,
-                '_validateQueryParams',
-                [
-                    [],
-                ]
-            )
-        );
-    }
-
-    public function testGetStart()
-    {
-        $start = $this->invokeMethod(
-            $this->search,
-            '_getStart',
-            [
-                [],
-            ]
-        );
-
-        $this->assertEquals(0, $start);
-
-        $start = $this->invokeMethod(
-            $this->search,
-            '_getStart',
-            [
-                ['start' => 10],
-            ]
-        );
-
-        $this->assertEquals(10, $start);
-    }
-
-    public function testGet()
-    {
-        $query_params = [
-            'q' => "social work"
-        ];
-
-        $results = $this->search->getResults($query_params);
-        $this->assertTrue(is_array($results));
-        $this->assertEquals(
-            $results['primary']['name'],
-            "College of Education + Human Development");
-        $this->assertEquals(count($results['primary']['results']), 10);
-    }
-
-    public function testGetWithDifferentParams()
-    {
-        $query_params = [
-            'q' => "social work",
-            'num' => 3,
-        ];
-
-        $results = $this->search->getResults($query_params);
-        $this->assertEquals(count($results['primary']['results']), 3);
+        $this->assertEquals(10, $count);
+        $this->assertEquals($expected_title, $this->search->results[0]->title);
+        $this->assertEquals($expected_description, $this->search->results[0]->description);
+        $this->assertEquals($expected_link, $this->search->results[0]->link);
     }
 }

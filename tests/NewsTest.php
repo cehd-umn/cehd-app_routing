@@ -10,7 +10,7 @@ class NewsTest extends TestCase
     protected function setUp()
     {
         $this->validRSSStr = file_get_contents(__DIR__ . '/fixtures/xml/newsfeed.xml');
-        $this->newsInstance = new \CEHD\App\XML\News\News($this->validRSSStr);
+        $this->newsInstance = new \CEHD\XML\News\News($this->validRSSStr);
     }
 
     public function testCreation()
@@ -43,7 +43,7 @@ class NewsTest extends TestCase
     public function testSortByCategoryDecade()
     {
         $validRSSStr = file_get_contents(__DIR__ . '/fixtures/xml/newsfeed-alumni-notes.xml');
-        $newsInstance = new \CEHD\App\XML\News\News($validRSSStr);
+        $newsInstance = new \CEHD\XML\News\News($validRSSStr);
         $newsInstance->sortByCategoryDecade();
         $expected_story_count = 8;
         $expected_first_key = 1930;
