@@ -1,6 +1,9 @@
 {% extends "layout/base.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
-{% block css %}<link href="/assets/dist/css/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">{% endblock %}
+{% block css %}
+    <link href="/assets/dist/css/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+    <link href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
 {% block bottom_js %}<script src="/assets/dist/js/cehd.min.js{{ js_cachebuster }}"></script>{% endblock %}
@@ -65,7 +68,23 @@
 {% endblock %}
 {% block nav %}
 <div class="section-header-container row">
-<p>Nav will go here.</p>
+    <div class="container">
+        <nav class="inline-nav">
+            <ul class="nav inline">
+                {% for top_level_nav_item in nav_items %}
+                    <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="#" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
+                      {% if top_level_nav_item.subsections %}
+                        <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
+                          {% for subsection in top_level_nav_item.subsections %}
+                            <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="#" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </div><!-- // row -->
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "variables";
+@import "colors";
+@import "bourbon/bourbon";
+
+nav {
+    margin: 16px auto 0;
+
+    .secondary-nav {
+        background-color: $base-white;
+        display: none;
+        left: 0;
+        margin: 0;
+        min-width: 240px;
+        padding: 0 0 0 12px;
+        position: absolute;
+        top: 28px;
+    }
+
+    .secondary-nav-item {
+        flex: 1;
+        padding: 3px 0;
+        text-align: left;
+        text-transform: none;
+    }
+
+    .dropdown-toggle {
+        &::after {
+            border-left: .3em solid transparent;
+            border-right: .3em solid transparent;
+            border-top: .3em solid;
+            content: "";
+            display: inline-block;
+            height: 0;
+            margin-left: .3em;
+            position: absolute;
+            top: 14px;
+            width: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    li {
+        padding: 3px 0;
+
+        &.top-nav-item {
+            align-items: flex-start;
+            display: flex;
+            padding: 8px;
+        }
+
+        &:hover {
+            .secondary-nav {
+                display: block;
+            }
+        }
+    }
+}

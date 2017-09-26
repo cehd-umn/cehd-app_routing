@@ -1,12 +1,10 @@
 const browserify = require("browserify");
 const buffer = require("vinyl-buffer");
 const gulp = require("gulp");
-const gutil = require("gulp-util");
 const rename = require("gulp-rename");
 const runSequence = require("run-sequence");
 const sass = require("gulp-sass");
 const source = require("vinyl-source-stream");
-const uglify = require("gulp-uglify");
 const webpack = require("webpack-stream");
 
 // CEHD
@@ -16,8 +14,15 @@ gulp.task("default", function() {
         "cehd-inline-sass",
         "cehd-forms-sass",
         "cehd-svg-sass",
-        "cehd-javascript"
+        "cehd-javascript",
+        "olpd-sass"
     );
+});
+
+gulp.task("olpd-sass", function() {
+    return gulp.src("./public/assets/src/sass/olpd.scss")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
 gulp.task("cehd-sass", function() {
@@ -58,6 +63,7 @@ gulp.task("watch", function() {
             "cehd-inline-sass",
             "cehd-forms-sass",
             "cehd-svg-sass",
+            "olpd-sass"
         ]
     );
 

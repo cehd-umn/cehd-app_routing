@@ -10,7 +10,7 @@ class OLPDApp extends \Peloton\Peloton
                     "client" => "tc_education",
                     "name" => "Organizational Leadership, Policy and Development",
                     "site" => "tc_education_students",
-                    "url" => "www.cehd.umn.edu",
+                    "url" => "www.cehd.umn.edu/olpd/",
                 ],
                 "secondary" => [
                     "client" => "tc_education",
