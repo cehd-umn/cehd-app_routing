@@ -43,7 +43,7 @@
                     "template_name": "index.html",
                     "$target_element": $target_element,
                     "data": {
-                        results: results,
+                        results: results.results,
                         config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                     }
                 };

@@ -433,24 +433,32 @@ class BaseApp extends \CEHD\App\BaseClass
         $base_url = "http://" . $_SERVER['SERVER_NAME'] . "/services/search/";
         $gsa_defaults = $this->_searchApplianceSites["primary"];
         $start =  $this->arrayContains("start", $query_data) ? $query_data["start"] : 0;
-        $url =    $this->arrayContains("url", $query_data) ? $query_data["url"] : $gsa_defaults["url"];
         $site =   $this->arrayContains("site", $query_data) ? $query_data["site"] : $gsa_defaults["site"];
         $client = $this->arrayContains("client", $query_data) ? $query_data["client"] : $gsa_defaults["client"];
         $num =    $this->arrayContains("num", $query_data) ? $query_data["num"] : 10;
         $name =   $this->arrayContains("name", $query_data) ? $query_data["name"] : $gsa_defaults["name"];
         $filter = $this->arrayContains("filter", $query_data) ? $query_data["filter"] : "primary";
+        $url = null;
+
+        if ($this->arrayContains("url", $query_data)) {
+            $url = $query_data["url"];
+        }
+
         $search_query = $query_data["q"];
 
         $client_query_data = [
             'query' => [
                 'client' => $client,
-                'in_url' => $url,
                 'num' => $num,
                 'q' => $search_query,
                 'site' => $site,
                 'start' => $start,
             ]
         ];
+
+        if ($url) {
+            $client_query_data["query"]["in_url"] = $url;
+        }
 
         $client_response = $http_client->request("GET", $base_url,
            $client_query_data);

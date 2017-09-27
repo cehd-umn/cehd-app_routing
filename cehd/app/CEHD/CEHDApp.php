@@ -24,11 +24,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
     protected $_searchApplianceSites = [
                 "primary" => [
                     "client" => "tc_education",
-                    "name" => "College of Education + Human Development",
+                    "name" => "For Students",
                     "site" => "tc_education_students",
-                    "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
+                    "client" => "tc_education",
+                    "name" => "College of Education + Human Development",
+                    "site" => "tc_education",
+                ],
+                "tertiary" => [
                     "client" => "searchumn",
                     "name" => "University of Minnesota",
                     "site" => "default_collection",
