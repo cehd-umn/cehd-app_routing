@@ -455,6 +455,8 @@ class BaseApp extends \CEHD\App\BaseClass
         $client_response = $http_client->request("GET", $base_url,
            $client_query_data);
 
+        $search_data = json_decode($client_response->getBody(), true);
+
         $template_data = [
             "client" => $client,
             "num" => $num,
@@ -463,7 +465,8 @@ class BaseApp extends \CEHD\App\BaseClass
             "in_url" => $url,
             "filter" => $filter,
             "query" => $search_query,
-            "results" => json_decode($client_response->getBody()),
+            "results" => $search_data["results"],
+            "key_match" => $search_data["keyMatch"],
         ];
 
         $template = 'cehd/search/index.html';

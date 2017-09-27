@@ -292,6 +292,6 @@ class ServicesApp extends BaseClass
         $client_response = $http_client->request("GET", $base_url,
             $client_query_data);
         $resultSet = new Search($client_response->getBody());
-        return $response->withJson($resultSet->results);
+        return $response->withJson($resultSet);
     }
 }
