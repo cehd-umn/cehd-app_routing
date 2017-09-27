@@ -31,6 +31,8 @@ $app->router->respond("GET", "/", [$app, "homePageHandler"]);
 
 $app->router->respond("GET", "/giving/gifts/", [$app, "giftsPageHandler"]);
 
+$app->router->respond("GET", "/people/[:internetId]/", [$app, "personPageHandler"]);
+
 $app->router->respond("GET", "/programs/", [$app, "programsPageHandler"]);
 
 $app->router->respond("GET", "/patterns/v1/", [$app, "patternsHomePageHandler"]);
