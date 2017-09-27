@@ -1,0 +1,53 @@
+{% extends "edpsych/layout/section.html" %}
+{% set page_title = "Contact Us" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>{{ page_title }}</h2>
+        <form name="contact-form" id="contact-form" method="post" action="https://apps.cehd.umn.edu/forms/afp.aspx?formid=349">
+            <fieldset class="dept-options">
+                <legend>Which area of the department would you like to contact?</legend>
+                <ul>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="cspp" value="cspp@umn.edu">
+                        <label for="cspp">Counseling &amp; Student Personnel Psychology</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="pfe" value="psyf-adm@umn.edu">
+                        <label for="pfe">Psychological Foundations of Education</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="qme" value="psyf-adm@umn.edu">
+                        <label for="qme">Quantitative Methods in Education</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="sp" value="spsy-adm@umn.edu">
+                        <label for="sp">School Psychology</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="se" value="sped-adm@umn.edu">
+                        <label for="se">Special Education</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="gm" value="epsy-adm@umn.edu">
+                        <label for="gm">Graduate Minor</label>
+                    </li>
+                    <li class="">
+                        <input type="radio" name="deptcontact" id="um" value="epsy-adm@umn.edu">
+                        <label for="um">Undergraduate Minor</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <label for="contactname">Name</label>
+            <input name="contactname" type="text"></p>
+            <label for="contactemail">Email</label>
+            <input name="contactemail" type="text"></p>
+            <label for="contactissue">What are you contacting us about today?</label>
+            <textarea name="contactissue" cols="" rows=""></textarea></p>
+            <input name="submit" type="submit" value="Submit" class="">
+        </form>
+    </div>
+</div>
+{% endblock %}
