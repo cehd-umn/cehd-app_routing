@@ -18,7 +18,14 @@
     </p>
 
     <div class="{{ result_set.name|lower|hyphenate }}-search-result-set active search-result-set margin-top-2">
+        {% if key_match %}
+            <div class="emphasis cool">
+                <h2 class="h5">Suggested</h2>
+                <p><a href="{{ key_match.link }}">{{ key_match.description }}</a></p>
+            </div>
+        {% endif %}
         {% if results %}
+            <h2>Results</h2>
             <dl id="search-results">
             {% for result in results %}
                 <dt><a href="{{ result.link }}">{{ result.title|raw }}</a></dt>

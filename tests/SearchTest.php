@@ -17,13 +17,15 @@ class SearchTest extends TestCase
     public function testCreate()
     {
         $count = count($this->search->results);
-        $expected_title = "<b>Brain</b> imaging | AHC Research Services - University of <b>...</b>";
-        $expected_description = "<b>...</b> You are here. Home ; <b>Brain</b> imaging. ▾ Section sub-menu ▾. <b>Brain</b> imaging.<br> Category: Facilities and equipment. University Imaging Centers. <b>...</b>";
-        $expected_link = "https://www.researchservices.umn.edu/auto-created-vocabulary/brain-imaging";
+        $expected_title = "Teaching License Process | CEHD | UMN";
+        $expected_description = "<b>...</b> Teacher <b>licensure</b> process. Getting a Minnesota teaching license has<br> many steps, but our <b>licensure</b> team is here to help. <b>...</b>";
+        $expected_link = "http://www.cehd.umn.edu/teaching/license/";
+        $expected_suggestion_link = "http://www.cehd.umn.edu/teaching/additional/";
 
         $this->assertEquals(10, $count);
         $this->assertEquals($expected_title, $this->search->results[0]->title);
         $this->assertEquals($expected_description, $this->search->results[0]->description);
         $this->assertEquals($expected_link, $this->search->results[0]->link);
+        $this->assertEquals($expected_suggestion_link, $this->search->keyMatch->link);
     }
 }
