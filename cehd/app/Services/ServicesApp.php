@@ -226,6 +226,11 @@ class ServicesApp extends BaseClass
         return $response->withJson([]);
     }
 
+    public function isRequired(array $param)
+    {
+        return $param["required"];
+    }
+
     private function _validateRequestHasRequiredParams($required, $received)
     {
         $missing_params = array_diff(array_keys($required), $received);
@@ -250,32 +255,40 @@ class ServicesApp extends BaseClass
         $valid_query_params = [
             "client" => [
                 "description" => "client is the short name of a GSA organization. E.g. tc_education",
+                "required" => true,
                 "type" => "string"
             ],
             "in_url" => [
                 "description" => "The specific url to search. E.g., www.cehd.umn.edu",
+                "required" => false,
                 "type" => "string"
             ],
             "num" => [
                 "description" => "The number of results to return",
+                "required" => true,
                 "type" => "integer"
             ],
             "q" => [
                 "description" => "A URI encoded search string",
+                "required" => true,
                 "type" => "string"
             ],
             "site" => [
                 "description" => "The GSA collection name. E.g., tc_education_students",
+                "required" => true,
                 "type" => "string"
             ],
             "start" => [
                 "description" => "Index of where to start in the results.",
+                "required" => true,
                 "type" => "integer"
             ],
         ];
 
+        $required_params = array_filter($valid_query_params, [$this, "isRequired"]);
+
         try  {
-            $this->_validateRequestHasRequiredParams($valid_query_params, array_keys($query_data));
+            $this->_validateRequestHasRequiredParams($required_params, array_keys($query_data));
         } catch (MissingParameterException $e) {
             $newResponse = $response->withStatus(400);
             $newResponse->getBody()->write($e->getMessage());
@@ -286,7 +299,9 @@ class ServicesApp extends BaseClass
 
         // strips out any unnecessary query params
         foreach (array_keys($valid_query_params) as $name) {
-            $client_query_data["query"][$name] = $query_data[$name];
+            if ($this->arrayContains($name, $query_data)) {
+                $client_query_data["query"][$name] = $query_data[$name];
+            }
         }
 
         $client_response = $http_client->request("GET", $base_url,

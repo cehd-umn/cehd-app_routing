@@ -26,7 +26,6 @@ class CEHDApp extends \CEHD\App\App\BaseApp
                     "client" => "tc_education",
                     "name" => "College of Education + Human Development",
                     "site" => "tc_education_students",
-                    "url" => "www.cehd.umn.edu",
                 ],
                 "secondary" => [
                     "client" => "searchumn",
