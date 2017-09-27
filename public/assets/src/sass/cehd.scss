@@ -410,3 +410,11 @@ li {
         }
     }
 }
+
+.h2 {
+    &.search-result-filters {
+        .search-result-set-link {
+            font-size: 16px;
+        }
+    }
+}
