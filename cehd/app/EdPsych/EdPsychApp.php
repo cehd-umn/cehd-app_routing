@@ -75,33 +75,6 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
         $response->sendJSONResponse(json_encode($results));
     }
 
-    public function peopleEndpointHandler($request, $response, $service, $app)
-    {
-        $base_url =  "https://apps.cehd.umn.edu/people/admin/XMLFeed.aspx";
-        $query_data = $request->params();
-        $query = [];
-
-        // Strip out extraneous query params
-        if (array_key_exists("en", $query_data))
-        {
-            $query["en"] = $query_data["en"];
-        };
-
-        if (array_key_exists("tg", $query_data))
-        {
-            $query["tg"] = $query_data["tg"];
-        };
-
-        if (array_key_exists("en", $query_data) || array_key_exists("tg", $query_data))
-        {
-            $http_client = $this->bootstrapHTTPClient([]);
-            $client_query_data = ["query" => $query];
-            $client_response = $http_client->request("GET", $base_url, $client_query_data);
-            $people_obj = new \CEHD\App\People\People($client_response->getBody());
-            $response->sendJSONResponse(json_encode($people_obj->people));
-        }
-    }
-
     // @todo this method should go in a BaseApp class
     public function personEndpointHandler($request, $response, $service, $app)
     {

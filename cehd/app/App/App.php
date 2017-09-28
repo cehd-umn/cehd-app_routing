@@ -15,10 +15,12 @@ namespace CEHD\App\App;
 
 require_once __DIR__ . '/../../../cehd/app/Base.php';
 require_once __DIR__ . '/../../../cehd/app/Response/BaseResponse.php';
+require_once __DIR__ . '/../../../cehd/app/Exception/Exception.php';
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use Klein;
 use UMN\CEHD\Dict;
+use CEHD\App\Exception\HttpException;
 
 /**
  * BaseApp class
@@ -36,6 +38,7 @@ class BaseApp extends \CEHD\App\BaseClass
      * Class properties
      */
 
+    protected $_status_code;
     /**
      * Array of file paths
      *
@@ -254,6 +257,8 @@ class BaseApp extends \CEHD\App\BaseClass
                 $response->redirect($redirect_route, 301)->send();
             }
         }
+
+        $this->router->onError([$this, "renderErrorPage"]);
     }
 
     /**
@@ -363,6 +368,25 @@ class BaseApp extends \CEHD\App\BaseClass
     }
 
     /**
+     * Evaluates whether or or not a route should go live or return a 404;
+     * Routes will always be live if not in production. When in production it
+     * will only go live if the route info has publish: true;
+     *
+     * @param mixed - route info array from the routes.yml file, null if
+     *        $this->_routes->get doesn't find a match
+     * @return boolean
+     */
+    protected function _routeIsLive($route_info)
+    {
+        return $route_info && ($route_info["publish"] || !$this->config["is_prod"]);
+    }
+
+    protected function _renderTemplate($template_path, $template_data)
+    {
+        return $this->template->render($template_path, $template_data);
+    }
+
+    /**
      * Callback method for loading templates based on routes. If the request
      * URI matches a key in the routes property, the corresponding template
      * is rendered. Klein automatically populates the params for all callbacks.
@@ -383,23 +407,11 @@ class BaseApp extends \CEHD\App\BaseClass
         );
     }
 
-    /**
-     * Evaluates whether or or not a route should go live or return a 404;
-     * Routes will always be live if not in production. When in production it
-     * will only go live if the route info has publish: true;
-     *
-     * @param mixed - route info array from the routes.yml file, null if
-     *        $this->_routes->get doesn't find a match
-     * @return boolean
-     */
-    protected function _routeIsLive($route_info)
+    public function renderErrorPage($router, $message, $error_type=null)
     {
-        return $route_info && ($route_info["publish"] || !$this->config["is_prod"]);
-    }
-
-    protected function _renderTemplate($template_path, $template_data)
-    {
-        return $this->template->render($template_path, $template_data);
+        $html = $this->_renderTemplate('error/error.html', ["message" => "Sometimes third-party services go down briefly. If this doesn't resolve after a little while, <a href=\"/report-a-problem\">please let the web team know</a>."]);
+        $router->response()->code(502);
+        $router->response()->body($html);
     }
 
     /**
@@ -460,9 +472,8 @@ class BaseApp extends \CEHD\App\BaseClass
             $client_query_data["query"]["in_url"] = $url;
         }
 
-        $client_response = $http_client->request("GET", $base_url,
-           $client_query_data);
-
+        $client_response = $http_client->request("GET", $base_url, $client_query_data);
+        
         $search_data = json_decode($client_response->getBody(), true);
 
         $template_data = [
