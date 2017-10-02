@@ -43,25 +43,3 @@ $app->router->with('/edpsych/people', function () use ($app) {
         [$app, 'personPageHandler']
     );
 });
-
-// Services endpoints
-$app->router->with('/edpsych/services', function () use ($app) {
-    $app->router->respond('GET', '/search/', [$app, 'searchEndpointHandler']);
-
-    $app->router->with('/people-tool', function () use ($app) {
-        $app->router->respond('GET', '/', [$app, 'peopleEndpointHandler']);
-        $app->router->respond('GET', '/person/', [$app, 'personEndpointHandler']);
-    });
-
-    $app->router->with('/news', function () use ($app) {
-        $app->router->respond('GET', '/feed/', [$app, 'newsFeedEndpointHandler']);
-    });
-
-    $app->router->with('/events', function () use ($app) {
-        $app->router->respond('GET', '/feed/', [$app, 'eventsFeedEndpointHandler']);
-    });
-
-    $app->router->with('/programs', function () use ($app) {
-        $app->router->respond('GET', '/', [$app, 'programsFeedEndpointHandler']);
-    });
-});
