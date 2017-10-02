@@ -1,30 +1,34 @@
 {% extends "olpd/layout/base.html" %}
 {% set page_title = "Welcome to our Homepage" %}
 {% block title %}
-     {{ page_title }}
+     Department of Organizational Leadership, Policy, and Development (OLPD)
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>{{ page_title }}</h1>
+        <h1>Organizational Leadership, Policy, and Development</h1>
     </div>
     <div class="container">
-        <h2>We do stuff and things, come see</h2>
+        <h2>At the intersection of power, culture, and institutions</h2>
     </div>
     <div class="container">
-        <p>The Department of Organizational Leadership, Policy, and Development (OLPD) is an interdisciplinary unit focusing on educational and organizational change in local, national, and international contexts. OLPD is home to 47 faculty and staff serving students from across the world in undergraduate programs, professional development learning opportunities, and graduate programs.
-        </p>
-        <p>Our faculty conduct cutting-edge research on topics such as strategies for human resource development, intercultural communication, policies and practices for higher education effectiveness, research methods and ethics, and effective strategies for leading school and organizational change. We collaborate with educators, policy makers, and business leaders in preparing students to thrive in an increasingly complex and interconnected world.
-        </p>
+        <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. OLPD studies how those systems and policies are shaped by culture and power. We prepare leaders and researchers to transform our education and organizations for the better.</p>
+
+        <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
     </div>
 
     <div class="container">
         <div class="half">
-            <h2>If you have a problem, call the ghost busters</h2>
-            <p>OLPD is committed to the policy that all persons shall have equal access to its programs, facilities and employment without regard to race, color, creed, religion, national origin, gender identity, gender expression, age, marital status, disability, public assistance status, veteran status or sexual orientation. If a student has a grievance issue with an OLPD faculty or staff member based on any of the above, the department recommends the following options [PDF].
-            </p>
+            <h2>Undergraduate programs</h2>
+
+            <p><a href="{{ config.asset_base }}/bme/">Business and Marketing Education</a></p>
+            <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
+
+            <p><a href="{{ config.asset_base }}/hrd/">Human Resource Development</a></p>
+            <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
+
             <p>Read <a href="{{ config.asset_base }}/documents/AdviserChange.pdf">this document</a> for interesting things.
             </p>
         </div>

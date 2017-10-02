@@ -95,3 +95,8 @@
   publish: false
   template_data:
     - section: undergraduate-programs
+/olpd-new/undergraduate-programs/resources/:
+  template: olpd/undergraduate-programs/resources.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs
