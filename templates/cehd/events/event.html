@@ -29,7 +29,13 @@
                 </small>
             </h1>
             <h2 class="h3 no-margin-top">
-                {{ event.location }}
+              {% if event.locationURL %}
+                <a href="{{ event.locationURL }}">
+              {% endif %}
+                  {{ event.location }}
+              {% if event.locationURL %}
+                </a>
+              {% endif %}
             </h2>
 
             <div class="svg-social-media-icon">

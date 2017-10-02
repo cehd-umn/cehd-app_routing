@@ -1,34 +1,44 @@
 {% extends "olpd/layout/base.html" %}
 {% set page_title = "About the Department" %}
 {% block title %}
-     {{ page_title }}
+     About Us
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>{{ page_title }}</h1>
-    </div>
-    <div class="container">
-        <h2>Mission Statement</h2>
-        <p>The Department of Organizational Leadership, Policy, and Development is a leader in advancing knowledge about educational and organizational change in local, national, and international contexts. Our research, teaching, and outreach reflect a commitment to interdisciplinary and intercultural engagement with educators, scholars, and policy makers seeking to enhance leadership, policy, and development around the globe.
-        </p>
+        <h1>About the department</h1>
     </div>
 
     <div class="container">
         <div class="half">
-            <h2>If you have a problem, call the ghost busters</h2>
-            <p>OLPD is committed to the policy that all persons shall have equal access to its programs, facilities and employment without regard to race, color, creed, religion, national origin, gender identity, gender expression, age, marital status, disability, public assistance status, veteran status or sexual orientation. If a student has a grievance issue with an OLPD faculty or staff member based on any of the above, the department recommends the following options [PDF].
-            </p>
-            <p>Read <a href="{{ config.asset_base }}/documents/AdviserChange.pdf">this document</a> for interesting things.
+            <h2>Mission statement</h2>
+            <p>The Department of Organizational Leadership, Policy, and Development is a leader in advancing knowledge about educational and organizational change in local, national, and international contexts. Our research, teaching, and outreach reflect a commitment to interdisciplinary and intercultural engagement with educators, scholars, and policy makers seeking to enhance leadership, policy, and development around the globe.
             </p>
         </div>
         <div class="half">
-            <h2>when crazy stuff goes down</h2>
-            <p>U of MN Safety and Security Website. A helpful resource for signing up to TXT-U, safety escort service, Gopher Chauffeur, and more.
-            </p>
+            <h2>Administration</h2>
+            <ul class="no-bullet">
+            <li>Department Chair: Heidi Barajas</li>
+            <li>Associate Chair: Carol Carrier</li>
+            <li>Director of Graduate Studies: Melissa Anderson</li>
+            <li>Coordinator of Graduate Studies: Jeremy Hernandez</li>
+            <li>Director of Undergraduate Studies: Alexandre Ardichvili</li>
+            <li>Coordinator of Undergraduate Studies: Orkideh Mohajeri</li>
+            </ul>
         </div>
+      </div>
+
+      <div class="container">
+        <h2>Diversity Statement</h2>
+          <p>We affirm the contributions of all people in our community. Diversity and equity are at the core of our mission in the College of Education and Human Development.</p>
+          <p>We explicitly reject bias, discrimination, and exclusion on the basis of race, color, creed, religion, national origin, gender, age, marital status, disability, public assistance status, veteran status, sexual orientation, gender identity, or gender expression.</p>
+          <p>We all are responsible for recognizing, confronting, and addressing bias and discrimination and diligently working for positive change in support of equity and diversity.</p>
+          <p>- Statement created and approved by CEHD Directors of Graduate Studies, Spring 2017; adopted by CEHD, Summer 2017.</p>
+          <p><a href="/diversity/">More information on diversity.</a>
+
 </div>
+
 </div><!-- close row -->
 {% endblock %}
