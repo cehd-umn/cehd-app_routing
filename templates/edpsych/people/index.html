@@ -36,6 +36,7 @@
     (function() {
         var section_data = {{ section_data|json_encode|raw }};
         var requests = [];
+        var app = new App();
 
         function get_params(tg) {
             return params = {
@@ -61,7 +62,7 @@
         $.each(section_data, function(key, value) {
             var query_value = this.query.value.toString();
             var params = get_params(query_value);
-            var client = new HTTPClient();
+            var client = new app.httpClient();
             var request = client.get(params);
             var obj = {
                 client: client,
@@ -83,7 +84,7 @@
 
                 results.section = section;
 
-                var renderer = new Renderer();
+                var renderer = new app.renderer();
                 var template_data = {
                         people: results,
                         section: section,

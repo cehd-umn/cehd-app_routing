@@ -3,9 +3,9 @@
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | University of Minnesota{% endblock %}
 {% block bottom_js %}
-    <script src="{{ config.js_base }}/edpsych.min.js"></script>
     <script src="/assets/dist/js/common.min.js{{ js_cachebuster }}"></script>
     <script src="/assets/dist/js/app.min.js{{ js_cachebuster }}"></script>
+    <script src="{{ config.js_base }}/edpsych.min.js"></script>
     <script>
         (function() {
             "use strict";

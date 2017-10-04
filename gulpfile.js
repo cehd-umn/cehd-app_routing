@@ -6,6 +6,8 @@ const runSequence = require("run-sequence");
 const sass = require("gulp-sass");
 const source = require("vinyl-source-stream");
 const webpack = require("webpack-stream");
+const uglify = require("gulp-uglify");
+const gutil = require("gulp-util");
 
 // CEHD
 gulp.task("default", function() {
@@ -86,11 +88,6 @@ gulp.task("edpsych-javascript", function () {
   var b = browserify({
     entries: [
         "./public/edpsych/assets/src/js/edpsych.js",
-        "./public/edpsych/assets/src/js/http_client.js",
-        "./public/edpsych/assets/src/js/renderer.js",
-        "./public/edpsych/assets/src/js/helpers.js",
-        "./public/edpsych/assets/src/js/search_client.js",
-        "./public/assets/src/js/ga.js",
     ],
     debug: true
   });
@@ -98,6 +95,8 @@ gulp.task("edpsych-javascript", function () {
   return b.bundle()
     .pipe(source("./public/edpsych/assets/src/js/edpsych.js"))
     .pipe(buffer())
+    .pipe(uglify())
+    .on("error", gutil.log)
     .pipe(rename("js/edpsych.min.js"))
     .pipe(gulp.dest("./public/edpsych/assets/dist"));
 });
@@ -119,6 +118,6 @@ gulp.task("watch-edpsych", function() {
 
     gulp.watch(
         "./public/edpsych/assets/src/js/**/*.js",
-        ["javascript"]
+        ["edpsych-javascript"]
     );
 });

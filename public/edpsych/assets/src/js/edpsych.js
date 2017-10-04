@@ -1,6 +1,6 @@
 "use strict";
 
-var $ = require("jquery");
+var $ = window.$;
 var cookies = require("js-cookie");
 
 var $open_button = $("#menuicon-wrapper");
@@ -34,21 +34,19 @@ $links.each(function(index, link) {
     }
 });
 
-$tracking_elements.on("click", function(event) {
-    event.preventDefault();
-    var $element = $(this);
-    var command = $element.data("ga-command");
-    var hit_type = $element.data("ga-hit-type");
-    var category = $element.data("ga-category");
-    var action = $element.data("ga-action");
-    var label = $element.data("ga-label");
-    var href = window.Helpers.getHref($element);
-
-    window.ga(command, hit_type, category, action, label, {
-        hitCallback: function () {
-            location.href = href;
-        }
-    });
-});
-
-window.$ = $;
+// $tracking_elements.on("click", function(event) {
+//     event.preventDefault();
+//     var $element = $(this);
+//     var command = $element.data("ga-command");
+//     var hit_type = $element.data("ga-hit-type");
+//     var category = $element.data("ga-category");
+//     var action = $element.data("ga-action");
+//     var label = $element.data("ga-label");
+//     var href = window.Helpers.getHref($element);
+// 
+//     window.ga(command, hit_type, category, action, label, {
+//         hitCallback: function () {
+//             location.href = href;
+//         }
+//     });
+// });
