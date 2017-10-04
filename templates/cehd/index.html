@@ -4,7 +4,8 @@
 {% block extra_css %}
 <style>
     html, body, main {
-        height: 100vh;
+        /* height: 100vh; */
+        height: calc(100vh + 338px); /* hacky way to push the footer down, remove after removing stats below video */
     }
 
     .header-container {
@@ -70,6 +71,70 @@
         padding: 1em;
         position: absolute;
         width: 100vw;
+    }
+
+    .stats .container {
+        color: #555;
+        font-family: Raleway, sans-serif;
+    }
+
+    .circular {
+        background-color: #ffec99;
+        border-radius: 50%;
+        height: 300px;
+        margin: 1em auto;
+        overflow: hidden;
+        width: 300px;
+    }
+
+    .circular.middle {
+        color: #e2e2e2;
+        background-color: #5b0013;
+    }
+
+    .stat-heading {
+        display: block;
+        font-size: 110px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 45px;
+        text-align: center;
+    }
+
+    .stat-subheading {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        top: 47px;
+    }
+
+    .stat-text {
+        display: block;
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 1.2;
+        margin: 0 auto;
+        max-width: 80%;
+        text-align: center;
+        top: 47px;
+    }
+
+    .svg-wrapper {
+        position: absolute;
+        top: 144px;
+    }
+
+    #stat-1-svg-wrapper {
+        left: -250px;
+    }
+
+    #stat-2-svg-wrapper {
+        left: -150px;
+    }
+
+    #stat-3-svg-wrapper {
+        left: -50px;
     }
 
     @media all and (max-width: 1024px) {
@@ -246,11 +311,99 @@
         </div>
     </div><!-- close container -->
 </div><!-- close row -->
+<div class="row stats margin-bottom-24">
+    <div class="container">
+        <div class="third">
+            <div class="circular">
+                <div id="stat-1-heading" class="stat-heading">39%</div>
+                <div id="stat-1-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-1-sub-heading" class="stat-subheading to-upper">Freshmen</div>
+                <div id="stat-1-text" class="stat-text">who are first-generation<br>college students</div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="circular middle">
+                <div id="stat-2-heading" class="stat-heading">#1</div>
+                <div id="stat-2-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-2-sub-heading" class="stat-subheading to-upper">Public school</div>
+                <div id="stat-2-text" class="stat-text">of education in the world</div>
+            </div>
+            <div id="stat-2-svg-container" class="stat-svg-container"></div>
+        </div>
+        <div class="third">
+            <div class="circular">
+                <div id="stat-3-heading" class="stat-heading">20+</div>
+                <div id="stat-3-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-3-sub-heading" class="stat-subheading to-upper">Research</div>
+                <div id="stat-3-text" class="stat-text">centers ranging from<br>children's mental health<br>to women in sports</div>
+            </div>
+            <div id="stat-3-svg-container" class="stat-svg-container"></div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
 <script src="/assets/dist/js/lib/videojs-background.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
 <script>
+    var l1 = SVG("stat-1-svg-wrapper").size(600, 49);
+    var l2 = SVG("stat-2-svg-wrapper").size(600, 49);
+    var l3 = SVG("stat-3-svg-wrapper").size(600, 49);
+    var end_plot = [
+        [
+            600,
+            46
+        ],
+        [
+            325,
+            46
+        ],
+        [
+            300,
+            15
+        ],
+        [
+            275,
+            46
+        ],
+        [
+            0,
+            46
+        ],
+    ];
+    var points = "600,46 325,46 300,46 275,46 0,46";
+    var stroke_params = {
+        color: "#555",
+        width: 5
+    };
+    var fill = "none"
+    var line1 = l1.polyline(points).stroke(stroke_params).fill(fill);
+    var line2 = l2.polyline(points).stroke(stroke_params).fill(fill);
+    var line3 = l3.polyline(points).stroke(stroke_params).fill(fill);
+    var $line1 = $("#stat-1-svg-wrapper");
+    var animation_fired = false;
+
+    // https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2
+    $.fn.isInViewport = function() {
+        var $element = $(this);
+        var $window = $(window);
+        var elementTop = $element.offset().top;
+        var elementBottom = elementTop + $element.outerHeight();
+        var viewportTop = $window.scrollTop();
+        var viewportBottom = viewportTop + $window.height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).on("resize scroll", function() {
+        if ($line1.isInViewport() && animation_fired === false) {
+            line1.animate(3000).plot(end_plot);
+            line2.animate(3000).plot(end_plot);
+            line3.animate(3000).plot(end_plot);
+            animation_fired = true;
+        }
+    });
+
     if ($("#bg-video").is(":visible")) {
 
         var videojs_options = {
@@ -292,5 +445,6 @@
             });
         });
     }
+
 </script>
 {% endblock %}
