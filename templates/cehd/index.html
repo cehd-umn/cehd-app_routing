@@ -5,8 +5,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
 <style>
     html, body, main {
-        /* height: 100vh; */
-        height: calc(100vh + 338px); /* hacky way to push the footer down, remove after removing stats below video */
+        height: 100vh;
     }
 
     .header-container {
@@ -81,32 +80,33 @@
 
     .circular {
         border-radius: 50%;
-        height: 300px;
+        height: 200px;
         margin: 1em auto;
         overflow: hidden;
-        width: 300px;
+        width: 200px;
     }
 
-    .circular:hover {
+    .circular:hover,
+    .circular:focus {
             background-color: #ffec99;
     }
 
     .stat-heading {
         display: block;
         font-family: "Montserrat Alternates";
-        font-size: 110px;
+        font-size: 40px;
         font-weight: bold;
         line-height: 1;
-        margin-top: 45px;
+        margin-top: 15px;
         text-align: center;
     }
 
     .stat-subheading {
         display: block;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
-        top: 47px;
+        top: -10px;
     }
 
     .stat-text {
@@ -117,12 +117,12 @@
         margin: 0 auto;
         max-width: 80%;
         text-align: center;
-        top: 47px;
+        top: 0;
     }
 
     .svg-wrapper {
-        position: absolute;
-        top: 144px;
+        position: relative;
+        top: -11px;
     }
 
     #stat-1-svg-wrapper {
@@ -130,16 +130,52 @@
     }
 
     #stat-2-svg-wrapper {
-        left: -150px;
+        left: -200px;
     }
 
     #stat-3-svg-wrapper {
-        left: -50px;
+        left: -150px;
+    }
+
+    @media all and (min-width: 768px) {
+        .circular {
+            border-radius: 50%;
+            height: 300px;
+            margin: 1em auto;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .stat-heading {
+            font-size: 110px;
+            margin-top: 45px;
+        }
+
+        .svg-wrapper {
+            position: absolute;
+            top: 144px;
+        }
+
+        .stat-subheading {
+            top: 47px;
+        }
+
+        .stat-text {
+            top: 47px;
+        }
+
+        #stat-2-svg-wrapper {
+            left: -150px;
+        }
+
+        #stat-3-svg-wrapper {
+            left: -50px;
+        }
     }
 
     @media all and (max-width: 1024px) {
         html, body, main {
-            height: 375px;
+            height: 395px;
         }
 
         .videojs-background-wrap, #bg-video {
@@ -270,18 +306,18 @@
         top: 169px;
     }
 
-        .always-third {
-            clear: none;
-            float: left;
-            display: block;
-            margin-right: 4.72458%;
-            min-height: 105px;
-            width: 30.18362%;
-        }
+    .always-third {
+        clear: none;
+        float: left;
+        display: block;
+        margin-right: 4.72458%;
+        min-height: 105px;
+        width: 30.18362%;
+    }
 
-        .always-third.last {
-            margin-right: 0;
-        }
+    .always-third.last {
+        margin-right: 0;
+    }
 </style>
 {% endblock %}
 {% block main_content %}
@@ -311,7 +347,9 @@
         </div>
     </div><!-- close container -->
 </div><!-- close row -->
-<div class="row stats margin-bottom-24">
+{% endblock %}
+{% block main_aside %}
+<aside class="row stats margin-bottom-24">
     <div class="container">
         <div class="third">
             <div class="circular">
@@ -340,7 +378,7 @@
             <div id="stat-3-svg-container" class="stat-svg-container"></div>
         </div>
     </div>
-</div>
+</aside>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
