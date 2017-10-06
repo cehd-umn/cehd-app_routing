@@ -50,6 +50,11 @@
   publish: false
   template_data:
     - section: about
+/olpd-new/giving/:
+  template: olpd/giving.html
+  publish: false
+  template_data:
+    - section: giving
 /olpd-new/test/:
   template: olpd/test.html
   publish: false
