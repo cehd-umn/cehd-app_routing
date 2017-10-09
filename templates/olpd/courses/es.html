@@ -1,0 +1,27 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Evaluation studies course offerings" %}
+{% block title %}
+  ES Courses
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Evaluation studies course offerings</h1>
+    </div>
+    <div class="container">
+        <h2>Course offerings</h2>
+
+        <p>What code do we use for course tool?</p>
+
+
+        <script type="text/javascript">
+      getRssFeed("CourseFeed","http://apps.cehd.umn.edu/Programs/RSSFeed.aspx?t=cur,next,tan&p=OLPD-ES&d=both&a=both&h=0","/attributes/XSLT/Courses.xslt","I am sorry, the course feed is temporarily unavailable. Please try again at another time or visit <a href='http://onestop.umn.edu/'>OneStop</a>.")
+      </script>
+
+    </div>
+
+</div>
+</div><!-- close row -->
+{% endblock %}

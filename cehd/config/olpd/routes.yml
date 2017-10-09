@@ -55,6 +55,11 @@
   publish: false
   template_data:
     - section: giving
+/olpd-new/handbooks-forms/:
+  template: olpd/handbooks-forms.html
+  publish: false
+  template_data:
+    - section: handbooks-forms
 /olpd-new/test/:
   template: olpd/test.html
   publish: false
@@ -65,6 +70,11 @@
   publish: false
   template_data:
     - section: courses
+/olpd-new/courses/es/:
+  template: olpd/courses/es.html
+  publish: false
+  template_data:
+    - section: es courses
 /olpd-new/graduate-programs/:
   template: olpd/graduate-programs/index.html
   publish: false

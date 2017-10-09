@@ -1,0 +1,216 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/info-sessions-feed.html" as info_session %}
+{% set page_title = "Undergraduate Transfer Admissions" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Transfer admissions</h1>
+<div class="row">
+  <div class="half">
+    <h2>Application Deadlines</h2>
+      <p><strong>Spring semester deadline</strong><br />Priority: October 1 / Final: December 1</p>
+      <p><strong>Fall semester deadline</strong><br />Priority: February 1 / Final: June 1</p>
+      <p><span style="color:red">Note: Many majors fill with applications complete by the priority deadline.</span></p>
+      <p>
+        <span style="color:red">Majors which have filled for Spring 2018 semester and are no longer accepting applications:
+      </span></p>
+      <ul>  <span style="color:red">
+        <li>
+          Business and Marketing Education
+        </li>
+        <li>
+          Elementary Education Foundations
+        </li>
+        <li>
+          Kinesiology
+        </li>
+      </span></ul>
+      <p>Applications must be submitted by these deadlines to be given full consideration for admission. CEHD is committed to providing a comfortable, inclusive, and respectful environment for all members of our communities. If you need accommodations, in the admission process, please contact CEHD Student Services, <a href="mailto:cehdtrfr@umn.edu">cehdtrfr@umn.edu</a> or 612-625-3339.</p>
+    </div>
+    <div class="half">
+      <h2>Get your questions answered in person</h2>
+      <h3>Drop-in advising hours</h3>
+<p>
+  Check in at the front desk in 360 Education Sciences Building.
+</p>
+        <!-- Feed displays in following div -->
+        <div id="info-sessions-container"></div>
+        <p><a href="/undergraduate/info-sessions/">Sign up for an information session </a>to learn more about our majors, understand the application process, and have your questions answered.</p>
+    </div>
+    </div>
+    <div class= "half feature">
+      <h2>Application instructions</h2>
+
+    </div>
+
+    <div class="row">
+      <div class="half">
+      <h2>Students applying to transfer from another institution</h2>
+<h3>Application instructions</h3>
+<ol>
+  <li>
+    <p>Refer to the minimum requirements and pre-requisite courses for the major you are applying to:</p>
+  </li>
+  <ul>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/BME-requirements.pdf">Business and Marketing Education</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/EC-requirements.pdf">Early Childhood</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/ELED-requirements.pdf">Elementary Education Foundations</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/FSOS-requirements.pdf">Family Social Science</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/HRD-requirements.pdf">Human Resource Development</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/KIN-requirements.pdf">Kinesiology</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/REC-requirements.pdf">Recreation Administration</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/SPED-requirements.pdf">Special Education</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/SMGT-requirements.pdf">Sport Management</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/YOST-requirements.pdf">Youth Studies</a></p>
+    </li>
+  </ul>
+  <li>
+    <p>Complete a <a href="http://admissions.tc.umn.edu/apply/index.html">University of Minnesota transfer application</a> on the Office of Admissions website. </p>
+  </li>
+  <li>
+    <p>Note: You will need to provide both high school and college transcripts.</p>
+  </li>
+  <li>
+    <p>Complete the <a href="/assets/docs/undergrad/transfer/CEHD-App-Supplement-External.pdf">transfer admission application supplement</a> [PDF] and personal statement. The personal statement is a 500-700 word statement (2 pages) addressing:</p>
+  </li>
+  <ul>
+    <li>
+      <p>Why you want to pursue this major? (Provide as much detail as possible.) </p>
+    </li>
+    <li>
+      <p>How will this major help you to advance your life/career goals?</p>
+    </li>
+    <li>
+      <p>CEHD values diversity of experiences, perspectives, backgrounds, and talents. Enrolling a diverse community of scholars interested in learning with and from each other fosters discussion and discovery inside and outside of the classroom. How might you contribute to, or benefit from, our community of scholars?<br>
+        See <a href="/assets/docs/undergrad/transfer/ApplicationEssayTips.pdf">tips for writing your personal statement</a>.</p>
+    </li>
+  </ul>
+  <li>
+    <p>Submit all materials to:<br>
+      Office of Admissions<br>
+      240 Williamson Hall<br>
+      231 Pillsbury Drive SE<br>
+      Minneapolis, MN 55455<br>
+      Fax: 612-626-1693 or admissions@umn.edu.</p>
+  </li>
+</ol>
+    </div>
+
+    <div class="half">
+      <h2>Current U of M students and students from other U of M campuses</h2>
+<p><strong>(Students from Duluth, Crookston, Morris, and Rochester campuses, including those who are currently or have been previously enrolled)</strong></p>
+<h3>Application instructions</h3>
+<ol>
+  <li>
+    <p>Refer to the minimum requirements and pre-requisite courses for the major you are applying to:</p>
+  </li>
+  <ul>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/BME-requirements.pdf">Business and Marketing Education</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/EC-requirements.pdf">Early Childhood</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/ELED-requirements.pdf">Elementary Education Foundations</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/FSOS-requirements.pdf">Family Social Science</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/HRD-requirements.pdf">Human Resource Development</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/KIN-requirements.pdf">Kinesiology</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/REC-requirements.pdf">Recreation Administration</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/SPED-requirements.pdf">Special Education</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/SMGT-requirements.pdf">Sport Management</a></p>
+    </li>
+    <li>
+      <p><a href="/assets/docs/undergrad/transfer/courses/YOST-requirements.pdf">Youth Studies</a></p>
+    </li>
+  </ul>
+  <li>
+    <p>Complete and submit a <a href="http://goo.gl/forms/M7toqCQwGI">CEHD Application Supplement &amp; Personal Statement</a>. The personal statement is a 500-700 word statement (2 pages) addressing: </p>
+  </li>
+  <li>
+    <p>The personal statement is a 500-700 word statement (2 pages) addressing:</p>
+  </li>
+  <ul>
+    <li>
+      <p>Why you want to pursue this major? (Provide as much detail as possible.) </p>
+    </li>
+    <li>
+      <p>How will this major help you to advance your life/career goals?</p>
+    </li>
+    <li>
+      <p> CEHD values diversity of experiences, perspectives, backgrounds, and talents. Enrolling a diverse community of scholars interested in learning with and from each other fosters discussion and discovery inside and outside of the classroom. How might you contribute to, or benefit from, our community of scholars?<br>
+        See <a href="/assets/docs/undergrad/transfer/ApplicationEssayTips.pdf">tips for writing your personal statement</a>.</p>
+    </li>
+  </ul>
+  <li>
+    <p>Complete the <a href="http://onestop.umn.edu/degree_planning/changing_college_or_campus.html">Application for Undergraduate Change of College form</a>.</p>
+  </li>
+</ol>
+    </div>
+    </div>
+      </div> <!-- ./container -->
+    <div class="row emphasis cool">
+      <div class="container">
+          <div class="half feature">
+            <div class="corner-borders-top"></div>
+              <div class="container">
+
+                <h2 class="text-center">Next steps </h2>
+                <p class="text-center"><a href="/undergraduate/transfer/credits/">Transferring credits</a> | <a href="/undergraduate/transfer/requirements/">Application review factors</a></p>
+              </div>
+            <div class="corner-borders-bottom"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+      <div class="container">
+<div class="span-8 feature">
+<h3>Contact</h3>
+<p><a href="/undergraduate/transfer/contact/">Sheri Beck</a>, Prospective Transfer Student Adviser &amp; Transfer Admissions Coordinator<br />
+  CEHD Student Services <br />
+  360 Education Sciences Building<br />
+  612-625-3339<br />
+<a href="mailto:sbeck@umn.edu">sbeck@umn.edu</a></p>
+</div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {# The call to parent() above is *very* important #}
+    {{ info_session.info_sessions_feed_js("Drop-in","4","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "start-end-time.html") }}
+{% endblock %}
