@@ -53,7 +53,7 @@ abstract class Card extends BaseClass
 
     public $categories_hyphenated;
 
-    private function _validateCard($card)
+    protected function _validateCard($card)
     {
         $valid = true;
 
@@ -151,7 +151,7 @@ abstract class Card extends BaseClass
     public function addLink($link)
     {
         $l = new CardLink();
-        $l->set($link["title"], $link["href"]);
+        $l->set($link);
         array_push($this->links, $l);
     }
 
@@ -273,14 +273,20 @@ abstract class CardGroup extends BaseClass
 
 class CardLink
 {
-    public $title;
+    public $footnote_indicator;
 
     public $href;
 
-    public function set($title, $href)
+    public $title;
+
+    public function set($link_data)
     {
-        $this->title = $title;
-        $this->href = $href;
+        $this->title = $link_data["title"];
+        $this->href = $link_data["href"];
+
+        if (array_key_exists("footnote_indicator", $link_data)) {
+            $this->footnote_indicator = $link_data["footnote_indicator"];
+        }
         return $this;
     }
 }

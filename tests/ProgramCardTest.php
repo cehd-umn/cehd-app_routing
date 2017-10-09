@@ -36,7 +36,11 @@ class ProgramCardTest extends TestCase
     public function testPublishInvalidTypeException()
     {
         $cardInstance = new \CEHD\App\Card\ProgramCard\ProgramCard();
-        $card = $cardInstance->setCard("test", ["publish" => "string"]);
+        $mock_card = [
+            "publish" => "string",
+            "footnotes" => null,
+        ];
+        $card = $cardInstance->setCard("test", $mock_card);
     }
 
     /**
@@ -138,7 +142,7 @@ class ProgramCardTest extends TestCase
 
     public function testCreation()
     {
-        $this->assertEquals(65, count($this->cards));
+        $this->assertEquals(66, count($this->cards));
     }
 
     public function testCardsIsArray()
@@ -153,7 +157,7 @@ class ProgramCardTest extends TestCase
         $this->assertInstanceOf(\CEHD\App\Card\CardLink::class, $link);
 
         $expected_title = "Undergraduate Certificate";
-        $expected_href = "http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.";
+        $expected_href = "http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html";
         $this->assertEquals($expected_title, $link->title);
         $this->assertEquals($expected_href, $link->href);
     }

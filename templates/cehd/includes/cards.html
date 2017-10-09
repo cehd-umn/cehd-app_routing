@@ -36,9 +36,16 @@
                     {% if item.links %}
                     <ul class="no-bullet">
                         {% for link in item.links %}
-                        <li><a href="{{ link.href }}">{{ link.title }}</a></li>
+                          <li><a href="{{ link.href }}">{{ link.title }}
+                            {% if link.footnote_indicator %}{{ link.footnote_indicator }}{% endif %}
+                          </a></li>
                         {% endfor %}
                     </ul>
+                    {% endif %}
+                    {% if item.footnotes %}
+                        {% for footnote in item.footnotes %}
+                          <p><small>{{ footnote }}</small></p>
+                        {% endfor %}
                     {% endif %}
                 </div><!-- / card -->
                 {% endif %}

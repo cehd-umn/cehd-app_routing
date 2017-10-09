@@ -102,7 +102,9 @@ Child Psychology:
   links:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/
+      footnote_indicator: "*"
     - title: Undergraduate Minor
+      footnote_indicator: "*"
       href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/programs.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
@@ -112,6 +114,8 @@ Child Psychology:
     - Families, Youth, and Children
     - Recreation, Health, and Wellbeing
     - Disability and Aging
+  footnotes:
+    - "* offered through CLA"
 Clinical Physiology and Movement Science:
   meta: null
   publish: true

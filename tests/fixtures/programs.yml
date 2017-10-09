@@ -4,7 +4,7 @@ Adult Education:
   publish: true
   links:
     - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.
+      href: http://www.cehd.umn.edu/olpd/undergrad-programs/AdEd/certificate.html
     - title: Masters
       href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/med-ps.html
     - title: Graduate Certificate
@@ -20,7 +20,7 @@ Adult Literacy:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/olpd/grad-programs/ABE/requirements.html
+      href: http://www.cehd.umn.edu/olpd/grad-programs/ABE/default.html
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/lit-cert.html
   description: This program is designed to prepare teachers, administrators, trainers, and counselors in the political, social, economic, and theoretical aspects of adult literacy.
@@ -43,9 +43,11 @@ Applied Child and Adolescent Development:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/ICD/Programs/ACAD/default.html
-  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings.
+  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings. (Online degree)
   categories:
     - Families, Youth, and Children
+    - Community and Leadership
+    - Recreation, Health, and Wellbeing
     - Evaluation and Methods
 Applied psychology in educational and community settings (APECS):
   meta: null
@@ -64,25 +66,25 @@ Arts in Education:
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/artsined.html
     - title: Masters
       href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Art.html
-    - title: Ph.D
+    - title: Ph.D.
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Art.html
   description: Learn about the teaching strategies for building knowledge and skills in visual arts, dance, and theatre arts.
   categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
-Autism Spectrum Disorders:
+Autism Spectrum Disorder:
   meta: null
   publish: true
   links:
     - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/edpsych/Programs/SpecialEd/certificate/Autism.html
     - title: License
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/ASD.html
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism.html
-  description: Prepare to work with children and youth with autism spectrum disorders by learning methods of assessment, intervention, and treatment evaluation.
+  description: Prepare to work with children and youth with autism spectrum disorder by learning methods of assessment, intervention, and treatment evaluation.
   categories:
     - Disability and Aging
 Business and Marketing Education:
@@ -98,6 +100,12 @@ Child Psychology:
   meta: null
   publish: true
   links:
+    - title: Undergraduate Major
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/
+      footnote_index: 0
+      footnote_indicator: "*"
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/programs.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
   description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience.
@@ -106,14 +114,16 @@ Child Psychology:
     - Families, Youth, and Children
     - Recreation, Health, and Wellbeing
     - Disability and Aging
+  footnotes:
+    - "* offered through CLA"
 Clinical Physiology and Movement Science:
   meta: null
   publish: true
   links:
     - title: Graduate Minor
-      href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+      href: http://ccms.umn.edu/academic-programs/program-description
     - title: Graduate Certificate
-      href: https://sites.google.com/a/umn.edu/ccms-web/academic-programs
+      href: http://ccms.umn.edu/academic-programs/program-description
   description: null
   categories:
     - Recreation, Health, and Wellbeing
@@ -121,9 +131,9 @@ Coaching:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Minor
+    - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/kin/current/coaching.html
-    - title: Graduate Certificate
+    - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/kin/current/coaching.html
   description: If you're interested in pursuing sport management or teacher licensure, this certificate  gives you a foundation for developing your coaching skills.
   categories:
@@ -145,7 +155,9 @@ Counseling and Student Personnel Psychology:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/EdPsych/Programs/CSPP/default.html
+      href: http://www.cehd.umn.edu/edpsych/programs/cspp/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Counsel others throughout the lifespan. Work in schools, colleges, or community organizations, and help people develop personally and socially, in their academic or career pursuits.
   categories:
     - Teaching, Learning, and Schools
@@ -187,16 +199,28 @@ Dual Language and Immersion Education:
   links:
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
+    - title: License
+      href: http://www.cehd.umn.edu/ci/academics/SLE/ILP-dual-language-immersion.html
+    - title: Masters
+      href: http://www.cehd.umn.edu/ci/academics/SLE/ILP-dual-language-immersion.html
   description: Work effectively in dual language and immersion settings, in programs where the second / foreign / heritage / indigenous language is the vehicle to teach school subjects.
   categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
-Early Childhood Education:
+Early Childhood:
   meta: null
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/icd/programs/ece/undergraduate/
+      href: http://www.cehd.umn.edu/icd/programs/ECE/Undergraduate/overview.html
+  description: Prepare to enter a master’s level teaching licensure program for ages birth to 3rd grade, or prepare to work in educational settings where a teaching license is not required.
+  categories:
+    - Teaching, Learning, and Schools
+    - Families, Youth, and Children
+Early Childhood Education:
+  meta: null
+  publish: true
+  links:
     - title: License
       href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
     - title: Masters
@@ -260,7 +284,7 @@ Evaluation Studies:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/OLPD/grad-programs/ES/ma.html
-    - title: Ph.D
+    - title: Ph.D.
       href: http://www.cehd.umn.edu/OLPD/grad-programs/ES/phd.html
     - title: Graduate Minor
       href: http://www.cehd.umn.edu/OLPD/grad-programs/ES/programeval-minor.html
@@ -278,21 +302,6 @@ Family and Community Engagement:
   categories:
     - Families, Youth, and Children
     - Community and Leadership
-Parent and Family Education:
-  meta: null
-  publish: true
-  links:
-    - title: License
-      href: http://www.cehd.umn.edu/FSoS/programs/license.asp
-    - title: Masters
-      href: http://www.cehd.umn.edu/FSoS/programs/med.asp
-    - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/fsos/programs/cert.asp
-  description: Prepare to design, deliver, and evaluate educational programs in a variety of settings that support and educate parents and families.
-  categories:
-    - Teaching, Learning, and Schools
-    - Families, Youth, and Children
-    - Languages, Culture, and International
 Family Financial Studies:
   meta: null
   publish: false
@@ -320,20 +329,10 @@ Family Social Science:
       href: http://www.cehd.umn.edu/FSoS/programs/phd-fs.asp
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/FSoS/programs/minor-fs.asp
-  description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work."
+  description: Improve the lives of individuals, families, and communities. Pursue careers in social services and nonprofit organizations, or prepare for graduate work in areas such as school counseling and social work.
   categories:
     - Families, Youth, and Children
     - Languages, Culture, and International
-    - Disability and Aging
-Couple and Family Therapy (C/MFT):
-  meta: null
-  publish: true
-  links:
-    - title: Ph.D.
-      href: http://www.cehd.umn.edu/FSoS/programs/phd-cft.asp
-  description: Educate and mentor the next generation of leaders and agents of social change, working systemically with diverse families and communities locally and internationally.
-  categories:
-    - Families, Youth, and Children
     - Disability and Aging
 Family Violence Prevention:
   meta: null
@@ -341,8 +340,6 @@ Family Violence Prevention:
   links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
-    - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/FSoS/programs/minor-ps.asp
   description: Expand your knowledge of preventing family violence through this minor in the School of Social Work.
   categories:
     - Families, Youth, and Children
@@ -350,8 +347,6 @@ Higher Education:
   meta: null
   publish: true
   links:
-    - title: License
-      href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/edd.html
     - title: Masters
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/ma.html
     - title: Ph.D.
@@ -366,7 +361,7 @@ Human Resource Development:
   links:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/default.html
-    - title: Undergraduate Minor
+    - title: Undergraduate Certificate
       href: http://www.cehd.umn.edu/olpd/undergrad-programs/HRD/certificate.html
     - title: License
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/edd.html
@@ -376,7 +371,7 @@ Human Resource Development:
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/phd.html
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/certificate.html
-  description: Study the methods and practices for helping employees develop their personal and organizational skills, knowledge, and abilities.
+  description: Study the methods and practices for helping employees and organizations develop their skills, knowledge, and abilities.
   categories:
     - Community and Leadership
 K-12 Technology Integration:
@@ -400,17 +395,9 @@ Kinesiology:
       href: http://www.cehd.umn.edu/kin/current/grad/phd.html
   description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness.
   categories:
+    - Disability and Aging
     - Languages, Culture, and International
     - Recreation, Health, and Wellbeing
-Leadership:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/olpd/undergrad-programs/Leadership/default.html
-  description: Prepare for real-life leadership opportunities by examining leadership from several perspectives.
-  categories:
-    - Community and Leadership
 Leadership in Education:
   meta: null
   publish: true
@@ -461,8 +448,6 @@ Multicultural Teaching and Learning:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/certificate.
     - title: Masters
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HiEd/mctl.html
   description: Apply current theory and practice related to access, persistence, and student achievement to successfully address the changing needs of postsecondary education
@@ -498,6 +483,34 @@ Outdoor Recreation and Education:
   categories:
     - Teaching, Learning, and Schools
     - Recreation, Health, and Wellbeing
+    - Community and Leadership
+    - Families, Youth, and Children
+Parent and Family Education:
+  meta: null
+  publish: true
+  links:
+    - title: License
+      href: http://www.cehd.umn.edu/FSoS/programs/license.asp
+    - title: Masters
+      href: http://www.cehd.umn.edu/FSoS/programs/med.asp
+    - title: Graduate Certificate
+      href: http://www.cehd.umn.edu/fsos/programs/cert.asp
+  description: Prepare to design, deliver, and evaluate educational programs in a variety of settings that support and educate parents and families.
+  categories:
+    - Teaching, Learning, and Schools
+    - Families, Youth, and Children
+    - Languages, Culture, and International
+Physical Activity and Health:
+  meta: null
+  publish: true
+  links:
+    - title: Masters
+      href: http://www.cehd.umn.edu/kin/current/grad/professional/med-pah.html
+  description: Learn about the leading-edge research, trends, and practices in physical activity as they relate to health. Discover techniques for implementing programs through population-based physical activity.
+  categories:
+    - Recreation, Health, and Wellbeing
+    - Community and Leadership
+    - Families, Youth, and Children
 PK-12 Administrative Licensure:
   meta: null
   publish: true
@@ -508,6 +521,18 @@ PK-12 Administrative Licensure:
   categories:
     - Teaching, Learning, and Schools
     - Community and Leadership
+Prevention Science:
+  meta: null
+  publish: true
+  links:
+    - title: Masters
+      href: http://www.cehd.umn.edu/FSoS/programs/prevsci.asp
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/FSoS/programs/minor-ps.asp
+  description: The scientific study of systematic efforts to reduce the incidence of unhealthy or maladaptive behavior, and to promote health and adaptive behavior in populations across the life span.
+  categories:
+    - Evaluation and Methods
+    - Families, Youth, and Children
 Professional Development:
   meta: null
   publish: true
@@ -536,6 +561,8 @@ Psychological Foundations of Education:
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/foundations/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/foundations/talent/
   description: Study the psychological processes critical to education, focusing on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan.
   categories:
     - Teaching, Learning, and Schools
@@ -544,15 +571,19 @@ Quantitative Methods in Education:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/future-students/qme/
-  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics"
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/qme/
+  description: Discover solutions to issues in educational research, assessment, and program evaluation through measurement, evaluation, and statistics.
   categories:
     - Teaching, Learning, and Schools
     - Evaluation and Methods
 Racial Justice in Urban Schooling:
   meta: race, language, social class, gender, sexual orientation, LGBT
-  publish: false
-  links: null
+  publish: true
+  links:
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/ci/academics/CAT/racialjustice-minor.html
   description: Analyze educational practices that marginalize students from non-dominant social groups and learn how to support those students.
   categories:
     - Teaching, Learning, and Schools
@@ -567,16 +598,18 @@ Recreation Administration:
   description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
   categories:
     - Recreation, Health, and Wellbeing
+    - Languages, Culture, and International
+    - Families, Youth, and Children
 School Psychology:
   meta: null
   publish: true
   links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/EdPsych/Programs/minor/default.html
     - title: Masters
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/master/
     - title: Ph.D.
       href: http://www.cehd.umn.edu/edpsych/programs/schoolpsych/doctor/
+    - title: Graduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
   description: Through work in schools settings or research, help students succeed academically, socially, emotionally, and behaviorally.
   categories:
     - Teaching, Learning, and Schools
@@ -642,6 +675,8 @@ Social Work:
   links:
     - title: Masters
       href: http://www.cehd.umn.edu/ssw/Graduate/msw.html
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/ssw/Graduate/phd.html
   description: Advanced social work practice and leadership, with focus areas of Clinical Mental Health, Community Practice, Families and Children, and Health, Disability and Aging.
   categories:
     - Families, Youth, and Children
@@ -654,13 +689,19 @@ Special Education:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/EdPsych/Programs/SpecialEd/SpEd-BS.html
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     - title: License
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/masters/
     - title: Graduate Minor
       href: http://www.cehd.umn.edu/edpsych/programs/graduate-minor/
+    - title: Graduate Certificate
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
+    - title: Ph.D.
+      href: http://www.cehd.umn.edu/edpsych/programs/specialed/phd/
   description: Prepare to teach students with mild-moderate disabilities in grade K through age 21. Improve outcomes for individuals who require specialized support to achieve success throughout their lifespan.
   categories:
     - Teaching, Learning, and Schools

@@ -242,13 +242,14 @@ img {
     border-radius: 2px;
     left: auto;
     margin: 1em;
-    max-height: 500px;
-    max-width: 500px;
+    max-height: 530px;
+    max-width: 100%;
     opacity: 1;
     overflow: hidden;
     padding: .5em;
     visibility: visible;
-    width: 237px;
+    // width: 287px;
+    width: 100%;
 
     &:hover {
         background-color: $umn-light-gold;
@@ -416,5 +417,36 @@ li {
         .search-result-set-link {
             font-size: 16px;
         }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .card {
+        max-width: 312px;
+        width: 312px;
+    }
+}
+
+@media all and (min-width: 960px) {
+    .card {
+        max-width: 248px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .card {
+        max-width: 248px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .card {
+        max-width: 237px;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .card {
+        max-width: 287px;
     }
 }
