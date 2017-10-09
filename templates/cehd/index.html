@@ -90,6 +90,10 @@
         width: 200px;
     }
 
+    .circular:hover {
+        cursor: pointer;
+    }
+
     .circular:hover,
     .circular:focus {
             background-color: #ffec99;
@@ -357,7 +361,7 @@
 <aside class="row stats margin-bottom-24">
     <div class="container">
         <div class="third">
-            <div class="circular">
+            <div class="circular" data-href="/undergraduate/">
                 <div id="stat-1-heading" class="stat-heading">39%</div>
                 <div id="stat-1-svg-wrapper" class="svg-wrapper"></div>
                 <div id="stat-1-sub-heading" class="stat-subheading to-upper">Freshmen</div>
@@ -365,7 +369,7 @@
             </div>
         </div>
         <div class="third">
-            <div class="circular middle">
+            <div class="circular middle" data-href="http://news.cehd.umn.edu/u-of-m-twin-cities-education-programs-rank-third-in-the-world/">
                 <div id="stat-2-heading" class="stat-heading">#1</div>
                 <div id="stat-2-svg-wrapper" class="svg-wrapper"></div>
                 <div id="stat-2-sub-heading" class="stat-subheading to-upper">Public school</div>
@@ -374,7 +378,7 @@
             <div id="stat-2-svg-container" class="stat-svg-container"></div>
         </div>
         <div class="third">
-            <div class="circular">
+            <div class="circular" data-href="/research/">
                 <div id="stat-3-heading" class="stat-heading">20+</div>
                 <div id="stat-3-svg-wrapper" class="svg-wrapper"></div>
                 <div id="stat-3-sub-heading" class="stat-subheading to-upper">Research</div>
@@ -426,6 +430,13 @@
     var line3 = l3.polyline(points).stroke(stroke_params).fill(fill);
     var $line1 = $("#stat-1-svg-wrapper");
     var animation_fired = false;
+    var $circles = $(".circular");
+
+    $circles.on("click touch", function() {
+        var $element = $(this);
+        window.location = $element.data("href");
+    });
+
 
     // https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2
     $.fn.isInViewport = function() {
