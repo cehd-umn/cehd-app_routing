@@ -466,7 +466,7 @@
         meta_description: "Find out more about admissions, outcomes, and other data from our school psychology program applicants."
         section: programs-degrees
 /edpsych/programs/schoolpsych/pride-fellow/:
-    publish: true
+    publish: false
     template: edpsych/programs/schoolpsych/pride-fellow.html
     template_data:
         meta_description: "The school psychology program at the University of Minnesota has five Project PRIDE fellowships available to students enrolling in the Master’s/Specialist Certificate track for Fall 2017."
@@ -629,6 +629,12 @@
     template_data:
         meta_description: "Dr. Codding's research lab focuses on prevention and intervenetion of academic problems, data-based instructional decision making, and the implementation of evidence-based practices in schools."
         section: research
+/edpsych/research/community/:
+    publish: true
+    template: edpsych/research/community/index.html
+    template_data:
+        meta_description: "Learn more about the research our faculty, staff, and students are doing to benefit our communities."
+        section: research
 /edpsych/research/labs/fleury/:
     publish: true
     template: edpsych/research/labs/fleury.html
@@ -730,6 +736,12 @@
     template: edpsych/research/making-a-difference-with-data.html
     template_data:
         meta_description: "LeAnne Johnson, assistant professor in special education and coordinator for the early childhood special education M.Ed. and licensure program, is dedicated to ensuring teachers have the tools they need to decide what interventions they should use with kids."
+        section: research
+/edpsych/research/empowering-parents-to-help-close-the-word-gap/:
+    publish: true
+    template: edpsych/research/empowering-parents-to-help-close-the-word-gap.html
+    template_data:
+        meta_description: "Researchers from the Department of Educational Psychology are partnering with early childhood practitioners to get more parents in Minnesota talking to their young children."
         section: research
 /edpsych/research/news/:
     publish: true

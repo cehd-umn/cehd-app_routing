@@ -12,15 +12,13 @@ Adult Education:
   description: Learn how adults gain new forms of knowledge, skills, attitudes, and values.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Business, Administration, and Leadership
     - Disability and Aging
     - Recreation, Health, and Wellbeing
 Adult Literacy:
   meta: null
   publish: true
   links:
-    - title: License
-      href: http://www.cehd.umn.edu/olpd/grad-programs/ABE/default.html
     - title: Graduate Certificate
       href: http://www.cehd.umn.edu/olpd/grad-programs/AdEd/lit-cert.html
   description: This program is designed to prepare teachers, administrators, trainers, and counselors in the political, social, economic, and theoretical aspects of adult literacy.
@@ -46,7 +44,7 @@ Applied Child and Adolescent Development:
   description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings. (Online degree)
   categories:
     - Families, Youth, and Children
-    - Community and Leadership
+    - Psychology, Counseling, and Social Work
     - Recreation, Health, and Wellbeing
     - Evaluation and Methods
 Applied psychology in educational and community settings (APECS):
@@ -58,6 +56,7 @@ Applied psychology in educational and community settings (APECS):
   description: Gain experience working with children and youth in educational settings
   categories:
     - Teaching, Learning, and Schools
+    - Psychology, Counseling, and Social Work
 Arts in Education:
   meta: null
   publish: true
@@ -87,6 +86,7 @@ Autism Spectrum Disorder:
   description: Prepare to work with children and youth with autism spectrum disorder by learning methods of assessment, intervention, and treatment evaluation.
   categories:
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
 Business and Marketing Education:
   meta: null
   publish: true
@@ -95,7 +95,7 @@ Business and Marketing Education:
       href: http://www.cehd.umn.edu/OLPD/undergrad-programs/BME/default.html
   description: Courses in sales and marketing prepare you for careers in a variety of organizations, from Fortune 500 companies and entrepreneurial startups to nonprofit management.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Child Psychology:
   meta: null
   publish: true
@@ -114,6 +114,7 @@ Child Psychology:
     - Families, Youth, and Children
     - Recreation, Health, and Wellbeing
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
   footnotes:
     - "* offered through CLA"
 Clinical Physiology and Movement Science:
@@ -139,6 +140,8 @@ Coaching:
   categories:
     - Teaching, Learning, and Schools
     - Recreation, Health, and Wellbeing
+    - Business, Administration, and Leadership
+    - Psychology, Counseling, and Social Work
 Comparative International Development Education:
   meta: null
   publish: true
@@ -162,6 +165,7 @@ Counseling and Student Personnel Psychology:
   categories:
     - Teaching, Learning, and Schools
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
 Couple and Family Therapy:
   meta: null
   publish: true
@@ -172,6 +176,7 @@ Couple and Family Therapy:
   categories:
     - Families, Youth, and Children
     - Languages, Culture, and International
+    - Psychology, Counseling, and Social Work
 Culture and Teaching:
   meta: null
   publish: true
@@ -181,7 +186,6 @@ Culture and Teaching:
   description: Investigate critical issues related to equity, democracy and social justice in education. Study a variety of perspectives and methods across broad social, cultural, and political contexts.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
     - Languages, Culture, and International
 Disability Policy and Services:
   meta: null
@@ -191,7 +195,7 @@ Disability Policy and Services:
       href: http://www.cehd.umn.edu/OLPD/grad-programs/EPL/disabilitycert.html
   description: This program surveys the spectrum of education, health, and social services available to individuals with disabilities and their families, and the public and private networks of disability services.
   categories:
-    - Community and Leadership
+    - Psychology, Counseling, and Social Work
     - Disability and Aging
 Dual Language and Immersion Education:
   meta: null
@@ -217,6 +221,7 @@ Early Childhood:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Early Childhood Education:
   meta: null
   publish: true
@@ -229,6 +234,7 @@ Early Childhood Education:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Education Policy and Leadership:
   meta: null
   publish: true
@@ -240,7 +246,7 @@ Education Policy and Leadership:
   description: Prepare to work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Elementary Education:
   meta: null
   publish: true
@@ -292,7 +298,7 @@ Evaluation Studies:
       href: http://www.cehd.umn.edu/OLPD/grad-programs/ES/programeval-cert.html
   description: Examine the techniques and process of program evaluation and policy research. Gain qualitative and quantitative methods expertise and useful experiences in the practice of program evaluation and policy studies.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
     - Evaluation and Methods
 Family and Community Engagement:
   meta: null
@@ -301,7 +307,8 @@ Family and Community Engagement:
   description: Deepen your understanding of nonprofit management, community development, program development and evaluation, culturally relevant programming and how families navigate systems such as schools and hospitals.
   categories:
     - Families, Youth, and Children
-    - Community and Leadership
+    - Business, Administration, and Leadership
+    - Psychology, Counseling, and Social Work
 Family Financial Studies:
   meta: null
   publish: false
@@ -309,6 +316,7 @@ Family Financial Studies:
   description: Prepare to work with families around financial issues, as a financial coach, counselor, or other delivery methods.
   categories:
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Family Therapy:
   meta: null
   publish: false
@@ -334,6 +342,7 @@ Family Social Science:
     - Families, Youth, and Children
     - Languages, Culture, and International
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
 Family Violence Prevention:
   meta: null
   publish: true
@@ -343,6 +352,7 @@ Family Violence Prevention:
   description: Expand your knowledge of preventing family violence through this minor in the School of Social Work.
   categories:
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Higher Education:
   meta: null
   publish: true
@@ -355,6 +365,7 @@ Higher Education:
   categories:
     - Teaching, Learning, and Schools
     - Evaluation and Methods
+    - Business, Administration, and Leadership
 Human Resource Development:
   meta: null
   publish: true
@@ -373,7 +384,7 @@ Human Resource Development:
       href: http://www.cehd.umn.edu/OLPD/grad-programs/HRD/certificate.html
   description: Study the methods and practices for helping employees and organizations develop their skills, knowledge, and abilities.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
 K-12 Technology Integration:
   meta: null
   publish: true
@@ -407,7 +418,7 @@ Leadership in Education:
   description: Become an educational leader who fosters continuous learning and improvement. Prepare to advance school-wide and district-wide reforms for coherent educational systems and programs.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Learning Technologies:
   meta: null
   publish: true
@@ -419,7 +430,7 @@ Learning Technologies:
   description: Prepare for research and practice in teaching and learning strategies using multimedia, design, K-12 technology integration, online distance learning and learning analytics.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Psychology, Counseling, and Social Work
     - Languages, Culture, and International
 Literacy Education:
   meta: null
@@ -453,7 +464,6 @@ Multicultural Teaching and Learning:
   description: Apply current theory and practice related to access, persistence, and student achievement to successfully address the changing needs of postsecondary education
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
     - Languages, Culture, and International
 Multimedia Design and Development:
   meta: null
@@ -483,7 +493,7 @@ Outdoor Recreation and Education:
   categories:
     - Teaching, Learning, and Schools
     - Recreation, Health, and Wellbeing
-    - Community and Leadership
+    - Business, Administration, and Leadership
     - Families, Youth, and Children
 Parent and Family Education:
   meta: null
@@ -509,7 +519,6 @@ Physical Activity and Health:
   description: Learn about the leading-edge research, trends, and practices in physical activity as they relate to health. Discover techniques for implementing programs through population-based physical activity.
   categories:
     - Recreation, Health, and Wellbeing
-    - Community and Leadership
     - Families, Youth, and Children
 PK-12 Administrative Licensure:
   meta: null
@@ -520,7 +529,7 @@ PK-12 Administrative Licensure:
   description: Prepare to be a licensed administrator as a K-12 principal, superintendent, director of special education, or director of community education.
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Prevention Science:
   meta: null
   publish: true
@@ -533,6 +542,7 @@ Prevention Science:
   categories:
     - Evaluation and Methods
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Professional Development:
   meta: null
   publish: true
@@ -541,7 +551,7 @@ Professional Development:
       href: http://www.cehd.umn.edu/olpd/grad-programs/EPL/profdev-cert.html
   description: Design, implement, and evaluate learning opportunities for PreK-12 educators and related staff.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Program Evaluation:
   meta: null
   publish: true
@@ -553,6 +563,7 @@ Program Evaluation:
   description: Intensive study of the techniques and process of evaluation and policy research, in addition to the social and political context within which program evaluation occurs.
   categories:
     - Evaluation and Methods
+    - Business, Administration, and Leadership
 Psychological Foundations of Education:
   meta: null
   publish: true
@@ -566,6 +577,7 @@ Psychological Foundations of Education:
   description: Study the psychological processes critical to education, focusing on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan.
   categories:
     - Teaching, Learning, and Schools
+    - Psychology, Counseling, and Social Work
 Quantitative Methods in Education:
   meta: null
   publish: true
@@ -578,6 +590,7 @@ Quantitative Methods in Education:
   categories:
     - Teaching, Learning, and Schools
     - Evaluation and Methods
+    - Business, Administration, and Leadership
 Racial Justice in Urban Schooling:
   meta: race, language, social class, gender, sexual orientation, LGBT
   publish: true
@@ -589,6 +602,7 @@ Racial Justice in Urban Schooling:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
     - Languages, Culture, and International
+    - Psychology, Counseling, and Social Work
 Recreation Administration:
   meta: null
   publish: true
@@ -600,6 +614,7 @@ Recreation Administration:
     - Recreation, Health, and Wellbeing
     - Languages, Culture, and International
     - Families, Youth, and Children
+    - Business, Administration, and Leadership
 School Psychology:
   meta: null
   publish: true
@@ -614,6 +629,7 @@ School Psychology:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Science Education:
   meta: null
   publish: true
@@ -656,7 +672,8 @@ Social Justice:
       href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
   description: Examine how to create socially just communities through this minor in the School of Social Work.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
+    - Psychology, Counseling, and Social Work
 Social Studies Education:
   meta: null
   publish: true
@@ -680,7 +697,7 @@ Social Work:
   description: Advanced social work practice and leadership, with focus areas of Clinical Mental Health, Community Practice, Families and Children, and Health, Disability and Aging.
   categories:
     - Families, Youth, and Children
-    - Community and Leadership
+    - Psychology, Counseling, and Social Work
     - Languages, Culture, and International
     - Disability and Aging
     - Evaluation and Methods
@@ -690,8 +707,6 @@ Special Education:
   links:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-bs/
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/edpsych/programs/specialed/certificate/autism/
     - title: License
       href: http://www.cehd.umn.edu/edpsych/programs/specialed/sped-med-teacherlicensure/
     - title: Masters
@@ -706,6 +721,7 @@ Special Education:
   categories:
     - Teaching, Learning, and Schools
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
 Sport Management:
   meta: null
   publish: true
@@ -718,7 +734,7 @@ Sport Management:
       href: http://www.cehd.umn.edu/kin/current/grad/masters.html#smgt
   description: Combine theoretical instruction and practical experience to prepare for leadership success in the sports industry and marketplace.
   categories:
-    - Community and Leadership
+    - Business, Administration, and Leadership
     - Recreation, Health, and Wellbeing
 Sport and Exercise Science:
   meta: null
@@ -738,6 +754,7 @@ Talent Development and Gifted Education:
   description: Develop, implement, and supervise programs to teach gifted and talented students in K-12, postsecondary schools and other settings.
   categories:
     - Teaching, Learning, and Schools
+    - Psychology, Counseling, and Social Work
 Teaching Writing and Critical Literacy:
   meta: null
   publish: true
@@ -757,7 +774,7 @@ Work and Human Resources Education:
   description: null
   categories:
     - Teaching, Learning, and Schools
-    - Community and Leadership
+    - Business, Administration, and Leadership
 Youth Development Leadership:
   meta: null
   publish: true
@@ -768,7 +785,7 @@ Youth Development Leadership:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
-    - Community and Leadership
+    - Business, Administration, and Leadership
     - Recreation, Health, and Wellbeing
 Youth Studies:
   meta: null
@@ -781,3 +798,4 @@ Youth Studies:
   description: Make a difference in young people's lives. Prepare for careers working with youth in a variety of settings or pursue graduate work in social work, education, or public policy.
   categories:
     - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
