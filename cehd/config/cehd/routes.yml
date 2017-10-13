@@ -1589,11 +1589,6 @@
   template: cehd/teaching/directrack.html
   template_data:
     - section: teaching
-/teaching/dual-language/:
-  publish: true
-  template: cehd/teaching/dual-language.html
-  template_data:
-    - section: teaching
 /teaching/license/:
   publish: true
   template: cehd/teaching/license.html

@@ -10,7 +10,8 @@
 /graduate/additional-license.html: /teaching/additional/
 /graduate/cehd-aid.html: /graduate/funding/
 /graduate/diversity.html: /diversity/
-/graduate/duallanguage.html: /teaching/dual-language/
+/graduate/duallanguage.html: http://www.cehd.umn.edu/ci/academics/sle/ILP-Dual-Language-Immersion.html
+/teaching/dual-language/: http://www.cehd.umn.edu/ci/academics/sle/ILP-Dual-Language-Immersion.html
 /graduate/involvement.html: /graduate/community/
 /graduate/licensing/med-graduation.html: /graduate/policy/
 /graduate/med-aid.html: /teaching/scholarships/
