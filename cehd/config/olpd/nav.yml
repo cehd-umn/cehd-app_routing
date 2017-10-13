@@ -3,8 +3,10 @@
   href: "/undergraduate/"
   section: undergraduate
   subsections:
-    - name: Majors & Programs
-      href: "/undergraduate/majors-and-programs/"
+    - name: Business and Marketing Education
+      href: "/undergraduate/business-marketing-education/"
+    - name: Human Resource Development
+      href: "/undergraduate/human-resource-development/"
     - name: Undergraduate Advising
       href: "/undergraduate/advising/"
     - name: Internship & Applied Experience
@@ -15,8 +17,10 @@
   href: "/graduate/"
   section: graduate
   subsections:
-    - name: Degrees & Programs
-      href: "/graduate/degrees-and-programs/"
+    - name: Evaluation Studies
+      href: "/graduate-programs/evaluation-studies/"
+    - name: Higher Education
+      href: "/graduate-programs/higher-education/"
     - name: Admissions
       href: "/graduate/admissions/"
     - name: Forms & Handbooks

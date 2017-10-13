@@ -81,7 +81,7 @@
   template_data:
     - section: graduate-programs
 /olpd-new/graduate-programs/epl/:
-  template: olpd/graduate-programs/epl/test2.html
+  template: olpd/graduate-programs/epl/index.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -90,18 +90,33 @@
   publish: false
   template_data:
     - section: graduate-programs
+/olpd-new/graduate-programs/evaluation-studies/:
+  template: olpd/graduate-programs/es/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/olpd-new/graduate-programs/higher-education/:
+  template: olpd/graduate-programs/he/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/olpd-new/graduate-programs/hrd/phd/:
+  template: olpd/graduate-programs/human-resource-development/phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /olpd-new/undergraduate-programs/:
   template: olpd/undergraduate-programs/index.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/hrd/:
-  template: olpd/undergraduate-programs/hrd.html
+/olpd-new/undergraduate-programs/business-marketing-education/:
+  template: olpd/undergraduate-programs/bme.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/bme/:
-  template: olpd/undergraduate-programs/bme.html
+/olpd-new/undergraduate-programs/human-resource-development/:
+  template: olpd/undergraduate-programs/hrd.html
   publish: false
   template_data:
     - section: undergraduate-programs
