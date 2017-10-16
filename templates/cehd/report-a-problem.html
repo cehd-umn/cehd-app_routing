@@ -9,11 +9,19 @@
         <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
         <script>
             var url = window.location.search.split("=")[1];
+            var userAgent = window.navigator.userAgent;
+            var width = document.documentElement.clientWidth;
+            var height = document.documentElement.clientHeight;
+            var entry = {
+                "Url": url,
+                "UserAgent": userAgent,
+                "ScreenWidth": width,
+                "ScreenHeight": height
+            };
+
             Cognito.load("forms", {
                 id: "85",
-                entry: {
-                    "Url": url
-                }
+                entry: entry
             });
         </script>
     </div>
