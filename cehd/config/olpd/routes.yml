@@ -100,8 +100,13 @@
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/hrd/phd/:
-  template: olpd/graduate-programs/human-resource-development/phd.html
+/olpd-new/graduate-programs/human-resource-development/:
+  template: olpd/graduate-programs/hrd/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/olpd-new/graduate-programs/human-resource-development/phd/:
+  template: olpd/graduate-programs/hrd/phd.html
   publish: false
   template_data:
     - section: graduate-programs
