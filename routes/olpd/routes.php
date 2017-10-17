@@ -23,13 +23,16 @@ $inline_svg_styles = file_get_contents($inline_svg_styles_file);
 $app_config = $helpers->loadYaml($olpd_app_config);
 $nav_items = $helpers->loadYaml($nav_yaml_file);
 $routes = $helpers->loadYaml($routes_yaml_file);
+$is_production_environment = $helpers->isProduction($helpers->getServerName());
+$display_slim_errors = !$is_production_environment;
 $container_config = [
     "settings" => [
-        "displayErrorDetails" => true,
+        "displayErrorDetails" => $display_slim_errors,
     ]
 ];
 $container = new \Slim\Container($container_config);
 
+// @todo put the error handler in OLPDApp
 $container['errorHandler'] = function ($container) {
     return function ($request, $response, $exception) use ($container) {
         return $container['response']->withStatus(500)
@@ -56,8 +59,11 @@ $container["routes"] = new Dict($routes);
 
 $app = new \Slim\App($container);
 
+// Load all the routes from the routes file
 foreach ($routes as $route => $route_info) {
-    if ($route_info["publish"] || $helpers->isNotProduction($helpers->getServerName())) {
+    if ($route_info["publish"] || !$is_production_environment) {
         $app->get($route, OLPDApp::class . ":renderTemplateFromRoute");
     }
 }
+
+$app->get("/people/{internet_id}/", OLPDApp::class . ":personPage");

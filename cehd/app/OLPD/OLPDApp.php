@@ -36,17 +36,27 @@ class OLPDApp extends \CEHD\App\App\BaseApp
 
     // Overwrite the old constructor so we don't have all the old set up w/
     // instantiation
+    // @todo use type hinting
     function __construct($container)
     {
         $this->_view = $container->get("view");
         $this->_routes = $container->get("routes");
     }
 
+    // @todo use type hinting
     public function renderTemplateFromRoute($request, $response, $args)
     {
         $path = $this->getPathFromRequest($request);
         $route_info = $this->_routes->get($path);
         $this->_view->render($response, $route_info["template"], []);
+        return $response;
+    }
+
+    // @todo use type hinting
+    public function personPage($request, $response, $args)
+    {
+        $internet_id = $args["internet_id"];
+        $this->_view->render($response, "olpd/people/person.html", ["internet_id" => $internet_id]);
         return $response;
     }
 
