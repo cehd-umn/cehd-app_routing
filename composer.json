@@ -6,7 +6,8 @@
         "symfony/yaml": "^3.1",
         "thoma127/dict": "^0.1.2",
         "truetone/peloton": "dev-master",
-        "slim/slim": "^3.8"
+        "slim/slim": "^3.8",
+        "slim/twig-view": "^2.3"
     },
     "require-dev": {
         "phpunit/php-code-coverage": "^4.0"
