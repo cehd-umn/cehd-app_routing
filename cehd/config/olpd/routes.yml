@@ -40,97 +40,97 @@
 ####################################
 ## This system is case-sensitive! ##
 ####################################
-/olpd-new/:
+/:
   template: olpd/index.html
   publish: false
   template_data:
     - section: home
-/olpd-new/about/:
+/about/:
   template: olpd/about.html
   publish: false
   template_data:
     - section: about
-/olpd-new/giving/:
+/giving/:
   template: olpd/giving.html
   publish: false
   template_data:
     - section: giving
-/olpd-new/handbooks-forms/:
+/handbooks-forms/:
   template: olpd/handbooks-forms.html
   publish: false
   template_data:
     - section: handbooks-forms
-/olpd-new/test/:
+/test/:
   template: olpd/test.html
   publish: false
   template_data:
     - section: test
-/olpd-new/courses/:
+/courses/:
   template: olpd/courses/index.html
   publish: false
   template_data:
     - section: courses
-/olpd-new/courses/es/:
+/courses/es/:
   template: olpd/courses/es.html
   publish: false
   template_data:
     - section: es courses
-/olpd-new/graduate-programs/:
+/graduate-programs/:
   template: olpd/graduate-programs/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/epl/:
+/graduate-programs/epl/:
   template: olpd/graduate-programs/epl/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/epl/phd/:
+/graduate-programs/epl/phd/:
   template: olpd/graduate-programs/epl/phd.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/evaluation-studies/:
+/graduate-programs/evaluation-studies/:
   template: olpd/graduate-programs/es/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/higher-education/:
+/graduate-programs/higher-education/:
   template: olpd/graduate-programs/he/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/human-resource-development/:
+/graduate-programs/human-resource-development/:
   template: olpd/graduate-programs/hrd/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/graduate-programs/human-resource-development/phd/:
+/graduate-programs/human-resource-development/phd/:
   template: olpd/graduate-programs/hrd/phd.html
   publish: false
   template_data:
     - section: graduate-programs
-/olpd-new/undergraduate-programs/:
+/undergraduate-programs/:
   template: olpd/undergraduate-programs/index.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/business-marketing-education/:
+/undergraduate-programs/business-marketing-education/:
   template: olpd/undergraduate-programs/bme.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/human-resource-development/:
+/undergraduate-programs/human-resource-development/:
   template: olpd/undergraduate-programs/hrd.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/advising/:
+/undergraduate-programs/advising/:
   template: olpd/undergraduate-programs/advising.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/olpd-new/undergraduate-programs/resources/:
+/undergraduate-programs/resources/:
   template: olpd/undergraduate-programs/resources.html
   publish: false
   template_data:

@@ -9,6 +9,7 @@ use \CEHD\App\OLPD\OLPDApp;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\Helpers\Helpers;
+use \UMN\CEHD\Dict\Dict;
 
 $inline_styles_file     = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
 $inline_svg_styles_file = __DIR__ . "/../../public/assets/dist/css/minified/svg.css";
@@ -21,6 +22,7 @@ $inline_styles = file_get_contents($inline_styles_file);
 $inline_svg_styles = file_get_contents($inline_svg_styles_file);
 $app_config = $helpers->loadYaml($olpd_app_config);
 $nav_items = $helpers->loadYaml($nav_yaml_file);
+$routes = $helpers->loadYaml($routes_yaml_file);
 $container_config = [
     "settings" => [
         "displayErrorDetails" => true,
@@ -50,7 +52,10 @@ $container['view'] = $helpers->configureTwigForSlim(
     $app_config["base_url"]
 );
 
+$container["routes"] = new Dict($routes);
+
 $app = new \Slim\App($container);
 
-
-$app->get("/", OLPDApp::class . ":helloWorld");
+foreach ($routes as $route => $route_info) {
+    $app->get($route, OLPDApp::class . ":helloWorld");
+}

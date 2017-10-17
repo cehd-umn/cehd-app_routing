@@ -29,11 +29,18 @@ class OLPDApp extends \CEHD\App\App\BaseApp
 
     protected $_view;
 
+    protected $_routes;
+
     // Overwrite the old constructor so we don't have all the old side effects
     // w/ instantiation
     function __construct($container)
     {
         $this->_view = $container->get("view");
+        $this->_routes = $container->get("routes");
+    }
+
+    public function renderStaticTemplate($request, $response, $args)
+    {
     }
 
     public function helloWorld($request, $response, $args)
