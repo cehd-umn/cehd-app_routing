@@ -57,5 +57,7 @@ $container["routes"] = new Dict($routes);
 $app = new \Slim\App($container);
 
 foreach ($routes as $route => $route_info) {
-    $app->get($route, OLPDApp::class . ":helloWorld");
+    if ($route_info["publish"] || $helpers->isNotProduction($helpers->getServerName())) {
+        $app->get($route, OLPDApp::class . ":renderTemplateFromRoute");
+    }
 }
