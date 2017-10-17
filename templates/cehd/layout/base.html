@@ -87,12 +87,14 @@
                         <h2 class="dept-footer-heading h4">Contact Us</h2>
                     </div>
                     <p><a href="{{config.base_url}}/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
+                    {% block dept_footer_address %}
                     <address>
                         104 Burton Hall<br>
                         178 Pillsbury Dr. S.E.<br>
                         Minneapolis, MN 55455<br>
                         612-626-9252 | <a href="mailto:cehd@umn.edu">cehd@umn.edu</a>
                     </address>
+                    {% endblock %}
                     <p id="report-a-problem-link"><a id="footer-report-problem-link" href="/report-a-problem/?url=">Report a problem with the website</a></p>
 
                     <!-- <p><a href="/directory/">College Directory</a> | <a href="/about/accreditation/">Accreditation</a></p> -->
