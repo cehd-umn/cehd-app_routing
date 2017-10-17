@@ -27,8 +27,19 @@ class OLPDApp extends \CEHD\App\App\BaseApp
                 ]
             ];
 
-    function __construct()
+    protected $_view;
+
+    // Overwrite the old constructor so we don't have all the old side effects
+    // w/ instantiation
+    function __construct($container)
     {
+        $this->_view = $container->get("view");
+    }
+
+    public function helloWorld($request, $response, $args)
+    {
+        $response->getBody()->write("Hello world!");
+        return $response;
     }
 
     public function errorPageHandler($code=404, $router)
