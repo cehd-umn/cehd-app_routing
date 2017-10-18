@@ -1,0 +1,29 @@
+{% extends "cehd/layout/documentation.html" %}
+{% import "macros/loader.html" as loader %}
+{% import "macros/people/people.html" as peoplefeed %}
+{% set page_title = "People Macro" %}{# <= change the value in quotes to change both the title and h1 #}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>{# You can just enter text in the h1 if you don't want to be the same as the page_title variable above #}
+        <h2>Working example</h2>
+        <p>Here's a quick and dirty example for <a href="https://apps.cehd.umn.edu/people/admin/XmlFeed.aspx?tg=466">this feed</a>.</p>
+
+        {{ loader.loader(
+        "People tagged with tag ID 466",
+        "h2",
+        "people-container"
+        ) }}
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ peoplefeed.people_tag_js(
+        466,
+        "#people-container",
+        "list.html",
+        "/assets/dist/views/cehd/people/"
+    ) }}
+{% endblock %}
