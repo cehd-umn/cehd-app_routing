@@ -1,0 +1,37 @@
+{% macro people_tag_js(
+    tg,
+    target_element_selector,
+    template_name="index.html",
+    template_path="/assets/dist/views/cehd/people/"
+    ) %}
+<script>
+    (function() {
+        "use strict";
+        var base_url = "/services/people-tool/";
+        var request_params = {
+            "url": base_url,
+            "data": {
+                "tg": {{ tg }}
+            }
+        };
+        var $target_element = $("{{ target_element_selector }}");
+        var app = new App();
+        var client = new app.httpClient();
+        var request = client.get(request_params);
+        request.done(function() {
+            var results = client.getResults();
+            var renderer = new app.renderer();
+            var template_params = {
+                "template_path": "{{ template_path }}",
+                "template_name": "{{ template_name }}",
+                "$target_element": $target_element,
+                "data": {
+                    "people": results
+                };
+            }
+            renderer.init(template_params);
+            renderer.render();
+        });
+    })();
+</script>
+{%- endmacro -%}
