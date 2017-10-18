@@ -473,7 +473,7 @@ class BaseApp extends \CEHD\App\BaseClass
         }
 
         $client_response = $http_client->request("GET", $base_url, $client_query_data);
-        
+
         $search_data = json_decode($client_response->getBody(), true);
 
         $template_data = [
