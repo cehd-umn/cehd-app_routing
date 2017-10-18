@@ -18,7 +18,7 @@ trait SlimView
         )
     {
         $view = new \Slim\Views\Twig(__DIR__ . "/../../../templates", [
-            "cache" => __DIR__ . "/../../cache",
+            "cache" => __DIR__ . "/../../../cache",
             "auto_reload" => $autoreload, // this setting forces the templates to recompile if they are modified
             "debug" => $debug,
             "autoescape" => $autoescape,
