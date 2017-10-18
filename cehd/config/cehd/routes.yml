@@ -2639,6 +2639,11 @@
   template: cehd/trio/upward-bound/academic-year.html
   template_data:
     - section: trio
+/trio/upward-bound/ali/:
+  publish: true
+  template: cehd/trio/upward-bound/ali.html
+  template_data:
+    - section: trio
 /trio/upward-bound/apply/:
   publish: true
   template: cehd/trio/upward-bound/apply.html
