@@ -98,14 +98,14 @@
 
             <h3>Annotated example</h3>
             <pre><code class="jinja">{% verbatim %}
-    {% block bottom_js %}{{ parent() }}
-        {{ peoplefeed.people_tag_js(
-            466, {# the tag id #}
-            &quot;#people-container&quot;, {# CSS selector for the results #}
-            &quot;list.html&quot;, {# template name #}
-            &quot;/assets/dist/views/cehd/people/&quot; {# path to template #}
-        ) }}
-    {% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ peoplefeed.people_tag_js(
+        466, {# the tag id #}
+        &quot;#people-container&quot;, {# CSS selector for the results #}
+        &quot;list.html&quot;, {# template name #}
+        &quot;/assets/dist/views/cehd/people/&quot; {# path to template #}
+    ) }}
+{% endblock %}
             {% endverbatim %}</code></pre>
         </div>
     </div> <!-- ./container -->

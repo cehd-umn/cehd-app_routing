@@ -87,15 +87,14 @@
 
             <h3>Annotated example</h3>
             <pre><code class="jinja">{% verbatim %}
-    {% block bottom_js %}{{ parent() }}
-        {{ peoplefeed.person_js(
-            &quot;jeff&quot;, {# the internet ID #}
-            &quot;#person-container&quot;, {# CSS selector for the results #}
-            &quot;example.html&quot;, {# template name #}
-            &quot;/assets/dist/views/cehd/people/&quot; {# path to template #}
-        ) }}
-        ) }}
-    {% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ peoplefeed.person_js(
+        &quot;jeff&quot;, {# the internet ID #}
+        &quot;#person-container&quot;, {# CSS selector for the results #}
+        &quot;example.html&quot;, {# template name #}
+        &quot;/assets/dist/views/cehd/people/&quot; {# path to template #}
+    ) }}
+{% endblock %}
             {% endverbatim %}</code></pre>
         </div>
     </div> <!-- ./container -->
