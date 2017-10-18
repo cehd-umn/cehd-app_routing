@@ -1223,6 +1223,12 @@
   template_data:
     meta_description: null
     section: null
+/docs/macros/people/:
+  publish: false
+  template: cehd/docs/macros/people.html
+  template_data:
+    meta_description: null
+    section: null
 /docs/macros/table/:
   publish: false
   template: cehd/docs/macros/table.html
