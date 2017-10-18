@@ -258,7 +258,9 @@ class BaseApp extends \CEHD\App\BaseClass
             }
         }
 
-        $this->router->onError([$this, "renderErrorPage"]);
+        if ($this->config["is_prod"]) {
+            $this->router->onError([$this, "renderErrorPage"]);
+        }
     }
 
     /**
