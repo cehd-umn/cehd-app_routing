@@ -72,7 +72,7 @@
 </style>
 {% endblock %}
 {% block section_wordmark %}
-    <a href="{{ config.base_url }}"><img src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>
+    <a href="{{ config.base_url }}/"><img src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>
 {% endblock %}
 {% block nav %}
 <div class="section-header-container row">
@@ -81,11 +81,11 @@
         <nav class="inline-nav">
             <ul class="nav inline">
                 {% for top_level_nav_item in nav_items %}
-                    <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="#" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
+                    <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
                       {% if top_level_nav_item.subsections %}
                         <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
                           {% for subsection in top_level_nav_item.subsections %}
-                            <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="#" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
+                            <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
                           {% endfor %}
                         </ul>
                       {% endif %}
@@ -105,7 +105,7 @@
                     <div class="dept-footer-container contact">
                         <h2 class="dept-footer-heading h4">Contact Us</h2>
                     </div>
-                    <p><a href="{{config.base_url}}/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
+                    <p><a href="{{ config.base_url }}/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a></p>
                     <address>
                         <a href="mailto:cehd@umn.edu">cehd@umn.edu</a><br>
                         612-626-9252<br>

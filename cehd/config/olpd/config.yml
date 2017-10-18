@@ -3,7 +3,7 @@
 asset_base: "/olpd-new"
 autoescape: true
 autoreload: true
-base_url: "/olpd-new/"
+base_url: "/olpd-new"
 debug: true
 dept_name: "Organizational Leadership, Policy, and Development"
 filter_method_names:
