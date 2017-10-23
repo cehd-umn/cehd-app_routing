@@ -30,7 +30,7 @@ Advance Practices in Second Language Teaching:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/AdvancedSecondLanguageTeaching.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/advanced-SLE.html
   description: This program is designed for teachers of foreign languages and English as a second language looking to master new models and strategies in their practice.
   categories:
     - Teaching, Learning, and Schools
@@ -62,11 +62,11 @@ Arts in Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/artsined.html
+      href: http://www.cehd.umn.edu/ci/academics/artsined/ILP-ArtsinEd.html
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Art.html
+      href: http://www.cehd.umn.edu/ci/academics/artsined/MEd-ArtsinEd.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Art.html
+      href: http://www.cehd.umn.edu/ci/academics/artsined/PhD-MA-ArtsinEd.html
   description: Learn about the teaching strategies for building knowledge and skills in visual arts, dance, and theatre arts.
   categories:
     - Teaching, Learning, and Schools
@@ -182,7 +182,7 @@ Culture and Teaching:
   publish: true
   links:
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/CAT.html
+      href: http://www.cehd.umn.edu/ci/academics/CAT/phd-cat.html
   description: Investigate critical issues related to equity, democracy and social justice in education. Study a variety of perspectives and methods across broad social, cultural, and political contexts.
   categories:
     - Teaching, Learning, and Schools
@@ -202,11 +202,11 @@ Dual Language and Immersion Education:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/immersion.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/dual-language-immersion.html
     - title: License
       href: http://www.cehd.umn.edu/ci/academics/SLE/ILP-dual-language-immersion.html
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/academics/SLE/ILP-dual-language-immersion.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/MEd-Immersion.html
   description: Work effectively in dual language and immersion settings, in programs where the second / foreign / heritage / indigenous language is the vehicle to teach school subjects.
   categories:
     - Teaching, Learning, and Schools
@@ -252,13 +252,13 @@ Elementary Education:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ElementaryEducationFoundations.html
+      href: http://www.cehd.umn.edu/ci/academics/ElementaryEd/elementaryfoundations.html
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/Elementary.html
+      href: http://www.cehd.umn.edu/ci/academics/ElementaryEd/ILP-ElementaryEd.html
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Elementary.html
+      href: http://www.cehd.umn.edu/ci/academics/ElementaryEd/MA-PhD-ElementaryEd.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/Elementary.html
+      href: http://www.cehd.umn.edu/ci/academics/ElementaryEd/MA-PhD-ElementaryEd.html
   description: Contribute to the advancement of knowledge so necessary to address the dynamic challenges of contemporary education at the elementary level
   categories:
     - Teaching, Learning, and Schools
@@ -268,9 +268,9 @@ Teaching English as Second Language:
   publish: true
   links:
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
     - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Undergrad/ESLMinorTESLCertificate.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
   description: Teach English to adult speakers of other languages in programs such as intensive English programs and English writing programs on college and university campuses across the U.S. and internationally.
   categories:
     - Teaching, Learning, and Schools
@@ -280,7 +280,7 @@ English Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/English.html
+      href: http://www.cehd.umn.edu/ci/academics/Literacy/ILP-English.html
   description: Prepare for teaching in secondary schools and pursue a career in teaching English language arts. We offer a range of courses in Language, Literature, Writing, and teaching English.
   categories:
     - Teaching, Learning, and Schools
@@ -390,7 +390,7 @@ K-12 Technology Integration:
   publish: true
   links:
     - title: Graduate Minor
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/K-12TechnologyIntegration.html
+      href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/k12-tech-integration.html
   description: Use research-backed best practices in using technology and the Internet in the classroom.
   categories:
     - Teaching, Learning, and Schools
@@ -424,9 +424,9 @@ Learning Technologies:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/LT.html
+      href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/PhD-MA-LT.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/LT.html
+      href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/PhD-MA-LT.html
   description: Prepare for research and practice in teaching and learning strategies using multimedia, design, K-12 technology integration, online distance learning and learning analytics.
   categories:
     - Teaching, Learning, and Schools
@@ -437,9 +437,9 @@ Literacy Education:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Literacy.html
+      href: http://www.cehd.umn.edu/ci/academics/literacy/MEd-literacyed.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Literacy.html
+      href: http://www.cehd.umn.edu/ci/academics/Literacy/PhDLiteracy.html
   description: Become a leading scholar in the areas of children's and adolescent literature, critical literacy, English education, reading, and writing.
   categories:
     - Teaching, Learning, and Schools
@@ -449,9 +449,9 @@ Math Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/Math.html
+      href: http://www.cehd.umn.edu/ci/academics/mathed/ILP-MathEd.html
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/Math.html
+      href: http://www.cehd.umn.edu/ci/academics/mathed/ma-mathed.html
   description: Prepare to teach in K-12 schools, with coursework covering research and best practices in math education.
   categories:
     - Teaching, Learning, and Schools
@@ -470,7 +470,7 @@ Multimedia Design and Development:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/MultimediaDesign.html
+      href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/multimedia-development.html
   description: Designed for K-12 teachers, higher education instructors and corporate trainers who want to produce and design software to enhance learning.
   categories:
     - Teaching, Learning, and Schools
@@ -479,7 +479,7 @@ Online Learning:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/OnlineLearning.html
+      href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/Online-Learning.html
   description: Develop knowledge and skill in best practices for designing and delivering online distance learning.
   categories:
     - Teaching, Learning, and Schools
@@ -635,7 +635,7 @@ Science Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/Science.html
+      href: http://www.cehd.umn.edu/ci/academics/scienceed/ILP-Science.html
   description: Earn a license to teach high-school chemistry, earth and space science, life science, and/or physics. Students can also add a Grades 5-8 license in general science.
   categories:
     - Teaching, Learning, and Schools
@@ -643,29 +643,27 @@ Science, Technology, Engineering, and Math (STEM) Education:
   meta: null
   publish: true
   links:
-    - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/STEM.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/STEM.html
+      href: http://www.cehd.umn.edu/ci/academics/PhD-STEM.html
   description: Become an expert in STEM Education, the integration of science, technology, engineering and mathematics in an interdisciplinary and applied approach.
   categories:
     - Teaching, Learning, and Schools
 Second Language Education:
-  meta: null
+  meta: Arabic, Chinese, ESL, French, German, Hebrew, Italian, Japanese, Latin, Norwegian, Ojibwe, Polish, Russian, Spanish, Swedish
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/SLESort.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/MEdProfessional/SLE.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/SLE.html
+      href: http://www.cehd.umn.edu/ci/academics/SLE/PhD-SLE.html
   description: Combine best practices in teaching and learning through one of fifteen language areas
   categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
 Social Justice:
-  meta: Arabic, Chinese, ESL, French, German, Hebrew, Italian, Japanese, Latin, Norwegian, Ojibwe, Polish, Russian, Spanish, Swedish
+  meta: null
   publish: true
   links:
     - title: Undergraduate Minor
@@ -679,9 +677,9 @@ Social Studies Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Teach/SocialStudies.html
+      href: http://www.cehd.umn.edu/ci/academics/socialstudies/ILP-socialstudies.html
     - title: Masters
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Research-Degrees/SocialStudies.html
+      href: http://www.cehd.umn.edu/ci/academics/SocialStudies/MA-PhD-SocialStudies.html
   description: Develop research-based knowledge for teaching social studies, with emphases on political socialization, political tolerance, authentic assessment, citizenship and civics education, and democratic thought.
   categories:
     - Teaching, Learning, and Schools
@@ -760,7 +758,7 @@ Teaching Writing and Critical Literacy:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/ci/Academic-Programs/Certificates/TeachingWritingCriticalLiteracy.html
+      href: http://www.cehd.umn.edu/ci/academics/literacy/critical-writing-certificate.html
   description: Gain strategies for teaching the writing process to English-language learners and diverse populations while incorporating reading and writing across the curriculum
   categories:
     - Teaching, Learning, and Schools

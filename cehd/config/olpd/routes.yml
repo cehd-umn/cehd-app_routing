@@ -55,16 +55,6 @@
   publish: false
   template_data:
     - section: giving
-/handbooks-forms/:
-  template: olpd/handbooks-forms.html
-  publish: false
-  template_data:
-    - section: handbooks-forms
-/test/:
-  template: olpd/test.html
-  publish: false
-  template_data:
-    - section: test
 /courses/:
   template: olpd/courses/index.html
   publish: false
@@ -75,17 +65,7 @@
   publish: false
   template_data:
     - section: es courses
-/graduate-programs/:
-  template: olpd/graduate-programs/index.html
-  publish: false
-  template_data:
-    - section: graduate-programs
-/graduate-programs/epl/:
-  template: olpd/graduate-programs/epl/index.html
-  publish: false
-  template_data:
-    - section: graduate-programs
-/graduate-programs/epl/phd/:
+/graduate-programs/educational-policy-leadership/phd/:
   template: olpd/graduate-programs/epl/phd.html
   publish: false
   template_data:
@@ -115,6 +95,11 @@
   publish: false
   template_data:
     - section: undergraduate-programs
+/undergraduate-programs/advising/:
+  template: olpd/undergraduate-programs/advising.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs
 /undergraduate-programs/business-marketing-education/:
   template: olpd/undergraduate-programs/bme.html
   publish: false
@@ -122,11 +107,6 @@
     - section: undergraduate-programs
 /undergraduate-programs/human-resource-development/:
   template: olpd/undergraduate-programs/hrd.html
-  publish: false
-  template_data:
-    - section: undergraduate-programs
-/undergraduate-programs/advising/:
-  template: olpd/undergraduate-programs/advising.html
   publish: false
   template_data:
     - section: undergraduate-programs

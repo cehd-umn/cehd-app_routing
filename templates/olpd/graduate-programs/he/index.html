@@ -1,4 +1,6 @@
 {% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
 {% set page_title = "Higher Education" %}
 {% block title %}
   Higher Education
@@ -10,8 +12,6 @@
     <div class="container">
         <h1>Higher education track</h1>
 <div class="twothird feature">
-
-
         <p>Higher education (HE) administration and leadership is a field all it’s own. The United States is home to nearly 5,000 Title IV-eligible, degree-granting colleges and universities. Millions of students pursue higher education each year. Higher education in the United States represents a vast ecosystem of organizations, people, policies, and partnerships.</p>
         <p>Institutions of higher education prepare their students to live purposeful lives, to find meaning and value in their work, and to collaborate across their networks and communities. These institutions are the home of research and discovery, supporting our leading scientists and experts.</p>
         <p>Institutions of higher education are vibrant places to work, with rapidly-changing ideas and community-embedded projects and research. Higher education professionals work in a variety of roles supporting student learning, scholarship, and broader community engagement. In this program area, you will study the state and federal policies, the legal frameworks, the economic and social conditions, and the changing demands of learners that all affect how institutions operate and excel in meeting their missions. You will investigate the accessibility and affordability of higher education, and the culture in which students, faculty and staff find themselves.</p>
@@ -28,17 +28,26 @@
           <li>Undergraduate Multicultural Teaching and Learning Certificate</li>
           <li>Multicultural College Teaching and Learning Graduate Minor</li>
       </ul>
-    </div>
 
-    <div class="container">
-        <h2>Faculty</h2>
-
-        <p>List of faculty with Program Coordinator at the top - Karen Miksch. HE faculty: Melissa Anderson, Heidi Barajas, Carol Carrier, David Chapman, Andrew Furco, Jarrett Gupton, Jeremy Hernandez, Rashne Jehangir,Laura Coffin Koch, Na'im Madyun, Tania Mitchell, Rebecca Ropers-Huilman, Karen Seashore, Michael Stebleton, David Weerts</p>
-
-    </div>
-
-
-
-</div>
+        <div class="twothird feature">
+            <h2 class="text-center">Faculty</h2>
+            {{ loader.loader( "Program coordinator ID 469", "h3", "coordinator-container" ) }}
+            {{ loader.loader( "People tagged with tag ID 466", "h3", "people-container" ) }}
+        </div>
+    </div><!-- close container -->
 </div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+{{ peoplefeed.people_tag_js(
+    469,
+    "#coordinator-container",
+    "list.html",
+    "/assets/dist/views/olpd/people/"
+) }}
+{{ peoplefeed.people_tag_js(
+    466,
+    "#people-container",
+    "list.html",
+    "/assets/dist/views/olpd/people/"
+) }}
 {% endblock %}
