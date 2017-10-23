@@ -13,7 +13,7 @@ nav {
 
 @media all and (min-width: 769px) {
     nav {
-        margin: 16px auto 0;
+        margin: 36px auto 0;
 
         .secondary-nav {
             background-color: $base-white;
@@ -83,4 +83,8 @@ nav {
     .cehd-wordmark {
         float: right;
     }
+}
+
+#wordmark-olpd-top {
+    max-width: 390px;
 }
