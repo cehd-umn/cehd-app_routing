@@ -121,17 +121,19 @@
                 "<samp>true</samp>"]) }}
         {{ table.end_table() }}
 
-        <p>Parameters <em>must be passed in order</em>. If you wish to
-        override just some of the defaults, you can pass in
-        <samp>null</samp> for the others like so:</p>
+        <h2>Calling macro with all parameters</h2>
 
         <pre><code class="jinja">
 {% verbatim %}
-{# This example will only override the default for the third parameter #}
 {{ loader.loader(
-    null,
-    null,
-    "alumni-news-container",
+    "Latest news", {# Heading text #}
+    "h3", {# Heading tag #}
+    "alumni-news-container", {# Container id #}
+    null, {# Heading tag classes #}
+    "small", {# Additional loader classes #}
+    "Loading…", {# Loader text #}
+    null, {# Additional container classes #}
+    true {# Use a heading tag #}
     ) }}
 {% endverbatim %}
         </code></pre>
