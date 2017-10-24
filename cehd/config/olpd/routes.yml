@@ -65,6 +65,11 @@
   publish: false
   template_data:
     - section: es courses
+/graduate-programs/comparative-international-development-education/phd/:
+  template: olpd/graduate-programs/cide/phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/educational-policy-leadership/phd/:
   template: olpd/graduate-programs/epl/phd.html
   publish: false
@@ -72,6 +77,11 @@
     - section: graduate-programs
 /graduate-programs/evaluation-studies/:
   template: olpd/graduate-programs/es/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/evaluation-studies/phd/:
+  template: olpd/graduate-programs/es/phd.html
   publish: false
   template_data:
     - section: graduate-programs
