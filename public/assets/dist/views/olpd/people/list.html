@@ -1,29 +1,18 @@
 <div class="row">
     {% for person in data.people %}
-    <div class="container">
-
-                <div class="feature twothird">
-                <h2 class="heading-profile">{{ person.nameFirstLast }}
-                    <small class="clear h4">
+        <div class="container">
+            
+            <h4 class="heading-profile">{{ person.nameFirstLast }}</h4>
+                <p>
                     {% if person.workingTitle|is_string %}
                         {{ person.workingTitle|safe }}
                     {% endif %}
-                    </small>
-                </h2>
-
-<p>{{ person.phone }} | <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a></p>
-
-
-
-
-
-            <div class="span-3">
-                {% if person.headshotAddress|is_string %}
-                    <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
-                {% endif %}
-            </div>
-
-        </div><!-- end feature.twothird -->
-
-    {% endfor %}
+                     <br  />
+                    {{ person.phone }} | <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a>
+                </p>
+                    {% if person.headshotAddress|is_string %} <br  />
+                <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
+                    {% endif %}
+                    {% endfor %}
+            </div><!-- end container.emphasis -->
 </div><!-- end row.emphasis -->
