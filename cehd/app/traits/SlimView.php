@@ -14,6 +14,7 @@ trait SlimView
         bool $debug,
         string $inline_styles,
         string $inline_svg_styles,
+        string $inline_nav_styles,
         string $base_path
         )
     {
@@ -30,6 +31,7 @@ trait SlimView
         $twig->addGlobal('nav_items', $nav_items);
         $twig->addGlobal('inline_styles', $inline_styles);
         $twig->addGlobal('inline_svg_styles', $inline_svg_styles);
+        $twig->addGlobal('inline_nav_styles', $inline_nav_styles);
 
         foreach ($filter_method_names as $filter_method) {
             // @xxx Will change in version 2 of Twig
