@@ -1,7 +1,7 @@
 {% extends "layout/base.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% block css %}
-    <link href="/assets/dist/css/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+    <link href="/assets/peloton/latest/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
     <link href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
@@ -69,6 +69,7 @@
 }
 
 {{ inline_styles|raw }}
+{{ inline_nav_styles|raw }}
 </style>
 {% endblock %}
 {% block section_wordmark %}
@@ -78,7 +79,7 @@
 <div class="section-header-container row">
     <div class="container">
         <button class="nav-toggle">Menu</button>
-        <nav class="inline-nav">
+        <nav class="inline">
             <ul class="nav inline">
                 {% for top_level_nav_item in nav_items %}
                     <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>

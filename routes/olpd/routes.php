@@ -13,8 +13,10 @@ use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\Helpers\Helpers;
 use \UMN\CEHD\Dict\Dict;
 
-$inline_styles_file     = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
-$inline_svg_styles_file = __DIR__ . "/../../public/assets/dist/css/minified/svg.css";
+// @todo change the Peloton version number once these styles work
+$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/css/minified/inline.css";
+$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/svg.css";
+$inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/nav.css";
 $nav_yaml_file          = __DIR__ . "/../../cehd/config/olpd/nav.yml";
 $olpd_app_config        = __DIR__ . "/../../cehd/config/olpd/config.yml";
 $redirects              = __DIR__ . "/../../cehd/config/olpd/redirects.yml";
@@ -22,6 +24,7 @@ $routes_yaml_file       = __DIR__ . "/../../cehd/config/olpd/routes.yml";
 $helpers = new Helpers();
 $inline_styles = file_get_contents($inline_styles_file);
 $inline_svg_styles = file_get_contents($inline_svg_styles_file);
+$inline_nav_styles = file_get_contents($inline_nav_styles_file);
 $app_config = $helpers->loadYaml($olpd_app_config);
 $nav_items = $helpers->loadYaml($nav_yaml_file);
 $routes = $helpers->loadYaml($routes_yaml_file);
@@ -54,6 +57,7 @@ $container['view'] = $helpers->configureTwigForSlim(
     $app_config["debug"],
     $inline_styles,
     $inline_svg_styles,
+    $inline_nav_styles,
     $app_config["base_url"]
 );
 
