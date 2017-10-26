@@ -18,50 +18,15 @@
 
             <h2>Macros</h2>
             <ul>
-                <li><a href="events/">Events</a></li>
-                <li><a href="loader/">CSS loading indicator</a></li>
-                <li><a href="info-sessions/">Info Sessions</a></li>
-                <li><a href="news/">News</a></li>
-                <li><a href="people/">People</a></li>
-                <li><a href="person/">Person</a></li>
+                <li><a href="/patterns/v1/macros/events-macro/">Events</a></li>
+                <li><a href="/patterns/v1/macros/css-loader-macro/">CSS loading indicator</a></li>
+                <li><a href="/patterns/v1/macros/info-sessions-macro/">Info Sessions</a></li>
+                <li><a href="/patterns/v1/macros/news-feed-macro/">News</a></li>
+                <li><a href="/patterns/v1/macros/people-macro-by-tag/">People</a></li>
+                <li><a href="/patterns/v1/macros/people-macro-by-internet-id/">Person</a></li>
+                <li><a href="/patterns/v1/macros/table-macro/">Tables</a></li>
+                <li><a href="/patterns/v1/macros/google-analytics-event-tracking-macro/">Google Analytics event tracking</a></li>
             </ul>
-
-            <h2>Google analytics click tracking</h2>
-
-            <p>The macro for tracking click events will make it easier to
-            consistently track events&mdash;including links to other sites.</p>
-
-            <h3>Step one: include the macro</h3>
-
-            <p>You have to include the macro to be able to use it. Macros are
-            organized in <code>app_routing/templates/macros</code></p>
-
-            <p>Make sure you put it at the top, preferably just after the
-            "extends" declaration at the top:</p>
-            <pre><code class="twig">{%- verbatim -%}
-{% extends "edpsych/layout/section.html" %}
-{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}{% endverbatim %}
-            </code></pre>
-            <h3>Step Two: Use the macro</h3>
-            <p>In the past we've included code like this for click tracking:</p>
-            <pre><code class="html">&lt;a href=&quot;/link&quot; onclick=&quot;ga('send', 'event', 'how to apply', 'click', 'csppmain');&quot;&gt;Link&lt;/a&gt;</code></pre>
-            <p>That's a bad practice for two reasons:</p>
-            <ol>
-                <li>It violates separation of concerns by mixing JavaScript in
-                with the HTML</li>
-                <li>It will never be executed on a page that leaves the
-                website</li>
-            </ol>
-
-            <p>This site has JavaScript included in it on every page that is
-            set up to work with the code that the GA tracking macro
-            inserts.</p>
-
-            <p>Using the macro follows a very similar pattern, but looks like
-            this instead:
-            <pre><code class="html">{%- verbatim -%}&lt;a href=&quot;/link/&quot; {{ analytics.add_tracking(&quot;send&quot;, &quot;event&quot;, &quot;how to apply&quot;, &quot;click&quot;, &quot;csppmain&quot;) }}&gt;link&lt;/a&gt;{% endverbatim %}</code></pre>
-
-            <h2>The events macro</h2>
         </div><!-- span-12 -->
     </div><!-- container -->
 </div><!-- row -->

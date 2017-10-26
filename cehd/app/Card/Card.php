@@ -249,7 +249,7 @@ abstract class CardGroup extends BaseClass
         return $this;
     }
 
-    public function getCategories()
+    public function getCategories($sort=false)
     {
         $results = [];
         foreach ($this->_cards as $card) {
@@ -257,6 +257,10 @@ abstract class CardGroup extends BaseClass
             foreach ($categories as $key => $category) {
                 $results[$key] = $category;
             }
+        }
+
+        if ($sort) {
+            asort($results);
         }
 
         return $results;

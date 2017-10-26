@@ -224,7 +224,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
             $template_data = [
                 "section" => "patterns",
                 "item_data" => $cards,
-                "categories" => ["Categories" => $this->_patternCardsInstance->getCategories()],
+                "categories" => ["Categories" => $this->_patternCardsInstance->getCategories(true)],
                 "groups" => $this->_patternCardsInstance->getGroupNames(),
                 "item_data_json" => json_encode($cards),
             ];

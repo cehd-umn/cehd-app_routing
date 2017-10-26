@@ -1565,3 +1565,113 @@ Calendar icon SVG:
       type: include
   type: include
   uses: null
+People macro by tag:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of people from the People Tool by tag
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/cope-tools/people.html
+  twig_files: null
+  type: template
+  uses: null
+People macro by internet ID:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a person using their internet ID (X500)
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/cope-tools/person.html
+  twig_files: null
+  type: template
+  uses: null
+Events macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of people from the People Tool by tag
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/cope-tools/events.html
+  twig_files: null
+  type: template
+  uses: null
+Info sessions macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of info sessions
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/cope-tools/info-sessions.html
+  twig_files: null
+  type: template
+  uses: null
+CSS loader macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+  description: Creates a nice spinning loader while feeds load
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/loader.html
+  twig_files: null
+  type: template
+  uses: null
+Google Analytics event tracking macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+  description: Hooks custom events into Google Analytics
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/google-analytics.html
+  twig_files: null
+  type: template
+  uses: null
+News feed macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a news feed from any Wordpress RSS feed
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/cope-tools/news.html
+  twig_files: null
+  type: template
+  uses: null
+Table macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - tables
+  description: Simplifies creating accessible tables
+  group: macros
+  example_page_url: null
+  handler: null
+  template: cehd/patterns/macros/table.html
+  twig_files: null
+  type: template
+  uses: null

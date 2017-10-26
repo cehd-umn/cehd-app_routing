@@ -4,26 +4,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 {% endblock %}
-{% block append_content %}
-<div class="row">
-    <div class="container">
-        <div class="third feature margin-top-2">
-            <div class="cognito">
-                <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
-                <script>
-                    var url = window.location.href;
-                    Cognito.load("forms", {
-                        id: "130",
-                        entry: {
-                            "Url": url
-                        }
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
+{% block append_content %}{% endblock %}
 {% block extra_css %}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
     <style>
