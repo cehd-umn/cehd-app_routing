@@ -302,8 +302,10 @@ Evaluation Studies:
     - Evaluation and Methods
 Family and Community Engagement:
   meta: null
-  publish: false
-  links: null
+  publish: true
+  links: 
+    - title: Undergraduate Minor
+    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Deepen your understanding of nonprofit management, community development, program development and evaluation, culturally relevant programming and how families navigate systems such as schools and hospitals.
   categories:
     - Families, Youth, and Children
@@ -311,18 +313,24 @@ Family and Community Engagement:
     - Psychology, Counseling, and Social Work
 Family Financial Studies:
   meta: null
-  publish: false
-  links: null
+  publish: true
+  links: 
+    - title: Undergraduate Minor
+    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Prepare to work with families around financial issues, as a financial coach, counselor, or other delivery methods.
   categories:
     - Families, Youth, and Children
     - Psychology, Counseling, and Social Work
 Family Therapy:
   meta: null
-  publish: false
-  links: null
+  publish: true
+  links: 
+    - title: Undergraduate Minor
+    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Deepen your understanding of counseling practices, family therapy, and working with diverse families and cultures.
-  categories: null
+  categories: 
+    - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 Family Social Science:
   meta: null
   publish: true
