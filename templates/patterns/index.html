@@ -3,12 +3,21 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}{{ parent() }}
     <style>
+        nav {
+            max-height: 49vh;
+            overflow: scroll;
+        }
+
         nav li {
             padding: 5px;
         }
 
         nav li:hover {
             background: #eee;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
 {% endblock %}
@@ -27,11 +36,11 @@
                     {% endfor %}
                 </ul>
             </nav>
-            <article class="span-9" id="toc-container">
-                <dl>
+            <article class="span-9">
+                <dl id="toc-container">
                 {% for path, pattern in patterns %}
                     {% if path %}
-                    <dt id="p-{{ pattern.title|hyphenate }}-title" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}"><a href="/patterns{{ path }}">{{ pattern.title }}</a></dt>
+                    <dt id="p-{{ pattern.title|hyphenate }}-title" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}"><a class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}" href="/patterns{{ path }}">{{ pattern.title }}</a></dt>
                     <dd id="p-{{ pattern.title|hyphenate }}-description" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}">{{ pattern.description }}</dd>
                     {% endif %}
                 {% endfor %}

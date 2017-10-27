@@ -10356,7 +10356,7 @@ var FilterManager = function () {
         var self = this;
         this.historyManager = new historyManager();
         this.filterInputSelector = filterInputSelector;
-        this.$tocContainerSelector = $(tocContainerSelector);
+        this.$tocContainer = $(tocContainerSelector);
         this.$filterInputs = $(filterInputSelector);
 
         this.$filterInputs.on("change", function () {
@@ -10364,17 +10364,39 @@ var FilterManager = function () {
             var filters = self.getClassStr($selected_elements);
             var query_data = self.historyManager.cssClassesToParams(filters);
             var url = self.historyManager.makeURL(query_data);
+            self.filterElements(filters);
             self.historyManager.pushState(url);
         });
     }
 
-    /**
-     * @param string selector - a JQuery selector
-     * @return object - a JQuery object matching the selector that is also checked
-     */
-
-
     _createClass(FilterManager, [{
+        key: 'filterElements',
+        value: function filterElements(filter_classes) {
+            var filters = filter_classes.split(".").slice(1);
+            var self = this;
+
+            $(".hidden").removeClass("hidden");
+            $.each(filters, function (k, v) {
+                if (v === "*" || v === "") {
+                    $(".hidden").removeClass("hidden");
+                } else {
+                    var selector = ":not(.p-" + v + ")";
+                    console.log(selector);
+                    var $elements = self.$tocContainer.find(selector);
+
+                    $elements.each(function () {
+                        $(this).addClass("hidden");
+                    });
+                }
+            });
+        }
+
+        /**
+         * @param string selector - a JQuery selector
+         * @return object - a JQuery object matching the selector that is also checked
+         */
+
+    }, {
         key: 'getSelected',
         value: function getSelected(selector) {
             return $(selector + ":checked");

@@ -8,7 +8,7 @@ class FilterManager {
         let self = this;
         this.historyManager = new historyManager();
         this.filterInputSelector = filterInputSelector;
-        this.$tocContainerSelector = $(tocContainerSelector);
+        this.$tocContainer = $(tocContainerSelector);
         this.$filterInputs = $(filterInputSelector);
 
         this.$filterInputs.on("change", function() {
@@ -16,7 +16,28 @@ class FilterManager {
             const filters = self.getClassStr($selected_elements);
             const query_data = self.historyManager.cssClassesToParams(filters);
             const url = self.historyManager.makeURL(query_data);
+            self.filterElements(filters);
             self.historyManager.pushState(url);
+        });
+    }
+
+    filterElements(filter_classes) {
+        const filters = filter_classes.split(".").slice(1);
+        const self = this;
+
+        $(".hidden").removeClass("hidden");
+        $.each(filters, function(k, v) {
+            if (v === "*" || v === "") {
+                $(".hidden").removeClass("hidden");
+            } else {
+                const selector = ":not(.p-" + v + ")";
+                console.log(selector);
+                const $elements = self.$tocContainer.find(selector);
+
+                $elements.each(function() {
+                    $(this).addClass("hidden");
+                });
+            }
         });
     }
 
