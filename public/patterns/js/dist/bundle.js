@@ -10334,6 +10334,12 @@ var filterManager = __webpack_require__(2);
 
 var fm = new filterManager("#toc-container", ".category-select");
 
+fm.setUIState(window.location.search, '.toc-select');
+
+window.onpopstate = function () {
+    fm.setUIState(window.location.search, '.toc-select');
+};
+
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10367,6 +10373,17 @@ var FilterManager = function () {
             self.filterElements(filters);
             self.historyManager.pushState(url);
         });
+
+        /**
+        * Adds an uncheckAll function to JQuery
+        */
+        $.fn.extend({
+            uncheckAll: function uncheckAll() {
+                return this.each(function () {
+                    this.checked = false;
+                });
+            }
+        });
     }
 
     _createClass(FilterManager, [{
@@ -10381,7 +10398,6 @@ var FilterManager = function () {
                     $(".hidden").removeClass("hidden");
                 } else {
                     var selector = ":not(.p-" + v + ")";
-                    console.log(selector);
                     var $elements = self.$tocContainer.find(selector);
 
                     $elements.each(function () {
@@ -10432,6 +10448,53 @@ var FilterManager = function () {
             }
 
             return query_data;
+        }
+    }, {
+        key: 'loadQueryParams',
+        value: function loadQueryParams(search) {
+            var query_data = this.getQueryData(search);
+            var filters = "";
+
+            if (typeof query_data.filters !== "undefined" && query_data.filters.length > 0) {
+                filters = query_data.filters.join(".");
+                filters = "." + filters;
+            }
+            return filters;
+        }
+    }, {
+        key: 'setUIState',
+        value: function setUIState(search, all_checkbox_selector) {
+            var filters = this.loadQueryParams(search);
+            var query_data = this.getQueryData(search);
+            this.manageFilterState(filters, query_data, all_checkbox_selector);
+            this.filterElements(filters);
+        }
+    }, {
+        key: 'setChecked',
+        value: function setChecked(element_selector, checked) {
+            $(element_selector).prop("checked", checked);
+        }
+
+        /**
+         *
+         * @param filters - string for use in isotope
+         * @param query_data - object - an object containing filter data
+         * @param $tocContainer - A JQuery object representing the cards container
+         */
+
+    }, {
+        key: 'manageFilterState',
+        value: function manageFilterState(filters, query_data, all_checkbox_selector) {
+            var no_filters_should_be_checked = filters.length === 0;
+            var self = this;
+            var $all_buttons = $(all_checkbox_selector);
+
+            $all_buttons.uncheckAll();
+
+            $.each(query_data.filters, function (k, v) {
+                var element_selector = "#" + v + "-filter";
+                self.setChecked(element_selector, true);
+            });
         }
     }]);
 

@@ -30,7 +30,7 @@
                 <ul class="no-bullet" id="filter-list">
                     {% for category in categories %}
                     <li>
-                        <input type="checkbox" id="{{ category|hyphenate }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category|hyphenate }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
+                        <input type="checkbox" id="{{ category|hyphenate }}-filter" name="category-button-group" class="toc-select category-select" data-filter=".{{ category|hyphenate }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
                         <label for="{{ category|hyphenate }}-filter">{{ category }}</label>
                     </li>
                     {% endfor %}

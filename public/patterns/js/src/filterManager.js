@@ -19,6 +19,17 @@ class FilterManager {
             self.filterElements(filters);
             self.historyManager.pushState(url);
         });
+
+        /**
+        * Adds an uncheckAll function to JQuery
+        */
+        $.fn.extend({
+            uncheckAll: function() {
+                return this.each(function() {
+                    this.checked = false;
+                });
+            }
+        });
     }
 
     filterElements(filter_classes) {
@@ -31,7 +42,6 @@ class FilterManager {
                 $(".hidden").removeClass("hidden");
             } else {
                 const selector = ":not(.p-" + v + ")";
-                console.log(selector);
                 const $elements = self.$tocContainer.find(selector);
 
                 $elements.each(function() {
@@ -75,6 +85,48 @@ class FilterManager {
         }
 
         return query_data;
+    }
+
+    loadQueryParams(search) {
+        const query_data = this.getQueryData(search);
+        let filters = "";
+
+        if (typeof query_data.filters !== "undefined" && query_data.filters.length > 0) {
+            filters = query_data.filters.join(".");
+            filters = "." + filters;
+        }
+        return filters;
+    }
+
+    setUIState(search, all_checkbox_selector) {
+        const filters = this.loadQueryParams(search);
+        const query_data = this.getQueryData(search);
+        this.manageFilterState(filters, query_data, all_checkbox_selector);
+        this.filterElements(filters);
+    }
+
+    setChecked(element_selector, checked) {
+        $(element_selector).prop("checked", checked);
+    }
+
+    /**
+     *
+     * @param filters - string for use in isotope
+     * @param query_data - object - an object containing filter data
+     * @param $tocContainer - A JQuery object representing the cards container
+     */
+    manageFilterState(filters, query_data, all_checkbox_selector) {
+        const no_filters_should_be_checked = filters.length === 0;
+        const self = this;
+        const $all_buttons = $(all_checkbox_selector);
+
+        $all_buttons.uncheckAll();
+
+        $.each(query_data.filters, function(k, v) {
+            const element_selector = "#" + v + "-filter";
+            self.setChecked(element_selector, true);
+        });
+
     }
 }
 
