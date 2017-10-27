@@ -10332,7 +10332,7 @@ return jQuery;
 
 var filterManager = __webpack_require__(2);
 
-var fm = new filterManager("#toc-container", ".category-select");
+var fm = new filterManager("#toc-container", ".category-select", ".active-filter-list");
 
 fm.setUIState(window.location.search, '.toc-select');
 
@@ -10356,7 +10356,7 @@ var $ = __webpack_require__(0);
 var historyManager = __webpack_require__(7);
 
 var FilterManager = function () {
-    function FilterManager(tocContainerSelector, filterInputSelector) {
+    function FilterManager(tocContainerSelector, filterInputSelector, filterListContainerSelector) {
         _classCallCheck(this, FilterManager);
 
         var self = this;
@@ -10370,8 +10370,16 @@ var FilterManager = function () {
             var filters = self.getClassStr($selected_elements);
             var query_data = self.historyManager.cssClassesToParams(filters);
             var url = self.historyManager.makeURL(query_data);
+            var filter_names = [];
             self.filterElements(filters);
             self.historyManager.pushState(url);
+
+            $.each($selected_elements, function () {
+                var label_text = $("label[for='" + $(this).attr('id') + "']").text();
+                filter_names.push(label_text);
+            });
+
+            self.manageFilterList(filter_names, filterListContainerSelector);
         });
 
         /**
@@ -10479,7 +10487,7 @@ var FilterManager = function () {
          *
          * @param filters - string for use in isotope
          * @param query_data - object - an object containing filter data
-         * @param $tocContainer - A JQuery object representing the cards container
+         * @param all_checkbox_selector - string - class selector to target all checkboxes
          */
 
     }, {
@@ -10495,6 +10503,13 @@ var FilterManager = function () {
                 var element_selector = "#" + v + "-filter";
                 self.setChecked(element_selector, true);
             });
+        }
+    }, {
+        key: 'manageFilterList',
+        value: function manageFilterList(filter_names, container_selector) {
+            var $container = $(container_selector);
+            $container.text(filter_names.join(", "));
+            console.log(filter_names, container_selector);
         }
     }]);
 

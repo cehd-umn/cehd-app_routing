@@ -4,7 +4,7 @@ const historyManager = require("./historyManager.js");
 
 class FilterManager {
 
-    constructor(tocContainerSelector, filterInputSelector) {
+    constructor(tocContainerSelector, filterInputSelector, filterListContainerSelector) {
         let self = this;
         this.historyManager = new historyManager();
         this.filterInputSelector = filterInputSelector;
@@ -16,8 +16,16 @@ class FilterManager {
             const filters = self.getClassStr($selected_elements);
             const query_data = self.historyManager.cssClassesToParams(filters);
             const url = self.historyManager.makeURL(query_data);
+            const filter_names = [];
             self.filterElements(filters);
             self.historyManager.pushState(url);
+
+            $.each($selected_elements, function() {
+                const label_text = $("label[for='" + $(this).attr('id') + "']").text();
+                filter_names.push(label_text);
+            });
+
+            self.manageFilterList(filter_names, filterListContainerSelector);
         });
 
         /**
@@ -113,7 +121,7 @@ class FilterManager {
      *
      * @param filters - string for use in isotope
      * @param query_data - object - an object containing filter data
-     * @param $tocContainer - A JQuery object representing the cards container
+     * @param all_checkbox_selector - string - class selector to target all checkboxes
      */
     manageFilterState(filters, query_data, all_checkbox_selector) {
         const no_filters_should_be_checked = filters.length === 0;
@@ -127,6 +135,12 @@ class FilterManager {
             self.setChecked(element_selector, true);
         });
 
+    }
+
+    manageFilterList(filter_names, container_selector) {
+        const $container = $(container_selector);
+        $container.text(filter_names.join(", "));
+        console.log(filter_names, container_selector);
     }
 }
 
