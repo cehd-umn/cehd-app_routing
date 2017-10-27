@@ -94,6 +94,10 @@
             min-height: 100px;
             max-width: 200px;
         }
+
+        samp {
+            font-family: monospace;
+        }
     </style>
 {% endblock %}
 {% block main_content %}
@@ -106,7 +110,7 @@
             <dt>${{ name }}</dt>
             <dd>
                 <dl>
-                    <dt>{{ value }}</dt>
+                    <dt><samp>{{ value }}</samp></dt>
                     <dd class="swatch {{ name }}"></dd>
                 </dl>
             </dd>

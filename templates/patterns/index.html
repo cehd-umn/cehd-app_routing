@@ -1,15 +1,9 @@
 {% extends "patterns/layout/base.html" %}
-{% block bottom_js %}
-{% endblock %}
 {% set page_title = "Pattern Library" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}{{ parent() }}
     <style>
         nav li {
-            padding: 0;
-        }
-
-        nav li a {
             padding: 5px;
         }
 
@@ -23,13 +17,17 @@
         <div class="container">
             <h1>Pattern library</h1>
             <nav class="span-3">
-                <ul class="no-bullet">
+                <h2 class="h6">Categories</h2>
+                <ul class="no-bullet" id="filter-list">
                     {% for category in categories %}
-                    <li><a class="p-nav-filter" href="?category={{ category|hyphenate }}">{{ category }}</a></li>
+                    <li>
+                        <input type="checkbox" id="{{ category|hyphenate }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category|hyphenate }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
+                        <label for="{{ category|hyphenate }}-filter">{{ category }}</label>
+                    </li>
                     {% endfor %}
                 </ul>
             </nav>
-            <article class="span-9">
+            <article class="span-9" id="toc-container">
                 <dl>
                 {% for path, pattern in patterns %}
                     {% if path %}
@@ -41,4 +39,9 @@
             </article>
         </div>
     </article>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="../js/dist/bundle.js"></script>
+<script>
+</script>
 {% endblock %}
