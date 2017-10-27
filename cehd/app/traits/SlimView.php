@@ -4,18 +4,12 @@ namespace CEHD\App;
 
 trait SlimView
 {
-    public function configureTwigForSlim(
-        \Slim\Container $container,
+    public function setUpTwig(
         array $app_config,
         array $filter_method_names,
-        array $nav_items,
         bool $autoescape,
         bool $autoreload,
-        bool $debug,
-        string $inline_styles,
-        string $inline_svg_styles,
-        string $inline_nav_styles,
-        string $base_path
+        bool $debug
         )
     {
         $view = new \Slim\Views\Twig(__DIR__ . "/../../../templates", [
@@ -28,10 +22,6 @@ trait SlimView
         $twig = $view->getEnvironment();
 
         $twig->addGlobal('config', $app_config);
-        $twig->addGlobal('nav_items', $nav_items);
-        $twig->addGlobal('inline_styles', $inline_styles);
-        $twig->addGlobal('inline_svg_styles', $inline_svg_styles);
-        $twig->addGlobal('inline_nav_styles', $inline_nav_styles);
 
         foreach ($filter_method_names as $filter_method) {
             // @xxx Will change in version 2 of Twig
@@ -39,8 +29,12 @@ trait SlimView
             $twig->addFilter($filter);
         }
 
-        $view->addExtension(new \Slim\Views\TwigExtension($container['router'], $base_path));
+        return $view;
+    }
 
+    public function configureTwigForSlim(\Slim\Container $container, $view, string $base_path)
+    {
+        $view->addExtension(new \Slim\Views\TwigExtension($container['router'], $base_path));
         return $view;
     }
 }

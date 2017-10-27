@@ -1,0 +1,64 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "12-Column Grid" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>12-column Grid that doesn't collapses on small screens</h1>
+    <div class="span-12">
+        <pre><code>
+{% for i in 1..12 %}
+&lt;div class=&quot;super-span-1&quot;&gt;{{ i }}&lt;/div&gt;
+{% endfor %}
+        </code></pre>
+    </div>
+    <div class="span-12 margin-top-1">
+        {% for i in 1..12 %}
+            <div class="super-span-1 grid-example">{{ i }}</div>
+        {% endfor %}
+    </div>
+    <div class="span-12 margin-top-3">
+        <h2>Spanning columns</h2>
+
+        <p>To span two of those columns, you would use the <samp>.super-span-2</samp>
+        class like this:</p>
+    </div>
+    <div class="span-12">
+        <pre><code>
+{% for i in 1..12 %}
+&lt;div class=&quot;super-span-1&quot;&gt;{{ i }}&lt;/div&gt;
+{% endfor %}
+&lt;div class=&quot;super-span-2&quot;&gt;.super-span-2&lt;/div&gt;
+        </code></pre>
+    </div>
+    <div class="span-12">
+        {% for i in 1..12 %}
+            <div class="super-span-1 grid-example">{{ i }}</div>
+        {% endfor %}
+    </div>
+    <div class="span-12 margin-top-1">
+        <div class="super-span-2 grid-example">.super-span-2</div>
+    </div>
+
+    <div class="span-12 margin-top-3">
+        <p>You can also use these in different combinations to achieve the result
+        you want <em>as long as the <samp>.super-span-x</samp> values add up to
+        12</em>.</p>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="super-span-10 grid-example">.super-span-10</div>
+        <div class="super-span-2 grid-example">.super-span-2</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="super-span-4 grid-example">.super-span-4</div>
+        <div class="super-span-8 grid-example">.super-span-8</div>
+    </div>
+    <div class="margin-top-1 span-12">
+        <div class="super-span-6 grid-example">.super-span-6</div>
+        <div class="super-span-2 grid-example">.super-span-2</div>
+        <div class="super-span-2 grid-example">.super-span-2</div>
+        <div class="super-span-2 grid-example">.super-span-2</div>
+    </div>
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

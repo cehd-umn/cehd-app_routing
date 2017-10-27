@@ -1,0 +1,1677 @@
+---
+page layout:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Basic components for laying out a page.
+  group: page
+  example_page_url: null
+  handler: null
+  template: patterns/page/index.html
+  twig_files: null
+  type: template
+  uses: null
+headings:
+  publish: true
+  meta: null
+  categories:
+    - tags
+    - fonts
+    - headings
+  description: Default heading styles and associated css classes
+  group: html
+  example_page_url: null
+  handler: null
+  template: patterns/html/headings.html
+  twig_files: null
+  type: template
+  uses: null
+layout and grid:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Examples for simple page layouts
+  group: css
+  example_page_url: null
+  handler: null
+  template: patterns/css/layout-grid.html
+  twig_files: null
+  type: template
+  uses:
+    - row
+    - container
+row:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates a fluid 100% width element.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/row.html
+      type: include
+  type: include
+  uses: null
+container:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates a centered, fluid element with max-width of 1400px;
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/container.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+half:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates half width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/half.html
+      type: include
+  type: include
+  uses: null
+third:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates one-third width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/third.html
+      type: include
+  type: include
+  uses: null
+two third:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates one-third width columns.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/two-third.html
+      type: include
+  type: include
+  uses: null
+centered elements:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: Creates a centered element on the page
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/centered-element.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: Yellow background
+    - group: css
+      name: Blue background
+    - group: css
+      name: Grey background
+12-column grid:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - grid
+  description: Classes for using the 12-column grid
+  group: css
+  example_page_url: null
+  handler: null
+  template: patterns/css/grid.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+12-column grid that never breaks:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - grid
+  description: Classes for using the 12-column grid with no breakpoints
+  group: css
+  example_page_url: null
+  handler: null
+  template: patterns/css/grid-no-break.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+yellow background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+  description: Gives an element a consistent yellow background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/yellow-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+blue background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+  description: Gives an element a consistent blue background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/blue-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+grey background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+  description: Gives an element a consistent grey background.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/grey-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+multi-color background:
+  publish: true
+  meta: null
+  categories:
+    - background image
+  description: Gives an element a consistent a background with the CEHD logo repeated.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/multi-color-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+pull quote:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - quotes
+  description: Gives text the proper size and padding for a pull quote.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/pull-quote.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: Yellow background
+standard button:
+  publish: true
+  meta: null
+  categories:
+    - buttons
+    - background color
+  description: Creates a standard button with hover effects
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-standard.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: Grey background
+    - group: css
+      name: centered elements
+clear button:
+  publish: true
+  meta: null
+  categories:
+    - buttons
+    - background color
+  description: Creates a standard button with a transparent background
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-clear.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: centered elements
+    - group: css
+      name: standard button
+partial blue background:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - background color
+  description: Gives an element a partial blue background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/partial-blue-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: Blue background
+half yellow background:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - background color
+  description: Gives an element a half-width yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/partial-yellow-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: yellow background
+third yellow background:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - background color
+  description: Gives an element a third-width yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/partial-yellow-background-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: yellow background
+    - group: css
+      name: half yellow background
+two-third yellow background:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - background color
+  description: Gives an element a two third-width yellow background from the right side.
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/partial-yellow-background-twothird.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+    - group: css
+      name: yellow background
+    - group: css
+      name: half yellow background
+box corners:
+  publish: true
+  meta: null
+  categories:
+    - corners
+  description: Creates a box with angles in the corners
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/box-corners.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+centered text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - text alignment
+  description: Center justifies text.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/centered-text.html
+      type: include
+  type: include
+  uses: null
+right text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - text alignment
+  description: Right justifies text.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/right-text.html
+      type: include
+  type: include
+  uses: null
+left text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - text alignment
+  description: Left justifies text.
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/left-text.html
+      type: include
+  type: include
+  uses: null
+plain text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - font size
+    - font weight
+  description: An override class to return text to the default weight and size
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/plain-text.html
+      type: include
+  type: include
+  uses: null
+centered button:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - buttons
+    - element horizontal alignment
+  description: creates a centered button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-centered.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+    - group: css
+      name: centered button
+    - group: css
+      name: centered elements
+simple button:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - buttons
+    - element horizontal alignment
+  description: creates a simple centered button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-simple.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+    - group: css
+      name: centered button
+    - group: css
+      name: centered elements
+simple green button:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - buttons
+    - element horizontal alignment
+  description: creates a simple centered green button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-simple-green.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+    - group: css
+      name: centered button
+    - group: css
+      name: centered elements
+simple maroon button:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - buttons
+    - element horizontal alignment
+  description: creates a simple centered green button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/button-simple-maroon.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+    - group: css
+      name: centered button
+    - group: css
+      name: centered elements
+uppercase buttons:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - buttons
+    - element horizontal alignment
+    - text
+    - text transformation
+    - uppercase
+  description: creates a simple centered green button
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/buttons-uppercase.html
+      type: include
+  type: include
+  uses:
+    - group: text
+      name: centered text
+    - group: css
+      name: standard button
+    - group: css
+      name: centered button
+    - group: css
+      name: centered elements
+    - group: text
+      name: uppercase text
+removing top margin:
+  publish: true
+  meta: null
+  categories:
+    - margin-top
+    - element vertical alignment
+  description: removes top margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/margin-top-remove.html
+      type: include
+  type: include
+  uses: null
+adding top margin:
+  publish: true
+  meta: null
+  categories:
+    - margin-top
+    - element vertical alignment
+  description: adds top margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/margin-top.html
+      type: include
+  type: include
+  uses: null
+adding bottom margin:
+  publish: true
+  meta: null
+  categories:
+    - margin-bottom
+    - element vertical alignment
+  description: adds bottom margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/margin-bottom.html
+      type: include
+  type: include
+  uses: null
+small text:
+  publish: true
+  meta: null
+  categories:
+    - tags
+    - text
+    - font size
+  description: Smaller font size
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/small.html
+      type: include
+  type: include
+  uses: null
+sub headings:
+  publish: true
+  meta: null
+  categories:
+    - headings
+    - font size
+  description: Sub headings with smaller text
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/sub-headings.html
+      type: include
+  type: include
+  uses:
+    - group: html
+      name: small text
+hiding images on mobile:
+  publish: true
+  meta: null
+  categories:
+    - mobile styles
+    - images
+  description: Hides images for small screens
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/hiding-images-on-mobile.html
+      type: include
+  type: include
+  uses: null
+red text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - font color
+  description: Gives text a red color
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/red-text.html
+      type: include
+  type: include
+  uses: null
+wrapping blockquotes with fancy quotes:
+  publish: true
+  meta: null
+  categories:
+    - quotes
+  description: Puts curly quotes around a block quote
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/fancy-quote.html
+      type: include
+  type: include
+  uses: null
+uppercase text:
+  publish: true
+  meta: null
+  categories:
+    - text
+    - uppercase
+    - text transform
+  description: Changes text to all uppercase
+  group: text
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/text/includes/uppercase.html
+      type: include
+  type: include
+  uses: null
+plus symbol SVG:
+  publish: true
+  meta: null
+  categories:
+    - images
+    - svg
+  description: SVG plus symbol graphic
+  group: images
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/images/includes/svg-plus-symbol.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+WPLC Background:
+  publish: true
+  meta: null
+  categories:
+    - images
+    - svg
+  description: WPLC background image
+  group: images
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/wplc-background.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+lists without bullets or numbers:
+  publish: true
+  meta: null
+  categories:
+    - ordered lists
+    - unordered lists
+  description: Creates a list without bullets or numbers
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/lists-no-bullets.html
+      type: include
+  type: include
+  uses: null
+indented lists without bullets or numbers:
+  publish: true
+  meta: null
+  categories:
+    - lists
+  description: Gives extra indentation to no-bullet lists
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/lists-no-bullets-indented.html
+      type: include
+  type: include
+  uses: null
+lists with headings:
+  publish: true
+  meta: null
+  categories:
+    - ordered lists
+  description: Creates an ordered list with numbers the same size as the headings
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/lists-with-headings.html
+      type: include
+  type: include
+  uses: null
+a tag:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+  description: Default styles for a tags
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/a.html
+      type: include
+  type: include
+  uses: null
+fonts:
+  publish: true
+  meta: null
+  categories:
+    - defaults
+    - html
+    - text
+    - fonts
+  description: Default text size and margins
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/fonts.html
+      type: include
+  type: include
+  uses: null
+dl tag:
+  publish: true
+  meta: null
+  categories:
+    - defaults
+    - lists
+    - html
+    - tags
+  description: Default styles for definition lists
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/dl.html
+      type: include
+  type: include
+  uses: null
+em tag:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+  description: Default styles for italic text
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/em.html
+      type: include
+  type: include
+  uses: null
+strong tag:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+    - font weight
+  description: Default styles for bold text
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/strong.html
+      type: include
+  type: include
+  uses: null
+ul and ol tags:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+    - lists
+  description: Default styles for ordered and unordered lists
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/lists.html
+      type: include
+  type: include
+  uses: null
+p tag:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+  description: Default styles for paragraphs
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/p.html
+      type: include
+  type: include
+  uses: null
+tables:
+  publish: true
+  meta: null
+  categories:
+    - html
+    - tags
+    - defaults
+  description: Default styles for tables
+  group: html
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/html/includes/tags/table.html
+      type: include
+  type: include
+  uses: null
+column divider:
+  publish: true
+  meta: null
+  categories:
+    - layout
+  description: A vertical divider between columns
+  group: page
+  example_page_url: null
+  handler: null
+  template: patterns/css/divider.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: third
+    - group: css
+      name: half
+    - group: css
+      name: two third
+    - group: css
+      name: 12-column grid
+hero image page:
+  publish: true
+  meta: null
+  categories:
+    - layout
+    - hero image page
+    - images
+  description: Code sample for a page with a hero image
+  group: page
+  example_page_url: null
+  handler: null
+  template: patterns/page/hero.html
+  twig_files: null
+  type: template
+  uses:
+    - group: css
+      name: uppercase buttons
+    - group: css
+      name: clear buttons
+    - group: css
+      name: third
+    - group: css
+      name: two third
+    - group: css
+      name: 12-column grid
+    - group: css
+      name: container
+    - group: css
+      name: row
+image with caption:
+  publish: true
+  meta: null
+  categories:
+    - images
+  description: Default styles for figures and figcaptions
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/images/includes/image-with-caption.html
+      type: include
+  type: include
+  uses: null
+vertically aligning headings with images:
+  publish: true
+  meta: null
+  categories:
+    - images
+    - element vertical alignment
+  description: Removing the top margin from a heading so it aligns with the top of a heading
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/images/includes/image-heading-alignment.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: half
+cropping images to a circle:
+  publish: true
+  meta: null
+  categories:
+    - images
+    - cropping images
+    - circular images
+  description: Cropping square and thumbnail images to a circle
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/images/includes/image-circular.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+positioning images:
+  publish: true
+  meta: null
+  categories:
+    - images
+    - layout
+  description: Best practices for positioning images on a page
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/images/includes/image-positioning.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: 12-column grid
+    - group: css
+      name: half
+    - group: css
+      name: third
+    - group: css
+      name: twothird
+colors:
+  publish: true
+  meta: null
+  categories:
+    - colors
+  description: Our predefined color pallete
+  group: css
+  example_page_url: null
+  handler: null
+  template: patterns/colors/index.html
+  twig_files: null
+  type: template
+  uses: null
+did you know SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?"
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+did you know SVG with yellow background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?"
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-yellow.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: yellow background
+    - group: svg
+      name: did you know SVG
+did you know SVG with blue background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a blue background
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-blue.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG
+did you know SVG with a one-third blue background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one third blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-blue-one-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG with blue background
+    - group: svg
+      name: did you know SVG
+did you know SVG with a one-half blue background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one half blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-blue-one-half.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG with blue background
+    - group: svg
+      name: did you know SVG
+did you know SVG with a two-third blue background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a one two third blue background from the right
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-blue-two-third.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: blue background
+    - group: svg
+      name: did you know SVG
+    - group: svg
+      name: did you know SVG with blue background
+did you know SVG with grey background:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - macros
+    - svg
+    - twig
+  description: Creates an inline SVG for "Did you know?" with a grey background
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/macros/includes/svg/did-you-know-background-grey.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: centered elements
+    - group: css
+      name: half
+    - group: css
+      name: grey background
+Plus icon SVG include:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Plus symbol
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/plus.html
+      type: include
+  type: include
+  uses: null
+Vimeo icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Vimeo logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/vimeo.html
+      type: include
+  type: include
+  uses: null
+YouTube icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the YouTube logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/youtube.html
+      type: include
+  type: include
+  uses: null
+Twitter icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Twitter logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/twitter.html
+      type: include
+  type: include
+  uses: null
+Facebook icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Facebook logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/facebook.html
+      type: include
+  type: include
+  uses: null
+Instagram icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Instagram logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/instagram.html
+      type: include
+  type: include
+  uses: null
+Pinterest icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Pinterest logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/pinterest.html
+      type: include
+  type: include
+  uses: null
+LinkedIn icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the LinkedIn logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/linkedin.html
+      type: include
+  type: include
+  uses: null
+Email icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Email logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/email.html
+      type: include
+  type: include
+  uses: null
+Calendar icon SVG:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - svg
+    - twig
+    - social media icons
+  description: Creates an accessible inline SVG with the Calendar logo
+  group: svg
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/twig/includes/includes/svg/calendar.html
+      type: include
+  type: include
+  uses: null
+People macro by tag:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of people from the People Tool by tag
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/cope-tools/people.html
+  twig_files: null
+  type: template
+  uses: null
+People macro by internet ID:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a person using their internet ID (X500)
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/cope-tools/person.html
+  twig_files: null
+  type: template
+  uses: null
+Events macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of people from the People Tool by tag
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/cope-tools/events.html
+  twig_files: null
+  type: template
+  uses: null
+Info sessions macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a list of info sessions
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/cope-tools/info-sessions.html
+  twig_files: null
+  type: template
+  uses: null
+CSS loader macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+  description: Creates a nice spinning loader while feeds load
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/loader.html
+  twig_files: null
+  type: template
+  uses: null
+Google Analytics event tracking macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+  description: Hooks custom events into Google Analytics
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/google-analytics.html
+  twig_files: null
+  type: template
+  uses: null
+News feed macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - cope tools
+  description: Pulls in a news feed from any Wordpress RSS feed
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/cope-tools/news.html
+  twig_files: null
+  type: template
+  uses: null
+Table macro:
+  publish: true
+  meta: null
+  categories:
+    - macros
+    - tables
+  description: Simplifies creating accessible tables
+  group: macros
+  example_page_url: null
+  handler: null
+  template: patterns/macros/table.html
+  twig_files: null
+  type: template
+  uses: null

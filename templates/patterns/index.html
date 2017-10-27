@@ -1,0 +1,44 @@
+{% extends "patterns/layout/base.html" %}
+{% block bottom_js %}
+{% endblock %}
+{% set page_title = "Pattern Library" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}{{ parent() }}
+    <style>
+        nav li {
+            padding: 0;
+        }
+
+        nav li a {
+            padding: 5px;
+        }
+
+        nav li:hover {
+            background: #eee;
+        }
+    </style>
+{% endblock %}
+{% block main_content %}
+    <article class="row">
+        <div class="container">
+            <h1>Pattern library</h1>
+            <nav class="span-3">
+                <ul class="no-bullet">
+                    {% for category in categories %}
+                    <li><a class="p-nav-filter" href="?category={{ category|hyphenate }}">{{ category }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <article class="span-9">
+                <dl>
+                {% for path, pattern in patterns %}
+                    {% if path %}
+                    <dt id="p-{{ pattern.title|hyphenate }}-title" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}"><a href="/patterns{{ path }}">{{ pattern.title }}</a></dt>
+                    <dd id="p-{{ pattern.title|hyphenate }}-description" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}">{{ pattern.description }}</dd>
+                    {% endif %}
+                {% endfor %}
+                </dl>
+            </article>
+        </div>
+    </article>
+{% endblock %}
