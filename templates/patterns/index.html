@@ -16,8 +16,34 @@
             background: #eee;
         }
 
+        dt,
+        dd,
+        dt a {
+            background-color: #fff;
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height .5s, background-color .3s;
+        }
+
         .hidden {
-            display: none;
+            background-color: #eee;
+            border: 0;
+            margin: 0;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        nav {
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 16px 0 16px 16px;
+        }
+
+        .active-filter-container {
+            height: 180px;
+            overflow: scroll;
         }
     </style>
 {% endblock %}
@@ -26,7 +52,7 @@
         <div class="container">
             <h1>Pattern library</h1>
             <div class="span-3">
-                <div class="emphasis subtle">
+                <div class="active-filter-container emphasis subtle margin-bottom-24">
                     <p>Active filters:</p>
                     <div class="active-filter-list">none</div>
                 </div>
