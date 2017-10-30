@@ -1030,11 +1030,6 @@
   template: cehd/commencement/index-for-jan-2018.html
   template_data:
     - section: commencement
-/direct/:
-  publish: true
-  template: cehd/direct/index.html
-  template_data:
-    - section: direct
 /diversity/:
   publish: true
   template: cehd/diversity/index.html
