@@ -38,7 +38,7 @@ People Tool asynchronous.
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
-            document.title = results.nameFirstLast + " | " + page_title;
+            document.title = person.nameFirstLast + " | " + page_title;
             renderer.init(template_params);
             renderer.render();
         });
