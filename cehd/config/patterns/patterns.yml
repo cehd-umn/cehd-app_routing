@@ -646,7 +646,7 @@ uppercase buttons:
     - buttons
     - element horizontal alignment
     - text
-    - text transformation
+    - text transform
     - uppercase
   description: creates a simple centered green button
   group: css
