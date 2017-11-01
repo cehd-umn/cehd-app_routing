@@ -15,6 +15,7 @@ class Renderer {
     }
 
 
+    // @todo This initializiation can go in the constructor
     init(params) {
         this.settings = this._mergeOptions(params);
         this.env = nunjucks.configure(this.settings.template_path, { autoescape: true });
