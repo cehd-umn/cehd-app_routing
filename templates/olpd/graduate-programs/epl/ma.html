@@ -1,0 +1,120 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "OLPD MA - Educational Policy and Leadership" %}
+{% block title %}
+  OLPD MA - Educational Policy and Leadership
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+
+    <div class="container">
+        <h1>M.A. in OLPD: <br  />Educational policy and leadership</h1>
+
+    <div class="twothird feature">
+        <p>The Educational Policy and Leadership (EPL) track in the OLPD M.A. program is about gaining a mastery of skills and knowledge in how politics, policies, and organizational cultures affect pre-K-12 education and development. Striking a responsive balance between theory and practice, our program prepares students to:</p>
+            <ul class="bullet">
+                <li>Assess school organization and policies, instructional strategies, and student outcomes.</li>
+                <li>Understand the role of personal epistemologies and the role in systematic reproductive oppressive trends in educating minoritized students.</li>
+                <li>Design and implement programs to address needs and create change in support of student learning and success.</li>
+                <li>Identify the particular skills and values necessary to executing collaborative school and system improvement.</li>
+            </ul>
+    </div>
+    </div>
+
+    <div class="row emphasis margin-top-2">
+    <div class="container span-9 feature">
+        <h2>About our students</h2>
+            <div class="third">
+                <img class="circular" src="/assets/images/headshots/student-features/sq-MendozaGenesis-2017.jpg" alt="Genesis Mendoza">
+            </div>
+    <div class="twothird">
+        <blockquote class="quote-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ligula sed mi condimentum, sit amet euismod ex gravida. Curabitur tincidunt viverra risus, at venenatis nisi ornare vitae. Nam ornare nisi quam, sit amet consequat nunc faucibus eu. Ut viverra faucibus purus. Nam a tempor ex. Vestibulum dignissim, felis vel.</blockquote>
+
+        <p align="right" class="speaker">Nam a tempor ex<br/>
+        Business and Marketing Education<br/></p>
+    </div>
+    </div>
+    </div>
+
+    <div class="container feature twothird">
+        <h2>Benefits</h2>
+
+            <p>M.A. students in Education Policy and Leadership graduate with the ability to:</p>
+                <ul class="bullet">
+                    <li>Understand classroom and school dynamics, and implement research-based changes for student success.</li>
+                    <li>Apply research-driven strategies and programs to balance the needs of students, families, teachers, and administrators.</li>
+                    <li>Prepare for a doctoral program or to work in PK-12 educational settings.</li>
+                    <li>Engage in a community with leading researchers, faculty members, and administrators all committed to the improvement of teaching and learning.</li>
+                    <li>Navigate and understand the complex world of education and provide insights to support common benefits.</li>
+                </ul>
+    </div>
+
+    <div class="container">
+        <div class=span-6>
+            <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>Research fellow</li>
+                    <li>Research assistant</li>
+                    <li>Teacher leader</li>
+                    <li>Teaching and learning specialist</li>
+                    <li>Educational consultant</li>
+                </ul>
+        </div>
+
+        <div class=span-6>
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li><strong>Accelerated option:</strong> 30-32 credits completed in 1 year for full time students</li>
+                    <li><strong>Plan A option:</strong> 30-36 credits (with master's thesis) completed in 2 years for full time students</li>
+                    <li><strong>Plan B option:</strong> 30-32 credits (without thesis but with additional coursework) completed in 2 years for full time students</li>
+                    <li>Curriculum [link]</li>
+                    <li>EPL course offerings [link]</li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/kpekel">Katie Pekel, Coordinator</a><br>
+            Educational Policy and Leadership<br>
+            612-625-7002 | <a href="mailto:kpekel@umn.edu">kpekel@umn.edu</a></p>
+    </div>
+
+    <div class="row emphasis subtle margin-top-1">
+        <div class="container span-9 feature">
+            <h2 class="text-center">Program handbooks and forms</h2>
+
+        <div class="span-6 ">
+            <h3>Handbooks</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2017-18.pdf">2017-2018</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2016-17.pdf">2016-2017</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MA2015-16.pdf">2015-2016</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MA2014-15.pdf">2014-2015</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MA2013-14.pdf">2013-2014</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MA2012-13.pdf">2012-2013</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/MA2011-12.pdf">2011-2012</a></li>
+                </ul>
+        </div>
+
+        <div class="span-6">
+            <h3>Forms</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/MABEPL2016.pdf">Program planning sheet (Accelerated &amp; Plan B)</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/MAAEPL2016.pdf">Program planning sheet (Plan A)</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/DirIndStudyProposal.pdf">Directed Study/Independent Study Proposal</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/AdviserChange.pdf">Change of Adviser</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/Grad999.pdf">Grad 999</a></li>
+                    <li><a href="https://onestop.umn.edu/academics/leave-absence-loa">Leave of Absence</a></li>
+                </ul>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div><!-- close row -->
+{% endblock %}

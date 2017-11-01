@@ -1,0 +1,113 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "OLPD PhD - Higher Education" %}
+{% block title %}
+  OLPD PhD - Higher Education
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+
+    <div class="container">
+        <h1>Ph.D. in OLPD: <br  />Higher education</h1>
+
+    <div class="twothird feature">
+        <p>The Higher Education (HE) track in our OLPD Ph.D. program prepares you with a solid foundation in the history, philosophy, sociology, and organizational theory of higher education. Together, in a community of diverse and accomplished learners, you will dive deep into empirical research and policy analysis to understand higher education’s field-specific systems, issues, and practices. You will produce your own original research, advancing the field and contributing to the growth, vitality, and sustainability of our institutions. </p>
+
+        <p>Our department’s specializations include administration and organization, policy, student affairs, equity-oriented change, and research integrity.</p>
+    </div>
+    </div>
+
+    <div class="row emphasis margin-top-2">
+    <div class="container span-9 feature">
+        <h2>About our students</h2>
+            <div class="third">
+                <img class="circular" src="/assets/images/headshots/student-features/sq-MendozaGenesis-2017.jpg" alt="Genesis Mendoza">
+            </div>
+    <div class="twothird">
+        <blockquote class="quote-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ligula sed mi condimentum, sit amet euismod ex gravida. Curabitur tincidunt viverra risus, at venenatis nisi ornare vitae. Nam ornare nisi quam, sit amet consequat nunc faucibus eu. Ut viverra faucibus purus. Nam a tempor ex. Vestibulum dignissim, felis vel.</blockquote>
+
+        <p align="right" class="speaker">Nam a tempor ex<br/>
+        Business and Marketing Education<br/></p>
+    </div>
+    </div>
+    </div>
+
+    <div class="container feature twothird">
+        <h2>Benefits</h2>
+            <p>The doctoral program in Higher Education prepares you for a career as a faculty member, policy analyst, administrative leader, and researcher. This is a scholarly degree where you will be trained to produce exceptional, original research.</p>
+
+            <p>Doctoral students in Higher Education gain the capacity to:</p>
+                <ul class="bullet">
+                    <li>Teach in both research and practice-focused environments.</li>
+                    <li>Design research projects; collect, analyze, and interpret data; and provide clear and actionable insights for practitioners and policymakers.</li>
+                    <li>Serve as leaders and experts in higher education policy and administration.</li>
+                    <li>Identify and articulate the highly-nuanced challenges and innovations in the field.</li>
+                </ul>
+    </div>
+
+    <div class="container">
+        <div class=span-6>
+            <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>ADD</li>
+                    <li>ADD</li>
+                    <li>ADD</li>
+                    <li>ADD</li>
+                </ul>
+        </div>
+
+        <div class=span-6>
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>72 credits completed in 3-5 years for full time students</li>
+                    <li>Curriculum [link]</li>
+                    <li>HE course offerings [link]</li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/miksc001">Karen Miksch, Coordinator</a><br>
+            Higher Education<br>
+            612-625-3398 | <a href="mailto:miksc001@umn.edu">miksc001@umn.edu</a></p>
+    </div>
+
+    <div class="row emphasis subtle margin-top-1">
+        <div class="container span-9 feature">
+            <h2 class="text-center">Program handbooks and forms</h2>
+
+        <div class="span-6 ">
+            <h3>Handbooks</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2017-18.pdf">2017-2018</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2016-17.pdf">2016-2017</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2015-16.pdf">2015-2016</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2014-15.pdf">2014-2015</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2013-14.pdf">2013-2014</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2012-13.pdf">2012-2013</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2011-12.pdf">2011-2012</a></li>
+                </ul>
+        </div>
+
+        <div class="span-6">
+            <h3>Forms</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/PhDHE2016.pdf">Program planning sheet</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/ThesisPanelProspectusApproval.pdf">Thesis Panel Prospectus Approval</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/DirIndStudyProposal.pdf">Directed Study/Independent Study Proposal</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/AdviserChange.pdf">Change of Adviser</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/Grad999.pdf">Grad 999</a></li>
+                    <li><a href="https://onestop.umn.edu/academics/leave-absence-loa">Leave of Absence</a></li>
+                </ul>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div><!-- close row -->
+{% endblock %}
