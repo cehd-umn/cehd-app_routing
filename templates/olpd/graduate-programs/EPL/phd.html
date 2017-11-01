@@ -1,41 +1,116 @@
 {% extends "olpd/layout/base.html" %}
-{% set page_title = "HRD PhD" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "OLPD PhD - EPL" %}
 {% block title %}
-  HRD PhD
+  OLPD PhD - EPL
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
 {% block main_content %}
 <div class="row">
-    <div class="container">
-        <h1>Ph.D. in OLPD: Human resource development</h1>
-
-        <p>Become an expert in developing individuals and organizations to unleash productivity. The Human Resource Development track in the OLPD Ph.D. program prepares you to conduct research and provide sophisticated consultation into how workers acquire new knowledge and skills, relate to one another in complex social environments, and transition to management and leadership positions. You will learn how to see HRD theories and practices in larger economic, social, and political contexts, and you will be able to chart organizational paths for growth in those contexts. </p>
-        <p>Your contributions to research will help organizations and systems all over the world better understand ways in which to create fair and equitable environments for their workforces, design programs that support workers and prevent burnout, and promote professional growth and satisfaction in employees.  </p>
-          </div>
 
     <div class="container">
-      <h2>Benefits</h2>
-      <p>Doctoral students in Human Resource Development gain the capacity to:</p>
-      <ul class="no-bullet">
-          <li>Teach leadership, adult education, and human resource development courses.</li>
-          <li>Serve as training and development consultants on program design and implementation.</li>
-          <li>Resolve complex organizational and relational issues through innovative training and performance  improvement techniques.</li>
-          <li>Develop sophisticated measurements to analyze and diagnose organizational challenges.</li>
-          <li>Conduct original research in the field and derive transferable insights and applications for local-to-international clients and industries.</li>
+        <h1>Ph.D. in OLPD: <br  />Educational policy and leadership</h1>
 
-      </ul>
+    <div class="twothird feature">
+        <p>The Education Policy and Leadership (EPL) track in the OLPD Ph.D. program prepares you to conduct original research and provide expertise on how school systems work to serve all learners. You will learn about the different variables and forces affecting leadership and decision making, and you will learn about how those policy decisions affect the outcomes of individual learners and their families.</p>
+
+        <p>Your contributions to research will help school systems and policymakers discover ways in which to support healthy and sustainability districts, design programs that enhance learning and development throughout the student lifecycle, and promote a deep understanding and connection between the education we receive and the individuals we become.</p>
+    </div>
+    </div>
+
+    <div class="row emphasis margin-top-2">
+    <div class="container span-9 feature">
+        <h2>About our students</h2>
+            <div class="third">
+                <img class="circular" src="/assets/images/headshots/student-features/sq-MendozaGenesis-2017.jpg" alt="Genesis Mendoza">
+            </div>
+    <div class="twothird">
+        <blockquote class="quote-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ligula sed mi condimentum, sit amet euismod ex gravida. Curabitur tincidunt viverra risus, at venenatis nisi ornare vitae. Nam ornare nisi quam, sit amet consequat nunc faucibus eu. Ut viverra faucibus purus. Nam a tempor ex. Vestibulum dignissim, felis vel.</blockquote>
+
+        <p align="right" class="speaker">Nam a tempor ex<br/>
+        Business and Marketing Education<br/></p>
+    </div>
+    </div>
+    </div>
+
+    <div class="container feature twothird">
+        <h2>Benefits</h2>
+
+            <p>Doctoral students in Educational Policy and Leadership gain the capacity to:</p>
+                <ul class="bullet">
+                    <li>ADD</li>
+                    <li>ADD</li>
+                    <li>ADD</li>
+                    <li>ADD</li>
+                    <li>ADD</li>
+                </ul>
     </div>
 
     <div class="container">
-        <h2>Handbook and forms</h2>
+        <div class=span-6>
+            <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>Professor in educational leadership</li>
+                    <li>Research associate or fellow</li>
+                    <li>Director of research, curriculum, teaching and learning, or staff development</li>
+                    <li>Philanthropic of non-profit executive leader or education program officer</li>
+                    <li>Superintendent or assistant, associate, area, or deputy superintendent</li>
+                    <li>Chief of schools</li>
+                    <li>District administrator</li>
+                </ul>
+        </div>
 
-        <p>Link to OLPD Doctoral Handbook and HRD PhD program planning sheet</p>
-
+        <div class=span-6>
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>70 credits completed in 3-5 years for full time students</li>
+                    <li>Curriculum [link]</li>
+                    <li>EPL course offerings [link]</li>
+                </ul>
+        </div>
     </div>
 
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/kpekel">Katie Pekel, Coordinator</a><br>
+            Educational Policy and Leadership<br>
+            612-625-7002 | <a href="mailto:kpekel@umn.edu">kpekel@umn.edu</a></p>
+    </div>
 
+    <div class="row emphasis subtle margin-top-1">
+        <div class="container span-9 feature">
+            <h2 class="text-center">Program handbooks and forms</h2>
 
+        <div class="span-6 ">
+            <h3>Handbooks</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2017-18.pdf">2017-2018</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2016-17.pdf">2016-2017</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2015-16.pdf">2015-2016</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2014-15.pdf">2014-2015</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2013-14.pdf">2013-2014</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2012-13.pdf">2012-2013</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2011-12.pdf">2011-2012</a></li>
+                </ul>
+        </div>
+
+        <div class="span-6">
+            <h3>Forms</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/PhDEPL2016.pdf">Program planning sheet</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/ThesisPanelProspectusApproval.pdf">Thesis Panel Prospectus Approval</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/DirIndStudyProposal.pdf">Directed Study/Independent Study Proposal</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/AdviserChange.pdf">Change of Adviser</a></li>
+                    <li><a href="{{ config.asset_base }}/documents/forms/Grad999.pdf">Grad 999</a></li>
+                    <li><a href="https://onestop.umn.edu/academics/leave-absence-loa">Leave of Absence</a></li>
+                </ul>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 </div><!-- close row -->
 {% endblock %}

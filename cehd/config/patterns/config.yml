@@ -1,0 +1,13 @@
+---
+
+asset_base: "/assets"
+autoescape: true
+autoreload: true
+base_url: "/patterns/v1/"
+debug: true
+dept_name: "Organizational Leadership, Policy, and Development"
+filter_method_names:
+  - hyphenate
+  - stripStyleAttributes
+js_base: "/assets/dist/js/"
+css_base: "/assets/dist/css/"

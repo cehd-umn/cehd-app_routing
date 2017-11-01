@@ -1,0 +1,76 @@
+{% extends "patterns/layout/base.html" %}
+{%- import "macros/row.html" as row -%}
+{% set page_title = "CEHD Code Examples: Hero Image" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>A gift from the Bentson Foundation supports<br>
+                future teachers in two pathbreaking residency programs</p>
+        </div>
+        <div class="third">
+            <p><a href="" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block main_content %}
+<div class="row has-hero-image">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+        <p>Below is all the template and HTML code to create this page.</p>
+        <pre><code>{% verbatim %}
+{% extends &quot;cehd/layout/base.html&quot; %}
+{% set page_title = &quot;CEHD Code Examples: Hero Image&quot; %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+&lt;div class=&quot;hero-image-container&quot;&gt;
+    &lt;img class=&quot;hero-image&quot; src=&quot;/assets/dist/images/giving/hero.jpg&quot; alt=&quot;A man in a classroom where he does his residency.&quot;&gt;
+    &lt;div class=&quot;hero-overlay&quot;&gt;
+        &lt;div class=&quot;twothird&quot;&gt;
+            &lt;p&gt;A gift from the Bentson Foundation supports&lt;br&gt;
+                future teachers in two pathbreaking residency programs&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;third&quot;&gt;
+            &lt;p&gt;&lt;a href=&quot;&quot; class=&quot;to-upper button clear&quot;&gt;Read more&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endblock %}
+{% block main_content %}
+&lt;div class=&quot;row has-hero-image&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;{{ page_title }}&lt;/h1&gt;
+        &lt;p&gt;Below is all the template and HTML code to create this page.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endblock %}{% endverbatim %}
+        </code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <p>Note that we have to put the code for the hero image in a
+        <samp>hero_image</samp> block.</p>
+
+        <p>Next, the image should be wrapped in a div with the
+        <samp>hero-image-container</samp> class. This will ensure that it's
+        positioned correctly on the page.</p>
+
+        <p>The overlay text should be wrapped in a div with the
+        <samp>hero-overlay</samp> class. That will position it and give the
+        text the correct color and size.</p>
+
+        <p>Within the <samp>hero-overlay</samp> you can use whichever column
+        classes you wish. In general a <samp>twothird</samp>/<samp>third</samp>
+        combination seems to work well.</p>
+
+        <p>Finally, any <samp>a</samp> tag with <samp>button</samp> and
+        <samp>clear</samp> classes will give the link the proper styles and
+        position. The <samp>to-upper</samp> class is optional. It transforms
+        the text to all uppercase.</p>
+    </div>
+</div>
+{% endblock %}

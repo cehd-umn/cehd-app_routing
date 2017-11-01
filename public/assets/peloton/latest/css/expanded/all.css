@@ -1009,13 +1009,13 @@ ul ul ul {
     position: absolute;
     top: 28px;
   }
-  nav .secondary-nav-item {
+  nav.inline .secondary-nav-item {
     flex: 1;
     padding: 3px 0;
     text-align: left;
     text-transform: none;
   }
-  nav .dropdown-toggle::after {
+  nav.inline .dropdown-toggle::after {
     border-left: .3em solid transparent;
     border-right: .3em solid transparent;
     border-top: .3em solid;
@@ -1027,23 +1027,23 @@ ul ul ul {
     top: 14px;
     width: 0;
   }
-  nav ul {
+  nav.inline ul {
     -ms-display: flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  nav li {
+  nav.inline li {
     margin: 0;
     padding: 3px 0;
   }
-  nav li.top-nav-item {
+  nav.inline li.top-nav-item {
     align-items: flex-start;
     -ms-display: flex;
     display: flex;
     padding: 8px;
   }
-  nav li:hover .secondary-nav {
+  nav.inline li:hover .secondary-nav {
     display: block;
   }
 }

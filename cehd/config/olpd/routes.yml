@@ -70,13 +70,33 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/comparative-international-development-education/ma/:
+  template: olpd/graduate-programs/cide/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/educational-policy-leadership/phd/:
   template: olpd/graduate-programs/epl/phd.html
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/educational-policy-leadership/ma/:
+  template: olpd/graduate-programs/epl/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/educational-policy-leadership/med/:
+  template: olpd/graduate-programs/epl/med.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/evaluation-studies/:
   template: olpd/graduate-programs/es/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/evaluation-studies/ma/:
+  template: olpd/graduate-programs/es/ma.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -90,6 +110,21 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/higher-education/phd/:
+  template: olpd/graduate-programs/he/phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/higher-education/ma/:
+  template: olpd/graduate-programs/he/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/multicultural-college-teaching-learning/ma/:
+  template: olpd/graduate-programs/mctl/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/human-resource-development/:
   template: olpd/graduate-programs/hrd/index.html
   publish: false
@@ -97,6 +132,31 @@
     - section: graduate-programs
 /graduate-programs/human-resource-development/phd/:
   template: olpd/graduate-programs/hrd/phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/human-resource-development/ma/:
+  template: olpd/graduate-programs/hrd/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/human-resource-development/med/:
+  template: olpd/graduate-programs/hrd/med.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/adult-education/med/:
+  template: olpd/graduate-programs/aded/med.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/adult-education/med-curriculum/:
+  template: olpd/graduate-programs/aded/med-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/adult-education/:
+  template: olpd/graduate-programs/certificate/adult-education.html
   publish: false
   template_data:
     - section: graduate-programs
