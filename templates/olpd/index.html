@@ -5,18 +5,87 @@
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/olpd-new/images/hp-hero.jpg" alt="OLPD students">
+    <div class="hero-overlay">
+        <div class="twothird">
+            <p>World-wide influence. Collaborative impact.</p>
+        </div>
+        <div class="third">
+            <p><a href="" class="to-upper button clear">Read more</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block main_content %}
-<div class="row">
+<div class="row has-hero-image">
     <div class="container">
         <h1>Organizational Leadership, Policy, and Development</h1>
-    </div>
-    <div class="container">
-        <h2>At the intersection of power, culture, and institutions</h2>
-    </div>
-    <div class="container">
-        <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. OLPD studies how those systems and policies are shaped by culture and power. We prepare leaders and researchers to transform our education and organizations for the better.</p>
 
-        <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
+        <!-- <h2>World-wide influence. Collaborative impact.</h2> -->
+<div class="feature twothird">
+            <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power. We prepare leaders and researchers to transform our education and organizations for the better.</p>
+
+            <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
+        </div>
+        <div class="half">
+            <h2>Graduate program tracks</h2>
+
+            <p>Comparative International Development Education [LINK]</p>
+            <p>Examine educational ideas, practices, and systems through a global lens and foster understanding of transcultural issues and trends in education.</p>
+
+            <p>Education Policy and Leadership [LINK]</p>
+            <p>Work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
+
+            <p>Evaluation Studies [LINK]</p>
+            <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in a variety of fields.</p>
+
+            <p>Higher Education [LINK]</p>
+            <p>Investigate the experiences, practices and decisions of those involved in post-secondary educations as well as the socio-political contexts in which higher education exists.</p>
+
+            <p>Human Resource Development</p>
+            <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
+
+        </div>
+        <div class="half">
+            <h2>Undergraduate programs</h2>
+
+            <p><a href="{{ config.asset_base }}/bme/">Business and Marketing Education</a></p>
+            <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
+
+            <p><a href="{{ config.asset_base }}/hrd/">Human Resource Development</a></p>
+            <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
+        </div>
+        <div class="row outer-bg-right emphasis">
+            <div class="container">
+                <div class="inner-bg-right">
+                    <div class="half"></div>
+                    <div class="half"><h2>Contact information</h2>
+
+                    <p>For general questions about our department, contact:
+
+                        <ul class="no-bullet">
+                            <li>Undergraduate studies: 612-624-3640 | <a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a></li>
+                            <li>Graduate studies: 612-626-9377 | <a href="mailto:olpd@umn.edu">olpd@umn.edu</a></li>
+                            <li>Main office: 612-624-1006</li>
+                        </ul></div>
+                </div>
+            </div>
+        </div>
+
+
+            <h2>Social media</h2>
+
+                <ul class="no-bullet">
+                    <li><a href="https://www.facebook.com/olpdgrad">Graduate studies</a></li>
+                    <li><a href="https://www.facebook.com/ugolpd">Undergraduate studies</a></li>
+                    <li><a href="https://twitter.com/UMN_olpd">OLPD</a></li>
+                    <li><a href="http://news.cehd.umn.edu/category/departments/organizational-leadership-policy-and-development/">News</a></li>
+                    <li><a href="http://cehdvision2020.umn.edu/">Improving Lives CEHD Blog</a></li>
+                </ul>
+
+
     </div>
 
     <div class="container">
@@ -28,15 +97,28 @@
 
             <p><a href="{{ config.asset_base }}/hrd/">Human Resource Development</a></p>
             <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
+        </div>
 
-            <p>Read <a href="{{ config.asset_base }}/documents/AdviserChange.pdf">this document</a> for interesting things.
-            </p>
-        </div>
         <div class="half">
-            <h2>when crazy stuff goes down</h2>
-            <p>U of MN Safety and Security Website. A helpful resource for signing up to TXT-U, safety escort service, Gopher Chauffeur, and more.
-            </p>
+            <h2>Graduate program tracks</h2>
+
+            <p>Comparative International Development Education [LINK]</p>
+            <p>Examine educational ideas, practices, and systems through a global lens and foster understanding of transcultural issues and trends in education.</p>
+
+            <p>Education Policy and Leadership [LINK]</p>
+            <p>Work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
+
+            <p>Evaluation Studies [LINK]</p>
+            <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in a variety of fields.</p>
+
+            <p>Higher Education [LINK]</p>
+            <p>Investigate the experiences, practices and decisions of those involved in post-secondary educations as well as the socio-political contexts in which higher education exists.</p>
+
+            <p>Human Resource Development</p>
+            <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
+
         </div>
+
 </div>
 </div><!-- close row -->
 {% endblock %}
