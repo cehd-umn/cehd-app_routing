@@ -1,0 +1,110 @@
+{% extends "patterns/layout/base.html" %}
+{% import "macros/loader.html" as loader %}
+{% import "macros/people/people.html" as peoplefeed %}
+{% set page_title = "Person Macro" %}{# <= change the value in quotes to change both the title and h1 #}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <div class="span-8 feature">
+            <h1>{{ page_title }}</h1>{# You can just enter text in the h1 if you don't want to be the same as the page_title variable above #}
+            <h2>Working example</h2>
+
+            {{ loader.loader(
+            "Jeff",
+            "h2",
+            "person-container"
+            ) }}
+
+            <h2>Code for the above macro</h2>
+            <h3>Loader</h3>
+            <pre><code class="jinja">{% verbatim %}
+    {{ loader.loader(
+    &quot;Jeff&quot;,
+    &quot;h2&quot;,
+    &quot;person-container&quot;
+    ) }}
+            {% endverbatim %}</code></pre>
+
+            <h3>People macro</h3>
+            <pre><code class="jinja">{% verbatim %}
+    {% block bottom_js %}{{ parent() }}
+        {{ peoplefeed.person_js(
+            &quot;jeff&quot;,
+            &quot;#person-container&quot;,
+            &quot;example.html&quot;,
+            &quot;/assets/dist/views/cehd/people/&quot;
+        ) }}
+    {% endblock %}
+            {% endverbatim %}</code></pre>
+
+            <h2>The code explained</h2>
+            <p>See <a href="/docs/macros/loader/">the page for the CSS loader</a>
+            for specific information about setting that up.</p>
+
+            <p>As always, remember to import the macro at the top of the page:</p>
+
+            <pre><code class="jinja">{% verbatim %}
+    {% import "macros/people/people.html" as peoplefeed %}
+            {% endverbatim %}</code></pre>
+
+            <p>The first thing you'll need to know is the internet ID of the person you want to pull in.
+
+            <p>Next, pass in a selector for the element that the macro will use to
+            render the results. In this example, it's the ID
+            <samp>#person-container</samp>.</p>
+
+            <p>Next is the name of the template you wish to use to render the
+            results from the people tool. These templates use <a
+            href="https://mozilla.github.io/nunjucks/">Nunjucks</a>. Nunjucks is a
+            JavaScript templating engine that has syntax almost identical to Twig,
+            so it should look familiar. In this example the name of the template is
+            <samp>example.html</samp>.</p>
+
+            <p>But where is that template? That's the next thing you pass into the macro. In this example it's in:</p>
+
+            <p><samp>&quot;/assets/dist/views/cehd/people/&quot;</samp></p>
+
+            <p>Since Nunjucks templates are handled by the browser, the templates
+            have to be somewhere publicly accessible. Thus our templates are in
+            <samp>/public/assets/dist/views/cehd/people/</samp> for this
+            example.</p>
+
+            <p>Put that all together and you can find the template at
+            <samp>/public/assets/dist/views/cehd/people/example.html</samp> and it
+            looks like this:.</p>
+
+            <pre><code class="jinja">{% verbatim %}
+    &lt;dl&gt;
+        &lt;dt&gt;First and last name&lt;/dt&gt;
+        &lt;dd&gt;{{ data.person.nameFirstLast }}&lt;/dd&gt;
+        &lt;dt&gt;Brief bio&lt;/dt&gt;
+        &lt;dd&gt;{{ data.person.briefBio|safe }}&lt;/dd&gt;
+    &lt;/dl&gt;
+            {% endverbatim %}</code></pre>
+
+            <p><a href="/docs/feeds/people/">Go here to see all the data points that are available in that feed</a>.</p>
+
+            <h3>Annotated example</h3>
+            <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+    {{ peoplefeed.person_js(
+        &quot;jeff&quot;, {# the internet ID #}
+        &quot;#person-container&quot;, {# CSS selector for the results #}
+        &quot;example.html&quot;, {# template name #}
+        &quot;/assets/dist/views/cehd/people/&quot; {# path to template #}
+    ) }}
+{% endblock %}
+            {% endverbatim %}</code></pre>
+        </div>
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ peoplefeed.person_js(
+        "jeff",
+        "#person-container",
+        "example.html",
+        "/assets/dist/views/cehd/people/"
+    ) }}
+{% endblock %}

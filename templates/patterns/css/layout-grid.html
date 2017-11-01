@@ -1,0 +1,155 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "Headings" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2>Layout and grid</h2>
+        <p>All columns must be contained in two <samp>div</samp>s with
+        <samp>.row</samp> and <samp>.container</samp> classes
+        respectively.</p>
+
+        <p>Rows will create an element that always extends to 100% of the
+        browser window. That can be handy as demonstrated below.</p>
+    </div>
+</div>
+<div class="row grid-example">
+    <p>This is a <samp>.row</samp>.</p>
+</div>
+<div class="row">
+    <div class="container">
+        <p>The container element will limit width to a maximum width of
+        1400px and center the layout on the page.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="container grid-example">
+        <p>This is a <samp>.container</samp>.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+
+        <pre><code class="html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;p&gt;All columns must be contained in a &lt;samp&gt;.row&lt;/samp&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+
+        <h2>Column classes</h2>
+        <p>Most pages will need elements laid out at half, one third or two thirds
+        of the page. You can also create narrower, centered columns at half or
+        two-thirds widths.</p>
+
+        <h3>Two Columns at Equal Widths</h3>
+        <pre><code class="html">
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+&lt;div class=&quot;half&quot;&gt;50%&lt;/div&gt;
+        </code></pre>
+        <div class="margin-top-3">
+            <div class="half grid-example">50%</div>
+            <div class="half grid-example">50%</div>
+        </div>
+
+        <h3>Three Columns at Equal Widths</h3>
+        <pre><code class="html">
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+        </code></pre>
+        <div class="margin-top-1">
+            <div class="third grid-example">33%</div>
+            <div class="third grid-example">33%</div>
+            <div class="third grid-example">33%</div>
+        </div>
+
+        <h3>Two Thirds/One Third Columns</h3>
+        <pre><code class="html">
+&lt;div class=&quot;twothird&quot;&gt;66%&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;33%&lt;/div&gt;
+        </code></pre>
+        <div class="margin-top-1">
+            <div class="twothird grid-example">66%</div>
+            <div class="third grid-example">33%</div>
+        </div>
+
+        <h3>Important information about columns</h3>
+        <p>Columns will not display correctly unless the last column is the
+        <em>last child element</em>.</p>
+
+        <h4 class="no-toc">Works</h4>
+
+        <pre><code class="html">
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;&lt;!-- last child --&gt;
+&lt;/div&gt;
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;&lt;!-- last child --&gt;
+&lt;/div&gt;
+        </code></pre>
+        <div class="margin-top-3">
+            <div class="half grid-example">child</div>
+            <div class="half grid-example">child</div>
+        </div>
+        <div class="margin-top-1">
+            <div class="half grid-example">child</div>
+            <div class="half grid-example">child</div>
+        </div>
+
+        <h4 class="no-toc">Does not work</h4>
+        <pre><code class="html">
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child (this element will have an extra right margin so it wraps)&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;child&lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+        <div class="margin-top-3">
+            <div class="half grid-example">child</div>
+            <div class="half grid-example margin-top-1">child (this element will have an extra right margin so it wraps)</div>
+            <div class="half grid-example margin-top-1">child</div>
+            <div class="half grid-example margin-top-1">child</div>
+        </div>
+
+        <h3>Centered columns</h3>
+        <p>To make a half-width or two-thirds width column that is centered, use
+        the <samp>.feature</samp> class.</p>
+
+        <pre><code class="html">
+&lt;div class=&quot;half feature&quot;&gt;
+    &lt;p&gt;Half-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+
+        <div class="whole margin-top-2">
+            <div class="half feature grid-example">
+                <p>Half-width column that is centered</p>
+            </div>
+        </div>
+
+        <div class="whole margin-top-2">
+        </div>
+
+        <pre><code class="html">
+&lt;div class=&quot;twothirds feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- note: &quot;twothirds&quot; and &quot;twothird&quot; will both work. (I
+kept forgetting which was correct.) --&gt;
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;p&gt;Two thirds-width column that is centered&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+        <div class="twothirds feature grid-example margin-top-1">
+            <p>Two thirds-width column that is centered</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

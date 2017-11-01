@@ -1,0 +1,88 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "Pattern Library" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}{{ parent() }}
+    <style>
+        nav {
+            max-height: 49vh;
+            overflow: scroll;
+        }
+
+        nav li {
+            padding: 5px;
+        }
+
+        nav li:hover {
+            background: #eee;
+        }
+
+        dt,
+        dd,
+        dt a {
+            background-color: #fff;
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height .5s, background-color .3s;
+        }
+
+        .hidden {
+            background-color: #eee;
+            border: 0;
+            margin: 0;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        nav {
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 16px 0 16px 16px;
+        }
+
+        .active-filter-container {
+            height: 180px;
+            overflow: scroll;
+        }
+    </style>
+{% endblock %}
+{% block main_content %}
+    <article class="row">
+        <div class="container">
+            <h1>Pattern library</h1>
+            <div class="span-3">
+                <div class="active-filter-container emphasis subtle margin-bottom-24">
+                    <p>Active filters:</p>
+                    <div class="active-filter-list">none</div>
+                </div>
+                <nav>
+                    <h2 class="h6">Filters</h2>
+                    <ul class="no-bullet" id="filter-list">
+                        {% for category in categories %}
+                        <li>
+                            <input type="checkbox" id="{{ category|hyphenate }}-filter" name="category-button-group" class="toc-select category-select" data-filter=".{{ category|hyphenate }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}">
+                            <label for="{{ category|hyphenate }}-filter">{{ category }}</label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <article class="span-9">
+                <dl id="toc-container">
+                {% for path, pattern in patterns %}
+                    {% if path %}
+                    <dt id="p-{{ pattern.title|hyphenate }}-title" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}"><a class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}" href="/patterns{{ path }}">{{ pattern.title }}</a></dt>
+                    <dd id="p-{{ pattern.title|hyphenate }}-description" class="p-{{ pattern.title|hyphenate }} p-{{ pattern.categories_hyphenated|join(" p-") }}">{{ pattern.description }}</dd>
+                    {% endif %}
+                {% endfor %}
+                </dl>
+            </article>
+        </div>
+    </article>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="../js/dist/bundle.js"></script>
+<script>
+</script>
+{% endblock %}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}UMN{% endblock %}</title>
+        <meta name="description" content="{% block meta_content %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
+        {% block inline_css %}
+        {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+        {# todo: add these font-face styles to inline.scss #}
+        <style>
+        @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Lato';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Lato';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+        }
+        @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot');
+            src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        {{ inline_styles|raw }}
+        {{ inline_nav_styles|raw }}
+        </style>
+        {% endblock %}
+        {% block css %}
+            <link href="/assets/peloton/latest/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+        {% endblock %}
+        {% block extra_css %}
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+            <style>
+                samp, code {
+                    font-family: monospace;
+                }
+
+                samp {
+                    background: #f0f0f0;
+                    color: #79111a;
+                    font-family: monospace;
+                }
+
+                code {
+                    display: block;
+                    padding: 1em;
+                }
+
+                pre {
+                    margin: 0;
+                }
+
+                sup {
+                    vertical-align: super;
+                }
+
+                .give-height {
+                    min-height: 200px;
+                }
+
+                .no-margin-bottom {
+                    margin-bottom: 0;
+                }
+
+                .grid-example,
+                .background-grey {
+                    background: #f0f0f0;
+                }
+
+                .rotate {
+                    transform: rotate(90deg);
+                }
+
+                .background-grey samp {
+                    background: transparent;
+                    color: #ccc;
+                }
+
+                .foreground-light-grey {
+                    color: #ccc;
+                }
+
+                .background-gold {
+                    background: #ffde7a
+                }
+
+                .background-blue {
+                    background: #d0edf5;
+                }
+
+                .background-orange {
+                    background: #f7e7b2;
+                }
+
+                .background-green {
+                    background: #eef2b8;
+                }
+
+                .background-brown {
+                    background: #f0e9d1;
+                }
+
+                .detached {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="accessible-no-display">
+                <ul class="accessible-no-display">
+                    <li class="accessible-no-display"><a class="accessible-no-display" href="#maincontent">Skip to main content</a>
+                    <li class="accessible-no-display"><a class="accessible-no-display" href="#mainnav">Skip to main navigation</a>
+                </ul>
+            </div>
+            <div id="umnheader">
+                <div class="container">
+                    <ul id="umn-links">
+                        <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"></a></li>
+                        <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
+                        <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
+                    </ul>
+                    <div id="umnh-searchbox">
+                        <form action="{{ config.base_url }}/search/" method="get" name="gsearch" id="gsearch" title="Search for U of M sites and people">
+                            <!-- TODO evaluate use of tabindex -->
+                            <input id="umnh-searchfield" type="text" name="q" placeholder="Search" title="Search text" tabindex="80">
+                            {% include "includes/search-hidden-fields.html" %}
+                            <input id="umnh-searchbtn" type="submit" name="Search" value="&#xe803;">
+                        </form>
+                    </div><!-- /#umnh-searchbox -->
+                </div>
+            </div><!-- /#umnheader -->
+            {% block hero_image %}{% endblock %}
+            <div class="section-header-container">
+                <div class="container">
+                    <div id="wordmark-wrapper">
+                        <div class="wordmark-container half">
+                            <a href="/"><img class="cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
+                        </div>
+                        <div class="wordmark-container-left wordmark-container half">
+                            {% block section_wordmark %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="mainnav" class="nav-container">
+            {% block nav %}{% endblock %}
+        </div>
+        <main id="maincontent">
+            {% block main_content %}{% endblock %}
+            {% block append_content %}{% endblock %}
+        </main>
+        {% block main_aside %}{% endblock %}
+        <footer class="margin-top-2">
+            {% block dept_footer %}{% endblock %}
+            <div id="umnfoot">
+                <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
+                    The University of Minnesota is an equal opportunity educator and employer.
+                    <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
+                </p>
+            </div>
+        </footer>
+        {% block bottom_js %}
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+        {% endblock %}
+    </body>
+</html>

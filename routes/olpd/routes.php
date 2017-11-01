@@ -46,21 +46,21 @@ $container['errorHandler'] = function ($container) {
     };
 };
 
-// Register component on container
-$container['view'] = $helpers->configureTwigForSlim(
-    $container,
+$view = $helpers->setUpTwig(
     $app_config,
     $app_config["filter_method_names"],
-    $nav_items,
     $app_config["autoescape"],
     $app_config["autoreload"],
-    $app_config["debug"],
-    $inline_styles,
-    $inline_svg_styles,
-    $inline_nav_styles,
-    $app_config["base_url"]
+    $app_config["debug"]
 );
 
+$twig = $view->getEnvironment();
+$twig->addGlobal('nav_items', $nav_items);
+$twig->addGlobal('inline_styles', $inline_styles);
+$twig->addGlobal('inline_svg_styles', $inline_svg_styles);
+$twig->addGlobal('inline_nav_styles', $inline_nav_styles);
+
+$container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);
 
 $app = new \Slim\App($container);

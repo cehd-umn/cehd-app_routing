@@ -72,9 +72,9 @@ class PatternCards extends CardGroup
     public function buildRouteFromPattern($group, $title, $group_route=false)
     {
         if ($group_route) {
-            return "/patterns/v1/" . $group . "/";
+            return "/v1/" . $group . "/";
         } else {
-            return "/patterns/v1/" . $group . "/" . $this->hyphenate($title) . "/";
+            return "/v1/" . $group . "/" . $this->hyphenate($title) . "/";
         }
     }
 
