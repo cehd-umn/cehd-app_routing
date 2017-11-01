@@ -7,6 +7,10 @@ class Helpers {
         const href = (typeof($element.attr("href")) !== "undefined") ? $element.attr("href") : "";
         return href;
     }
+
+    static isMultipleOf(num, multiplier) {
+        return (num % multiplier) === 0;
+    }
 }
 
 module.exports = Helpers;

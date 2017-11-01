@@ -76,7 +76,7 @@
             {% endif %}
             {% if data.person.publications|length %}
               <h3>Selected publications</h3>
-                <ol class="profile-list">
+                <ol class="profile-list no-bullet">
                 {% for publication in data.person.publications %}
                     <li>{{ publication|strip_style_attributes|safe }}</li>
                 {% endfor %}
@@ -84,7 +84,7 @@
             {% endif %}
             {% if data.person.presentations|length %}
               <h3>Selected presentations</h3>
-              <ol class="profile-list">
+              <ol class="profile-list no-bullet">
               {% for presentation in data.person.presentations %}
                 <li>{{ presentation|strip_style_attributes|safe }}</li>
               {% endfor %}
