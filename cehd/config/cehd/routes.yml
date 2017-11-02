@@ -1712,7 +1712,7 @@
   template_data:
     - section: teaching
 /teaching/partner/network-day/:
-  publish: false
+  publish: true
   template: cehd/teaching/partner/network-day.html
   template_data:
     - section: teaching
