@@ -40,8 +40,12 @@
                 </div>
             </div>
         </header>
-        <div class="nav-container container">
-            {% block nav %}{% endblock %}
+        <div class="nav-container">
+            <div class="section-header-container row">
+                <div class="container">
+                {% block nav %}{% endblock %}
+                </div>
+            </div>
         </div>
         <main id="maincontent">
             {% block main_content %}{% endblock %}

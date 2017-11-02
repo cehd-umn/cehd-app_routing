@@ -5,7 +5,7 @@
 - name: Programs & Degrees
   href: /programs/
   section: programs-degrees
-  subnav:
+  subsections:
     - name: American Sign Language
       href: /programs/asl/
     - name: Counseling & Student Personnel Psychology
@@ -25,7 +25,7 @@
 - name: Current Students
   href: /current/
   section: current
-  subnav:
+  subsections:
     - name: Counseling & Student Personnel Psychology
       href: /current/cspp/
     - name: Psychological Foundations of Education
@@ -41,7 +41,7 @@
 - name: Research
   href: /research/topics/
   section: research
-  subnav:
+  subsections:
     - name: News
       href: /research/news/
     - name: Topics
@@ -57,6 +57,6 @@
 - name: About
   href: /about/
   section: about
-  subnav:
+  subsections:
     - name: Diversity & Inclusion
       href: /about/diversity-inclusion/
