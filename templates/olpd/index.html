@@ -7,16 +7,40 @@
      Department of Organizational Leadership, Policy, and Development (OLPD)
 {% endblock %}
 {% block extra_css %}
+<style>
+    @media (min-width: 769px) {
+        nav {
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            background: #fff;
+            padding: 36px 0 0;
+        }
+    }
+
+    @media (min-width: 960px) {
+        .hero-overlay {
+            min-height: 100px;
+        }
+
+        .hero-image {
+            top: 100px;
+        }
+    }
+</style>
 {% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
     <img class="hero-image" src="/olpd-new/images/hp-hero.jpg" alt="OLPD students">
     <div class="hero-overlay">
-        <div class="twothird">
-            <p>World-wide influence. Collaborative impact.</p>
-        </div>
-        <div class="third">
-            <p><a href="" class="to-upper button clear">Read more</a></p>
+        <div class="container">
+            <div class="twothird">
+                <p>World-wide influence. Collaborative impact.</p>
+            </div>
+            <div class="third">
+                <p><a href="" class="to-upper button clear">Read more</a></p>
+            </div>
         </div>
     </div>
 </div>

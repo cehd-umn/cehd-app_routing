@@ -1,0 +1,47 @@
+@import "colors";
+
+.hero-image-container {
+    display: none;
+}
+
+@media all and (min-width: 960px) {
+    .hero-image-container {
+        display: block;
+        margin: 0 auto;
+        min-height: 500px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+    }
+
+    .hero-image {
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .hero-overlay {
+        background-color: $cehd-hero-image-overlay-rgba;
+        bottom: 0;
+        color: $base-white;
+        font-size: 20px;
+        left: 0;
+        padding: 0 3em;
+        position: absolute;
+        text-shadow: 1px 1px 1px $base-black;
+        width: 100%;
+
+        .button {
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+    }
+
+    .row {
+        &.has-hero-image {
+            margin-top: 400px;
+        }
+    }
+}

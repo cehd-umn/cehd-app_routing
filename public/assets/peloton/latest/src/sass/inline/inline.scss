@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/// @author Jeff Abuzzahab
+/// @author Susan Andre
+/// @author Dan Sagisser
+/// @author Tony Thomas
+///
+/// CSS Reset
+
+@import "../bourbon/bourbon";
+@import "../colors";
+@import "../variables";
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    border: 0;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    color: $cehd-dark-grey;
+    font-family: 'Lato', Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+small {
+    font-size: 14px;
+}
+
+table {
+    border: 1px solid $base-light-grey;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    margin: 10px 25px;
+    padding: 0;
+    width: 90%;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q {
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+
+blockquote {
+    clear: both;
+    display: block;
+    font-style: italic;
+    margin: 10px 40px;
+    padding: 0;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: none;
+    }
+}
+
+a {
+    color: $link-base;
+    text-decoration: none;
+
+    @each $pseudo-class, $color in $link-pseudo-classes {
+        &:#{$pseudo-class} {
+            color: $color;
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        border: 0;
+    }
+}
+
+article,
+aside,
+details,
+div,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+main,
+menu,
+nav,
+p,
+section,
+summary {
+    @include clearfix;
+
+    clear: both;
+    display: block;
+    position: relative;
+}
+
+p {
+    line-height: 1.5;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul {
+    list-style: disc;
+    margin: 10px 25px;
+    padding: 0;
+
+    ul {
+        list-style: circle;
+        margin: 10px 0 10px 10px;
+
+        ul {
+            list-style: square;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+ol {
+    list-style: decimal;
+    margin: 10px 25px;
+    padding: 0;
+
+    ol {
+        list-style: lower-alpha;
+        margin: 10px 0 10px 10px;
+
+        ol {
+            list-style: lower-roman;
+            margin: 10px 0 10px 10px;
+        }
+    }
+}
+
+li {
+    margin: 5px 0 5px 20px;
+    padding: 0;
+}
+
+dl {
+    margin: 10px 25px;
+    padding: 0;
+}
+
+dt {
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0;
+}
+
+dd {
+    margin: 10px 0 10px 25px;
+    padding: 0;
+}
+
+form {
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        margin: 1em 0;
+
+        label {
+            display: inline;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    }
+}
+
+address {
+    display: block;
+    font-style: normal;
+    margin: 10px 0;
+    padding: 0;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    margin: 10px;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+th {
+    background-color: $umn-light-blue-background;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    font-weight: bold;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    background-color: transparent;
+    border: 1px solid $base-light-grey;
+    border-spacing: 1%;
+    padding: 1%;
+    text-align: left;
+    vertical-align: top;
+}
+
+figure,
+figcaption {
+    color: $cehd-charcoal;
+    font-size: 12px;
+}
+
+figure {
+    display: inline-block;
+}
+
+.row {
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'Macondo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Macondo'), local('Macondo-Regular'), url(https://fonts.gstatic.com/s/macondo/v5/wijdXSTMZhcyWspsnqogsw.ttf) format('truetype');
+}
+
+.svg-social-media-icon {
+    display: inline-block;
+    max-width: 50px;
+    width: 100%;
+
+    @each $size in 40, 60, 70, 80, 90, 100 {
+        &.size-#{$size} {
+            max-width: #{$size}px;
+        }
+    }
+}
+
+%social-media-icon {
+    transition: fill .5s;
+}
+
+.icon-calendar {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-email {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-instagram {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-maroon;
+    }
+}
+
+.icon-facebook {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $facebook-blue;
+    }
+}
+
+.icon-linkedin {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $linkedin-blue;
+    }
+}
+
+.icon-pinterest {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $pinterest-red;
+    }
+}
+
+.icon-twitter {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $twitter-blue;
+    }
+}
+
+.icon-vimeo {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $vimeo-blue;
+    }
+}
+
+.icon-youtube {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $youtube-red;
+    }
+}
+
+.icon-plus {
+    @extend %social-media-icon;
+
+    &:hover {
+        fill: $umn-gold;
+    }
+}
+
+
+@media all and (max-width: 560px) {
+    .svg-social-media-icon {
+        max-width: 40px;
+    }
+}
+
+@import "umn-hf";

@@ -15,9 +15,9 @@ use \CEHD\App\Helpers\Helpers;
 use \CEHD\App\Card\PatternCard\PatternCards;
 // use \UMN\CEHD\Dict\Dict;
 
-$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/css/minified/inline.css";
-$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/svg.css";
-$inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/nav.css";
+$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/inline.css";
+$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/svg.css";
+$inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/nav.css";
 $pattern_app_config     = __DIR__ . "/../../cehd/config/patterns/config.yml";
 $patterns_file          = __DIR__ . "/../../cehd/config/patterns/patterns.yml";
 $helpers = new Helpers();

@@ -1,0 +1,922 @@
+@charset "UTF-8";
+/// @author Dan Sagisser
+/// @author Tony Thomas
+///
+/// Core styles for use across CEHD sites
+/// In general these styles are mobile first with breakpoints at the bottom
+/// @todo tighten up use of breakpoints
+
+@import "colors";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "variables";
+
+header {
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+
+    &.mobile-hide {
+        display: none;
+    }
+}
+
+.container,
+.row {
+    @include clearfix;
+}
+
+.emphasis {
+    background-color: $cehd-tertiary-gold;
+    padding: 10px;
+
+    &.subtle {
+        background-color: $cehd-light-grey;
+
+        .button {
+            border-color: $base-white;
+        }
+    }
+
+    &.cool {
+        background-color: $umn-light-blue-background;
+    }
+
+    &.earthy {
+        background-color: $umn-light-brown-foreground;
+    }
+}
+
+.pull-quote {
+    font-size: 1.5em;
+}
+
+.outer-bg-right {
+    background: $cehd-tertiary-gold;
+
+    &.right-third {
+        background: $cehd-tertiary-gold;
+
+        &.cool {
+            background: $umn-light-blue-background;
+        }
+    }
+
+    &.right-two-third {
+        background: $cehd-tertiary-gold;
+
+        &.cool {
+            background: $umn-light-blue-background;
+        }
+    }
+
+    &.cool {
+        background: $umn-light-blue-background;
+    }
+}
+
+.inner-bg-right {
+    &.cool {
+        background: $umn-light-blue-background;
+    }
+}
+
+@for $margin from 1 through 4 {
+    .margin-top-#{ $margin } {
+        margin-top: #{ $margin }em;
+    }
+}
+
+@each $size in 12, 14, 16, 18, 20, 24 {
+    .margin-bottom-#{ $size } {
+        margin-bottom: #{ $size }px;
+    }
+}
+
+/// lists with no bullets
+.no-bullet {
+    list-style: none;
+    margin-left: 0;
+
+    .no-bullet {
+        margin-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        margin-left: 0;
+
+        &.news-item {
+            margin-bottom: 1em;
+        }
+    }
+
+    &.indent {
+        margin-left: 15px;
+    }
+}
+
+/// Accessibly hides text
+.accessible-hidden {
+    @include hide-text;
+}
+
+/// Accessibly hides entire element
+.accessible-no-display {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+/// Gives elements that are populated via an AJAX request a min height
+.dynamic-content {
+    min-height: 8em;
+}
+
+/// Column container
+/// @requires neat/neat
+.container {
+    @include outer-container;
+    @include pad(0 2em 0 2em);
+
+    &.tight {
+        padding: 0 2em;
+        width: 75%;
+    }
+}
+
+/// Granular grid options for all breakpoints
+@for $grid-span from 1 through 12 {
+    .super-span-#{$grid-span} {
+        @include span-columns($grid-span);
+        clear: none;
+    }
+}
+
+/// No `clear` for simple columns
+.always-half,
+.half,
+.third,
+.twothird,
+.twothirds {
+    clear: none;
+    min-height: 1px;
+}
+
+// "half" style that never stacks for mobile
+.always-half {
+    @include span-columns(6);
+}
+
+.whole {
+    @include span-columns(12);
+}
+
+/// Base styles for SVG wordmarks
+.wordmark-svg {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: em(400);
+}
+
+/// CEHD Wordmark
+#cehd-wordmark {
+    border-bottom: 1px solid $base-black;
+    padding: .9em 0 .7em;
+}
+
+/// Dept wordmark should not clear
+.dept-wordmark {
+    clear: none;
+}
+
+.university-wordmark {
+    width: 100%;
+}
+
+/// Consistent padding for wordmarks
+.wordmark-container {
+    padding: 11px 0 0;
+}
+
+/// icon font for responsive panes, and UMN header
+@font-face {
+    font-family: 'fontello';
+    src: url("assets/fonts/fontello-2015/fontello.eot");
+    src: url("assets/fonts/fontello-2015/fontello.eot") format("embedded-opentype"), url("assets/fonts/fontello-2015/fontello.woff") format("woff"), url("assets/fonts/fontello-2015/fontello.ttf") format("truetype"), url("assets/fonts/fontello-2015/fontello.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol {
+    &.with-headings {
+        counter-reset: li; /* Initiate a counter */;
+        padding-left: 1.13em;
+
+        > li {
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: counter(li); /* Use the counter as content */
+                counter-increment: li; /* Increment the counter by 1 */
+                left: -2em;
+                margin-right: 8px;
+                padding: 4px;
+                position: absolute;
+                top: -4px;
+                width: 2em;
+            }
+        }
+    }
+}
+
+/// Iterates over map of heading sizes to generate heading styles and matching
+/// classes
+///
+/// @requires $heading-map-desktop found in _variables.scss
+/// @todo figure out what margins should be
+@each $heading, $size in $heading-map-mobile {
+    #{$heading}, .#{$heading} {
+        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+        font-size: $size;
+        margin: .7em 0;
+        padding: 0;
+
+        li.#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+        }
+
+        &.light {
+            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-weight: normal;
+        }
+
+        &.no-margin-top {
+            margin-top: 0;
+        }
+
+        &.no-margin-bottom {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+@each $heading, $size in $subheading-map-mobile {
+    #{$heading} {
+        small {
+            font-size: $size;
+
+            &.clear {
+                clear: both;
+                display: block;
+                margin-top: if($heading == "h5", .5em, -.2em);
+            }
+        }
+    }
+
+    small {
+        &.#{$heading} {
+            font-size: $size;
+        }
+
+        &.normal {
+            font-size: 16px;
+            margin-top: 0;
+        }
+    }
+}
+
+.margin-top-0 {
+    margin-top: 0;
+}
+
+/// Button with fancy hover effect
+.button {
+    @include transition(color .5s ease-out 0s, background-color .5s ease-out 0s, border .5s ease-out 0s);
+
+    background: $base-light-grey none;
+    border: .15em solid $base-medium-grey;
+    border-radius: .2em;
+    clear: both;
+    color: $base-black;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2em 5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    &.center {
+        display: inline-block;
+        margin: 3em auto;
+    }
+
+    &:focus,
+    &:hover {
+        background: $cehd-charcoal none;
+        border: .15em solid $base-white;
+        color: $base-white;
+        text-decoration: none;
+
+        &::after,
+        &::before {
+            @include transform(translateY(0));
+
+            opacity: 1;
+        }
+    }
+
+    &::after,
+    &::before {
+        @include transition(opacity .3s, transform .3s);
+        @include transform(translate(-10px));
+
+        background: $base-light-grey;
+        content: '';
+        height: 2px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    &::after {
+        @include transform(translateY(10px));
+
+        bottom: 1em;
+    }
+
+    &::before {
+        @include transform(translateY(-10px));
+
+        top: 1em;
+    }
+
+    &.simple {
+        border: 0;
+        padding: .5em 1.5em;
+
+        &::after {
+            bottom: 6px;
+        }
+
+        &::before {
+            top: 6px;
+        }
+
+        &.green {
+            background-color: $cehd-green-button-background;
+            color: $base-white;
+        }
+
+        &.maroon {
+            background-color: $umn-maroon;
+            color: $base-white;
+        }
+    }
+
+    &.clear {
+        background: transparent;
+        border: 1px solid $base-white;
+        color: $base-white;
+        padding: 1em;
+        text-shadow: none;
+
+        &:focus,
+        &:hover {
+            background: transparent;
+            border: 1px solid $base-white;
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+a {
+    &.button {
+        @each $pseudo-class, $color in $link-pseudo-classes {
+            @if $pseudo-class != hover {
+                &:#{$pseudo-class} {
+                    color: $umn-dark-grey-foreground;
+                }
+            }
+        }
+
+        &.clear {
+            color: $base-white;
+        }
+
+        &:hover {
+            color: $base-light-grey;
+        }
+    }
+}
+
+/// Image positioning
+.img-right {
+    float: right;
+    margin: 1% 0 10px 10px;
+    padding: 0;
+    position: relative;
+}
+
+.img-left {
+    float: left;
+    margin: 1% 10px 10px 0;
+    padding: 0;
+    position: relative;
+}
+
+ /// Text styles
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+
+    small {
+        text-align: center;
+    }
+}
+
+.text-plain {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#dept-footer {
+    background-color: $umn-light-grey-foreground;
+}
+
+.dept-footer-section {
+    padding: 2em 2em 2em 16%;
+}
+
+footer {
+    a {
+        @each $pseudo-class, $color in $link-pseudo-classes {
+            &:#{$pseudo-class} {
+                color: $umn-dark-grey-foreground;
+            }
+        }
+    }
+}
+
+.dept-footer-container {
+    @include transform(rotate(-90deg));
+    left: -65px;
+    position: absolute;
+    top: 115px;
+}
+
+.dept-footer-heading {
+    text-transform: uppercase;
+}
+
+.dept-footer-campus-container {
+    padding-top: 26px;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+/// These aren't necessarily breakpoints defined around devices, but rather,
+/// they're defined based on where things break in the *design*.
+///
+/// @todo better organize these media breakpoints
+@media all and (max-width: 620px) {
+    .wordmark-svg {
+        float: left;
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .emphasis {
+        padding: 2em;
+    }
+
+    .dept-footer-container {
+        &.campus {
+            left: -80px;
+        }
+    }
+
+    .half {
+        @include span-columns(6);
+
+        &.feature {
+            @include span-columns(12);
+        }
+    }
+
+    /// @todo remove any redundant properties
+    @each $heading, $size in $heading-map-desktop {
+        #{$heading}, .#{$heading} {
+            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-size: $size;
+            font-weight: bold;
+            margin: 1em 0;
+            padding: 0;
+            text-align: left;
+        }
+    }
+
+    @each $heading, $size in $subheading-map-desktop {
+        #{$heading} {
+            small {
+                font-size: $size;
+            }
+        }
+
+        small {
+            &.#{$heading} {
+                font-size: $size;
+            }
+
+            &.normal {
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .wordmark-svg {
+        clear: none;
+    }
+
+    .dept-wordmark {
+        float: none;
+    }
+
+    // It's a little weird to put a variable right in the middle, but it's only
+    // related to this loop so it seemed best to put it here.
+    $offset: 5.5;
+
+    @for $grid-span from 1 through 12 {
+        .span-#{$grid-span} {
+            @include span-columns($grid-span);
+            clear: none;
+
+            &.feature {
+                @include shift($offset);
+                // Take another .5 column off for the next iteration of the
+                // loop.
+                $offset: $offset - .5;
+            }
+        }
+
+        .push-#{$grid-span} {
+            @include shift($grid-span);
+        }
+
+        // .pull-#{$grid-span} {
+        //     @include shift(-$grid-span);
+        // }
+
+    }
+
+    .dept-footer-section {
+        &.first {
+            border-right: 18px solid $base-white;
+            padding-left: 28%;
+        }
+
+        &.last {
+            padding-right: 0;
+        }
+    }
+}
+
+@media all and (min-width: 769px) {
+    .menuicon-container {
+        width: 4em;
+    }
+}
+
+@media all and (min-width: 960px) {
+    header {
+        margin-bottom: 0;
+    }
+
+    img {
+        display: inline-block;
+        margin: auto;
+
+        &.mobile-hide {
+            display: inline-block;
+        }
+    }
+
+    @each $heading, $size in $heading-map-desktop {
+        #{$heading}, .#{$heading} {
+            text-align: left;
+        }
+    }
+
+    @for $grid-span from 1 through 12 {
+        @include direction-context(right-to-left) {
+            .reverse-span-#{$grid-span} {
+                @include span-columns($grid-span);
+                clear: none;
+            }
+        }
+    }
+
+    .dept-wordmark {
+        float: left;
+        margin-top: 4px;
+        max-width: 400px;
+    }
+
+    .container {
+        @include pad(0 3em 0 3em);
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .divider {
+        background-color: $base-black;
+        height: 80%;
+        left: calc(50%);
+        position: absolute;
+        top: 10%;
+        width: 1px;
+
+        // these percentages were all eyeballed and may need adjusting
+        &.one-third {
+            left: calc(32.55%);
+        }
+
+        &.one-half {
+            left: calc(50%);
+        }
+
+        &.two-third {
+            left: calc(67.4%);
+        }
+
+        &.one-fourth {
+            left: calc(23.9%);
+        }
+
+        &.three-fourth,
+        &.three-fourths {
+            left: calc(76.2%);
+        }
+
+        &.height-100 {
+            height: 100%;
+            top: 0;
+        }
+
+        &.height-90 {
+            height: 90%;
+            top: 5%;
+        }
+
+        &.height-70 {
+            height: 70%;
+            top: 15%;
+        }
+
+        &.height-60 {
+            height: 60%;
+            top: 20%;
+        }
+
+        &.height-50 {
+            height: 50%;
+            top: 25%;
+        }
+
+        &.height-40 {
+            height: 40%;
+            top: 30%;
+        }
+
+        &.height-30 {
+            height: 30%;
+            top: 35%;
+        }
+    }
+
+    .half {
+        @include span-columns(6);
+
+        &.feature {
+            @include span-columns(6);
+            @include shift(3);
+        }
+    }
+
+    .third {
+        @include span-columns(4);
+
+        &.feature {
+            @include shift(4);
+        }
+    }
+
+    .twothird,
+    .twothirds {
+        @include span-columns(8);
+
+        &.feature {
+            @include shift(2);
+        }
+    }
+
+    #cehd-wordmark {
+        border-bottom: 0;
+        float: right;
+        padding: .9em 0 0;
+    }
+
+    .outer-bg-right {
+        background: linear-gradient(90deg, $base-white 50%, $cehd-tertiary-gold 50%);
+
+        &.right-third {
+            background: linear-gradient(90deg, $base-white 65%, $cehd-tertiary-gold 65%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 65%, $umn-light-blue-background 65%);
+            }
+        }
+
+        &.right-two-third {
+            background: linear-gradient(90deg, $base-white 34%, $cehd-tertiary-gold 34%);
+
+            &.cool {
+                background: linear-gradient(90deg, $base-white 34%, $umn-light-blue-background 34%);
+            }
+        }
+
+        &.cool {
+            background: linear-gradient(90deg, $base-white 50%, $umn-light-blue-background 50%);
+        }
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+.search-heading {
+    color: $base-white;
+    font-size: 2em;
+    padding: .1em .5em;
+}
+
+.search-primary {
+    background: $search-primary-blue;
+}
+
+.search-secondary {
+    background: $search-secondary-blue;
+}
+
+.search-tertiary {
+    background: $search-tertiary-maroon;
+}
+
+.search-form-element {
+    display: inline-block;
+    height: 39px;
+}
+
+#search-page-query-input {
+    background: $base-light-grey;
+    border: 1px solid $base-light-grey;
+    padding: .55em;
+    width: 88%;
+
+    &:focus {
+        background: $base-white;
+    }
+}
+
+#search-page-submit {
+    border-radius: 0;
+    font-family: fontello;
+    height: 39px;
+    width: 12%;
+}
+
+.to-upper {
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+
+    &.align-bottom {
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
+    }
+
+    &.align-center {
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    &.column {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    &.wrap {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.flex-item {
+
+    flex: 1 0 auto;
+
+    &.vertical-stretch {
+        align-self: stretch;
+    }
+}
+
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.section-header-container {
+    background-color: $base-white;
+}
+
+// Put here because background url's need to be relative to the style sheet so
+// this style can't be used inline
+#umnh-logos {
+    background: url("../../../images/umnheader/umnh-logos.png") transparent no-repeat;
+    background-position-y: 50%;
+    background-size: 292px 39px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
+    #umnh-logos {
+        background: url("../../../images/umnheader/umnh-logos@2x.png") no-repeat;
+        background-position-y: 50%;
+        background-size: 292px 39px;
+    }
+}

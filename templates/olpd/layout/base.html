@@ -1,7 +1,7 @@
 {% extends "layout/base.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% block css %}
-    <link href="/assets/peloton/latest/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+    <link href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
     <link href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}

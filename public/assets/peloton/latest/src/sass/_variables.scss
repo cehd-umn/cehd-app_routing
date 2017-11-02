@@ -1,0 +1,30 @@
+@import "colors";
+
+$heading-map-desktop: (h1: 48px, h2: 30px, h3: 25px, h4: 20px, h5: 20px, h6: 18px);
+$heading-map-mobile: (h1: 36px, h2: 30px, h3: 24px, h4: 18px, h5: 16px, h6: 16px);
+$subheading-map-desktop: (h1: 36px, h2: 25px, h3: 20px, h4: 18px, h5: 17px, h6: 16px);
+$subheading-map-mobile: (h1: 30px, h2: 24px, h3: 18px, h4: 17px, h5: 16px, h6: 14px);
+
+$core-layout-padding-default: 2em;
+$core-layout-padding-small-screen: 1em;
+$core-layout-padding-large-screen: 3em;
+
+$loader-size-lg: 64px;
+$loader-size-sm: 32px;
+$loader-animation-duration: 1.15s;
+
+// Form hack settings
+$fh-textarea-height: 200px;
+$fh-textarea-width: 800px;
+$fh-textarea-max-width: 100%;
+
+// Handy link pseudo-class list
+
+$link-pseudo-classes: (link: $link-base, hover: $link-base-hover, visited: $link-base-visited, active: $link-base-active);
+
+// meganav
+$mega-dropdown-margins: (0 -164 0 -492 -654 -818 0);
+$mega-dropdown-margins-1400: (9 -150.14 0 -466.42 -625 -783.7 0);
+$mega-dropdown-margins-1200: (9 -126.14 0 -392.42 -526 -659.7 0);
+$mega-dropdown-margins-1024: (9 -118.14 0 -370.42 -497 -622.7 0);
+$mega-dropdown-margins-960: (9 -95.14 0 -300.42 -404 -506.7 0);

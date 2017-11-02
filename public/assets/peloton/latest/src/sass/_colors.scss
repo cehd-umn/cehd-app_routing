@@ -1,0 +1,117 @@
+// Base styles
+$base-white: #fff;
+$base-black: #000;
+$base-light-grey: #e2e2e2;
+$base-grey: #c0c0c0;
+$base-medium-grey: #999;
+$base-dark-grey: #808080;
+$base-charcoal: #666;
+$base-blue: #09f;
+$base-light-blue: #d9edf7;
+$base-medium-blue: #3a87ad;
+$base-dark-blue: #2d6987;
+$base-red: #f00;
+$base-dark-red: #7a0019;
+$base-green: #008000;
+$base-translucent-white: rgba(255, 255, 255, .7);
+
+// UMN Colors
+// maroons
+$umn-maroon: #7a0019;
+$umn-dark-maroon: #5b0013;
+$umn-light-maroon: #900021;
+
+// golds
+$umn-gold: #fc3;
+$umn-dark-gold: #ffb71e;
+$umn-light-gold: #ffde7a;
+
+// blues
+$umn-dark-blue-foreground: #0b3d4c;
+$umn-dark-blue-background: #809fa6;
+$umn-medium-blue-foreground: #16bbe6;
+$umn-medium-blue-background: #87d5eb;
+$umn-light-blue-foreground: #a3dce8;
+$umn-light-blue-background: #d0edf5;
+
+// oranges
+
+$umn-dark-orange-foreground: #ca7a29;
+$umn-dark-orange-background: #e5ba7f;
+$umn-medium-orange-foreground: #e98524;
+$umn-medium-orange-background: #f6c17e;
+$umn-light-orange-foreground: #f0cc65;
+$umn-light-orange-background: #f7e7b2;
+
+// greens
+
+$umn-dark-green-foreground: #726f2d;
+$umn-dark-green-background: #b9b790;
+$umn-medium-green-foreground: #bcd530;
+$umn-medium-green-background: #dde681;
+$umn-light-green-foreground: #dfe670;
+$umn-light-green-background: #eef2b8;
+
+// greys
+
+$umn-dark-grey-foreground: #616365;
+$umn-dark-grey-background: #b7b7b7;
+$umn-medium-grey: #ccc;
+$umn-light-grey-foreground: #d5d6d2;
+$umn-light-grey-background: #ebebeb;
+
+// browns
+
+$umn-dark-brown-foreground: #91785b;
+$umn-dark-brown-background: #d3bf96;
+$umn-medium-brown: #e2d3a4;
+$umn-light-brown-foreground: #e9debb;
+$umn-light-brown-background: #f0e9d1;
+
+$text-shadow-rgba: rgba(255, 255, 255, .5);
+$box-shadow-rgba: rgba(0, 0, 0, .2);
+
+// Links
+
+$link-base: #005d9a;
+$link-base-blue: #0072bc;
+$link-base-active: $link-base;
+$link-base-hover: $link-base;
+$link-base-visited: $link-base;
+
+// nav
+$nav-background-color: rgba(247, 247, 247, .95);
+$nav-hover-border-top-color: #def2ff;
+$nav-hover-color: #004978;
+$box-shadow-rgba: rgba(0, 0, 0, .15);
+
+// CEHD
+$cehd-tertiary-gold: #ffec99;
+$cehd-charcoal: #555;
+$cehd-light-grey: rgb(239, 239, 238);
+$cehd-content-background: #eeeeed;
+$cehd-dark-grey: #333;
+$cehd-text-red: #ec0a0a;
+$cehd-green-button-background: #698c2d;
+$cehd-hero-image-overlay-rgba: rgba(0, 0, 0, .4);
+
+// Search
+
+$search-primary-blue: rgb(64, 116, 173);
+$search-secondary-blue: rgb(15, 63, 89);
+$search-tertiary-maroon: rgb(122, 0, 25);
+
+// Program Sorter
+$sorter-translucent-white: rgba(255, 255, 255, .9);
+
+// SVG
+
+$stroke-color-default: #231f20;
+
+// Social media
+$facebook-blue: #3b5998;
+$linkedin-blue: #0077b5;
+$pinterest-red: #bd081c;
+$twitter-blue: #0084b4;
+$vimeo-blue: #20b9eb;
+$youtube-red: #b00;
