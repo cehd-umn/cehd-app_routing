@@ -2,6 +2,14 @@
 {%- import "macros/row.html" as row -%}
 {% set page_title = "CEHD Code Examples: Hero Image" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+{{ parent() }}{# include the parent template styles #}
+<style>
+    .row.has-hero-image {
+        margin-top: 450px; /* dial in the top margin */
+    }
+</style>
+{% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
     <img class="hero-image" src="/assets/dist/images/giving/hero.jpg" alt="A man in a classroom where he does his residency.">
@@ -21,10 +29,19 @@
     <div class="container">
         <h1>{{ page_title }}</h1>
         <p>Below is all the template and HTML code to create this page.</p>
+        {# todo add part about tweaking top margin #}
         <pre><code>{% verbatim %}
 {% extends &quot;cehd/layout/base.html&quot; %}
 {% set page_title = &quot;CEHD Code Examples: Hero Image&quot; %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+{{ parent() }}{# include the parent template styles #}
+&lt;style&gt;
+    .row.has-hero-image {
+        margin-top: 450px; /* dial in the top margin */
+    }
+&lt;/style&gt;
+{% endblock %}
 {% block hero_image %}
 &lt;div class=&quot;hero-image-container&quot;&gt;
     &lt;img class=&quot;hero-image&quot; src=&quot;/assets/dist/images/giving/hero.jpg&quot; alt=&quot;A man in a classroom where he does his residency.&quot;&gt;
@@ -52,25 +69,35 @@
 </div>
 <div class="row">
     <div class="container">
-        <p>Note that we have to put the code for the hero image in a
-        <samp>hero_image</samp> block.</p>
+        <div class="feature half">
+            <p>Note that we have to put the code for the hero image in a
+            <samp>hero_image</samp> block.</p>
 
-        <p>Next, the image should be wrapped in a div with the
-        <samp>hero-image-container</samp> class. This will ensure that it's
-        positioned correctly on the page.</p>
+            <p>Next, the image should be wrapped in a div with the
+            <samp>hero-image-container</samp> class. This will ensure that it's
+            positioned correctly on the page.</p>
 
-        <p>The overlay text should be wrapped in a div with the
-        <samp>hero-overlay</samp> class. That will position it and give the
-        text the correct color and size.</p>
+            <p>The overlay text should be wrapped in a div with the
+            <samp>hero-overlay</samp> class. That will position it and give the
+            text the correct color and size.</p>
 
-        <p>Within the <samp>hero-overlay</samp> you can use whichever column
-        classes you wish. In general a <samp>twothird</samp>/<samp>third</samp>
-        combination seems to work well.</p>
+            <p>Within the <samp>hero-overlay</samp> you can use whichever
+            column classes you wish. In general a
+            <samp>twothird</samp>/<samp>third</samp> combination seems to work
+            well.</p>
 
-        <p>Finally, any <samp>a</samp> tag with <samp>button</samp> and
-        <samp>clear</samp> classes will give the link the proper styles and
-        position. The <samp>to-upper</samp> class is optional. It transforms
-        the text to all uppercase.</p>
+            <p>Since top nav and header dimensions will vary slightly between
+            sites, you'll need to dial in the top margin for the
+            <samp>.row.has-hero-image</samp> class in an <samp>extra_css</samp>
+            block. <strong>Note:</strong> remember to include the parent styles
+            like the example above. You may need to tweak other styles as
+            well</p>
+
+            <p>Finally, any <samp>a</samp> tag with <samp>button</samp> and
+            <samp>clear</samp> classes will give the link the proper styles and
+            position. The <samp>to-upper</samp> class is optional. It
+            transforms the text to all uppercase.</p>
+        </div>
     </div>
 </div>
 {% endblock %}

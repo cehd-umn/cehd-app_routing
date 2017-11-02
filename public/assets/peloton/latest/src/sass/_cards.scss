@@ -1,0 +1,41 @@
+@import "bourbon/bourbon";
+
+.card {
+    @include transition(
+        background-color .5s,
+        max-height 1s,
+        max-width 1s,
+        opacity 1s);
+
+    align-self: stretch;
+    background-color: $base-white;
+    border: 1px solid $base-light-grey;
+    border-radius: 2px;
+    left: auto;
+    margin: 1em;
+    max-height: 500px;
+    max-width: 500px;
+    opacity: 1;
+    overflow: hidden;
+    padding: .5em;
+    visibility: visible;
+    width: 237px;
+
+    &:hover {
+        background-color: $umn-light-gold;
+    }
+
+    &.hidden {
+        background-color: $umn-light-gold;
+        border: 0;
+        margin: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}

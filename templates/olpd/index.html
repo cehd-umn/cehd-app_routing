@@ -4,16 +4,40 @@
      Department of Organizational Leadership, Policy, and Development (OLPD)
 {% endblock %}
 {% block extra_css %}
+<style>
+    @media (min-width: 769px) {
+        nav {
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            background: #fff;
+            padding: 36px 0 0;
+        }
+    }
+
+    @media (min-width: 960px) {
+        .hero-overlay {
+            min-height: 100px;
+        }
+
+        .hero-image {
+            top: 100px;
+        }
+    }
+</style>
 {% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
     <img class="hero-image" src="/olpd-new/images/hp-hero.jpg" alt="OLPD students">
     <div class="hero-overlay">
-        <div class="twothird">
-            <p>World-wide influence. Collaborative impact.</p>
-        </div>
-        <div class="third">
-            <p><a href="" class="to-upper button clear">Read more</a></p>
+        <div class="container">
+            <div class="twothird">
+                <p>World-wide influence. Collaborative impact.</p>
+            </div>
+            <div class="third">
+                <p><a href="" class="to-upper button clear">Read more</a></p>
+            </div>
         </div>
     </div>
 </div>
@@ -24,10 +48,20 @@
         <h1>Organizational Leadership, Policy, and Development</h1>
 
         <!-- <h2>World-wide influence. Collaborative impact.</h2> -->
-<div class="feature twothird">
-            <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power. We prepare leaders and researchers to transform our education and organizations for the better.</p>
+        <div class="feature twothird">
+            <p>Our world is full of systems and policies that affect how
+            individuals learn, grow and relate to one another. Organizational
+            Leadership, Policy, and Development (OLPD) studies how those
+            systems and policies are shaped by culture and power. We prepare
+            leaders and researchers to transform our education and
+            organizations for the better.</p>
 
-            <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
+            <p>We teach our students how to design, test, implement, and revise
+            our institutional strategies in both the public and private
+            sectors, from the international to the local level. Our students
+            gain practical experiences in creating approaches to increase
+            social and economic development, foster human flourishing, disrupt
+            power structures, and promote a more just society.</p>
         </div>
         <div class="half">
             <h2>Graduate program tracks</h2>

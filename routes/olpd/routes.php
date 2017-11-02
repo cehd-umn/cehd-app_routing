@@ -14,9 +14,9 @@ use \CEHD\App\Helpers\Helpers;
 use \UMN\CEHD\Dict\Dict;
 
 // @todo change the Peloton version number once these styles work
-$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/css/minified/inline.css";
-$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/svg.css";
-$inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/css/minified/nav.css";
+$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/inline.css";
+$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/svg.css";
+$inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/nav.css";
 $nav_yaml_file          = __DIR__ . "/../../cehd/config/olpd/nav.yml";
 $olpd_app_config        = __DIR__ . "/../../cehd/config/olpd/config.yml";
 $redirects              = __DIR__ . "/../../cehd/config/olpd/redirects.yml";

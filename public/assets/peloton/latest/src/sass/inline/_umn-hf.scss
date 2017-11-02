@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/// University of Minnesota header and footer styles
+@import "../colors";
+@import "../variables";
+@import "../grid-settings";
+@import "../neat/neat";
+
+#campuslinks {
+    display: none;
+}
+
+#umn-links {
+
+    list-style: none;
+    margin: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/// U of M Header
+#umnheader {
+
+    background-color: $umn-maroon;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 75px;
+    width: 100%;
+    z-index: 2;
+
+    a {
+        color: $umn-light-grey-background;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+
+        &:hover {
+            color: $umn-light-grey-background;
+            text-decoration: underline;
+        }
+
+        &:active,
+        &:visited {
+            color: $umn-light-grey-background;
+            text-decoration: none;
+        }
+    }
+
+}
+
+#umnh-logos {
+    display: block;
+    float: left;
+    height: 63px;
+    margin: 5px 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 315px;
+}
+
+#umnh-myu {
+    clear: none;
+    display: block;
+    float: right;
+    font-size: .8em;
+    height: 15px;
+    margin: 14px 0 4px 4px;
+
+    &::after {
+        content: "  \e801";
+        font-family: 'fontello';
+    }
+}
+
+#umnh-onestop {
+    clear: none;
+    display: block;
+    float: right;
+    font-size: .8em;
+    height: 15px;
+    margin: 14px 5px 4px 4px;
+}
+
+#umnh-searchbox {
+    clear: both;
+    display: block;
+    float: right;
+    height: 30px;
+    margin: -2em 0;
+    padding: 0;
+    text-align: right;
+    width: 220px;
+}
+
+#umnh-searchfield {
+    background-color: $base-white;
+    border: 0;
+    border-radius: 0;
+    color: $umn-dark-grey-foreground;
+    display: inline;
+    font-size: .85em;
+    height: 18px;
+    margin: 3px 0 0 3px;
+    padding: 0 0 0 5px;
+    width: 185px;
+}
+
+#umnh-searchbtn {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: $umn-medium-grey;
+    display: inline;
+    font-family: 'fontello';
+    font-size: 1em;
+    font-weight: normal;
+    height: auto;
+    margin: 4px 0;
+    padding: 0;
+    width: 1.1em;
+}
+
+#umnfoot {
+    background-color: $base-white;
+    clear: both;
+    color: $umn-dark-grey-foreground;
+    display: block;
+    font-size: .8em;
+    margin-top: 3em;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    p {
+        line-height: 1.8;
+        margin: 15px;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+/// Large screens
+@media all and (min-width: 960px) {
+    #umnheader {
+        width: auto;
+    }
+
+    #umn-links {
+        margin: 0;
+    }
+}
+
+/// @todo use a mixin for media queries
+@media only screen and (max-width: 620px) {
+    #umnheader-container {
+        padding: 0 1em;
+    }
+
+    #umnheader {
+
+        height: 100px;
+        min-width: 320px;
+
+        #umnh-logos {
+            background-size: 100% auto;
+            float: none;
+            margin: 0 auto;
+        }
+
+        #umnh-myu,
+        #umnh-onestop {
+            display: none;
+        }
+
+        #umnh-searchbox {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            position: static;
+        }
+    }
+}

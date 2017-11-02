@@ -1,0 +1,56 @@
+// @todo put this variable in _variables.scss
+$corner-border-spacing: 5px;
+
+.corner-borders-top {
+    min-height: 1px;
+
+    &::after {
+        border-right: 1px solid $base-black;
+        border-top: 1px solid $base-black;
+        content: "";
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: $corner-border-spacing;
+        top: $corner-border-spacing;
+        width: 20px;
+    }
+
+    &::before {
+        border-left: 1px solid $base-black;
+        border-top: 1px solid $base-black;
+        content: "";
+        display: block;
+        height: 20px;
+        left: $corner-border-spacing;
+        position: absolute;
+        top: $corner-border-spacing;
+        width: 20px;
+    }
+}
+
+.corner-borders-bottom {
+    &::before {
+        border-bottom: 1px solid $base-black;
+        border-left: 1px solid $base-black;
+        bottom: $corner-border-spacing;
+        content: "";
+        display: block;
+        height: 20px;
+        left: $corner-border-spacing;
+        position: absolute;
+        width: 20px;
+    }
+
+    &::after {
+        border-bottom: 1px solid $base-black;
+        border-right: 1px solid $base-black;
+        bottom: $corner-border-spacing;
+        content: "";
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: $corner-border-spacing;
+        width: 20px;
+    }
+}
