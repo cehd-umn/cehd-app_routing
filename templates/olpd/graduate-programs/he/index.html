@@ -1,7 +1,7 @@
 {% extends "olpd/layout/base.html" %}
 {% set page_title = "Higher Education" %}
 {% block title %}
-  Higher Education
+    {{ page_title }}
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -46,7 +46,7 @@
                 data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
                 data-template-name="list.html" {# The name of the Nunjucks template #}
                 data-people-per-group="2"> {# How many people to put in each group #}
-                <div class="loader ">
+                <div class="loader">
                     <div class="loader-figure "></div>
                     <p class="loader-label">Loading...</p>
                 </div>
@@ -59,7 +59,7 @@
                 data-template-path="/assets/dist/views/olpd/people/"
                 data-template-name="list.html"
                 data-people-per-group="2">
-                <div class="loader ">
+                <div class="loader">
                     <div class="loader-figure "></div>
                     <p class="loader-label">Loading...</p>
                 </div>

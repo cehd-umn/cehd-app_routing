@@ -1,0 +1,106 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "People tool - by tag" %}
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Working Example</h1>
+        <div class="twothird feature">
+            <h2>People tag ID 466</h2>
+            <p><a href="#documentation">Skip to code sample</a>.</p>
+            <div id="coordinator-container" class="loader-container"
+                data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-tag="466" {# This is the id of the tag from the People tool #}
+                data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+                data-template-name="list.html" {# The name of the Nunjucks template #}
+                data-people-per-group="2"> {# How many people to put in each group #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="documentation">Code for example above</h2>
+            <p>Add the people JavaScript to the page:</p>
+            <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+&lt;script src=&quot;/assets/dist/js/people.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+            {% endverbatim %}</code></pre>
+            <p>In this case we're not using the loader macro. It's just HTML:</p>
+            <pre><code class="jinja">{% verbatim %}
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;h2&gt;People tag ID 466&lt;/h2&gt;
+    &lt;div id=&quot;coordinator-container&quot; class=&quot;loader-container&quot;
+        data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+        data-tag=&quot;466&quot; {# This is the id of the tag from the People tool #}
+        data-target-element-selector=&quot;#coordinator-container&quot; {# The element selector for the feed html #}
+        data-template-path=&quot;/assets/dist/views/olpd/people/&quot; {# The path the the Nunjucks template #}
+        data-template-name=&quot;list.html&quot; {# The name of the Nunjucks template #}
+        data-people-per-group=&quot;2&quot;&gt; {# How many people to put in each group #}
+        &lt;div class=&quot;loader&quot;&gt;
+            &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;loader-label&quot;&gt;Loading...&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half feature">
+                <h2>The code explained</h2>
+                <p>Including the JavaScript file in the example above enables us to
+                include some parameters in HTML <samp>data</samp> attributes.</p>
+
+                <p>Providing the information in the format above is enough to pull
+                in a specific tag and put the people from the feed into groups so
+                they can be rendered in rows. The <samp>data-template-path</samp>
+                and <samp>data-template-name</samp> attributes indicate where the
+                Nunjucks template is. Templates have to be in the public
+                directory so browsers can access them.</p>
+
+                <p>That's what will render the list of people.
+                In this case, we've put people in groups of two so we can put two
+                people per row. Here's what that template looks like:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <pre><code class="jinja">{% verbatim %}
+{% for group in data.people %}{# the first loop loops through the groups #}
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+    {% for person in group %}{# inside that loop, we loop through the people in the group #}
+        &lt;div class=&quot;half&quot;&gt;
+            &lt;h4 class=&quot;heading-profile&quot;&gt;{{ person.nameFirstLast }}&lt;/h4&gt;
+            &lt;p&gt;
+                {% if person.workingTitle|is_string %}
+                    {{ person.workingTitle|safe }}
+                {% endif %}
+                    &lt;br  /&gt;
+                {{ person.phone }} | &lt;a href=&quot;mailto:{{ person.internetId }}@umn.edu&quot;&gt;{{ person.internetId }}@umn.edu&lt;/a&gt;
+            &lt;/p&gt;
+            {% if person.headshotAddress|is_string %} &lt;br  /&gt;
+                &lt;p class=&quot;no-margin-top&quot;&gt;&lt;img src=&quot;{{ person.headshotAddress }}&quot; alt=&quot;{{ person.nameFirstLast }} headshot&quot;&gt;&lt;/p&gt;
+            {% endif %}
+        &lt;/div&gt;
+    {% endfor %}
+    &lt;/div&gt;&lt;!-- end container.emphasis --&gt;
+&lt;/div&gt;&lt;!-- end row.emphasis --&gt;
+{% endfor %}
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}
+

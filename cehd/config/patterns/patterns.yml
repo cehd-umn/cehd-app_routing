@@ -1565,17 +1565,17 @@ Calendar icon SVG:
       type: include
   type: include
   uses: null
-People macro by tag:
+People by tag:
   publish: true
   meta: null
   categories:
-    - macros
     - cope tools
+    - people
   description: Pulls in a list of people from the People Tool by tag
   group: macros
   example_page_url: null
   handler: null
-  template: patterns/macros/cope-tools/people.html
+  template: patterns/cope-tools/people.html
   twig_files: null
   type: template
   uses: null
@@ -1585,6 +1585,7 @@ People macro by internet ID:
   categories:
     - macros
     - cope tools
+    - people
   description: Pulls in a person using their internet ID (X500)
   group: macros
   example_page_url: null
