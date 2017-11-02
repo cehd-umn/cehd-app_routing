@@ -160,6 +160,11 @@
   publish: false
   template_data:
     - section: graduate-programs
+/people/:
+  template: olpd/people/index.html
+  publish: false
+  template_data:
+    - section: people
 /undergraduate-programs/:
   template: olpd/undergraduate-programs/index.html
   publish: false

@@ -10,7 +10,7 @@
         <div class="twothird feature">
             <h2>People tag ID 466</h2>
             <p><a href="#documentation">Skip to code sample</a>.</p>
-            <div id="coordinator-container" class="loader-container"
+            <div id="coordinator-container" class="loader-container" aria-live="polite"
                 data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
                 data-tag="466" {# This is the id of the tag from the People tool #}
                 data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
@@ -19,7 +19,7 @@
                 data-people-per-group="2"> {# How many people to put in each group #}
                 <div class="loader">
                     <div class="loader-figure "></div>
-                    <p class="loader-label">Loading...</p>
+                    <p class="loader-label">Loading&hellip;</p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
             <pre><code class="jinja">{% verbatim %}
 &lt;div class=&quot;twothird feature&quot;&gt;
     &lt;h2&gt;People tag ID 466&lt;/h2&gt;
-    &lt;div id=&quot;coordinator-container&quot; class=&quot;loader-container&quot;
+    &lt;div id=&quot;coordinator-container&quot; class=&quot;loader-container&quot; aria-live=&quot;polite&quot;
         data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
         data-tag=&quot;466&quot; {# This is the id of the tag from the People tool #}
         data-target-element-selector=&quot;#coordinator-container&quot; {# The element selector for the feed html #}
@@ -44,7 +44,7 @@
         data-people-per-group=&quot;2&quot;&gt; {# How many people to put in each group #}
         &lt;div class=&quot;loader&quot;&gt;
             &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
-            &lt;p class=&quot;loader-label&quot;&gt;Loading...&lt;/p&gt;
+            &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
