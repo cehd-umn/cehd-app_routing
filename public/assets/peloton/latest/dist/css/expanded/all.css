@@ -2753,6 +2753,10 @@ footer a:active {
   background-size: 292px 39px;
 }
 
+.text-notice {
+  color: #ec0a0a;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
   #umnh-logos {
     background: url("../../../images/umnheader/umnh-logos@2x.png") no-repeat;
