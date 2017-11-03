@@ -43,15 +43,33 @@
             path to the feed.</li>
         </ol>
 
-        <p>Of course, this macro is very customizable as well. The table
-        below lists out all the parameters.</p>
+        <h2>Calling macro with all parameters</h2>
+        <p><strong>Note:</strong> The news macro params are in a different
+        order than the events macro. Future versions will be more
+        consistent.</p>
+        <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+{# The call to parent() above is *very* important #}
+{{ newsfeed.news_feed_js(
+    "category/alumni-educational-psychology/feed/", {# The path to the feed for a category #}
+    "#news-container", {# The ID of the element where the stories will go #}
+    "special-template.html", {# The name of the Nunjucks template #}
+    2, {# The number of stories you want to display #}
+    "http://news.cehd.umn.edu/", {# The url of the Wordpress site that has the feed #}
+    "More news", {# The text for the "More news" link #}
+    "/assets/dist/views/cehd/news" {# The path to the directory for the Nunjucks template above #}
+) }}
+{% endblock %}
+            {% endverbatim %}</code></pre>
+
+        <p>The table below lists out all the parameters.</p>
 
         {{ table.start_table("news_feed_js macro parameters") }}
             {{ table.heading_row(["Order", "Parameter", "Description", "Default"]) }}
             {{ table.row([
                 "first",
                 "Feed path",
-                "The path to the RSS feed, e.g.,<samp>category/alumni-educational-psychology/feed/</samp>",
+                "The path to the RSS feed, e.g., <samp>category/alumni-educational-psychology/feed/</samp>",
                 "None (required)"]) }}
             {{ table.row([
                 "second",
@@ -71,28 +89,19 @@
             {{ table.row([
                 "fifth",
                 "News feed base url",
-                "The base url for the site with the news feed",
+                "The url for the site with the news feed",
                 "http://news.cehd.umn.edu/"]) }}
+            {{ table.row([
+                "sixth",
+                "more news text",
+                "The text for the link for more news",
+                "More news"]) }}
+            {{ table.row([
+                "seventh",
+                "template path",
+                "The path to the Nunjucks template in the public directory",
+                "/assets/dist/views/cehd/newsfeeds/"]) }}
         {{ table.end_table() }}
-
-        <h2>Calling macro with all parameters</h2>
-        <p><strong>Note:</strong> The news macro params are in a different
-        order than the events macro. Future versions will be more
-        consistent.</p>
-        <pre><code class="jinja">{% verbatim %}
-{% block bottom_js %}{{ parent() }}
-{# The call to parent() above is *very* important #}
-{{ events.news_feed_js(
-    255,
-    "#news-container",
-    "special-template.html",
-    2,
-    "http://news.cehd.umn.edu/",
-    "More news",
-    "/assets/dist/views/cehd/events"
-) }}
-{% endblock %}
-            {% endverbatim %}</code></pre>
 
         <p>&dagger; <a href="https://mozilla.github.io/nunjucks/">Nunjucks
         is a JavaScript template engine that has a syntax almost identical
