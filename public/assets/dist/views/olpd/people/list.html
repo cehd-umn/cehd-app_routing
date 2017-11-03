@@ -3,6 +3,9 @@
     <div class="container">
     {% for person in group %}
         <div class="half">
+            {% if person.headshotAddress|is_string %} <br  />
+                <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
+            {% endif %}
             <h4 class="heading-profile">{{ person.nameFirstLast }}</h4>
             <p>
                 {% if person.workingTitle|is_string %}
@@ -11,9 +14,7 @@
                     <br  />
                 {{ person.phone }} | <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a>
             </p>
-            {% if person.headshotAddress|is_string %} <br  />
-                <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
-            {% endif %}
+
         </div>
     {% endfor %}
     </div><!-- end container.emphasis -->
