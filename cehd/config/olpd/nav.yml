@@ -1,7 +1,7 @@
 ---
 - name: Undergraduate
-  href: "/undergraduate/"
-  section: undergraduate
+  href: "/undergraduate-programs/"
+  section: undergraduate programs
   subsections:
     - name: Business and Marketing Education
       href: "/undergraduate-programs/business-marketing-education/"
@@ -17,16 +17,16 @@
   href: "/graduate/"
   section: graduate
   subsections:
+    - name: Comparative International Development Education
+      href: "/graduate-programs/comparative-international-development-education/"
+    - name: Education Policy and Leadership
+      href: "/graduate-programs/educational-policy-leadership/"
     - name: Evaluation Studies
       href: "/graduate-programs/evaluation-studies/"
     - name: Higher Education
       href: "/graduate-programs/higher-education/"
-    - name: Admissions
-      href: "/graduate/admissions/"
-    - name: Forms & Handbooks
-      href: "/graduate/forms-and-handbooks/"
-    - name: Resources
-      href: "/undergraduate/resources/"
+    - name: Human Resource Development
+      href: "/graduate-programs/human-resource-development/"
 - name: Research & Engagement
   href: "/research-and-engagement/"
   section: research
@@ -43,10 +43,18 @@
   href: "/courses/"
   section: courses
   subsections:
-    - name: Offerings
-      href: "/courses/offerings/"
-    - name: Special Topics
-      href: "/courses/special-topics/"
+    - name: Undergraduate
+      href: "/courses/undergraduate/"
+    - name: Comparative International Development Education
+      href: "/courses/comparative-international-development-education/"
+    - name: Educational Policy and Leadership
+      href: "/courses/educational-policy-leadership/"
+    - name: Evaluation Studies
+      href: "/courses/evaluation-studies/"
+    - name: Higher Education
+      href: "/courses/higher-education/"
+    - name: Human Resource Development
+      href: "/courses/human-resource-development/"
     - name: Past Designators
       href: "/courses/paste-designators/"
 - name: People

@@ -130,8 +130,7 @@
 <div class="container">
     <h2>News &amp; announcements</h2>
     <div class="third">
-    {{ loader.loader("OLPD news", "h3") }}
-    <p class="text-right"><a href="/events/" class="news-more-news"><small>More news</small></a></p>
+    {{ loader.loader("OLPD news", "h3", "news-container") }}
     </div>
         <div class="third">
     {{ loader.loader("Improving Lives Blog", "h3") }}
@@ -140,7 +139,7 @@
 
     <div class="third">
         {{ loader.loader("Events", "h3", "events-container") }}
-                    <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
+        <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
     </div>
 </div>
 
@@ -177,13 +176,12 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 {# The call to parent() above is *very* important #}
-{{ events.news_feed_js(
-    255,
+{{ newsfeed.news_feed_js(
+    "category/departments/organizational-leadership-policy-and-development/feed",
     "#news-container",
-    "special-template.html",
-    2,
-    "http://news.cehd.umn.edu/",
-    "More news",
-    "/assets/dist/views/cehd/events"
+    "index.html",
+    5
 ) }}
+    {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "index.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
+    {{ eventsfeed.events_feed_js(132) }}
 {% endblock %}
