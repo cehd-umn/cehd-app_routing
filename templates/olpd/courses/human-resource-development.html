@@ -1,0 +1,46 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "HRD Course Offerings" %}
+{% block title %}
+  HRD Course Offerings
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Course offerings:<br> Human resource development</h1>
+    </div>
+
+<div class="row">
+    <div class="container">
+        <div class="half">
+            <h2>Course registration</h2>
+                <ul class="bullet">
+                    <li><a href="https://onestop.umn.edu/academics/class-search-resources">Course search resources</a></li>
+                    <li><a href="https://onestop.umn.edu/academics/enroll-class">Class registration instructions</a></li>
+                    <li><a href="https://onestop.umn.edu/">OneStop student services</a></li>
+
+                </ul>
+        </div>
+
+        <div class="half">
+            <h2>Other track course offerings</h2>
+                <ul class="bullet">
+                    <li><a href="{{ config.asset_base }}/courses/comparative-international-development-education">Comparative international development education</a></li>
+                    <li><a href="{{ config.asset_base }}/courses/education-policy-leadership">Education policy and leadership</a></li>
+                    <li><a href="{{ config.asset_base }}/courses/evaluation-studies">Evaluation studies</a></li>
+                    <li><a href="{{ config.asset_base }}/courses/higher-education">Higher education</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <h2>Course offerings</h2>
+
+        <p class="text-notice">INSERT HRD COURSE FEED HERE</p>
+    </div>
+</div>
+</div><!-- close row -->
+{% endblock %}

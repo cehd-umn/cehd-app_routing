@@ -1631,7 +1631,7 @@ CSS loader macro:
   group: macros
   example_page_url: null
   handler: null
-  template: patterns/macros/loader.html
+  template: patterns/loader.html
   twig_files: null
   type: template
   uses: null

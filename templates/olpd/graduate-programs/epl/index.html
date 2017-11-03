@@ -1,0 +1,76 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Education Policy and Leadership" %}
+{% block title %}
+    Education Policy and Leadership
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Education policy and leadership track</h1>
+
+    <div class="twothird feature">
+        <p>Education can be a hot-button issue. How do we provide fair and equal educational opportunities to all learners? How do we understand the legacies of the policies and choices we’ve made in the past? How do we ensure young people are afforded dignity and inclusion into our learning communities?</p>
+        <p>The education policy and leadership track offers coursework and research experiences designed to prepare you to make a difference in educational systems and settings for PK-12 children and youth. We provide you with a foundational understanding of the histories and variables that affect how a school or district is run, and we give you the scholarship and tools to make positive changes. We are committed to supporting leaders and scholars who work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
+    </div>
+
+    <div class="container">
+        <div class="twothird feature">
+            <h2 class="text-center margin-top-2">Degrees and programs</h2></div>
+
+      <div class="third">
+          <ul class="no-bullet">
+              <li>Ph.D.</li>
+              <li>Ph.D.: Executive option</li>
+          </ul>
+      </div>
+
+      <div class="third">
+          <ul class="no-bullet">
+               <li>M.A. (traditional and accelerated options)</li>
+          </ul>
+      </div>
+
+      <div class="third">
+          <ul class="no-bullet">
+              <li>Disability Policy and Services Certificate</li>
+              <li>PK-12 Administration Certificate</li>
+              <li>Professional Development Certificate</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="twothird feature">
+        <h2 class="text-center">Coordinator</h2>
+            <div id="coordinator-container" class="loader-container" aria-live="polite"
+                data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-tag="468" {# This is the id of the tag from the People tool #}
+                data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+                data-template-name="list.html" {# The name of the Nunjucks template #}
+                data-people-per-group="2"> {# How many people to put in each group #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+            <h2 class="text-center">Faculty</h2>
+            <div id="people-container" class="loader-container"
+                data-people-app
+                data-tag="463"
+                data-target-element-selector="#people-container"
+                data-template-path="/assets/dist/views/olpd/people/"
+                data-template-name="list.html"
+                data-people-per-group="2">
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+    </div><!-- close container -->
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}
