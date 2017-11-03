@@ -1590,7 +1590,7 @@ People macro by internet ID:
   group: macros
   example_page_url: null
   handler: null
-  template: patterns/macros/cope-tools/person.html
+  template: patterns/cope-tools/person.html
   twig_files: null
   type: template
   uses: null
