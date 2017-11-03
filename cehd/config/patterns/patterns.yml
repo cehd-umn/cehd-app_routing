@@ -1648,7 +1648,7 @@ Google Analytics event tracking macro:
   twig_files: null
   type: template
   uses: null
-News feed macro:
+News feed macro (deprecated):
   publish: true
   meta: null
   categories:
@@ -1659,6 +1659,19 @@ News feed macro:
   example_page_url: null
   handler: null
   template: patterns/macros/cope-tools/news.html
+  twig_files: null
+  type: template
+  uses: null
+News feed:
+  publish: true
+  meta: null
+  categories:
+    - cope tools
+  description: Pulls in a news feed from any Wordpress RSS feed
+  group: html
+  example_page_url: null
+  handler: null
+  template: patterns/cope-tools/news.html
   twig_files: null
   type: template
   uses: null
