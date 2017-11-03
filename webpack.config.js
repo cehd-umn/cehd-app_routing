@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         app: "./public/assets/src/js/app.js",
         people: "./public/assets/src/js/people/index.js",
+        news: "./public/assets/src/js/news/index.js",
         sorter: "./public/assets/src/js/sorter.js"
     },
     output: {
