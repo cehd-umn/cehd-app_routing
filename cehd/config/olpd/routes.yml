@@ -66,7 +66,7 @@
   template_data:
     - section: courses
 /courses/educational-policy-leadership/:
-  template: olpd/courses/educational-policy-leadership.html
+  template: olpd/courses/education-policy-leadership.html
   publish: false
   template_data:
     - section: courses
