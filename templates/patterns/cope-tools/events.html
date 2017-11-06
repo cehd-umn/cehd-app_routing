@@ -1,0 +1,118 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "Events feeds" %}
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }} working example</h1>
+        <div class="twothird feature">
+            <p><a href="#documentation">Skip to code sample</a>.</p>
+            <h2>Live events feed</h2>
+            <!-- div w/ data attributes -->
+            <div id="events-container" class="loader-container" aria-live="polite"
+                data-events-app {# this is how the JavaScript below knows we want to pull in a events feed #}
+                data-q="6" {# get this from Link Pro on the events admin site #}
+                data-r="3" {# get this from Link Pro on the events admin site #}
+                data-t="182" {# get this from Link Pro on the events admin site #}
+                data-target-element-selector="#events-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/events/" {# The path the the Nunjucks template #}
+                data-template-name="index.html" {# The name of the Nunjucks template #}
+                data-limit="3" {# How many stories to display #}
+                >
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="documentation">Code for example above</h2>
+            <p>Add the events JavaScript to the page:</p>
+            <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+&lt;script src=&quot;/assets/dist/js/events.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+            {% endverbatim %}</code></pre>
+
+            <p>In this case we're not using the loader macro. It's just HTML:</p>
+
+            <pre><code class="jinja">{% verbatim %}
+&lt;h2&gt;Live events feed&lt;/h2&gt;
+&lt;!-- div w/ data attributes --&gt;
+&lt;div id=&quot;events-container&quot; class=&quot;loader-container&quot; aria-live=&quot;polite&quot;
+        data-events-app {# this is how the JavaScript below knows we want to pull in a events feed #}
+        data-q=&quot;6&quot; {# get this from Link Pro on the events admin site #}
+        data-r=&quot;3&quot; {# get this from Link Pro on the events admin site #}
+        data-t=&quot;182&quot; {# get this from Link Pro on the events admin site #}
+        data-target-element-selector=&quot;#events-container&quot; {# The element selector for the feed html #}
+        data-template-path=&quot;/assets/dist/views/cehd/events/&quot; {# The path the the Nunjucks template #}
+        data-template-name=&quot;index.html&quot; {# The name of the Nunjucks template #}
+        data-limit=&quot;3&quot; {# How many stories to display #}
+    &gt;
+    &lt;div class=&quot;loader&quot;&gt;
+        &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
+        &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half feature">
+                <h2>The code explained</h2>
+                <p><a
+                href="https://apps.cehd.umn.edu/events/admin/LinkPro.aspx">The
+                events calendar "Link Pro"</a> sets up query parameters to pull
+                in different feeds. For example, an XML feed will look
+                something like this:
+                <samp>http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&amp;r=1&amp;q=6&amp;t=355</samp></p>
+
+                <p><samp>t=355</samp> above is the id for the tag we want to
+                use. Thus, the tag id is the first parameter for pulling in
+                events. Likewise for the <samp>q</samp> and <samp>r</samp>
+                values.</p>
+
+                <p>Including the JavaScript file in the example above enables
+                us to include some parameters in HTML <samp>data</samp>
+                attributes.</p>
+
+                <p>Providing the information in the format above is enough to
+                pull in a category. The <samp>data-template-path</samp> and
+                <samp>data-template-name</samp> attributes indicate where the
+                Nunjucks template is. Templates have to be in the public
+                directory so browsers can access them.</p>
+
+                <p>That's what will render the list of stories. Here's what
+                that template looks like:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <pre><code class="jinja">{% verbatim %}
+{% if data.events|length &gt; 0 %}
+    &lt;dl class=&quot;events&quot;&gt;
+    {% for event in data.events %}
+        {% if loop.index0 &lt; data.limit %}
+            &lt;dt class=&quot;event-date&quot;&gt;{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}&lt;/dt&gt;
+            &lt;dd class=&quot;event-title&quot;&gt;
+                &lt;a href=&quot;/events/{{ event.id }}/&quot;&gt;{{ event.title }}&lt;/a&gt;
+            &lt;/dd&gt;
+        {% endif %}
+    {% endfor %}
+    &lt;/dl&gt;
+{% else %}
+    &lt;p&gt;There are no upcoming events.&lt;/p&gt;
+{% endif %}
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/events.min.js"></script>
+{% endblock %}
+
