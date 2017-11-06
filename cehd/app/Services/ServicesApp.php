@@ -202,6 +202,7 @@ class ServicesApp extends BaseClass
         $valid_query_params = [
             'a',
             'd',
+            'h',
             'p',
             't',
         ];
