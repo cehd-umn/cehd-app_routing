@@ -12,7 +12,8 @@
 <script>
     (function() {
         "use strict";
-        var http_client = new HTTPClient();
+        var app = new App();
+        var http_client = new app.httpClient();
         var start = 10;
 
         $(".more-results-link").on("click", function(event) {
