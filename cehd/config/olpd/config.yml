@@ -12,7 +12,7 @@ filter_method_names:
 search_sites:
   primary:
     client: "tc_education"
-    name: "Organizational Leadership, Policy and Development"
+    name: "OLPD"
     site: "tc_education_students"
     url: "www.cehd.umn.edu/olpd/"
   secondary:
