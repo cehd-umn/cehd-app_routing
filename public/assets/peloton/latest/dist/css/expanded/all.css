@@ -3087,3 +3087,54 @@ dd.event-title {
     margin-top: 400px;
   }
 }
+
+.search-form-element {
+  display: inline-block;
+  height: 39px;
+}
+
+.search-result-set {
+  display: none;
+}
+
+.search-result-set.active {
+  display: block;
+}
+
+.search-button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #808080;
+  font-family: "fontello";
+  font-size: 1em;
+}
+
+.search-result-set-link.active {
+  border-bottom: 3px solid #def2ff;
+  padding: 3px;
+}
+
+.search-result-set-link:hover {
+  border-bottom: 3px solid #def2ff;
+  text-decoration: none;
+}
+
+#search-page-query-input {
+  border: 1px solid #e2e2e2;
+  font-size: 16px;
+  padding: .55em;
+}
+
+#search-page-query-input:focus {
+  background: #fff;
+}
+
+#search-page-submit {
+  background-color: inherit;
+  border: 0;
+  border-radius: 0;
+  font-size: 30px;
+  padding: inherit;
+  width: auto;
+}
