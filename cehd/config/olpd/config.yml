@@ -9,3 +9,19 @@ dept_name: "Organizational Leadership, Policy, and Development"
 filter_method_names:
   - hyphenate
   - stripStyleAttributes
+search_sites:
+  primary:
+    client: "tc_education"
+    name: "Organizational Leadership, Policy and Development"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/olpd/"
+  secondary:
+    client: "tc_education"
+    name: "College of Education & Human Development"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/"
+  tertiary:
+    client: "searchumn"
+    name: "University of Minnesota"
+    site: "default_collection"
+    url: "www.umn.edu/"
