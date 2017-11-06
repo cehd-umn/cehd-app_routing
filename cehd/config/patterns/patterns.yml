@@ -1570,6 +1570,7 @@ People by tag:
   meta: null
   categories:
     - cope tools
+    - feeds
     - people
   description: Pulls in a list of people from the People Tool by tag
   group: macros
@@ -1585,26 +1586,42 @@ People macro by internet ID:
   categories:
     - macros
     - cope tools
+    - feeds
     - people
   description: Pulls in a person using their internet ID (X500)
   group: macros
   example_page_url: null
   handler: null
-  template: patterns/macros/cope-tools/person.html
+  template: patterns/cope-tools/person.html
   twig_files: null
   type: template
   uses: null
-Events macro:
+Events macro (deprecated):
   publish: true
   meta: null
   categories:
     - macros
     - cope tools
+    - feeds
   description: Pulls in a list of people from the People Tool by tag
   group: macros
   example_page_url: null
   handler: null
   template: patterns/macros/cope-tools/events.html
+  twig_files: null
+  type: template
+  uses: null
+Events feeds:
+  publish: true
+  meta: null
+  categories:
+    - cope tools
+    - feeds
+  description: Pulls in a list of people from the People Tool by tag
+  group: html
+  example_page_url: null
+  handler: null
+  template: patterns/cope-tools/events.html
   twig_files: null
   type: template
   uses: null
@@ -1614,6 +1631,7 @@ Info sessions macro:
   categories:
     - macros
     - cope tools
+    - feeds
   description: Pulls in a list of info sessions
   group: macros
   example_page_url: null
@@ -1648,17 +1666,32 @@ Google Analytics event tracking macro:
   twig_files: null
   type: template
   uses: null
-News feed macro:
+News feed macro (deprecated):
   publish: true
   meta: null
   categories:
     - macros
     - cope tools
+    - feeds
   description: Pulls in a news feed from any Wordpress RSS feed
   group: macros
   example_page_url: null
   handler: null
   template: patterns/macros/cope-tools/news.html
+  twig_files: null
+  type: template
+  uses: null
+News feed:
+  publish: true
+  meta: null
+  categories:
+    - cope tools
+    - feeds
+  description: Pulls in a news feed from any Wordpress RSS feed
+  group: html
+  example_page_url: null
+  handler: null
+  template: patterns/cope-tools/news.html
   twig_files: null
   type: template
   uses: null

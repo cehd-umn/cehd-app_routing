@@ -1,0 +1,87 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "People tool - by internet id" %}
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Working Example</h1>
+        <div class="twothird feature">
+            <h2>Pulling in a single person</h2>
+            <p><a href="#documentation">Skip to code sample</a>.</p>
+            <div id="person-container" class="loader-container" aria-live="polite"
+                data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-internet-id="jeff" {# This is the internet id of the person in the People tool #}
+                data-target-element-selector="#person-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/people/" {# The path the the Nunjucks template #}
+                data-template-name="example.html"> {# The name of the Nunjucks template #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="documentation">Code for example above</h2>
+            <p>Add the people JavaScript to the page:</p>
+            <pre><code class="html">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+&lt;script src=&quot;/assets/dist/js/people.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+            {% endverbatim %}</code></pre>
+            <p>In this case we're not using the loader macro. It's just HTML:</p>
+            <pre><code class="jinja">{% verbatim %}
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;h2&gt;Pulling in a single person&lt;/h2&gt;
+        &lt;div id=&quot;person-container&quot; class=&quot;loader-container&quot; aria-live=&quot;polite&quot;
+            data-people-app &lt;!-- The JavaScript is looking for this to indicate that it should pull a feed in --&gt;
+            data-internet_id=&quot;jeff&quot; &lt;!-- This is the internet id of the person in the People tool --&gt;
+            data-target-element-selector=&quot;#person-container&quot; &lt;!-- The element selector for the feed html --&gt;
+            data-template-path=&quot;/assets/dist/views/cehd/people/&quot; &lt;!-- The path the the Nunjucks template --&gt;
+            data-template-name=&quot;example.html&quot;&gt; &lt;!-- The name of the Nunjucks template --&gt;
+        &lt;div class=&quot;loader&quot;&gt;
+            &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half feature">
+                <h2>The code explained</h2>
+                <p>Including the JavaScript file in the example above enables us to
+                include some parameters in HTML <samp>data</samp> attributes.</p>
+
+                <p>Providing the information in the format above is enough to pull
+                in a specific person. The <samp>data-template-path</samp>
+                and <samp>data-template-name</samp> attributes indicate where the
+                Nunjucks template is. Templates have to be in the public
+                directory so browsers can access them.</p>
+
+                Here's what that template looks like:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <pre><code class="jinja">{% verbatim %}
+&lt;dl&gt;
+    &lt;dt&gt;First and last name&lt;/dt&gt;
+    &lt;dd&gt;{{ data.person.nameFirstLast }}&lt;/dd&gt;
+    &lt;dt&gt;Brief bio&lt;/dt&gt;
+    &lt;dd&gt;{{ data.person.briefBio|safe }}&lt;/dd&gt;
+&lt;/dl&gt;
+            {% endverbatim %}</code></pre>
+            <p><a href="/docs/feeds/people/">See all the data points in a person's feed here</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}
+

@@ -12,7 +12,6 @@
         nav {
             margin: 0 auto;
         }
-
         .nav-container {
             background: #fff;
             padding: 36px 0 0;
@@ -20,10 +19,20 @@
     }
 
     @media (min-width: 960px) {
-        .hero-overlay {
-            min-height: 100px;
+        .hero-image-container {
+            min-height: 525px;
         }
-
+        .hero-overlay {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+            height: 80px;
+            text-shadow: none;
+        }
+        .hero-overlay p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            margin: .8em 0;
+        }
         .hero-image {
             top: 100px;
         }
@@ -35,11 +44,11 @@
     <img class="hero-image" src="/olpd-new/images/hp-hero.jpg" alt="OLPD students">
     <div class="hero-overlay">
         <div class="container">
-            <div class="twothird">
+            <div class="text-center">
                 <p>World-wide influence. Collaborative impact.</p>
             </div>
             <div class="third">
-                <p><a href="" class="to-upper button clear">Read more</a></p>
+                <!-- <p><a href="" class="to-upper button clear">Read more</a></p> -->
             </div>
         </div>
     </div>
@@ -48,9 +57,9 @@
 {% block main_content %}
 <div class="row has-hero-image">
     <div class="container">
-        <h1>Organizational Leadership, Policy, and Development</h1>
+        <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
 
-        <!-- <h2>World-wide influence. Collaborative impact.</h2> -->
+
         <div class="feature twothird">
             <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power.
                 We prepare leaders and researchers to transform our education and organizations for the better.</p>
@@ -86,7 +95,6 @@
                 <div class="third">
                     <p><strong>Evaluation Studies</strong> [LINK]</p>
                     <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in a variety of fields.</p>
-
                 </div>
             </div>
 
@@ -99,13 +107,9 @@
                     <p><strong>Human Resource Development</strong></p>
                     <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
                 </div>
-
             </div>
-
         </div>
-
-    </div>
-    <!-- close container -->
+    </div><!-- close container -->
 
     <div class="row emphasis margin-top-1">
         <div class="container">
@@ -114,65 +118,59 @@
 
                 <p class="text-center">For general questions about our department, contact:</p>
                 <div class="third">
-                    <p>Undergraduate studies:<br /> 612-624-3640 <br /><a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a></p>
+                    <p><strong>Undergraduate studies</strong><br /> 612-624-3640 <br /><a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a></p>
                 </div>
                 <div class="third">
-                    <p>Graduate studies:<br /> 612-626-9377 <br /> <a href="mailto:olpd@umn.edu">olpd@umn.edu</a></p>
+                    <p><strong>Graduate studies</strong><br /> 612-626-9377 <br /> <a href="mailto:olpd@umn.edu">olpd@umn.edu</a></p>
                 </div>
                 <div class="third">
-                    <p>Main office:<br /> 612-624-1006</p>
+                    <p><strong>Main office</strong><br /> 612-624-1006</p>
                 </div>
 
             </div>
         </div>
     </div>
 
-<div class="container">
-    <h2>News &amp; announcements</h2>
-    <div class="third">
-    {{ loader.loader("OLPD news", "h3", "news-container") }}
-    </div>
+    <div class="container">
+        <h2>News &amp; announcements</h2>
         <div class="third">
-    {{ loader.loader("Improving Lives Blog", "h3") }}
-    <p class="text-right"><a href="/events/" class="news-more-news"><small>More research</small></a></p>
+            {{ loader.loader("OLPD news", "h3", "news-container") }}
         </div>
-
-    <div class="third">
-        {{ loader.loader("Events", "h3", "events-container") }}
-        <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
+        <div class="third">
+            {{ loader.loader("Improving Lives Blog", "h3") }}
+            <p class="text-right"><a href="/events/" class="news-more-news"><small>More research</small></a></p>
+        </div>
+        <div class="third">
+            {{ loader.loader("Events", "h3", "events-container") }}
+            <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
+        </div>
     </div>
-</div>
 
     <div class="row emphasis cool margin-top-2">
         <div class="container">
-            <div class="twothird feature text-center">
+            <div class="twothird feature">
                 <h2 class="text-center">Discover OLPD on social media</h2>
-                <p>See breaking news and information, learn more about activities and events, and view videos about research, programs, and community engagement.</p>
-                <div class="super-span-4">
-                    <div class="svg-social-media-icon size-40">
-                        <p><small>Undergraduate</small></p>
-                        <a href="https://www.facebook.com/ugolpd">{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
-                    </div>
-                </div>
-                <div class="super-span-4">
-                    <div class="svg-social-media-icon size-40">
-                        <p><small>Graduate</small>
-                            <a href="https://www.facebook.com/olpdgrad">    {% include "cehd/includes/svg/social-media/facebook.html" %}</a></p>
-                    </div>
-                </div>
-                <div class="super-span-4">
-                    <div class="svg-social-media-icon size-40">
-                        <p><small>OLPD</small></p>
-                        <a href="https://twitter.com/UMN_olpd">{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
-                    </div>
-                </div>
+                <p>See breaking news and information, learn more about activities and events, and learn about research, programs, and community engagement.</p>
+                <div class="span-8 feature">
+                <div class="half">
+                        <div class="svg-social-media-icon size-40">
+                            {% include "cehd/includes/svg/social-media/facebook.html" %}
+                        </div>
+                            <p>Like us on Facebook<br /> <a href="https://www.facebook.com/ugolpd">Undergraduate Programs</a> <br /> <a href="https://www.facebook.com/olpdgrad">Graduate Programs</a></p>
 
+                </div>
+                <div class="half">
+                    <div class="svg-social-media-icon size-40">
+                        {% include "cehd/includes/svg/social-media/twitter.html" %}
+                    </div>
+                        <p>Follow us on <a href="https://twitter.com/UMN_olpd">Twitter</a></p>
+                </div>
+            </div>
             </div>
         </div>
     </div>
-</div>
-</div><!-- close row -->
-</div>
+</div><!-- close hero-image-container -->
+
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 {# The call to parent() above is *very* important #}

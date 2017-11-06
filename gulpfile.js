@@ -12,19 +12,24 @@ const gutil = require("gulp-util");
 // CEHD
 gulp.task("default", function() {
     runSequence(
+        "olpd"
+    );
+});
+
+gulp.task("olpd", function() {
+    return gulp.src("./public/assets/src/sass/olpd.scss")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
+gulp.task("cehd", function() {
+    runSequence(
         "cehd-sass",
         "cehd-inline-sass",
         "cehd-forms-sass",
         "cehd-svg-sass",
-        "cehd-javascript",
-        "olpd-sass"
+        "cehd-javascript"
     );
-});
-
-gulp.task("olpd-sass", function() {
-    return gulp.src("./public/assets/src/sass/olpd.scss")
-    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
 });
 
 gulp.task("cehd-sass", function() {
@@ -56,16 +61,25 @@ gulp.task("cehd-javascript", function () {
     return webpack(require("./webpack.config.js"));
 });
 
-// CEHD watch task
+// Watch OLPD Sass
 gulp.task("watch", function() {
+    gulp.watch(
+        "./public/assets/src/sass/olpd.scss",
+        [
+            "olpd"
+        ]
+    );
+});
+
+// CEHD watch task
+gulp.task("watch-cehd", function() {
     gulp.watch(
         "./public/assets/src/sass/**/*.scss",
         [
             "cehd-sass",
             "cehd-inline-sass",
             "cehd-forms-sass",
-            "cehd-svg-sass",
-            "olpd-sass"
+            "cehd-svg-sass"
         ]
     );
 

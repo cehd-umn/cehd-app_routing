@@ -1194,48 +1194,6 @@
   template_data:
     meta_description: null
     section: null
-/docs/macros/events/:
-  publish: false
-  template: cehd/docs/macros/events.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/loader/:
-  publish: false
-  template: cehd/docs/macros/loader.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/news/:
-  publish: false
-  template: cehd/docs/macros/news.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/info-sessions/:
-  publish: false
-  template: cehd/docs/macros/info-sessions.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/people/:
-  publish: false
-  template: cehd/docs/macros/people.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/person/:
-  publish: false
-  template: cehd/docs/macros/person.html
-  template_data:
-    meta_description: null
-    section: null
-/docs/macros/table/:
-  publish: false
-  template: cehd/docs/macros/table.html
-  template_data:
-    meta_description: null
-    section: null
 /docs/routes/:
   publish: false
   template: cehd/docs/routes.html

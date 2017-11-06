@@ -1,0 +1,58 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Search Results" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        {% include "includes/search-results.html" %}
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script>
+    (function() {
+        "use strict";
+        var app = new App();
+        var http_client = new app.httpClient();
+        var start = 10;
+
+        $(".more-results-link").on("click", function(event) {
+            event.preventDefault();
+            var $self = $(this);
+            var query_params = {
+                "client": "{{ client }}",
+                "num": 10,
+                "in_url": "{{ in_url }}",
+                "filter": "{{ filter }}",
+                "q": encodeURIComponent("{{ query }}"),
+                "site": $self.data("site"),
+                "start": start
+            };
+            var params = {
+                "url": "/services/search/",
+                "method": "GET",
+                "data": query_params
+            };
+            var $target_element = $($self.data('target'));
+            var $request = http_client.get(params);
+
+            $request.done(function() {
+                var results = http_client.getResults();
+                var template_params = {
+                    "template_path": "{{ config.nunjucks_view_base }}/cehd/search/",
+                    "template_name": "index.html",
+                    "$target_element": $target_element,
+                    "data": {
+                        results: results.results,
+                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+                    }
+                };
+                var renderer = new app.renderer();
+                renderer.init(template_params);
+                renderer.render(true);
+                start = start + 10;
+            });
+        });
+    })();
+</script>
+{% endblock %}

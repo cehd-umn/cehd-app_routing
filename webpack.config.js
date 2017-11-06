@@ -5,6 +5,8 @@ const webpack = require("webpack");
 module.exports = {
     entry: {
         app: "./public/assets/src/js/app.js",
+        events: "./public/assets/src/js/events/index.js",
+        news: "./public/assets/src/js/news/index.js",
         people: "./public/assets/src/js/people/index.js",
         sorter: "./public/assets/src/js/sorter.js"
     },

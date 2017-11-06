@@ -1,0 +1,114 @@
+{% extends "patterns/layout/base.html" %}
+{% set page_title = "News feeds" %}
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }} working example</h1>
+        <div class="twothird feature">
+            <p><a href="#documentation">Skip to code sample</a>.</p>
+            <h2>Live news feed</h2>
+            <!-- div w/ data attributes -->
+            <div id="news-container" class="loader-container" aria-live="polite"
+                data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
+                data-base-url="http://news.cehd.umn.edu/" {# The url of the website with an RSS feed #}
+                data-feed-path="category/departments/organizational-leadership-policy-and-development/feed/" {# The path for the feed at the site above #}
+                data-target-element-selector="#news-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/newsfeeds/" {# The path the the Nunjucks template #}
+                data-template-name="index.html" {# The name of the Nunjucks template #}
+                data-limit="3" {# How many stories to display #}
+                >
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="documentation">Code for example above</h2>
+            <p>Add the news JavaScript to the page:</p>
+            <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+&lt;script src=&quot;/assets/dist/js/news.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+            {% endverbatim %}</code></pre>
+
+            <p>In this case we're not using the loader macro. It's just HTML:</p>
+
+            <pre><code class="jinja">{% verbatim %}
+&lt;div class=&quot;twothird feature&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;#documentation&quot;&gt;Skip to code sample&lt;/a&gt;.&lt;/p&gt;
+    &lt;!-- div w/ data attributes --&gt;
+    &lt;div id=&quot;news-container&quot; class=&quot;loader-container&quot; aria-live=&quot;polite&quot;
+        data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
+        data-base-url=&quot;http://news.cehd.umn.edu/&quot; {# The url of the website with an RSS feed #}
+        data-feed-path=&quot;category/departments/organizational-leadership-policy-and-development/feed&quot; {# The path for the feed at the site above #}
+        data-target-element-selector=&quot;#news-container&quot; {# The element selector for the feed html #}
+        data-template-path=&quot;/assets/dist/views/cehd/newsfeeds/&quot; {# The path the the Nunjucks template #}
+        data-template-name=&quot;index.html&quot; {# The name of the Nunjucks template #}
+        data-limit=&quot;3&quot; {# How many stories to display #}
+        &gt;
+        &lt;div class=&quot;loader&quot;&gt;
+            &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half feature">
+                <h2>The code explained</h2>
+                <p>Including the JavaScript file in the example above enables
+                us to include some parameters in HTML <samp>data</samp>
+                attributes.</p>
+
+                <p>Providing the information in the format above is enough to
+                pull in a category. The <samp>data-template-path</samp> and
+                <samp>data-template-name</samp> attributes indicate where the
+                Nunjucks template is. Templates have to be in the public
+                directory so browsers can access them.</p>
+
+                <p>That's what will render the list of stories. Here's what
+                that template looks like:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <pre><code class="jinja">{% verbatim %}
+&lt;ul class=&quot;no-bullet&quot;&gt;
+{% for news_item in data.news %}
+    {%- if news_item.link_override -%}
+        {%- set article_link = news_item.link_override -%}
+    {%- else -%}
+        {%- set article_link = news_item.link -%}
+    {%- endif -%}
+    {%- if news_item.title_override -%}
+        {%- set article_title = news_item.title_override -%}
+    {%- else -%}
+        {%- set article_title = news_item.title -%}
+    {%- endif -%}
+    {% if loop.index0 &lt; data.limit %}
+        &lt;li class=&quot;news-item&quot;&gt;
+            &lt;a data-ga-command=&quot;send&quot; data-ga-hit-type=&quot;event&quot; data-ga-category=&quot;news link&quot; data-ga-action=&quot;click&quot; data-ga-label=&quot;{{ article_title }}&quot; href=&quot;{{ article_link|safe }}&quot;&gt;{{ article_title|safe }}&lt;/a&gt;
+        &lt;/li&gt;
+    {% endif %}
+{% endfor %}
+&lt;/ul&gt;
+&lt;div class=&quot;news-more-news-link-container&quot;&gt;
+    &lt;p class=&quot;text-right&quot;&gt;&lt;small&gt;&lt;a href=&quot;{{ data.more_news_link }}&quot; class=&quot;news-more-news-link&quot;&gt;{{ data.more_news_text }}&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/news.min.js"></script>
+{% endblock %}
+
