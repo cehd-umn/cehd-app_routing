@@ -37,4 +37,6 @@ $app->get('/people-tool/person/', '\CEHD\Services\ServicesApp:personHandler');
 
 $app->get('/programs/', '\CEHD\Services\ServicesApp:programsHandler');
 
+$app->get('/programs/v2/', '\CEHD\Services\ServicesApp:programsV2Handler');
+
 $app->get('/search/', '\CEHD\Services\ServicesApp:searchHandler');

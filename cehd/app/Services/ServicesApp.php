@@ -7,12 +7,14 @@ require_once __DIR__ . "/../../../cehd/app/XML/InfoSession.php";
 require_once __DIR__ . '/../../../cehd/app/XML/News.php';
 require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
+require_once __DIR__ . '/../../../cehd/app/XML/Course.php';
 require_once __DIR__ . '/../../../cehd/app/Validator/Validator.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\BaseClass;
 use \CEHD\XML\Event\Events;
+use \CEHD\XML\Course\Courses;
 use \CEHD\XML\InfoSession\InfoSessions;
 use \CEHD\XML\News\News;
 use \CEHD\XML\People\People;
@@ -194,10 +196,8 @@ class ServicesApp extends BaseClass
         return $response->withJson([]);
     }
 
-    public function programsHandler(Request $request, Response $response)
+    private function _buildCourseParamsFromRequestParams(array $params)
     {
-        $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
-        $query_data = $request->getQueryParams();
         $client_query_data = ['query' => []];
         $valid_query_params = [
             'a',
@@ -207,10 +207,34 @@ class ServicesApp extends BaseClass
         ];
 
         foreach ($valid_query_params as $valid_query_param) {
-            if (array_key_exists($valid_query_param, $query_data)) {
-                $client_query_data['query'][$valid_query_param] = $query_data[$valid_query_param];
+            if (array_key_exists($valid_query_param, $params)) {
+                $client_query_data['query'][$valid_query_param] = $params[$valid_query_param];
             }
         }
+
+        return $client_query_data;
+    }
+
+    public function programsV2Handler(Request $request, Response $response)
+    {
+        $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
+        $query_data = $request->getQueryParams();
+        $client_query_data = $this->_buildCourseParamsFromRequestParams($query_data);
+        if (!empty($client_query_data)) {
+            $http_client = $this->bootstrapHTTPClient([]);
+            $client_response = $http_client->request('GET', $base_url, $client_query_data);
+            $courses_instance = new Courses($client_response->getBody());
+            $courses = $courses_instance->getCourses();
+            return $response->withJson($courses);
+        }
+        return $response->withJson([]);
+    }
+
+    public function programsHandler(Request $request, Response $response)
+    {
+        $base_url =  'https://apps.cehd.umn.edu/Programs/RSSFeed.aspx';
+        $query_data = $request->getQueryParams();
+        $client_query_data = $this->_buildCourseParamsFromRequestParams($query_data);
 
         if (!empty($client_query_data)) {
             $http_client = $this->bootstrapHTTPClient([]);
