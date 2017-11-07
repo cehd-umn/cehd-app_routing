@@ -10,7 +10,8 @@ $nav                 = __DIR__ . "/../../cehd/config/edpsych/nav.yml";
 $routes              = __DIR__ . "/../../cehd/config/edpsych/routes.yml";
 $redirects           = __DIR__ . "/../../cehd/config/edpsych/redirects.yml";
 $redirects_camelcase = __DIR__ . "/../../cehd/config/edpsych/redirects_camelcase.yml";
-$inline_styles_file  = __DIR__ . "/../../public/assets/dist/css/minified/inline.css";
+$inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/inline.css";
+$inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/svg.css";
 
 $yaml_file_paths = [
     "configs" => [
@@ -22,6 +23,7 @@ $yaml_file_paths = [
     "redirects" => $redirects,
     "redirects_camelcase" => $redirects_camelcase,
     "inline_styles" => $inline_styles_file,
+    "inline_svg_styles" => $inline_svg_styles_file,
 ];
 
 $app = new \CEHD\App\EdPsych\EdPsychApp($yaml_file_paths);

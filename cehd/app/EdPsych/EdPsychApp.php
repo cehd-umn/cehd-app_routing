@@ -42,6 +42,13 @@ class EdPsychApp extends \CEHD\App\App\BaseApp
                 ]
             ];
 
+        $inline_nav_styles_file = __DIR__ . "/../../../public/assets/peloton/latest/dist/css/minified/nav.css";
+
+        $this->template->addGlobal(
+            "inline_nav_styles",
+            file_get_contents($inline_nav_styles_file)
+        );
+
         $this->template->addGlobal(
             "gsa_sites",
             $this->_searchApplianceSites

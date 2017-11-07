@@ -210,7 +210,52 @@ ol {
     }
 }
 
+nav {
+    max-height: 3vh;
+
+    &.inline {
+        display: none;
+    }
+
+    &.open {
+        display: block;
+        height: auto;
+        max-height: 2000px;
+        overflow: visible;
+    }
+}
+
 @media all and (min-width: 768px) {
+    nav {
+        margin-top: 20px;
+
+        &.inline {
+            display: block;
+
+            .secondary-nav {
+                background-color: rgba(255, 255, 255, .9);
+                padding: 19px 0 0 12px;
+            }
+
+            .secondary-nav-item {
+                font-size: 14px;
+                padding: 7px 0;
+            }
+        }
+    }
+
+    .nav-container {
+        padding: 0;
+    }
+
+    #about-top-nav-item {
+        .secondary-nav {
+            left: auto;
+            min-width: 144px;
+            right: 0;
+        }
+    }
+
     .home-image {
 
         figcaption {
@@ -236,6 +281,28 @@ ol {
 
     }
 
+}
+
+@media all and (max-width: 960px) {
+    header {
+        margin-bottom: 34px;
+    }
+
+    nav {
+        margin-top: 0;
+
+        &.inline {
+            font-size: 13px;
+
+            .secondary-nav {
+                padding-top: 8px;
+            }
+
+            .secondary-nav-item {
+                font-size: 13px;
+            }
+        }
+    }
 }
 
 @media all and (min-width: 1025px) {
