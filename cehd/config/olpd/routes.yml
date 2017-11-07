@@ -155,6 +155,16 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/certificate/disability-policy-services/:
+  template: olpd/graduate-programs/certificate/disability-policy-services.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/professional-development/:
+  template: olpd/graduate-programs/certificate/professional-development.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/evaluation-studies/:
   template: olpd/graduate-programs/es/index.html
   publish: false
