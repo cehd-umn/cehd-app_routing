@@ -51,13 +51,17 @@
         }
         .stat-text p {
             font-family: 'Lato-light', sans-serif;
-            font-size: 38px;
-            margin: -175px 0 0 350px;
+            font-size: 30px;
+            margin: -175px 0 0 360px;
+            position: absolute;
+            width: 60%;
             z-index: 99;
         }
         .stat-caption {
             font-family: 'Lato', sans-serif;
             font-size: 10px;
+            margin: -50px 0 0 360px;
+            position: absolute;
         }
     }
 </style>
@@ -81,22 +85,6 @@
 <div class="row has-hero-image">
     <div class="container">
         <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
-
-
-<div class="container feature">
-
-
-          <img class="circular-stat" src="/olpd-new/images/circle-stat.svg" alt="Circle stat">
-<div class="stat-percent">
-    78%
-</div>
-<div class="stat-text">
-    <p>employers identify “ability to work
-in a team” as the top attribute they
-seek in new hires</p>
-</div>
-</div>
-
         <div class="feature twothird">
             <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power.
                 We prepare leaders and researchers to transform our education and organizations for the better.</p>
@@ -104,9 +92,25 @@ seek in new hires</p>
             <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches
                 to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
         </div>
+    </div><!-- close container -->
+        <div class="container feature margin-top-2">
+            <img class="circular-stat" src="/olpd-new/images/circle-stat.svg" alt="Circle stat">
+            <div class="stat-percent">
+                78%
+            </div>
+            <div class="stat-text">
+                <p>employers identify “ability to work in a team” as the top attribute they seek in new hires</p>
+            </div>
+            <div class="stat-caption">
+                source: Job Outlook 2017, National Association of Colleges and Employers
+            </div>
+        </div>
 
-        <div class="whole">
+                <div class="container margin-top-4">
             <h2 class="text-center">Undergraduate programs</h2>
+            <div class="row">
+
+
             <div class="half">
                 <p><a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/"><strong>Business and Marketing Education</strong></a></p>
                 <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
@@ -116,9 +120,8 @@ seek in new hires</p>
                 <p><a href="{{ config.asset_base }}/undergraduate-programs/human-resource-development/"><strong>Human Resource Development</strong></a></p>
                 <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
             </div>
+            </div>
 
-        </div>
-        <div class="whole">
             <h2 class="text-center">Graduate program tracks</h2>
             <div class="row">
                 <div class="third">
@@ -145,7 +148,7 @@ seek in new hires</p>
                     <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
                 </div>
             </div>
-        </div>
+
     </div><!-- close container -->
 
     <div class="row emphasis margin-top-1">
@@ -168,7 +171,7 @@ seek in new hires</p>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container margin-top-4">
         <h2>News &amp; announcements</h2>
         <div class="third">
             {{ loader.loader("OLPD news", "h3", "news-container") }}

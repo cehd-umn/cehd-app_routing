@@ -245,6 +245,16 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/human-resource-development/med-curriculum/:
+  template: olpd/graduate-programs/hrd/med-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/human-resource-development/:
+  template: olpd/graduate-programs/certificate/human-resource-development.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/adult-education/med/:
   template: olpd/graduate-programs/aded/med.html
   publish: false
@@ -257,6 +267,11 @@
     - section: graduate-programs
 /graduate-programs/certificate/adult-education/:
   template: olpd/graduate-programs/certificate/adult-education.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/adult-literacy/:
+  template: olpd/graduate-programs/certificate/adult-literacy.html
   publish: false
   template_data:
     - section: graduate-programs
