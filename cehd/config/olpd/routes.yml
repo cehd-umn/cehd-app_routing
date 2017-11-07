@@ -55,6 +55,11 @@
   publish: false
   template_data:
     - section: giving
+/research-and-engagement/:
+  template: olpd/research-and-engagement/index.html
+  publish: false
+  template_data:
+    - section: research-and-engagement
 /courses/undergraduate/:
   template: olpd/courses/undergraduate.html
   publish: false
@@ -65,8 +70,8 @@
   publish: false
   template_data:
     - section: courses
-/courses/educational-policy-leadership/:
-  template: olpd/courses/educational-policy-leadership.html
+/courses/education-policy-leadership/:
+  template: olpd/courses/education-policy-leadership.html
   publish: false
   template_data:
     - section: courses
@@ -85,6 +90,11 @@
   publish: false
   template_data:
     - section: courses
+/graduate-programs/:
+  template: olpd/graduate-programs/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/comparative-international-development-education/:
   template: olpd/graduate-programs/cide/index.html
   publish: false
@@ -95,28 +105,53 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/comparative-international-development-education/phd-curriculum/:
+  template: olpd/graduate-programs/cide/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/comparative-international-development-education/ma/:
   template: olpd/graduate-programs/cide/ma.html
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/educational-policy-leadership/:
+/graduate-programs/comparative-international-development-education/ma-curriculum/:
+  template: olpd/graduate-programs/cide/ma-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/education-policy-leadership/:
   template: olpd/graduate-programs/epl/index.html
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/educational-policy-leadership/phd/:
+/graduate-programs/education-policy-leadership/phd/:
   template: olpd/graduate-programs/epl/phd.html
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/educational-policy-leadership/ma/:
+/graduate-programs/education-policy-leadership/phd-curriculum/:
+  template: olpd/graduate-programs/epl/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/education-policy-leadership/ma/:
   template: olpd/graduate-programs/epl/ma.html
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/educational-policy-leadership/med/:
+/graduate-programs/education-policy-leadership/ma-curriculum/:
+  template: olpd/graduate-programs/epl/ma-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/education-policy-leadership/med/:
   template: olpd/graduate-programs/epl/med.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/education-policy-leadership/med-curriculum/:
+  template: olpd/graduate-programs/epl/med-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -125,13 +160,23 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/evaluation-studies/phd/:
+  template: olpd/graduate-programs/es/phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/evaluation-studies/phd-curriculum/:
+  template: olpd/graduate-programs/es/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/evaluation-studies/ma/:
   template: olpd/graduate-programs/es/ma.html
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/evaluation-studies/phd/:
-  template: olpd/graduate-programs/es/phd.html
+/graduate-programs/evaluation-studies/ma-curriculum/:
+  template: olpd/graduate-programs/es/ma-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -145,13 +190,28 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/higher-education/phd-curriculum/:
+  template: olpd/graduate-programs/he/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/higher-education/ma/:
   template: olpd/graduate-programs/he/ma.html
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/higher-education/ma-curriculum/:
+  template: olpd/graduate-programs/he/ma-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/multicultural-college-teaching-learning/ma/:
   template: olpd/graduate-programs/mctl/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/multicultural-college-teaching-learning/ma-curriculum/:
+  template: olpd/graduate-programs/mctl/ma-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -165,8 +225,18 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/human-resource-development/phd-curriculum/:
+  template: olpd/graduate-programs/hrd/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/human-resource-development/ma/:
   template: olpd/graduate-programs/hrd/ma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/human-resource-development/ma-curriculum/:
+  template: olpd/graduate-programs/hrd/ma-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs

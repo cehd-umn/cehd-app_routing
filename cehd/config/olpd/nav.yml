@@ -14,13 +14,13 @@
     - name: Resources
       href: "/undergraduate/resources/"
 - name: Graduate
-  href: "/graduate/"
-  section: graduate
+  href: "/graduate-programs/"
+  section: graduate programs
   subsections:
     - name: Comparative International Development Education
       href: "/graduate-programs/comparative-international-development-education/"
     - name: Education Policy and Leadership
-      href: "/graduate-programs/educational-policy-leadership/"
+      href: "/graduate-programs/education-policy-leadership/"
     - name: Evaluation Studies
       href: "/graduate-programs/evaluation-studies/"
     - name: Higher Education
@@ -32,13 +32,7 @@
   section: research
   subsections:
     - name: Expertise
-      href: "/research-and-engagement/expertise/"
-    - name: Recent Publications
-      href: "/research-and-engagement/recent-publications/"
-    - name: Student Dissertations
-      href: "/research-and-engagement/student-dissertations/"
-    - name: Student Research Conference
-      href: "/research-and-engagement/student-research-conference/"
+      href: "/research-and-engagement/"
 - name: Courses
   href: "/courses/"
   section: courses

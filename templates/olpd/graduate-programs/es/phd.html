@@ -1,9 +1,9 @@
 {% extends "olpd/layout/base.html" %}
 {% import "macros/people/people.html" as peoplefeed %}
 {%- import "macros/loader.html" as loader -%}
-{% set page_title = "OLPD PhD - Evaluation Studies" %}
+{% set page_title = "OLPD PhD: ES" %}
 {% block title %}
-  OLPD PhD - Evaluation Studies
+  OLPD PhD: ES
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -66,15 +66,15 @@
             <h2>Coursework</h2>
                 <ul class="no-bullet">
                     <li>72 credits completed in 3-5 years for full time students</li>
-                    <li>Curriculum [link]</li>
-                    <li>ES course offerings [link]</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/phd-curriculum">Curriculum</a></li>
+                    <li><a href="{{ config.asset_base }}/courses/evaluation-studies">ES course offerings</a></li>
                 </ul>
         </div>
     </div>
 
     <div class="container feature twothird margin-top-1">
         <h2 class="text-center">Contact</h2>
-            <p class="text-center"><a href="/people/johns006">David R. Johnson, Coordinator</a><br>
+            <p class="text-center"><a href="/people/johns006">David R. Johnson</a>, Coordinator<br>
             Evauation Studies<br>
             612-624-1062 | <a href="mailto:johns006@umn.edu">johns006@umn.edu</a></p>
     </div>
@@ -109,8 +109,6 @@
         </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 </div><!-- close row -->
 {% endblock %}

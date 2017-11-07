@@ -1,9 +1,9 @@
 {% extends "olpd/layout/base.html" %}
 {% import "macros/people/people.html" as peoplefeed %}
 {%- import "macros/loader.html" as loader -%}
-{% set page_title = "OLPD MA - Education Policy and Leadership" %}
+{% set page_title = "OLPD MA: EPL" %}
 {% block title %}
-  OLPD MA - Education Policy and Leadership
+  OLPD MA: EPL
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -24,21 +24,6 @@
     </div>
     </div>
 
-    <div class="row emphasis margin-top-2">
-    <div class="container span-9 feature">
-        <h2>About our students</h2>
-            <div class="third">
-                <img class="circular" src="/assets/images/headshots/student-features/sq-MendozaGenesis-2017.jpg" alt="Genesis Mendoza">
-            </div>
-    <div class="twothird">
-        <blockquote class="quote-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ligula sed mi condimentum, sit amet euismod ex gravida. Curabitur tincidunt viverra risus, at venenatis nisi ornare vitae. Nam ornare nisi quam, sit amet consequat nunc faucibus eu. Ut viverra faucibus purus. Nam a tempor ex. Vestibulum dignissim, felis vel.</blockquote>
-
-        <p align="right" class="speaker">Nam a tempor ex<br/>
-        Business and Marketing Education<br/></p>
-    </div>
-    </div>
-    </div>
-
     <div class="container feature twothird">
         <h2>Benefits</h2>
 
@@ -51,6 +36,7 @@
                     <li>Navigate and understand the complex world of education and provide insights to support common benefits.</li>
                 </ul>
     </div>
+</div>
 
     <div class="container">
         <div class=span-6>
@@ -70,15 +56,15 @@
                     <li><strong>Accelerated option:</strong> 30-32 credits completed in 1 year for full time students</li>
                     <li><strong>Plan A option:</strong> 30-36 credits (with master's thesis) completed in 2 years for full time students</li>
                     <li><strong>Plan B option:</strong> 30-32 credits (without thesis but with additional coursework) completed in 2 years for full time students</li>
-                    <li>Curriculum [link]</li>
-                    <li>EPL course offerings [link]</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/ma-curriculum">Curriculum</a></li>
+                    <li><a href="{{ config.asset_base }}/courses/education-policy-leadership">EPL course offerings</a></li>
                 </ul>
         </div>
     </div>
 
     <div class="container feature twothird margin-top-1">
         <h2 class="text-center">Contact</h2>
-            <p class="text-center"><a href="/people/kpekel">Katie Pekel, Coordinator</a><br>
+            <p class="text-center"><a href="/people/kpekel">Katie Pekel</a>, Coordinator<br>
             Education Policy and Leadership<br>
             612-625-7002 | <a href="mailto:kpekel@umn.edu">kpekel@umn.edu</a></p>
     </div>

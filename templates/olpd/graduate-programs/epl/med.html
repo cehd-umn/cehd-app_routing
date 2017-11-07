@@ -1,9 +1,9 @@
 {% extends "olpd/layout/base.html" %}
 {% import "macros/people/people.html" as peoplefeed %}
 {%- import "macros/loader.html" as loader -%}
-{% set page_title = "MEd - Leadership in Education" %}
+{% set page_title = "MEd in Leadership in Education" %}
 {% block title %}
-  MEd - Leadership in Education
+  MEd in Leadership in Education
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -11,27 +11,12 @@
 <div class="row">
 
     <div class="container">
-        <h1>M.Ed. in <br  />Leadership in education</h1>
+        <h1>M.Ed. in leadership in education</h1>
 
     <div class="twothird feature">
         <p>Leadership is a growing academic discipline built on the premise that all of us can be leaders and can hone the skills of leadership to be more effective in our everyday lives. Applied to education, the study of leadership takes on new meaning and potential. Leadership in Education provides us with opportunities to shape and support young people’s growth and development. How can we make decisions that align with our shared vision and values? How can we design specialized professional development to improve teacher performance and build capacity? How can we set smart goals and create policies and practices to achieve them?</p>
 
         <p>The M.Ed. in Leadership in Education aims to supply you with the knowledge and skills to be able to answer these organizational questions. You will learn about group dynamics and collaboration, creating a culture of continuous improvement, how organizational policies shape behavior, and how schools and districts can change in order to adapt to new social, economic, and political environments.</p>
-    </div>
-    </div>
-
-    <div class="row emphasis margin-top-2">
-    <div class="container span-9 feature">
-        <h2>About our students</h2>
-            <div class="third">
-                <img class="circular" src="/assets/images/headshots/student-features/sq-MendozaGenesis-2017.jpg" alt="Genesis Mendoza">
-            </div>
-    <div class="twothird">
-        <blockquote class="quote-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ligula sed mi condimentum, sit amet euismod ex gravida. Curabitur tincidunt viverra risus, at venenatis nisi ornare vitae. Nam ornare nisi quam, sit amet consequat nunc faucibus eu. Ut viverra faucibus purus. Nam a tempor ex. Vestibulum dignissim, felis vel.</blockquote>
-
-        <p align="right" class="speaker">Nam a tempor ex<br/>
-        Business and Marketing Education<br/></p>
-    </div>
     </div>
     </div>
 
@@ -63,15 +48,15 @@
             <h2>Coursework</h2>
                 <ul class="no-bullet">
                     <li>30 credits completed in 1-2 years for full time students</li>
-                    <li>Curriculum [link]</li>
-                    <li>EPL course offerings [link]</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/med-curriculum">Curriculum<a></li>
+                    <li><a href="{{ config.asset_base }}/courses/education-policy-leadership">EPL course offerings</a></li>
                 </ul>
         </div>
     </div>
 
     <div class="container feature twothird margin-top-1">
         <h2 class="text-center">Contact</h2>
-            <p class="text-center"><a href="/people/kpekel">Katie Pekel, Coordinator</a><br>
+            <p class="text-center"><a href="/people/kpekel">Katie Pekel</a>, Coordinator<br>
             Education Policy and Leadership<br>
             612-625-7002 | <a href="mailto:kpekel@umn.edu">kpekel@umn.edu</a></p>
     </div>
@@ -100,8 +85,6 @@
         </div>
         </div>
     </div>
-</div>
-</div>
-</div>
+
 </div><!-- close row -->
 {% endblock %}

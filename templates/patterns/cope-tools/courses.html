@@ -1,0 +1,146 @@
+{% extends "patterns/layout/base.html" %}
+{% import "macros/table/table.html" as table %}
+{% set page_title = "Course tool - by tag" %}
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Working Example</h1>
+        <div class="twothird feature">
+            <h2>OLPD-CIDE tag</h2>
+            <p><a href="#documentation">Skip to code sample</a>.</p>
+            <div id="courses-container" class="loader-container" aria-live="polite"
+                data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-a="both" {# The value from the "a" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-d="both" {# The value from the "d" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-p="OLPD-CIDE" {# The value from the "p" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-t="" {# OPTIONAL The value from the "t" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-h="0" {# OPTIONAL The value from the "h" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-target-element-selector="#courses-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/courses/" {# The path the the Nunjucks template #}
+                data-template-name="index.html" {# The name of the Nunjucks template #}
+                data-limit="4"> {# How many courses to put in each group #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="documentation">Code for example above</h2>
+            <p>Add the courses JavaScript to the page:</p>
+            <pre><code class="jinja">{% verbatim %}
+{% block bottom_js %}{{ parent() }}
+&lt;script src=&quot;/assets/dist/js/courses.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+            {% endverbatim %}</code></pre>
+            <p>In this case we're not using the loader macro. It's just HTML:</p>
+            <pre><code class="jinja">{% verbatim %}
+&lt;div id=&quot;courses-container&quot; class=&quot;loader-container&quot; aria-live=&quot;polite&quot;
+    data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+    data-a=&quot;both&quot; {# The value from the &quot;a&quot; parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+    data-d=&quot;both&quot; {# The value from the &quot;d&quot; parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+    data-p=&quot;OLPD-CIDE&quot; {# The value from the &quot;p&quot; parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+    data-t=&quot;&quot; {# OPTIONAL The value from the &quot;t&quot; parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+    data-h=&quot;0&quot; {# OPTIONAL The value from the &quot;h&quot; parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+    data-target-element-selector=&quot;#courses-container&quot; {# The element selector for the feed html #}
+    data-template-path=&quot;/assets/dist/views/cehd/courses/&quot; {# The path the the Nunjucks template #}
+    data-template-name=&quot;list.html&quot; {# The name of the Nunjucks template #}
+    data-limit=&quot;2&quot;&gt; {# How many courses to put in each group #}
+    &lt;div class=&quot;loader&quot;&gt;
+        &lt;div class=&quot;loader-figure &quot;&gt;&lt;/div&gt;
+        &lt;p class=&quot;loader-label&quot;&gt;Loading&amp;hellip;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half feature">
+                <h2>The code explained</h2>
+                <p>Including the JavaScript file in the example above enables us to
+                include some parameters in HTML <samp>data</samp> attributes.</p>
+
+                <p>Providing the information in the format above is enough to pull
+                in a specific tag. The <samp>data-template-path</samp>
+                and <samp>data-template-name</samp> attributes indicate where the
+                Nunjucks template is. Templates have to be in the public
+                directory so browsers can access them.</p>
+
+                <p>That's what will render the list of courses.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <pre><code class="jinja">{% verbatim %}
+{% for program in data.programs %}
+    {% if loop.index &lt; data.limit %}
+    &lt;h3&gt;{{ program.title }}&lt;/h3&gt;
+    &lt;p&gt;{{ program.courseDescription }}&lt;/p&gt;
+    {% endif %}
+{% endfor %}
+            {% endverbatim %}</code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <h2>Course feed data points</h2>
+            {{ table.start_table("Course feed data points") }}
+            {{ table.heading_row(
+                ["key",
+                "description",
+                "type",
+                "example"]) }}
+            {{ table.row(
+                ["academicCareer",
+                "GRAD or UNDERGRAD",
+                "string",
+                "GRAD"]) }}
+            {{ table.row(
+                ["catalogNumber",
+                "Course catalog number",
+                "string",
+                "5103"]) }}
+            {{ table.row(
+                ["courseDescription",
+                "Short course description",
+                "string",
+                "Examination of systems and philosophies of education globally..."]) }}
+            {{ table.row(
+                ["deliveryMethod",
+                "Is the course online?",
+                "string",
+                "not online"]) }}
+            {{ table.row(
+                ["description",
+                "Concise description",
+                "string",
+                "Comparative Education"]) }}
+            {{ table.row(
+                ["program",
+                "Internal program reference",
+                "string",
+                "OLPD-CIDE"]) }}
+            {{ table.row(
+                ["programDescription",
+                "Short program descriptor",
+                "string",
+                "EDPA"]) }}
+            {{ table.row(
+                ["title",
+                "Course title",
+                "string",
+                "EDPA 5103"]) }}
+        {{ table.end_table() }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/courses.min.js"></script>
+{% endblock %}
+
