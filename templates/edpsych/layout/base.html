@@ -66,24 +66,25 @@
     <a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a>
 {% endblock %}
 {% block nav %}
-    <nav id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
-        <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
-        <button class="nav-toggle">Menu</button>
-        <nav class="inline">
-            <ul class="nav inline">
-                {% for top_level_nav_item in nav_items %}
-                    <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
-                      {% if top_level_nav_item.subsections %}
-                        <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
-                          {% for subsection in top_level_nav_item.subsections %}
-                            <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
+<div id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
+    <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
+    <button class="nav-toggle">Menu</button>
+    <nav class="inline">
+        <ul class="nav inline">
+            {% for top_level_nav_item in nav_items %}
+                <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
+                    {% if top_level_nav_item.subsections %}
+                    <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
+                        {% for subsection in top_level_nav_item.subsections %}
+                        <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">
