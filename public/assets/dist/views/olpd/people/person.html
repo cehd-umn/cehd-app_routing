@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="container">
+        <div class="feature twothird">
+            <div class="third">
+                {% if data.person.headshotAddress|is_string %} <br />
+                <p class="no-margin-top"><img src="{{ data.person.headshotAddress }}" alt="{{ data.person.nameFirstLast }} headshot"></p>
+                {% endif %}
+            </div>
+            <div class="twothird">
+                <h4 class="heading-profile">{{ data.person.nameFirstLast }}</h4>
+                <p>
+                    {% if data.person.workingTitle|is_string %} {{ data.person.workingTitle|safe }} {% endif %} {% if data.person.phone|is_string %} {{ data.person.phone }}<br> {% endif %}
+                    <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
+                </p>
+            </div><!-- end twothird -->
+        </div><!-- end feature twothird -->
+    </div><!-- end container -->
+</div><!-- end row -->

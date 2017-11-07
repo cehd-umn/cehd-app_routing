@@ -11,8 +11,8 @@
             <div class="twothird">
                 <h4 class="heading-profile">{{ person.nameFirstLast }}</h4>
                 <p>
-                {% if person.workingTitle|is_string %} {{ person.workingTitle|safe }} {% endif %}
-                    <br /> {{ person.phone }} | <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a>
+                    {% if person.workingTitle|is_string %} {{ person.workingTitle|safe }} {% endif %}<br  />
+                    {{ person.phone }} <br  /> <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a>
                 </p>
             </div>
         </div>

@@ -15,41 +15,42 @@
         <p>Institutions of higher education prepare their students to live purposeful lives, to find meaning and value in their work, and to collaborate across their networks and communities. These institutions are the home of research and discovery, supporting our leading scientists and experts.</p>
         <p>Institutions of higher education are vibrant places to work, with rapidly-changing ideas and community-embedded projects and research. Higher education professionals work in a variety of roles supporting student learning, scholarship, and broader community engagement. In this program area, you will study the state and federal policies, the legal frameworks, the economic and social conditions, and the changing demands of learners that all affect how institutions operate and excel in meeting their missions. You will investigate the accessibility and affordability of higher education, and the culture in which students, faculty and staff find themselves.</p>
     </div>
+</div><!--close container-->
 
+<div class="row emphasis">
     <div class="container">
-        <div class="twothird feature">
-            <h2 class="text-center margin-top-2">Degrees and programs</h2></div>
-
-      <div class="third">
-          <ul class="no-bullet">
-              <li>Ph.D.</li>
-          </ul>
-      </div>
-
-      <div class="third">
-          <ul class="no-bullet">
-              <li>M.A. (traditional and accelerated options)</li>
-              <li>M.A. in Multicultural College Teaching and Learning</li>
-          </ul>
-      </div>
-
-      <div class="third">
-          <ul class="no-bullet">
-              <li>Undergraduate Multicultural Teaching and Learning Certificate</li>
-              <li>Multicultural College Teaching and Learning Graduate Minor</li>
-          </ul>
-      </div>
+        <div class="half feature">
+            <h2 class="text-center">Degrees &amp; programs</h2></div>
+        <div class="row">
+            <div class="span-2">
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/graduate-programs/higher-education/phd">Ph.D.</a></li>
+                </ul>
+            </div>
+            <div class="span-5">
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/graduate-programs/higher-education/ma">M.A. (traditional &amp; accelerated options)</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/multicultural-college-teaching-learning/ma">M.A. in Multicultural College Teaching and Learning</a></li>
+                </ul>
+            </div>
+            <div class="span-5">
+                <ul class="no-bullet">
+                    <li>Undergraduate Multicultural Teaching and Learning Certificate</li>
+                    <li>Multicultural College Teaching and Learning Graduate Minor</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div class="span-12 feature">
+</div>
+    <div class="container">
+    <div class="span-12 feature margin-top-2">
         <h2 class="text-center">Coordinator</h2>
             <div id="coordinator-container" class="loader-container" aria-live="polite"
                 data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-                data-tag="469" {# This is the id of the tag from the People tool #}
+                data-internet-id="miksc001" {# This is the id of the tag from the People tool #}
                 data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
                 data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
-                data-template-name="list.html" {# The name of the Nunjucks template #}
-                data-people-per-group="2"> {# How many people to put in each group #}
+                data-template-name="person.html"> {# The name of the Nunjucks template #}
                 <div class="loader">
                     <div class="loader-figure "></div>
                     <p class="loader-label">Loading...</p>
@@ -68,6 +69,7 @@
                     <p class="loader-label">Loading...</p>
                 </div>
             </div>
+        </div>
     </div><!-- close container -->
 </div><!-- close row -->
 {% endblock %}

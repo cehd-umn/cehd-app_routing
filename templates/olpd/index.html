@@ -36,6 +36,29 @@
         .hero-image {
             top: 100px;
         }
+        .circular-stat {
+            position:relative;
+            width: 100%;
+            z-index: 1;
+       }
+        .stat-percent {
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 72px;
+            margin: -175px 0 0 150px;
+            position: absolute;
+            z-index: 99;
+        }
+        .stat-text p {
+            font-family: 'Lato-light', sans-serif;
+            font-size: 38px;
+            margin: -175px 0 0 350px;
+            z-index: 99;
+        }
+        .stat-caption {
+            font-family: 'Lato', sans-serif;
+            font-size: 10px;
+        }
     }
 </style>
 {% endblock %}
@@ -60,6 +83,20 @@
         <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
 
 
+<div class="container feature">
+
+
+          <img class="circular-stat" src="/olpd-new/images/circle-stat.svg" alt="Circle stat">
+<div class="stat-percent">
+    78%
+</div>
+<div class="stat-text">
+    <p>employers identify “ability to work
+in a team” as the top attribute they
+seek in new hires</p>
+</div>
+</div>
+
         <div class="feature twothird">
             <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power.
                 We prepare leaders and researchers to transform our education and organizations for the better.</p>
@@ -71,12 +108,12 @@
         <div class="whole">
             <h2 class="text-center">Undergraduate programs</h2>
             <div class="half">
-                <p><a href="{{ config.asset_base }}/bme/"><strong>Business and Marketing Education</strong></a></p>
+                <p><a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/"><strong>Business and Marketing Education</strong></a></p>
                 <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
             </div>
 
             <div class="half">
-                <p><a href="{{ config.asset_base }}/hrd/"><strong>Human Resource Development</strong></a></p>
+                <p><a href="{{ config.asset_base }}/undergraduate-programs/human-resource-development/"><strong>Human Resource Development</strong></a></p>
                 <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
             </div>
 
@@ -85,26 +122,26 @@
             <h2 class="text-center">Graduate program tracks</h2>
             <div class="row">
                 <div class="third">
-                    <p><strong>Comparative International Development Education</strong> [LINK]</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education"><strong>Comparative International Development Education</strong></a></p>
                     <p>Examine educational ideas, practices, and systems through a global lens and foster understanding of transcultural issues and trends in education.</p>
                 </div>
                 <div class="third">
-                    <p><strong>Education Policy and Leadership</strong> [LINK]</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership"><strong>Education Policy and Leadership</strong></a></p>
                     <p>Work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
                 </div>
                 <div class="third">
-                    <p><strong>Evaluation Studies</strong> [LINK]</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies"><strong>Evaluation Studies</strong></a></p>
                     <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in a variety of fields.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="half">
-                    <p><strong>Higher Education</strong> [LINK]</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/higher-education"><strong>Higher Education</strong></a></p>
                     <p>Investigate the experiences, practices and decisions of those involved in post-secondary educations as well as the socio-political contexts in which higher education exists.</p>
                 </div>
                 <div class="half">
-                    <p><strong>Human Resource Development</strong></p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/human-resource-development"><strong>Human Resource Development</strong></a></p>
                     <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
                 </div>
             </div>
