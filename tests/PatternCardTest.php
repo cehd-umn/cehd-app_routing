@@ -29,7 +29,7 @@ class PatternCardTest extends TestCase
     {
         $patterns = $this->_cardsInstance->loadYaml($this->_file_path);
         $routes = $this->_cardsInstance->buildRoutesFromPatternData($patterns);
-        $result = $routes["/patterns/v1/page/page-layout/"];
+        $result = $routes["/v1/page/page-layout/"];
         $this->assertTrue($this->_cardsInstance->arrayContains("handler", $result));
         $this->assertNull($result->handler);
         $this->assertInstanceOf(PatternCard::class, $result);

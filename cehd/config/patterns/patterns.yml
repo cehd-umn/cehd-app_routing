@@ -1565,6 +1565,21 @@ Calendar icon SVG:
       type: include
   type: include
   uses: null
+Courses:
+  publish: true
+  meta: null
+  categories:
+    - cope tools
+    - feeds
+    - courses
+  description: Pulls in courses from the Course tool
+  group: html
+  example_page_url: null
+  handler: null
+  template: patterns/cope-tools/courses.html
+  twig_files: null
+  type: template
+  uses: null
 People by tag:
   publish: true
   meta: null
