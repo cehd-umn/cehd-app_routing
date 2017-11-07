@@ -2,46 +2,20 @@
 {% set page_title = "Faculty & Instructors" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-{# This uses a JavaScript template located at:
-app_template/public/edpsych/assets/dist/views/edpsych/people/person.html
-
-The reason JavaScript is handling this is so we can make the requests to the
-People Tool asynchronous.
-#}
-<div id="results-container" aria-live="polite">
-    <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
+<div id="person-container" class="loader-container" aria-live="polite"
+    data-person-with-extra-app
+    data-internet-id="{{ internet_id }}"
+    data-target-element-selector="#person-container"
+    data-template-path="/assets/dist/views/olpd/people/"
+    data-extra-data-url="{{ config.base_url }}/data/people/"
+    data-extra-data-data='{ "internetId": "{{ internet_id }}" }'
+    data-template-name="person-page.html">
+    <div class="loader">
+        <div class="loader-figure "></div>
+        <p class="loader-label">Loading&hellip;</p>
+    </div>
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-<script>
-    (function() {
-        "use strict";
-        var params = {
-            url: "/services/people-tool/person/",
-            data: {
-                internetId: "{{ internet_id }}"
-            }
-        };
-        var app = new App();
-        var client = new app.httpClient();
-        var $request = client.get(params);
-        var page_title = document.title;
-
-        $request.done(function() {
-            var person = client.getResults();
-            var renderer = new app.renderer();
-            var template_params = {
-                'template_path': '/assets/dist/views/cehd/people/',
-                'template_name': 'person.html',
-                'data': {
-                    person: person,
-                    config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                }
-            };
-            document.title = person.nameFirstLast + " | " + page_title;
-            renderer.init(template_params);
-            renderer.render();
-        });
-    })();
-</script>
+<script src="/assets/dist/js/people.min.js"></script>
 {% endblock %}
