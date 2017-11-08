@@ -30,9 +30,6 @@
 - name: Research & Engagement
   href: "/research-and-engagement/"
   section: research
-  subsections:
-    - name: Center for the Study of Leadership in Urban Schools
-      href: https://research.cehd.umn.edu/cslus/
 - name: Courses
   href: "/courses/"
   section: courses

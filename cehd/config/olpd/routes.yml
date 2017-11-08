@@ -90,6 +90,16 @@
   publish: false
   template_data:
     - section: courses
+/apply/readmission/:
+  template: olpd/apply/readmission.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/comparative-international-development-education/phd/:
+  template: olpd/apply/cide/phd.html
+  publish: false
+  template_data:
+    - section: apply
 /graduate-programs/:
   template: olpd/graduate-programs/index.html
   publish: false
@@ -187,6 +197,11 @@
     - section: graduate-programs
 /graduate-programs/evaluation-studies/ma-curriculum/:
   template: olpd/graduate-programs/es/ma-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/program-evaluation/:
+  template: olpd/graduate-programs/certificate/program-evaluation.html
   publish: false
   template_data:
     - section: graduate-programs
