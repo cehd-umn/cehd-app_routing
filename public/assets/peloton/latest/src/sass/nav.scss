@@ -5,6 +5,13 @@ nav {
     max-height: 0;
     overflow: hidden;
 
+    &.open {
+        display: block;
+        height: auto;
+        max-height: 2000px;
+        overflow: visible;
+    }
+
     a {
         color: $base-charcoal;
         display: block;

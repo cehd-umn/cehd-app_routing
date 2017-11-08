@@ -4,6 +4,13 @@ nav {
   overflow: hidden;
 }
 
+nav.open {
+  display: block;
+  height: auto;
+  max-height: 2000px;
+  overflow: visible;
+}
+
 nav a {
   color: #666;
   display: block;
