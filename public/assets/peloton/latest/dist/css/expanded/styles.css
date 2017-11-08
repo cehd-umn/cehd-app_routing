@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card {
   -webkit-transition: background-color 0.5s, max-height 1s, max-width 1s, opacity 1s;
   -moz-transition: background-color 0.5s, max-height 1s, max-width 1s, opacity 1s;
@@ -2098,4 +2099,39 @@ dd.event-title {
   font-size: 30px;
   padding: inherit;
   width: auto;
+}
+
+blockquote {
+  margin: 10px;
+}
+
+blockquote.quote-wrap {
+  font-size: 20px;
+  font-style: inherit;
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote.quote-wrap::after, blockquote.quote-wrap::before {
+  font-family: Macondo, sans-serif;
+  font-size: 80px;
+  line-height: .1em;
+  position: absolute;
+}
+
+blockquote.quote-wrap::after {
+  bottom: -30px;
+  content: close-quote;
+  right: -28px;
+}
+
+blockquote.quote-wrap::before {
+  content: open-quote;
+  left: -.5em;
+  top: .35em;
+}
+
+@media all and (min-width: 960px) {
+  blockquote.quote-wrap {
+    margin-top: 50px;
+  }
 }
