@@ -32,6 +32,25 @@ class OLPDApp extends \CEHD\App\App\BaseApp
     }
 
     // @todo use type hinting
+    public function personExtraData($request, $response, $args)
+    {
+        $result = [];
+        $query_data = $request->getQueryParams();
+        $extra_content_file = __DIR__ . "/../../../cehd/config/olpd/people/extra_content.yml";
+        $extra_content = $this->loadYaml($extra_content_file);
+        $result = $extra_content;
+
+        if (array_key_exists("internetId", $query_data)) {
+            $internet_id = $query_data["internetId"];
+
+            if ($this->arrayContains($internet_id, $extra_content)) {
+                $result = $extra_content[$internet_id];
+            }
+        }
+        return $response->withJson($result);
+    }
+
+    // @todo use type hinting
     public function personPage($request, $response, $args)
     {
         $internet_id = $args["internet_id"];

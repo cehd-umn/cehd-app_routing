@@ -29,6 +29,26 @@ class People {
         };
     }
 
+    getPersonWithExtraData(people_url, internet_id, extra_data_url, extra_data_data) {
+        const person_results = this.getPerson(people_url, internet_id);
+        const extra_data_results = this.get(extra_data_url, extra_data_data);
+
+        return {
+            person: person_results,
+            extraData: extra_data_results
+        };
+    }
+
+    getPeopleWithExtraData(people_url, people_tg, extra_data_url, extra_data_data) {
+        const people_results = this.getPeople(people_url, people_tg);
+        const extra_data_results = this.get(extra_data_url, extra_data_data);
+
+        return {
+            people: people_results,
+            extraData: extra_data_results
+        };
+    }
+
     /**
      * @function
      * @description generic method for making aysnchronous requests for a list of people
@@ -57,6 +77,10 @@ class People {
         };
 
         return this.get(url, data);
+    }
+
+    renderPerson(data) {
+        console.log(data);
     }
 }
 

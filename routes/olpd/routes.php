@@ -76,5 +76,6 @@ foreach ($routes as $route => $route_info) {
     }
 }
 
+$app->get("/data/people/", OLPDApp::class . ":personExtraData");
 $app->get("/people/{internet_id}/", OLPDApp::class . ":personPage");
 $app->get("/search/", OLPDApp::class . ":searchPage");
