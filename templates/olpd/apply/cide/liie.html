@@ -1,0 +1,62 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Apply OLPD PhD: LIIE Cohort" %}
+{% block title %}
+    Apply OLPD PhD: LIIE Cohort
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Admissions: <br>
+        OLPD Ph.D.: Leadership for intercultural and international education cohort</h1>
+    </div>
+
+    <div class="container">
+        <div class="half">
+            <h2>Admission requirements</h2>
+                <p><strong>Degree:</strong> Master's degree or equivalent</p>
+                <p><strong>GPA:</strong> Undergraduate 3.0; Graduate 3.5</p>
+                <p><strong>GRE Preferred scores (Taken within last 5 years):</strong>
+                    <ul class="bullet">
+                        <li>Verbal = 156</li>
+                        <li>Quantitative = 146</li>
+                        <li>Analytical Writing = 4.5</li>
+                    </ul>
+                <p><strong>TOEFL/IELTS Scores (Not required for U.S. students):</strong></p>
+                    <ul class="bullet">
+                        <li>TOEFL: Internet based = 79 or above<br>
+                        (21 writing/19 reading)</li>
+                        <li>IELTS = 6.5</li>
+                    </ul>
+
+            <h2>Readmission</h2>
+                <p>If a graduate student in an OLPD program has become inactive they must follow the <a href="{{ config.asset_base }}/apply/readmission">readmission procedures.</a></p>
+        </div>
+
+        <div class="half">
+            <h2>Application deadline &amp; instructions</h2>
+                <p><strong>The deadline for the 2017 LIIE cohort has passed. The next cohort should begin enrolling in 2020.</strong>
+                <p>Applicants may only apply to one OLPD track.</p>
+                <p>Applications are not complete until ALL required materials and fees have been received. If anything is missing, your application may not be considered until the next review date the following year. It is strongly recommended to apply at least two weeks before any submission deadlines.</p>
+                <p>Applications are processed by the Graduate School. A decision for admission notice will be emailed to you once your application is carefully reviewed by the department's admission committee and your transcripts and any credentials (test reports, diploma copies, etc.) are authenticated by Graduate School officials.</p>
+                <p><a href="{{ config.asset_base }}/documents/apply/PhDApplicationInstructions.pdf">Online application and instructions</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="twothird feature">
+            <h2 class="text-center margin-top-2">Tuition &amp; funding</h2>
+
+                    <p><a href="{{ config.asset_base }}/documents/Forms/AssistantshipApp.pdf">OLPD Graduate Assistantship Application</a><br>
+                    Upload your completed application via the online application under the "Program Supplementary Information" section as "upload 1".</p>
+                    <p>Tuition information: <a href="/graduate/funding/">CEHD</a> |
+                    <a href="https://onestop.umn.edu/finances/tuition">OneStop</a></p>
+                    <p>Financial aid: <a href="/graduate/funding/">CEHD</a> |
+                    <a href="https://onestop.umn.edu/finances/types-financial-aid">OneStop</a></p>
+
+
+        </div>
+
+</div><!-- close row -->
+{% endblock %}

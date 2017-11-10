@@ -1,0 +1,48 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Adult Education Undergraduate Certificate" %}
+{% block title %}
+  Adult Education Undergraduate Certificate
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Adult education undergraduate certificate</h1>
+        <div class="twothird feature">
+            <p>Developing a practice of lifelong learning helps others to feel fulfilled and inspires social change. With a certificate in Adult Education, you can advise on workplace or public policy and provide knowledge of best practices.</p>
+            <p>This certificate prepares you with specialized skills and knowledge of the unique challenges and opportunities adult learners face in educational growth, professional development, and personal enrichment. Learn about advanced strategies in
+                teaching adults, and hone your own abilities in conveying facts and theories in a persuasive and motivational way.</p>
+            <h2>Benefits</h2>
+            <ul class="bullet">
+                <li>Provide additional recognition of professional expertise, particularly when combined with a degree.</li>
+                <li>Earn a credential that distinguishes you from other job candidates.</li>
+                <li>Obtain specialized knowledge and feel confident and self-assured in your work.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="half">
+            <h2>Coursework</h2>
+            <ul class="no-bullet">
+                <li>14 credits minimum completed in 1-2 semesters for full time students.</li>
+                <li>Certificate coursework completed with undergraduate student status cannot be applied to graduate-level degree programs.</li>
+                <li><a href="{{ config.asset_base }}/courses/human-resource-development">HRD course offerings </a></li>
+            </ul>
+        </div>
+        <div class="half">
+            <h2 class="text-center">Curriculum</h2>
+            <p class="text-center"><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=12222&strm=1169&campus=UMNTC">See the University Undergraduate Catalog for course requirements.</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <p class="text-center"><a href="{{ config.asset_base }}/apply/undergraduate/adult-education-certificate" class="button center">How to apply</a></p>
+    </div>
+    <div class="container feature twothird">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center"><a href="/people/orkideh">Orkideh Mohajeri</a>, Coordinator<br> Undergraduate Studies<br> 612-625-3150 | <a href="mailto:orkideh@umn.edu">orkideh@umn.edu</a></p>
+    </div>
+</div><!-- close row -->
+{% endblock %}

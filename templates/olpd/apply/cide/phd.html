@@ -1,7 +1,7 @@
 {% extends "olpd/layout/base.html" %}
-{% set page_title = "Apply" %}
+{% set page_title = "Apply OLPD PhD:CIDE" %}
 {% block title %}
-    Apply
+    Apply OLPD PhD: CIDE
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -31,7 +31,7 @@
                     </ul>
 
             <h2>Readmission</h2>
-                <p>If a graduate student in an OLPD program has become inactive they must follow the readmission procedures. INSERT LINK</p>
+                <p>If a graduate student in an OLPD program has become inactive they must follow the <a href="{{ config.asset_base }}/apply/readmission">readmission procedures.</a></p>
         </div>
 
         <div class="half">
@@ -40,32 +40,23 @@
                 <p>Applicants may only apply to one OLPD track.</p>
                 <p>Applications are not complete until ALL required materials and fees have been received. If anything is missing, your application may not be considered until the next review date the following year. It is strongly recommended to apply at least two weeks before any submission deadlines.</p>
                 <p>Applications are processed by the Graduate School. A decision for admission notice will be emailed to you once your application is carefully reviewed by the department's admission committee and your transcripts and any credentials (test reports, diploma copies, etc.) are authenticated by Graduate School officials.</p>
-                <p><a href="{{ config.asset_base }}/documents/apply/PhDApplicationInstructions.pdf">Application Instructions</a></p>
+                <p><a href="{{ config.asset_base }}/documents/apply/PhDApplicationInstructions.pdf">Online application and instructions</a></p>
         </div>
     </div>
 
     <div class="container">
         <div class="twothird feature">
-            <h2 class="text-center margin-top-2">Tuition and funding</h2></div>
+            <h2 class="text-center margin-top-2">Tuition &amp; funding</h2>
 
-            <div class="container">
-                <div class="half">
-                    <h3>Tuition</h3>
-                        <p>Tuition information is available at:</p>
-                            <ul class="bullet">
-                                <li><a href="/graduate/funding/">CEHD finance and funding</a></li>
-                                <li><a href="/https://onestop.umn.edu/finances/receiving-financial-aid">OneStop financial aid</a></li>
-                            </ul>
-                </div>
+                    <p><a href="{{ config.asset_base }}/documents/Forms/AssistantshipApp.pdf">OLPD Graduate Assistantship Application</a><br>
+                    Upload your completed application via the online application under the "Program Supplementary Information" section as "upload 1".</p>
+                    <p>Tuition information: <a href="/graduate/funding/">CEHD</a> |
+                    <a href="https://onestop.umn.edu/finances/tuition">OneStop</a></p>
+                    <p>Financial aid: <a href="/graduate/funding/">CEHD</a> |
+                    <a href="https://onestop.umn.edu/finances/types-financial-aid">OneStop</a></p>
 
-                <div class="half">
-                    <h3>Funding</h3>
-                        <ul class="no-bullet">
-                            <li>Only students accepted in December review are considered for assistantships.</li>
-                            <li>CEHD scholarship information</li>
-                            </ul>
-                    </div>
-                </div>
+
+        </div>
 
 </div><!-- close row -->
 {% endblock %}

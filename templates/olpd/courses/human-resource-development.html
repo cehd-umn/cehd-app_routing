@@ -8,9 +8,9 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>Course offerings:<br> Human resource development</h1>
+        <h1>Course offerings:<br>
+            <small>Human resource development</small></h1>
     </div>
-
 <div class="row">
     <div class="container">
         <div class="half">
@@ -19,10 +19,8 @@
                     <li><a href="https://onestop.umn.edu/academics/class-search-resources">Course search resources</a></li>
                     <li><a href="https://onestop.umn.edu/academics/enroll-class">Class registration instructions</a></li>
                     <li><a href="https://onestop.umn.edu/">OneStop student services</a></li>
-
                 </ul>
         </div>
-
         <div class="half">
             <h2>Other track course offerings</h2>
                 <ul class="bullet">
@@ -34,23 +32,15 @@
         </div>
     </div>
 </div>
-
 <div class="row">
     <div class="container">
-        <h2>Course offerings</h2>
-
-        <div class="half feature">
-            <div id="courses-container" class="loader-container" aria-live="polite"
-                data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-                data-a="both" {# The value from the "a" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
-                data-d="both" {# The value from the "d" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
-                data-p="OLPD-HRD" {# The value from the "p" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
-                data-t="cur" {# OPTIONAL The value from the "t" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
-                data-h="0" {# OPTIONAL The value from the "h" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
-                data-target-element-selector="#courses-container" {# The element selector for the feed html #}
-                data-template-path="/assets/dist/views/cehd/courses/" {# The path the the Nunjucks template #}
-                data-template-name="index.html" {# The name of the Nunjucks template #}
-                data-limit="4"> {# How many courses to put in each group #}
+        <div class="twothird feature">
+            <h2>Course offerings</h2>
+            <div id="courses-container" class="loader-container" aria-live="polite" data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #} data-a="both" {# The value from the "a" parameter in Link Pro in the course tool:
+                https://apps.cehd.umn.edu/Programs/LinkPro.aspx #} data-d="both" {# The value from the "d" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #} data-p="OLPD-HRD" {# The value from the "p" parameter in
+                Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #} data-t="cur" {# OPTIONAL The value from the "t" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #} data-h="0" {# OPTIONAL
+                The value from the "h" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #} data-target-element-selector="#courses-container" {# The element selector for the feed html #} data-template-path="/assets/dist/views/cehd/courses/"
+                {# The path the the Nunjucks template #} data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="4"> {# How many courses to put in each group #}
                 <div class="loader">
                     <div class="loader-figure "></div>
                     <p class="loader-label">Loading&hellip;</p>

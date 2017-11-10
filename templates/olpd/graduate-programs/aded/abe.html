@@ -1,0 +1,32 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Adult Basic Education Licensure" %}
+{% block title %}
+  Adult Basic Education Licensure
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+
+    <div class="container">
+        <h1>Adult basic education licensure</h1>
+
+    <div class="twothird feature">
+        <p><strong>Admissions for this program have been suspended, effective October 11, 2017.</strong>
+        <p><strong><a href="{{ config.asset_base }}/documents/ABE_Letter.pdf">Read a statement from CEHD leadership regarding the program and changes.</a></strong></p>
+
+        <p>The adult basic education license is a teaching license that will allow you to teach adults in public school community education programs. A 29-semester credit teaching license is available for those who wish to teach adult literacy but do not have an elementary or secondary teaching license. All coursework may be applicable to each of the graduate degrees in adult education. Also available is a 12-semester credit additional license option for licensed teachers.</p>
+    </div>
+    </div>
+
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/twoh0001">Catherine Twohig</a>, Coordinator<br>
+            Adult Basic Education Licensure<br>
+            <a href="mailto:louquast@umn.edu">twoh0001@umn.edu</a></p>
+    </div>
+
+</div><!-- close row -->
+{% endblock %}

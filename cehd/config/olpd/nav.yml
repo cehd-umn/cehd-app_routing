@@ -9,10 +9,6 @@
       href: "/undergraduate-programs/human-resource-development/"
     - name: Undergraduate Advising
       href: "/undergraduate-programs/advising/"
-    - name: Internship & Applied Experience
-      href: "/undergraduate/internship-and-applied-experience/"
-    - name: Resources
-      href: "/undergraduate/resources/"
 - name: Graduate
   href: "/graduate-programs/"
   section: graduate programs
@@ -30,6 +26,7 @@
 - name: Research & Engagement
   href: "/research-and-engagement/"
   section: research
+  subsections: null
 - name: Courses
   href: "/courses/"
   section: courses
@@ -46,18 +43,10 @@
       href: "/courses/higher-education/"
     - name: Human Resource Development
       href: "/courses/human-resource-development/"
-    - name: Past Designators
-      href: "/courses/paste-designators/"
 - name: People
   href: "/people/"
   section: people
-  subsections:
-    - name: Faculty & Instructional Staff
-      href: "/people/faculty-and-instrucional-staff/"
-    - name: Departmental Staff
-      href: "/people/departmental-staff/"
-    - name: Emeriti Faculty
-      href: "/people/emeriti-faculty/"
+  subsections: null
 - name: Giving
   href: "/giving/"
   section: giving

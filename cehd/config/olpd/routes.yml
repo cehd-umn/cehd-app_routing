@@ -95,8 +95,78 @@
   publish: false
   template_data:
     - section: apply
+/apply/undergraduate/adult-education-certificate/:
+  template: olpd/apply/undergraduate/adult-education-certificate.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/undergraduate/human-resource-development-certificate/:
+  template: olpd/apply/undergraduate/human-resource-development-certificate.html
+  publish: false
+  template_data:
+    - section: apply
 /apply/comparative-international-development-education/phd/:
   template: olpd/apply/cide/phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/comparative-international-development-education/liie/:
+  template: olpd/apply/cide/liie.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/comparative-international-development-education/ma/:
+  template: olpd/apply/cide/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/education-policy-leadership/phd/:
+  template: olpd/apply/epl/phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/education-policy-leadership/executive-phd/:
+  template: olpd/apply/epl/executive-phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/education-policy-leadership/ma/:
+  template: olpd/apply/epl/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/evaluation-studies/phd/:
+  template: olpd/apply/es/phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/evaluation-studies/ma/:
+  template: olpd/apply/es/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/higher-education/phd/:
+  template: olpd/apply/he/phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/higher-education/ma/:
+  template: olpd/apply/he/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/multicutural-college-teaching-learning/ma/:
+  template: olpd/apply/mctl/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/human-resource-development/phd/:
+  template: olpd/apply/hrd/phd.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/human-resource-development/ma/:
+  template: olpd/apply/hrd/ma.html
   publish: false
   template_data:
     - section: apply
@@ -117,6 +187,16 @@
     - section: graduate-programs
 /graduate-programs/comparative-international-development-education/phd-curriculum/:
   template: olpd/graduate-programs/cide/phd-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/comparative-international-development-education/liie/:
+  template: olpd/graduate-programs/cide/liie.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/comparative-international-development-education/liie-curriculum/:
+  template: olpd/graduate-programs/cide/liie-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -145,6 +225,11 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/education-policy-leadership/executive-phd/:
+  template: olpd/graduate-programs/epl/executive-phd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/education-policy-leadership/ma/:
   template: olpd/graduate-programs/epl/ma.html
   publish: false
@@ -162,16 +247,6 @@
     - section: graduate-programs
 /graduate-programs/education-policy-leadership/med-curriculum/:
   template: olpd/graduate-programs/epl/med-curriculum.html
-  publish: false
-  template_data:
-    - section: graduate-programs
-/graduate-programs/certificate/disability-policy-services/:
-  template: olpd/graduate-programs/certificate/disability-policy-services.html
-  publish: false
-  template_data:
-    - section: graduate-programs
-/graduate-programs/certificate/professional-development/:
-  template: olpd/graduate-programs/certificate/professional-development.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -197,11 +272,6 @@
     - section: graduate-programs
 /graduate-programs/evaluation-studies/ma-curriculum/:
   template: olpd/graduate-programs/es/ma-curriculum.html
-  publish: false
-  template_data:
-    - section: graduate-programs
-/graduate-programs/certificate/program-evaluation/:
-  template: olpd/graduate-programs/certificate/program-evaluation.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -275,11 +345,6 @@
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/certificate/human-resource-development/:
-  template: olpd/graduate-programs/certificate/human-resource-development.html
-  publish: false
-  template_data:
-    - section: graduate-programs
 /graduate-programs/adult-education/med/:
   template: olpd/graduate-programs/aded/med.html
   publish: false
@@ -290,6 +355,11 @@
   publish: false
   template_data:
     - section: graduate-programs
+/graduate-programs/adult-education/abe/:
+  template: olpd/graduate-programs/aded/abe.html
+  publish: false
+  template_data:
+    - section: graduate-programs
 /graduate-programs/certificate/adult-education/:
   template: olpd/graduate-programs/certificate/adult-education.html
   publish: false
@@ -297,6 +367,56 @@
     - section: graduate-programs
 /graduate-programs/certificate/adult-literacy/:
   template: olpd/graduate-programs/certificate/adult-literacy.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/disability-policy-services/:
+  template: olpd/graduate-programs/certificate/disability-policy-services.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/human-resource-development/:
+  template: olpd/graduate-programs/certificate/human-resource-development.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/professional-development/:
+  template: olpd/graduate-programs/certificate/professional-development.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/program-evaluation/:
+  template: olpd/graduate-programs/certificate/program-evaluation.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/certificate/multicultural-teaching-learning/:
+  template: olpd/graduate-programs/certificate/multicultural-teaching-learning.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/international-education/:
+  template: olpd/graduate-programs/minor/international-education.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/integrative-leadership/:
+  template: olpd/graduate-programs/minor/integrative-leadership.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/ilm-curriculum/:
+  template: olpd/graduate-programs/minor/ilm-curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/multicultural-college-teaching-learning/:
+  template: olpd/graduate-programs/minor/multicultural-college-teaching-learning.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/program-evaluation/:
+  template: olpd/graduate-programs/minor/program-evaluation.html
   publish: false
   template_data:
     - section: graduate-programs
@@ -316,17 +436,22 @@
   template_data:
     - section: undergraduate-programs
 /undergraduate-programs/business-marketing-education/:
-  template: olpd/undergraduate-programs/bme.html
+  template: olpd/undergraduate-programs/business-marketing-education.html
   publish: false
   template_data:
     - section: undergraduate-programs
 /undergraduate-programs/human-resource-development/:
-  template: olpd/undergraduate-programs/hrd.html
+  template: olpd/undergraduate-programs/human-resource-development.html
   publish: false
   template_data:
     - section: undergraduate-programs
-/undergraduate-programs/resources/:
-  template: olpd/undergraduate-programs/resources.html
+/undergraduate-programs/certificate/adult-education/:
+  template: olpd/undergraduate-programs/certificate/adult-education.html
+  publish: false
+  template_data:
+    - section: undergraduate-programs
+/undergraduate-programs/certificate/human-resource-development/:
+  template: olpd/undergraduate-programs/certificate/human-resource-development.html
   publish: false
   template_data:
     - section: undergraduate-programs
