@@ -15,7 +15,7 @@ if (courses_containers.length > 0) {
         const limit =                   container.data("limit");
         const a =                       container.data("a");
         const d =                       container.data("d");
-        const h =                       container.hata("h");
+        const h =                       container.data("h");
         const p =                       container.data("p");
         const t =                       container.data("t");
         const request_params = {
