@@ -31,7 +31,7 @@ People Tool asynchronous.
             var results = client.getResults();
             var renderer = new app.renderer();
             var template_params = {
-                'template_path': '/assets/dist/views/cehd/people/',
+                'template_path': '{{ config.nunjucks_view_base }}/edpsych/people/',
                 'template_name': 'person.html',
                 'data': {
                     person: results,
