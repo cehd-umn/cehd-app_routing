@@ -127,6 +127,45 @@
 </div> -->
 
         <div class="container feature margin-top-2">
+            {# make sure the SVG container has a unique id #}
+            <div id="circle"
+                data-svg-stat-group
+                data-viewbox-x="0"
+                data-viewbox-y="0"
+                data-viewbox-height="250"
+                data-viewbox-width="1400"
+                data-circle-center-x="300"
+                data-circle-center-y="125"
+                data-circle-size="250"
+                data-circle-bg-color="#7a0019"
+                data-text-x="440"
+                data-text-y="70"
+                data-text-color="#000"
+                data-text-font-family="Lato-light, sans-serif"
+                data-text-font-size="30px"
+                data-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
+                data-stat-text-value="78%"
+                data-stat-text-x="200"
+                data-stat-text-y="50"
+                data-stat-text-color="#fff"
+                data-stat-text-font-family="Raleway, sans-serif"
+                data-stat-text-font-size="70"
+                data-caption-text-value="source: Job Outlook 2017, National Association of Colleges and Employers"
+                data-caption-text-x="440"
+                data-caption-text-y="230"
+                data-caption-text-color="#000"
+                data-caption-text-font-family="Raleway, sans-serif"
+                data-caption-text-font-size="13px"
+                data-line-start-x="0"
+                data-line-start-y="230"
+                data-line-end-x="1400"
+                data-line-end-y="200"
+                data-line-stroke-width="10"
+                data-line-stroke-color="#eee"
+                data-line-stroke-opacity=".6"
+            ></div>
+
+            <!--
             <img class="circular-stat" src="/olpd-new/images/circle-stat.svg" alt="Circle stat">
             <div class="stat-percent">
                 78%
@@ -137,6 +176,7 @@
             <div class="stat-caption">
                 source: Job Outlook 2017, National Association of Colleges and Employers
             </div>
+            -->
         </div>
 
                 <div class="container margin-top-4">
@@ -246,6 +286,7 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/svg_circle.min.js"></script>
 {# The call to parent() above is *very* important #}
 {{ newsfeed.news_feed_js(
     "category/departments/organizational-leadership-policy-and-development/feed",
