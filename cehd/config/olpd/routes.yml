@@ -155,7 +155,7 @@
   publish: false
   template_data:
     - section: apply
-/apply/multicutural-college-teaching-learning/ma/:
+/apply/multicultural-college-teaching-learning/ma/:
   template: olpd/apply/mctl/ma.html
   publish: false
   template_data:
@@ -417,6 +417,16 @@
     - section: graduate-programs
 /graduate-programs/minor/program-evaluation/:
   template: olpd/graduate-programs/minor/program-evaluation.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/sociocultural-studies-education/:
+  template: olpd/graduate-programs/minor/sociocultural-studies-education.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/minor/scse-curriculum/:
+  template: olpd/graduate-programs/minor/scse-curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
