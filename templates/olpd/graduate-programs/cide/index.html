@@ -15,40 +15,41 @@
         <p>Students who join our CIDE community represent the future scholars, policy analysts, educators, and researchers active in a complex, ever changing international field. They come from a wide array of educational backgrounds, including history, geography, political science, sociology, economics, education, anthropology, and intercultural studies. They also come from many countries, such as Bahrain, Brazil, China, Ethiopia, Guatemala, India, Japan, Kenya, Pakistan, South Korea, Thailand, the U.S., Venezuela, and Zambia. Our students care about social justice and equity, intercultural competence, and contextually-relevant education reform. They are also concerned about the internationalization of education and how students and scholars make sense of their international experiences.</p>
         <p>A distinctive feature of our program is the close collaboration between faculty and students in both research and development projects in the U.S. and abroad. Several of these research projects have involved fieldwork by CIDE students in diverse countries and over multiple years.  This intensive, hands-on experience in conducting policy-relevant research has contributed to the impressive success of our alumni across the nation and globe in a diverse range of positions in important international and intercultural organizations (see Alumni Directory).</p>
     </div>
+</div>
 
+<div class="row emphasis">
     <div class="container">
         <div class="twothird feature">
-            <h2 class="text-center margin-top-2">Degrees and programs</h2></div>
-
-            <div class="third">
+            <h2 class="text-center">Degrees and programs</h2>
+        <div class="row">
+            <div class="half">
                 <ul class="no-bullet">
                     <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/phd">Ph.D.</a></li>
                     <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/liie">Ph.D.: Leadership for Intercultural and International Education (LIIE) cohort</a></li>
+
+
                 </ul>
             </div>
 
-            <div class="third">
+            <div class="half">
                 <ul class="no-bullet">
                     <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/ma">M.A. (traditional and accelerated options)</a></li>
-                </ul>
-            </div>
-
-            <div class="third">
-                <ul class="no-bullet">
                     <li><a href="{{ config.asset_base }}/graduate-programs/minor/international-education">Graduate Minor in International Education</a></li>
                 </ul>
             </div>
+        </div>
     </div>
-
-    <div class="twothird feature">
+</div>
+</div>
+<div class="container">
+    <div class="span-12 feature margin-top-2">
         <h2 class="text-center">Coordinator</h2>
             <div id="coordinator-container" class="loader-container" aria-live="polite"
-                data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-                data-tag="467" {# This is the id of the tag from the People tool #}
+                data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-internet-id="gwf" {# This is the id of the tag from the People tool #}
                 data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
                 data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
-                data-template-name="list.html" {# The name of the Nunjucks template #}
-                data-people-per-group="2"> {# How many people to put in each group #}
+                data-template-name="person.html"> {# The name of the Nunjucks template #}
                 <div class="loader">
                     <div class="loader-figure "></div>
                     <p class="loader-label">Loading...</p>
@@ -67,6 +68,7 @@
                     <p class="loader-label">Loading...</p>
                 </div>
             </div>
+        </div>
     </div><!-- close container -->
 </div><!-- close row -->
 {% endblock %}

@@ -135,6 +135,11 @@
   publish: false
   template_data:
     - section: apply
+/apply/education-policy-leadership/med/:
+  template: olpd/apply/epl/med.html
+  publish: false
+  template_data:
+    - section: apply
 /apply/evaluation-studies/phd/:
   template: olpd/apply/es/phd.html
   publish: false
@@ -167,6 +172,51 @@
     - section: apply
 /apply/human-resource-development/ma/:
   template: olpd/apply/hrd/ma.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/adult-education/med/:
+  template: olpd/apply/aded/med.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/human-resource-development/med/:
+  template: olpd/apply/hrd/med.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/adult-education/:
+  template: olpd/apply/certificate/adult-education.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/adult-literacy/:
+  template: olpd/apply/certificate/adult-literacy.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/disability-policy-services/:
+  template: olpd/apply/certificate/disability-policy-services.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/human-resource-development/:
+  template: olpd/apply/certificate/human-resource-development.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/professional-development/:
+  template: olpd/apply/certificate/professional-development.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/program-evaluation/:
+  template: olpd/apply/certificate/program-evaluation.html
+  publish: false
+  template_data:
+    - section: apply
+/apply/certificate/multicultural-teaching-learning/:
+  template: olpd/apply/certificate/multicultural-teaching-learning.html
   publish: false
   template_data:
     - section: apply

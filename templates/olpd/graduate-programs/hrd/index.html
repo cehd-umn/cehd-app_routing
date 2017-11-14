@@ -20,26 +20,22 @@
                 <li>How do our everyday practices intersect with our political and socio-economic contexts?</li>
             </ul>
     </div>
-
+    </div>
+<div class="row emphasis margin-top-2">
     <div class="container">
         <div class="twothird feature">
-            <h2 class="text-center margin-top-2">Degrees and programs</h2></div>
-
-      <div class="third">
+            <h2 class="text-center">Degrees and programs</h2>
+      <div class="row">
+              <div class="half">
           <ul class="no-bullet">
               <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/phd/">Ph.D.</a></li>
-          </ul>
-      </div>
-
-      <div class="third">
-          <ul class="no-bullet">
               <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/ma/">M.A.</a></li>
               <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med">M.Ed. in Adult Education</a></li>
               <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med">M.Ed. in Human Resource Development</a></li>
           </ul>
       </div>
 
-      <div class="third">
+      <div class="half">
           <ul class="no-bullet">
               <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-education">Adult Education Certificate</a></li>
               <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-literacy">Adult Literacy Certificate</a></li>
@@ -47,22 +43,25 @@
               <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/abe">Adult Basic Education Additional Licensure</a></li>
           </ul>
       </div>
-    </div>
+  </div>
 
-    <div class="twothird feature">
+    </div>
+    </div>
+</div>
+    <div class="container">
+            <div class="span-12 feature margin-top-2">
         <h2 class="text-center">Coordinator</h2>
-            <div id="coordinator-container" class="loader-container" aria-live="polite"
-                data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-                data-tag="471" {# This is the id of the tag from the People tool #}
-                data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
-                data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
-                data-template-name="list.html" {# The name of the Nunjucks template #}
-                data-people-per-group="2"> {# How many people to put in each group #}
-                <div class="loader">
-                    <div class="loader-figure "></div>
-                    <p class="loader-label">Loading...</p>
-                </div>
-            </div>
+        <div id="coordinator-container" class="loader-container" aria-live="polite"
+            data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+            data-internet-id="louquast" {# This is the id of the tag from the People tool #}
+            data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+            data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+            data-template-name="person.html"> {# The name of the Nunjucks template #}
+            <div class="loader">
+                <div class="loader-figure "></div>
+                <p class="loader-label">Loading...</p>
+        </div>
+        </div>
             <h2 class="text-center">Faculty</h2>
             <div id="people-container" class="loader-container"
                 data-people-app
@@ -76,7 +75,7 @@
                     <p class="loader-label">Loading...</p>
                 </div>
             </div>
-    </div><!-- close container -->
+
 </div><!-- close row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
