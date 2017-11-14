@@ -30,7 +30,7 @@
                     {% endif %}
                 </p>
                 <p>
-                    {% if data.person.phone|is_string %}
+                    {% if data.person.phone|is_string and data.person.tags|does_not_contain("id", "227") %}
                     {{ data.person.phone }}<br>
                     {% endif %}
                     <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>

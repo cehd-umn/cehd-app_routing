@@ -16,6 +16,7 @@
             data-target-element-selector="#faculty-container" {# The element selector for the feed html #}
             data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
             data-template-name="list.html" {# The name of the Nunjucks template #}
+            data-base-path="{{ config.base_url }}"
             data-people-per-group="2"> {# How many people to put in each group #}
             <div class="loader">
                 <div class="loader-figure "></div>
@@ -28,8 +29,9 @@
             data-tag="227" {# This is the id of the tag from the People tool #}
             data-target-element-selector="#emeriti-container" {# The element selector for the feed html #}
             data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
-            data-template-name="list.html" {# The name of the Nunjucks template #}
-            data-people-per-group="2"> {# How many people to put in each group #}
+            data-template-name="list-emeritus.html" {# The name of the Nunjucks template #}
+            data-people-per-group="2" {# How many people to put in each group #}
+            data-base-path="{{ config.base_url }}">
             <div class="loader">
                 <div class="loader-figure "></div>
                 <p class="loader-label">Loading&hellip;</p>
@@ -42,6 +44,7 @@
             data-target-element-selector="#staff-container" {# The element selector for the feed html #}
             data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
             data-template-name="list.html" {# The name of the Nunjucks template #}
+            data-base-path="{{ config.base_url }}"
             data-people-per-group="2"> {# How many people to put in each group #}
             <div class="loader">
                 <div class="loader-figure "></div>
