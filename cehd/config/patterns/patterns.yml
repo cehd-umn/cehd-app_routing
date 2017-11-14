@@ -249,6 +249,30 @@ grey background:
       name: container
     - group: css
       name: half
+grey background with top border:
+  publish: true
+  meta: null
+  categories:
+    - background color
+    - border-top
+  description: Gives an element a consistent grey background with a nice top border
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/grey-background-border.html
+      type: include
+  type: include
+  uses:
+    - group: css
+      name: row
+    - group: css
+      name: container
+    - group: css
+      name: half
+    - group: css
+      name: grey background
 multi-color background:
   publish: true
   meta: null

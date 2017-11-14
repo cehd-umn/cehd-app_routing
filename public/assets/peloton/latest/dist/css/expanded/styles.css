@@ -105,6 +105,10 @@ img.mobile-hide {
   background-color: #e9debb;
 }
 
+.emphasis.border-top {
+  border-top: #666 solid 10px;
+}
+
 .pull-quote {
   font-size: 1.5em;
 }
