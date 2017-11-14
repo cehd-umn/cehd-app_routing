@@ -64,6 +64,15 @@ $twig->addGlobal("gsa_sites", $app_config["search_sites"]);
 $container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);
 
+$container["notFoundHandler"] = function ($container)
+{
+    return function($request, $response) use ($container)
+    {
+        $container["view"]->render($response, "olpd/error/404.html", []);
+        return $container["response"]->withStatus(404);
+    };
+};
+
 $app = new \Slim\App($container);
 
 // Adds trailing slash to GET requests that don't have them
