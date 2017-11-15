@@ -10,7 +10,7 @@ module.exports = {
         news: "./public/assets/src/js/news/index.js",
         people: "./public/assets/src/js/people/index.js",
         sorter: "./public/assets/src/js/sorter.js",
-        svg_circle: "./public/assets/src/js/svg/circle/index.js"
+        svg_stats: "./public/assets/src/js/svg/stats/index.js"
     },
     output: {
         path: path.resolve(__dirname, "public/assets/dist/js"),

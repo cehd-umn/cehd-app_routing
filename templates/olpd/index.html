@@ -286,7 +286,7 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-<script src="/assets/dist/js/svg_circle.min.js"></script>
+<script src="/assets/dist/js/svg_stats.min.js"></script>{# This loads the SVG library for generating the stats SVG with JavaScript #}
 {# The call to parent() above is *very* important #}
 {{ newsfeed.news_feed_js(
     "category/departments/organizational-leadership-policy-and-development/feed",

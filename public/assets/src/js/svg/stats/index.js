@@ -1,17 +1,29 @@
 const svg = require("svg.js");
 const $ = require("jquery");
+const cehdSVG = require("../svg.js");
 
 const svg_containers = $("[data-svg-stat-group]");
+const cehdSvg = new cehdSVG();
 
 if (svg_containers.length > 0) {
     svg_containers.each(function() {
         const container = $(this);
-
-        const circle_attributes = {
-            fill: container.data("circle-bg-color"),
-            cx: container.data("circle-center-x"),
-            cy: container.data("circle-center-y")
+        const container_data = container.data();
+        const expected_circle_attrs = {
+            "fill": "string",
+            "cx": "string",
+            "cy": "string"
         };
+
+        let circle_attributes;
+
+        if (cehdSvg.validateAttrs(expected_circle_attrs, container_data)) {
+            circle_attributes = {
+                fill: container.data("circle-bg-color"),
+                cx: container.data("circle-center-x"),
+                cy: container.data("circle-center-y")
+            };
+        }
 
         const line_attributes = {
             color: container.data("line-stroke-color"),
