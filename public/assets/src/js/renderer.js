@@ -32,6 +32,17 @@ class Renderer {
         this.env.addFilter("strip_style_attributes", function(str) {
             return str.replace(/style=(".*?"|'.*?'|[^"'][^\s]*)/g, "");
         });
+
+        this.env.addFilter("does_not_contain", function(obj, key, value) {
+            var result = true;
+            $.each(obj, function() {
+                if (key in this && this[key] === value) {
+                    result = false;
+                    return false;
+                }
+            });
+            return result;
+        });
     }
 
     render(append) {

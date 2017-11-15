@@ -51,6 +51,7 @@ if (people_with_extra_containers.length > 0) {
         const template_path = container.data("template-path");
         const extra_data_url = container.data("extra-data-url");
         const extra_data_data = container.data("extra-data-data");
+        const base_url = container.data("base-path");
         const limit = container.data("people-per-group");
         const results = people.getPeopleWithExtraData("/services/people-tool/", tg, extra_data_url, extra_data_data);
 
@@ -70,7 +71,8 @@ if (people_with_extra_containers.length > 0) {
                     "template_name": template_name,
                     "$target_element": $(target_element_selector),
                     "data": {
-                        "people": grps
+                        "people": grps,
+                        "base_url": base_url
                     }
                 };
 
@@ -89,6 +91,7 @@ if (people_containers.length > 0) {
         const target_element_selector = container.data("target-element-selector");
         const template_name = container.data("template-name");
         const template_path = container.data("template-path");
+        const base_url = container.data("base-path");
         const limit = container.data("people-per-group");
         const results = people.getPeople("/services/people-tool/", tg);
 
@@ -101,7 +104,8 @@ if (people_containers.length > 0) {
                 "template_name": template_name,
                 "$target_element": $(target_element_selector),
                 "data": {
-                    "people": grps
+                    "people": grps,
+                    "base_url": base_url
                 }
             };
             view.init(template_params);
@@ -117,6 +121,7 @@ if (person_container.length > 0) {
     const template_name = person_container.data("template-name");
     const template_path = person_container.data("template-path");
     const results = people.getPerson("/services/people-tool/person/", internet_id);
+    const base_url = container.data("base-path");
 
     results.request.done(function() {
         const person = results.client.getResults();
@@ -126,7 +131,8 @@ if (person_container.length > 0) {
             "template_name": template_name,
             "$target_element": $(target_element_selector),
             "data": {
-                "person": person
+                "person": person,
+                "base_url": base_url
             }
         };
         view.init(template_params);
