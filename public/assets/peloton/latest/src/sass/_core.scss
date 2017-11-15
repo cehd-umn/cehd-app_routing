@@ -49,6 +49,10 @@ img {
     &.earthy {
         background-color: $umn-light-brown-foreground;
     }
+
+    &.border-top {
+        border-top: $base-charcoal solid 10px;
+    }
 }
 
 .pull-quote {
