@@ -23,7 +23,7 @@ class Base {
                 if (!this.containsExpectedKeys(expected[key], actual[key])) {
                     return false;
                 }
-            } else if (!actual[key]) {
+            } else if (typeof actual[key] == "undefined") {
                 return false;
             }
         }

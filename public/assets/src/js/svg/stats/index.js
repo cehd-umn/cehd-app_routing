@@ -1,28 +1,28 @@
 const svg = require("svg.js");
 const $ = require("jquery");
-const cehdSVG = require("../svg.js");
-
+const CEHDCircle = require("../circle.js");
+const CEHDViewbox = require("../viewbox.js");
 const svg_containers = $("[data-svg-stat-group]");
-const cehdSvg = new cehdSVG();
+const cehdCircle = new CEHDCircle();
+const cehdViewbox = new CEHDViewbox();
 
 if (svg_containers.length > 0) {
     svg_containers.each(function() {
+        let circle;
         const container = $(this);
         const container_data = container.data();
-        const expected_circle_attrs = {
-            "fill": "string",
-            "cx": "string",
-            "cy": "string"
-        };
+        const draw = svg(container.attr("id"));
 
-        let circle_attributes;
+        if (cehdViewbox.validateViewboxAttrs(container_data)) {
+            const attrs = cehdViewbox.getAttrsFromData(container_data);
+            draw.viewbox(attrs.x, attrs.y, attrs.width, attrs.height);
+        }
 
-        if (cehdSvg.validateAttrs(expected_circle_attrs, container_data)) {
-            circle_attributes = {
-                fill: container.data("circle-bg-color"),
-                cx: container.data("circle-center-x"),
-                cy: container.data("circle-center-y")
-            };
+        const group = draw.group();
+
+        if (cehdCircle.validateCircleAttrs(container_data)) {
+            const circle_attributes = cehdCircle.getCircleAttrsFromData(container_data);
+            circle = draw.circle(container.data("circle-size")).attr(circle_attributes);
         }
 
         const line_attributes = {
@@ -71,16 +71,6 @@ if (svg_containers.length > 0) {
 
         const text_lines = container.data("text-lines");
 
-        const draw = svg(container.attr("id"));
-
-        draw.viewbox(
-            container.data("viewbox-x"),
-            container.data("viewbox-y"),
-            container.data("viewbox-width"),
-            container.data("viewbox-height"));
-
-        const group = draw.group();
-        const circle = draw.circle(container.data("circle-size")).attr(circle_attributes);
         const stat_text = draw.text(container.data("stat-text-value"))
             .attr(stat_text_attributes)
             .font(stat_text_font_attributes);
