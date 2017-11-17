@@ -2,8 +2,6 @@ const $ = require("jquery");
 const assert = require("assert");
 const baseClass = require("../base.js");
 const CEHDSVG = require("../svg/svg.js");
-const CEHDCircle = require("../svg/circle.js");
-const CEHDViewbox = require("../svg/viewbox.js");
 
 const baseInstance = new baseClass();
 
@@ -128,77 +126,6 @@ describe("CEHDSVG", function() {
             assert.equal(attrs.viewboxY, newAttrs.y);
             assert.equal(attrs.viewboxWidth, newAttrs.width);
             assert.equal(attrs.viewboxHeight, newAttrs.height);
-        });
-    });
-});
-
-describe("Viewbox", function() {
-    const viewboxAttrs = {
-        "viewboxX": "x",
-        "viewboxY": "y",
-        "viewboxWidth": "width",
-        "viewboxHeight": "height"
-    };
-    const viewboxInstance = new CEHDViewbox(viewboxAttrs);
-
-    describe("getAttrsFromData", function() {
-        // This is what the properties will look like after they're retrieved with $.data()
-        const data = {
-            "viewboxX": "x",
-            "viewboxY": "y",
-            "viewboxWidth": "width",
-            "viewboxHeight": "height",
-            "foo": "bar"
-        };
-
-        const viewboxAttrs = viewboxInstance.getAttrsFromData(data);
-
-        it("should return an object with the properties required to create a viewbox", function() {
-            assert.equal(data.viewboxX, viewboxAttrs.x);
-            assert.equal(data.viewboxY, viewboxAttrs.y);
-            assert.equal(data.viewboxHeight, viewboxAttrs.height);
-            assert.equal(data.viewboxWidth, viewboxAttrs.width);
-        });
-
-        it("should return an object with only the numbers of properties that matches our expectations", function() {
-            const expectedNumber = 4;
-            assert.equal(expectedNumber, Object.keys(viewboxAttrs).length); // foo doesn't get sent back
-        });
-    });
-});
-
-describe("Circle", function() {
-    const circleInstance = new CEHDCircle({
-            "circleBgColor": "fill",
-            "circleCenterX": "cx",
-            "circleCenterY": "cy"
-        });
-
-    describe("getCircleAttrsFromData", function() {
-        // This is what the properties will look like after they're retrieved with $.data()
-        const data = {
-            "circleBgColor": "string",
-            "circleCenterX": "string or number",
-            "circleCenterY": "string or number",
-            "foo": "bar"
-        };
-        const circleAttrs = circleInstance.getAttrs(data);
-
-        it("should return an object with the properties required to create a circle in an SVG", function() {
-            assert.equal(data.circleBgColor, circleAttrs.fill);
-            assert.equal(data.circleCenterX, circleAttrs.cx);
-            assert.equal(data.circleCenterY, circleAttrs.cy);
-        });
-
-        it("should return an object with the properties named like properties of an svg.js object's properties", function() {
-            assert.equal(true, "fill" in circleAttrs);
-            assert.equal(true, "cx" in circleAttrs);
-            assert.equal(true, "cy" in circleAttrs);
-            assert.equal(false, "foo" in circleAttrs); // foo doesn't get sent back
-        });
-
-        it("should return an object with only three properties in the above test", function() {
-            assert.equal(3, Object.keys(circleAttrs).length); // foo doesn't get sent back
         });
     });
 });
