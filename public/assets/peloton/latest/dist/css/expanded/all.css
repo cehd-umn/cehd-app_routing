@@ -1680,7 +1680,7 @@ h1 small {
 h1 small.clear {
   clear: both;
   display: block;
-  margin-top: -0.2em;
+  margin-top: 5px;
 }
 
 small.h1 {
@@ -1699,7 +1699,7 @@ h2 small {
 h2 small.clear {
   clear: both;
   display: block;
-  margin-top: -0.2em;
+  margin-top: 5px;
 }
 
 small.h2 {
@@ -1718,7 +1718,7 @@ h3 small {
 h3 small.clear {
   clear: both;
   display: block;
-  margin-top: -0.2em;
+  margin-top: 5px;
 }
 
 small.h3 {
@@ -1737,7 +1737,7 @@ h4 small {
 h4 small.clear {
   clear: both;
   display: block;
-  margin-top: -0.2em;
+  margin-top: 5px;
 }
 
 small.h4 {
@@ -1775,7 +1775,7 @@ h6 small {
 h6 small.clear {
   clear: both;
   display: block;
-  margin-top: -0.2em;
+  margin-top: 5px;
 }
 
 small.h6 {

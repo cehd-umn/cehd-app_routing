@@ -288,7 +288,7 @@ ol {
             &.clear {
                 clear: both;
                 display: block;
-                margin-top: if($heading == "h5", .5em, -.2em);
+                margin-top: if($heading == "h5", .5em, 5px);
             }
         }
     }
