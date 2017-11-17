@@ -121,7 +121,7 @@ if (person_container.length > 0) {
     const template_name = person_container.data("template-name");
     const template_path = person_container.data("template-path");
     const results = people.getPerson("/services/people-tool/person/", internet_id);
-    const base_url = container.data("base-path");
+    const base_url = person_container.data("base-path");
 
     results.request.done(function() {
         const person = results.client.getResults();

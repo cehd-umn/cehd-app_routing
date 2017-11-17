@@ -60,7 +60,7 @@
                 <p>{{ data.person.areasOfInterest|safe }}</p>
             {% endif %}
             {% if data.person.extraData.quote|is_string %}
-                <p>"{{ data.person.extraData.quote }}"</p>
+                <p>"{{ data.person.extraData.quote|safe }}"</p>
             {% endif %}
             </div>
         </div><!-- end feature.twothird -->
