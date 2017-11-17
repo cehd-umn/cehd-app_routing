@@ -47,6 +47,7 @@
                 data-internet-id="miksc001" {# This is the id of the tag from the People tool #}
                 data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
                 data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+                data-base-path="{{ config.base_url }}"
                 data-template-name="person.html"> {# The name of the Nunjucks template #}
                 <div class="loader">
                     <div class="loader-figure "></div>
@@ -60,6 +61,7 @@
                 data-target-element-selector="#people-container"
                 data-template-path="/assets/dist/views/olpd/people/"
                 data-template-name="list.html"
+                data-base-path="{{ config.base_url }}"
                 data-people-per-group="2">
                 <div class="loader">
                     <div class="loader-figure "></div>

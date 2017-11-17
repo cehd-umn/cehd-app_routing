@@ -1,7 +1,7 @@
 {% extends "olpd/layout/base.html" %}
-{% set page_title = "Welcome to our Homepage" %}
+{% set page_title = "Undergraduate Advising" %}
 {% block title %}
-     Advisers
+    Undergraduate Advising
 {% endblock %}
 {% block extra_css %}
 {% endblock %}
@@ -10,62 +10,78 @@
     <div class="container">
         <h1>Undergraduate advising</h1>
     </div>
+
     <div class="container">
         <div class="half">
-            <h2>Drop-in advising hours</h2>
-            <p>OLPD program advisers work with your progress toward and questions about your major or minor in the department. CEHD Student Services advisers guide you through your time at the University beyond the department. Find your advisers' names and contact information on the Academics tab of <a href="www.myu.umn.edu">MyU.</a></p>
-            <ul class="no-bullet">
-                <li>Tuesday: 2:00-3:00pm</li>
-                <li>Wednesday: 10:00-11:00am</li>
-                <li>Thursday: 11:00am-12:00pm</li>
-            </ul>
+            <h2>OLPD departmental advisers</h2>
+                <p>Assist with progress and questions about your major or minor in the department.</p>
+                    <ul class="bullet">
+                        <li>Degree/major planning</li>
+                        <li>Minor planning</li>
+                        <li>BME Applied Experience and HRD Internship</li>
+                        <li>Supporting program</li>
+                        <li>OLPD courses</li>
+                        <li>Permission numbers for undergraduate OLPD courses</li>
+                        <li>Career exploration and experiences in the field</li>
+                        <li>Study abroad</li>
+                    </ul>
+
+            <h3>Advisers</h3>
+                <ul class="no-bullet">
+                    <li><a href="/people/kozax018">Daniel Koza</a>, Undergraduate Academic Adviser</li>
+                    <li><a href="/people/orkideh">Orkideh Mohajeri</a>, Coordinator of Undergraduate Studies</li>
+                <ul>
+        </div>
+
+        <div class="half">
+            <figure>
+                <img src="/olpd-new/images/Jehangir-advising.jpg" alt="faculty member advising students">
+                <figcaption>Associate professor, Rashne Jehangir, advising students.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="half">
+
+            <h2>Schedule an appointment</h2>
+                <ul class="no-bullet">
+                    <li>Use our new <a href="http://ugolpd.appointments.umn.edu/">Online Appointment Scheduling!</a></li>
+                    <li>You can also schedule an appointment by sending an email to <a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a>. Make sure to include your student ID #</li>
+                </ul>
+
+            <h2>Fall 2017 drop-in advising hours</h2>
+                <ul class="no-bullet">
+                    <li>Tuesday: 2:00-3:00pm</li>
+                    <li>Wednesday: 10:00-11:00am</li>
+                    <li>Thursday: 11:00am-12:00pm</li>
+                </ul>
+
+            <h2>Permission numbers</h2>
+            <p>If you need a permission number for courses with an OLPD designator, email <a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a> and include course number, title, and your student ID #.</p>
 
         </div>
-                <div class="half">
-                    <h2>Schedule an appointment</h2>
-                    <ul class="no-bullet">
-                        <li>Use our new <a href="http://ugolpd.appointments.umn.edu/">Online Appointment Scheduling!</a></li>
-                        <li>You can also schedule an appointment by sending an email to <a href="mailto:ugolpd@umn.edu">ugolpd@umn.edu</a>. Make sure to include your student ID #</li>
-                    </ul>
-            <h2>OLPD program advisers</h2>
-            <p><a href="/people/kozax018">Daniel Koza</a>, Undergraduate Academic Adviser</p>
-            <p><a href="/people/orkideh">Orkideh Mohajeri</a>, Coordinator of OLPD Undergraduate Studies</p>
+
+        <div class="half">
+            <h2>CEHD Student Services advisers</h2>
+            <p>Guide you through your time at the University beyond the department.</p>
+                <ul class="bullet">
+                    <li>Degree planning</li>
+                    <li>Liberal Education requirements</li>
+                    <li>Resources at the university</li>
+                    <li>Supporting program</li>
+                    <li>Study abroad</li>
+                    <li>Readmission into the program, probation appointment, or leave of absence discussion</li>
+                </ul>
+            <p> Call 612-625-339 to schedule an appointment or <a href="http://www.cehd.umn.edu/undergraduate/advising">view the CEHD undergraduate advising page</a>.</p>
         </div>
 
     </div>
-    <div class="container">
-        <div class=" feature">
-            <h2>CEHD Student services advisers</h2>
-            <div class="span-3">
-                            <img class="mobile-hide" src="/assets/images/headshots/bellcourt.jpg" alt="Bellcourt photo" />
-            <p><a href="/undergraduate/bellcourt/">Mark Bellcourt</a></p>
 
 
-                </div>
-            <div class="span-3">
-                <img class="mobile-hide" src="/assets/images/headshots/CuevasF-2016.jpg" alt="Cuevas photo"/>
-            <p><a href="/undergraduate/cuevas/">Faustina Cuevas</a></p>
-
-
-                </div>
-            <div class="span-3">
-                <img class="mobile-hide" src="/assets/images/headshots/HackettA-2015.jpg" alt="Hackett photo"/>
-            <p><a href="/undergraduate/hackett/">Amy Hackett</a></p>
-
-
-        </div>
-            <div class="span-3">
-                <img class="mobile-hide" src="/assets/images/headshots/RileyD-2017.jpg"  height="200px" alt="Riley photo"/>
-            <p><a href="/undergraduate/riley/">Donald Riley</a></p>
-
-
-        </div>
-        </div>
-
-            </div>
         <div class="row emphasis cool margin-top-1">
     <div class="container">
-        <div class="half feature">
+        <div class="twothird feature">
             <h3 class="text-center">Student resources</h3>
             <p class="text-center"><a href="/undergraduate/declare-major/">Declare your major</a> | <a href="https://onestop.umn.edu/academics/graduation-planner">Graduation planner [OneStop]</a> | <a href="/graduation/">Commencement</a></p>
         </div>

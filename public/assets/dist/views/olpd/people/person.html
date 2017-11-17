@@ -7,7 +7,7 @@
                 {% endif %}
             </div>
             <div class="twothird">
-                <h4 class="heading-profile">{{ data.person.nameFirstLast }}</h4>
+                <h4 class="heading-profile"><a href="{{ data.base_url }}/people/{{ data.person.internetId}}/">{{ data.person.nameFirstLast }}</a></h4>
                 <p>
                     {% if data.person.workingTitle|is_string %} {{ data.person.workingTitle|safe }} {% endif %} {% if data.person.phone|is_string %} {{ data.person.phone }}<br> {% endif %}
                     <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>

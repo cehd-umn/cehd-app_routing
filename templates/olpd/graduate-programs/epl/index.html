@@ -36,8 +36,8 @@
                 <div class="half">
                     <h3>K-12 administrative licensure</h3>
                     <ul class="no-bullet">
-                        <li>PK-12 Administration Certificate
-                            <p class="text-notice">CREATE PAGE</p><br> Certification for K-12 Superintendent, K-12 Principal, Director of Special Education, or Director of Community Education</li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/certificate/pk12-administrative-licensure">PK-12 Administration Certificate</a>
+                        <br> Certification for K-12 Superintendent, K-12 Principal, Director of Special Education, or Director of Community Education</li>
                         <li><a href="{{ config.asset_base }}/graduate-programs/certificate/professional-development">Professional Development Certificate</a></li>
                     </ul>
                 </div>
@@ -48,15 +48,27 @@
             <div class="container">
                 <div class="span-12 feature margin-top-2">
                     <h2 class="text-center">Coordinator</h2>
-                    <div id="coordinator-container" class="loader-container" aria-live="polite" data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #} data-internet-id="kpekel" {# This is the id of the tag from the People tool
-                        #} data-target-element-selector="#coordinator-container" {# The element selector for the feed html #} data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #} data-template-name="person.html"> {# The name of the Nunjucks template #}
+                    <div id="coordinator-container" class="loader-container" aria-live="polite"
+                        data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                        data-internet-id="kpekel" {# This is the id of the tag from the People tool #}
+                        data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+                        data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+                        data-base-path="{{ config.base_url }}"
+                        data-template-name="person.html"> {# The name of the Nunjucks template #}
                         <div class="loader">
                             <div class="loader-figure "></div>
                             <p class="loader-label">Loading...</p>
                         </div>
                     </div>
                     <h2 class="text-center">Faculty</h2>
-                    <div id="people-container" class="loader-container" data-people-app data-tag="463" data-target-element-selector="#people-container" data-template-path="/assets/dist/views/olpd/people/" data-template-name="list.html" data-people-per-group="2">
+                    <div id="people-container" class="loader-container"
+                        data-people-app
+                        data-tag="463"
+                        data-target-element-selector="#people-container"
+                        data-template-path="/assets/dist/views/olpd/people/"
+                        data-template-name="list.html"
+                        data-base-path="{{ config.base_url }}"
+                        data-people-per-group="2">
                         <div class="loader">
                             <div class="loader-figure "></div>
                             <p class="loader-label">Loading...</p>
