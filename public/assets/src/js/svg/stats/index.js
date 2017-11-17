@@ -44,6 +44,8 @@ const cehdStatTextFont = new CEHDSVG(statTextFontKeyMap);
 if (svg_containers.length > 0) {
     svg_containers.each(function() {
         let circle;
+        let line;
+        let stat_text;
         const container = $(this);
         const containerData = container.data();
         const draw = svg(container.attr("id"));
@@ -65,7 +67,7 @@ if (svg_containers.length > 0) {
 
             const lineAttrs = cehdLine.getAttrs(containerData);
             const strokeAttrs = cehdLineStroke.getAttrs(containerData);
-            const line = draw.line(
+            line = draw.line(
                 lineAttrs.x1,
                 lineAttrs.y1,
                 lineAttrs.x2,
@@ -77,7 +79,7 @@ if (svg_containers.length > 0) {
         if (cehdStatText.validateAttrs(containerData) && cehdStatTextFont.validateAttrs(containerData)) {
             const textAttrs = cehdStatText.getAttrs(containerData);
             const fontAttrs = cehdStatTextFont.getAttrs(containerData);
-            const stat_text = draw.text(container.data("stat-text-value"))
+            stat_text = draw.text(container.data("stat-text-value"))
                 .attr(textAttrs)
                 .font(fontAttrs);
         }
