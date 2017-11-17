@@ -1,11 +1,11 @@
 const $ = require("jquery");
 const assert = require("assert");
 const baseClass = require("../base.js");
+const CEHDSVG = require("../svg/svg.js");
 const CEHDCircle = require("../svg/circle.js");
 const CEHDViewbox = require("../svg/viewbox.js");
 
 const baseInstance = new baseClass();
-const circleInstance = new CEHDCircle();
 
 describe("Base", function() {
     describe("arrayContainsExpected", function() {
@@ -74,33 +74,72 @@ describe("Base", function() {
             let actual = {"bar": 1, "foo": 3};
             assert.equal(true, baseInstance.containsExpectedKeys(expected, actual));
         });
+
+        it("should return true if an actual value is falsey", function() {
+            let expected = {"foo": 1, "bar": 4, "baz": 3};
+            let actual = {"bar": 0, "foo": false, "baz": null};
+            assert.equal(true, baseInstance.containsExpectedKeys(expected, actual));
+        });
+    });
+});
+
+describe("CEHDSVG", function() {
+    const attrMap = {
+            "viewboxX": "x",
+            "viewboxY": "y",
+            "viewboxWidth": "width",
+            "viewboxHeight": "height"
+        };
+    const attrs = {
+            "viewboxX": 0,
+            "viewboxY": 0,
+            "viewboxWidth": 1400,
+            "viewboxHeight": 250,
+            "foo": "bar"
+        };
+    const expectedNumberOfAttrs = Object.keys(attrMap).length;
+    const cehdSvg = new CEHDSVG(attrMap);
+    const newAttrs = cehdSvg.getAttrs(attrs);
+
+    describe("validateAttrs", function() {
+
+        it("should return true if all expected attrs defined in the map are present", function() {
+            assert.equal(true, cehdSvg.validateAttrs(attrs));
+        });
+
+        it("should return false if an expected attrs is missing", function() {
+            const attrs = {
+                    "viewboxX": 0,
+                    "viewboxWidth": 1400,
+                    "viewboxHeight": 250,
+                    "foo": "bar"
+                };
+            assert.equal(false, cehdSvg.validateAttrs(attrs));
+        });
+    });
+
+    describe("getAttrs", function() {
+        it("should return only the attrs defined in the attrMap", function() {
+            assert.equal(expectedNumberOfAttrs, Object.keys(newAttrs).length); // foo doesn't get sent back
+        });
+
+        it("should return the correct values with keys that match the keys in the attrMap", function() {
+            assert.equal(attrs.viewboxX, newAttrs.x);
+            assert.equal(attrs.viewboxY, newAttrs.y);
+            assert.equal(attrs.viewboxWidth, newAttrs.width);
+            assert.equal(attrs.viewboxHeight, newAttrs.height);
+        });
     });
 });
 
 describe("Viewbox", function() {
-    const viewboxInstance = new CEHDViewbox();
-
-    describe("validateViewboxAttrs", function() {
-        it("should return false if an expected parameter is missing", function() {
-            const actual = {
-                "viewboxX": "string",
-                "viewboxY": "string"
-            };
-
-            assert.equal(false, viewboxInstance.validateViewboxAttrs(actual));
-        });
-
-        it("should return true if all expected parameters are present", function() {
-            const actual = {
-                "viewboxX": "string",
-                "viewboxY": "string",
-                "viewboxHeight": "string",
-                "viewboxWidth": "string",
-            };
-
-            assert.equal(true, viewboxInstance.validateViewboxAttrs(actual));
-        });
-    });
+    const viewboxAttrs = {
+        "viewboxX": "x",
+        "viewboxY": "y",
+        "viewboxWidth": "width",
+        "viewboxHeight": "height"
+    };
+    const viewboxInstance = new CEHDViewbox(viewboxAttrs);
 
     describe("getAttrsFromData", function() {
         // This is what the properties will look like after they're retrieved with $.data()
@@ -129,26 +168,11 @@ describe("Viewbox", function() {
 });
 
 describe("Circle", function() {
-    describe("validateCircleAttrs", function() {
-        it("should return false if an expected parameter is missing", function() {
-            const actual = {
-                "circleBgColor": "string",
-                "circleCenterX": "string or number"
-            };
-
-            assert.equal(false, circleInstance.validateCircleAttrs(actual));
+    const circleInstance = new CEHDCircle({
+            "circleBgColor": "fill",
+            "circleCenterX": "cx",
+            "circleCenterY": "cy"
         });
-
-        it("should return true if an all expected params are present", function() {
-            const actual = {
-                "circleBgColor": "string",
-                "circleCenterX": "string or number",
-                "circleCenterY": "string or number"
-            };
-
-            assert.equal(true, circleInstance.validateCircleAttrs(actual));
-        });
-    });
 
     describe("getCircleAttrsFromData", function() {
         // This is what the properties will look like after they're retrieved with $.data()
@@ -158,7 +182,7 @@ describe("Circle", function() {
             "circleCenterY": "string or number",
             "foo": "bar"
         };
-        const circleAttrs = circleInstance.getCircleAttrsFromData(data);
+        const circleAttrs = circleInstance.getAttrs(data);
 
         it("should return an object with the properties required to create a circle in an SVG", function() {
             assert.equal(data.circleBgColor, circleAttrs.fill);
