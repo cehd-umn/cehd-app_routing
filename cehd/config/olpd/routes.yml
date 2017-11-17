@@ -60,6 +60,11 @@
   publish: false
   template_data:
     - section: research-and-engagement
+/courses/:
+  template: olpd/courses/index.html
+  publish: false
+  template_data:
+    - section: courses
 /courses/undergraduate/:
   template: olpd/courses/undergraduate.html
   publish: false
