@@ -293,9 +293,17 @@
         }
     }
 
+    @media all and (max-width: 767px) {
+        .vertical-center {
+            margin-top: -99px;
+        }
+    }
+
     @media all and (max-width: 414px) {
         #maincontent {
-            background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px;
+            /* background: url("/assets/images/home/vertical-{{ random([1,2,3,4,5]) }}.jpg") no-repeat center 47px; */
+            background: none;
+            height: 100px;
         }
 
         .vertical-center {

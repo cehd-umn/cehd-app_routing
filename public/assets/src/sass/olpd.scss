@@ -13,6 +13,18 @@
     }
 }
 
+@media all and (max-width: 960px) {
+    nav {
+        &.inline {
+            li {
+                &.top-nav-item {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
 @media all and (min-width: 769px) {
     nav {
         margin: 36px auto 0;
