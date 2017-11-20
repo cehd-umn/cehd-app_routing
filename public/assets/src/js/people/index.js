@@ -25,7 +25,6 @@ if (person_with_extra_containers.length > 0) {
                 const person = results.person.client.getResults();
                 const view = new renderer();
                 person.extraData = extra_data;
-                console.log(person);
                 const template_params = {
                     "template_path": template_path,
                     "template_name": template_name,

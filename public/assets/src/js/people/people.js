@@ -78,10 +78,6 @@ class People {
 
         return this.get(url, data);
     }
-
-    renderPerson(data) {
-        console.log(data);
-    }
 }
 
 module.exports = People;
