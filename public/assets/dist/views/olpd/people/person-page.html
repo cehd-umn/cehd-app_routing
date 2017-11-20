@@ -69,13 +69,12 @@
 <div class="row">
     <div class="container">
         <div class="feature twothird">
+            {% if data.person.fullBio|is_string %}
+                <p>{{ data.person.fullBio|safe }}</p>
+            {% endif %}
             {% if data.person.degrees %}
                 <h3 class="h5">Degrees</h3>
                 <p>{{ data.person.degrees|safe }}</p>
-            {% endif %}
-            {% if data.person.fullBio|is_string %}
-            <h3>Research</h3>
-            <p>{{ data.person.fullBio|safe }}</p>
             {% endif %}
             {% if data.person.publications|length %}
               <h3>Selected publications</h3>
