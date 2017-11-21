@@ -32,13 +32,15 @@ $olpd-nav-border-color: rgba(255, 222, 122, .5);
 }
 
 @media all and (min-width: 769px) {
-    #nav-container {
-        border-bottom: 2px solid $olpd-nav-border-color;
-        padding-bottom: 5px;
-    }
-
     nav {
         margin: 36px auto 0;
+
+        &.inline {
+            .secondary-nav {
+                border-bottom: 2px solid $olpd-nav-border-color;
+                padding-bottom: 5px;
+            }
+        }
     }
 
     .wordmark-container-left {
