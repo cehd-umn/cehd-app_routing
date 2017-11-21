@@ -95,6 +95,13 @@ img {
     }
 }
 
+@for $margin from 1 through 4 {
+    .margin-bottom-#{ $margin } {
+        margin-bottom: #{ $margin }em;
+    }
+}
+
+// @todo deprecate these in a future version
 @each $size in 12, 14, 16, 18, 20, 24 {
     .margin-bottom-#{ $size } {
         margin-bottom: #{ $size }px;

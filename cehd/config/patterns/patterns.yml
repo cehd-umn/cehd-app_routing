@@ -740,6 +740,22 @@ adding bottom margin:
       type: include
   type: include
   uses: null
+adding bottom margin (deprecated):
+  publish: true
+  meta: null
+  categories:
+    - margin-bottom
+    - element vertical alignment
+  description: adds bottom margin to an element
+  group: css
+  example_page_url: null
+  handler: null
+  template: null
+  twig_files:
+    - path: patterns/css/includes/margin-bottom-deprecated.html
+      type: include
+  type: include
+  uses: null
 small text:
   publish: true
   meta: null

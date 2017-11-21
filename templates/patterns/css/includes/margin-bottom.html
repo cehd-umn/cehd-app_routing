@@ -1,28 +1,34 @@
 <div class="row">
     <div class="container">
         <pre><code class="html">
-&lt;div&gt;
+&lt;div class=&quot;grid-example margin-top-1 span-12&quot;&gt;
     (empty)
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div class=&quot;grid-example span-12&quot;&gt;
     No margin-bottom class
 &lt;/div&gt;
-{% for idx in [12, 14, 16, 18, 20, 24] %}
-    &lt;div class=&quot;grid-example margin-bottom-{{ idx }}&quot;&gt;
+{% for idx in [1, 2, 3, 4] %}
+    &lt;div class=&quot;grid-example margin-bottom-{{ idx }} span-12&quot;&gt;
         .margin-bottom-{{ idx }}
     &lt;/div&gt;
 {% endfor %}
+&lt;div class=&quot;grid-example span-12&quot;&gt;
+    (empty)
+&lt;/div&gt;
         </code></pre>
-        <div class="grid-example margin-bottom-1 span-12">
+        <div class="grid-example margin-top-1 span-12">
             (empty)
         </div>
-        <div class="grid-example span-{{ idx }}">
+        <div class="grid-example span-12">
             No margin-bottom class
         </div>
-        {% for idx in [12, 14, 16, 18, 20, 24] %}
+        {% for idx in [1, 2, 3, 4] %}
             <div class="grid-example margin-bottom-{{ idx }} span-12">
                 .margin-bottom-{{ idx }}
             </div>
         {% endfor %}
+        <div class="grid-example span-12">
+            (empty)
+        </div>
     </div>
 </div>
