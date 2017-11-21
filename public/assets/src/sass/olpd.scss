@@ -3,6 +3,8 @@
 @import "colors";
 @import "bourbon/bourbon";
 
+$olpd-nav-border-color: rgba(255, 222, 122, .5);
+
 .h2 {
     &.search-result-filters {
         font-size: 16px;
@@ -11,6 +13,10 @@
             font-size: 16px;
         }
     }
+}
+
+.nav-toggle {
+    margin-top: 15px;
 }
 
 @media all and (max-width: 960px) {
@@ -26,6 +32,11 @@
 }
 
 @media all and (min-width: 769px) {
+    #nav-container {
+        border-bottom: 2px solid $olpd-nav-border-color;
+        padding-bottom: 5px;
+    }
+
     nav {
         margin: 36px auto 0;
     }
