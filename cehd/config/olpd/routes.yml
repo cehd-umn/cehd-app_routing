@@ -190,6 +190,11 @@
   publish: false
   template_data:
     - section: apply
+/apply/certificate/administrative-licensure/:
+  template: olpd/apply/certificate/administrative-licensure.html
+  publish: false
+  template_data:
+    - section: apply
 /apply/certificate/adult-education/:
   template: olpd/apply/certificate/adult-education.html
   publish: false
@@ -452,6 +457,11 @@
     - section: graduate-programs
 /graduate-programs/administrative-licensure/:
   template: olpd/graduate-programs/administrative-licensure/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/administrative-licensure/curriculum/:
+  template: olpd/graduate-programs/administrative-licensure/curriculum.html
   publish: false
   template_data:
     - section: graduate-programs
