@@ -3,11 +3,11 @@ const $ = require("jquery");
 const CEHDSVG = require("../svg.js");
 const svg_containers = $("[data-svg-stat-group]");
 const circleKeyMap = {
-            "circleBgColor": "fill",
-            "circleCenterX": "cx",
-            "circleCenterY": "cy",
-            "circleSize": "size"
-        };
+        "circleBgColor": "fill",
+        "circleCenterX": "cx",
+        "circleCenterY": "cy",
+        "circleSize": "size"
+    };
 const viewboxKeyMap = {
         "viewboxX": "x",
         "viewboxY": "y",
@@ -73,17 +73,16 @@ if (svg_containers.length > 0) {
         const container = $(this);
         const containerData = container.data();
         const draw = svg(container.attr("id"));
+        const group = draw.group();
 
         if (cehdViewbox.validateAttrs(containerData)) {
             const attrs = cehdViewbox.getAttrs(containerData);
             draw.viewbox(attrs.x, attrs.y, attrs.width, attrs.height);
         }
 
-        const group = draw.group();
-
         if (cehdCircle.validateAttrs(containerData)) {
-            const circleAttributes = cehdCircle.getAttrs(containerData);
-            circle = draw.circle(circleAttributes.size).attr(circleAttributes);
+            const attrs = cehdCircle.getAttrs(containerData);
+            circle = draw.circle(attrs.size).attr(attrs);
         }
 
         // @todo write a line class to handle these two things separately and validate them together
