@@ -8,14 +8,12 @@ const circleKeyMap = {
             "circleCenterY": "cy",
             "circleSize": "size"
         };
-const cehdCircle = new CEHDSVG(circleKeyMap);
 const viewboxKeyMap = {
         "viewboxX": "x",
         "viewboxY": "y",
         "viewboxWidth": "width",
         "viewboxHeight": "height"
     };
-const cehdViewbox = new CEHDSVG(viewboxKeyMap);
 const lineKeyMap = {
         "lineStartX": "x1",
         "lineStartY": "y1",
@@ -27,8 +25,6 @@ const strokeKeyMap = {
         "lineStrokeOpacity": "opacity",
         "lineStrokeWidth": "width"
     };
-const cehdLine = new CEHDSVG(lineKeyMap);
-const cehdLineStroke = new CEHDSVG(strokeKeyMap);
 const statTextKeyMap = {
         "statTextX": "x",
         "statTextY": "y",
@@ -38,14 +34,42 @@ const statTextFontKeyMap = {
         "statTextFontFamily": "family",
         "statTextFontSize": "size",
     };
+const mainTextKeyMap = {
+        "mainTextX": "x",
+        "mainTextY": "y",
+        "mainTextColor": "fill"
+    };
+const mainTextFontKeyMap = {
+        "mainTextFontFamily": "family",
+        "mainTextFontSize": "size",
+    };
+const captionTextKeyMap = {
+        "captionTextX": "x",
+        "captionTextY": "y",
+        "captionTextColor": "fill"
+    };
+const captionTextFontKeyMap = {
+        "captionTextFontFamily": "family",
+        "captionTextFontSize": "size",
+    };
+const cehdCircle = new CEHDSVG(circleKeyMap);
+const cehdViewbox = new CEHDSVG(viewboxKeyMap);
+const cehdLine = new CEHDSVG(lineKeyMap);
+const cehdLineStroke = new CEHDSVG(strokeKeyMap);
 const cehdStatText = new CEHDSVG(statTextKeyMap);
 const cehdStatTextFont = new CEHDSVG(statTextFontKeyMap);
+const cehdMainText = new CEHDSVG(mainTextKeyMap);
+const cehdMainTextFont = new CEHDSVG(mainTextFontKeyMap);
+const cehdCaptionText = new CEHDSVG(captionTextKeyMap);
+const cehdCaptionTextFont = new CEHDSVG(captionTextFontKeyMap);
 
 if (svg_containers.length > 0) {
     svg_containers.each(function() {
         let circle;
         let line;
-        let stat_text;
+        let statText;
+        let mainText;
+        let captionText;
         const container = $(this);
         const containerData = container.data();
         const draw = svg(container.attr("id"));
@@ -79,55 +103,40 @@ if (svg_containers.length > 0) {
         if (cehdStatText.validateAttrs(containerData) && cehdStatTextFont.validateAttrs(containerData)) {
             const textAttrs = cehdStatText.getAttrs(containerData);
             const fontAttrs = cehdStatTextFont.getAttrs(containerData);
-            stat_text = draw.text(container.data("stat-text-value"))
+            statText = draw.text(containerData["statTextValue"])
                 .attr(textAttrs)
                 .font(fontAttrs);
         }
 
         // main text
-        const main_text_attributes = {
-            x: container.data("text-x"),
-            y: container.data("text-y"),
-            fill: container.data("text-color"),
-        };
-
-        const main_text_font_attributes = {
-            family: container.data("text-font-family"),
-            size: container.data("text-font-size"),
-        };
-
-        const text_lines = container.data("text-lines");
-
-        const main_text = draw.text(function(add) {
-            $.each(text_lines, function() {
-                const txt = this;
-                add.tspan(txt).newLine();
-            });
-        })
-        .attr(main_text_attributes)
-        .font(main_text_font_attributes);
+        if (cehdMainText.validateAttrs(containerData) && cehdMainTextFont.validateAttrs(containerData)) {
+            const textAttrs = cehdMainText.getAttrs(containerData);
+            const fontAttrs = cehdMainTextFont.getAttrs(containerData);
+            const textLines = containerData["mainTextLines"];
+            mainText = draw.text(function(add) {
+                textLines.forEach(function(txt) {
+                    add.tspan(txt).newLine();
+                });
+            })
+            .attr(textAttrs)
+            .font(fontAttrs);
+        }
 
         // caption_text
-        const caption_text_attributes = {
-            x: container.data("caption-text-x"),
-            y: container.data("caption-text-y"),
-            fill: container.data("caption-text-color"),
-        };
-
-        const caption_text_font_attributes = {
-            family: container.data("caption-text-font-family"),
-            size: container.data("caption-text-font-size"),
-        };
-
-        const caption_text = draw.text(container.data("caption-text-value"))
-            .attr(caption_text_attributes)
-            .font(caption_text_font_attributes);
+        if (cehdCaptionText.validateAttrs(containerData) && cehdCaptionTextFont.validateAttrs(containerData)) {
+            const textAttrs = cehdCaptionText.getAttrs(containerData);
+            const fontAttrs = cehdCaptionTextFont.getAttrs(containerData);
+            const textLines = containerData["captionTextLines"];
+            captionText = draw.text(container.data("caption-text-value"))
+                .attr(textAttrs)
+                .font(fontAttrs);
+        }
 
         // Add stuff to the group
         group.add(circle);
-        group.add(stat_text);
-        group.add(main_text);
-        group.add(caption_text);
+        group.add(statText);
+        group.add(mainText);
+        group.add(captionText);
         group.add(line);
     });
 }
