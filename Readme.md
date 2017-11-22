@@ -1,13 +1,12 @@
 # CEHD Routes, Templates, SASS & JavaScript
 
 
-Beginning with the Ed Psych site, this will be the primary way for us to manage
-department websites. This is an "app" in a very strict sense, but we've tried
-to keep the back end logic to a minimum to keep this app very small and fast.
+This is an "app" in a very strict sense, but we've tried to keep the back end
+logic to a minimum to keep this app very small and fast.
 
-The app uses [Twig for templates](http://twig.sensiolabs.org/) and [Klein for
-routing](https://github.com/klein/klein.php). What does that mean? Let's talk
-requests.
+The app uses [Twig for templates](http://twig.sensiolabs.org/) and [the Slim
+framework for routing](https://www.slimframework.com/). What does that
+mean? Let's talk requests.
 
 [Go here for more detailed documentation](/docs/).
 
@@ -23,13 +22,9 @@ We're abstracting that transaction a little. The server is configured to send
 all requests for sites that use this application to `public/<website>/index.php`.
 Thus requests for the Ed Psych site go to `public/edpsych/index.php`.
 
-If you look at `index.php` you'll find the routes among other things. That file
-is written to route requests to their proper Twig template or return a 404 if
-there is not a matching route. Klein handles the routing part. Twig is the
-template engine.
-
-For more specific information about routes [see The Ed Psych
-App](public/edpsych/).
+That file is written to route requests to their proper Twig template or return
+a 404 if there is not a matching route. Slim handles routing requests to the
+right place and sending a response back. Twig is the template engine.
 
 ## Templates
 

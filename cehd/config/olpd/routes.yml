@@ -190,6 +190,11 @@
   publish: false
   template_data:
     - section: apply
+/apply/certificate/administrative-licensure/:
+  template: olpd/apply/certificate/administrative-licensure.html
+  publish: false
+  template_data:
+    - section: apply
 /apply/certificate/adult-education/:
   template: olpd/apply/certificate/adult-education.html
   publish: false
@@ -435,11 +440,6 @@
   publish: false
   template_data:
     - section: graduate-programs
-/graduate-programs/certificate/pk12-administrative-licensure/:
-  template: olpd/graduate-programs/certificate/pk12-administrative-licensure.html
-  publish: false
-  template_data:
-    - section: graduate-programs
 /graduate-programs/certificate/professional-development/:
   template: olpd/graduate-programs/certificate/professional-development.html
   publish: false
@@ -452,6 +452,21 @@
     - section: graduate-programs
 /graduate-programs/certificate/multicultural-teaching-learning/:
   template: olpd/graduate-programs/certificate/multicultural-teaching-learning.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/administrative-licensure/:
+  template: olpd/graduate-programs/administrative-licensure/index.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/administrative-licensure/curriculum/:
+  template: olpd/graduate-programs/administrative-licensure/curriculum.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/administrative-licensure/vision/:
+  template: olpd/graduate-programs/administrative-licensure/vision.html
   publish: false
   template_data:
     - section: graduate-programs
