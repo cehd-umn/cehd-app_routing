@@ -1,5 +1,3 @@
-const helpers = require("./helpers.js");
-
 class Group {
     constructor(memberLimit) {
         this.memberLimit = memberLimit;
@@ -15,7 +13,7 @@ class Group {
         return {
             remaining: prospectiveMembers,
             members: members
-        }
+        };
     }
 }
 

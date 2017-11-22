@@ -138,12 +138,12 @@
                 data-circle-center-y="125"
                 data-circle-size="250"
                 data-circle-bg-color="#7a0019"
-                data-text-x="460"
-                data-text-y="90"
-                data-text-color="#000"
-                data-text-font-family="Lato-light, sans-serif"
-                data-text-font-size="30px"
-                data-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
+                data-main-text-x="460"
+                data-main-text-y="90"
+                data-main-text-color="#000"
+                data-main-text-font-family="Lato-light, sans-serif"
+                data-main-text-font-size="30px"
+                data-main-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
                 data-stat-text-value="78%"
                 data-stat-text-x="235"
                 data-stat-text-y="50"
@@ -286,7 +286,7 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-<script src="/assets/dist/js/svg_circle.min.js"></script>
+<script src="/assets/dist/js/svg_stats.min.js"></script>
 {# The call to parent() above is *very* important #}
 {{ newsfeed.news_feed_js(
     "category/departments/organizational-leadership-policy-and-development/feed",
