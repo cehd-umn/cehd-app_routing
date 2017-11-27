@@ -1,49 +1,50 @@
 @charset "UTF-8";
 @import "variables";
 @import "colors";
-@import "reset";
-@import "umn-hf";
-@import "core";
+// @import "reset";
+// @import "umn-hf";
+// @import "core";
 @import "bourbon/bourbon";
-@import "loader";
-@import "form_hack";
-@import "../../../../assets/src/sass/search";
+// @import "loader";
+// @import "form_hack";
+// @import "../../../../assets/src/sass/search";
 
-.news-more-news-link {
-    margin-right: 10px;
-}
+// .news-more-news-link {
+//     margin-right: 10px;
+// }
+//
+// .h2 {
+//     &.search-result-filters {
+//         font-size: 16px;
+//
+//         .search-result-set-link {
+//             font-size: 16px;
+//         }
+//     }
+// }
+//
+// .emphasis {
+//     background-color: $cehd-tertiary-gold;
+//     padding: 2em;
+//
+//     &.subtle {
+//         background-color: $cehd-light-grey;
+//
+//         .button {
+//             border-color: $base-white;
+//         }
+//     }
+// }
 
-.h2 {
-    &.search-result-filters {
-        font-size: 16px;
-
-        .search-result-set-link {
-            font-size: 16px;
-        }
-    }
-}
-
-.emphasis {
-    background-color: $cehd-tertiary-gold;
-    padding: 2em;
-
-    &.subtle {
-        background-color: $cehd-light-grey;
-
-        .button {
-            border-color: $base-white;
-        }
-    }
-}
-
+// KEEP
 .pull-quote {
     font-size: 1.5em;
 }
 
-.menuicon-container {
-    line-height: 1;
-    width: 2em;
-}
+// .menuicon-container {
+//     line-height: 1;
+//     width: 2em;
+// }
 
 // home page
 
@@ -116,50 +117,50 @@
     display: none;
 }
 
-h2 small {
-    &.clear {
-        &.home {
-            margin-top: 0;
-        }
-    }
-}
-
-// Events calendar
-
-dl {
-    &.events-listing,
-    &.event-listing {
-        display: table;
-        margin: 0;
-    }
-
-    dl {
-        display: table-row;
-        padding-bottom: 1em;
-    }
-}
-
-dt {
-    &.event-title {
-        display: table-cell;
-        margin-bottom: 0;
-        padding-right: .5em;
-        vertical-align: middle;
-    }
-}
-
-dd {
-    &.event-data {
-        display: table-row;
-        margin-left: 0;
-    }
-
-    &.event-link {
-        display: table-cell;
-        margin-left: 0;
-        vertical-align: middle;
-    }
-}
+// h2 small {
+//     &.clear {
+//         &.home {
+//             margin-top: 0;
+//         }
+//     }
+// }
+//
+// // Events calendar
+//
+// dl {
+//     &.events-listing,
+//     &.event-listing {
+//         display: table;
+//         margin: 0;
+//     }
+//
+//     dl {
+//         display: table-row;
+//         padding-bottom: 1em;
+//     }
+// }
+//
+// dt {
+//     &.event-title {
+//         display: table-cell;
+//         margin-bottom: 0;
+//         padding-right: .5em;
+//         vertical-align: middle;
+//     }
+// }
+//
+// dd {
+//     &.event-data {
+//         display: table-row;
+//         margin-left: 0;
+//     }
+//
+//     &.event-link {
+//         display: table-cell;
+//         margin-left: 0;
+//         vertical-align: middle;
+//     }
+// }
 
 .faculty-headshot {
     margin-right: 1em;
@@ -210,36 +211,36 @@ ol {
     }
 }
 
-nav {
-    &.inline {
-        display: none;
-    }
-
-    &.open {
-        display: block;
-        height: auto;
-        max-height: 2000px;
-        overflow: visible;
-    }
-}
+// nav {
+//     &.inline {
+//         display: none;
+//     }
+//
+//     &.open {
+//         display: block;
+//         height: auto;
+//         max-height: 2000px;
+//         overflow: visible;
+//     }
+// }
 
 @media all and (min-width: 768px) {
     nav {
         margin-top: 20px;
 
-        &.inline {
-            display: block;
+        // &.inline {
+        //     display: block;
 
-            .secondary-nav {
-                background-color: rgba(255, 255, 255, .9);
-                padding: 19px 0 0 12px;
-            }
+        //     .secondary-nav {
+        //         background-color: rgba(255, 255, 255, .9);
+        //         padding: 19px 0 0 12px;
+        //     }
 
-            .secondary-nav-item {
-                font-size: 14px;
-                padding: 7px 0;
-            }
-        }
+        //     .secondary-nav-item {
+        //         font-size: 14px;
+        //         padding: 7px 0;
+        //     }
+        // }
     }
 
     .nav-container {

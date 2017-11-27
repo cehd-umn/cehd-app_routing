@@ -186,26 +186,6 @@
         meta_description: "Register for your certificate in Autism Spectrum Disorder."
         section: current
 
-# Examples section (note: keep publish "false" for these")
-/edpsych/examples/:
-    publish: false
-    template: edpsych/examples/index.html
-    template_data:
-        meta_description: null
-        section: null
-/edpsych/examples/macros/:
-    publish: false
-    template: edpsych/examples/macros.html
-    template_data:
-        meta_description: null
-        section: null
-/edpsych/examples/routes/:
-    publish: false
-    template: edpsych/examples/routes.html
-    template_data:
-        meta_description: null
-        section: null
-
 # Forms section
 /edpsych/forms/:
     publish: true
