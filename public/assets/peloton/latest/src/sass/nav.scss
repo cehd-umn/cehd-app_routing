@@ -52,7 +52,17 @@ ul {
 
         li {
             color: $base-charcoal;
+            margin: 0;
+            padding: 8px 0 8px 15px;
             position: relative;
+
+            li {
+                list-style: none;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
         }
     }
 
@@ -153,6 +163,25 @@ ul {
                 &:hover {
                     .secondary-nav {
                         display: block;
+                    }
+                }
+            }
+        }
+
+        ul {
+            &.nav {
+
+                li {
+                    border-bottom: 1px solid $umn-medium-grey;
+
+                    li {
+                        border-bottom: 0;
+                    }
+                }
+
+                &.inline {
+                    li {
+                        border-bottom: 0;
                     }
                 }
             }
