@@ -957,7 +957,17 @@ ul.nav {
 
 ul.nav li {
   color: #666;
+  margin: 0;
+  padding: 8px 0 8px 15px;
   position: relative;
+}
+
+ul.nav li li {
+  list-style: none;
+}
+
+ul.nav li li:last-child {
+  border-bottom: 0;
 }
 
 ul ul ul {
@@ -1042,6 +1052,15 @@ ul ul ul {
   }
   nav.inline li:hover .secondary-nav {
     display: block;
+  }
+  nav ul.nav li {
+    border-bottom: 1px solid #ccc;
+  }
+  nav ul.nav li li {
+    border-bottom: 0;
+  }
+  nav ul.nav.inline li {
+    border-bottom: 0;
   }
 }
 
