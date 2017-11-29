@@ -96,6 +96,8 @@
     -
       - name: Research Topics
         href: "/topics/"
+      - name: Funding Opportunities
+        href: "/research/funding/"
       - name: Research Day
         href: "/research/research-day/"
       - name: Grantsmanship

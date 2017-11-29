@@ -1,0 +1,36 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Funding Opportunities" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Research funding opportunities</h1>
+    <div class="twothird feature">
+      <p>This is a list of all of our current funding opportunities, sorted by due date. Use Control+F/Command+F to search.</p>
+<!-- div w/ data attributes -->
+<div id="events-container" class="loader-container" aria-live="polite"
+        data-events-app
+        data-q="6"
+        data-r="3"
+        data-t="304"
+        data-target-element-selector="#events-container"
+        data-template-path="/assets/dist/views/cehd/events/"
+        data-template-name="research-funding.html"
+        data-limit="300"
+    >
+    <div class="loader">
+        <div class="loader-figure "></div>
+        <p class="loader-label">Loading&hellip;</p>
+    </div>
+</div>
+    </div>
+
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/events.min.js"></script>
+{% endblock %}

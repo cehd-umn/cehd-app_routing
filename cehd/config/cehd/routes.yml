@@ -1489,6 +1489,11 @@
   template: cehd/research/centers.html
   template_data:
     - section: research
+/research/funding/:
+  publish: true
+  template: cehd/research/funding.html
+  template_data:
+    - section: research
 /research/grantsmanship/:
   publish: true
   template: cehd/research/grantsmanship.html

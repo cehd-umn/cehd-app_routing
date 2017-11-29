@@ -27,6 +27,8 @@ class EventTest extends TestCase
         $this->assertEquals("March", $this->eventInstance->events[0]->fullMonth);
         $this->assertEquals("Mar", $this->eventInstance->events[0]->shortMonth);
         $this->assertEquals("Friday", $this->eventInstance->events[0]->dayOfWeek);
+        $this->assertEquals("Related event", $this->eventInstance->events[0]->relatedEventTitle);
+        $this->assertEquals("Related event url", $this->eventInstance->events[0]->relatedEventURL);
     }
 
     public function testEventDay()

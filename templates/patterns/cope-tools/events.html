@@ -110,6 +110,51 @@
             {% endverbatim %}</code></pre>
         </div>
     </div>
+    <div class="row">
+        <div class="container">
+            <h2>Events feed data points</h2>
+
+            <p>The events feed from the events tool gets translated from XML to
+            JSON because JavaScript can work with JSON natively. The JSON is
+            just a set of key/value pairs. E.g., <samp>event.day</samp> in the
+            template above maps to <samp>day</samp> in the JSON below:
+
+            <pre><code class="json">
+[
+  {
+    &quot;date&quot;: &quot;3/22/2018&quot;,
+    &quot;dateTimeEnd&quot;: &quot;3/22/2018 7:00 PM&quot;,
+    &quot;dateTimeStart&quot;: &quot;3/22/2018 5:30 PM&quot;,
+    &quot;description&quot;: null,
+    &quot;endTime&quot;: &quot;7:00 PM&quot;,
+    &quot;endHour&quot;: &quot;07&quot;,
+    &quot;endMinute&quot;: &quot;00&quot;,
+    &quot;id&quot;: &quot;7216&quot;,
+    &quot;location&quot;: &quot;McNamara Alumni Center, University Hall&quot;,
+    &quot;locationURL&quot;: &quot;http://mac-events.org/rooms/university.html&quot;,
+    &quot;shortDescription&quot;: null,
+    &quot;startTime&quot;: &quot;5:30 PM&quot;,
+    &quot;startHour&quot;: &quot;05&quot;,
+    &quot;startMinute&quot;: &quot;30&quot;,
+    &quot;title&quot;: &quot;CEHD Alumni and Undergraduate Networking Reception&quot;,
+    &quot;url&quot;: &quot;http://www.cehd.umn.edu/events/?z=7216&amp;dt=3/22/2018&quot;,
+    &quot;day&quot;: &quot;22&quot;,
+    &quot;dayOfWeek&quot;: &quot;Thursday&quot;,
+    &quot;month&quot;: &quot;3&quot;,
+    &quot;fullMonth&quot;: &quot;March&quot;,
+    &quot;shortMonth&quot;: &quot;Mar&quot;,
+    &quot;year&quot;: &quot;2018&quot;,
+    &quot;timestamp&quot;: false,
+    &quot;relatedEventTitle&quot;: null,
+    &quot;relatedEventURL&quot;: null
+  }
+]
+            </code></pre>
+            
+            <p>This should help map the data in the feed to a template. Note:
+            even though <samp>url</samp> is present, it's deprecated.</p>
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
