@@ -4,10 +4,10 @@ namespace CEHD\App\Routes\OLPDRoutes;
 
 require_once __DIR__ . "/../../cehd/app/OLPD/OLPDApp.php";
 require_once __DIR__ . "/../../cehd/app/App/Helpers.php";
-require_once __DIR__ . "/../../cehd/app/middleware/TrailingSlash.php";
+require_once __DIR__ . "/../../cehd/app/middleware/RequestMiddleWare.php";
 
 use \CEHD\App\OLPD\OLPDApp;
-use \CEHD\App\AddTrailingSlash;
+use \CEHD\App\RequestMiddleWare;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\Helpers\Helpers;
@@ -76,7 +76,7 @@ $container["notFoundHandler"] = function ($container)
 $app = new \Slim\App($container);
 
 // Adds trailing slash to GET requests that don't have them
-$app->add(new AddTrailingSlash());
+$app->add(new RequestMiddleWare());
 
 // Load all the routes from the routes file
 foreach ($routes as $route => $route_info) {
