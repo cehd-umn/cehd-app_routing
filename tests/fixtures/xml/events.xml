@@ -66,8 +66,10 @@
     <location>227 Burton Hall</location>
     <locationURL>http://campusmaps.umn.edu/burton-hall</locationURL>
     <relatedEvents>
+        Related event
     </relatedEvents>
     <relatedEventURL>
+        Related event url
     </relatedEventURL>
     <emailWidget>&lt;a title='Email: ""' href='javascript:ShareEmail("http://www.cehd.umn.edu/events/?z=6949&amp;dt=3/31/2017?z=6949&amp;amp;dt=3/31/2017","March 31","")' class='tools-share-email'&gt;&lt;img src='/attributes/images/Events/icon-email.gif' alt='Email to a Friend' /&gt;&lt;/a&gt;
 </emailWidget>
