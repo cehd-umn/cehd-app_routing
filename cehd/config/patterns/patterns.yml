@@ -1635,7 +1635,7 @@ People by tag:
   twig_files: null
   type: template
   uses: null
-People macro by internet ID:
+Person by internet ID:
   publish: true
   meta: null
   categories:
