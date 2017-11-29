@@ -107,6 +107,42 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="container">
+        <div class="feature span-4">
+            <h2>News feed data points</h2>
+
+            <p>The news feed from the events tool gets translated from XML to
+            JSON because JavaScript can work with JSON natively. The JSON is
+            just a set of key/value pairs. E.g., <samp>news_item.title</samp> in the
+            template above maps to <samp>title</samp> in the JSON below:
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="json">
+[
+  {
+    &quot;encoded&quot;: &quot;&lt;p&gt;&lt;a href=\&quot;http://www.cehd.umn.edu/OLPD/people/faculty/Vavrus.asp\&quot;&gt;&lt;/a&gt;&lt;a href=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/10/VavrusF-Pref.jpg\&quot;&gt;&lt;img class=\&quot;alignleft size-full wp-image-23665\&quot; src=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2014/10/VavrusF-Pref.jpg\&quot; alt=\&quot;Dr. Frances Vavrus\&quot; width=\&quot;150\&quot; height=\&quot;225\&quot; /&gt;&lt;/a&gt;&lt;a href=\&quot;http://www.cehd.umn.edu/OLPD/people/faculty/Vavrus.asp\&quot;&gt;&lt;/a&gt;&lt;a href=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2015/07/DemerathP-2007.jpg\&quot;&gt;&lt;img class=\&quot;alignleft size-full wp-image-30557\&quot; src=\&quot;http://news.cehd.umn.edu/wp-content/uploads/2015/07/DemerathP-2007.jpg\&quot; alt=\&quot;\&quot; width=\&quot;150\&quot; height=\&quot;225\&quot; /&gt;&lt;/a&gt;&lt;a href=\&quot;http://www.cehd.umn.edu/OLPD/people/faculty/Vavrus.asp\&quot;&gt;Fran Vavrus&lt;/a&gt;,  professor, and &lt;a href=\&quot;http://www.cehd.umn.edu/olpd/people/faculty/Demerath.asp\&quot;&gt;Peter Demerath&lt;/a&gt;, associate professor, in the &lt;a href=\&quot;http://www.cehd.umn.edu/olpd/\&quot;&gt;Department of Organizational Leadership, Policy, and Development (OLPD)&lt;/a&gt;, were both plenary speakers at the &lt;a href=\&quot;http://www.cies.us/\&quot;&gt;Comparative and International Education Fall Symposium&lt;/a&gt; held on October 26-27 at George Mason University. Their panels addressed the theme of the symposium, &lt;i&gt;Interrogating and Innovating CIE Research&lt;/i&gt;, by focusing on the legacies of colonialism in educational research and on methodologies that offer alternative approaches to knowledge production. OLPD alumna Laura Willemsen and Ph.D. student Richard Bamattre also presented a paper at the conference on their innovative approaches to teaching comparative education at UM.&lt;/p&gt;&quot;,
+    &quot;description&quot;: &quot;Fran Vavrus,  professor, and Peter Demerath, associate professor, in the Department of Organizational Leadership, Policy, and Development (OLPD), were both plenary speakers at the Comparative and International Education Fall Symposium held on October 26-27 at George Mason University. Their panels addressed the theme of the symposium, Interrogating and Innovating CIE Research, by focusing on the &amp;#8230; &lt;a href=\&quot;http://news.cehd.umn.edu/vavrus-and-demerath-were-plenary-speakers-at-cies/\&quot; class=\&quot;more-link\&quot;&gt;Continue reading &lt;span class=\&quot;screen-reader-text\&quot;&gt;Vavrus and Demerath were plenary speakers at CIES&lt;/span&gt; &lt;span class=\&quot;meta-nav\&quot;&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;&quot;,
+    &quot;link&quot;: &quot;http://news.cehd.umn.edu/vavrus-and-demerath-were-plenary-speakers-at-cies/&quot;,
+    &quot;link_override&quot;: null,
+    &quot;teaser&quot;: null,
+    &quot;thumbnail&quot;: &quot;&quot;,
+    &quot;title&quot;: &quot;Vavrus and Demerath were plenary speakers at CIES&quot;,
+    &quot;title_override&quot;: null,
+    &quot;categories&quot;: [
+      &quot;Educational &amp; Organizational Leadership&quot;,
+      &quot;Faculty &amp; Staff&quot;,
+      &quot;Organizational Leadership, Policy, and Development&quot;,
+      &quot;ZZ Special Use - News Homepage&quot;
+    ]
+  }
+]
+        </code></pre>
+    </div>
+</div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/news.min.js"></script>
