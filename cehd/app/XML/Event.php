@@ -141,6 +141,16 @@ class Event extends \CEHD\App\XML\XML
     public $timestamp;
 
     /**
+     * @type string
+     */
+    public $relatedEventTitle;
+
+    /**
+     * @type string
+     */
+    public $relatedEventURL;
+
+    /**
      * Class methods
      */
 
@@ -196,6 +206,10 @@ class Event extends \CEHD\App\XML\XML
         $this->title = $this->getFromProperty($event->title);
 
         $this->url = $this->getFromProperty($event->link);
+
+        $this->relatedEventTitle = $this->getFromProperty($event->relatedEvents);
+
+        $this->relatedEventURL = $this->getFromProperty($event->relatedEventURL);
     }
 
     /**
