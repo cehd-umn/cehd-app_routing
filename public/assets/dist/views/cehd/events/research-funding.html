@@ -1,0 +1,27 @@
+{% if data.events|length > 0 %}
+    <dl class="events">
+    {% for event in data.events %}
+        {% if loop.index0 < data.limit %}
+            <dt class="event-title margin-top-3">
+                {{ event.title }}
+            </dt>
+            <dd class="date">
+              <p><strong>Due date:</strong> {{ event.dayOfWeek }},
+              {{ event.fullMonth }}
+              {{ event.day }}, {{ event.year }}
+              {% if event.startTime and event.endTime %}
+                  | {{ event.startTime }} - {{ event.endTime }}
+              {% endif %}</p>
+              <p><strong>Apply:</strong> {{ event.relatedEvents }}</p>
+                {% if event.shortDescription %}
+                    <div class="description">
+                        {{ event.shortDescription|strip_style_attributes|safe }}
+                    </div>
+                {% endif %}
+            </dd>
+        {% endif %}
+    {% endfor %}
+    </dl>
+{% else %}
+    <p>There are no upcoming opportunities. Please check back soon.</p>
+{% endif %}
