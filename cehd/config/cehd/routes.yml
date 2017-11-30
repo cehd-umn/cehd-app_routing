@@ -1188,12 +1188,6 @@
   template_data:
     meta_description: null
     section: null
-/docs/macros/:
-  publish: false
-  template: cehd/docs/macros/index.html
-  template_data:
-    meta_description: null
-    section: null
 /docs/routes/:
   publish: false
   template: cehd/docs/routes.html

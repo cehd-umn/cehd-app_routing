@@ -263,18 +263,6 @@ Elementary Education:
   categories:
     - Teaching, Learning, and Schools
     - Families, Youth, and Children
-Teaching English as Second Language:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
-    - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
-  description: Teach English to adult speakers of other languages in programs such as intensive English programs and English writing programs on college and university campuses across the U.S. and internationally.
-  categories:
-    - Teaching, Learning, and Schools
-    - Languages, Culture, and International
 English Education:
   meta: null
   publish: true
@@ -305,7 +293,7 @@ Family and Community Engagement:
   publish: true
   links: 
     - title: Undergraduate Minor
-    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
+      href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Deepen your understanding of nonprofit management, community development, program development and evaluation, culturally relevant programming and how families navigate systems such as schools and hospitals.
   categories:
     - Families, Youth, and Children
@@ -316,7 +304,7 @@ Family Financial Studies:
   publish: true
   links: 
     - title: Undergraduate Minor
-    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
+      href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Prepare to work with families around financial issues, as a financial coach, counselor, or other delivery methods.
   categories:
     - Families, Youth, and Children
@@ -326,7 +314,7 @@ Family Therapy:
   publish: true
   links: 
     - title: Undergraduate Minor
-    - href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
+      href: http://www.cehd.umn.edu/fsos/programs/undergrad.asp#minor
   description: Deepen your understanding of counseling practices, family therapy, and working with diverse families and cultures.
   categories: 
     - Families, Youth, and Children
@@ -361,6 +349,17 @@ Family Violence Prevention:
   categories:
     - Families, Youth, and Children
     - Psychology, Counseling, and Social Work
+Health and Wellness Promotion:
+  meta: null
+  publish: true
+  links:
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/kin/current/undergrad/hwp.html
+  description: This interdisciplinary minor in the School of Kinesiology supports careers in health coaching, community health, personal training, corporate wellness, and allied health careers.
+  categories:
+    - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
+    - Recreation, Health, and Wellbeing
 Higher Education:
   meta: null
   publish: true
@@ -761,6 +760,18 @@ Talent Development and Gifted Education:
   categories:
     - Teaching, Learning, and Schools
     - Psychology, Counseling, and Social Work
+Teaching English as Second Language:
+  meta: null
+  publish: true
+  links:
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
+    - title: Undergraduate Certificate
+      href: http://www.cehd.umn.edu/ci/academics/SLE/TESL-minor.html
+  description: Teach English to adult speakers of other languages in programs such as intensive English programs and English writing programs on college and university campuses across the U.S. and internationally.
+  categories:
+    - Teaching, Learning, and Schools
+    - Languages, Culture, and International
 Teaching Writing and Critical Literacy:
   meta: null
   publish: true

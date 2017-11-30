@@ -99,6 +99,180 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="container">
+        <div class="feature span-4">
+            <h2>People tool data points</h2>
+
+            <p>The feed from the people tool gets translated from XML to JSON
+            because JavaScript can work with JSON natively. The JSON is just a
+            set of key/value pairs. E.g., <samp>person.headshotAddress</samp> in
+            the template above maps to <samp>headshotAddress</samp> in the JSON below:
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <pre><code class="json">
+[
+  {
+    &quot;address_1&quot;: &quot;Org Leadership, Policy/Dev&quot;,
+    &quot;address_2&quot;: &quot;178 Pillsbury Dr SE&quot;,
+    &quot;address_3&quot;: &quot;224 Burton Hall&quot;,
+    &quot;address_4&quot;: null,
+    &quot;areasOfInterest&quot;: &quot;Research integrity&lt;br&gt;\nScientific misconduct&lt;br&gt;\nInternational research collaborations&lt;br&gt;\nGraduate education&quot;,
+    &quot;briefBio&quot;: null,
+    &quot;city&quot;: &quot;Minneapolis&quot;,
+    &quot;curriculumVitaeAddr&quot;: null,
+    &quot;dateDisplay&quot;: &quot;November 17, 2017&quot;,
+    &quot;dateISO&quot;: &quot;2017-11-17&quot;,
+    &quot;degrees&quot;: &quot;Ph.D., University of Minnesota, 1990, higher education&lt;br /&gt;M.S., University of Iowa, 1978, mathematics&lt;br /&gt;B.A., St. Olaf College, 1976, mathematics&quot;,
+    &quot;expertise&quot;: null,
+    &quot;fax&quot;: &quot;612/624-3377&quot;,
+    &quot;firstName&quot;: &quot;Melissa&quot;,
+    &quot;fullBio&quot;: &quot;&lt;h2&gt;\n\tProfile&lt;/h2&gt;\n&lt;p&gt;\n\tMelissa S. Anderson is professor of higher education, with affiliate membership in bioethics, and associate dean of graduate education at the University of Minnesota. Her work over the past 30 years has been in the areas of scientific integrity, research collaboration, and academy-industry relations, with particular attention to the research environment. She was principal investigator of a study funded by the U.S. National Institutes of Health on international research collaborations and co-editor, with Nick Steneck, of &lt;em&gt;International Research Collaborations: Much to be Gained, Many Ways to Get in Trouble&lt;/em&gt; (Routledge, 2010). Professor Anderson chairs the Committee on Scientific Freedom and Responsibility of the American Association for the Advancement of Science and serves on the boards of &lt;em&gt;Science and Engineering Ethics&lt;/em&gt;, the &lt;em&gt;Journal of Empirical Research on Human Research Ethics&lt;/em&gt;, and &lt;em&gt;Accountability in Research&lt;/em&gt;. She is the co-chair, with Sabine Kleinert of &lt;em&gt;The Lancet&lt;/em&gt;, of the planning committee for the 4th World Conference on Research Integrity, to be held May 31-June 3, 2015, in Rio de Janeiro.&lt;/p&gt;\n&lt;h2&gt;\n\tHonors and Awards&lt;/h2&gt;\n&lt;ul&gt;\n\t&lt;li&gt;\n\t\tRobert H. Beck Faculty Teaching Award, Alumni Society of the University of Minnesota College of Education and Human Development (2005)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tDistinguished Teaching Award University of Minnesota College of Education and Human Development (1998)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;\n\tCurrent and Recent Professional Activities&lt;/h2&gt;\n&lt;ul&gt;\n\t&lt;li&gt;\n\t\tPrincipal investigator, project on Integrity in International Research Collaborations, funded by the National Institutes of Health (NIGMS/ORI) (2009-2012)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tCo-chair (with Sabine Kleinert of &lt;em&gt;The Lancet&lt;/em&gt;) of the planning committee, 3rd World Conference on Research Integrity, Montreal, May 5-8, 2013&lt;/li&gt;\n\t&lt;li&gt;\n\t\tCo-editor (with Nicholas H. Steneck) of &lt;em&gt;International Research Collaborations: Much to be Gained, Many Ways to Get in Trouble&lt;/em&gt;, Routledge Press (2010)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tOrganizer, international conference on Challenges and Tensions in International Research Collaborations, Minneapolis, Minnesota (October 2008)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember, (Inaugural) Ethics Committee, American Educational Research Association, and chair of subcommittee to revise the AERA Ethical Principles&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember, Editorial Board, &lt;em&gt;Journal of Empirical Research in Human Research Ethics&lt;/em&gt;&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember, Editorial Board, &lt;em&gt;Science and Engineering Ethics&lt;/em&gt;&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember, Editorial Board, &lt;em&gt;Accountability in Research&lt;/em&gt;&lt;/li&gt;\n\t&lt;li&gt;\n\t\tChair, University of Minnesota Senate Research Committee (2009-2011)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember&lt;em&gt; ex officio&lt;/em&gt;, University of Minnesota Faculty Consultative Committee (2009-2011)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember &lt;em&gt;ex officio&lt;/em&gt;, University of Minnesota Provost&amp;#39;s Research Council (2009-2011)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember &lt;em&gt;ex officio&lt;/em&gt;, University of Minnesota Council of Research Associate Deans (2009-2011)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tMember, University of Minnesota International Risk and Liability Committee (2009-2011)&lt;/li&gt;\n\t&lt;li&gt;\n\t\tInstructor in University of Minnesota Responsible Conduct of Research Program&lt;/li&gt;\n&lt;/ul&gt;&quot;,
+    &quot;headShot&quot;: null,
+    &quot;internetId&quot;: &quot;mand&quot;,
+    &quot;jobs&quot;: [
+      {
+        &quot;deptId&quot;: &quot;&quot;,
+        &quot;deptIdDescription&quot;: &quot;&quot;,
+        &quot;status&quot;: &quot;Tenured&quot;,
+        &quot;description&quot;: &quot;Professor&quot;,
+        &quot;umZDeptId&quot;: &quot;Z0172&quot;,
+        &quot;umZDeptIdDescription&quot;: &quot;Department of Organizational Leadership, Policy, and Development&quot;
+      },
+      {
+        &quot;deptId&quot;: &quot;11207&quot;,
+        &quot;deptIdDescription&quot;: &quot;Org Leadership, Policy &amp; Dev&quot;,
+        &quot;status&quot;: &quot;Active&quot;,
+        &quot;description&quot;: &quot;Professor&quot;,
+        &quot;umZDeptId&quot;: &quot;Z0172&quot;,
+        &quot;umZDeptIdDescription&quot;: &quot;Department of Organizational Leadership, Policy, and Development&quot;
+      }
+    ],
+    &quot;lastName&quot;: &quot;Anderson&quot;,
+    &quot;middleName&quot;: &quot;S.&quot;,
+    &quot;name&quot;: &quot;Anderson,Melissa S.&quot;,
+    &quot;nameFirstLast&quot;: &quot;Melissa Anderson&quot;,
+    &quot;nameSuffix&quot;: null,
+    &quot;officeHours&quot;: null,
+    &quot;phone&quot;: &quot;612/624-5717&quot;,
+    &quot;presentations&quot;: [
+      &quot;&lt;p&gt;\n\tEuroScience Open Forum, Dublin (2012, July)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tRoyal Irish Academy, Dublin (2012, July)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tCurie Institute, Paris (2012, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tWorkshop on Plagiarism, All European Academies/Royal Netherlands Academy of Arts and Sciences (2011, December)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tSigma Xi The Scientific Research Society (2011, November)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tWorkshop on Research Practices, Research Ethics and Integrity, and Their Governance, Harvard University (2011, May)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tAmerican Association for the Advancement of Science, Washington, D.C. (2011, February)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tNational Science Council of Taiwan / Academia Sinica Workshop on Research Integrity.&amp;nbsp; Academia Sinica, Taiwan (2010, December)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tUniversity of Oxford, Oxford, UK (2010, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tScience in Question series, University of Konstanz, Konstanz, Germany (2010, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tSecond World Conference on Research Integrity, Singapore (2010, July)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tCenter for Excellence, University of Konstanz, Konstanz, Germany (2010, May)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tAmerican Educational Research Association, Denver (2010, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tAssociation for Practical and Professional Ethics, Cincinnati (2010, March)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tEuropean Science Foundation / Office of Research Integrity Workshop on Responsible Conduct of Research:&amp;nbsp; Good Research Practices and Research Integrity Training, Strasbourg, France (2009, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tUniversity of Michigan, Rackham Graduate School and Program in Biological Sciences (2009, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tSociety of Research Administrators, Seattle (2009, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tNational Institutes of Health: National Institute of Allergy and Infectious Diseases; Inter-Institute&amp;nbsp;Bioethics&amp;nbsp;Interest Group; National Institute of Allergy and Infectious Diseases Scientific Resource Development Team; National Institute of Allergy and Infectious Diseases Strategic Planning and Evaluation Branch (2009, June)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tJoint workshop of the China Association for Science and Technology (CAST) and the American Association for the Advancement of Science (AAAS) San Diego (2009, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tAmerican Educational Research Association, San Diego (2009, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tSociety of Research Administrators, Washington DC (2008, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tWorkshop on Ethics Education and Scientific and Engineering Research: What&amp;#39;s Been Learned? What Should Be Done? National Academy of Engineering and National Science Foundation (2008, August)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tConference on Developments in Research and Theory on Higher Education Organization, Athens, Georgia (2008, May)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tFourth International Barcelona Conference of the Global University Network for Innovation, Barcelona, Spain (2008, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tFirst Biennial Conference on Responsible Conduct of Research: Education/Instruction/Training, St. Louis (2008, April)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tAmerican Educational Research Association, New York (2008, March)&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;\n\tCold Spring Harbor Laboratories, New York (2007, October)&lt;/p&gt;&quot;,
+      &quot;&lt;p class=\&quot;revised\&quot;&gt;\n\tUpdated June 2014&lt;/p&gt;&quot;
+    ],
+    &quot;publications&quot;: [
+      &quot;&lt;p&gt;Anderson, M. S., Chiteng Kot, F., Shaw, M. A., Lepkowski, C. C., &amp;amp; De Vries, R. G. (2011). Authorship issues in international research collaborations. &lt;em&gt;American Scientist, 99&lt;/em&gt;(3), 204-207.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S., &amp;amp; Steneck, N. H. (2011). The problem of plagiarism. &lt;em&gt;Urologic oncology: Seminars and original investigations, 29&lt;/em&gt;(1), 90-94.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S., &amp;amp; Steneck, N. H. (Eds.). (2010). &lt;em&gt;International research collaborations: Much to be gained, many ways to get in trouble&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S. (2010). What can be gained and what can go wrong in the context of different national research environments. In M. S. Anderson, &amp;amp; N. H. Steneck (Eds.), &lt;em&gt;International research collaborations: Much to be gained, many ways to get in trouble&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Bohnhorst, M. A., McQuaid, M., Tsantir, S. R. B., Amundson, D. M., &amp;amp; Anderson, M. S. (2010). Legal and regulatory considerations in international research collaborations. In M. S. Anderson &amp;amp; N. H. Steneck (Eds.), &lt;em&gt;International research collaborations: Much to be gained, many ways to get in trouble&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S., &amp;amp; Steneck, N. H. (2010). Realizing gains and staying out of trouble. In M. S. Anderson &amp;amp; N. H. Steneck (Eds.), &lt;em&gt;International research collaborations: Much to be gained, many ways to get in trouble&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S., Chiteng Kot, F., Jie, Y., Kamata, T., Kuzhabekova, A., Lepkowski, C. C., Shaw, M. A., Sorenson, M. M., &amp;amp; Vasconcelos, S. M. R. (2010). Differences in national approaches to doctoral education: Implications for international research collaborations. In M. S. Anderson &amp;amp; N. Steneck (Eds.), &lt;em&gt;International research collaborations: Much to be gained, many ways to get in trouble&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Martinson, B. C., Crain, A. L., De Vries, R., &amp;amp;&amp;nbsp; Anderson, M. S. (2010). The importance of organizational justice in ensuring research integrity. &lt;em&gt;Journal of Empirical Research on Human Research Ethics, 5&lt;/em&gt;(3), 67-83.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S. (2010). International research collaborations: Anticipating challenges instead of being surprised.&amp;nbsp; &lt;em&gt;Europa World of Learning 2011&lt;/em&gt; (61 ed., Vol. 1, pp. 14-18) London: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S. (2010). Research misconduct and misbehavior in relation to the research environment. In T. Bertam Gallant (Ed.), &lt;em&gt;Creating the ethical academy: A systems approach to understanding misconduct and empowering change&lt;/em&gt;. New York: Routledge.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S., Ronning, E. A., Martinson, B. C., &amp;amp; De Vries, R. (2010). Extending the Mertonian norms: Scientists&amp;#39; subscription to norms of research. &lt;i&gt;Journal of Higher Education.&lt;/i&gt;&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Martinson, B. C., Crain, A. L., Anderson, M. S., &amp;amp; De Vries, R. (2009). Institutions&amp;rsquo; expectations for researchers&amp;rsquo; self-funding, federal grant holding, and private industry involvement: Manifold drivers of self-interest and researcher behavior. &lt;em&gt;Academic Medicine, 84&lt;/em&gt;(11), 1491-1499.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Anderson, M. S. (2009). Who is in charge?: Research integrity in the international context. &lt;em&gt;Research Global, 22&lt;/em&gt;, 12-13.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Louis, K. S., Holdsworth, J., Anderson, M. S., &amp;amp; Campbell, E. G. (2008). Everyday ethics in research: Translating authorship guidelines into practice in the bench sciences. &lt;i&gt;Journal of Higher Education, 79&lt;/i&gt;(1), 88-112.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Vogeli, C., Yucal, R., Bendavid, E., Jones, L. M., Anderson, M. S., Louis, K. S., &amp;amp; Campbell, E. G. (2006). Data withholding and the next generation of scientists: Results of a National Survey. &lt;i&gt;Academic Medicine, 81&lt;/i&gt;(2), 128-136.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Martinson, B. C., Anderson, M. S., &amp;amp; De Vries, R. (2006). Scientists&amp;#39; perceptions of organizational justice and self-reported misbehaviors. &lt;em&gt;Journal of Empirical Research on Human Research Ethics, 1&lt;/em&gt;(1), 51-66.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;De Vries, R., Anderson, M. S., &amp;amp; Martinson, B. C. (2006). Normal misbehavior: Scientists talk about the ethics of research. &lt;em&gt;Journal of Empirical Research on Human Research Ethics, 1&lt;/em&gt;(1), 43-50.&lt;/p&gt;&quot;,
+      &quot;&lt;p&gt;Martinson, B. C., Anderson, M. S., &amp;amp; De Vries, R. (2005). Scientists behaving badly. &lt;em&gt;Nature, 435&lt;/em&gt;, 737-738.&lt;/p&gt;\n&lt;p&gt;\n\t&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/em&gt; The publication of the Nature paper was named by &lt;em&gt;Discover&lt;/em&gt; as one of the top 100 events in science in the world in 2005: Zorich, Zach. (2006). Deception plagues medical research. &lt;em&gt;Discover, 27&lt;/em&gt;(1), 49.&lt;/p&gt;&quot;
+    ],
+    &quot;state&quot;: &quot;MN&quot;,
+    &quot;tags&quot;: [
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;386&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Ethics&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;217&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Faculty&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;389&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Faculty&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;466&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;HE&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;399&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Higher Education&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;tg&quot;,
+        &quot;id&quot;: &quot;406&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;International Education&quot;
+      }
+    ],
+    &quot;tagGroups&quot;: [
+      {
+        &quot;query_key&quot;: &quot;en&quot;,
+        &quot;abbreviation&quot;: &quot;OLPD&quot;,
+        &quot;id&quot;: &quot;48&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Organizational Leadership&quot;
+      },
+      {
+        &quot;query_key&quot;: &quot;en&quot;,
+        &quot;abbreviation&quot;: &quot;Research&quot;,
+        &quot;id&quot;: &quot;54&quot;,
+        &quot;name&quot;: null,
+        &quot;description&quot;: &quot;Research topic tags&quot;
+      }
+    ],
+    &quot;twitterName&quot;: null,
+    &quot;webPage&quot;: &quot;http://www.cehd.umn.edu/olpd/people/faculty/M-anderson.asp&quot;,
+    &quot;workingTitle&quot;: &quot;Professor; Director of Graduate Studies&quot;,
+    &quot;zip&quot;: &quot;55455-0226&quot;,
+    &quot;headshotAddress&quot;: &quot;http://apps.cehd.umn.edu/people/Headshot/AndersonMW-Pref.jpg&quot;
+  }
+]
+        </code></pre>
+    </div>
+</div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/people.min.js"></script>
