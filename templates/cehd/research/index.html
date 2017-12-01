@@ -20,8 +20,24 @@
 <style>
 #video-caption {
     margin-top: 0;
-width: 600px;
 }
+/*iframe {
+    height: auto;
+    width: 100%;
+}*/
+@media (max-width: 768px){
+#achievement-gap-video {
+    margin:0 auto;
+    width: 100%;
+}
+}
+
+/*@media (min-width: 767px){
+    iframe {
+        height: auto;
+    }
+}*/
+
 </style>
 {% endblock %}
 {% block main_content %}
@@ -90,8 +106,8 @@ width: 600px;
         </ul>
     </div>
         </div>
- <div class="span-6 feature margin-top-1">
-            <iframe src="https://player.vimeo.com/video/245065719" width="640" height="360" align="middle" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ <div class="span-6 feature margin-top-1" id="achievement-gap-video">
+            <iframe src="https://player.vimeo.com/video/245065719" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                  <div id="video-caption"><p><small>The achievement gap among children in our society is growing. Our researchers are changing the conversation from one of achievement to one of opportunity, and we’re improving all aspects of child development to close this opportunity gap.</small></p>
      </div>
         </div>
