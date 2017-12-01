@@ -89,6 +89,10 @@
               href: "/career/teacher/"
       - name: GLOBAL INITIATIVES
         href: "/global/"
+        subsections:
+          -
+            - name: Study Abroad
+              href: "/study-abroad/"
 - name: Research
   href: "/research/"
   section: research
