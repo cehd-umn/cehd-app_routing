@@ -1,6 +1,6 @@
 ---
 
-asset_base: "/olpd/"
+asset_base: "/olpd"
 autoescape: true
 autoreload: true
 base_url: "/olpd"
@@ -9,6 +9,7 @@ dept_name: "Organizational Leadership, Policy, and Development"
 filter_method_names:
   - hyphenate
   - stripStyleAttributes
+redirect_prepend: "/olpd/"
 search_sites:
   primary:
     client: "tc_education"

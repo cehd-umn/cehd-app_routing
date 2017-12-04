@@ -19,7 +19,7 @@ $inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/cs
 $inline_nav_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/nav.css";
 $nav_yaml_file          = __DIR__ . "/../../cehd/config/olpd/nav.yml";
 $olpd_app_config        = __DIR__ . "/../../cehd/config/olpd/config.yml";
-$redirects              = __DIR__ . "/../../cehd/config/olpd/redirects.yml";
+$redirects_yaml_file          = __DIR__ . "/../../cehd/config/olpd/redirects.yml";
 $routes_yaml_file       = __DIR__ . "/../../cehd/config/olpd/routes.yml";
 $helpers = new Helpers();
 $inline_styles = file_get_contents($inline_styles_file);
@@ -27,6 +27,7 @@ $inline_svg_styles = file_get_contents($inline_svg_styles_file);
 $inline_nav_styles = file_get_contents($inline_nav_styles_file);
 $app_config = $helpers->loadYaml($olpd_app_config);
 $nav_items = $helpers->loadYaml($nav_yaml_file);
+$redirects = $helpers->loadYaml($redirects_yaml_file);
 $routes = $helpers->loadYaml($routes_yaml_file);
 $is_production_environment = $helpers->isProduction($helpers->getServerName());
 $display_slim_errors = !$is_production_environment;
@@ -63,6 +64,8 @@ $twig->addGlobal("gsa_sites", $app_config["search_sites"]);
 
 $container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);
+$container["redirects"] = new Dict($redirects);
+$container["redirect_prepend"] = $app_config["redirect_prepend"];
 
 $container["notFoundHandler"] = function ($container)
 {
@@ -76,7 +79,7 @@ $container["notFoundHandler"] = function ($container)
 $app = new \Slim\App($container);
 
 // Adds trailing slash to GET requests that don't have them
-$app->add(new RequestMiddleWare());
+$app->add(new RequestMiddleWare($container));
 
 // Load all the routes from the routes file
 foreach ($routes as $route => $route_info) {
