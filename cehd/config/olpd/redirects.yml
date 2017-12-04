@@ -58,6 +58,7 @@ grad-programs/cide/liie/macurriculum.html: graduate-programs/comparative-interna
 grad-programs/cide/liie/phd.html: graduate-programs/comparative-international-development-education/
 grad-programs/cide/liie/phdcurriculum.html: graduate-programs/comparative-international-development-education/liie-curriculum/
 grad-programs/cide/liie/specializations.html: graduate-programs/comparative-international-development-education/
+grad-programs/: graduate-programs/
 grad-programs/default.asp: graduate-programs/
 grad-programs/epl/: graduate-programs/education-policy-leadership/
 grad-programs/epl/default.html: graduate-programs/education-policy-leadership/
