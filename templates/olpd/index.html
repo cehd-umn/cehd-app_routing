@@ -288,11 +288,7 @@
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/svg_stats.min.js"></script>
 {# The call to parent() above is *very* important #}
-{{ newsfeed.news_feed_js(
-    "category/departments/organizational-leadership-policy-and-development/feed",
-    "#news-container",
-    "index.html",
-    5
+{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "index.html",  5
 ) }}
     {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "index.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
     {{ eventsfeed.events_feed_js(132) }}
