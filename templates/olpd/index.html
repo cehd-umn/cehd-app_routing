@@ -87,7 +87,7 @@
 {% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
-    <img class="hero-image" src="/olpd-new/images/hp-hero.jpg" alt="OLPD students">
+    <img class="hero-image" src="/olpd/images/hp-hero.jpg" alt="OLPD students">
     <div class="hero-overlay">
         <div class="container">
             <div class="text-center">
@@ -166,7 +166,7 @@
             ></div>
 
             <!--
-            <img class="circular-stat" src="/olpd-new/images/circle-stat.svg" alt="Circle stat">
+            <img class="circular-stat" src="/olpd/images/circle-stat.svg" alt="Circle stat">
             <div class="stat-percent">
                 78%
             </div>
@@ -246,14 +246,14 @@
 
     <div class="container margin-top-4">
         <h2>News and announcements</h2>
-        <div class="third">
+        <div class="half">
             {{ loader.loader("OLPD news", "h3", "news-container") }}
         </div>
-        <div class="third">
+        <!-- <div class="third">
             {{ loader.loader("Improving Lives Blog", "h3") }}
             <p class="text-right"><a href="/events/" class="news-more-news"><small>More research</small></a></p>
-        </div>
-        <div class="third">
+        </div> -->
+        <div class="half">
             {{ loader.loader("Events", "h3", "events-container") }}
             <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
         </div>
@@ -288,11 +288,7 @@
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/svg_stats.min.js"></script>
 {# The call to parent() above is *very* important #}
-{{ newsfeed.news_feed_js(
-    "category/departments/organizational-leadership-policy-and-development/feed",
-    "#news-container",
-    "index.html",
-    5
+{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "index.html",  5
 ) }}
     {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "index.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
     {{ eventsfeed.events_feed_js(132) }}

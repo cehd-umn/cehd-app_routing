@@ -972,11 +972,11 @@ a.button:hover {
 }
 
 .text-center {
-  text-align: center;
+  text-align: left;
 }
 
 .text-center small {
-  text-align: center;
+  text-align: left;
 }
 
 .text-plain {

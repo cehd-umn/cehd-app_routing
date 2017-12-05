@@ -31,7 +31,7 @@
 
         <div class="half">
             <figure>
-                <img src="/olpd-new/images/undergraduate-presentation.jpg" alt="undergraduate students attending a presentation">
+                <img src="/olpd/images/undergraduate-presentation.jpg" alt="undergraduate students attending a presentation">
                 <figcaption>BME and HRD undergraduate students attending a presentation.</figcaption>
             </figure>
         </div>
@@ -39,7 +39,25 @@
     </div>
 
     <div class="container">
-        <p class="text-notice">ADD UNDERGRADUATE FACULTY</p>
-    </div>
+        <div class="span-12 feature margin-top-2">
+            <h2 class="text-center">Faculty</h2>
+                <div id="people-container" class="loader-container"
+                    data-people-app
+                    data-tag="473"
+                    data-target-element-selector="#people-container"
+                    data-template-path="/assets/dist/views/olpd/people/"
+                    data-template-name="list.html"
+                    data-base-path="{{ config.base_url }}"
+                    data-people-per-group="2">
+                    <div class="loader">
+                        <div class="loader-figure "></div>
+                        <p class="loader-label">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- close container -->
 </div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
 {% endblock %}

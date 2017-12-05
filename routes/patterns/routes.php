@@ -13,7 +13,7 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \CEHD\App\Helpers\Helpers;
 use \CEHD\App\Card\PatternCard\PatternCards;
-// use \UMN\CEHD\Dict\Dict;
+use \UMN\CEHD\Dict\Dict;
 
 $inline_styles_file     = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/inline.css";
 $inline_svg_styles_file = __DIR__ . "/../../public/assets/peloton/latest/dist/css/minified/svg.css";
@@ -67,10 +67,12 @@ sort($categories);
 ksort($routes_data);
 $container["patternCards"] = $routes_data;
 $container["categories"] = $categories;
+$container["redirects"] = new Dict();
+$container["redirect_prepend"] = "";
 
 $app = new \Slim\App($container);
 
-$app->add(new RequestMiddleWare());
+$app->add(new RequestMiddleWare($container));
 
 // Redirect to the v1 uri
 $app->get("/", function($request, $response, $args) {
