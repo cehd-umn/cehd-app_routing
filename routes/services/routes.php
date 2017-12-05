@@ -23,6 +23,15 @@ $c['errorHandler'] = function ($c) {
 
 $app = new \Slim\App($c);
 
+// Sets up CORS headers so subdomains can make GET requests to these endpoints
+$app->add(function ($req, $res, $next) {
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET');
+});
+
 $app->get('/events/feed/', '\CEHD\Services\ServicesApp:eventsHandler');
 
 $app->get('/event/', '\CEHD\Services\ServicesApp:eventHandler');
