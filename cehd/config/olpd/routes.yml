@@ -540,3 +540,13 @@
   publish: true
   template_data:
     - section: undergraduate-programs
+/undergraduate-programs/internship-applied-experience/:
+  template: olpd/undergraduate-programs/internship-applied-experience/index.html
+  publish: true
+  template_data:
+    - section: undergraduate-programs
+/undergraduate-programs/internship-applied-experience/site-supervisors/:
+  template: olpd/undergraduate-programs/internship-applied-experience/site-supervisors.html
+  publish: true
+  template_data:
+    - section: undergraduate-programs

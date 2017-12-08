@@ -8,7 +8,7 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>{{ page_title }}</h2>
+        <h2 class="h1">{{ page_title }}</h2>
         <section>
         <div class="half">
         <h3 class="no-margin-top">Use scientific thinking to help students succeed</h3>
@@ -59,16 +59,25 @@
     </div>
 
 </div>
-    </section>
-    </div>
 </div>
-<section>
-  <div class="twothird feature">
-    <h3 class="text-center">Like us on Facebook</h3>
-    <p class="text-center">Get a feel for what it's like to be an educational psychology student at the U of M.
-      <br/>Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking("send", "event", "Facebook", "click", "schoolpsychmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
-  </div>
-</section>
+</div>
+  </section>
+      <div class="row emphasis cool margin-top-2">
+          <div class="container">
+              <div class="feature">
+                  <h2 class="twothird feature text-center">Like us on<br  />Facebook</h2>
+                  <p class="twothird feature">Get a feel for what it's like to be an educational psychology student at the U of M.
+                      </br/>Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking("send", "event", "Facebook", "click", "schoolpsychmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
+              </div>
+              <div class="row twothird feature text-center margin-top-1">
+                  <div class="text-center">
+                      <div class="svg-social-media-icon size-40">
+                          <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: See what it's like to be an educational psychology student at the U of M." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 <div class="row">
     <div class="container">
           <section>
@@ -125,8 +134,10 @@
       </div>
         <section>
           <div class="row emphasis margin-top-1">
-                      <div class="twothirds feature margin-2">
-                          <p class="pull-quote">&quot;I want to explore the issue of racial disproportionality that exists in special education in order to provide students with the most optimal and appropriate educational services and supports.&quot;</p>
+                         <div class="twothirds feature">
+                              <p class="pull-quote">&quot;I want to explore the issue of racial disproportionality that exists in special education in order to provide students with the most optimal and appropriate educational services and supports.&quot;</p>
+                         </div>
+                        <div class="twothirds feature margin-2">
                       <div class="third">
                           <img src="{{ config.asset_base }}/dist/images/Research/alaa_houri_headshot.jpg" alt="Alaa Houri headshot">
                       </div>

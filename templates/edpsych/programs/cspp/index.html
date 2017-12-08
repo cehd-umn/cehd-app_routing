@@ -3,7 +3,7 @@
 {%- import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {%- import "macros/loader.html" as loader -%}
-{%- set page_title = "Counseling & student personnel psychology" %}
+{%- set page_title = "Counseling and student personnel psychology" %}
 {%- block title %}{{ page_title }}{% endblock %}
 {%- block main_content %}
 <div class="row">
@@ -43,20 +43,34 @@
         </div>
         <div class="half">
           {{ loader.loader(
-            "Dates & deadlines",
+            "Dates and deadlines",
             "h3",
             "events-container"
           ) }}
         </div>
+    </div>
+</div>
       </section>
-      <section>
-        <div class="twothird feature">
-          <h3 class="text-center">Like us on Facebook</h3>
-          <p class="text-center">Get a feel for what it's like to be an educational psychology student at the U of M. Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/ {{ analytics.add_tracking("send", "event", "Facebook", "click", "CSPPmainFacebook") }}"> Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
-        </div>
-      </section>
-    <section>
-      <h3 class="text-center">Coursework &amp; related licensures</h3>
+          <div class="row emphasis cool margin-top-2">
+              <div class="container">
+                  <div class="feature">
+                      <h2 class="twothird feature text-center">Like us on<br  />Facebook</h2>
+                      <p class="twothird feature">Get a feel for what it's like to be an educational psychology student at the U of M.
+                          </br/>Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking("send", "event", "Facebook", "click", "CSPPmainFacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, work, and other happenings.</p>
+                  </div>
+                  <div class="row twothird feature text-center margin-top-1">
+                      <div class="text-center">
+                          <div class="svg-social-media-icon size-40">
+                              <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: See what it's like to be an educational psychology student at the U of M." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+<div class="row">
+    <div class="container">
+     <section>
+       <h3 class="text-center">Coursework and related licensures</h3>
           <div class="twothird">
             <h4>Coursework</h4>
               <p>The CSPP M.A. is a two-year, full-time program. You’ll study individual, group, and family counseling, research and evaluation, counseling theory, human growth and development, diagnostic assessment, social and cultural foundations, ethics, and career development.</p>
@@ -92,8 +106,8 @@
             <h4>Scholarships</h4>
               <ul>
                 <li><a href="{{ config.base_url }}/programs/cspp/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
-                <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship / Practicum with Children &amp; Families</a></li>
-                <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid &amp; Scholarships</a></li>
+                <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship / Practicum with Children and Families</a></li>
+                <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid and Scholarships</a></li>
               </ul>
             <h4>Financial aid</h4>
             <ul>
@@ -119,7 +133,9 @@
 </div>
   <div class="row emphasis margin-top-1">
     <div class="container">
-      <p class="pull-quote">&quot;I am energized by the amount of learning that takes place within the CSPP program. The pairing of academic instruction from committed and knowledgeable professors with the sharing of varied experiences only a cohort model can provide, has made for a uniquely positive and engaging environment.&quot;</p>
+        <div class="twothirds feature">
+            <p class="pull-quote">&quot;I am energized by the amount of learning that takes place within the CSPP program. The pairing of academic instruction from committed and knowledgeable professors with the sharing of varied experiences only a cohort model can provide, has made for a uniquely positive and engaging environment.&quot;</p>
+        </div>
           <div class="twothirds feature margin-2">
               <div class="third">
                   <img src="{{ config.asset_base }}/dist/images/future-students/Cristina_SilvaGleason_headshot.jpg" alt="Cristina Silva Gleason headshot">
@@ -134,7 +150,7 @@
           </div>
 <div class="row">
     <div class="container">
-        <h3 class="text-center">Faculty &amp; staff</h3>
+        <h3 class="text-center">Faculty and staff</h3>
         <section>
             <div class="half">
                 <div class="span-3"><img src="http://apps.cehd.umn.edu/people/Headshot/BergerC-2017.jpg" alt="Carolyn Berger headshot"></div>
@@ -170,7 +186,7 @@
                 </div>
                 <div class="span-9">
                     <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/smcconne/">Scott McConnell</a>
-                      <small class="clear h6 light">Program coordinator &amp; clinical training director<br/>
+                      <small class="clear h6 light">Program coordinator and clinical training director<br/>
                       <a href="mailto:smcconne@umn.edu">smcconne@umn.edu | </a><a href="{{ config.base_url }}/research/labs/mcconnell/">Lab</a>
                       </small>
                     </h4>
