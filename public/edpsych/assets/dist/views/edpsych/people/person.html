@@ -32,8 +32,12 @@
                     {% if data.person.phone|is_string %}
                     {{ data.person.phone }}<br>
                     {% endif %}
-                    <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
+                    <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a> <br />
+
+                {% if data.person.twitterName|is_string %}
+                <a href="http://twitter.com/{{ data.person.twitterName }}">twitter.com/{{ data.person.twitterName }}</a>
                 </p>
+                {% endif %}
                 {% if data.person.officeHours|is_string %}
                     <h3 class="h5 no-margin-bottom">Office hours</h3>
                     <p class="no-margin-top">{{ data.person.officeHours|safe }}</p>
