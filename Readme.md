@@ -120,6 +120,17 @@ page or across pages.
 
 ## Local dev environment setup
 
+1. [Install Lando]((https://docs.devwithlando.io/installation/installing.html).
+2. run `lando start`.
+
+## Deprecated dev environment setup instructions
+
+*This is not the preferred method.* Use the Lando method above instead. This is
+just here so someone in the future will appreciate how complicated the local
+dev setup once was.
+
+TODO: Delete this whole section if you want to.
+
 Whenever making changes to the back end, it's a good idea to work on a local
 clone first. Here are some instructions for getting things up and running.
 These instructions assume a *nix environment like OS X or Linux.

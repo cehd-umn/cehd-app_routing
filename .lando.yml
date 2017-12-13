@@ -1,0 +1,4 @@
+name: app-routing
+recipe: lamp
+config:
+  webroot: ./public
