@@ -257,6 +257,9 @@ commands:
 Now PHP in our VM should have everything we need. You should be able to go to
 `cehd.dev` and see a working copy of the site.
 
+TODO: Fork the scotchbox repo and make these changes to our fork so some of
+this setup comes out-of-the-box. (Pun intended.)
+
 ## Bonus round
 
 [Install Homebrew](https://brew.sh/).
