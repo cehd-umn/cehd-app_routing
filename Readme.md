@@ -240,8 +240,22 @@ packages are not tracked either.
 
     vagrant up
 
-This will take a few minutes the first time. After it's up, you should be able
-to go to `cehd.dev` and see a working copy of the site.
+This will take a few minutes the first time. Unfortunately the VM doesn't come
+with a PHP-XML dependency that we need, but that's easy to fix. Run these
+commands:
+
+1. `vagrant ssh cehd.dev` to ssh into the Vagrant box. You're now in Ubuntu!
+2. `sudo apt-get install php7.0-xml`
+3. `sudo vim /etc/php/7.0/apache2/php.ini` to edit the `php.ini` file with vim
+4. type `/php_xmlrpc` and hit the `return` key (you should be at a line that reads `;extension=php_xmlrpc.dll`)
+5. type `0` (the number zero) to take the cursor to the beginning of the line
+6. type `x` to delete the ";" character
+7. type `:wq` to save the change and quit vim
+8. type `sudo service apache2 restart` to restart Apache
+9. type `exit` to log out of the Vagrant box
+
+Now PHP in our VM should have everything we need. You should be able to go to
+`cehd.dev` and see a working copy of the site.
 
 ## Bonus round
 
