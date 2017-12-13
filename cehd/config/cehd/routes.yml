@@ -1045,6 +1045,11 @@
   template: cehd/diversity/cgc.html
   template_data:
     - section: diversity
+/events/aparc-open-house/:
+  publish: true
+  template: cehd/events/aparc-open-house.html
+  template_data:
+    - section: events
 /events/block-party/:
   publish: true
   template: cehd/events/block-party.html
