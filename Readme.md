@@ -120,6 +120,54 @@ page or across pages.
 
 ## Local dev environment setup
 
+### Install Composer
+
+[Composer](https://getcomposer.org/download/) is a dependency manager for PHP.
+We rely on a lot of third party packages. Composer will manage them for you.
+
+We recommend you move the composer binary somewhere in your path. Let's say
+`composer.phar` is in your current working directory. Run:
+
+    mv composer.phar /usr/local/bin/composer
+
+Now if you run `which composer` you should see: `/usr/local/bin/composer`
+
+Now `cd` into the root of this project and run `composer install`. That should
+install all the PHP dependencies for this project. They go in `/vendor` and are
+not tracked with git.
+
+### Install Node (the right way)
+
+[Follow these instructions for installing `nvm` (Node Version
+Manager)](http://yoember.com/nodejs/the-best-way-to-install-node-js/).
+
+This will set you up so that globally installed node packages get installed
+where you have permission to add them without `sudo`. Note: some of our node
+dependencies require node v6.7.0. You can used `nvm` to install that version
+of node.
+
+Now `cd` into the root for this project and run `npm install`. As with composer
+above, this will install all the node dependencies in `/node_modules`. Those
+packages are not tracked either.
+
+We use [Gulp](https://gulpjs.com/) to manage Sass tasks and
+[Webpack](https://webpack.js.org/) to manage the JavaScript.
+
+TODO: Webpack could be set up to do both.
+
+### Install Lando
+
+1. [Install Lando](https://docs.devwithlando.io/installation/installing.html).
+2. run `lando start`.
+
+## Deprecated dev environment setup instructions
+
+**This is not the preferred method.** Use the Lando method above instead. This is
+just here so someone in the future will appreciate how complicated the local
+dev setup once was.
+
+TODO: Delete this whole section if you want to.
+
 Whenever making changes to the back end, it's a good idea to work on a local
 clone first. Here are some instructions for getting things up and running.
 These instructions assume a *nix environment like OS X or Linux.
