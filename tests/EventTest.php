@@ -22,6 +22,8 @@ class EventTest extends TestCase
         $this->assertEquals($count, $this->eventInstance->get_count());
         $this->assertEquals("6949", $this->eventInstance->events[0]->id);
         $this->assertEquals("3/31/2017", $this->eventInstance->events[0]->date);
+        $this->assertEquals("1490958000", $this->eventInstance->events[0]->timestampStart);
+        $this->assertEquals("1490965200", $this->eventInstance->events[0]->timestampEnd);
         $this->assertEquals("11:00 AM", $this->eventInstance->events[0]->startTime);
         $this->assertEquals("1:00 PM", $this->eventInstance->events[0]->endTime);
         $this->assertEquals("March", $this->eventInstance->events[0]->fullMonth);

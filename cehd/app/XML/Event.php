@@ -138,7 +138,12 @@ class Event extends \CEHD\App\XML\XML
     /**
      * @type int
      */
-    public $timestamp;
+    public $timestampStart;
+
+    /**
+     * @type int
+     */
+    public $timestampEnd;
 
     /**
      * @type string
@@ -175,8 +180,6 @@ class Event extends \CEHD\App\XML\XML
 
         $this->shortMonth = $this->getFromProperty($this->getShortMonth());
 
-        $this->timestamp = $this->getTimestamp();
-
         $this->startTime = $this->getFromProperty($event->startTime);
 
         $this->startHour = $this->getFromProperty($this->getStartHour());
@@ -192,6 +195,10 @@ class Event extends \CEHD\App\XML\XML
         $this->dateTimeEnd = $this->date . " " . $this->endTime;
 
         $this->dateTimeStart = $this->date . " " . $this->startTime;
+
+        $this->timestampStart = $this->getTimestamp();
+
+        $this->timestampEnd = $this->getTimestamp(true);
 
         $this->description = $this->getFromProperty($event->extendedDescr);
 
