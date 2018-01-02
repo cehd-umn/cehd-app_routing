@@ -5,7 +5,7 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>Autism spectrum disorder</br>certificate registration</h2>
+        <h2 class="h1 text-center">Autism spectrum disorder</br>certificate registration</h2>
     </div>
 </div>
 <div class="row">
@@ -52,8 +52,9 @@
 </div>
 <div class="row">
   <div class="container">
-    <div class="feature twothirds">
     <h3 class="text-center">How to apply</h3>
+    <section>
+      <div class="twothirds feature">
     <h4>Undergraduate applicants</h4>
     <p>Please complete the <a href="https://goo.gl/forms/vF5hSN3AgR0WEeXt2">undergraduate certificate online application</a>.</p>
     <h4>Graduate applicants</h4>
@@ -77,6 +78,8 @@
       <li>Please mention specific skills, special talents or aptitudes. What aspects of or specific problems in your area of specialization interest you most at this point? What kinds of educational psychology work do you see yourself doing seven or eight years after you get your degree? Please describe briefly any participation in research, applied educational psychology, or employment which might be relevant to your application.</li>
     </ul>
   </div>
+  </section>
+  </div>
 </div>
 <div class="row">
   <div class="container">
@@ -90,7 +93,7 @@
         <li>Students enrolled in certificate and master of education (M.Ed.) programs pay the CEHD departmental master’s <a href="http://www.cehd.umn.edu/graduate/tuition.html">(M.Ed.) tuition rate</a>.</li>
         <li>Students enrolled in Graduate School programs (e.g., M.A., Ph.D., Ed.D.) pay <a href="https://onestop.umn.edu/finances/cost-attendance">Graduate School tuition rates</a>.</li>
       </ul>
-      <h4>Financial aid &amp; scholarships</h4>
+      <h4>Financial aid and scholarships</h4>
       <p><a href="http://onestop.umn.edu/onestop/financialaid.html">General financial aid advising and information</a> are available through One Stop.</p>
       <p>For <a href="http://humanresources.umn.edu/find-job/graduate-assistant-jobs">graduate assistantship/scholarship information</a> (for students enrolled in graduate degree programs), contact the Graduate Assistant Employment office:</p>
       <p><strong>Mail</strong>: 200 Donhowe Minneapolis, MN 55455</p>
@@ -108,6 +111,25 @@
       <p>Navigate to the graduate completion application via <a href="https://login.umn.edu/idp/profile/SAML2/Redirect/SSO?execution=e1s1">MyU</a> through the “Academics” tab > “Degree Progress” and click on the Apply to Graduate link. Complete a <a href="{{ config.asset_base }}/dist/documents/current/specialed/Grad-Degree-Plan.pdf">Graduate Degree Plan</a> listing your 13 program credits and signed by your adviser. Forms must be turned in no later than the first of the month that you intend to graduate.</p>
       <p>Successful completion of the certificate will be noted on the student's official University of Minnesota transcript and an official certificate will be issued.</p>
     </div>
+  </section>
+</div>
+    <section>
+          <div class="row emphasis cool margin-top-2">
+              <div class="container">
+                  <div class="feature">
+                        <h3 class="text-center">Like us on Facebook</h3>
+                      <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking( "send", "event", "Facebook", "click", "spedphdmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+                      <div class="row twothird feature text-center margin-top-1">
+                          <div class="text-center">
+                              <div class="svg-social-media-icon size-40">
+                                  <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: Connect with students, faculty, staff, and alumni." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
   </div>
 </div>
 {% endblock %}

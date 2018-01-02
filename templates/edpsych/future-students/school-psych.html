@@ -1,11 +1,11 @@
 {% extends "edpsych/layout/section.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}
-{% set page_title = "Admissions: School Psychology Ph.D. & M.A./S.C." %}
+{% set page_title = "Admissions: School Psychology Ph.D. and M.A./Specialist Certificate" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">{{ page_title }}</h2>
+        <h2 class="h1 text-center">{{ page_title }}</h2>
 <section>
         <div class="half">
         <h3>Admissions requirements</h3>
@@ -60,7 +60,9 @@
 </div>
 <div class="row emphasis margin-top-1">
     <div class="container">
+      <div class= "twothirds feature margin-1">
             <p class="pull-quote">&ldquo;The School Psychology program is a perfect blend of theory and practice in psychology and education. I am learning so much from the best possible educators and experts in the field.&rdquo;</p>
+</div>
     <div class="twothirds feature margin-2">
             <div class="third">
               <img src="{{ config.asset_base }}/dist/images/future-students/tara_kulkarni_headshot.jpg" class="mobile-hide" alt="Tara Kulkarni headshot">
@@ -82,7 +84,7 @@
         <p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }} >ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
         <h4 id="gradapp" class="text-center">Graduate school application</h4>
         <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Test Information-Self Reported, Languages, Employment/Residence Information, Financial Support, Legal agent/privacy statement, Applicant Statement 1 (Statement of Interest), Resume/CV, Graduate Program Supplemental Application, Upload 2 (Critical Issue Essay), Transcripts and Recommendations.</p>
-        <p><strong>Optional fields&#58;  </strong>Awards &amp; Activities, Applicant Statement #2 (Diversity), Extenuating Circumstances Statement; are optional, but will be taken into consideration if submitted.</p>
+        <p><strong>Optional fields&#58;  </strong>Awards and Activities, Applicant Statement #2 (Diversity), Extenuating Circumstances Statement; are optional, but will be taken into consideration if submitted.</p>
           <h4 id="appfee" class="text-center">Application fee</h4>
             <p><a href= "http://www.grad.umn.edu/admissions-application-instructions/application-fee">Visit the Graduate School website for more information</a></p>
           <h4 id="progapp" class="text-center">Program application</h4>

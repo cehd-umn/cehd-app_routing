@@ -23,15 +23,32 @@
               </section>
               <section>
                 <div class="twothird feature">
-              <h3 class="text-center">Like us on Facebook</h3>
-              <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
             </div>
             </section>
             <div class="twothirds feature">
-              <h3 class="text-center">School Psychology Student Association (SPSA)</h3>
+              <h3 class="text-center">School Psychology Student Association</h3>
                 <p>The <a href="{{ config.base_url }}/current/school-psychology/spsa/">School Psychology Student Association (SPSA)</a> is a formal student group that was organized during the 1992-93 school year to promote student involvement in the program and in the field of school psychology. The group emphasizes professional development in a fun, relaxed atmosphere. SPSA has a social committee which organizes and sponsors social events for faculty and students each semester. All students in the program are invited to join SPSA.</p>
                 <p>View the <a href="{{ config.base_url }}/programs/schoolpsych/diversity/">University of Minnesota's School Psychology Diversity Statement</a>.</p>
             </div>
+          </section>
+        </div>
+            <section>
+                  <div class="row emphasis cool margin-top-2">
+                      <div class="container">
+                          <div class="feature">
+                                <h3 class="text-center">Like us on Facebook</h3>
+                              <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking( "send", "event", "Facebook", "click", "spedphdmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+                              <div class="row twothird feature text-center margin-top-1">
+                                  <div class="text-center">
+                                      <div class="svg-social-media-icon size-40">
+                                          <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: Connect with students, faculty, staff, and alumni." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </section>
     </div>
 </div>
 {% endblock %}

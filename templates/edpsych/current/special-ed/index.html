@@ -6,7 +6,7 @@
     <div class="container">
         <h2 class="h1 text-center">{{ page_title }}</h2>
         <section>
-        <div class="twothird feature">
+        <div class="half">
           <h3>For Ph.D. and M.A. students</h3>
           <ul>
             <li><a href="{{ config.base_url }}/current/handbook/">Department of Educational Psychology Graduate Student Handbook</a></li>
@@ -24,6 +24,8 @@
             <li><a href="{{ config.base_url }}/current/special-ed/student-teaching-practicum/">Student teaching information</a></li>
             <li><a href="{{ config.asset_base }}/dist/documents/current/specialed/petition_sub_course.pdf">Petition for course substitution of licensure requirements</a></li>
           </ul>
+        </div>
+        <div class="half">
           <h3>Resources available through the Graduate School</h3>
           <h4>For Ph.D. and M.A. students</h4>
           <ul>
@@ -43,8 +45,11 @@
           <ul>
             <li><a href="http://www.grad.umn.edu/current-students-graduate-student-services-progress">Information for Certificate Students</a></li>
           </ul>
-
+</div>
+</section>
+<section>
         <h2 class="text-center">Financial support</h2>
+        <div class="twothirds feature">
         <h4>General</h4>
           <p><a href="http://www.cehd.umn.edu/undergraduate/tuition.html">Available scholarships</a></p>
         <h4>For students of culturally diverse backgrounds</h4>
@@ -54,6 +59,24 @@
         </ul>
       </div>
     </section>
+  </div>
+    <section>
+          <div class="row emphasis cool margin-top-2">
+              <div class="container">
+                  <div class="feature">
+                        <h3 class="text-center">Like us on Facebook</h3>
+                      <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking( "send", "event", "Facebook", "click", "spedphdmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+                      <div class="row twothird feature text-center margin-top-1">
+                          <div class="text-center">
+                              <div class="svg-social-media-icon size-40">
+                                  <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: Connect with students, faculty, staff, and alumni." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
   </div>
 </div>
 {% endblock %}

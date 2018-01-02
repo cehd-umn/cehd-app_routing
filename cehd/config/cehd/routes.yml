@@ -981,7 +981,7 @@
   template_data:
     - section: career
 /career/teacher/career-fair/:
-  publish: false
+  publish: true
   template: cehd/career/teacher/career-fair.html
   template_data:
     - section: career

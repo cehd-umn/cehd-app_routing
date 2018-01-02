@@ -4,10 +4,9 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="h1 text-center">Counseling &amp; student personnel psychology:<br />student resources</h2>
+        <h2 class="h1 text-center">Counseling and student personnel psychology: student resources</h2>
         <section class="twothirds feature">
-          <h3 class="text-center">Like us on Facebook</h3>
-          <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+
         <h3>Handbooks</h3>
         <ul>
           <li><a href="{{ config.base_url }}/current/cspp/handbooks/">CSPP Handbook</a></li>
@@ -22,7 +21,7 @@
         </ul>
         <h4>Scholarship applications</h4>
         <ul>
-          <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship/Practicum with Children &amp; Families</a></li>
+          <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship/Practicum with Children and Families</a></li>
           <li><a href="{{ config.base_url }}/programs/cspp/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
         </ul>
         <h4>Department of Educational Psychology</h4>
@@ -37,6 +36,24 @@
           <li><a href="http://www.grad.umn.edu/admissions/readmission">Readmission form</a></li>
         </ul>
     </section>
-    </div>
+  </div>
+<section>
+      <div class="row emphasis cool margin-top-2">
+          <div class="container">
+              <div class="feature">
+                    <h3 class="text-center">Like us on Facebook</h3>
+                  <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking( "send", "event", "Facebook", "click", "spedphdmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+                  <div class="row twothird feature text-center margin-top-1">
+                      <div class="text-center">
+                          <div class="svg-social-media-icon size-40">
+                              <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: Connect with students, faculty, staff, and alumni." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}

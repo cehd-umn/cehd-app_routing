@@ -1,0 +1,59 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Graduate Student Travel Grant" %}
+{% block title %}
+ Graduate Student Travel Grant
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+
+    <div class="container">
+        <h1>Graduate student travel grant</h1>
+
+    <div class="twothird feature">
+        <p>The Department of Organizational Leadership, Policy, and Development makes funds available to assist OLPD graduate students currently enrolled in an M.Ed., M.A., Ed.D., or Ph.D. program to present a refereed paper at an academic conference or professional meeting. Undergraduate students will be considered on an individual basis. The paper can be sole or joint authored, but must be accepted for presentation.</p>
+    </div>
+    </div>
+
+<div class="container">
+    <div class="half">
+        <h2>Policy</h2>
+            <p>Applicants must be OLPD currently enrolled full-time students and in good standing. Students enrolled in GRAD 999 are not eligible. Grants will be awarded for qualifying professional travel as long as the allocated funds are available. The funding limit is $500 per student each fiscal year (July 1-June 30) to be apportioned among one or more trips. If co-authors are presenting, the maximum travel award will be divided among them. In no case will a travel award exceed $500 for a single presentation. Priority will be given to research papers and to presentations delivered at national or international conferences.</p>
+
+            <p>For students nominated by the Department and selected to participate in a graduate student seminar associated with an organization, the Department will pay the program/seminar fee and $500 toward travel without requiring that they present. Students may not apply for funding for attending a seminar as well as funding for a presentation in the same year.</p>
+
+            <p>Recipients are expected to share the knowledge and experience from their participation in conferences or professional meetings. We hope that through the granting of these awards an increasing number of graduate students will take advantage of opportunities to engage in research and scholarship activities.</p>
+
+    </div>
+
+    <div class="half">
+        <h2>Application procedure and review</h2>
+            <p>A completed application must be submitted at least 45 days in advance of planned travel. Students are encouraged to contact their advisers for assistance in the application process.</p>
+                <h3>Application form</h3>
+                    <p>A completed application consists of the following:</p>
+                <ul class="bullet">
+                    <li><a href="{{ config.asset_base }}/documents/Forms/TravelGrant.pdf">Application Form [PDF]</a></li>
+                    <li>Written confirmation of the acceptance of your referred paper (email, letter, etc.)</li>
+                    <li>Attach a copy of the paper proposal submitted to the professional association.</li>
+                </ul>
+
+                <h2>Reimbursement</h2>
+                    <p>Upon completion of travel, grantees must submit an <a href="https://policy.umn.edu/sites/policy.umn.edu/files/forms/um1612.xlsx">Employee Expense Worksheet [XLS]</a> to the Administrative Associate. Conference registration or travel expenses will be reimbursed upon return and after receipt of reports.</p>
+
+        </div>
+</div>
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/gwf">Linda Elrich</a>, Administrative Associate<br>
+            Student Travel Grant<br>
+            612-624-3472 | <a href="mailto:elric001@umn.edu">elric001@umn.edu</a></p>
+    </div>
+        </div>
+
+
+    </div>
+</div><!-- close row -->
+{% endblock %}
