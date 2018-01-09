@@ -39,7 +39,7 @@
                 </p>
                 {% endif %}
                 {% if data.person.officeHours|is_string %}
-                    <h3 class="h5 no-margin-bottom">Office hours</h3>
+                    <h5 class="no-margin-bottom">Office hours</h5>
                     <p class="no-margin-top">{{ data.person.officeHours|safe }}</p>
                 {% endif %}
                 {% if data.person.curriculumVitaeAddr|is_string %}
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="feature twothird">
             {% if data.person.degrees %}
-                <h3 class="h5">Degrees</h3>
+                <h3>Degrees</h3>
                 <p>{{ data.person.degrees|safe }}</p>
             {% endif %}
             {% if data.person.briefBio|is_string %}
