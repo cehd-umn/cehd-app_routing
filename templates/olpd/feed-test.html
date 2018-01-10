@@ -1,0 +1,160 @@
+{% extends "olpd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "Department of Organizational Leadership, Policy, and Development" %}
+{% block title %}
+     Department of Organizational Leadership, Policy, and Development (OLPD)
+{% endblock %}
+{% block extra_css %}
+<style>
+    @media (min-width: 769px) {
+        nav {
+            margin: 0 auto;
+        }
+        .nav-container {
+            background: #fff;
+            padding: 36px 0 0;
+        }
+    }
+
+    @media (min-width: 960px) {
+        .hero-image-container {
+            min-height: 525px;
+        }
+        .hero-overlay {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+            height: 80px;
+            text-shadow: none;
+        }
+        .hero-overlay p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            margin: .8em 0;
+        }
+        .hero-image {
+            top: 100px;
+        }
+        .circular-stat {
+            position:relative;
+            width: 100%;
+            z-index: 1;
+       }
+        .stat-percent {
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 72px;
+            margin: -175px 0 0 150px;
+            position: absolute;
+            z-index: 99;
+        }
+        .stat-text p {
+            font-family: 'Lato-light', sans-serif;
+            font-size: 30px;
+            margin: -175px 0 0 360px;
+            position: absolute;
+            width: 60%;
+            z-index: 99;
+        }
+        .stat-caption {
+            font-family: 'Lato', sans-serif;
+            font-size: 10px;
+            margin: -50px 0 0 360px;
+            position: absolute;
+        }
+
+
+    }
+    .element {
+        margin-bottom: 100px;
+
+    }
+    .element-1 {
+        color:#ffcc33;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 275px;
+        position:relative;
+    }
+    .element-2 {
+        color:#666;
+        font-family: 'Lato', sans-serif;
+        font-size: 35px;
+        margin-top:-150px;
+        z-index:2;
+    }
+</style>
+{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/olpd/images/hp-hero.jpg" alt="OLPD students">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="text-center">
+                <p>World-wide influence. Collaborative impact.</p>
+            </div>
+            <div class="third">
+                <!-- <p><a href="" class="to-upper button clear">Read more</a></p> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block main_content %}
+<div class="row has-hero-image">
+    <div class="container">
+        <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
+    </div>
+</div>
+
+<div class="container margin-top-4">
+    <div class="row">
+
+
+        <h2>News and announcements</h2>
+        <div class="third">
+            {{ loader.loader("OLPD news", "h3", "news-container") }}
+        </div>
+        <div class="third">
+            {{ loader.loader("Improving Lives blog", "h3", "visionblog-container") }}
+        </div>
+        <div class="third">
+            {{ loader.loader("Events", "h3", "events-container") }}
+            <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
+        </div>
+    </div>
+</div>
+    <div class="row emphasis cool margin-top-2">
+        <div class="container">
+            <div class="twothird feature">
+                <h2 class="text-center">Discover OLPD on social media</h2>
+                <p>See breaking news and information, get involved in activities and events, and learn about research, programs, and community engagement.</p>
+                <div class="span-8 feature">
+                <div class="half">
+                        <div class="svg-social-media-icon size-40">
+                            {% include "cehd/includes/svg/social-media/facebook.html" %}
+                        </div>
+                            <p>Like us on Facebook<br /> <a href="https://www.facebook.com/ugolpd">Undergraduate Programs</a> <br /> <a href="https://www.facebook.com/olpdgrad">Graduate Programs</a></p>
+
+                </div>
+                <div class="half">
+                    <div class="svg-social-media-icon size-40">
+                        {% include "cehd/includes/svg/social-media/twitter.html" %}
+                    </div>
+                        <p>Follow us on <a href="https://twitter.com/UMN_olpd">Twitter</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div><!-- close hero-image-container -->
+
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/svg_stats.min.js"></script>
+<script src="/assets/dist/js/news.min.js"></script>
+{# The call to parent() above is *very* important #}
+{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "index.html",  5) }}
+{{newsfeed.news_feed_js("feed/?call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post", "#visionblog-container", "index.html", 5, "https://cehdvision2020.umn.edu/", "More stories") }}
+{{ eventsfeed.events_feed_js(132) }}
+{% endblock %}

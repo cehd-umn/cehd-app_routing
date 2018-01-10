@@ -3,6 +3,8 @@
   href: "/undergraduate-programs/"
   section: undergraduate programs
   subsections:
+    - name: All Undergraduate Programs
+      href: "/undergraduate-programs/"
     - name: Business and Marketing Education
       href: "/undergraduate-programs/business-marketing-education/"
     - name: Human Resource Development
@@ -15,6 +17,8 @@
   href: "/graduate-programs/"
   section: graduate programs
   subsections:
+    - name: All Graduate Programs
+      href: "/graduate-programs/"
     - name: Comparative International Development Education
       href: "/graduate-programs/comparative-international-development-education/"
     - name: Education Policy and Leadership
@@ -33,6 +37,8 @@
   href: "/courses/"
   section: courses
   subsections:
+    - name: Information
+      href: "/courses/"
     - name: Undergraduate
       href: "/courses/undergraduate/"
     - name: Comparative International Development Education
