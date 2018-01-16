@@ -1025,6 +1025,11 @@
   template: cehd/commencement/index.html
   template_data:
     - section: commencement
+/commencement/guests/:
+  publish: true
+  template: cehd/commencement/guests.html
+  template_data:
+    - section: commencement
 /commencement/index-for-jan-2018/:
   publish: false
   template: cehd/commencement/index-for-jan-2018.html
