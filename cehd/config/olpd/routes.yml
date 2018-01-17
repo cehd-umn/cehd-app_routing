@@ -550,13 +550,23 @@
   publish: true
   template_data:
     - section: undergraduate-programs
-/undergraduate-programs/internship-applied-experience/:
-  template: olpd/undergraduate-programs/internship-applied-experience/index.html
+/undergraduate-programs/internship/:
+  template: olpd/undergraduate-programs/internship/index.html
   publish: true
   template_data:
     - section: undergraduate-programs
-/undergraduate-programs/internship-applied-experience/site-supervisors/:
-  template: olpd/undergraduate-programs/internship-applied-experience/site-supervisors.html
+/undergraduate-programs/internship/site-supervisors/:
+  template: olpd/undergraduate-programs/internship/site-supervisors.html
+  publish: true
+  template_data:
+    - section: undergraduate-programs
+/undergraduate-programs/applied-experience/:
+  template: olpd/undergraduate-programs/applied-experience/index.html
+  publish: true
+  template_data:
+    - section: undergraduate-programs
+/undergraduate-programs/applied-experience/site-supervisors/:
+  template: olpd/undergraduate-programs/applied-experience/site-supervisors.html
   publish: true
   template_data:
     - section: undergraduate-programs

@@ -1,0 +1,115 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Undergraduate Applied Experience" %}
+{% block title %}
+Undergraduate Applied Experience
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Guidelines<br>
+            <small>Undergraduate applied experience</small></h1>
+        <div class="twothird feature">
+            <p>The undergraduate applied experience courses are designed as a culminating learning experience for students nearing graduation. It affords students an opportunity to seek out practical work experience related to their chosen major of business and marketing education. An essential part is the opportunity to use knowledge acquired in the classroom in practical applications in the workplace. Problem solving and creative thinking in the workplace improves the retention of information gained in the classroom. Students can carry out this work in industry, for-profit or non-profit organizations, or government.</p>
+
+            <p>The applied experience is not "credit for work." Students must be engaged in specific assignments related to the discipline of business and marketing education. The student and the supervisor will be asked to sign a contract stipulating to that assignment which must be approved by the course instructor.</p>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>OLPD 4496: Applied experience</h2>
+
+    <div class="half">
+
+        <h3>Instructor</h3>
+            <p>Sarah Morris | <a href="mailto:morri547@umn.edu">morri547@umn.edu</a></p>
+
+        <h3>Prerequisites</h3>
+            <p>Prerequisites needed to be eligible to register for this course:</p>
+                <ul class="bullet">
+                    <li>Be accepted to the <a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/">B.S. in business and marketing education program</a> at the University of Minnesota.</li>
+                    <li>Completed 90 credits (not counting "in progress" credits) including at least three of the following: OLPD 3401, OLPD 3424, OLPD 3318, and OLPD 4426.</li>
+                </ul>
+        </div>
+
+        <div class="half">
+            <h3>Contract</h3>
+                <p><a href="{{ config.asset_base }}/documents/forms/OLPD4496Contract.docx">OLPD 4496 contract form [doc]</a></p>
+
+            <h3>Portfolio deadline</h3>
+                <p>Submit portfolios to the course Moodle site by May 4, 2018 for Spring term.</a>
+        </div>
+    </div>
+    <div class="half feature">
+        <h2 class="text-center">Learning objectives</h2>
+            <p>By the end of these courses, it is expected that students will be able to:</p>
+                <ul class="bullet">
+                    <li>Apply for and obtain an undergraduate applied experience related to their field.</li>
+                    <li>Document their work hours and products.</li>
+                    <li>Obtain a written evaluation of their work, as assessed by their supervisor.</li>
+                    <li>Critically reflect on and write about theory-practice linkages in their field.</li>
+                    <li>Create a visually attractive, well-organized portfolio of their work.</li>
+                </ul>
+    </div>
+
+    <div class="container">
+        <div class="half">
+            <h2>Class structure</h2>
+                <p>We do not meet together in a traditional classroom, with a group of students and an instructor. Instead, the work for this course is conducted individually and through consultation with your course instructor.</p>
+        </div>
+        <div class="half">
+            <h2>Hours and tasks</h2>
+                <p>To be successful, the applied experience should focus on a specific project or task that lends itself to analysis and resolution over a short period. A semester credit hour is earned by completing 45 hours on the job. Experience shows that 4 semester credits, amounting to 180 hours of work, is a manageable semester load. Students can take anywhere from 1 to 4 credits total.</p>
+        </div>
+    </div>
+
+    <div class="half feature">
+        <h2 class="text-center">Student tasks</h2>
+                <ol>
+                    <li>Read and study the content of these guidelines. Students are responsible for all details including deadlines.</li>
+                    <li>Register for the course (OLPD 4496) for the semester during which they will be carrying out the hours.</li>
+                    <li>Obtain a position.</li>
+                    <li>Complete and submit a draft contract (in MS Word format) to the course instructor via email. All contracts must be received and approved within the first 2 weeks of employment. Failure to meet this requirement will results in lost work hours that cannot be counted towards the total required hours.</li>
+                    <li>Once the contract has been approved by the course instructor, obtain all necessary signatures and submit a final hard copy.</li>
+                    <li>Begin working at the position.</li>
+                    <li>Submit an portfolio to the course Moodle site with all required items. It is recommended that you keep a separate copy of the portfolio for your own purposes.</li>
+                </ul>
+
+        <h2 class="text-center">Portfolio requirements</h2>
+            <p>OLPD 4496 is an S/N course. To earn a satisfactory (S) grade, students must successfully complete the following items and submit a portfolio via Moodle by the assigned due date.
+                <ol>
+                    <li><strong>Cover page:</strong> Include your full name, the current date, the semester registered, and number of credits.</li>
+                    <li><strong>Contract:</strong> A copy of the signed contract should be placed among the first few pages of the portfolio.</li>
+                    <li><strong>Supervisor's letter of evaluation:</strong> A one-page letter written by the supervisor, printed on company letterhead, with the supervisor's signature at the bottom. In 2 or 3 paragraphs, the supervisor should comment on the tasks that you carried out and his/her overall performance. <a href="{{ config.asset_base }}/undergraduate-programs/applied-experience/site-supervisors/">See Fact Sheet for Site Supervisors for more information.</a></li>
+                    <li><strong>Daily log:</strong>Maintain a daily log of activities. Include the date, a brief phrase describing the activities accomplished that day, and a running total of all hours worked for the position.</li>
+                    <li><strong>Formal evidence of hours worked:</strong> Submit formal evidence of hours worked. Copies of pay stubs or time sheets are acceptable.</li>
+                    <li><strong>Written analysis:</strong> Write and submit a paper analyzing the internship or applied experience. This report should be 5 pages, Times New Roman, 12 pt. font, 1-inch margins, double-spaced. References should be cited in APA format. The paper must address the following:</li>
+                        <ul class="bullet">
+                            <li><strong>Project:</strong> General background information including the name of organization, a brief description of the industry, the organization's products or services, and how the organization fits within the industry.</li>
+                            <li><strong>Process:</strong> A brief description of your experience in the position. How was it obtained? What was the position within the organizational structure, i.e. what department, division or program did you serve? What duties were carried out? Did original duties change, and if so, in what manner?</li>
+                            <li><strong>Theory/practice linkage:</strong> Choose at least three theories or models from coursework. Analyze the hands-on, real-work against these models and present conclusions. Please note that descriptions of the actual theories should be limited to a few phrases or sentences at most. The analysis of the theory in a real life setting is the real heart of this report. This section should include the results of your work and the extent to which objectives were achieved.</li>
+                            <li><strong>Outcome:</strong>Results of your work and the extent to which objectives were achieved.</li>
+                            <li><strong>Conclusions:</strong> Share some of your personal learning, either about individual growth, work style or habits, or about the industry and future career aspirations.</li>
+                        </ul>
+                    <li><strong>Developed materials:</strong> Copies of relevant materials developed as part of the duties should be included in the portfolio. Examples include any documents that were created, including memos, reports, lesson plans, training materials, Power Point presentations, surveys, and any other work "product" that the student authored.</li>
+                </ol>
+    </div>
+    <div class="container">
+        <div class="half">
+            <h2>Communication</h2>
+                <p>Please note that the course instructor is available to both the student and the work supervisor for consultation and problem-solving during the applied experience. If a student runs into any challenges, it is best to contact the course instructor as soon as possible.</p>
+        </div>
+        <div class="half">
+            <h2>Incompletes</h2>
+                <p>Students are generally expected to complete an applied experience during a single semester. Incompletes will only be granted in extremely rare circumstances. The student must contact the course instructor as soon as possible, and will need to provide documentation of the emergency situation. If the student fails to contact the course instructor by the last day of instruction, that student will receive an "N"; or "not satisfactory" grade for the course.</p>
+        </div>
+    </div>
+
+
+</div><!-- close row -->
+{% endblock %}
