@@ -1,0 +1,8 @@
+@media all and (min-width: 768px) {
+
+.dept-footer-section.first {
+  border-right: 18px solid #fff;
+  padding-left: 9% !important;
+}
+
+}
