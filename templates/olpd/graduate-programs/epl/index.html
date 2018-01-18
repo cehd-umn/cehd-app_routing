@@ -17,7 +17,7 @@
                 quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
         </div>
     </div>
-
+</div><!-- close row -->
         <div class="row emphasis">
         <div class="container">
             <div class="twothird feature">
@@ -45,38 +45,60 @@
             </div>
             </div>
         </div>
-            <div class="container">
-                <div class="span-12 feature margin-top-2">
-                    <h2 class="text-center">Coordinator</h2>
-                    <div id="coordinator-container" class="loader-container" aria-live="polite"
+
+<div class="row">
+    <div class="container">
+        <h2 class="text-center">Coordinator</h2>
+        <div class="span-12 feature margin-top-2">
+            <div id="coordinator-container"
+            class="loader-container"
+            aria-live="polite"
+            data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+            data-internet-id="kpekel" {# This is the id of the tag from the People tool #}
+            data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+            data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+            data-base-path="{{ config.base_url }}" data-template-name="person.html">
+            {# The name of the Nunjucks template #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+        <!-- <div id="coordinator-container" class="loader-container" aria-live="polite"
                         data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-                        data-internet-id="kpekel" {# This is the id of the tag from the People tool #}
+                        data-internet-id="pres0004" {# This is the id of the tag from the People tool #}
                         data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
                         data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
                         data-base-path="{{ config.base_url }}"
-                        data-template-name="person.html"> {# The name of the Nunjucks template #}
+                        data-template-name="2person.html"> {# The name of the Nunjucks template #}
                         <div class="loader">
                             <div class="loader-figure "></div>
                             <p class="loader-label">Loading...</p>
                         </div>
-                    </div>
-                    <h2 class="text-center">Faculty</h2>
-                    <div id="people-container" class="loader-container"
-                        data-people-app
-                        data-tag="463"
-                        data-target-element-selector="#people-container"
-                        data-template-path="/assets/dist/views/olpd/people/"
-                        data-template-name="list.html"
-                        data-base-path="{{ config.base_url }}"
-                        data-people-per-group="2">
-                        <div class="loader">
-                            <div class="loader-figure "></div>
-                            <p class="loader-label">Loading...</p>
-                        </div>
-                    </div>
+                    </div> -->
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="container">
+        <div class="span-12 feature margin-top-2">
+            <h2 class="text-center">Faculty</h2>
+            <div id="people-container" class="loader-container"
+            data-people-app data-tag="463"
+            data-target-element-selector="#people-container"
+            data-template-path="/assets/dist/views/olpd/people/"
+            data-template-name="list.html"
+            data-base-path="{{ config.base_url }}"
+            data-people-per-group="2">
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
                 </div>
+            </div>
         </div>
-        <!-- close row -->
+    </div>
+</div><!-- close row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/people.min.js"></script>
