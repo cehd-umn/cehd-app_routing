@@ -45,6 +45,8 @@
             </div>
             </div>
         </div>
+
+
             <div class="container">
                 <div class="span-12 feature margin-top-2">
                     <h2 class="text-center">Coordinator</h2>
@@ -60,6 +62,7 @@
                             <p class="loader-label">Loading...</p>
                         </div>
                     </div>
+
                     <h2 class="text-center">Faculty</h2>
                     <div id="people-container" class="loader-container"
                         data-people-app
@@ -75,6 +78,30 @@
                         </div>
                     </div>
                 </div>
+                <h2 class="text-center">Faculty</h2>
+
+                <div class="container">
+                    <div class="span-12 feature margin-top-2">
+
+                      <hr>
+                      <div class="twothird feature">
+        <h2>Pulling in a single person</h2>
+            <div id="person-container" class="loader-container" aria-live="polite"
+                data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                data-internet-id="jeff" {# This is the internet id of the person in the People tool #}
+                data-target-element-selector="#person-container" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/people/" {# The path the the Nunjucks template #}
+                data-template-name="person.html"> {# The name of the Nunjucks template #}
+            <div class="loader">
+                <div class="loader-figure "></div>
+                <p class="loader-label">Loading&hellip;</p>
+            </div>
+        </div>
+        </div>
+        <hr>
+
+        </div>
+
         </div>
         <!-- close row -->
 {% endblock %}

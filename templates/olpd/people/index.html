@@ -51,6 +51,23 @@
                 <p class="loader-label">Loading&hellip;</p>
             </div>
         </div>
+<hr>
+<h1>  TESTING</h1>
+        <div class="twothird feature">
+    <h2>People tag ID 466</h2>
+    <div id="coordinator-container" class="loader-container" aria-live="polite"
+        data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+        data-tag="466" {# This is the id of the tag from the People tool #}
+        data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+        data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+        data-template-name="list.html" {# The name of the Nunjucks template #}
+        data-people-per-group="2"> {# How many people to put in each group #}
+        <div class="loader">
+            <div class="loader-figure "></div>
+            <p class="loader-label">Loading&hellip;</p>
+        </div>
+    </div>
+</div>
     </div>
 </div>
 {% endblock %}
