@@ -1298,6 +1298,11 @@
   template: cehd/global/intl-partnerships.html
   template_data:
     - section: global
+/global/maryt-fellowship/:
+  publish: false
+  template: cehd/global/maryt-fellowship.html
+  template_data:
+    - section: global
 /global/scholars/:
   publish: true
   template: cehd/global/scholars.html
