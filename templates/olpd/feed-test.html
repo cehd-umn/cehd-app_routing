@@ -155,6 +155,6 @@
 <script src="/assets/dist/js/news.min.js"></script>
 {# The call to parent() above is *very* important #}
 {{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "index.html",  5) }}
-{{newsfeed.news_feed_js("feed/?call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post", "#visionblog-container", "index.html", 5, "https://cehdvision2020.umn.edu/", "More stories") }}
+{{newsfeed.news_feed_js("/feed/?call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post", "#visionblog-container", "index.html", 15, "https://cehdvision2020.umn.edu/", "More stories") }}
 {{ eventsfeed.events_feed_js(132) }}
 {% endblock %}
