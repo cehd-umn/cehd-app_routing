@@ -1,0 +1,36 @@
+<rss version="2.0">
+<channel>
+<title>CEHD Information Sessions</title>
+<link>http://apps.cehd.umn.edu/students/InfoSession</link>
+<description>College of Education and Human Development</description>
+<ttl>60</ttl>
+<item>
+<sequenceByDate>1</sequenceByDate>
+<count>1</count>
+<eventId>41</eventId>
+<infosessionId>0</infosessionId>
+<date>1/1/1900</date>
+<dayOfWeek>Monday</dayOfWeek>
+<dateDay>1</dateDay>
+<dateMD>January</dateMD>
+<dateYear>1900</dateYear>
+<dateFull>Monday January 1 1900</dateFull>
+<dateISO>1/1/1900</dateISO>
+<endDateISO>1/1/1900</endDateISO>
+<degree>McNair Scholars</degree>
+<code>McNair</code>
+<title>Sign up for an information session</title>
+<contact>Anthony Albecker</contact>
+<phone>(612) 625-8303</phone>
+<email>albecker@umn.edu</email>
+<link/>
+<startDate>1/1/1900</startDate>
+<startTime>12:00 AM</startTime>
+<endDate>1/1/1900</endDate>
+<endTime>12:00 AM</endTime>
+<location/>
+<dateChange>False</dateChange>
+<openSeats>False</openSeats>
+</item>
+</channel>
+</rss>

@@ -38,4 +38,12 @@ class InfoSessionTest extends TestCase
         $this->assertEquals($expected_short_month, $this->infoSessionInstance->infoSessions[0]->shortMonth);
         $this->assertEquals($expected_timestamp, $this->infoSessionInstance->infoSessions[0]->timestamp);
     }
+
+    public function testInvalidDate()
+    {
+        $xmlStr = file_get_contents(__DIR__ . '/fixtures/xml/info_sessions_1900.xml');
+        $session = new \CEHD\XML\InfoSession\InfoSessions($xmlStr);
+        $expected_year = "1900";
+        $this->assertEquals($expected_year, $session->infoSessions[0]->year);
+    }
 }
