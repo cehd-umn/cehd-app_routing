@@ -250,37 +250,36 @@
 
     <div class="container margin-top-4">
         <div class="row">
-
-
         <h2>News and announcements</h2>
-        <div class="half">
-            {{ loader.loader("OLPD news", "h3", "news-container") }}
+        <div class="third">
+          {{ loader.loader("OLPD news", "h3", "news-container") }}
         </div>
-        <!-- <div class="third">
+        <div class="third">
             <h3>Improving Lives blog</h3>
     <div id="visionblog-container" class="loader-container" aria-live="polite"
         data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
-        data-base-url="https://cehdvision2020.umn.edu" {# The url of the website with an RSS feed #}
+        data-base-url="https://cehdvision2020.umn.edu/" {# The url of the website with an RSS feed #}
         data-feed-path="feed/?call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post" {# The path for the feed at the site above #}
         data-target-element-selector="#visionblog-container" {# The element selector for the feed html #}
-        data-template-path="/assets/dist/views/cehd/newsfeeds/" {# The path the the Nunjucks template #}
-        data-template-name="index.html" {# The name of the Nunjucks template #}
+        data-template-path="/assets/dist/views/olpd/newsfeeds/" {# The path the the Nunjucks template #}
+        data-template-name="improvinglives.html" {# The name of the Nunjucks template #}
         data-limit="5" {# How many stories to display #}
         >
         <div class="loader">
             <div class="loader-figure "></div>
             <p class="loader-label">Loading&hellip;</p>
         </div>
-    </div> -->
-<!-- {{ loader.loader("Improving Lives blog", "h3", "visionblog-container") }} -->
+    </div>
+  </div>
 
-        <div class="half">
+
+ <div class="third">
             {{ loader.loader("Events", "h3", "events-container") }}
             <p class="text-right"><a href="/events/" class="news-more-news"><small>More events</small></a></p>
         </div>
     </div>
         </div>
-</div>
+      </div>
 
     <div class="row emphasis cool margin-top-2">
         <div class="container">
@@ -305,14 +304,13 @@
             </div>
         </div>
     </div>
-</div><!-- close hero-image-container -->
+</div>
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/svg_stats.min.js"></script>
 <script src="/assets/dist/js/news.min.js"></script>
 {# The call to parent() above is *very* important #}
-{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "index.html",  5) }}
-{{newsfeed.news_feed_js("feed/?call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post", "#visionblog-container", "index.html", 5, "https://cehdvision2020.umn.edu/", "More stories") }}
+{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "olpdhome.html",  5) }}
 {{ eventsfeed.events_feed_js(132) }}
 {% endblock %}
