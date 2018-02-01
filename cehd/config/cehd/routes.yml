@@ -190,6 +190,11 @@
   template: cehd/alumni/distinguished/deans-2016.html
   template_data:
     - section: alumni
+/alumni/distinguished/deans-2017/:
+  publish: true
+  template: cehd/alumni/distinguished/deans-2017.html
+  template_data:
+    - section: alumni
 /alumni/rising/:
   publish: true
   template: cehd/alumni/rising/index.html
