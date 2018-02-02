@@ -164,6 +164,7 @@ class Event extends \CEHD\App\XML\XML
      *
      * @param obj $person - XML object representing a person
      */
+
     public function __construct($event)
     {
         $this->date = $this->getFromProperty($event->eventDate);

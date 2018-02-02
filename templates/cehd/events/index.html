@@ -87,5 +87,13 @@
 </div> <!-- ./row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {{ eventsfeed.events_feed_js(170, 1000, "#events-container", "/assets/dist/views/cehd/events", "events-page.html", 6, 12) }}
+    {{ eventsfeed.events_feed_js(170, 1000, "#events-container", "/assets/dist/views/cehd/events", "events-page2.html", 6, 12) }}
+<script>
+var filterizd = $('.filtr-container').filterizr({
+
+    });
+    $('.simplefilter li').click(function() {
+        $('.simplefilter li').removeClass('active');
+        $(this).addClass('active');
+    });</script>
 {% endblock %}

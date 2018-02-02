@@ -1,7 +1,43 @@
+<div class="contentWrapper">
+  <h5>Sort Through Events</h5>
+  <div class="span-12">
+<div class="span-6">
+  <label class="form-group has-float-label">
+    <select class="form-control custom-select filterWrapper simplefilter">
+      <option data-filter="all" selected>All Events</option>
+      <option data-filter="1">January</option>
+      <option data-filter="2">February</option>
+      <option data-filter="3">March</option>
+      <option data-filter="4">April</option>
+      <option data-filter="5">May</option>
+      <option data-filter="6">June</option>
+      <option data-filter="7">July</option>
+      <option data-filter="8">August</option>
+      <option data-filter="9">September</option>
+      <option data-filter="10">October</option>
+      <option data-filter="11">November</option>
+      <option data-filter="12">December</option>
+    </select>
+    <span>Month</span>
+  </label>
+</div>
+
+<div class="span-6">
+  <label class="form-group has-float-label">
+<input type="text" name="search" class="form-control custom-select" placeholder="Search..." data-search>
+  <span>Search</span>
+</label>
+</div>
+
+  </div>
+</div>
+
+<div class="filtr-container">
 {% if data.events|length > 0 %}
-    <dl class="events">
+    <!-- <dl class="events"> -->
     {% for event in data.events %}
         {% if loop.index0 < data.limit %}
+        <div class="eventbox filtr-item" data-category="{{ event.month }}" data-sort="{{ event.id }}">
             <dt class="date">
                 {{ event.dayOfWeek }},
                 {{ event.fullMonth }}
@@ -20,9 +56,14 @@
                     </div>
                 {% endif %}
             </dd>
-        {% endif %}
+          </div>
+{% endif %}
     {% endfor %}
     </dl>
+
+  </div>
+
+
 {% else %}
     <p>There are no upcoming events.</p>
 {% endif %}
@@ -61,4 +102,6 @@
         </dl>
     </div>
 {% endfor %}
+</div>
+
 #}
