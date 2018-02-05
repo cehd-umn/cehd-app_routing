@@ -1065,6 +1065,11 @@
   template: cehd/events/block-party.html
   template_data:
     - section: events
+/events/faculty-students-social/:
+  publish: true
+  template: cehd/events/faculty-students-social.html
+  template_data:
+    - section: events
 /events/fall-assembly/:
   publish: true
   template: cehd/events/fall-assembly.html
