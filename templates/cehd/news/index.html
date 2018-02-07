@@ -1,7 +1,7 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {%- import "macros/loader.html" as loader -%}
-{% import "macros/news-feed.html" as newsfeed %}
+{% import "macros/cehd-news-feed.html" as newsfeed %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "News" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -110,10 +110,10 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/feature-stories/feed/", "#news-container", "index.html", 3) }}
+    {{ newsfeed.news_feed_js("category/feature-stories/feed/", "#news-container", "cehdnews.html", 3) }}
 
     {{ eventsfeed.events_feed_js(172, 3) }}
 
-    {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "index.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
+    {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "cehd-improvinglives.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
 
 {% endblock %}
