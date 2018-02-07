@@ -1090,6 +1090,11 @@
   template: cehd/events/thanksgiving.html
   template_data:
     - section: events
+/events/research-day/:
+  publish: true
+  template: cehd/events/research-day.html
+  template_data:
+    - section: events
 /events/saturday-scholars/:
   publish: true
   template: cehd/events/saturday-scholars.html
