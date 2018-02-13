@@ -570,3 +570,8 @@
   publish: true
   template_data:
     - section: undergraduate-programs
+/chautauqua/:
+  template: olpd/chautauqua/index.html
+  publish: true
+  template_data:
+    - section: chautauqua

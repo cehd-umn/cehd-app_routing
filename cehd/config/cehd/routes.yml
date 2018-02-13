@@ -1067,7 +1067,7 @@
     - section: events
 /events/faculty-students-social/:
   publish: true
-  template: cehd/events/faculty-students-social.html
+  template: cehd/events/faculty-student-social.html
   template_data:
     - section: events
 /events/fall-assembly/:
@@ -1581,6 +1581,21 @@
 /teaching/directrack/:
   publish: true
   template: cehd/teaching/directrack.html
+  template_data:
+    - section: teaching
+/teaching/grow/:
+  publish: true
+  template: cehd/teaching/grow/index.html
+  template_data:
+    - section: teaching
+/teaching/grow/district/:
+  publish: true
+  template: cehd/teaching/grow/district.html
+  template_data:
+    - section: teaching
+/teaching/grow/teacher/:
+  publish: true
+  template: cehd/teaching/grow/teacher.html
   template_data:
     - section: teaching
 /teaching/license/:
