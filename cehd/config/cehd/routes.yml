@@ -1260,7 +1260,7 @@
     - section: giving
 /improving-lives/contact/:
   publish: true
-  template: cehd/giving/contact.html
+  template: cehd/giving/contact2.html
   template_data:
     - section: giving
 /giving/critical-draft/:
