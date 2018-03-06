@@ -1253,6 +1253,11 @@
   template: cehd/giving/contact.html
   template_data:
     - section: giving
+/improving-lives/contact/:
+  publish: true
+  template: cehd/giving/contact.html
+  template_data:
+    - section: giving
 /giving/recognition/:
   publish: true
   template: cehd/giving/recognition.html
