@@ -5,10 +5,10 @@
 {% block main_content %}
 <div class="row">
 <div class="container">
-        <h2 class="text-center">{{ page_title }}</h2>
+        <h2 class="h1 text-center">{{ page_title }}</h2>
 <section>
         <div class="half">
-        <h3>Admissions requirements</h3>
+        <h2>Admissions requirements</h2>
         <ul>
         <li><a href="#gradapp">Graduate school application</a></li>
         <li><a href="#appfee">Application fee</a></li>
@@ -20,20 +20,20 @@
         <li><a href="#persstmt">Strong personal statement</a></li>
         <li><a href="#resumecv">Resume/curriculum vitae (CV)</a></li>
         </ul>
-        <h4>Undergraduate GPA</h4>
+        <h3>Undergraduate GPA</h3>
         <p>Average undergraduate G.P.A.: High: 4.0; Medium: 3.7; Low: 3.0</p>
-        <h4>Number of students accepted</h4>
+        <h3>Number of students accepted</h3>
         <p>Generally, CSPP receives about 100 applications per year. Of those, roughly 35-37 will be accepted.</p>
-        <h4>CSPP Admissions Guide</h4>
+        <h3>CSPP Admissions Guide</h3>
             <p>Use this printable CSPP admissions guide as a checklist to help you complete your application.</p>
             <p><a href="{{ config.asset_base }}/dist/documents/future/cspp-application-guide-121417.pdf">CSPP admissions guide [PDF]</a></p>
 </div>
 <div class="half">
-    <h3>Timeline</h3>
-    <h4>January 8: Application deadline</h4>
-    <h4>January-February: Review process</h4>
+    <h2>Timeline</h2>
+    <h3>January 8: Application deadline</h3>
+    <h3>January-February: Review process</h3>
     <p>The admissions committee considers a variety of factors including your prior academic achievement, GRE scores, relevant employment and life experiences, personal statement, letters of recommendation, and compatibility of your clinical and research interests with those of the program and faculty. Candidate interviews may be required.</p>
-    <h4>February-March: Admissions decisions</h4>
+    <h3>February-March: Admissions decisions</h3>
     <p>The date on which you will hear back from the program will vary based on the volume of applications received. Applicants to the M.A. program can typically expect to hear during February or March.</p>
     <p>Applicants who are recommended for admission by the program will receive a letter indicating this by March 1. The Graduate School then makes the official admissions determination and will inform you of their decision via the email address you provided on your <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD">ApplyYourself online application</a>.</p>
 </div>
@@ -49,7 +49,7 @@
                 <img src="{{ config.asset_base }}/dist/images/Programs/cspp/hannah_boldt-headshot.jpg" alt="Hannah Boldt headshot">
             </div>
             <div class="twothird">
-                <h4 class="no-margin-top">Hannah Boldt<small class="clear h6">M.A. student | <a href="mailto:bold0099@umn.edu">bold0099@umn.edu</a></small></h4>
+                <h3 class="no-margin-top">Hannah Boldt<small class="clear h4">M.A. student | <a href="mailto:bold0099@umn.edu">bold0099@umn.edu</a></small></h3>
                 <p><strong>Interests:</strong>  Mindfulness, meditation, self-care for counselors</p>
                 <p><strong>Practicum/internship:</strong> Student Counseling Services at University of Minnesota </p>
                 <p>Hannah will begin her practicum at Student Counseling Services during the 2017-2018 academic year where she will provide personal, academic, and career counseling to students at the University of Minnesota. She is especially interested in integrations of mindfulness and self-care in counseling for both clients and counselors and is pursuing a graduate minor in Integrative Therapies and Healing Practices through the Center for Spirituality and Healing. Hannah intends to seek professional licensure and hopes to work at one of the colleges or universities in the Twin Cities area after graduation.</p>
@@ -62,30 +62,30 @@
   <div class="container">
 <section>
   <div class="feature twothirds">
-<h3 class="text-center">How to apply</h3>
+<h2 class="text-center">How to apply</h2>
     <p class="text-center"><a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "CSPP Application Page") }} class="button center no-margin-top">Start your application</br> on ApplyYourself</a></p>
 <p><strong>Submit all application materials</strong>, including transcripts, directly to the <a href="https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=UMN-GRAD" {{ analytics.add_tracking("send", "event", "exiting site", "click", "CSPP Application Page") }} >ApplyYourself admissions system</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/applicationinstructions"> Graduate School website</a>.</p>
-<h4 id="gradapp">Graduate school application</h4>
+<h3 id="gradapp">Graduate school application</h3>
 <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Languages, Awards and Activities, Employment/Residence Information, Financial Support, Applicant Statement #1 (Personal Statement), Program Supplementary Information and Recommendations.</p>
 <p><strong>Optional fields&#58;  </strong>All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
-  <h4 id="appfee">Application fee</h4>
+  <h3 id="appfee">Application fee</h3>
     <p><a href= "https://www.grad.umn.edu/admissions-application-instructions/application-fee">Visit the Graduate School website for more information</a></p>
-  <h4 id="progapp">Program application</h4>
+  <h3 id="progapp">Program application</h3>
     <p>(Required only if you've previously taken a course for graduate credit. See form for details.)</p>
     <p>Complete the <a href="{{ config.asset_base }}/dist/documents/future/AdditionalApplication.doc">Graduate Program Additional Application</a>; upload it to ApplyYourself.</p>
-  <h4 id="transcripts">Transcripts</h4>
+  <h3 id="transcripts">Transcripts</h3>
     <p><a href="http://www.grad.umn.edu/admissions/transcript-uploads">Upload your unofficial transcript</a> to ApplyYourself. If you are recommended for admission, you will need to <a href="http://www.grad.umn.edu/admissions/ga-mailing-address">provide an official transcript</a> (sent to us by mail directly from the institution). An official, certified (signature and seal) English translation should be attached if the transcript is not in English.</p>
-  <h4 id="letters">Letters of recommendation</h4>
+  <h3 id="letters">Letters of recommendation</h3>
     <p>Three letters of recommendation are required. Recommendations should be from professors or others who are able to comment on your educational and professional goals and potential. References should also complete the Recommendation Form (with ratings information) in ApplyYourself</p>
     <p>You must input the names and contact information for each recommendation provider in ApplyYourself.</p>
-  <h4 id="GRE">Graduate Record Examination (GRE) scores</h4>
+  <h3 id="GRE">Graduate Record Examination (GRE) scores</h3>
     <p>CSPP applicants should take the GRE General Test. You <strong>do not</strong> need to take any subject tests.</p>
     <p>Average GRE (after 2011): Verbal: 155; Quantitative: 156; Written: 4</p>
     <ul>
       <li>Self report your GRE scores in ApplyYourself application</li>
       <li><a href="http://www.grad.umn.edu/admissions-application-instructions/gre">Send your official GRE score to the Graduate School</a>; use institution code 6874.</li>
     </ul>
-  <h4 id="nonnativeeng">English language test scores (TOEFL, IELTS, etc.)</h4>
+  <h3 id="nonnativeeng">English language test scores (TOEFL, IELTS, etc.)</h3>
     <p>Report your <a href="http://www.grad.umn.edu/admissions-application-instructions/toefl">TOEFL, IELTS, or MELAB scores</a> (non-native English speakers only)</p>
     <p>Minimum TOEFL (non-native English speakers only)</p>
     <ul>
@@ -96,7 +96,7 @@
       <li>IELTS: 6.5</li>
       <li>MELAB: 80</li>
     </ul>
-  <h4 id="persstmt">Applicant statement #1 - personal statement</h4>
+  <h3 id="persstmt">Applicant statement #1 - personal statement</h3>
     <p>This statement is the most essential part of your application. It should outline your interests and professional goals and answer all of the following questions (in a one-two page essay format):</p>
     <ul>
       <li>How did you become interested in this profession&#63;</li>
@@ -108,20 +108,20 @@
       <li>What specific factors have led you to apply to Minnesota for this specialization&#63;</li>
       <li>Discuss your expectations of this graduate program</li>
     </ul>
-  <h4 id="resumecv">Resume/curriculum vitae (CV)</h4>
+  <h3 id="resumecv">Resume/curriculum vitae (CV)</h3>
     <p>Include your past professional, academic, and volunteer experiences as they relate to your work in the fields of psychology, counseling, education, and research.</p>
 </div>
 </section>
 <section>
   <div class="feature twothirds">
-  <h3 class="text-center">Optional application materials</h3>
-    <h4>Articles, term papers, theses or reports of experimental investigations</h4>
+  <h2 class="text-center">Optional application materials</h2>
+    <h3>Articles, term papers, theses or reports of experimental investigations</h3>
       <p>Upload publications and articles in the Program Supplementary Information section of the ApplyYourself online application under &ldquo;Writing Samples.&rdquo;</p>
-    <h4>Applicant Statement &#35;2&ndash;Diversity Statement</h4>
+    <h3>Applicant Statement &#35;2&ndash;Diversity Statement</h3>
       <p>Submitting the diversity statement is optional, however, you are encouraged to submit a statement (per the instructions provided in ApplyYourself) if you feel that submitting such an essay will add important information to your application.</p>
-    <h4>Extenuating circumstances</h4>
+    <h3>Extenuating circumstances</h3>
       <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores.</p>
-    <h4>Program supplementary information&ndash;upload &#35;1</h4>
+    <h3>Program supplementary information&ndash;upload &#35;1</h3>
       <p>If you wish to be considered for a Common Ground Consortium fellowship for African&ndash;American students, please be sure to indicate this on your program application, and then upload a statement briefly addressing the following question&#58;  Given that the University of Minnesota is a public grant institution, it is imperative that CGC scholars can both benefits personally from their membership in the program as well as further the university’s founding mission to contribute to scholarship that benefits the local and greater communities.</p>
       <p>Please describe how your participation as a CGC scholar would do the following&#58; </p>
         <ul>
@@ -133,14 +133,14 @@
       </section>
       <section>
         <div class="feature twothirds">
-        <h3 class="text-center">Funding</h3>
-          <h4>Scholarships</h4>
+        <h2 class="text-center">Funding</h2>
+          <h3>Scholarships</h3>
             <ul>
               <li><a href="{{ config.base_url }}/programs/cspp/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
               <li><a href="{{ config.base_url }}/programs/cspp/sullivan/">The Melissa Sullivan Endowed Internship / Practicum with Children and Families</a></li>
               <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid and Scholarships</a></li>
             </ul>
-          <h4>Financial aid</h4>
+          <h3>Financial aid</h3>
             <p><a href="http://www.onestop.umn.edu/finances/financial_aid/index.html">Visit OneStop Student Services for more information on available financial aid.</a></p>
           </div>
           </section>

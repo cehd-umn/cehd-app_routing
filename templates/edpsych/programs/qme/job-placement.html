@@ -1,16 +1,20 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{% set page_title = "Job Placement: Recent Quantitative Methods in Education Graduates" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-      <h2 class="text-center">Job Placement: Recent Quantitative Methods in Education Graduates</h2>
+      <h2 class="h1 text-center">Job Placement: Recent Quantitative Methods in Education Graduates</h2>
       <div class="twothirds feature">
           <p>Our graduates find jobs in a number of industries, including: test publishing firms, teaching and research at colleges and universities, research and evaluation centers, public school systems, state departments of instruction, and private industry. Learn more about what our newest alumni are doing and where they have found jobs.</p>
-        <h3>Test publishing firms</h3>
+        <h2>Test publishing firms</h2>
           <ul>
             <li>Psychometrician, <a href="https://www.prometric.com/en-us/Pages/home.aspx">Prometric</a></li>
             <li>Psychometrician, <a href="https://www.renaissance.com/">Renaissance Learning, Inc.</a></li>
           </ul>
-        <h3>Universities</h3>
+        <h2>Universities</h2>
           <ul>
             <li>Lecturer, <a href="http://www.iastate.edu/">Iowa State University</a></li>
             <li>Assistant professor, <a href="http://www.ncu.edu.tw/en">National Central University Taiwan</a></li>
@@ -21,7 +25,7 @@
             <li>Graduate student working at the University, <a href="http://twin-cities.umn.edu/">University of Minnesota</a></li>
             <li>Assistant professor, <a href="http://www.unl.edu/">University of Nebraska-Lincoln</a></li>
           </ul>
-        <h3>Research and evaluation centers</h3>
+        <h2>Research and evaluation centers</h2>
           <ul>
             <li>Vice president, <a href="https://www.pdastats.com/">Professional Data Analysts, Inc.</a></li>
             <li>Experienced statistician consultant, <a href="http://www.mpls.k12.mn.us/">Minneapolis Public Schools</a></li>

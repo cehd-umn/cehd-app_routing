@@ -101,6 +101,12 @@
     template_data:
         meta_description: "Find the resources you need to ease your graduate studies."
         section: current
+/edpsych/current/asl/:
+    publish: true
+    template: edpsych/current/asl/index.html
+    template_data:
+        meta_description: "Get the resources and information you need as an ASL student and learn about opportunities available to you as your complete your ASL studies at the University of Minnesota."
+        section: current
 /edpsych/current/cspp/:
     publish: true
     template: edpsych/current/cspp/index.html
@@ -522,6 +528,12 @@
     template: edpsych/programs/specialed/phd.html
     template_data:
         meta_description: "As a Ph.D. student in the special education program, you'll receive the training to find solutions to problems that help individuals with disabilities learn and grow. The program’s rigorous coursework and faculty-guided experiences will prepare you for a leadership role in special education."
+        section: programs-degrees
+/edpsych/programs/specialed/project-pact/:
+    publish: true
+    template: edpsych/programs/specialed/project-pact.html
+    template_data:
+        meta_description: "Project PACT is a funding opportunity for students who aim to achieve a teaching license in Deaf/Hard of Hearing (DHH) or Academic and Behavioral Strategist (ABS), as well as a master’s degree. Students who are committed to working with students who are DHH and/or those with disabilities will be awarded funds to support their tuition throughout their graduate program."
         section: programs-degrees
 /edpsych/programs/specialed/sped-bs/:
     publish: true

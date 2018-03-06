@@ -22,6 +22,9 @@
 /graduate/programs.html: /programs/
 /graduate/teaching.html: /teaching/
 /graduate/tuition.html: /graduate/funding/
+/improving-lives/contact/default.html: /giving/contact/
+/improving-lives/stories/default.html: /giving/gifts/
+/improving-lives/ways/default.html: /giving/ways/
 /international/iconnect.html: /global/i-connect/
 /international/programs.html: /study-abroad/
 /news/events/: /events/

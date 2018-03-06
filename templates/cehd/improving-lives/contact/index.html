@@ -1,0 +1,11 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "CEHD" %}{# <= change the value in quotes to change both the title and h1 #}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>{{ page_title }}</h1>{# You can just enter text in the h1 if you don't want to be the same as the page_title variable above #}
+
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

@@ -14,7 +14,7 @@
                   <div class="whole">
                     <img src="{{ config.asset_base }}/dist/images/Programs/cspp/carolyn_berger-feature.jpg" alt="Carolyn Berger at professional development workshop">
                     <div class="whole">
-                      <h4>CSPP and College Readiness Consortium host college and career readiness workshop</h4>
+                      <h2>CSPP and College Readiness Consortium host college and career readiness workshop</h2>
                       <p>Counselors working in both rural and urban areas across Minnesota attended a half-day workshop, where they were presented with current data that support the need for greater attention to college and career readiness.
                         <a href="http://news.cehd.umn.edu/cspp-and-college-readiness-consortium-host-college-and-career-readiness-workshop/" {{ analytics.add_tracking("send", "event", "feature", "click", "CSPPmainfeature") }}>Read more.</a></p>
                   </div>
@@ -24,7 +24,7 @@
               <div class="whole">
                   <h2 class="no-margin-top">Help others grow academically and professionally</h2>
                     <p>With a Masters of Arts in counseling and student personnel psychology (CSPP), you’ll be qualified to counsel others throughout their lifespan. Become a school counselor and help students develop academically, personally/socially, and in their careers. Study to be a college and student personnel counselor and work in a higher education setting. Or become a mental health professional and work in a community setting. Whatever you decide, a master's in CSPP leads to a fulfilling career that allows you to do well by doing good.</p>
-                  <h3 class="no-margin-top">Careers</h3>
+                  <h2 class="no-margin-top">Careers</h2>
                     <ul>
                       <li>Licensed K-12 school counselor</li>
                       <li>College and student personnel counselor</li>
@@ -39,12 +39,12 @@
             This places the html the JavaScript is expecting for
             rendering the list of news items, including the fancy loader
           -#}
-          {{ loader.loader() }}
+          {{ loader.loader("Latest news", "h2", "news-container") }}
         </div>
         <div class="half">
           {{ loader.loader(
             "Dates and deadlines",
-            "h3",
+            "h2",
             "events-container"
           ) }}
         </div>
@@ -141,7 +141,7 @@
                   <img src="{{ config.asset_base }}/dist/images/future-students/Cristina_SilvaGleason_headshot.jpg" alt="Cristina Silva Gleason headshot">
               </div>
               <div class="twothird">
-                <h4 class="no-margin-top">Cristina Silva Gleason<small class="clear h5">M.A. student | <a href="mailto:silva263@umn.edu">silva263@umn.edu</a></small></h4>
+                <h3 class="no-margin-top">Cristina Silva Gleason<small class="clear h4">M.A. student | <a href="mailto:silva263@umn.edu">silva263@umn.edu</a></small></h3>
                     <p><strong>Interests&#58;</strong> Working with students in alternative learning sites (particulartly students who are pregnant and/or parenting, as well as immigrant students)</p>
                     <p><strong>Work&#58;</strong> Cristina is part of the data collection team for the <a href="http://www.cehd.umn.edu/EdPsych/igdi/projects/spanish-igdis.html">Spanish Individual Growth and Development Indicators Project</a>, which assesses early literacy and language skills for Spanish-speaking preschool-aged children. Next year, her practicum will be at a Spanish immersion school in Wayzata, as well as a high school in Minneapolis that offers International Baccalaureate programming.</p>
                 </div>

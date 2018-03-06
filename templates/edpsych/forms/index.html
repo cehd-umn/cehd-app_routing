@@ -1,12 +1,14 @@
 {% extends "edpsych/layout/section.html" %}
-{% block main_content %}
+{%- import "macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Forms" %}
 {% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% block main_content %}
 <div class="row">
     <div class="container">
-        <h2 class="text-center">{{ page_title }}</h2>
+        <h2 class="h1 text-center">{{ page_title }}</h2>
           <div class="twothirds feature">
-            <h3>Departmental forms</h3>
+            <h2>Departmental forms</h2>
               <ul>
                 <li><a href="{{ config.asset_base }}/dist/documents/forms/refreq-stud.pdf">Reference Request and Student Authorization</a> [PDF]</li>
                 <li><a href="{{ config.asset_base }}/dist/documents/forms/RefReqemployee.pdf">Reference Request and Employee Authorization</a> [PDF]</li>
@@ -18,7 +20,7 @@
                 <li><a href="{{ config.asset_base }}/dist/documents/forms/Thesis Planning Panel form.pdf">Thesis Planning Panel</a> [PDF]</li>
                 <li><a href="{{ config.asset_base }}/dist/documents/forms/StudentTravelFundingRequestForm 17_11-10.docx">Student Travel Funding Request</a> [DOC]</li>
               </ul>
-            <h3>Graduate school forms</h3>
+            <h2>Graduate school forms</h2>
               <ul>
                 <li><a href="http://www.grad.umn.edu/current-students-forms/formsdoctoral">Doctoral students</a></li>
                 <li><a href="http://www.grad.umn.edu/current-students-forms/forms-masters">Master's students</a></li>

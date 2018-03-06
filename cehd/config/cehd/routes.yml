@@ -1055,9 +1055,14 @@
   template: cehd/diversity/cgc.html
   template_data:
     - section: diversity
-/events/aparc-open-house/:
+/events/aa-tester/:
+  publish: false
+  template: cehd/events/aa-tester.html
+  template_data:
+    - section: events
+/events/aera/:
   publish: true
-  template: cehd/events/aparc-open-house.html
+  template: cehd/events/aera.html
   template_data:
     - section: events
 /events/block-party/:
@@ -1258,6 +1263,21 @@
   template: cehd/giving/contact.html
   template_data:
     - section: giving
+/giving/critical-draft/:
+  publish: false
+  template: cehd/giving/critical-draft.html
+  template_data:
+    - section: giving
+/giving/draft/:
+  publish: false
+  template: cehd/giving/draft.html
+  template_data:
+    - section: giving
+/giving/future-building/:
+  publish: false
+  template: cehd/giving/future-building.html
+  template_data:
+    - section: giving
 /giving/recognition/:
   publish: true
   template: cehd/giving/recognition.html
@@ -1398,6 +1418,11 @@
   template: cehd/graduation/med.html
   template_data:
     - section: graduation
+/improving-lives/contact/:
+  publish: true
+  template: cehd/giving/contact.html
+  template_data:
+    - section: giving
 /news/:
   publish: true
   template: cehd/news/index.html
