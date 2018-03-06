@@ -1,10 +1,14 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{% set page_title = "CSPP Handbooks" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h2>CSPP Handbooks</h2>
+        <h2 class="h1">CSPP Handbooks</h2>
         <div class="half">
-          <h3>CSPP program handbooks</h3>
+          <h2>CSPP program handbooks</h2>
           <p class="pull-quote">2017-2018</p>
           <p><a href="{{ config.asset_base }}/dist/documents/current/cspp/17-18 MA Handbook-Final.pdf">Masters Program Handbook</a></p>
           <p class="pull-quote">2016-2017</p>
@@ -16,7 +20,7 @@
           <p><a href="{{ config.asset_base }}/dist/documents/current/cspp/14-15 MA Handbook Draft (1) (2).docx">Masters Program Handbook</a></p>
         </div>
         <div class="half">
-          <h3>CSPP practicum handbooks</h3>
+          <h2>CSPP practicum handbooks</h2>
             <p>Note: Practicum handbooks are assigned years based on the academic year in which students complete their practicums.</p>
             <p class="pull-quote">2016-2017</p>
             <p><a href="{{ config.asset_base }}/dist/documents/current/cspp/2016-2017 COMMUNITY_HANDBOOK Final (3).doc">Community and College Student Development Practicum Handbook</a> [.doc]</p>

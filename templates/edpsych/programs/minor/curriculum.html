@@ -1,51 +1,53 @@
 {% extends "edpsych/layout/section.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
 {% set page_title = "Undergraduate minor curriculum" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
   <div class="container">
-    <h2 class="text-center">{{ page_title }}</h2>
+    <h2 class="h1 text-center">{{ page_title }}</h2>
       <div class="twothirds feature">
-        <h3>Core courses (12 credits)</h3>
+        <h2 class="text-center">Core courses (12 credits)</h2>
           <p>Students in the Applied Psychology in Educational and Community Settings (APECS) Minor are required to complete each of the following courses:</P>
-            <h4>EPSY 3301</br>Introduction to Educational Psychology (3 credits)</h4>
-              <p>This course provides an overview of the history, current work, and future promise of educational psychology. Emphasis is placed on the interplay between theory, empirical research, and practical application that is applicable to a variety of teaching and instructional careers.</p>
-            <h4>EPSY 3264</br>Basic and Applied Statistics (3 credits)</h4>
-              <p>Introductory statistics. Emphasizes understanding/applying statistical concepts/procedures. Visual/quantitative methods for presenting/analyzing data, common descriptive indices for univariate/bivariate data. Inferential techniques.</p>
-            <h4>EPSY 3132</br>Psychology of Multiculturalism in Education (3 credits)</h4>
-              <p>Course critically examines social and cultural diversity in the United States, confronting social issues of poverty, handicappism, homophobia, racism, sexism, victim-blaming, violence, and so on, and presenting models for change. Students examine how and why prejudices develop.</p>
-            <h4>EPSY 3302</br>Introduction to Communication Skills in Educational and Applied Settings (3 credits)</h4>
-              <p>This course is designed to develop communication skills for persons who will work with diverse individuals or groups in educational and community settings. Emphasis is placed on practice in the use of communication skills, learning about communication concepts, and development of self-reflectivity regarding one’s communication style.</p>
-          <h3>Practicum requirement (3 credits)</h3>
-            <p>Students are required to complete at least one of the following courses:</p>
-              <h4>EPSY 3133 Practicum:</br>Psychology of Multiculturalism in Education (3 credits)</h4>
-                <p>Students spend ninety hours working with children, youth, or adults in ESL tutoring or after-school youth programs. Students develop sensitivities and competencies related to multicultural issues in U.S. society.</p>
-              <h4>EPSY 3303</br>Educational Psychology Undergraduate Research Practicum (3 credits)</h4>
-                <p>This course is a practicum experience that is designed to provide supervised research experience for undergraduate students enrolled in the minor in applied psychology for educational/community settings. Students are matched with University faculty members and their research projects.</p>
-          <h3>Elective Courses (3 credits)</h3>
-            <p>Students are required to complete at least one of the following courses:</p>
-              <h4>EPSY 3119</br>Learning, Cognition, and Assessment (SSCI)</h4>
-                <p>(3.0 cr; =[EDHD 5001]; A-F or Aud, fall, spring, summer, every year)</br>Principles of learning, cognition, cognitive development, classroom management, motivation, instruction, and assessment. Topics: behaviorism, cognitive and social constructivism, human information processing theory, intelligence, knowledge acquisition, reasoning skills, scholastic achievement, standardized testing, reliability, validity, student evaluation, performance assessment, and portfolios.</p>
-              <h4>EPSY 5221</br>Principles of Educational and Psychological Measurement</h4>
-                <p>(3.0 cr; Prereq-5261 or equiv; fall, every year)</br>Concepts, principles, and methods in educational/psychological measurement. Reliability, validity, item analysis, scores, score reports (e.g., grades). Modern measurement theories, including item response theory and generalizability theory. Emphasizes construction, interpretation, use, and evaluation of assessments regarding achievement, aptitude, interests, attitudes, personality, and exceptionality.</p>
-              <h4>EPSY 5401</br>Counseling Procedures</h4>
-                <p>(3.0 cr; Prereq-Upper div student; fall, spring, summer, every year)</br>Emphasis on the counseling relationship and principles of interviewing. Case studies, role playing, and demonstration. For individuals whose professional work includes counseling and interviewing.</p>
-              <h4>EPSY 5432</br>Foundations of Individual/Organizational Career Development</h4>
-                <p>(3.0 cr; fall, spring, summer)</br>Introduction to individual and organizational career development theory and practice. Examines critical issues in work patterns, work values, and workplaces in a changing global society, with implications for career planning, development, and transitions, emphasizing personal and organizational change. For nonmajors: serves students in adult ed, HRD, IR, college student advising, and other related fields.</p>
-              <h4>EPSY 5461</br>Cross-Cultural Counseling</h4>
-                <p>(3.0 cr; A-F or Aud, fall, every year)</br>Effect of cross-cultural/cross-national psychological differences in human traits/characteristics. Framework for development/implementation of counseling interventions.</p>
-              <h4>EPSY 5613</br>Foundations of Special Education I</h4>
-                <p>(3.0 cr; Prereq-Child development course, 5601 or equiv; A-F or Aud, fall, spring, summer, every year)</br>Emphasis on the organization of educational programs and services for people with disabilities and their families. First course for students seeking to become licensed teachers in special education.</p>
-              <h4>EPSY 5616</br>Behavior Analysis and Classroom Management</h4>
-                <p>(3.0 cr; fall, spring, summer, every year)</br>Introduction to assumptions, principles, and procedures of behavioral approach to analyzing behavior and programs for classroom management. Emphasis on specifying problems, conducting observations, intervening, and evaluating behavioral change.</p>
-              <h4>YOST 3234</br>Youth Agencies, Organizations, and Youth Service Systems</h4>
-                <p>(3.0 cr; Prereq - two soc/anth courses, work experience in youth agency or organization; fall)</br>Communities/governmental responses to young people as potential problems through agencies, programs, and other organizational forms. Purpose, structure, and activities of such forms. How the forms are/are not integrated into youth service systems.</p>
-              <h4>YOST 3235</br>Community Building, Civic Engagement, and Civic Youthwork</h4>
-                <p>(4.0 cr; Prereq - YOST 1001, one basic course in POL, one basic course in SOC; spring)</br>Reciprocities between youth development and community development brought about by young people's civic engagement. Individual, social, and political change by/for young people and their community.</p>
-              <h4>YOST 4315</br>Youthwork in Schools</h4>
-                <p>(4.0 cr; Prereq - Intro course in education or permission from instructor; spring )</br>Craft of youthwork as a framework to understand life-worlds of young people and a practice to enhance healthy development. How young people often divide their lives into artificial/harmful divide: "school" and "not school."</p>
-              <h4>YOST 4317</br>Youthwork in Contested Spaces</h4>
-        <p>(3.0 cr; Prereq - YOST 1001, YOST 3101 recommended; will be offered in the 2010-2011 academic year and then every other year)</br>Consequences of organized violence on everyday lives/futures of youth. Violence in conflict/post-conflict societies. Role of youthwork under these circumstances.</p>
+        </div>
+              <section>
+                <div class="half">
+                      <h3><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=801656">EPSY 3301: Introduction to Educational Psychology (3 credits)</a></h3>
+                          <h3><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002181">EPSY 3132: Psychology of Multiculturalism in Education (3 credits)</a></h3>
+                </div>
+                <div class="half">
+                    <h3><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002199">EPSY 3264: Basic and Applied Statistics (3 credits)</a></h3>
+                        <h3><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=801659">EPSY 3303: Educational Psychology Undergraduate Research Practicum (3 credits)</a></h3>
+            </section>
+            <div class="twothirds feature">
+                <h2 class="text-center">Elective courses (3 credits)</h2>
+                    <p>Students are required to complete at least three credits from one specialty area (counseling and student personnel psychology, psychological foundations of education, quantitative methods in education, school psychology, or special education):</p>
+            </div>
+                <section>
+                    <div class="half">
+                        <h3>Counseling and student personnel psychology</h3>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=801657">EPSY 3302: Introduction to Communications Skills for Educational and Community Settings</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=003111">EPSY 5461: Cross-Cultural Counseling</a></h4>
+                        <h3>Psychological foundations of education</h3>
+                            <H4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=798003">EPSY 3101: Creativity and Intelligence: an Introduction</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002206">EPSY 5113: Psychology of Instruction and Technology</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=809099">ESPY 5119: Mind, Brain, and Education</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002220">EPSY 5157: Social Psychology of Education</a></h4>
+                        <h3>Quantitative methods in education</h3>
+                                    <H4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002247">EPSY 5221: Principles of Educational and Psychological Measurement</a></h4>
+                                    <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=791921">EPSY 5247: Qualitative Methods in Educational Psychology</a></h4>
+                                    <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=791170">EPSY 5271: Becoming a Teacher of Statistics</a></h4>
+                    </div>
+                    <div class="half">
+                        <h3>School psychology</h3>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=817707">EPSY 3801: The Science of Human Resilience and Wellbeing: Foundational Knowledge for Career and Life Success</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=811874">EPSY 5802: History & Scientific Bases of Psychology</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=002119">EPSY 5851: Engaging Diverse Students and Families</a></h4>
+                        <h3>Special education</h3>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=811328">EPSY 2601: Understanding Differences, Disabilities, and the Career of Special Education</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=001601">EPSY 5613: Foundations of Special Education I</a></h4>
+                            <h4><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=809193">EPSY 5617: Academic and Social Interventions for Students with Mild to Moderate Disabilities</a></h4>
+                    </div>
           </div>
         </div>
 </div>
