@@ -49,3 +49,7 @@ $app->get('/programs/', '\CEHD\Services\ServicesApp:programsHandler');
 $app->get('/programs/v2/', '\CEHD\Services\ServicesApp:programsV2Handler');
 
 $app->get('/search/', '\CEHD\Services\ServicesApp:searchHandler');
+
+$app->get('/icd/topics/', '\CEHD\Services\ServicesApp:icdTopicsHandler');
+
+$app->get('/icd/topic/[:topic]/', '\CEHD\Services\ServicesApp:icdTopicPageHandler');

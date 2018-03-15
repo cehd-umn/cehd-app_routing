@@ -9,6 +9,7 @@ require_once __DIR__ . '/../../../cehd/app/XML/People.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Search.php';
 require_once __DIR__ . '/../../../cehd/app/XML/Course.php';
 require_once __DIR__ . '/../../../cehd/app/Validator/Validator.php';
+require_once __DIR__ . '/../../../cehd/app/Card/ICDTopicCard.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -334,5 +335,41 @@ class ServicesApp extends BaseClass
             $client_query_data);
         $resultSet = new Search($client_response->getBody());
         return $response->withJson($resultSet);
+    }
+
+
+    public function icdTopicsHandler($request, $response, $service, $app)
+    {
+        // create a yaml file of topics at this path:
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/icd/topics.yml';
+        // change the namespace and class name to match yours
+        $cardsInstance = new \CEHD\App\Card\ICDTopicCard\TopicCards();
+
+        $cards = $cardsInstance->setCards($yaml_file_path)
+            ->nullifyDescriptions()
+            ->getCards();
+
+        $payload = [
+          "topics" => $cards.to_json(),
+          "categories" => $cardsInstance->getCategories()
+        ];
+
+        return $response->withJson($payload);
+    }
+
+    public function icdTopicHandler($request, $response, $service, $app)
+    {
+        // create a yaml file of topics at this path:
+        $yaml_file_path = __DIR__ . '/../../../cehd/config/icd/topics.yml';
+
+        // change the namespace and class name to match yours
+        $cardsInstance = new \CEHD\App\Card\ICDTopicCard\TopicCards();
+        $topics = $cardsInstance->setCards($yaml_file_path)->getCardsWithHyphenatedKeys();
+
+        $payload = array_key_exists($request->topic, $topics) ? $topics[$request->topic] : null;
+
+        if ($payload) {
+            return $response->withJson($payload);
+        }
     }
 }
