@@ -1120,6 +1120,12 @@
   template: cehd/events/wplc-fall.html
   template_data:
     - section: events
+/events/wplc-spring/:
+  publish: true
+  template: cehd/events/wplc-spring.html
+  template_data:
+    - section: events
+
 
 # Examples section (note: keep publish "false" for these")
 /docs/:
@@ -1513,6 +1519,11 @@
   template: cehd/reads/previous-books/skloot.html
   template_data:
     - section: reads
+/reads/previous-books/stevenson/:
+  publish: true
+  template: cehd/reads/previous-books/stevenson.html
+  template_data:
+    - section: reads
 /reads/previous-books/stjames/:
   publish: true
   template: cehd/reads/previous-books/stjames.html
@@ -1746,6 +1757,11 @@
 /teaching/partner/network-day/:
   publish: true
   template: cehd/teaching/partner/network-day.html
+  template_data:
+    - section: teaching
+/teaching/workshop/brown-bag/:
+  publish: true
+  template: cehd/teaching/workshop/brown-bag.html
   template_data:
     - section: teaching
 /teaching/workshop/co-teaching-pairs/:

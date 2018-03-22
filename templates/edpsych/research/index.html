@@ -6,9 +6,18 @@
     <div class="container">
       <section>
         <h2 class="text-center">{{ page_title }}</h2>
-        <div class="twothirds feature">
-          <p>Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes.</p>
-        </div>
+            <section>
+                <div class="half">
+                    <figure>
+                        <img src="{{ config.base_url}}/assets/dist/images/research/sophia-frank-feature.jpb" alt="Ph.D. student, Sophia Frank, in the Education Sciences Building">
+                        <figcaption>Sophia Frank, Ph.D. student in the school psychology program in the Department of Educational Psychology, has been awarded a Doris Duke Fellowship for the Promotion of Child Well-being from the University of Chicago. <a href="http://news.cehd.umn.edu/school-psych-ph-d-student-awarded-fellowship-to-prevent-child-abuse-and-neglect/" {{ analytics.add_tracking("send", "event", "feature", "click", "researchfeature") }}>Learn more.</a></figcaption>
+                    </figure>
+                </div>
+                <div class="half">
+                    <p>Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes.</p>
+                  </div>
+                </div>
+            </section>
           <div class="third right">
               <h3>Identify and define problems</h3>
                 <ul>
