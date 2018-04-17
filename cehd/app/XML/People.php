@@ -485,7 +485,12 @@ class Person extends \CEHD\App\XML\XML
             "CEHD Child Development, Inst" => "Institute of Child Development",
             "CEHD Educational Psychology" => "Department of Educational Psychology",
             "CEHD Social Work" => "School of School of Social Work",
+            "CEHD Social Work, School of" => "School of School of Social Work",
             "CEHD Kinesiology" => "School of Kinesiology",
+            "College of Education/Human Dev" => "College of Education and Human Development",
+            "CEHD Administration" => "College Administration",
+            "CEHD UM Child Development Ctr" => "U of M Child Development Center",
+
         ];
 
         $job = new Job();

@@ -36,12 +36,12 @@ Advance Practices in Second Language Teaching:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
 Applied Child and Adolescent Development:
-  meta: null
+  meta: hospital, hospitals
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/ICD/Programs/ACAD/default.html
-  description: Learn how to draw on development science to address the needs of children and adolescents in advocacy, community, and health care settings. (Online degree)
+      href: http://www.icd.umn.edu/academics/applied-child-and-adolescent-development/
+  description: Build a foundation in developmental science and specialize in infant and early childhood mental health, child life, or individualized studies. (Online degree)
   categories:
     - Families, Youth, and Children
     - Psychology, Counseling, and Social Work
@@ -101,13 +101,15 @@ Child Psychology:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/
+      href: http://www.icd.umn.edu/academics/child-psychology-undergraduate/
       footnote_indicator: "*"
     - title: Undergraduate Minor
+      href: http://www.icd.umn.edu/academics/child-psychology-undergraduate/minor/
       footnote_indicator: "*"
-      href: http://www.cehd.umn.edu/icd/programs/CPSY/Undergraduate/programs.html
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/icd/programs/CPSY/graduate/default.html
+      href: http://www.icd.umn.edu/academics/child-psychology-graduate/
+    - title: Graduate Minor
+      href: http://www.icd.umn.edu/academics/child-psychology-graduate/doctoral-minor/
   description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience.
   categories:
     - Teaching, Learning, and Schools
@@ -216,7 +218,7 @@ Early Childhood:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/icd/programs/ECE/Undergraduate/overview.html
+      href: http://icd.umn.edu/academics/early-childhood/
   description: Prepare to enter a master’s level teaching licensure program for ages birth to 3rd grade, or prepare to work in educational settings where a teaching license is not required.
   categories:
     - Teaching, Learning, and Schools
@@ -227,9 +229,9 @@ Early Childhood Education:
   publish: true
   links:
     - title: License
-      href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+      href: http://www.icd.umn.edu/academics/early-childhood-education-additional-licensure/
     - title: Masters
-      href: http://www.cehd.umn.edu/icd/programs/ECE/Graduate/
+      href: http://www.icd.umn.edu/academics/early-childhood-education-master-of-education/
   description: Study children's development from birth to age eight, a time of rapid development and change. Prepare for a teaching career or careers in social service agencies and nonprofit organizations.
   categories:
     - Teaching, Learning, and Schools
@@ -392,6 +394,28 @@ Human Resource Development:
   description: Study the methods and practices for helping employees and organizations develop their skills, knowledge, and abilities.
   categories:
     - Business, Administration, and Leadership
+Infant and Early Childhood Mental Health:
+  meta: null
+  publish: true
+  links:
+    - title: Graduate certificate
+      href: http://www.icd.umn.edu/academics/infant-and-early-childhood-mental-health/
+    - title: Graduate minor
+      href: http://www.icd.umn.edu/academics/infant-and-early-childhood-mental-health/graduate-minor/
+  description: Learn how to support the social and emotional development of young children ages birth to five. (Online programs)
+  categories:
+    - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
+Interpersonal Relationships Research:
+  meta: null
+  publish: true
+  links:
+    - title: Graduate minor
+      href: http://www.icd.umn.edu/academics/interpersonal-relationships-research-minor/
+  description: Build a foundation for conducting research on the impact of interactions between individuals.
+  categories:
+    - Families, Youth, and Children
+    - Psychology, Counseling, and Social Work
 K-12 Technology Integration:
   meta: null
   publish: true

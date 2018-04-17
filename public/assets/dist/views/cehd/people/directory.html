@@ -14,8 +14,12 @@
         <div class="half">
             <h3 class="h6">Contact</h3>
             <p>
-                    {% if person.address_1 %}
-                      {{ person.address_1 }}<br>
+                    {% if person.departmentName %}
+                      {{ person.departmentName }}<br>
+                    {% else %}
+                        {% if person.address_1 %}
+                            {{ person.address_1 }}<br>
+                        {% endif %}
                     {% endif %}
                     {% if person.address_2 %}
                       {{ person.address_2 }}<br>

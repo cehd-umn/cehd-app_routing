@@ -690,6 +690,101 @@
   template: cehd/alumni/rising/2017/tompkins.html
   template_data:
     - section: alumni
+/alumni/rising/2018/adawe/:
+  publish: true
+  template: cehd/alumni/rising/2018/adawe.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/al-ghanim/:
+  publish: true
+  template: cehd/alumni/rising/2018/al-ghanim.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/ambrosier/:
+  publish: true
+  template: cehd/alumni/rising/2018/ambrosier.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/barry/:
+  publish: true
+  template: cehd/alumni/rising/2018/barry.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/brewster/:
+  publish: true
+  template: cehd/alumni/rising/2018/brewster.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/gonzalez/:
+  publish: true
+  template: cehd/alumni/rising/2018/gonzalez.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/hall-lande/:
+  publish: true
+  template: cehd/alumni/rising/2018/hall-lande.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/hickey/:
+  publish: true
+  template: cehd/alumni/rising/2018/hickey.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/tompkins/:
+  publish: true
+  template: cehd/alumni/rising/2018/tompkins.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/hill/:
+  publish: true
+  template: cehd/alumni/rising/2018/hill.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/kuiper/:
+  publish: true
+  template: cehd/alumni/rising/2018/kuiper.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/montane/:
+  publish: true
+  template: cehd/alumni/rising/2018/montane.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/narayan/:
+  publish: true
+  template: cehd/alumni/rising/2018/narayan.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/pauly/:
+  publish: true
+  template: cehd/alumni/rising/2018/pauly.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/roysland/:
+  publish: true
+  template: cehd/alumni/rising/2018/roysland.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/simonelli/:
+  publish: true
+  template: cehd/alumni/rising/2018/simonelli.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/sipple/:
+  publish: true
+  template: cehd/alumni/rising/2018/sipple.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/ticha/:
+  publish: true
+  template: cehd/alumni/rising/2018/ticha.html
+  template_data:
+    - section: alumni
+/alumni/rising/2018/witmer/:
+  publish: true
+  template: cehd/alumni/rising/2018/witmer.html
+  template_data:
+    - section: alumni
 /alumni/society/:
   publish: true
   template: cehd/alumni/society/index.html
@@ -1040,6 +1135,11 @@
   template: cehd/commencement/index-for-jan-2018.html
   template_data:
     - section: commencement
+/commencement/speakers/:
+  publish: true
+  template: cehd/commencement/speakers.html
+  template_data:
+    - section: commencement
 /diversity/:
   publish: true
   template: cehd/diversity/index.html
@@ -1105,9 +1205,9 @@
   template: cehd/events/saturday-scholars.html
   template_data:
     - section: events
-/events/slifer/:
+/events/spring-assembly/:
   publish: true
-  template: cehd/events/slifer.html
+  template: cehd/events/spring-assembly.html
   template_data:
     - section: events
 /events/undergrad-networking/:
@@ -1280,7 +1380,7 @@
   template_data:
     - section: giving
 /giving/future-building/:
-  publish: false
+  publish: true
   template: cehd/giving/future-building.html
   template_data:
     - section: giving
@@ -1772,6 +1872,11 @@
 /teaching/workshop/new-teacher/:
   publish: true
   template: cehd/teaching/workshop/new-teacher.html
+  template_data:
+    - section: teaching
+/teaching/workshop/partner-network-celebration/:
+  publish: true
+  template: cehd/teaching/workshop/partner-network-celebration.html
   template_data:
     - section: teaching
 /teaching/workshop/supershop/:
