@@ -570,6 +570,11 @@
   publish: true
   template_data:
     - section: undergraduate-programs
+/undergraduate-programs/tinsley-grant/:
+  template: olpd/undergraduate-programs/tinsley-grant.html
+  publish: true
+  template_data:
+    - section: undergraduate-programs
 /chautauqua/:
   template: olpd/chautauqua/index.html
   publish: true

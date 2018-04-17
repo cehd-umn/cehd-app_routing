@@ -13,8 +13,12 @@
             </div>
             <div class="half">
                 <p>
-                    {% if data.person.address_1 %}
-                        {{ data.person.address_1 }}<br>
+                    {% if data.person.departmentName %}
+                      {{ data.person.departmentName }}<br>
+                    {% else %}
+                        {% if data.person.address_1 %}
+                            {{ data.person.address_1 }}<br>
+                        {% endif %}
                     {% endif %}
                     {% if data.person.address_2 %}
                         {{ data.person.address_2 }}<br>

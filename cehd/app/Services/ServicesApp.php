@@ -105,7 +105,7 @@ class ServicesApp extends BaseClass
 
     public function newsFeedHandler(Request $request, Response $response)
     {
-        $base_url = "http://news.cehd.umn.edu/";
+        $base_url = "https://news.cehd.umn.edu/";
         $query_data = $request->getQueryParams();
 
         if (array_key_exists("feed_url", $query_data) && !empty($query_data["feed_url"])) {

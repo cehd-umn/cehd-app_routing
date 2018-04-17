@@ -191,7 +191,12 @@
     template_data:
         meta_description: "Register for your certificate in Autism Spectrum Disorder."
         section: current
-
+/edpsych/current/travel-funding/:
+    publish: false
+    template: edpsych/current/travel-funding.html
+    template_data:
+        meta_description: "The Department of Educational Psychology awards eligible students funding for travel to present at conferences during the academic year."
+        section: current
 # Forms section
 /edpsych/forms/:
     publish: true

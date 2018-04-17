@@ -1,0 +1,60 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Undergraduate Tinsley Grant" %}
+{% block title %}
+Undergraduate Tinsley Grant
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Undergraduate Tinsley Grant</h1>
+
+        <div class="twothird feature">
+            <p>In 2013 the Gary Tinsley Memorial Scholarship fund was created to honor the memory of Gary Tinsley, a Golden Gopher linebacker and Business and Marketing Education (BME) student, who passed away due to an enlarged heart a few weeks before he was to graduate. Grants from $100-1500 are awarded to provide enhanced learning opportunities for current BME students.
+        </div>
+
+    <div class="container">
+    <div class="half">
+
+            <h2>Eligibility</h2>
+                <p>To be considered for this grant, you must be an undergraduate student enrolled full time in the <a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/">B.S. in Business and Marketing Education</a> in the Department of Organizational Leadership, Policy, and Development at the University of Minnesota.</p>
+                <p>Awards are based on an applicant’s:</p>
+                    <ul class="bullet">
+                        <li>enrollment status</li>
+                        <li>academic standing at the University of Minnesota</li>
+                        <li>intended utilization of funds toward enhancing program study experience, a study-abroad experience, or through supporting work in a current unpaid internship</li>
+                        <li>career track as an indicator of future contributions in business and marketing</li>
+                    </ul>
+        </div>
+
+        <div class="half">
+
+            <h2>Applying</h2>
+                <p>Applications for the grant should include:</p>
+                    <ul class="bullet">
+                        <li>a completed <a href="{{ config.asset_base }}/documents/Forms/TinsleyGrantApp2018.pdf">Application Form</a> [pdf] including a statement describing how the grant funds will be used</li>
+                        <li>transcripts indicating a minimum GPA of 3.2 in program coursework</li>
+                        <li>Please send your completed application to:<br>
+                            Gary Tinsley BME Undergraduate Scholarship<br>
+                            c/o Meg Fitzgerald-Sisk<br>
+                            OLPD Undergraduate Office<br>
+                            University of Minnesota, Twin Cities<br>
+                            203 B Burton Hall<br>
+                            178 Pillsbury Dr. SE<br>
+                            Minneapolis, MN  55455</li>
+                    </ul>
+
+            <h2>Application deadline</h2>
+                <p><strong>The postmark/email deadline for this grant application is April 15, 2018.</strong> Award notices will be sent after June 10, 2018.</p>
+
+
+        </div>
+    </div>
+
+
+
+</div><!-- close row -->
+{% endblock %}
