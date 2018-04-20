@@ -1,20 +1,20 @@
 {% if data.people|length > 0 %}
 <h2>Our expert{% if data.people[0]|length > 1 %}s{% endif %}</h2>
-{% set column_class = "third" %}
+{% set column_class = "half" %}
 {% for group in data.people %}
     {% if group|length == 2 %}{% set column_class = "half" %}{% endif %}
 <div>
     {% for person in group %}
     <div class="{{ column_class }} margin-top-2">
     {% if person.internetId %}
-        <div class="half">
+        <div class="third">
             {% if person.headshotAddress %}
             <img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot">
             {% else %}
                 <img src="/assets/images/headshots/slug.jpg" alt="{{ person.nameFirstLast }} headshot" />
             {% endif %}
         </div>
-        <div class="half">
+        <div class="twothird">
             <h2 class="heading-profile no-margin-top"><a href="{{ person.webPage }}">{{ person.nameFirstLast }}</a></h2>
             {% if person.workingTitle|is_string %}
                 <p>{{ person.workingTitle|safe }}</p>
