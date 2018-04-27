@@ -477,9 +477,14 @@
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
     {{ newsfeed.news_feed_js(
-        "category/departments/educational-psychology/special-education/feed/"
+        "category/departments/educational-psychology/special-education/feed/",
+        "#news-container",
+        "index.html",
+        3,
+        "http://news.cehd.umn.edu/",
+        "More news",
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
-
     {#-
         Events feed
         * the first value passed in is for the t query param
