@@ -1105,6 +1105,11 @@
   template: cehd/career/teacher/out-of-state.html
   template_data:
     - section: career
+/career/teacher/resources/:
+  publish: true
+  template: cehd/career/teacher/resources.html
+  template_data:
+    - section: career
 /career/teacher/sites/:
   publish: true
   template: cehd/career/teacher/sites.html
@@ -1113,11 +1118,6 @@
 /career/teacher/success/:
   publish: true
   template: cehd/career/teacher/success.html
-  template_data:
-    - section: career
-/career/teacher/teach-minn/:
-  publish: true
-  template: cehd/career/teacher/teach-minn.html
   template_data:
     - section: career
 /commencement/:
