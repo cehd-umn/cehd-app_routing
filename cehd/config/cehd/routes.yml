@@ -1369,14 +1369,14 @@
   template: cehd/giving/contact2.html
   template_data:
     - section: giving
-/giving/critical-draft/:
-  publish: false
-  template: cehd/giving/critical-draft.html
+/giving/critical/:
+  publish: true
+  template: cehd/giving/critical.html
   template_data:
     - section: giving
-/giving/draft/:
-  publish: false
-  template: cehd/giving/draft.html
+/giving/improving-lives/:
+  publish: true
+  template: cehd/giving/improving-lives.html
   template_data:
     - section: giving
 /giving/future-building/:

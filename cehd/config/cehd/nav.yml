@@ -133,7 +133,13 @@
   subsections:
     -
       - name: Improving Lives
-        href: "/improving-lives/"
+        href: "/giving/improving-lives/"
+        subsections:
+            -
+              - name: Critical Issues
+                href: "/giving/critical/"
+              - name: ICD Building
+                href: "/giving/future-building/"
       - name: Gifts at work
         href: "/giving/gifts/"
       - name: Ways to give

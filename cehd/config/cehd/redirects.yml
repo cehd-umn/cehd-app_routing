@@ -22,7 +22,13 @@
 /graduate/programs.html: /programs/
 /graduate/teaching.html: /teaching/
 /graduate/tuition.html: /graduate/funding/
+/improving-lives/default.html: /giving/improving-lives/
 /improving-lives/contact/default.html: /giving/contact/
+/improving-lives/critical/default.html: /giving/critical/
+/improving-lives/critical/brain.html: /giving/critical/
+/improving-lives/critical/gap.html: /giving/critical/
+/improving-lives/critical/global.html: /giving/critical/
+/improving-lives/priorities/default.html: /giving/critical/
 /improving-lives/stories/default.html: /giving/gifts/
 /improving-lives/ways/default.html: /giving/ways/
 /international/iconnect.html: /global/i-connect/
