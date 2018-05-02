@@ -7,9 +7,9 @@ const news_containers = $("[data-news-app]");
 if (news_containers.length > 0) {
     news_containers.each(function(k, v) {
         const httpClient = new http_client();
-        const base_url = "/services/news/feed/";
         const container = $(v);
-        const feed_base_url =           container.data("base-url");
+        const base_url =                container.data("base-url");
+        const feed_base_url =           container.data("feed-base-url");
         const feed_path =               container.data("feed-path");
         const target_element_selector = container.data("target-element-selector");
         const template_name =           container.data("template-name");
