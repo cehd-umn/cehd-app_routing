@@ -450,3 +450,12 @@ li {
         max-width: 287px;
     }
 }
+
+@media (min-width: 769px) {
+
+    .top-level:hover {
+        background: #d9edf7;
+        text-decoration: underline;
+      }
+
+}
