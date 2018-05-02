@@ -3,6 +3,28 @@
 {% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "Alumni" %}
+{% block extra_css %}
+<style>
+@media (min-width: 960px) {
+.row.has-hero-image {
+    margin-top: 500px;
+}
+
+.hero-image-container {
+    display: block;
+    margin: 0 auto;
+    min-height: 500px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 150px;
+}
+
+}
+
+
+</style>
+{% endblock %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
