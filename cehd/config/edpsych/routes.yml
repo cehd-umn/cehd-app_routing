@@ -191,6 +191,12 @@
     template_data:
         meta_description: "Register for your certificate in Autism Spectrum Disorder."
         section: current
+/edpsych/current/student-stories/:
+    publish: true
+    template: edpsych/current/student-stories.html
+    template_data:
+        meta_description: "Learn what some of our educational psychology graduate students are up to."
+        section: current
 /edpsych/current/travel-funding/:
     publish: true
     template: edpsych/current/travel-funding.html
