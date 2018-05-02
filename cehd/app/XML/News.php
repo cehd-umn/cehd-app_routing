@@ -203,7 +203,7 @@ class News extends \CEHD\App\XML\RSS\RSS
             }
         }
 
-        ksort($result);
+        krsort($result);
         $this->stories = $result;
         return $result;
     }
