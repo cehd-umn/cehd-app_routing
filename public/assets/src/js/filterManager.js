@@ -82,28 +82,27 @@ class FilterManager {
 	init_search(elements_selector) {
 		const $elements = $(elements_selector);
 		const search = elasticlunr(function() {
-			this.addField('meta');
 			this.addField('title');
 			this.addField('description');
+			this.addField('meta');
 			this.addField('categories');
 			this.setRef('id');
 		});
 
 		$elements.each(function(index, element) {
 			const $element = $(element);
-			const meta = $element.find('.meta').text();
 			const title = $element.find('.title').text();
 			const description = $element.find('.description').text();
+			const meta = $element.find('.meta').text();
 			const categories = $element.data('categories');
 			const id = $element.attr('id');
 			const doc = {
 				id: id,
-				meta: meta,
 				title: title,
 				description: description,
+				meta: meta,
 				categories: categories
 			};
-
 			search.addDoc(doc);
 		});
 

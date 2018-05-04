@@ -30,11 +30,12 @@
                         </a>
                     {% endif %}
                     </p>
-                    <!-- {% if item.meta %}
-                    <p class="meta">{{ item.meta }}</p>
-                  {% endif %} -->
+                    {% if item.meta %}
+                    <!-- NEED TO FIND LONG TERM FIX FOR META DATA INCLUDED IN SEARCH -->
+                    <p class="description hide">{{ item.meta }}</p> 
+                  {% endif %}
                     {% if item.description %}
-                      <p class="description">{{ item.description }}</p>
+                      <p class="description">{{ item.description }}. </p>
                     {% endif %}
                     {% if item.links %}
                     <ul class="no-bullet">

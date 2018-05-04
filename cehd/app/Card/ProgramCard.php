@@ -78,7 +78,7 @@ class ProgramCards extends CardGroup
         $programs = $this->loadYaml($yaml_file_path);
 
         foreach ($programs as $title => $program) {
-            $card = $this->setCard($title, $program);
+            $card = $this->setCard($title, $program, $meta);
             $this->_cards[$title] = $card;
         }
 
