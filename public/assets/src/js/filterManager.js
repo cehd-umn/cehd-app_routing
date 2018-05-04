@@ -17,7 +17,7 @@ class FilterManager {
 		this.$searchInput = $(searchInputSelector);
 		this.search = this.init_search('.card');
 
-		this.$searchInput.on('keyup', function() {
+		this.$searchInput.on('keyup keydown', function() {
 			const search_value = $(this).val();
 			const search_result = self.search.search(search_value, { expand: true });
 
