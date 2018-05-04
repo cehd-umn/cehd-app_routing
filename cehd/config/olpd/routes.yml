@@ -415,6 +415,11 @@
   publish: true
   template_data:
     - section: graduate-programs
+/graduate-programs/human-resource-development/internship/:
+  template: olpd/graduate-programs/hrd/internship.html
+  publish: true
+  template_data:
+    - section: graduate-programs
 /graduate-programs/adult-education/med/:
   template: olpd/graduate-programs/aded/med.html
   publish: true
