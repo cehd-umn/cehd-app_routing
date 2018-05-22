@@ -1,5 +1,6 @@
 {% extends "layout/base.html" %}
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+
 {% block css %}<link href="{{ config.css_base }}/minified/cehd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">{% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
