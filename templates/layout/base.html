@@ -7,11 +7,21 @@
         
         
         
-        <meta property="og:title" content="{% block meta_title %}{% endblock %}">
-        <meta property="og:description" content="{% block meta_description %}{% endblock %}">
-        <meta property="og:image" content="{% block meta_image %}{% endblock %}">
-        <meta property="og:url" content="{% block meta_url %}{% endblock %}">
-        
+        <meta property="og:title" content="{% block meta_title %}College of Education and Human Development{% endblock %}">
+        <meta property="og:description" content="{% block meta_description %}Problem solvers, advocates, and leaders{% endblock %}">
+        <meta property="og:image" content="{% block meta_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
+        <meta property="og:url" content="{% block meta_url %} {{ base_url }} {% endblock %}">
+
+        <meta name="twitter:title" content="{% block twitter_title %}College of Education and Human Development{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}Problem solvers, advocates, and leaders{% endblock %}">
+        <meta name="twitter:image" content="{% block twitter_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
+        <meta name="twitter:card" content="summary_large_image">
+
+<!--  Non-Essential, But Recommended -->
+
+<meta property="og:site_name" content="European Travel, Inc.">
+<meta name="twitter:image:alt" content="Alt text for image">
+
         <meta name="description" content="{% block meta_content %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>

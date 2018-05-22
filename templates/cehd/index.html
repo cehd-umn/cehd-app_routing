@@ -1,11 +1,15 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "College of Education and Human Development" %}
-{% set meta_img = "cehd/public/assets/images/social/CEHD_full_lockup_black.jpg" %}
+{% set meta_img = "http://backstage.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg" %}
 
-{% block meta_title %}{{ page_title }}{% endblock %}
+{% block meta_title %} {{ page_title }} {% endblock %}
 {% block meta_description %}Problem solvers, advocates, and leaders{% endblock %}
-{% block meta_image %}https://asana-user-private-us-east-1.s3.amazonaws.com/assets/380217952950928/682291560919823/b8f2f07cf5ca4e42d048192010482f57?AWSAccessKeyId=ASIAJAGJJJJMLV44LMIQ&Expires=1527001907&Signature=Vs2hDLNN5tWRGMUCH%2Bj3m6aNoEk%3D&x-amz-security-token=FQoDYXdzEC8aDKTgTWgQNaScxa%2FomSK3A1q33YzGIN%2BpW9nVnWoq6qREdukan2tK2WJlY9X0wmNn%2F0bSATJZcBQFUAvhMOrdaq6sW3fg08LcX15fdi%2FijJdkhPxg2voMKKz%2BgUpsR%2FuaHNFe3AYVnxCwN%2BMui5WuHh3fmEAQI6FcWiYE7TPEJ2xBdVr%2FjfPcn5IFrcaTtOAeCqz%2BzQtQn9JUZIT4ptoXTUnRRLTp4wQAiZLIygRtTrDCtteSzVM1E9j5eL8rpJT%2BPIiPp%2Fd%2FqUtpHhL9T2d4O8XbPsJOuibmtejPN87x%2For0rUp76Fx3E7vkWCLGaBBwqb6EzgiHHlwdrXaDrUK%2BVPX10FQ7Fxw9A62gOK912grk0sauxSF20P%2Flx9zp1D5NPvbfF9cZ2inz2jAp9DLt5Fg98xi5zO3mZPyEMHsR2DZmLwDFYg%2BRkFQw5L7Pjtaek55mxtsWPyr0WqaHBhTv9iDO705LNzsQQGH2XOn%2F2fjWnpKbTK0i0kWTtmieXxRCn%2B7sg0A6r8lDSGGh1ffnhBBG76v4z2lv0z0Ts5mGzmI8%2FkdNSGCH%2F%2FJBtiHqcXTwUlP9XqO9UrU3uHQVbirTO672St8UAgYomMiQ2AU%3D#_=_{% endblock %}
-{% block meta_url %}{{ base_url }}{% endblock %}
+{% block meta_image %}http://backstage.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg{% endblock %}
+{% block meta_url %}{% endblock %}
+
+{% block twitter_title %} {{ page_title }} {% endblock %}
+{% block twitter_description %}Problem solvers, advocates, and leaders{% endblock %}
+{% block twitter_image %}http://backstage.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg{% endblock %}
 
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
@@ -402,6 +406,12 @@
         </div>
     </div>
 </aside>
+
+<aside class="row stats margin-bottom-24">
+    <div class="container">
+    {{meta_img}}
+        </div>
+    </aside>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
