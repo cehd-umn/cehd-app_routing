@@ -481,7 +481,7 @@
         meta_description: "Become certified to teach students with mild to moderate disabilities and specialize in one area of moderate to severe with your A.B.S. teaching licensure and M.Ed."
         section: programs-degrees
 /edpsych/programs/specialed/asd/:
-    publish: true
+    publish: false
     template: edpsych/programs/specialed/asd.html
     template_data:
         meta_description: "Specialize in meeting the needs of students with autism spectrum disorders."
@@ -493,7 +493,7 @@
         meta_description: "Meet the growing demand for professionals in this field. Students in our ASD certificate program are trained to assist children and youth with ASD and their families."
         section: programs-degrees
 /edpsych/programs/specialed/dd-licensure/:
-    publish: true
+    publish: false
     template: edpsych/programs/specialed/dd-licensure.html
     template_data:
         meta_description: "Help solve learning challenges for students with developmental disabilities."
@@ -517,7 +517,7 @@
         meta_description: "Help young children with developmental delays and disabilities succeed."
         section: programs-degrees
 /edpsych/programs/specialed/ld-licensure/:
-    publish: true
+    publish: false
     template: edpsych/programs/specialed/ld-licensure.html
     template_data:
         meta_description: "Help students with learning disabilities achieve more."
