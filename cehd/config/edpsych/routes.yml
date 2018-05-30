@@ -639,7 +639,7 @@
         meta_description: "Learn more about the research our faculty, staff, and students are doing to benefit our communities."
         section: research
 /edpsych/research/labs/fleury/:
-    publish: true
+    publish: false
     template: edpsych/research/labs/fleury.html
     template_data:
         meta_description: "Dr. Fleury's research lab examines how core characteristics of ASD inhibit or promote students’ ability to participate in classroom activities."
