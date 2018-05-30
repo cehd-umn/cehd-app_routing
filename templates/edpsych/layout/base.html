@@ -1,6 +1,11 @@
 {% extends "layout/edpsych_base.html" %}
 {% block css %}
-    <link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+    @media (max-width: 768px) {
+.top-level-nav-link {
+    font-size: 15px;
+    font-weight: 700 !important;
+}
+}<link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
     <link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">
     <link href="/edpsych/ie.css" rel="stylesheet" type="text/css">
 {% endblock %}
@@ -18,6 +23,83 @@
 </script>
 {% endblock %}
 {% block inline_css %}
+<style>
+    nav a:link {
+    color: #666;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+.top-level-nav-link {
+    font-size: 15px;
+    font-weight: 700 !important;
+}
+.secondary-level-nav-link {
+    text-transform: capitalize;
+}
+
+}
+
+@media (max-width: 960px) {
+.container {
+    max-width: 850px !important;
+}
+}
+
+
+@media (min-width: 769px) {
+    nav.inline ul {
+    -ms-display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+nav ul.nav.inline li {
+    border-bottom: 0;
+    border-right: 1px solid;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin: 0;
+}
+
+nav.inline .dropdown-toggle::after {
+    margin-left: 0px;
+}
+
+nav {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important
+}
+}
+
+@media (min-width: 1009px) {
+nav ul.nav.inline li {
+    border-bottom: 0;
+    border-right: 1px solid;
+    padding-right: 5px;
+    padding-left: 9px;
+    margin: 0;
+}
+}
+
+@media (min-width: 1209px) {
+nav ul.nav.inline li {
+    border-bottom: 0;
+    border-right: 1px solid;
+    padding-right: 1.7em;
+    padding-left: .1em;
+    margin: 0;
+}
+}
+
+#home-top-nav-item {
+    padding-left: 0px !important;
+}
+#about-top-nav-item {
+border-right: none;
+     padding-right: 0px !important;
+}
+</style>
 {% endblock %}
 {% block section_wordmark %}
     <a href="{{config.base_url}}/"><img class="dept-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-edpsych.svg" alt="Department of Educational Psychology wordmark."></a>
