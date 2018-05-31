@@ -1,11 +1,14 @@
 {% extends "layout/edpsych_base.html" %}
 {% block css %}
-    @media (max-width: 768px) {
+<style>
+@media (max-width: 768px) {
 .top-level-nav-link {
     font-size: 15px;
     font-weight: 700 !important;
 }
-}<link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+}
+</style> 
+<link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
     <link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">
     <link href="/edpsych/ie.css" rel="stylesheet" type="text/css">
 {% endblock %}
