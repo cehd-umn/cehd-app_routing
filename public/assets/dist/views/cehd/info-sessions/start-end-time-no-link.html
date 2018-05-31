@@ -1,0 +1,7 @@
+<ul class="no-bullet">
+{% for info_session in data.info_sessions %}
+    {% if loop.index0 < data.limit %}
+        <li>{{ info_session.dayOfWeek }}, {{ info_session.fullMonth }} {{ info_session.day }}, {{ info_session.year }} | {{ info_session.startTime }} - {{ info_session.endTime }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
