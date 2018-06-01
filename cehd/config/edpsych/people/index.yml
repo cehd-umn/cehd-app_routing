@@ -53,12 +53,12 @@
     - x500: jmccomas
       section: Special education
       title: associate department chair, special education program coordinator
-    - x500: jiten001
-      section: Special education
-      title: program coordinator
     - x500: coneill
       section: Special education
       title: field placement coordinator
+    - x500: seif0074
+      section: Special education
+      title: director of undergraduate studies
 - section: Emeritus faculty
   query:
     param: tg
