@@ -2914,11 +2914,6 @@
   template: cehd/undergraduate/contact.html
   template_data:
     - section: undergraduate
-/undergraduate/cuevas/:
-  publish: true
-  template: cehd/undergraduate/cuevas.html
-  template_data:
-    - section: undergraduate
 /undergraduate/deans-list/:
   publish: true
   template: cehd/undergraduate/deans-list.html
