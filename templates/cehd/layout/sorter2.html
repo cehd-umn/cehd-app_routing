@@ -12,26 +12,33 @@
         display: none;
     }
 
-@media (max-width: 768px) {
-.selectoption {
-           display: inline-block;
-     width: 47%;
-    margin-right: 2%;
-       } 
-       .halfmobile {
-           display: inline-block;
-     width: 48%;
-    margin-right: 2%;
-       } 
-       .halfmobile2 {
-           display: inline-block;
-     width: 48%;
-       } 
-}
+    .topfilter {
+        background: #e2e2e2;
+        padding: 0 20px 20px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .selectoption {
+            display: inline-block;
+            width: 47%;
+            margin-right: 2%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+     margin-right: 0;
+        }
+    }
 
 
     .filterby {
-        background: #eee;
+        background: rgba(247, 247, 247, .95);
         height: 2em;
         font-size: 16px;
         width: 100%;
@@ -41,6 +48,12 @@
         padding: 5px;
     }
 
+    .titleh3 {
+        margin-bottom: 0;
+    }
+    .resultsh3 {
+        text-align: left !important;
+    }
     #results {
         background: #ffde7a;
         height: 2em;
@@ -50,8 +63,8 @@
         border-radius: 0px;
         border: 0px solid;
         padding: 5px;
-     text-align: center !important;
-     font-weight: 900;
+        text-align: center !important;
+        font-weight: 900;
     }
 
     .searchf {
@@ -64,30 +77,46 @@
     }
 
     #full-text-search-input {
-        margin-bottom: 0px !important;
-        height: 100%;
-    }
+    margin-bottom: 0px !important;
+    height: 100%;
+    border: 0px solid;
+    border-radius: 0px;
+    padding-left: 9px;
+    color: #333 !important;
+    background: rgba(247, 247, 247, .95);
+}
 
     @media (max-width: 970px) {
-.filterarea {
-    width: 100%;
-}
-.halfmobile {
-           display: inline-block;
-     width: 48%;
-    margin-right: 2%;
-       } 
-       .halfmobile2 {
-           display: inline-block;
-     width: 48%;
-       } 
+        #results {
+            text-align: left !important;
         }
-    @media (max-width: 1205px) {
-.topfilter {
-    margin-left: 0 !important;
-    width: 100%;}
+        .resultsh3 {
+            text-align: left !important;
         }
+        .filterarea {
+            width: 100%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+     margin-right: 0;
+        }
+    }
 
+    @media (max-width: 1205px) {
+        .topfilter {
+            margin-left: 0 !important;
+            width: 100%;
+            background: #e2e2e2;
+            padding: 0 20px 20px;
+            margin-top: 20px;
+        }
+    }
 </style>
 {% endblock %} {% block main_content %}
 <div class="row">
@@ -97,10 +126,10 @@
         <div class="span-10 feature topfilter">
 
             <div class="span-7 filterarea">
-                <h3 style="margin-bottom:0;">Filter by areas of study and degrees</h3>
+                <h3 class="titleh3">Filter by areas of study and degrees</h3>
 
                 {% for category_group_title, category_group in categories %}
-                <div class="half selectoption">
+                <div class="half halfmobile">
                     <select class="filterby" id="filters">
                         <option style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
                         {% for category_class, category in category_group %}
@@ -115,13 +144,13 @@
             </div>
 
             <div class="span-2 halfmobile">
-                <h3 style="margin-bottom:0; text-align: center;">Results</h3>
+                <h3 class="titleh3 resultsh3">Results</h3>
                 {# TODO make sure these forms are accessible #}
                 <p id="results"></p>
             </div>
 
-            <div class="span-3 halfmobile2">
-                <h3 style="margin-bottom:0;">Search</h3>
+            <div class="span-3 halfmobile">
+                <h3 class="titleh3">Search</h3>
                 {# TODO make sure these forms are accessible #}
                 <form class="searchf" action="" onsubmit='return false'>
                     <input type="text" id="full-text-search-input" placeholder="Search">
@@ -158,6 +187,9 @@
             $s = $(this);
             $s.attr("placeholder", $s.data("placeholder"));
         });
+
+console.log ($("div#FilterContainer").find("div").length;)
+
     });
 </script>
 
@@ -203,7 +235,7 @@
                   separator: ',',
                   decimal: '.',
             };
-            var newResults = $("div#FilterContainer").find("div." + filters).length;
+            var newResults = $("div#FilterContainer").find("div").length;
 
             var programCount = new CountUp('results', 0, newResults, 0, 5, options);
             if (!programCount.error) {
