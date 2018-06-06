@@ -1,5 +1,4 @@
-{% extends "cehd/layout/base.html" %}
-{% block extra_css %}
+{% extends "cehd/layout/base.html" %} {% block extra_css %}
 <style>
     .category-container {
         background-color: #ffcc33;
@@ -9,59 +8,135 @@
         min-height: 900px;
     }
 
-.hide {
-    display: none;
+    .hide {
+        display: none;
+    }
+
+@media (max-width: 768px) {
+.selectoption {
+           display: inline-block;
+     width: 47%;
+    margin-right: 2%;
+       } 
+       .halfmobile {
+           display: inline-block;
+     width: 48%;
+    margin-right: 2%;
+       } 
+       .halfmobile2 {
+           display: inline-block;
+     width: 48%;
+       } 
 }
+
+
+    .filterby {
+        background: #eee;
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+    }
+
+    #results {
+        background: #ffde7a;
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+     text-align: center !important;
+     font-weight: 900;
+    }
+
+    .searchf {
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+    }
+
+    #full-text-search-input {
+        margin-bottom: 0px !important;
+        height: 100%;
+    }
+
+    @media (max-width: 970px) {
+.filterarea {
+    width: 100%;
+}
+.halfmobile {
+           display: inline-block;
+     width: 48%;
+    margin-right: 2%;
+       } 
+       .halfmobile2 {
+           display: inline-block;
+     width: 48%;
+       } 
+        }
+    @media (max-width: 1205px) {
+.topfilter {
+    margin-left: 0 !important;
+    width: 100%;}
+        }
+
 </style>
-{% endblock %}
-{% block main_content %}
+{% endblock %} {% block main_content %}
 <div class="row">
     <div class="container">
         <h1 style="margin-bottom: 0px;">Academic programs</h1>
 
-<div class="span-10 feature">
+        <div class="span-10 feature topfilter">
 
-    <div class="span-6">
-            <h3 style="margin-bottom:0;">Filter by areas of study and degrees</h3>
+            <div class="span-7 filterarea">
+                <h3 style="margin-bottom:0;">Filter by areas of study and degrees</h3>
 
-        {% for category_group_title, category_group in categories %}
-            <div class="half">
+                {% for category_group_title, category_group in categories %}
+                <div class="half selectoption">
                     <select class="filterby" id="filters">
-            <option disabled selected>{{ category_group_title }}</option>
-            {% for category_class, category in category_group %}
-            <option type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select" data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}" data-ga-category="{{ section }} {{ category }}" value="{{ category_class }}">{{ category }}</option>
-            {% endfor %}
-            <option value="clear">Clear Filters</option>
-            </select>
+                        <option style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
+                        {% for category_class, category in category_group %}
+                        <option type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select"
+                            data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}"
+                            data-ga-category="{{ section }} {{ category }}" value="{{ category_class }}">{{ category }}</option>
+                        {% endfor %}
+                        <option value="clear">Clear Filters</option>
+                    </select>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-    </div>
-        
-    <div class="span-6">
-     <div class="span-6">
-            <h3 style="margin-bottom:0;">Results</h3>
-            {# TODO make sure these forms are accessible #}
-            <p id="results" style="margin:0;"></p>
-    </div>
-    
-    <div class="span-6">
-            <h3 style="margin-bottom:0;">Search</h3>
-            {# TODO make sure these forms are accessible #}
-            <form action="" onsubmit='return false'>
-                <input type="text" id="full-text-search-input" placeholder="Search">
-            </form>
+
+            <div class="span-2 halfmobile">
+                <h3 style="margin-bottom:0; text-align: center;">Results</h3>
+                {# TODO make sure these forms are accessible #}
+                <p id="results"></p>
+            </div>
+
+            <div class="span-3 halfmobile2">
+                <h3 style="margin-bottom:0;">Search</h3>
+                {# TODO make sure these forms are accessible #}
+                <form class="searchf" action="" onsubmit='return false'>
+                    <input type="text" id="full-text-search-input" placeholder="Search">
+                </form>
+            </div>
+
         </div>
     </div>
-    
+    <!-- / container -->
 </div>
-    </div><!-- / container -->
-</div><!-- / row -->
-{% include "cehd/includes/cards.html" %}
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
+<!-- / row -->
+{% include "cehd/includes/cards.html" %} {% endblock %} {% block bottom_js %}{{ parent() }}
 <script src="{{ config.js_base }}/sorter.min.js{{ js_cachebuster }}"></script>
 <script>
-    $(function() {
+    $(function () {
         "use strict";
         var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
         var $s = $("#full-text-search-input");
@@ -69,66 +144,99 @@
         // reads query params and filters on them
         filterManager.setUIState();
 
-        window.onpopstate = function() {
+        window.onpopstate = function () {
             filterManager.setUIState();
         };
 
-        $s.focusin(function() {
+        $s.focusin(function () {
             $s = $(this);
             $s.data("placeholder", $s.attr("placeholder"));
             $s.attr("placeholder", "");
         });
 
-        $s.focusout(function() {
+        $s.focusout(function () {
             $s = $(this);
             $s.attr("placeholder", $s.data("placeholder"));
         });
     });
 </script>
 
-<!-- <script>
-$('select').change(function() { //on change do stuff
-console.log("working");
-$('.' + $(this).val()).show()
-
-console.log($('.' + $(this).val()));
-console.log($('.' + $(this).val()).length);
-
-});
-</script> -->
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>
 <script>
-$( document ).ready(function() {
-    console.log( "ready!" );
-    var results = document.getElementById("results").innerHTML= $("div#FilterContainer").find("div").length;
+    $(document).ready(function () {
+        var options = {  
+            useEasing: true,
+              useGrouping: true,
+              separator: ',',
+              decimal: '.',
+        };
+        var results = $("div#FilterContainer").find("div").length;
 
-});
+        var programCount = new CountUp('results', 0, results, 0, 5, options);
+        if (!programCount.error) {
+            programCount.start();
+        } else {  
+            console.error(programCount.error);
+        }
+        console.log("ready!");
 
-$("select.filterby").change(function(){
-    var filters = $.map($("select.filterby").toArray(), function(e){
-       console.log(e)
-        return $(e).val();
-        console.log($(e).val())
-    }).join(".");
-console.log(filters);
-
-// var clearFilter = filters.endsWith("clear")
-
-if (filters.includes("clear") ) {
-    $("div#FilterContainer").find("div").show();
-    var results = document.getElementById("results").innerHTML= $("div#FilterContainer").find("div").length;
-    filters = "";
-    $('select.filterby').each( function() {
-        $(this).val( $(this).find("option[selected]").val() );
     });
 
-}else {
-    $("div#FilterContainer").find("div").hide();
-    $("div#FilterContainer").find("div." + filters).show();
-    document.getElementById("results").innerHTML= $("div#FilterContainer").find("div." + filters).length;
-    console.log($("div#FilterContainer").find("div." + filters).length);
-}
-    
-});
+    $("select.filterby").change(function () {
+        var filters = $.map($("select.filterby").toArray(), function (e) {
+            console.log(e)
+            return $(e).val();
+            console.log($(e).val())
+        }).join(".");
+        console.log(filters);
+
+        // var clearFilter = filters.endsWith("clear")
+
+        if (filters.includes("clear")) {
+            $("div#FilterContainer").find("div").show();
+
+            var options = {  
+                useEasing: true,
+                  useGrouping: true,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("div#FilterContainer").find("div." + filters).length;
+
+            var programCount = new CountUp('results', 0, newResults, 0, 5, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+            filters = "";
+            $('select.filterby').each(function () {
+                $(this).val($(this).find("option[selected]").val());
+            });
+
+        } else {
+            $("div#FilterContainer").find("div").hide();
+            $("div#FilterContainer").find("div." + filters).show();
+            var options = {  
+                useEasing: true,
+                  useGrouping: true,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("div#FilterContainer").find("div." + filters).length;
+
+            var programCount = new CountUp('results', 0, newResults, 0, 5, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+
+            console.log($("div#FilterContainer").find("div." + filters).length);
+        }
+
+    });
 </script>
 {% endblock %}
