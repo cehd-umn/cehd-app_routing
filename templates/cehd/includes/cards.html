@@ -1,6 +1,6 @@
 <div class="row cards">
     <div class="container">
-        <div class="card-container margin-top-2">
+        <div id="FilterContainer" class="card-container margin-top-2">
             {% for item_title, item in item_data %}
                 {% if item.publish is not defined or item.publish %}
                 <div id="card-{{ loop.index }}" class="card

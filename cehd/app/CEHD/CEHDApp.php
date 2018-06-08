@@ -133,17 +133,15 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         $cardsInstance = new \CEHD\App\Card\ProgramCard\ProgramCards();
         $cards = $cardsInstance->setCards($yaml_file_path)->getCards();
         $categories = $cardsInstance->getCategoriesAndDegrees();
-
         $template_data = [
             "section" => "academics",
             "item_data" => $cardsInstance->getCards(),
             "categories" => $categories,
-            "meta" => $meta,
             "item_data_json" => json_encode($cards),
         ];
-
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
+    
 
     public function topicsPageHandler($request, $response, $service, $app)
     {

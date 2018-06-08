@@ -1,0 +1,311 @@
+{% extends "cehd/layout/base.html" %} {% block extra_css %}
+<style>
+    .category-container {
+        background-color: #ffcc33;
+    }
+
+    #maincontent {
+        min-height: 900px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .topfilter {
+        background: #e2e2e2;
+        padding: 0 20px 20px;
+        margin-top: 20px;
+    }
+
+
+
+    .filterby {
+        background: rgba(247, 247, 247, .95);
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+    }
+
+    .titleh3 {
+        margin-bottom: 0;
+    }
+
+    .resultsh3 {
+        text-align: left !important;
+    }
+
+    #results {
+        background: #ffde7a;
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+        text-align: center !important;
+        font-weight: 900;
+    }
+
+    .searchf {
+        height: 2em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+    }
+
+    #full-text-search-input {
+        margin-bottom: 0px !important;
+        height: 100%;
+        border: 0px solid;
+        border-radius: 0px;
+        padding-left: 9px;
+        color: #333 !important;
+        background: rgba(247, 247, 247, .95);
+    }
+
+    @media (max-width: 1205px) {
+        .topfilter {
+            margin-left: 0 !important;
+            width: 100%;
+            background: #e2e2e2;
+            padding: 0 20px 20px;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 970px) {
+        #results {
+            text-align: left !important;
+        }
+        .resultsh3 {
+            text-align: left !important;
+        }
+        .filterarea {
+            width: 100%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .selectoption {
+            display: inline-block;
+            width: 47%;
+            margin-right: 2%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 460px) {
+        .halfmobile {
+            display: inline-block;
+            width: 100% !important;
+        }
+        .topfilter {
+            padding: 20px 20px;
+        }
+    }
+</style>
+{% endblock %} {% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1 style="margin-bottom: 0px;">Academic programs</h1>
+
+        <div class="span-10 feature topfilter">
+
+            <div class="span-7 filterarea">
+                <h3 class="titleh3">Filter by areas of study and degrees</h3>
+
+                {% for category_group_title, category_group in categories %}
+                <div class="half halfmobile">
+                    <select class="filterby" id="filters">
+                        <option style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
+                        {% for category_class, category in category_group %}
+                        <option type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select"
+                            data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}"
+                            data-ga-category="{{ section }} {{ category }}" value="{{ category_class }}">{{ category }}</option>
+                        {% endfor %}
+                        <option value="clear">Clear Filters</option>
+                    </select>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="span-2 halfmobile">
+                <h3 class="titleh3 resultsh3">Results</h3>
+                {# TODO make sure these forms are accessible #}
+                <p id="results"></p>
+            </div>
+
+            <div class="span-3 halfmobile">
+                <h3 class="titleh3">Search</h3>
+                {# TODO make sure these forms are accessible #}
+                <form class="searchf" action="" onsubmit='return false'>
+                    <input type="text" id="full-text-search-input" placeholder="Search">
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- / container -->
+</div>
+<!-- / row -->
+{% include "cehd/includes/cards.html" %} {% endblock %} {% block bottom_js %}{{ parent() }}
+<script src="{{ config.js_base }}/sorter.min.js{{ js_cachebuster }}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Load initial results count
+        var options = {  
+            useEasing: false,
+              useGrouping: false,
+              separator: ',',
+              decimal: '.',
+        };
+        var results = $("div#FilterContainer").find("div").length;
+
+        var programCount = new CountUp('results', 0, results, 0, 5, options);
+        if (!programCount.error) {
+            programCount.start();
+        } else {  
+            console.error(programCount.error);
+        }
+
+        // Load Search Function
+        // $("#full-text-search-input").on("keyup", function () {
+        //     var value = $(this).val().toLowerCase();
+        //     $("#FilterContainer div").filter(function () {
+        //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+        //     });
+        // }); // End of Searcb Function Load
+
+
+    });
+</script>
+
+<script>
+    
+$('#FilterContainer div').each(function(){
+$(this).attr('data-search-term', $(this).text().toLowerCase());
+});
+
+$('#full-text-search-input').on('keyup', function(){
+
+var searchTerm = $(this).val().toLowerCase();
+
+    $('#FilterContainer div').each(function(){
+
+        if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+            $(this).show();
+        } else {
+            $(this).hide(1000);
+            var options = {  
+                useEasing: false,
+                  useGrouping: false,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("#FilterContainer div:visible").length;
+            var programCount = new CountUp('results', 0, newResults, 0, 1, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+
+        }
+
+    });
+
+});
+
+</script>
+
+<script>
+
+    $("select.filterby").change(function () {
+        var filters = $.map($("select.filterby").toArray(), function (e) {
+            return $(e).val();
+            console.log($(e).val())
+        }).join(".");
+        console.log(filters);
+
+        // var clearFilter = filters.endsWith("clear")
+
+        if (filters.includes("clear")) {
+            $("div#FilterContainer").find("div").show(2000);
+            var options = {  
+                useEasing: false,
+                  useGrouping: false,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("div#FilterContainer").find("div").length;
+
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+
+            filters = "";
+            $('select.filterby').each(function () {
+                $(this).val($(this).find("option[selected]").val());
+            });
+
+        } else {
+            $("div#FilterContainer").find("div").hide(1000);
+            $("div#FilterContainer").find("div." + filters).show(0);
+            var options = {  
+                useEasing: false,
+                  useGrouping: false,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("div#FilterContainer").find("div." + filters).length;
+
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+
+            console.log($("div#FilterContainer").find("div." + filters).length);
+        }
+
+    });
+
+</script>
+{% endblock %}
