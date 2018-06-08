@@ -18,23 +18,6 @@
         margin-top: 20px;
     }
 
-    @media (max-width: 768px) {
-        .selectoption {
-            display: inline-block;
-            width: 47%;
-            margin-right: 2%;
-        }
-        .halfmobile {
-            display: inline-block;
-            width: 48%;
-            margin-right: 2%;
-        }
-        .halfmobile:last-child {
-            display: inline-block;
-            width: 48%;
-     margin-right: 0;
-        }
-    }
 
 
     .filterby {
@@ -51,9 +34,11 @@
     .titleh3 {
         margin-bottom: 0;
     }
+
     .resultsh3 {
         text-align: left !important;
     }
+
     #results {
         background: #ffde7a;
         height: 2em;
@@ -77,14 +62,24 @@
     }
 
     #full-text-search-input {
-    margin-bottom: 0px !important;
-    height: 100%;
-    border: 0px solid;
-    border-radius: 0px;
-    padding-left: 9px;
-    color: #333 !important;
-    background: rgba(247, 247, 247, .95);
-}
+        margin-bottom: 0px !important;
+        height: 100%;
+        border: 0px solid;
+        border-radius: 0px;
+        padding-left: 9px;
+        color: #333 !important;
+        background: rgba(247, 247, 247, .95);
+    }
+
+    @media (max-width: 1205px) {
+        .topfilter {
+            margin-left: 0 !important;
+            width: 100%;
+            background: #e2e2e2;
+            padding: 0 20px 20px;
+            margin-top: 20px;
+        }
+    }
 
     @media (max-width: 970px) {
         #results {
@@ -104,17 +99,36 @@
         .halfmobile:last-child {
             display: inline-block;
             width: 48%;
-     margin-right: 0;
+            margin-right: 0;
         }
     }
 
-    @media (max-width: 1205px) {
+
+    @media (max-width: 768px) {
+        .selectoption {
+            display: inline-block;
+            width: 47%;
+            margin-right: 2%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 460px) {
+        .halfmobile {
+            display: inline-block;
+            width: 100% !important;
+        }
         .topfilter {
-            margin-left: 0 !important;
-            width: 100%;
-            background: #e2e2e2;
-            padding: 0 20px 20px;
-            margin-top: 20px;
+            padding: 20px 20px;
         }
     }
 </style>
@@ -164,43 +178,16 @@
 <!-- / row -->
 {% include "cehd/includes/cards.html" %} {% endblock %} {% block bottom_js %}{{ parent() }}
 <script src="{{ config.js_base }}/sorter.min.js{{ js_cachebuster }}"></script>
-<script>
-    $(function () {
-        "use strict";
-        var filterManager = new FilterManager(".card-container", ".card-select", "#full-text-search-input");
-        var $s = $("#full-text-search-input");
-
-        // reads query params and filters on them
-        filterManager.setUIState();
-
-        window.onpopstate = function () {
-            filterManager.setUIState();
-        };
-
-        $s.focusin(function () {
-            $s = $(this);
-            $s.data("placeholder", $s.attr("placeholder"));
-            $s.attr("placeholder", "");
-        });
-
-        $s.focusout(function () {
-            $s = $(this);
-            $s.attr("placeholder", $s.data("placeholder"));
-        });
-
-console.log ($("div#FilterContainer").find("div").length;)
-
-    });
-</script>
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>
+
 <script>
     $(document).ready(function () {
+        // Load initial results count
         var options = {  
-            useEasing: true,
-              useGrouping: true,
+            useEasing: false,
+              useGrouping: false,
               separator: ',',
               decimal: '.',
         };
@@ -212,13 +199,62 @@ console.log ($("div#FilterContainer").find("div").length;)
         } else {  
             console.error(programCount.error);
         }
-        console.log("ready!");
+
+        // Load Search Function
+        // $("#full-text-search-input").on("keyup", function () {
+        //     var value = $(this).val().toLowerCase();
+        //     $("#FilterContainer div").filter(function () {
+        //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+        //     });
+        // }); // End of Searcb Function Load
+
+
+    });
+</script>
+
+<script>
+    
+$('#FilterContainer div').each(function(){
+$(this).attr('data-search-term', $(this).text().toLowerCase());
+});
+
+$('#full-text-search-input').on('keyup', function(){
+
+var searchTerm = $(this).val().toLowerCase();
+
+    $('#FilterContainer div').each(function(){
+
+        if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+            $(this).show();
+        } else {
+            $(this).hide(1000);
+            var options = {  
+                useEasing: false,
+                  useGrouping: false,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var newResults = $("#FilterContainer div:visible").length;
+            var programCount = new CountUp('results', 0, newResults, 0, 1, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+
+        }
 
     });
 
+});
+
+</script>
+
+<script>
+
     $("select.filterby").change(function () {
         var filters = $.map($("select.filterby").toArray(), function (e) {
-            console.log(e)
             return $(e).val();
             console.log($(e).val())
         }).join(".");
@@ -227,39 +263,39 @@ console.log ($("div#FilterContainer").find("div").length;)
         // var clearFilter = filters.endsWith("clear")
 
         if (filters.includes("clear")) {
-            $("div#FilterContainer").find("div").show();
-
+            $("div#FilterContainer").find("div").show(2000);
             var options = {  
-                useEasing: true,
-                  useGrouping: true,
+                useEasing: false,
+                  useGrouping: false,
                   separator: ',',
                   decimal: '.',
             };
             var newResults = $("div#FilterContainer").find("div").length;
 
-            var programCount = new CountUp('results', 0, newResults, 0, 5, options);
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
             if (!programCount.error) {
                 programCount.start();
             } else {  
                 console.error(programCount.error);
             }
+
             filters = "";
             $('select.filterby').each(function () {
                 $(this).val($(this).find("option[selected]").val());
             });
 
         } else {
-            $("div#FilterContainer").find("div").hide();
-            $("div#FilterContainer").find("div." + filters).show();
+            $("div#FilterContainer").find("div").hide(1000);
+            $("div#FilterContainer").find("div." + filters).show(0);
             var options = {  
-                useEasing: true,
-                  useGrouping: true,
+                useEasing: false,
+                  useGrouping: false,
                   separator: ',',
                   decimal: '.',
             };
             var newResults = $("div#FilterContainer").find("div." + filters).length;
 
-            var programCount = new CountUp('results', 0, newResults, 0, 5, options);
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
             if (!programCount.error) {
                 programCount.start();
             } else {  
@@ -270,5 +306,6 @@ console.log ($("div#FilterContainer").find("div").length;)
         }
 
     });
+
 </script>
 {% endblock %}
