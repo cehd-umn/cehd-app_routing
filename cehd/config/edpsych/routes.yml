@@ -79,6 +79,12 @@
     template_data:
         meta_description: null
         section: alumni
+/edpsych/alumni/alumni-profiles/:
+    publish: true
+    template: edpsych/alumni/alumni-profiles.html
+    template_data:
+        meta_description: "Discover what Department of Educational Psychology alums working on today."
+        section: alumni
 
 # Contact
 /edpsych/contact/:

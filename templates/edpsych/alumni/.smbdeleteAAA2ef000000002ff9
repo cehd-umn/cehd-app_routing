@@ -1,0 +1,13 @@
+{% extends "edpsych/layout/section.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Alumni profiles" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="container">
+      <h2 class="h1 text-center first">{{ page_title }}</h2>
+  </div>
+</div>
