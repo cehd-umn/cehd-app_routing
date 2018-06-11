@@ -2999,6 +2999,11 @@
   template: cehd/undergraduate/shaw.html
   template_data:
     - section: undergraduate
+/undergraduate/student-services/:
+  publish: false
+  template: cehd/undergraduate/student-services.html
+  template_data:
+    - section: undergraduate
 /undergraduate/stumme-berry/:
   publish: true
   template: cehd/undergraduate/stumme-berry.html

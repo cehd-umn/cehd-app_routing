@@ -1,0 +1,316 @@
+{% extends "edpsych/layout/section.html" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{%- import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Alumni profiles" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="container">
+      <h2 class="h1 text-center first">{{ page_title }}</h2>
+          <p class="text-center">Get to know some of our alumni, learn about their experience in our programs, and see what they are doing now.</p>
+<h2 class="text-center">Counseling and student personnel psychology</h2>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Abby_Whalen.jpg" alt="Abby headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Abby Whalen<small class="clear h4 light">School counselor</small></h3>
+      <p>Abby Whalen initially pursued a degree in chemistry, but wasn't sure what she wanted to do after graduation. She took two years to do volunteer work and during this time found a passion for school counseling. Read more about Abby's story here.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Jeanette_Vyhanek.jpg" alt="Jeanette headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Jeanette Vyhanek<small class="clear h4 light">School counselor</small></h3>
+      <p>Jeanette Vyhanek was a high school principle's assistant before realizing her desire to work more closely with students. This led her to pursue her M.A. in the CSPP program. Read more about her story here.</a></p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/mthuen.jpg" alt="Marin headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Marin Thuen<small class="clear h4 light">School counselor</small></h3>
+      <p>Marin Thuen is currently a school counselor at Olson Middle School in North Minneapolis. In this role she does individual counseling, small group counseling, classroom lessons, crisis counseling, therapy referrals, and serves as a member of several school-wide teams. Read more about how the CSPP program prepared and challenged her for her future career here.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Masha_Finn.jpg" alt="Masha headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Masha Finn<small class="clear h4 light">Career counselor</small></h3>
+      <p>Masha Finn didn't take one psychology class during her undergraduate career and studied french and francophone studies. A work study position as a career advisor gave her a taste of counseling, ultimatley leading her to pursure her M.A. in the CSPP program. Read more about Masha's story here. </a></p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/SarahGustafson-Dambeck.jpg" alt="Sarah headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Sarah Gustafson-Dambeck<small class="clear h4 light">Access consultant</small></h3>
+      <p>We asked Sarah Gustafson-Dambeck, CSPP alumni and now access consultant for the University of Minnesota's Diability Resource Center, some question about her experience in the program. Read what she had to say here.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<h2 class="text-center">Psychological foundations of education</h2>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Lara_Jessen.jpg" alt="Lara headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Lara Jessen<small class="clear h4 light">Data scientist</small></h3>
+      <p>Lara Jessen is a data scientist for Minneapolis Public Schools, where she supports community partners and schools eith data-based decision making and data literacy. Read more about how Lara's experience in the psych foundations program and how she got to where she is now.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Michael_Mensink.jpg" alt="Mike headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Mike Mensink<small class="clear h4 light">Associate professor</small></h3>
+      <p>Mensink graduated with a B.A. in psychology from St. Olaf College in 2002 and after graduation worked a number of odd jobs, including Best Buy salesman and TSA security screener. In 2003 he was hired as a Laboratory Instructor and Manager at Macalester College, and his experiences in that job kindled his interest in pursuing a graduate degree specifically focused on understanding learning. Mensink started pursuing a M.A. degree but eventually switched to the Ph.D. track in 2006 and finished in 2011. Read more about Mike's story here.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/scarlson.jpg" alt="Sarah Carlson headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Sarah Carlson<small class="clear h4 light">Assistant professor</small></h3>
+      <p>Sarah Carlson received her bachelor’s degree in psychology, where she found an interest in research and found she was interested in applying what she was learning to an educational environment. This led her to look for Education Psychology programs, and she found she was most interested in the University of Minnesota. Carlson ended up completing both her M.A. and Ph.D. in the psychological foundations in education program. Read more about her experience here.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Virginia_Clinton.jpg" alt="Virgina headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Virginia Clinton<small class="clear h4 light">Assistant professor</small></h3>
+      <p>Virginia Clinton began as a classroom teacher in New York City and started becoming curious about how her students were learning. This lead her to read about educational psychology on her own, and promoted her to get her Ph.D. in the topic. Now an Assistant professor at the Univeristy of North Dakota, Clinton both teaches as well as does research. Read more about Clinton and her experience here.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<h2 class="text-center">Quantitative methods in education</h2>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Alison_Phillips.jpg" alt="Alison headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Alison Phillips<small class="clear h4 light">Senior quantitative analyst</small></h3>
+      <p>Alison Phillips always knew she wanted to be a high school math teacher—until she didn’t. After two high-school teaching positions, Phillips decided to leave that field and puruse her graduate degree in the QME program. Read more about Alison's story here.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Brandon_LeBeau.jpg" alt="Brandon headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Brandon LeBeau<small class="clear h4 light">Assistant professor</small></h3>
+      <p>Brandon LeBeau, an alumni of the quantitative methods in education (QME) program is currently Assistant Professor of Educational Measurement and Statistics at the University of Iowa. In this position he teaches applied statistics courses at the undergraduate, masters, and doctoral level. Read more about Brandon and how he got to where he is.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Katherine_Edwards.jpg" alt="Katherine headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Katherine Edwards<small class="clear h4 light">Data and research analyst</small></h3>
+      <p>Katherine Edwards received her bachelor’s in math and psychology with minors in education and statistics. Her psychology major allowed her to study abroad in Denmark where she participated in an educational psychology program and was introduced to their education system. In Denmark and after talking to some teachers, she decided she would be better off doing something else in education other than teaching. Edwards knew she wanted to pursue a graduate degree, leading her to the Department of Educational Psychology's QME program. Read more about Katherine's story here. </p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Laura_Ziegler.jpg" alt="Laura headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Laura Ziegler<small class="clear h4 light">Lecturer</small></h3>
+      <p>Before coming to U of M, Laura Ziegler had been teaching for 6 years. Now a lecuter at Iowa State University, Ziegler explains how what she learned in graduate school completely changed her approach to teaching. Read more about Laura and her experience in the QME program here.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Okan-Bulut.jpg" alt="Okan headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Okan Bulut<small class="clear h4 light">Associate professor</small></h3>
+      <p>Okan Bulut received his bachelor’s degree in elementary education in Turkey. Knowing he wanted to expand his knowledge, Bulut applied for a graduate scholarship and decided to pursue a degree abroad. Impressed by the QME program and faculty, Bulut applied and found himself in Minneapolis a few weeks later. Read more about Okan and his experience here.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Quinton_Love.jpg" alt="Quinton headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Quinton Love<small class="clear h4 light">Psychometrician</small></h3>
+      <p>Quinton Love was a middle school math teacher in 2015 and initially pursued Mathematics Education at the University of Minnesota. However, after taking some courses in the Educational Psychology department, knew he had to switch. Read more about Quinton's experience in the QME program and where he is now.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<h2 class="text-center">School psychology</h2>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Aleksis_Kincaid.jpg" alt="Aleksis headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Aleksis Kincaid<small class="clear h4 light">District response-to-intervention coordinator and school psychologist</small></h3>
+      <p>Aleksis Kincaid is currently district response-to-intervention coordinator and school psychologist for The School District of New Richmond in New Richmond, Wisconsin and says he uses what he learned in the school pyschology program daily in his position. Read more about Aleksis and how receiving his PhD in school psychology set him up for success.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/charty.jpg" alt="Claire headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Claire Harty<small class="clear h4 light">School psychologist</small></h3>
+      <p>Claire Harty is currently a school psychologist in a small school district in the Bay Area. She works with a diverse group of students in grades K-8 and her role includes assessment for special education eligibility, behavior intervention, and consultation with teachers and families. Read more about Claire and how her experience in the school psychology program led her to where she is now.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/David_Parker.jpg" alt="David headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">David Parker<small class="clear h4 light">Vice president for research and development</small></h3>
+      <p>David Parker is currently Vice President for Research and Development at ServeMinnesota, which is Minnesota’s AmeriCorps commission. In this position, Parker leads program evaluation, development of innovative practices, and design of technical systems. Read more about how David's degree in school psychology has impacted what he does today.</p>
+    </div>
+  </div>
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Ethan_VanNorman.jpg" alt="Ethan headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Ethan Van Norman<small class="clear h4 light">Assistant professor</small></h3>
+      <p>Now as an assistant professor himself, Ethan Van Norman notes how he can recognize how strong the University of Minnesota's school psychology program is. Read more about Ethan's work now and experience in the program here.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Joo_Ree_Chu.jpg" alt="Joo Ree headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Joo Ree Chu<small class="clear h4 light">School psychologist</small></h3>
+      <p>Throughout her undergrad, Joo Ree Chu led a mentoring program with Korean college students and local Korean adoptees. She majored in Psychology and worked for a nonprofit mental health organization upon graduating. Through these experience, Chu found she had a passion for working with youth. Read more about her path to school psychology here.</p>
+</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<h2 class="text-center">Special education</h2>
+<section>
+  <div class="row">
+    <div class="container">
+  <div class="half">
+    <div class="span-3">
+        <img src="{{config.asset_base}}/dist/images/Alumni/alumni-profiles/Gina_Theesfeld.jpg" alt="Gina headshot"/>
+    </div>
+    <div class="span-9">
+      <h3 class="no-margin-top">Gina Marie Theesfeld<small class="clear h4 light">Special education teacher</small></h3>
+      <p>Gina Marie Theesfeld has always been passionate about children that are diagnosed with emotional behavioral disorder (EBD). She started off in the fields of criminal justice and law, but saw an opportunity to help kids in the field of teaching. Read more about how her special education degree is helping her make a difference in the lives of children with EBD here.
+</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+    </div>
+</div>
+
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {#- Alumni news -#}
+    {{ newsfeed.news_feed_js(
+        "category/alumni-educational-psychology/feed/",
+        "#alumni-news-container",
+        "index.html",
+        3,
+        "http://news.cehd.umn.edu/",
+        "More news",
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
+    ) }}
+
+    {#- Dept news -#}
+    {{ newsfeed.news_feed_js(
+        "category/departments/department-news-no-alumni/feed/",
+        "#dept-news-container",
+        "index.html",
+        3,
+        "http://news.cehd.umn.edu/",
+        "More news",
+        "/edpsych/assets/dist/views/edpsych/newsfeeds"
+    ) }}
+
+    {#-
+        Events feed
+        * the first value passed in for for the t query param
+    -#}
+    {{ eventsfeed.events_feed_js(
+        355
+    ) }}
+
+{% endblock %}
