@@ -13,16 +13,25 @@
     }
 
     .topfilter {
-        background: #e2e2e2;
-        padding: 0 20px 20px;
+        background: transparent;
+        padding: 0 20px 0px;
         margin-top: 20px;
     }
 
+    .clearfilter {
+        font-weight: 900 !important;
+        margin: 0 !important;
+        padding-left: 25px !important;
+        border-top: 1px solid !important;
+    }
 
+    .card-select {
+        font-size: 14px;
+    }
 
     .filterby {
         background: rgba(247, 247, 247, .95);
-        height: 2em;
+        height: 3em;
         font-size: 16px;
         width: 100%;
         margin: .5em auto;
@@ -40,8 +49,9 @@
     }
 
     #results {
-        background: #ffde7a;
-        height: 2em;
+        background: rgba(247, 247, 247, .95);
+        height: 3em;
+        line-height: 2.5em;
         font-size: 16px;
         width: 100%;
         margin: .5em auto;
@@ -53,7 +63,7 @@
     }
 
     .searchf {
-        height: 2em;
+        height: 3em;
         font-size: 16px;
         width: 100%;
         margin: .5em auto;
@@ -75,8 +85,6 @@
         .topfilter {
             margin-left: 0 !important;
             width: 100%;
-            background: #e2e2e2;
-            padding: 0 20px 20px;
             margin-top: 20px;
         }
     }
@@ -127,43 +135,114 @@
             display: inline-block;
             width: 100% !important;
         }
-        .topfilter {
-            padding: 20px 20px;
+        .topfilter {}
+        .resultsmobile {
+            width: 35% !important;
+            margin-right: 3%;
         }
+        .searchmobile {
+            width: 61% !important;
+            margin-right: 0%;
+        }
+
+        select option:last-child {
+            font-size: 7pt;
+        }
+
+    }
+
+
+
+    .select2-container--default .select2-selection--single {
+        background-color: rgba(247, 247, 247, .95) !important;
+        border: 0px solid #aaa !important;
+        border-radius: 0px !important;
+        height: 3rem !important;
+        margin: .5em auto !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #444;
+        line-height: 3rem !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 26px;
+        position: absolute;
+        top: 20px !important;
+        right: 1px;
+        width: 20px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .category-select {
+        margin: 0 !important;
+        padding: 5px 20px !important;
+    }
+    {# .select2-results__option {
+        padding: 5px 20px !important;
+    } #}
+
+    .select2-dropdown {
+        background-color: rgba(247, 247, 247, .95) !important;
+        border: 0px solid #ccc !important;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: -100000px;
+        width: 100%;
+        z-index: 1051;
+        margin-top: -10px !important;
+    }
+
+    .select2-search--dropdown {
+        display: none !important;
+        padding: 4px;
+    }
+    .select2-container--default .select2-results__option[aria-disabled=true] {
+        color: #999;
+        display: none;
     }
 </style>
+<script>
+</script>
 {% endblock %} {% block main_content %}
 <div class="row">
     <div class="container">
         <h1 style="margin-bottom: 0px;">Academic programs</h1>
 
-        <div class="span-10 feature topfilter">
+        <div class="span-12 topfilter">
 
             <div class="span-7 filterarea">
                 <h3 class="titleh3">Filter by areas of study and degrees</h3>
 
                 {% for category_group_title, category_group in categories %}
                 <div class="half halfmobile">
-                    <select class="filterby" id="filters">
+                    <select class="filterby select2" id="filters">
                         <option style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
                         {% for category_class, category in category_group %}
                         <option type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select"
                             data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}"
                             data-ga-category="{{ section }} {{ category }}" value="{{ category_class }}">{{ category }}</option>
                         {% endfor %}
-                        <option value="clear">Clear Filters</option>
+                        <hr>
+                        <option class="card-select category-select clearfilter" value="clear">Clear Filters</option>
                     </select>
                 </div>
                 {% endfor %}
             </div>
 
-            <div class="span-2 halfmobile">
+            <div class="span-2 halfmobile resultsmobile">
                 <h3 class="titleh3 resultsh3">Results</h3>
                 {# TODO make sure these forms are accessible #}
                 <p id="results"></p>
             </div>
 
-            <div class="span-3 halfmobile">
+            <div class="span-3 halfmobile searchmobile">
                 <h3 class="titleh3">Search</h3>
                 {# TODO make sure these forms are accessible #}
                 <form class="searchf" action="" onsubmit='return false'>
@@ -181,6 +260,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -201,58 +283,71 @@
         }
 
         // Load Search Function
-        // $("#full-text-search-input").on("keyup", function () {
-        //     var value = $(this).val().toLowerCase();
-        //     $("#FilterContainer div").filter(function () {
-        //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+         $("#full-text-search-input").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+        $("#FilterContainer div").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 
-        //     });
-        // }); // End of Searcb Function Load
-
-
-    });
-</script>
-
-<script>
-    
-$('#FilterContainer div').each(function(){
-$(this).attr('data-search-term', $(this).text().toLowerCase());
-});
-
-$('#full-text-search-input').on('keyup', function(){
-
-var searchTerm = $(this).val().toLowerCase();
-
-    $('#FilterContainer div').each(function(){
-
-        if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
-            $(this).show();
-        } else {
-            $(this).hide(1000);
+            newResults= $("div.card-container > div.card:visible").length;
             var options = {  
                 useEasing: false,
                   useGrouping: false,
                   separator: ',',
                   decimal: '.',
             };
-            var newResults = $("#FilterContainer div:visible").length;
-            var programCount = new CountUp('results', 0, newResults, 0, 1, options);
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
             if (!programCount.error) {
                 programCount.start();
             } else {  
                 console.error(programCount.error);
             }
+        });
+         }); // End of Searcb Function Load #}
 
-        }
-
+         $("select").select2({
+            templateResult: function (data, container) {
+                if (data.element) {
+                    $(container).addClass($(data.element).attr("class"));
+                }
+                return data.text;
+            }
+        });
     });
-
-});
-
 </script>
 
 <script>
+    {# $('#FilterContainer div').each(function () {
+        $(this).attr('data-search-term', $(this).text().toLowerCase());
+        console.log($(this).attr('data-search-term', $(this).text().toLowerCase().length));
+    });
+    
+    $('#full-text-search-input').on('keyup', function () {
+        var searchTerm = $(this).val().toLowerCase();
+        $('#FilterContainer div').each(function () {
+            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length <
+                1) {
+                $(this).show();
+            } else {
+                $(this).hide(1000);
+                var options = {  
+                    useEasing: false,
+                      useGrouping: false,
+                      separator: ',',
+                      decimal: '.',
+                };
+                var newResults = $("#FilterContainer div:visible").length;
+                var programCount = new CountUp('results', 0, newResults, 0, 1, options);
+                if (!programCount.error) {
+                    programCount.start();
+                } else {  
+                    console.error(programCount.error);
+                }
+            }
+        });
+    }); #}
+</script>
 
+<script>
     $("select.filterby").change(function () {
         var filters = $.map($("select.filterby").toArray(), function (e) {
             return $(e).val();
@@ -264,6 +359,8 @@ var searchTerm = $(this).val().toLowerCase();
 
         if (filters.includes("clear")) {
             $("div#FilterContainer").find("div").show(2000);
+            document.getElementById('full-text-search-input').value = ''
+
             var options = {  
                 useEasing: false,
                   useGrouping: false,
@@ -285,8 +382,10 @@ var searchTerm = $(this).val().toLowerCase();
             });
 
         } else {
+
             $("div#FilterContainer").find("div").hide(1000);
             $("div#FilterContainer").find("div." + filters).show(0);
+
             var options = {  
                 useEasing: false,
                   useGrouping: false,
@@ -303,9 +402,33 @@ var searchTerm = $(this).val().toLowerCase();
             }
 
             console.log($("div#FilterContainer").find("div." + filters).length);
+
+            filterResults = $("div#FilterContainer").find("div." + filters);
+
+            // Load Search Function
+            $("#full-text-search-input").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+            $(filterResults).filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            newResults= $("div.card-container > div.card:visible").length;
+            var options = {  
+                useEasing: false,
+                  useGrouping: false,
+                  separator: ',',
+                  decimal: '.',
+            };
+            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
+            if (!programCount.error) {
+                programCount.start();
+            } else {  
+                console.error(programCount.error);
+            }
+        });
+
+         }); // End of Searcb Function Load #}
+
         }
 
     });
-
 </script>
 {% endblock %}
