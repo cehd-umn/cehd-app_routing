@@ -59,7 +59,6 @@
         border: 0px solid;
         padding: 5px;
         text-align: center !important;
-        font-weight: 900;
     }
 
     .searchf {
@@ -80,7 +79,9 @@
         color: #333 !important;
         background: rgba(247, 247, 247, .95);
     }
-
+    .input::placeholder {
+        color: red;
+      }
     @media (max-width: 1205px) {
         .topfilter {
             margin-left: 0 !important;
@@ -91,7 +92,7 @@
 
     @media (max-width: 970px) {
         #results {
-            text-align: left !important;
+            text-align: center !important;
         }
         .resultsh3 {
             text-align: left !important;
@@ -182,9 +183,13 @@
         margin: 0 !important;
         padding: 5px 20px !important;
     }
-    {# .select2-results__option {
-        padding: 5px 20px !important;
-    } #}
+
+        {
+        # .select2-results__option {
+            padding: 5px 20px !important;
+        }
+        #
+    }
 
     .select2-dropdown {
         background-color: rgba(247, 247, 247, .95) !important;
@@ -203,9 +208,18 @@
         display: none !important;
         padding: 4px;
     }
+
     .select2-container--default .select2-results__option[aria-disabled=true] {
         color: #999;
         display: none;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        font-size:14px;
+    }
+
+    #full-text-search-input {
+        font-size: 14px !important;
     }
 </style>
 <script>
@@ -283,28 +297,28 @@
         }
 
         // Load Search Function
-         $("#full-text-search-input").on("keyup", function () {
+        $("#full-text-search-input").on("keyup", function () {
             var value = $(this).val().toLowerCase();
-        $("#FilterContainer div").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $("#FilterContainer div").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 
-            newResults= $("div.card-container > div.card:visible").length;
-            var options = {  
-                useEasing: false,
-                  useGrouping: false,
-                  separator: ',',
-                  decimal: '.',
-            };
-            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
-            if (!programCount.error) {
-                programCount.start();
-            } else {  
-                console.error(programCount.error);
-            }
-        });
-         }); // End of Searcb Function Load #}
+                newResults = $("div.card-container > div.card:visible").length;
+                var options = {  
+                    useEasing: false,
+                      useGrouping: false,
+                      separator: ',',
+                      decimal: '.',
+                };
+                var programCount = new CountUp('results', 0, newResults, 0, 2, options);
+                if (!programCount.error) {
+                    programCount.start();
+                } else {  
+                    console.error(programCount.error);
+                }
+            });
+        }); // End of Searcb Function Load #}
 
-         $("select").select2({
+        $("select").select2({
             templateResult: function (data, container) {
                 if (data.element) {
                     $(container).addClass($(data.element).attr("class"));
@@ -316,35 +330,38 @@
 </script>
 
 <script>
-    {# $('#FilterContainer div').each(function () {
-        $(this).attr('data-search-term', $(this).text().toLowerCase());
-        console.log($(this).attr('data-search-term', $(this).text().toLowerCase().length));
-    });
-    
-    $('#full-text-search-input').on('keyup', function () {
-        var searchTerm = $(this).val().toLowerCase();
+    {#
         $('#FilterContainer div').each(function () {
-            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length <
-                1) {
-                $(this).show();
-            } else {
-                $(this).hide(1000);
-                var options = {  
-                    useEasing: false,
-                      useGrouping: false,
-                      separator: ',',
-                      decimal: '.',
-                };
-                var newResults = $("#FilterContainer div:visible").length;
-                var programCount = new CountUp('results', 0, newResults, 0, 1, options);
-                if (!programCount.error) {
-                    programCount.start();
-                } else {  
-                    console.error(programCount.error);
-                }
-            }
+            $(this).attr('data-search-term', $(this).text().toLowerCase());
+            console.log($(this).attr('data-search-term', $(this).text().toLowerCase().length));
         });
-    }); #}
+
+        $('#full-text-search-input').on('keyup', function () {
+            var searchTerm = $(this).val().toLowerCase();
+            $('#FilterContainer div').each(function () {
+                if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm
+                    .length <
+                    1) {
+                    $(this).show();
+                } else {
+                    $(this).hide(1000);
+                    var options = {  
+                        useEasing: false,
+                          useGrouping: false,
+                          separator: ',',
+                          decimal: '.',
+                    };
+                    var newResults = $("#FilterContainer div:visible").length;
+                    var programCount = new CountUp('results', 0, newResults, 0, 1, options);
+                    if (!programCount.error) {
+                        programCount.start();
+                    } else {  
+                        console.error(programCount.error);
+                    }
+                }
+            });
+        });
+    } #}
 </script>
 
 <script>
@@ -408,24 +425,24 @@
             // Load Search Function
             $("#full-text-search-input").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-            $(filterResults).filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            newResults= $("div.card-container > div.card:visible").length;
-            var options = {  
-                useEasing: false,
-                  useGrouping: false,
-                  separator: ',',
-                  decimal: '.',
-            };
-            var programCount = new CountUp('results', 0, newResults, 0, 2, options);
-            if (!programCount.error) {
-                programCount.start();
-            } else {  
-                console.error(programCount.error);
-            }
-        });
+                $(filterResults).filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    newResults = $("div.card-container > div.card:visible").length;
+                    var options = {  
+                        useEasing: false,
+                          useGrouping: false,
+                          separator: ',',
+                          decimal: '.',
+                    };
+                    var programCount = new CountUp('results', 0, newResults, 0, 2, options);
+                    if (!programCount.error) {
+                        programCount.start();
+                    } else {  
+                        console.error(programCount.error);
+                    }
+                });
 
-         }); // End of Searcb Function Load #}
+            }); // End of Searcb Function Load #}
 
         }
 
