@@ -248,7 +248,7 @@ class Event extends \CEHD\App\XML\XML
 
         $this->relatedEventURL = $this->getFromProperty($event->relatedEventURL);
 
-        $this->_setAudience($event->audiences);
+        $this->_setAudiences($event->audiences);
     }
 
 
@@ -259,21 +259,21 @@ class Event extends \CEHD\App\XML\XML
      */
     private function _createAudience($audienceData)
     {
-        $audiences = new Audience();
-        $audiences->audienceCode   = $this->toString($audienceData->audienceCode);
-        $audiences->audienceDescr  = $this->toString($audienceData->audienceDescr);
-        return $audiences;
+        $audience = new Audience();
+        $audience->audienceCode   = $this->toString($audienceData->audienceCode);
+        $audience->audienceDescr  = $this->toString($audienceData->audienceDescr);
+        return $audience;
     }
 
     /**
      * Sets $this->audiences
      *
-     * @param object $audienceData - An XML object from an representing audiences
+     * @param object $audiencesData - An XML object from an representing audiences
      */
-    private function _setAudience($audienceData)
+    private function _setAudiences($audiencesData)
     {
-        if (property_exists($audienceData, "audience")) {
-            foreach ($audienceData->audience as $audienceData) {
+        if (property_exists($audiencesData, "audience")) {
+            foreach ($audiencesData->audience as $audienceData) {
                 array_push($this->audiences, $this->_createAudience($audienceData));
             }
         }
