@@ -12,6 +12,21 @@ namespace CEHD\XML\Event;
 
 require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
 
+class Audience
+{  
+    /**
+     * @type string
+     */
+    public $audienceCode;
+
+    /**
+     * @type string
+     */
+    public $audienceDescr;
+
+}
+
+
 /**
  * Event class
  *
@@ -81,14 +96,14 @@ class Event extends \CEHD\App\XML\XML
     public $audiences = [];
 
     /**
-     * @type array
+     * @type string
      */
-    // public $audienceCode = [];
+    // public $audienceCode;
 
     /**
-     * @type array
+     * @type string
      */
-    // public $audienceDescr = [];
+    // public $audienceDescr;
 
     /**
      * @type string
@@ -222,8 +237,6 @@ class Event extends \CEHD\App\XML\XML
         $this->location = $this->getFromProperty($event->location);
 
         $this->locationURL = $this->getFromProperty($event->locationURL);
-
-        $this->audiences = $this->getFromProperty($event->audiences, "audience");
         
         $this->shortDescription = $this->getFromProperty($event->briefDescr);
 
@@ -234,6 +247,36 @@ class Event extends \CEHD\App\XML\XML
         $this->relatedEventTitle = $this->getFromProperty($event->relatedEvents);
 
         $this->relatedEventURL = $this->getFromProperty($event->relatedEventURL);
+
+        $this->_setAudience($event->audiences);
+    }
+
+
+    /**
+     * Creates a Audience instance
+     *
+     * @param object $audienceData - An XML object from an representing an audience
+     */
+    private function _createAudience($audienceData)
+    {
+        $audiences = new Audience();
+        $audiences->audienceCode   = $this->toString($audienceData->audienceCode);
+        $audiences->audienceDescr  = $this->toString($audienceData->audienceDescr);
+        return $audiences;
+    }
+
+    /**
+     * Sets $this->audiences
+     *
+     * @param object $audienceData - An XML object from an representing audiences
+     */
+    private function _setAudience($audienceData)
+    {
+        if (property_exists($audienceData, "audience")) {
+            foreach ($audienceData->audience as $audienceData) {
+                array_push($this->audience, $this->_createAudience($audienceData));
+            }
+        }
     }
 
     /**
