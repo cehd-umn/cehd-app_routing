@@ -274,7 +274,7 @@ class Event extends \CEHD\App\XML\XML
     {
         if (property_exists($audienceData, "audience")) {
             foreach ($audienceData->audience as $audienceData) {
-                array_push($this->audience, $this->_createAudience($audienceData));
+                array_push($this->audiences, $this->_createAudience($audienceData));
             }
         }
     }
