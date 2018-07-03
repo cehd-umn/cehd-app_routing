@@ -36,7 +36,7 @@
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
-
+console.log(template_params)
             var renderer = new app.renderer();
             renderer.init(template_params);
             renderer.render();

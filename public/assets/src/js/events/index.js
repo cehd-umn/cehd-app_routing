@@ -31,6 +31,8 @@ if (events_containers.length > 0) {
 
 		request.done(function() {
 			const results = httpClient.getResults();
+			console.log(results);
+
 			const template_params = {
 				template_path: template_path,
 				template_name: template_name,
@@ -40,6 +42,7 @@ if (events_containers.length > 0) {
 					limit: limit
 				}
 			};
+			console.log(template_params);
 			const view = new renderer();
 			view.init(template_params);
 			view.render();

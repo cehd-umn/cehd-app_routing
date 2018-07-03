@@ -1,4 +1,5 @@
 {% if data.events|length > 0 %}
+
 <dl class="events">
     <div id="FilterContainer" class="box">
 
@@ -14,10 +15,6 @@
             <span id="audience" class="audience" style="display:none;" value="{{ event.timestampStart }}">
                 {{ event.audiences[0] }}, {{ event.audiences.audienceCode }}, {{ event.audiences.audienceDescr }}, {{ audiences.audienceDescr}}, {{ audience.audienceCode}}
  {{ event.audienceCode}}
-            </span>
-            <span id="audience" class="audience" style="display:none;" value="{{ event.timestampStart }}">
-                {{ event.tags[0] }}, {{ event.audiences.audienceCode }}, {{ event.audiences.audienceDescr }}, {{ audiences.audienceDescr}}, {{ audience.audienceCode}}
- {{ event.tags}}
             </span>
                 <dt class="date" id="dateTimeStart" value="{{ event.dateTimeStart }}">
                     {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }} {% if event.startTime and event.endTime %}

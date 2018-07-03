@@ -76,9 +76,19 @@ class Event extends \CEHD\App\XML\XML
     public $locationURL;
 
     /**
-     * @type string
+     * @type object
      */
-    public $audiences;
+    public $audiences = [];
+
+    /**
+     * @type array
+     */
+    // public $audienceCode = [];
+
+    /**
+     * @type array
+     */
+    // public $audienceDescr = [];
 
     /**
      * @type string
@@ -213,8 +223,8 @@ class Event extends \CEHD\App\XML\XML
 
         $this->locationURL = $this->getFromProperty($event->locationURL);
 
-        $this->audiences = $this->getFromProperty($event->audiences);
-
+        $this->audiences = $this->getFromProperty($event->audiences, "audience");
+        
         $this->shortDescription = $this->getFromProperty($event->briefDescr);
 
         $this->title = $this->getFromProperty($event->title);
