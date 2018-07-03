@@ -1,15 +1,9 @@
-{% extends "cehd/layout/base.html" %}
-{%- import "macros/loader.html" as loader -%}
-{%- import "macros/events-feed.html" as eventsfeed -%}
-{% set page_title = "Events" %}
-{% block title %}{{ page_title }}{% endblock %}
-{% block meta_og %}
+{% extends "cehd/layout/base.html" %} {%- import "macros/loader.html" as loader -%} {%- import "macros/events-feed.html"
+as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title }}{% endblock %} {% block meta_og %}
 <meta property="og:url" content="http://www.cehd.umn.edu/events/" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="CEHD Events" />
-<meta property="og:description" content="Events for the College of Education and human development" />
-{% endblock %}
-{% block extra_css %}
+<meta property="og:description" content="Events for the College of Education and human development" /> {% endblock %} {% block extra_css %}
 <style>
     .date {
         background-color: #eeeeed;
@@ -18,11 +12,13 @@
         height: 40px;
         padding: 10px 0 0 15px;
     }
+
     .event-box {
         background-color: #d9edf7;
         height: 50px;
         padding-top: 7px;
     }
+
     .event {
         padding-left: 15px;
     }
@@ -35,57 +31,459 @@
         font-size: 16px;
         padding-left: 15px;
     }
+
+    .event-card {
+        border: 1px solid #eee;
+        padding: 10px;
+    }
+
+
+
+
+
+    .topfilter {
+        background: transparent;
+        padding: 0 20px 0px;
+        margin-top: 20px;
+    }
+
+    .clearfilter {
+        font-weight: 900 !important;
+        margin: 0 !important;
+        padding-left: 25px !important;
+        border-top: 1px solid !important;
+    }
+
+    .card-select {
+        font-size: 14px;
+    }
+
+    .filterby {
+        background: rgba(247, 247, 247, .95);
+        height: 3em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+    }
+
+    .titleh3 {
+        margin-bottom: 0;
+    }
+
+    .resultsh3 {
+        text-align: left !important;
+    }
+
+    #results {
+        background: rgba(247, 247, 247, .95);
+        height: 3em;
+        line-height: 2.5em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+        padding: 5px;
+        text-align: center !important;
+    }
+
+    .searchf {
+        height: 3em;
+        font-size: 16px;
+        width: 100%;
+        margin: .5em auto;
+        border-radius: 0px;
+        border: 0px solid;
+    }
+
+    #full-text-search-input {
+        margin-bottom: 0px !important;
+        height: 100%;
+        border: 0px solid;
+        border-radius: 0px;
+        padding-left: 9px;
+        color: #333 !important;
+        background: rgba(247, 247, 247, .95);
+    }
+
+    @media (max-width: 1205px) {
+        .topfilter {
+            margin-left: 0 !important;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 970px) {
+        .resultsh3 {
+            text-align: left !important;
+        }
+        .filterarea {
+            width: 100%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .selectoption {
+            display: inline-block;
+            width: 47%;
+            margin-right: 2%;
+        }
+        .halfmobile {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        .halfmobile:last-child {
+            display: inline-block;
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 460px) {
+        .halfmobile {
+            display: inline-block;
+            width: 100% !important;
+        }
+        .topfilter {}
+        .resultsmobile {
+            width: 35% !important;
+            margin-right: 3%;
+        }
+        .searchmobile {
+            width: 61% !important;
+            margin-right: 0%;
+        }
+
+        select option:last-child {
+            font-size: 7pt;
+        }
+
+    }
+
+
+
+    .select2-container--default .select2-selection--single {
+        background-color: rgba(247, 247, 247, .95) !important;
+        border: 0px solid #aaa !important;
+        border-radius: 0px !important;
+        height: 3rem !important;
+        margin: .5em auto !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #444;
+        line-height: 3rem !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 26px;
+        position: absolute;
+        top: 20px !important;
+        right: 1px;
+        width: 20px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .category-select {
+        margin: 0 !important;
+        padding: 5px 20px !important;
+    }
+
+        {
+        # .select2-results__option {
+            padding: 5px 20px !important;
+        }
+        #
+    }
+
+    .select2-dropdown {
+        background-color: rgba(247, 247, 247, .95) !important;
+        border: 0px solid #ccc !important;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: -100000px;
+        width: 100%;
+        z-index: 1051;
+        margin-top: -10px !important;
+    }
+
+    .select2-search--dropdown {
+        display: none !important;
+        padding: 4px;
+    }
+
+    .select2-container--default .select2-results__option[aria-disabled=true] {
+        color: #999;
+        display: none;
+    }
+
+    .filterArea {
+        background: #ffd75f;
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    .resultshalfmobile {
+        width: 33%;
+        margin-right 1%;
+        display: inline-block;
+    }
+
+    .searchhalfmobile {
+        width: 64%;
+        display: inline-block;
+    }
+
+    .event-card:hover {
+        background: #ffd75f;
+    }
+
+
+    .clearfilter2 {
+        font-weight: 900 !important;
+        color: #7a0019;
+    }
+
+    ul.audience-list {
+        list-style: none;
+        line-height: 1.5;
+        margin: .25em 0;
+        padding: 0;
+    }
+
+    .audience-list li {
+        margin: 0 0;
+        padding: 0;
+    }
+
+    .filter-text {
+        margin: .25em 0;
+        padding: 0;
+    }
+
+    .eventsArea {
+        margin: 1em 0;
+    }
 </style>
-{% endblock %}
-{% block main_content %}
+{% endblock %} {% block main_content %}
 <div class="row">
-  <article class="container">
-    <section class="span-6 feature">
-    {{ loader.loader(
-        "CEHD events",
-        "h1",
-        "events-container"
-        ) }}
-    </section>
-    {#
-    <div class="span-5 push-1">
-        <h2 class="event-box text-center">Event details</h2>
-        <h3>Adverse Childhood Experiences: Longitudinal Outcomes in Context of
-            Environmental Risk &amp; Intervention</h3>
-        <p><strong>When:</strong> June 20 - 21, 2017</p>
-        <p><strong>Where:</strong> University of Minnesota West Bank Campus <a href="#">map</a></p>
-        <p><strong>Cost:</strong> Individual (before April 30): $100; Individual (after April 30): $125; Group (3 or more): $75/ea.; Student: $50</p>
-        <div class="text-center">
-            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/email.html" %}</div>
-            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/calendar.html" %}</div>
-            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/facebook.html" %}</div>
-            <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/twitter.html" %}</div>
-        </div>
-        <p>Register now for the second University of Minnesota convening of
-        Minnesota's education leaders, researchers, policy makers, and
-        non-profit organizations committed to improving educational equity.</p>
+    <article class="container">
+        <section class="span-12 margin-top-1">
 
-        <p>This year's theme is Working Across Schools and Communities to
-        Enhance Social Emotional Learning. University of Minnesota faculty,
-        school, community, and youth leaders will present the latest research
-        and programs that are making a difference in the lives of children and
-        youth across the state.</p>
 
-        <p>We'll explore the impact of chronic trauma on youth. We'll also
-        include a special focus on American Indian students. Get more
-        information on the event agenda, including keynote speakers.</p>
+            <h1 style="margin-bottom:0;">CEHD Events</h1>
 
-        <p>Following the event: You'll leave with ideas for how to promote
-        social emotional learning in your organization and a support system of
-        others across the state focused on the same goal.</p>
+            <div class="span-3"> {# another-class="filterArea" #}
 
-        <p><strong>REGISTRATION:</strong> <a href="#">Register now</a>. For
-        more information or to request disability accomodations, email <a
-        herf="mailto:edequity@umn.edu">edequity@umn.edu</a>.</p>
-  </article> <!-- ./container -->
-  #}
-</div> <!-- ./row -->
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-    {{ eventsfeed.events_feed_js(170, 1000, "#events-container", "/assets/dist/views/cehd/events", "events-page.html", 6, 12) }}
-{% endblock %}
+                <div class="searchmobile">
+                    <h3 class="titleh3">Search</h3>
+                    {# TODO make sure these forms are accessible #}
+                    <form class="searchf" action="" onsubmit='return false'>
+                        <input type="text" id="full-text-search-input" placeholder="">
+                    </form>
+                </div>
+
+                {#
+                <div class="filterarea">
+                    <select class="filterby select2" id="filters">
+                        <option style="padding-left: 5px;" disabled selected>Filter events by month</option>
+                        <option value="January"></option>
+                        <option class="card-select category-select clearfilter" value="clear">Clear Filters</option>
+                    </select>
+                </div> #}
+                <div class="filterarea">
+                    <h3 class="titleh3">View Events</h3>
+                    <p class="filter-text">
+                        <a id="todayfilter" href="#" onClick="todayFilter()">Today</a> |
+                        <a id="weekfilter" href="#" onClick="weekFilter()">By Week</a> |
+                        <a id="monthfilter" href="#" onClick="monthFilter()">By Month</a>
+                    </p>
+                </div>
+
+                <div class="filterarea">
+                    <h3 class="titleh3">Filter by audience</h3>
+                    <ul class="audience-list">
+                        <li>Prospective Students</li>
+                        <li>General Public</li>
+                        <li>Undergraduate Students</li>
+                        <li>Graduate Students</li>
+                        <li>Alumni</li>
+                    </ul>
+                </div>
+
+                {#
+                <div class="resultsmobile">
+                    <p id="results">Results</p>
+                </div> #}
+
+                <div class="filterarea clearfilter2">
+                    {# TODO make sure these forms are accessible #}
+                    <p id="clearfilter2">
+                        <a href="#" style="font-weight: 900 !important; color: #7a0019 !important;" onClick="clearFilter()">Clear Filters</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="span-9 eventsArea">
+                {{ loader.loader( " ", "span", "events-container" ) }}
+            </div>
+
+        </section>
+        {#
+        <div class="span-5 push-1">
+            <h2 class="event-box text-center">Event details</h2>
+            <h3>Adverse Childhood Experiences: Longitudinal Outcomes in Context of Environmental Risk &amp; Intervention</h3>
+            <p>
+                <strong>When:</strong> June 20 - 21, 2017</p>
+            <p>
+                <strong>Where:</strong> University of Minnesota West Bank Campus
+                <a href="#">map</a>
+            </p>
+            <p>
+                <strong>Cost:</strong> Individual (before April 30): $100; Individual (after April 30): $125; Group (3 or more):
+                $75/ea.; Student: $50</p>
+            <div class="text-center">
+                <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/email.html" %}</div>
+                <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/calendar.html" %}</div>
+                <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/facebook.html" %}</div>
+                <div class="svg-social-media-icon size-40">{% include "cehd/includes/svg/social-media/twitter.html" %}</div>
+            </div>
+            <p>Register now for the second University of Minnesota convening of Minnesota's education leaders, researchers,
+                policy makers, and non-profit organizations committed to improving educational equity.</p>
+
+            <p>This year's theme is Working Across Schools and Communities to Enhance Social Emotional Learning. University
+                of Minnesota faculty, school, community, and youth leaders will present the latest research and programs
+                that are making a difference in the lives of children and youth across the state.</p>
+
+            <p>We'll explore the impact of chronic trauma on youth. We'll also include a special focus on American Indian students.
+                Get more information on the event agenda, including keynote speakers.</p>
+
+            <p>Following the event: You'll leave with ideas for how to promote social emotional learning in your organization
+                and a support system of others across the state focused on the same goal.</p>
+
+            <p>
+                <strong>REGISTRATION:</strong>
+                <a href="#">Register now</a>. For more information or to request disability accomodations, email
+                <a herf="mailto:edequity@umn.edu">edequity@umn.edu</a>.</p>
+    </article>
+    <!-- ./container -->
+    #}
+    </div>
+    <!-- ./row -->
+    {% endblock %} {% block bottom_js %}{{ parent() }} {{ eventsfeed.events_feed_js(170, 1000, "#events-container", "/assets/dist/views/cehd/events",
+    "events-page.html", 6, 12) }}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+
+    <script>
+        // Load Search Function
+        $("#full-text-search-input").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#FilterContainer div").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                newResults = $("div.events-container > div.event-card:visible").length;
+            });
+        }); // End of Searcb Function Load #}
+    </script>
+
+    <script>
+        function todayFilter(value) {
+            console.log("Today Filter!");
+            var eventsList = FilterContainer.querySelectorAll(".events");
+            eventsList.forEach(function (event) {
+                var x = document.getElementById("event-card");
+                var startdate = event.getElementsByClassName("startdate")[0].innerText;
+                var eventDate = moment(startdate).format('MM/DD/YYYY');
+                var currentDate = moment().format('MM/DD/YYYY');
+                console.log('Current Date: ' + currentDate + '& Event Date: ' + eventDate);
+
+                if (currentDate == eventDate) {
+                    console.log('YEP!');      
+                    $(event).show();
+                } 
+                else {
+                    console.log('NOPE!'); 
+                    $(event).hide(1000);
+
+                }
+            });
+
+        };
+
+        function weekFilter(value) {
+            console.log("Week Filter!");
+            var eventsList = FilterContainer.querySelectorAll(".events");
+            eventsList.forEach(function (event) {
+                var x = document.getElementById("event-card");
+                var date = event.getElementsByClassName("startdate")[0].innerText;
+                var eventDate = moment(date).format('MM/DD/YYYY');
+                var weekDate = moment().add(7, 'days').format('MM/DD/YYYY');
+                console.log('Week Date: ' + weekDate + '& Event Date: ' + eventDate);
+
+                if (weekDate >= eventDate) {
+                    console.log('YEP!');      
+                    $(event).show();
+                } 
+                else {
+                    console.log('NOPE!'); 
+                    $(event).hide(1000);
+                }
+                
+            });
+                };
+
+        function monthFilter() {
+            console.log("Month Filter!")
+            var eventsList = FilterContainer.querySelectorAll(".events");
+            eventsList.forEach(function (event) {
+                var x = document.getElementById("event-card");
+                var date = event.getElementsByClassName("startdate")[0].innerText;
+                var eventDate = moment(date).format('MM/DD/YYYY');
+                var monthDate = moment().add(30, 'days').format('MM/DD/YYYY');
+                console.log('Month Date: ' + monthDate + '& Event Date: ' + eventDate);
+
+                if (monthDate >= eventDate) {
+                    console.log('YEP!');      
+                    $(event).show();
+                } 
+                else {
+                    console.log('NOPE!');
+                    $(event).hide(1000);
+                }
+            });
+                };
+
+        function clearFilter() {
+            console.log("Clear Filter!");
+            $("div#FilterContainer").find("div").show(1000);
+        };
+    </script>
+
+    {% endblock %}

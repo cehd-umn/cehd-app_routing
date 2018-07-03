@@ -78,6 +78,11 @@ class Event extends \CEHD\App\XML\XML
     /**
      * @type string
      */
+    public $audiences;
+
+    /**
+     * @type string
+     */
     public $shortDescription;
 
     /**
@@ -207,6 +212,8 @@ class Event extends \CEHD\App\XML\XML
         $this->location = $this->getFromProperty($event->location);
 
         $this->locationURL = $this->getFromProperty($event->locationURL);
+
+        $this->audiences = $this->getFromProperty($event->audiences);
 
         $this->shortDescription = $this->getFromProperty($event->briefDescr);
 
