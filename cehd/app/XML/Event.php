@@ -10,9 +10,10 @@
 
 namespace CEHD\XML\Event;
 
-require_once __DIR__ . '/../../../cehd/app/XML/XML.php';
+require_once __DIR__ . '/RSS.php';
 
-class Audience
+class Audience 
+
 {  
     /**
      * @type string
@@ -34,7 +35,7 @@ class Audience
  *
  * @extends XML
  */
-class Event extends \CEHD\App\XML\XML
+class Event extends \CEHD\App\XML\RSS\RSS
 {
     /**
      * Class properties
@@ -260,8 +261,8 @@ class Event extends \CEHD\App\XML\XML
     private function _createAudience($audienceData)
     {
         $audience = new Audience();
-        $audience->audienceCode   = $this->toString($audienceData->audienceCode);
-        $audience->audienceDescr  = $this->toString($audienceData->audienceDescr);
+        $audience->audienceCode   = $this->getContentAttr($audienceData, "audienceCode");
+        $audience->audienceDescr  = $this->getContentAttr($audienceData, "audienceDescr");
         return $audience;
     }
 
