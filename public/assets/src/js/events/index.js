@@ -42,7 +42,7 @@ if (events_containers.length > 0) {
 					limit: limit
 				}
 			};
-			console.log(template_params);
+			// console.log(template_params);
 			const view = new renderer();
 			view.init(template_params);
 			view.render();
