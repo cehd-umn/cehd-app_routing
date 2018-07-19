@@ -9,21 +9,21 @@
 
         
         function todayFilter(value) {
-            // console.log("Today Filter!");
+            console.log("Today Filter!");
             var eventsList = FilterContainer.querySelectorAll(".events");
             eventsList.forEach(function (event) {
                 var date = event.getElementsByClassName("startdate")[0].innerText;
                 var eventDate = moment(date).format('MM/DD/YYYY');
                 var currentDate = moment().format('MM/DD/YYYY');
-                // console.log('Current Date: ' + currentDate + '& Event Date: ' + eventDate);
+                console.log('Current Date: ' + currentDate + '& Event Date: ' + eventDate);
 
                 if (currentDate == eventDate) {
-                    // console.log('YEP!');      
+                    console.log('YEP!');      
                     $(event).show(1000);
                 } 
                 else {
-                    // console.log('NOPE!'); 
-                    $(event).hide(0);
+                    console.log('NOPE!'); 
+                    $(event).hide(100);
 
                 }
             });
@@ -35,18 +35,25 @@
             var eventsList = FilterContainer.querySelectorAll(".events");
             eventsList.forEach(function (event) {
                 var date = event.getElementsByClassName("startdate")[0].innerText;
-                var eventDate = moment(date).dayOfYear();
-                var weekDate = moment().add(7, 'days').format('MM/DD/YYYY');
-                var weekday= moment(weekDate).dayOfYear();
-                // console.log('Week Date: ' + weekday + '& Event Date: ' + eventDate);
+                // console.log(date);
+                var weekDate = moment().add(7, 'days');
+                // console.log(weekDate);
 
-                if (weekday > eventDate) {
-                    // console.log('YEP!');      
-                    $(event).show(1000);
+                // var eventDate = moment(date).dayOfYear();
+                // var weekDate = moment().add(7, 'days').format('MM/DD/YYYY');
+                // var weekday= moment(weekDate).dayOfYear();
+                // console.log('Week Date: ' + weekday + '& Event Date: ' + eventDate);
+                
+                // console.log(moment(date).isAfter(weekDate)); // returns false
+
+                if (moment(date).isAfter(weekDate)) {
+                    // console.log('YEP!');   
+                    $(event).hide(100);
                 } 
                 else {
-                    // console.log('NOPE!'); 
-                    $(event).hide(0);
+                    console.log('NOPE!');    
+                    // $(event).show(1000);
+
                 }
                 
             });
@@ -57,22 +64,29 @@
             var eventsList = FilterContainer.querySelectorAll(".events");
             eventsList.forEach(function (event) {
                 var date = event.getElementsByClassName("startdate")[0].innerText;
-                var eventDate = moment(date).dayOfYear();
-                var monthDate = moment().add(30, 'days').format('MM/DD/YYYY');
-                var monthday= moment(monthDate).dayOfYear();
-                // console.log('Month Date: ' + monthday + '& Event Date: ' + eventDate);
-                // console.log('Month Date: ' + monthday + '& Event Date: ' + eventDate);
-                if (monthday > eventDate) {
-                    // console.log('YEP!');      
-                    $(event).show(1000);
+                // console.log(date);
+                var monthDate = moment().add(30, 'days');
+                // console.log(monthDate);
+
+                // var eventDate = moment(date).dayOfYear();
+                // var weekDate = moment().add(7, 'days').format('MM/DD/YYYY');
+                // var weekday= moment(weekDate).dayOfYear();
+                // console.log('Week Date: ' + weekday + '& Event Date: ' + eventDate);
+                
+                // console.log(moment(date).isAfter(monthDate)); // returns false
+
+                if (moment(date).isAfter(monthDate)) {
+                    // console.log('YEP!');   
+                    $(event).hide(100);
                 } 
                 else {
-                    // console.log('NOPE!');
-                    $(event).hide();
+                    // console.log('NOPE!');    
+                    $(event).show(1000);
+
                 }
+                
             });
                 };
-
         function clearFilter() {
             // console.log("Clear Filter!");
             $(".audiencefilter").css("color", "#333");
@@ -90,6 +104,6 @@
         
         var newResults = $("div#FilterContainer").find("div." + thiscode).length;
         // console.log(newResults);
-        $("div#FilterContainer").find("div").hide(0);
+        $("div#FilterContainer").find("div").hide(100);
         $("div#FilterContainer").find("div." + thiscode).show(1000);
     })
