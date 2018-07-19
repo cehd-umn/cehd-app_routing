@@ -564,6 +564,30 @@
     template_data:
         meta_description: "Teach special education for young people birth through age 21."
         section: programs-degrees
+/edpsych/programs/specialed/pioneers/:
+    publish: false
+    template: edpsych/programs/specialed/pioneers/index.html
+    template_data:
+        meta_description: "Learn about the University of Minnesota's legacy in the field of special education."
+        section: programs-degrees
+/edpsych/programs/specialed/pioneers/evelyn-deno/:
+    publish: false
+    template: edpsych/programs/specialed/pioneers/evelyn-deno.html
+    template_data:
+        meta_description: "Learn about the University of Minnesota Professor Evelyn Deno's legacy in the field of special education."
+        section: programs-degrees
+/edpsych/programs/specialed/pioneers/frank-wood/:
+    publish: false
+    template: edpsych/programs/specialed/pioneers/frank-wood.html
+    template_data:
+        meta_description: "Learn about the University of Minnesota Professor Frank Wood's legacy in the field of special education."
+        section: programs-degrees
+/edpsych/programs/specialed/pioneers/mary-mcevoy/:
+    publish: false
+    template: edpsych/programs/specialed/pioneers/mary-mcevoy.html
+    template_data:
+        meta_description: "Learn about the University of Minnesota Professor Mary McEvoy's legacy in the field of special education."
+        section: programs-degrees
 /edpsych/programs/specialed/videos/:
     publish: true
     template: edpsych/programs/specialed/videos.html
@@ -596,6 +620,12 @@
     template_data:
         meta_description: "Five Hundred under 5 (FHu5) began in 2006 as a place-based and collaborative initiative to promote school readiness in north Minneapolis."
         section: research
+/edpsych/research/community-engaged-research/:
+    publish: false
+    template: edpsych/research/community-engaged-research.html
+    template_data:
+        meta_description: "Learn how Educational Psychology research is at work in our communities."
+        section: research
 /edpsych/research/family-academy/:
     publish: true
     template: edpsych/research/family-academy.html
@@ -607,6 +637,12 @@
     template: edpsych/research/fresh-garden.html
     template_data:
         meta_description: "The Fresh Start Garden program is a community-led garden and cooking program for preschool-aged children, their adult caregivers, and older youth from North Minneapolis."
+        section: research
+/edpsych/research/health-social-care/:
+    publish: false
+    template: edpsych/research/health-social-care.html
+    template_data:
+        meta_description: "Our research helps tackle some of the toughest issues in health and social care today, including autism and behavioral and social-emotional development."
         section: research
 /edpsych/research/ggg/:
     publish: true

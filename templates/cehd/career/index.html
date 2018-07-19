@@ -1,5 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Career Services" %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
@@ -69,16 +70,12 @@
     		</div>
     		<div class="third">
           <h2>Upcoming Events</h2>
-          <div id="events-container" class="loader-container">
-              <dl class="events">
+                {{ loader.loader("CEHD events", "h2", "events-container") }}
+             <div id="events-container" class="loader-container">
+                <dl class="events">
 
-              </dl>
-          </div>
-
-<!--    						<div id="DissapearingDiv">
-    		 <script type="text/javascript">
-    			getRssFeed("DissapearingDiv","http://apps.cehd.umn.edu/events/admin/RSSFeed.aspx?&x=6&r=3&q=6&l=y&t=231","/attributes/XSLT/Events-FeatureWidget-Dissapear.xslt","Sorry, the event calendar is currently unavailable.")
-    		</script> -->
+                </dl>
+            </div>
     			</div>
         </div>
 <br />
@@ -146,4 +143,10 @@
       </div>
   </div> <!-- ./container -->
 </div> <!-- ./row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+
+    {{ eventsfeed.events_feed_js(231, 3) }}
+
+
 {% endblock %}

@@ -1,0 +1,147 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/cehd-news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "News" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+<div class="container">
+  <h1>News and events</h1>
+
+  <div class="span-4">
+    <h2>Feature</h2>
+    <figure>
+      <a href="#">
+        <img src="/assets/images/news/sample-Flipgrid.png" alt="Flipgrid">
+        </a>
+    </figure>
+    <p><a href="#">
+        Microsoft acquires Flipgrid, educational product developed by CEHD</a>
+    </p>
+  </div>
+  <div class="span-4">
+    <h2>&nbsp;</h2>
+    <figure>
+      <a href="#">
+        <img src="/assets/images/news/sample-autism.jpg" alt="cookies">
+        </a>
+    </figure>
+    <p><a href="#">
+        UMN researchers unveil Minnesota autism rates as part of national CDC study</a>
+    </p>
+  </div>
+  <article class="span-4">
+    <section>
+      {{ loader.loader("CEHD coverage", "h2") }}
+    </section>
+    <div class="margin-top-1">
+    </div>
+  </article>
+</div>
+</div>
+<div class="row">
+  <div class="container">
+    <h2>Other news</h2>
+    <p><a href="#">Headline goes here, date, and name of source</a></p>
+    <p><a href="#">Headline goes here, date, and name of source</a></p>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <article class="span-4">
+      <section>
+        {{ loader.loader("CEHD events", "h2", "events-container") }}
+        <p class="text-right"><small><a href="/events/" class="news-more-news-link">More events</a></small></p>
+      </section>
+    </article>
+    <div class="span-4">
+      <h2>Twitter feed</h2>
+      <a class="twitter-timeline" href="https://twitter.com/UMN_CEHD?ref_src=twsrc%5Etfw" data-tweet-limit="2">Tweets by UMN_CEHD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+    <article class="span-4">
+      <section>
+        {{ loader.loader("Improving Lives blog", "h2", "visionblog-container") }}
+
+      </section>
+    </article>
+  </div>
+</div>
+<div class="row emphasis cool">
+  <div class="container">
+    <div class="twothird feature">
+      <div class="corner-borders-top mobile-hide"></div>
+      <div class="container margin-top-1">
+        <h2 class="twothird feature text-center">Discover CEHD on<br  />social media</h2>
+
+        <p class="text-center half feature margin-top-0">See breaking news and information, learn more about activities and events, and view videos about research, programs, and community engagement.</p>
+
+        <div class="row twothird feature text-center margin-top-1">
+          <div class="super-span-4">
+            <div class="svg-social-media-icon size-40">
+              <a href="https://twitter.com/UMN_CEHD" alt="Twitter icon" title="Twitter: See breaking news and information from CEHD." {{ analytics.add_tracking( "send", "event", "twitter", "click", "news-twitter") }}>{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+            </div>
+          </div>
+          <div class="super-span-4">
+            <div class="svg-social-media-icon size-40">
+              <a href="https://www.facebook.com/umcehd" alt="Facebook icon" title="Facebook: Learn more about CEHD activities and events." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+            </div>
+          </div>
+          <div class="super-span-4">
+            <div class="svg-social-media-icon size-40">
+              <a href="https://www.youtube.com/user/UMCEHD" alt="YouTube icon" title="YouTube: View videos about CEHD research, programs, and community engagement." {{ analytics.add_tracking( "send", "event", "youtube", "click", "news-youtube") }}>{% include "cehd/includes/svg/social-media/youtube.html" %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="margin-top-3">
+      </div>
+      <div class="corner-borders-bottom mobile-hide"></div>
+    </div>
+  </div>
+</div>
+<div class="margin-top-3">
+</div>
+<div class="row">
+  <div class="container">
+    <div class="span-12">
+      <h2 class="text-center">Our expertise and knowledge guide</h2>
+    </div>
+  </div>
+  <div class="margin-top-2">
+  </div>
+</div>
+<div class="row outer-bg-right emphasis">
+  <div class="container">
+    <div class="inner-bg-right">
+      <div class="half">
+        <p><a href="/topics/" {{ analytics.add_tracking( "send", "event", "explore-research", "click", "news-research guide") }}>With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news, local
+          and national trends, policy issues, and emerging research.</p>
+      </div>
+      <div class="half">{% include "includes/svg/for-the-media.html" %}</div>
+    </div>
+  </div>
+</div>
+
+<p class="text-center">
+  <a href="/topics/" class="button center" {{ analytics.add_tracking( "send", "event", "explore-research", "click", "news-research guide") }}>
+        Explore our research</a>
+</p>
+<div class="row">
+  {{ include('cehd/includes/connect.html') }}
+</div>
+<div class="margin-top-3">
+
+</div>
+
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+    {{ newsfeed.news_feed_js("category/feature-stories/feed/", "#news-container", "cehdnews.html", 3) }}
+
+    {{ eventsfeed.events_feed_js(172, 3) }}
+
+    {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "cehd-improvinglives.html", 4, "https://cehdvision2020.umn.edu/", "More stories") }}
+
+{% endblock %}

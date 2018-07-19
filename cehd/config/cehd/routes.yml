@@ -1534,6 +1534,11 @@
   template: cehd/news/index.html
   template_data:
     - section: news
+/news/index-draft/:
+  publish: false
+  template: cehd/news/index-draft.html
+  template_data:
+    - section: news
 /parenting/:
   publish: true
   template: cehd/parenting.html
@@ -2999,6 +3004,11 @@
   template: cehd/undergraduate/shaw.html
   template_data:
     - section: undergraduate
+/undergraduate/sherrill/:
+  publish: true
+  template: cehd/undergraduate/sherrill.html
+  template_data:
+    - section: undergraduate
 /undergraduate/student-services/:
   publish: false
   template: cehd/undergraduate/student-services.html
@@ -3029,14 +3039,14 @@
   template: cehd/undergraduate/vue.html
   template_data:
     - section: undergraduate
-/undergraduate/wartchow/:
-  publish: true
-  template: cehd/undergraduate/wartchow.html
-  template_data:
-    - section: undergraduate
 /undergraduate/whittaker/:
   publish: true
   template: cehd/undergraduate/whittaker.html
+  template_data:
+    - section: undergraduate
+/undergraduate/yang/:
+  publish: true
+  template: cehd/undergraduate/yang.html
   template_data:
     - section: undergraduate
 /undergraduate/yousuf/:
