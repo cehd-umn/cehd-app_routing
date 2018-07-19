@@ -23,6 +23,9 @@
     - x500: geoff
       section: Psychological foundations of education
       title: department chair
+    - x500: kend0040
+      section: Psychological foundations of education
+      title: director of graduate studies
     - x500: sashank
       section: Psychological foundations of education
       title: program coordinator
@@ -31,9 +34,6 @@
     param: tg
     value: 320
   titles:
-    - x500: lqr6576
-      section: Quantitative methods in education
-      title: director of graduate studies
     - x500: delma001
       section: Quantitative methods in education
       title: program coordinator
