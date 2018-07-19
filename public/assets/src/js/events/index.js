@@ -31,7 +31,7 @@ if (events_containers.length > 0) {
 
 		request.done(function() {
 			const results = httpClient.getResults();
-			console.log(results);
+			// console.log(results);
 
 			const template_params = {
 				template_path: template_path,
