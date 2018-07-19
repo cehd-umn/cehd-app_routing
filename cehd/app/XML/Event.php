@@ -23,7 +23,7 @@ class Audience
     /**
      * @type string
      */
-    public $audienceDescr;
+    public $audienceDescription;
 
 }
 
@@ -261,8 +261,8 @@ class Event extends \CEHD\App\XML\RSS\RSS
     private function _createAudience($audienceData)
     {
         $audience = new Audience();
-        $audience->audienceCode   = $this->getContentAttr($audienceData, "audienceCode");
-        $audience->audienceDescr  = $this->getContentAttr($audienceData, "audienceDescr");
+        $audience->audienceCode   = $this->getFromProperty($audienceData->code);
+        $audience->audienceDescription  = $this->getFromProperty($audienceData->description);
         return $audience;
     }
 
@@ -273,12 +273,13 @@ class Event extends \CEHD\App\XML\RSS\RSS
      */
     private function _setAudiences($audiencesData)
     {
-        if (property_exists($audiencesData, "audience")) {
+        // if (property_exists($audiencesData, "audience")) {
             foreach ($audiencesData->audience as $audienceData) {
                 array_push($this->audiences, $this->_createAudience($audienceData));
             }
-        }
+        // }
     }
+    
 
     /**
      * Returns the numerical starting hour of the event start time

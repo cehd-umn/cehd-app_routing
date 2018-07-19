@@ -1,4 +1,47 @@
 {% if data.events|length > 0 %}
+
+<dl class="events">
+    <div id="FilterContainer" class="box">
+
+        {% for event in data.events %} {% if loop.index0
+        < data.limit %} 
+        <div id="event-card eachevent" class="events single" value="{{ event.timestampStart }}">
+            <span id="timestamp" class="timestamps" style="display:none;" value="{{ event.timestampStart }}">
+                {{ event.timestampStart }}
+            </span>
+            <span id="startdate" class="startdate" style="display:none;" value="{{ event.timestampStart }}">
+                {{ event.dateTimeStart }}
+                        </span>
+            <span id="audience" class="audience" style="display:none;" value="{{ event.timestampStart }}">
+                {{ event.audiences[0] }}, {{ event.audiences.audienceCode }}, {{ event.audiences.audienceDescr }}, {{ audiences.audienceDescr}}, {{ audience.audienceCode}}
+ {{ event.audienceCode}}
+            </span>
+                <dt class="date" id="dateTimeStart" value="{{ event.dateTimeStart }}">
+                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }} {% if event.startTime and event.endTime %}
+                    | {{ event.startTime }} - {{ event.endTime }} {% endif %}
+                </dt>
+
+                <dd class="event-title">
+                    <p class="event">
+                        <a class="event-link" data-event-id="{{ event.id }}" href="/events/{{ event.id }}/">{{ event.title }}</a>
+                    </p>
+                    {% if event.shortDescription %}
+                    <div class="description">
+                        {{ event.shortDescription|strip_style_attributes|safe }}
+<p>{{ event.audiences }}</p>
+                    </div>
+                    {% endif %}
+                </dd>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+</dl>
+{% else %}
+<p>There are no upcoming events.</p>
+{% endif %}
+
+{% if data.events|length > 0 %}
     <dl class="events">
     {% for event in data.events %}
         {% if loop.index0 < data.limit %}

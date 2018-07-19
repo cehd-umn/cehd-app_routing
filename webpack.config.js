@@ -9,6 +9,7 @@ module.exports = {
 		events: './public/assets/src/js/events/index.js',
 		news: './public/assets/src/js/news/index.js',
 		people: './public/assets/src/js/people/index.js',
+		eventsfilter: './public/assets/src/js/eventsfilter.js',
 		sorter: './public/assets/src/js/sorter.js',
 		elasticlunr: './public/assets/src/js/elasticlunr.js',
 		svg_stats: './public/assets/src/js/svg/stats/index.js'
