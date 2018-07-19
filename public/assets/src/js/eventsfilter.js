@@ -87,9 +87,11 @@
                 
             });
                 };
+
+
         function clearFilter() {
             // console.log("Clear Filter!");
-            $(".audiencefilter").css("color", "#333");
+            $(".audiencefilter").css("font-weight", "500");
             $("div#FilterContainer").find("div").show(1000);
         };
 
