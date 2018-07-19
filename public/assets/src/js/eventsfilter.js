@@ -9,20 +9,20 @@
 
         
         function todayFilter(value) {
-            console.log("Today Filter!");
+            // console.log("Today Filter!");
             var eventsList = FilterContainer.querySelectorAll(".events");
             eventsList.forEach(function (event) {
                 var date = event.getElementsByClassName("startdate")[0].innerText;
                 var eventDate = moment(date).format('MM/DD/YYYY');
                 var currentDate = moment().format('MM/DD/YYYY');
-                console.log('Current Date: ' + currentDate + '& Event Date: ' + eventDate);
+                // console.log('Current Date: ' + currentDate + '& Event Date: ' + eventDate);
 
                 if (currentDate == eventDate) {
-                    console.log('YEP!');      
+                    // console.log('YEP!');      
                     $(event).show(1000);
                 } 
                 else {
-                    console.log('NOPE!'); 
+                    // console.log('NOPE!'); 
                     $(event).hide(100);
 
                 }
