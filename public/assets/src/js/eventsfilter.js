@@ -109,6 +109,7 @@ function monthFilter() {
 
 function clearFilter() {
   // console.log("Clear Filter!");
+  clearDom()
   $(".audiencefilter").css("font-weight", "500");
   $("div#FilterContainer")
     .find("div")

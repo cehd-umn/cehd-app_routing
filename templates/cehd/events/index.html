@@ -337,7 +337,7 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
             </div>
 
             <div class="span-9 eventsArea">
-                    <p id="noEvents" style="display:none;">There are no events within this time period.</p>
+                    <p id="noEvents" style="display:none;">There are no events within this time period. <a style="color: #7a0019 !important;" onClick="clearFilter()">Click here to clear filter.</a></p>
                 {{ loader.loader( " ", "span", "events-container" ) }}
             </div>
 
