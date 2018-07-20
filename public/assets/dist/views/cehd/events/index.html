@@ -1,5 +1,5 @@
 {% if data.events|length > 0 %}
-    <dl class="events">
+    <div class="events">
     {% for event in data.events %}
         {% if loop.index0 < data.limit %}
             <dt class="event-date">{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}</dt>
@@ -8,7 +8,7 @@
             </dd>
         {% endif %}
     {% endfor %}
-    </dl>
+        </div>
 {% else %}
     <p>There are no upcoming events.</p>
 {% endif %}
