@@ -1445,7 +1445,7 @@
   template_data:
     - section: global
 /global/maryt-fellowship/:
-  publish: false
+  publish: true
   template: cehd/global/maryt-fellowship.html
   template_data:
     - section: global
@@ -2947,11 +2947,6 @@
 /undergraduate/georgeson/:
   publish: true
   template: cehd/undergraduate/georgeson.html
-  template_data:
-    - section: undergraduate
-/undergraduate/hackett/:
-  publish: true
-  template: cehd/undergraduate/hackett.html
   template_data:
     - section: undergraduate
 /undergraduate/hammell/:

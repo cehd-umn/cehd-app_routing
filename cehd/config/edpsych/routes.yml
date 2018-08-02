@@ -621,8 +621,8 @@
         meta_description: "Five Hundred under 5 (FHu5) began in 2006 as a place-based and collaborative initiative to promote school readiness in north Minneapolis."
         section: research
 /edpsych/research/community-engaged-research/:
-    publish: false
-    template: edpsych/research/community-engaged-research.html
+    publish: true
+    template: edpsych/research/community-engaged-research/index.html
     template_data:
         meta_description: "Learn how Educational Psychology research is at work in our communities."
         section: research
@@ -639,7 +639,7 @@
         meta_description: "The Fresh Start Garden program is a community-led garden and cooking program for preschool-aged children, their adult caregivers, and older youth from North Minneapolis."
         section: research
 /edpsych/research/health-social-care/:
-    publish: false
+    publish: true
     template: edpsych/research/health-social-care.html
     template_data:
         meta_description: "Our research helps tackle some of the toughest issues in health and social care today, including autism and behavioral and social-emotional development."
