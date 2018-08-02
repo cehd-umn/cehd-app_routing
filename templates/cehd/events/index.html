@@ -275,6 +275,7 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
     .audience-list li {
         margin: 0 0;
         padding: 0;
+        color: #005d9a;
     }
 
     .filter-text {
@@ -312,8 +313,8 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
                     <h3 class="titleh3">View Events</h3>
                     <p class="filter-text">
                         <a id="todayfilter" onClick="todayFilter()">Today</a> |
-                        <a id="weekfilter" onClick="weekFilter()">By Week</a> |
-                        <a id="monthfilter" onClick="monthFilter()">By Month</a>
+                        <a id="weekfilter" onClick="weekFilter()">This Week</a> |
+                        <a id="monthfilter" onClick="monthFilter()">This Month</a>
                     </p>
                 </div>
                 <div class="filterarea">
