@@ -135,9 +135,9 @@ Coaching:
   publish: true
   links:
     - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/kin/current/coaching.html
+      href: http://www.cehd.umn.edu/kin/future/coaching.html
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/current/coaching.html
+      href: http://www.cehd.umn.edu/kin/future/coaching.html
   description: If you're interested in pursuing sport management or teacher licensure, this certificate  gives you a foundation for developing your coaching skills.
   categories:
     - Teaching, Learning, and Schools
@@ -356,7 +356,7 @@ Health and Wellness Promotion:
   publish: true
   links:
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/current/undergrad/hwp.html
+      href: http://www.cehd.umn.edu/kin/future/undergrad/hwp.html
   description: This interdisciplinary minor in the School of Kinesiology supports careers in health coaching, community health, personal training, corporate wellness, and allied health careers.
   categories:
     - Families, Youth, and Children
@@ -430,11 +430,11 @@ Kinesiology:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/kin/current/undergrad/kin.html
+      href: http://www.cehd.umn.edu/kin/future/undergrad/kin.html
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/current/grad/masters.html#smgt
+      href: http://www.cehd.umn.edu/kin/future/grad/masters.html#smgt
     - title: Ph.D.
-      href: http://www.cehd.umn.edu/kin/current/grad/phd.html
+      href: http://www.cehd.umn.edu/kin/future/grad/phd.html
   description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness.
   categories:
     - Disability and Aging
@@ -519,7 +519,7 @@ Outdoor Recreation and Education:
   publish: true
   links:
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/current/undergrad/rec.html
+      href: http://www.cehd.umn.edu/kin/future/undergrad/rec.html
   description: An experiential program that can be completed through international and U.S. travel opportunities.
   categories:
     - Teaching, Learning, and Schools
@@ -546,7 +546,7 @@ Physical Activity and Health:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/current/grad/professional/med-pah.html
+      href: http://www.cehd.umn.edu/kin/future/grad/professional/med-pah.html
   description: Learn about the leading-edge research, trends, and practices in physical activity as they relate to health. Discover techniques for implementing programs through population-based physical activity.
   categories:
     - Recreation, Health, and Wellbeing
@@ -639,7 +639,7 @@ Recreation Administration:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/kin/current/undergrad/rec.html
+      href: http://www.cehd.umn.edu/kin/future/undergrad/rec.html
   description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
   categories:
     - Recreation, Health, and Wellbeing
@@ -756,11 +756,11 @@ Sport Management:
   publish: true
   links:
     - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/kin/current/undergrad/smgt.html
+      href: http://www.cehd.umn.edu/kin/future/undergrad/smgt.html
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/current/undergrad/smgt.html#minor
+      href: http://www.cehd.umn.edu/kin/future/undergrad/smgt.html#minor
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/current/grad/masters.html#smgt
+      href: http://www.cehd.umn.edu/kin/future/grad/masters.html#smgt
   description: Combine theoretical instruction and practical experience to prepare for leadership success in the sports industry and marketplace.
   categories:
     - Business, Administration, and Leadership
@@ -770,7 +770,7 @@ Sport and Exercise Science:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/current/grad/professional.html#exsci
+      href: http://www.cehd.umn.edu/kin/future/grad/professional.html#exsci
   description: Health-related advanced study with focus tracks in Sport Performance, Athletic Training, and Health Promotion
   categories:
     - Recreation, Health, and Wellbeing
