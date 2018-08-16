@@ -1,0 +1,65 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "All courses" %}
+{% block title %}
+  All courses
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>All courses<br>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="feature twothird">
+
+                <div class="container">
+                    <div class="half">
+                        <h2>Current courses</h2>
+                <div id="courses-current" class="loader-container" aria-live="polite"
+                     data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                     data-a="both" {# The value from the "a" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-d="both" {# The value from the "d" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-p="all-OLPD" {# The value from the "p" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-t="cur" {# OPTIONAL The value from the "t" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-h="0" {# OPTIONAL The value from the "h" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+                data-target-element-selector="#courses-current" {# The element selector for the feed html #}
+                data-template-path="/assets/dist/views/cehd/courses/"
+                {# The path the the Nunjucks template #} data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="1000"> {# How many courses to put in each group #}
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading&hellip;</p>
+                </div>
+            </div>
+                </div>
+
+
+                <div class="half">
+                    <h2>Future courses</h2>
+            <div id="courses-next" class="loader-container" aria-live="polite"
+                 data-courses-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                 data-a="both" {# The value from the "a" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+            data-d="both" {# The value from the "d" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+            data-p="all-OLPD" {# The value from the "p" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+            data-t="next" {# OPTIONAL The value from the "t" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+            data-h="0" {# OPTIONAL The value from the "h" parameter in Link Pro in the course tool: https://apps.cehd.umn.edu/Programs/LinkPro.aspx #}
+            data-target-element-selector="#courses-next" {# The element selector for the feed html #}
+            data-template-path="/assets/dist/views/cehd/courses/"
+            {# The path the the Nunjucks template #} data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="1000"> {# How many courses to put in each group #}
+            <div class="loader">
+                <div class="loader-figure "></div>
+                <p class="loader-label">Loading&hellip;</p>
+            </div>
+        </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/courses.min.js"></script>
+{% endblock %}

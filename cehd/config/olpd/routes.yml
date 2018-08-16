@@ -75,6 +75,11 @@
   publish: true
   template_data:
     - section: courses
+/courses/all-courses/:
+  template: olpd/courses/all-courses.html
+  publish: true
+  template_data:
+    - section: courses
 /courses/undergraduate/:
   template: olpd/courses/undergraduate.html
   publish: true
