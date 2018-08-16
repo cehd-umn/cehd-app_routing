@@ -1354,6 +1354,11 @@
   template_data:
     meta_description: null
     section: null
+/firstgen/:
+  publish: false
+  template: cehd/firstgen/index.html
+  template_data:
+    - section: firstgen
 /giving/:
   publish: true
   template: cehd/giving/index.html
@@ -2764,11 +2769,6 @@
   template: cehd/trio/services/andicoechea.html
   template_data:
     - section: trio
-/trio/services/correale/:
-  publish: true
-  template: cehd/trio/services/correale.html
-  template_data:
-    - section: trio
 /trio/services/finances/:
   publish: true
   template: cehd/trio/services/finances.html
@@ -3005,13 +3005,8 @@
   template_data:
     - section: undergraduate
 /undergraduate/student-services/:
-  publish: false
-  template: cehd/undergraduate/student-services.html
-  template_data:
-    - section: undergraduate
-/undergraduate/stumme-berry/:
   publish: true
-  template: cehd/undergraduate/stumme-berry.html
+  template: cehd/undergraduate/student-services.html
   template_data:
     - section: undergraduate
 /undergraduate/sunshine/:
@@ -3042,11 +3037,6 @@
 /undergraduate/yang/:
   publish: true
   template: cehd/undergraduate/yang.html
-  template_data:
-    - section: undergraduate
-/undergraduate/yousuf/:
-  publish: true
-  template: cehd/undergraduate/yousuf.html
   template_data:
     - section: undergraduate
 /undergraduate/scholarships/:
