@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/olpd/courses/all-courses.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/olpd/routes.yml" afterPath="$PROJECT_DIR$/cehd/config/olpd/routes.yml" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/search-results.html" afterPath="$PROJECT_DIR$/templates/includes/search-results.html" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/courses/undergraduate.html" afterPath="$PROJECT_DIR$/templates/olpd/courses/undergraduate.html" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/courses/all-courses.html" afterPath="$PROJECT_DIR$/templates/olpd/courses/all-courses.html" />
     </list>
     <ignored path="$PROJECT_DIR$/public/assets/dist/js/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="all-courses.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/olpd/courses/all-courses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            <state relative-caret-position="212">
+              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -300,12 +297,12 @@
       <workItem from="1533234701908" duration="3257000" />
       <workItem from="1533565514537" duration="551000" />
       <workItem from="1533570096416" duration="2164000" />
-      <workItem from="1534184218519" duration="12550000" />
+      <workItem from="1534184218519" duration="12643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18522000" />
+    <option name="totallyTimeSpent" value="18615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -634,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/olpd/courses/all-courses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        <state relative-caret-position="212">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
       </provider>
