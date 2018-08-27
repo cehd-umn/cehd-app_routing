@@ -8,6 +8,7 @@ vendor
 completer.hist
 tags
 dwt
+.idea/workspace.xml
 
 public/carei
 public/CI
