@@ -456,6 +456,12 @@
     template_data:
         meta_description: "The School Psychology faculty accept two broad aims of school psychological practice: (1) improving student competence and (2) building the capacity of systems to address the needs of children and youth. To this end, the program draws on competencies outlined by the American Psychological Association (APA) and further informed by guiding principles in school psychology (Ysseldyke et al., 2006)."
         section: programs-degrees
+/edpsych/programs/schoolpsych/frequently-asked-questions/:
+    publish: true
+    template: edpsych/programs/schoolpsych/frequently-asked-questions.html
+    template_data:
+        meta_description: "Learn more about the school psychology program in the Department of Educational Psychology at the University of Minnesota before you apply with these FAQs."
+        section: programs-degrees
 /edpsych/programs/schoolpsych/master/:
     publish: true
     template: edpsych/programs/schoolpsych/master.html
@@ -558,6 +564,12 @@
     template_data:
         meta_description: "Earn your degree and teaching license in four years. Become an expert at meeting students’ needs by providing individualized instruction to students with disabilities in grade K through age 21."
         section: programs-degrees
+/edpsych/programs/specialed/sped-bs-foundations/:
+    publish: true
+    template: edpsych/programs/specialed/sped-bs-foundations.html
+    template_data:
+        meta_description: "Gain expertise in special education to expand its reach in schools and society."
+        section: programs-degrees
 /edpsych/programs/specialed/sped-med-teacherlicensure/:
     publish: true
     template: edpsych/programs/specialed/sped-med-teacherlicensure.html
@@ -565,25 +577,25 @@
         meta_description: "Teach special education for young people birth through age 21."
         section: programs-degrees
 /edpsych/programs/specialed/pioneers/:
-    publish: false
+    publish: true
     template: edpsych/programs/specialed/pioneers/index.html
     template_data:
         meta_description: "Learn about the University of Minnesota's legacy in the field of special education."
         section: programs-degrees
 /edpsych/programs/specialed/pioneers/evelyn-deno/:
-    publish: false
+    publish: true
     template: edpsych/programs/specialed/pioneers/evelyn-deno.html
     template_data:
         meta_description: "Learn about the University of Minnesota Professor Evelyn Deno's legacy in the field of special education."
         section: programs-degrees
 /edpsych/programs/specialed/pioneers/frank-wood/:
-    publish: false
+    publish: true
     template: edpsych/programs/specialed/pioneers/frank-wood.html
     template_data:
         meta_description: "Learn about the University of Minnesota Professor Frank Wood's legacy in the field of special education."
         section: programs-degrees
 /edpsych/programs/specialed/pioneers/mary-mcevoy/:
-    publish: false
+    publish: true
     template: edpsych/programs/specialed/pioneers/mary-mcevoy.html
     template_data:
         meta_description: "Learn about the University of Minnesota Professor Mary McEvoy's legacy in the field of special education."

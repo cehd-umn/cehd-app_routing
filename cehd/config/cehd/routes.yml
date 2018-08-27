@@ -2854,11 +2854,6 @@
   template: cehd/trio/upward-bound/wilkinson.html
   template_data:
     - section: trio
-/trio/upward-bound/yang/:
-  publish: true
-  template: cehd/trio/upward-bound/yang.html
-  template_data:
-    - section: trio
 /undergraduate/:
   publish: true
   template: cehd/undergraduate/index.html
