@@ -65,8 +65,18 @@
   template: cehd/about/index.html
   template_data:
     - section: about
+/about/annual-report/:
+  publish: false
+  template: cehd/about/annual-report.html
+  template_data:
+    - section: about
+/about/index-annual-report/:
+  publish: false
+  template: cehd/about/index-annual-report.html
+  template_data:
+    - section: about
 /about/accreditation/:
-  publish: true
+  publish: false
   template: cehd/about/accreditation/index.html
   template_data:
     - section: about
@@ -860,9 +870,19 @@
   template: cehd/book-week/previous-authors/fox.html
   template_data:
     - section: book-week
+/book-week/previous-authors/lai/:
+  publish: true
+  template: cehd/book-week/previous-authors/lai.html
+  template_data:
+    - section: book-week
 /book-week/previous-authors/munoz-ryan/:
   publish: true
   template: cehd/book-week/previous-authors/munoz-ryan.html
+  template_data:
+    - section: book-week
+/book-week/previous-authors/okorafor/:
+  publish: true
+  template: cehd/book-week/previous-authors/okorafor.html
   template_data:
     - section: book-week
 /book-week/previous-authors/yang/:

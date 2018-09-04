@@ -1,0 +1,61 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "2018 Author" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+
+        <h1>Book Week<small class="clear"><em>A celebration of children's literature</em></small></h1>
+                {{ include('cehd/book-week/aa-nav.html') }}
+
+      <div class="twothird feature">
+        <h2>2018 author: Nnedi Okorafor</h2>
+        <div class="row">
+        <div class="span-3">
+          <figure class="margin-top-3">
+            <img class="circular" alt="NnediOkorafor" src="/assets/images/book-week/okorafor/sq-Nnedi-Okorafor.jpg" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+         <div class="span-9">
+           Nigerian American writer and professor Nnedi Okorafor has incorporated Nigerian cosmology, creatures her mother told her about, and stories she overheard the elders tell in Nigeria, into her books and short stories. Despite the fact that her work is classified as speculative, it's actually not so easy to tell what's fact and what is fiction in her work. Nnedi Okorafor will discuss the inspirations behind her highly imaginative works of science fiction and fantasy and prove to you that "realistic" fiction has many faces.
+
+             <p>Okorafor is an international award-winning author of Africa-based science fiction and fantasy. Born in the United States to two Nigerian immigrant parents,
+             she is known for weaving African culture into evocative settings, memorable characters, and wonder-filled plots. Nnedi’s books for the young audience include,
+             among others, the <em>Binti series</em>, <em>Akata Witch</em>, <em>The Shadow Speaker</em> and <em>Akata Warrior</em>. Her most recent graphic novel, <em>Black Panther</em>,
+               saw a movie spin-off that became a worldwide sensation. Nnedi’s World Fantasy Award winning novel <em>Who Fears Death</em> is currently adapted by HBO into a
+                 TV series produced by <em>Game of Thrones</em> author George R.R. Martin.</p>
+
+            </div>
+        </div>
+    </div>
+  </div>
+ </div> <!-- ./container -->
+ <!-- ADD book jackets here -->
+ <div class="row emphasis margin-top-1">
+   <div class="container">
+     <div class="row">
+       <h2 class="text-center">Featured books</h2>
+       <div class="twothird feature">
+       <div class="third">
+         <img alt="Book Jacket: Akata Witch" src="/assets/images/book-week/Okorafor/Akata_Witch.jpg"/>
+         <figcaption>Akata Witch</figcaption>
+       </div>
+       <div class="third">
+         <img alt="Book Jacket: Akata Warrior" src="/assets/images/book-week/Okorafor/Akata_Warrior.jpg"/>
+         <figcaption>Akata Warrior</figcaption>
+       </div>
+
+       <div class="third">
+         <img alt="Book Jacket: Who Fears Death" src="/assets/images/book-week/Okorafor/Who_Fears_Death.jpg" />
+         <figcaption>Who Fears Death</figcaption>
+       </div>
+
+   </div>
+
+     </div>
+   </div>
+ </div>
+   <!-- END book jackets here -->
+</div> <!-- ./row -->
+{% endblock %}

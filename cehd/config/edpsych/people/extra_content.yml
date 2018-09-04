@@ -41,24 +41,6 @@ jcaven:
     category: instructor
     quote: null
     video_embed_code: null
-shupp:
-    meta_description: null
-    section: Special Education
-    category: faculty
-    quote: null
-    video_embed_code: null
-vpfleury:
-    meta_description: null
-    section: Special Education
-    category: faculty
-    quote: "I aim to improve educational outcomes for learners with autism by promoting high quality instruction in schools, homes, and the community."
-    video_embed_code: null
-jiten001:
-    meta_description: null
-    section: Special Education
-    category: faculty
-    quote: "My research focuses on evaluating the variables (e.g. materials, instructional procedures) that impact children's ability to succeed in school-related tasks."
-    video_embed_code: null
 seif0074:
     meta_description: null
     section: Special Education
@@ -131,6 +113,12 @@ fgmiller:
     category: faculty
     quote: "The primary aim of my research program involves the identification and adoption of evidence-based practices related to school-based social, emotional, and behavioral assessment and intervention."
     video_embed_code: null
+kembe007:
+    meta_description: null
+    section: School Psychology
+    category: instructor
+    quote: "The primary aim of my research program involves the identification and adoption of evidence-based practices related to school-based social, emotional, and behavioral assessment and intervention."
+    video_embed_code: null
 tchrist:
     meta_description: null
     section: School Psychology
@@ -141,7 +129,7 @@ chova001:
     meta_description: null
     section: Quantitative Methods in Education (QME)
     category: instructor
-    quote: "Witnessing students achieve the visible ‘ah-ha’ moments of understanding and seeing them engage with one another in the learning process, motivate and inspire my teaching practice."
+    quote: "As a lecturer, my goal is to develop supportive relationships with students in order to foster a positive graduate school career and encourage enthusiasm for lifelong learning."
     video_embed_code: null
 mld:
     meta_description: null

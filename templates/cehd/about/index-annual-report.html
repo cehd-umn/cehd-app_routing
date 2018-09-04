@@ -1,0 +1,141 @@
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{%- import "macros/svg.html" as svg -%}
+{% set page_title = "About the College" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>About the college</h1>
+        <div class="row">
+            <div class="span-2">
+                <p><img class="circular" alt="Dean Jean Quam" src="/assets/images/headshots/faculty-features/sq-QuamJean-2015.jpg" /></p>
+            </div>
+            <div class="span-8">
+                <p>For more than 100 years, our faculty, students, staff, and alumni have had a deep and historic impact on society. We are driven by a sustained belief in the value of each child, each person, as an individual with unique talents and challenges;
+                    an understanding that research and collaboration with community professionals will lead to solutions that will improve lives; and a dedication to preparing educational and human service professionals to carry the values and knowledge
+                    discovered here into the world to make it a better place. &nbsp;</p>
+                <p>Our college makes a real difference in people’s lives. Discover that difference for yourself. </p>
+                <p>Jean K. Quam, Dean<br />
+                <a href="https://twitter.com/jeankquam?lang=en">@JeanKQuam</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="half">
+                <h2>Mission </h2>
+                <p>The mission of the University of Minnesota College of Education and Human Development is to contribute to a just and sustainable future through engagement with the local and global communities to enhance human learning and development
+                    at all stages of the life span.</p>
+            </div>
+
+            <div class="half">
+                <h2>Vision</h2>
+                <p>The College will advance research, teaching, and community engagement to increase opportunities for all individuals to have a successful start in life and to foster healthy human development, and will provide programs that meet the demands
+                    of the 21st century.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row emphasis margin-top-1">
+  <div class="container span-9 feature">
+    <div class="third">
+      <img class="circular" src="/assets/images/about/students-block-party-sq.jpg" alt="Three students at block party">
+    </div>
+    <div class="twothird">
+      <h2>2018 Annual Report</h2>
+      <p>
+        <strong>Improving lives</strong>—those two words sum up the impact of CEHD’s teaching, research, and outreach. We pursue research into the cognitive, emotional, physical, and social foundations of learning and human performance. Then we partner to apply our discoveries
+        in diverse communities, locally and globally. We empower and innovate to build a more just and inclusive world—where every child can grow through quality education, and where everyone can achieve a higher quality of life.
+      </p>
+      <div class="margin-top-3">
+      </div>
+      <p>To learn more, read our <a href="/about/annual-report/">annual report</a> <strong>or</strong> <a href="/assets/docs/about/CEHD-Annual-Report-2018.pdf" {{ analytics.add_tracking("send", "event", "2018 Annual Report", "click", "annualreport") }}>download the pdf.</a></p>
+
+
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="container margin-top-2">
+
+            <div class="twothird feature">
+                <h2 class="text-center" id="admin">College administration</h2>
+            </div>
+            <div class="row">
+                <div class="span-4">
+                    &nbsp;
+                </div>
+                <div class="span-2">
+                    <p><img class="circular" alt="Dean Jean Quam" src="/assets/images/headshots/faculty-features/sq-QuamJean-2015.jpg" /></p>
+                </div>
+                <div class="span-4">
+                    <h3><a href="/people/jquam/">Jean K. Quam</a></h3>
+                    <p>Dean<br>
+                        <a href="mailto:jquam@umn.edu">jquam@umn.edu</a> | 612-626-5177 <br  /><a href="https://twitter.com/jeankquam?lang=en">@JeanKQuam</a></p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span-2">
+                    <p><img src="/assets/images/headshots/Sq-BartlettK-2016.jpg" class="circular" alt="Kenneth Bartlett" /></p>
+                </div>
+                <div class="span-4">
+                    <h3><a href="/olpd/people/bartlett/">Kenneth Bartlett</a></h3>
+                    <p>Associate Dean for Faculty Development and International Initiatives<br>
+                        <a href="mailto:bartlett@umn.edu">bartlett@umn.edu</a> | 612-624-4935</p>
+                </div>
+                <div class="span-2">
+                    <p><img src="/assets/images/headshots/Sq-DillonD-2017.jpg" class="circular" alt="Deborah Dillon" /></p>
+                </div>
+                <div class="span-4">
+                    <h3><a href="/ci/people/dillon.html">Deborah Dillon</a></h3>
+                    <p>Associate Dean for Graduate and Professional Programs<br>
+                        <a href="mailto:dillon@umn.edu">dillon@umn.edu</a> | 612-626-8271</p>
+                </div>
+            </div><!-- ./row -->
+            <div class="row">
+                <div class="span-2">
+                    <p><img src="/assets/images/headshots/Sq-MadyunN-2011.jpg" class="circular" alt="Na'im Madyun" /></p>
+                </div>
+                <div class="span-4">
+                    <h3><a href=" /olpd/people/madyu002/">Na'im Madyun</a></h3>
+                    <p>Associate Dean for Undergraduate Programs, Diversity, and Equity<br>
+                        <a href="mailto:madyu002@umn.edu">madyu002@umn.edu</a> | 612-624-5761</p>
+                </div>
+                <div class="span-2">
+                    <p><img src="/assets/images/headshots/Sq-SymonsF-2005.jpg" class="circular" alt="Frank J. Symons" /></p>
+                </div>
+                <div class="span-4">
+                    <h3><a href="/edpsych/people/Faculty/symons.html">Frank Symons</a></h3>
+                    <p>Associate Dean for Research and Policy<br />
+                        <a href="mailto:symon007@umn.edu">symon007@umn.edu</a> | 612-626-8697</p>
+                </div>
+            </div><!-- ./row -->
+
+            <div class="twothird feature">
+                <h2 class="text-center">Employment opportunities</h2>
+            </div>
+            <div class="row">
+              <div class="third">
+                  <h3>College contacts</h3>
+                  <p><a href="/directory/">List of administrative services</a> and contacts.</p>
+              </div>
+              <div class="third">
+                  <h3>Employment</h3>
+                  <p>To view and apply for open positions, please visit the <a href="https://humanresources.umn.edu/jobs">University of Minnesota Employment System</a>. When searching postings, search by Department for open positions in CEHD.</p>
+              </div>
+              <div class="third">
+                  <h3>Additional resources</h3>
+                  <ul>
+                    <li><a href="https://humanresources.umn.edu/">Office of Human Resources</a></li>
+                    <li><a href="https://humanresources.umn.edu/find-job/rap">Relocation Assistance</a><br />
+                      Live Near Work (University District)</li>
+                    <li><a href="http://goldpass.umn.edu/">GoldPASS: University of Minnesota online database</a> of employment, internship, and volunteer opportunities for students and alumni.</li>
+                  </ul>
+              </div>
+          </div>
+        </div><!-- ./container -->
+    </div><!-- ./row -->
+
+{% endblock %}
