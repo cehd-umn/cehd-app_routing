@@ -1,5 +1,4 @@
 {% extends "cehd/layout/base.html" %}
-{%- import "macros/ga-tracking.html" as analytics -%}
 {%- import "macros/svg.html" as svg -%}
 {% set page_title = "About the College" %}
 {% block title %}{{ page_title }}{% endblock %}
@@ -36,27 +35,60 @@
     </div>
 </div>
 
-<div class="row emphasis margin-top-1">
-  <div class="container span-9 feature">
-    <div class="third">
-      <img class="circular" src="/assets/images/about/students-block-party-sq.jpg" alt="Three students at block party">
+<div class="row twothird feature">
+  <div class="container">
+    <h2  class="text-center">2018 Annual Report</h2>
+    <div class="span-6 push-2">
+      <img class="mobile-hide" src="/assets/images/about/Annual_Report_2018_Cover.jpg" width="50%"alt="Annual report cover">
     </div>
-    <div class="twothird">
-      <h2>2018 Annual Report</h2>
-      <p>
-        <strong>Improving lives</strong>—those two words sum up the impact of CEHD’s teaching, research, and outreach. We pursue research into the cognitive, emotional, physical, and social foundations of learning and human performance. Then we partner to apply our discoveries
-        in diverse communities, locally and globally. We empower and innovate to build a more just and inclusive world—where every child can grow through quality education, and where everyone can achieve a higher quality of life.
-      </p>
-      <div class="margin-top-3">
-      </div>
-      <p>To learn more, read our <a href="/about/annual-report/">annual report</a> <strong>or</strong> <a href="/assets/docs/about/CEHD-Annual-Report-2018.pdf" {{ analytics.add_tracking("send", "event", "2018 Annual Report", "click", "annualreport") }}>download the pdf.</a></p>
+    <div class="span-6">
+
+
+    <p>To learn more, <a href="/assets/docs/about/CEHD-Annual-Report-2018.pdf" {{ analytics.add_tracking("send", "event", "2018 Annual Report", "click", "annualreport") }}>download our Annual Report</a> (pdf).</p>
 
 
     </div>
   </div>
 </div>
-<div class="row">
-    <div class="container margin-top-2">
+<!--
+<div class="row emphasis margin-top-1">
+  <div class="container span-9 feature">
+    <div class="third">
+      <img src="/assets/images/about/Annual_Report_2018_Cover.jpg" alt="Annual report cover">
+    </div>
+    <div class="twothird">
+      <h2>2018 Annual Report</h2>
+
+      <div class="margin-top-3">
+      </div>
+      <p>To learn more, <a href="/assets/docs/about/CEHD-Annual-Report-2018.pdf" {{ analytics.add_tracking("send", "event", "2018 Annual Report", "click", "annualreport") }}>download our Annual Report</a> (pdf).</p>
+
+
+    </div>
+  </div>
+</div> -->
+      <div class="row">
+
+
+        <div class="row emphasis cool margin-top-1">
+                        <div class="container">
+            <div class="twothird feature">
+                <h2 class="text-center">College student profile</h2>
+            </div>
+            <div class="row span-12">
+                <div class="half">
+                    <h3>Enrollment (2017-18 Academic Year)</h3>
+                    <p>Total enrollment: 4,823<br>
+                    Undergraduate: 2,500<br> Graduate: 2,323<br> Full time: 3,913<br> Part time: 910</p>
+                </div>
+                <div class="half">
+                    <h3>Degrees granted</h3>
+                    <p>1,644 degrees granted during 2016-17 (760 B.S., 502 M.Ed., 382 masters and advanced graduate degrees). In addition, 387 students completed post baccalaureate teacher licensure (285 initial licensure, 102 additional licensure).</p>
+                </div>
+            </div>
+          </div>
+</div>
+
 
             <div class="twothird feature">
                 <h2 class="text-center" id="admin">College administration</h2>
@@ -137,5 +169,5 @@
           </div>
         </div><!-- ./container -->
     </div><!-- ./row -->
-
+</div>
 {% endblock %}
