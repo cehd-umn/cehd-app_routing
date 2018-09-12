@@ -1,0 +1,55 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Keegan Bunker" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+
+<div class="row">
+  <div class="container">
+    <div class="twothirds">
+        <h1>McNair Scholar 2018
+          <small class="clear">Keegan Bunker</small></h1>
+    </div>
+
+
+  </div> <!-- ./container -->
+  <div class="row">
+      <div class="container">
+          <div class="half feature">
+          <p>Keegan Bunker is a senior at the University of Minnesota majoring in Aerospace Engineering & Mechanics with minors in Math, Computer Science, and Astrophysics. His research interests are in satellite attitude control systems and other fields of aerospace engineering as he explores more diverse research fields.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row emphasis margin-top-1">
+    <div class="span-9 feature">
+      <div class="third">
+          <img class="circular" src="/assets/images/trio/m-scholars/Sq-2018-Bunker.jpg" alt="Keegan Bunker headshot">
+      </div>
+      <div class="twothird">
+            <blockquote class="quote-wrap">
+              My dream is to make meaningful impact on peoples’ lives by contributing to discoveries and advancement of knowledge in my field. I want to be working at the bleeding edge and learning new things, not behind the discoveries learning from the work of others.
+            </blockquote>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="span-8 feature">
+
+    <h2>Research project</h2>
+    <p><strong>Helmholtz Coil Testbed Design for Hardware-in-the-loop Testing of CubeSat Satellite Attitude Determination and Control Systems</strong></p>
+    <p><strong>Abstract: </strong>
+      The Signal Opportunity CubeSat Ranging And Timing Experiment System (SOCRATES) is a CubeSat (a miniature satellite) being built by the University of Minnesota to test a novel navigation sensor.  This sensor will use x-rays emitted by a class of neutron stars (pulsars) to measure distance travelled by satellites.  That is, it uses the pulsars as a natural, galactic GPS.  SOCRATES will control its orientation in space by using electro-magnets (called magnetorquers) to “push and pull” on Earth’s magnetic field.  The system used to accomplish this, called the attitude determination and control system (ADCS), will require extensive validation on Earth before launch.  This can be done using a Helmholtz coil cage to simulate Earth’s magnetic field (as experienced by a satellite in orbit) within the confines of a laboratory.  This paper discusses a design study for optimizing a low-cost Hemholtz cage.  The design study includes numerical simulation (using the Biot-Savart law) and market research to arrive at a design that can be easily constructed and whose characteristics can be precisely quantified.  Previous literature typically cited for cage designs lacks precision, which makes performance characterization difficult. The methods detailed within this paper build upon those results by adding additional precision. This can be of use to other researchers to confidently achieve a low-cost design.
+     <a href="/assets/docs/trio/posters/Bunker2018FinalPoster.pdf">Download poster</a>.[PDF] </p>
+
+    <h2>Faculty mentor</h2>
+    <p>
+      <strong>Dr. Gebre-Egziabher’s</strong> area of research is in sensing and state estimation with applications to navigation and attitude determination of aerospace vehicles. He earned his Ph.D. in Aeronautics and Astronautics form Stanford University in 2002.
+    </p>
+
+  </div>
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

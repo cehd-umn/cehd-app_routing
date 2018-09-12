@@ -15,13 +15,21 @@
           <h2>Mission</h2>
           <p>The federally funded <a href="http://www2.ed.gov/programs/triomcnair/index.html">TRIO McNair Scholars program</a> seeks to increase doctoral program application, matriculation, and degree attainment by underrepresented and first-generation college
             students. <a href="/trio/mcnair/about/">Read more about the program &raquo;</a></p>
-          <p>The U of M McNair program is open to all Twin Cities students in all colleges and majors, U of M coordinate campuses (Crookston, Duluth, Morris, Rochester), and Minnesota colleges and universities that do not have their own McNair program: Carleton
-            College, Hamline University, Macalester College, Metropolitan State University, Saint Mary’s University of Minnesota, St. Catherine University, St. John’s University, and University of St. Thomas. </p>
+          <p>The U of M McNair program is open to all Twin Cities students in all colleges and majors,
+            U of M coordinate campuses (Crookston, Duluth, Rochester), and Minnesota colleges and universities that do not have their own McNair program: Carleton
+            College, Hamline University, Macalester College, Metropolitan State University,
+            Saint Mary’s University of Minnesota, St. Catherine University, St. John’s University, and University of St. Thomas. </p>
           <p>Through this summer experience and academic year programming, McNair Scholars develop higher-level academic and research skills necessary to gain admission to and successfully complete graduate study. </p>
 
 
       </div>
-      <div class="span-4">  <!-- Events feed -->
+      <div class="span-4">
+        <!-- Info Sessions feed -->
+        <h2>Information sessions</h2>
+        <div id="info-sessions-container">
+
+        </div>
+        <!-- Events feed -->
         {{ loader.loader( "Events", "h2", "events-container" ) }}
         <h3>McNair Program Guide: Powering the Next Generation of Scholars and Industry Leaders
         </h3>
@@ -182,7 +190,7 @@
 
         <h2>Graduate study at UMN</h2>
         <p class="last">Are you a McNair Scholar from another institution and interested in graduate study at the University of MN? The
-          <a href="https://www.grad.umn.edu/diversity">Office for Diversity in Graduate Education</a> has resources for you!</p>
+          <a href="https://www.grad.umn.edu/diversity-preparing-graduate-school/mcnairresources">Office for Diversity in Graduate Education</a> has resources for you!</p>
       </div>
     </div>
   </div> <!-- ./container -->
@@ -194,7 +202,7 @@
         * the first value passed in for for the t query param
     -#}
     {{ events.events_feed_js(
-        279, 6
+        279, 4
     ) }}
-    {{ info_session.info_sessions_feed_js("McNair","6","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "undergraduate.html") }}
+    {{ info_session.info_sessions_feed_js("McNair","4","#info-sessions-container","/assets/dist/views/cehd/info-sessions", "undergraduate.html") }}
 {% endblock %}
