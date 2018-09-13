@@ -66,7 +66,7 @@
   template_data:
     - section: about
 /about/accreditation/:
-  publish: false
+  publish: true
   template: cehd/about/accreditation/index.html
   template_data:
     - section: about
@@ -2725,102 +2725,102 @@
   template_data:
     - section: trio
 /trio/mcnair/2018/bunker/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/bunker.html
   template_data:
     - section: trio
 /trio/mcnair/2018/damazo/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/damazo.html
   template_data:
     - section: trio
 /trio/mcnair/2018/dresel/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/dresel.html
   template_data:
     - section: trio
 /trio/mcnair/2018/ibrahim/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/ibrahim.html
   template_data:
     - section: trio
 /trio/mcnair/2018/johnson/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/johnson.html
   template_data:
     - section: trio
 /trio/mcnair/2018/knourek/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/knourek.html
   template_data:
     - section: trio
 /trio/mcnair/2018/lundgren/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/lundgren.html
   template_data:
     - section: trio
 /trio/mcnair/2018/mcclendon/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/mcclendon.html
   template_data:
     - section: trio
 /trio/mcnair/2018/mendivil/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/mendivil.html
   template_data:
     - section: trio
 /trio/mcnair/2018/mercado/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/mercado.html
   template_data:
     - section: trio
 /trio/mcnair/2018/molina-vega/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/molina-vega.html
   template_data:
     - section: trio
 /trio/mcnair/2018/mussehl/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/mussehl.html
   template_data:
     - section: trio
 /trio/mcnair/2018/nguyen/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/nguyen.html
   template_data:
     - section: trio
 /trio/mcnair/2018/noor/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/noor.html
   template_data:
     - section: trio
 /trio/mcnair/2018/ramirez/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/ramirez.html
   template_data:
     - section: trio
 /trio/mcnair/2018/rush/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/rush.html
   template_data:
     - section: trio
 /trio/mcnair/2018/rypa/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/rypa.html
   template_data:
     - section: trio
 /trio/mcnair/2018/taylor/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/taylor.html
   template_data:
     - section: trio
-/trio/mcnair/2018/westfallmccoy/:
-  publish: false
+/trio/mcnair/2018/westfall-mccoy/:
+  publish: true
   template: cehd/trio/mcnair/2018/westfallmccoy.html
   template_data:
     - section: trio
 /trio/mcnair/2018/xiong/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/2018/xiong.html
   template_data:
     - section: trio
