@@ -530,6 +530,16 @@
   publish: true
   template_data:
     - section: graduate-programs
+/graduate-programs/mamed-program-planning-sheets/:
+  template: olpd/graduate-programs/MAMEDprogramsheets.html
+  publish: true
+  template_data:
+    - section: graduate-programs
+/graduate-programs/phd-program-planning-sheets/:
+  template: olpd/graduate-programs/PHDprogramsheets.html
+  publish: true
+  template_data:
+    - section: graduate-programs
 /people/:
   template: olpd/people/index.html
   publish: true
