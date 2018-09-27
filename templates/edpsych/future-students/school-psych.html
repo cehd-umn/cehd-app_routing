@@ -12,13 +12,14 @@
         <ul>
         <li><a href="#gradapp">Graduate school application</a></li>
         <li><a href="#appfee">Application fee</a></li>
-        <li><a href="#progapp">Program application</a></li>
-        <li><a href="#transcripts">Transcripts</a></li>
-        <li><a href="#letters">Three letters of recommendation</a></li>
+        <li><a href="#transcripts">Transcripts (Academic History)</a></li>
         <li><a href="#GRE">Graduate Record Examination (GRE) scores</a></li>
         <li><a href="#nonnativeeng">Non–native English speakers&#58;  English language test scores (TOEFL, IELTS, etc.)</a></li>
         <li><a href="#persstmt">Strong personal statement</a></li>
         <li><a href="#resumecv">Resume/CV</a></li>
+        <li><a href="#progapp">Program application</a></li>
+        <li><a href="#criticalissue">Critical Issue Essay</a></li>
+        <li><a href="#letters">Three letters of recommendation</a></li>
         </ul>
         <h3>Test scores</h3>
         <ul>
@@ -85,60 +86,65 @@
       <h2 class="text-center">How to apply</h2>
       <section>
         <div class="feature twothirds">
-        <p class="text-center"><a href="https://www.grad.umn.edu/admissions/" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }}  class="button center no-margin-top">Start your graduate application</a></p>
-        <p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://www.grad.umn.edu/admissions" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }} >graduate application</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/"> Graduate School website</a>.</p>
+        <p class="text-center"><a href="https://choose.umn.edu/apply/" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }}  class="button center no-margin-top">Start your graduate application</a></p>
+        <p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://choose.umn.edu/apply/" {{ analytics.add_tracking("send", "event", "exiting site", "click", "School Psych Application Page") }} >graduate application</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu/admissions/"> Graduate School website</a>.</p>
         <h3 id="gradapp" class="text-center">Graduate school application</h3>
-        <p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Test Information-Self Reported, Languages, Employment/Residence Information, Financial Support, Legal agent/privacy statement, Personal Statement, Resume/CV, Graduate Program Supplemental Application, Upload 2 (Critical Issue Essay), Transcripts and Recommendations.</p>
-        <p><strong>Optional fields&#58;  </strong>Awards and Activities, Diversity Statement, Extenuating Circumstances Statement; are optional, but will be taken into consideration if submitted.</p>
+        <p><strong>Required fields&#58;  </strong>Program Selection, Term Selection, Biographical Information, Personal Background, Academic History (including transcripts), Test Scores, Employment, Materials (including: Personal Statement, Resume/CV, Graduate Program Supplemental Application (Critical Issue Essay), and three letters of Recommendations</p>
+        <p><strong>Optional fields&#58;  </strong>Diversity Statement, Extenuating Circumstances Statement; are optional, but will be taken into consideration if submitted. A Writing Sample and Description of Research are not needed.</p>
           <h3 id="appfee" class="text-center">Application fee</h3>
             <p><a href= "http://www.grad.umn.edu/admissions/">Visit the Graduate School website for more information</a></p>
-          <h3 id="progapp" class="text-center">Program application</h3>
-            <p>Complete the <a href="{{ config.asset_base }}/dist/documents/future/schpsy_programapplication.pdf">program application</a> form and upload it in the Program Supplementary Information section of the graduate application under 'Graduate Program Additional Application'.</p>
-          <h3 id="transcripts" class="text-center">Transcripts</h3>
-            <p>Unofficial transcripts or academic records should be uploaded directly to the graduate application. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
+          <h3 id="transcripts" class="text-center">Transcripts (Academic History)</h3>
+            <p>Unofficial transcripts or academic records should be uploaded directly to the graduate application under the "Academic History" section. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
             <p>If you are admitted, the University will then request official copies of this material.</p>
             <p><a href="https://www.grad.umn.edu/admissions/">More information about transcripts and credentials</a></p>
-          <h3 id="letters" class="text-center">Letters of recommendation</h3>
-            <p>Acceptable recommendations will come from current or former professors who can assess your potential for graduate work. Other recommenders, such as employers, are also acceptable.</p>
-          <h3 id="GRE" class="text-center">Graduate Record Examination (GRE) scores</h3>
-            <p>GRE General Test scores should be entered in the "Test Information-Self-Reported" field in the graduate application. You <strong>do not</strong> need to take any GRE subject tests. Please have official scores sent to Institution Code 6874. We do not have minimum required GRE scores. See above for average scores of admitted students.</p>
+    <h3 class="text-center">Test Scores</h3>
+          <h4 id="GRE" class="text-center">Graduate Record Examination (GRE) scores</h4>
+            <p>GRE General Test scores should be entered in the "Test Scores" section. You <strong>do not</strong> need to take any GRE subject tests. Please have official scores sent to Institution Code 6874. We do not have minimum required GRE scores. See above for average scores of admitted students.</p>
             <p><a href="http://www.grad.umn.edu/admissions/">More information about the GRE</a></p>
-          <h3 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h3>
-            <p>Report your <a href="http://www.grad.umn.edu/admissions/">TOEFL, IELTS, or MELAB scores</a> (non-native English speakers only).</p>
-          <h3 id="persstmt" class="text-center">Personal Statement</h3>
-            <p>Describe, as specifically as possible, the following with subheadings for each (not to exceed 1 page, single spaced):</p>
-              <ul>
-                <li>Your reasons for applying to this program.</li>
-                <li>Your career objectives.</li>
-                <li>(PhD applicants only) Your research interests and specialized expertise to be developed during graduate study.</li>
-                <li>(PhD applicants only) How your research interests relate to the work of one of more of the program faculty who advise doctoral students.</li>
-              </ul>
-            <p>Upload the essay in the "Applicant Statements" section under "Personal Statement", in the graduate application.</p>
-          <h3 class="text-center">Critical Issue Essay</h3>
-            <p>Upload a typed essay addressing each of the following questions (not to exceed 1 page, single spaced):</p>
-              <ul>
-                <li>What is the role of a school psychologist&#63;</li>
-                <li>What are the most critical educational issues school psychologists can help address&#63;</li>
-                <li>How would you like to contribute to addressing these issues in your future career&#63;</li>
-              </ul>
-              <p>Upload the essay in the "Program Supplementary Information" section under "Critical Issue Essay", in the graduate application.</p>
-          <h3 id="resumecv" class="text-center">Resume/CV</h3>
-            <p>Upload it in the "Program Supplementary Information", under "Resume/CV" section, in the graduate application.</p>
+          <h4 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h4>
+            <p>Report your <a href="http://www.grad.umn.edu/admissions/">TOEFL, IELTS, or MELAB scores</a> (non-native English speakers only) in the "Test Scores" section.</p>
+          <h3 id="letters" class="text-center">Letters of recommendation</h3>
+            <p>Three letters of recommendation are required. Acceptable recommendations will come from current or former professors who can assess your potential for graduate work. Other recommenders, such as employers, are also acceptable. You will enter your recommenders naema nd email into the application. They will be sent direction on how to upload tehir letter directly into your application.</p>
+            <p><a href="https://www.grad.umn.edu/admissions">Get more information and troubleshooting tips</a></p>
+          <h3 Materials class="text-center">Materials</h3>
+            <h4 class="text-center">Required Materials</h4>
+                <h5 id="persstmt">Personal Statement</h5>
+                    <p>Describe, as specifically as possible, the following with subheadings for each (not to exceed 1 page, single spaced):</p>
+                    <ul>
+                        <li>Your reasons for applying to this program.</li>
+                        <li>Your career objectives.</li>
+                        <li>(PhD applicants only) Your research interests and specialized expertise to be developed during graduate study.</li>
+                        <li>(PhD applicants only) How your research interests relate to the work of one of more of the program faculty who advise doctoral students.</li>
+                    </ul>
+                    <p>Upload the essay under "Personal Statement" in the Materials section.</p>
+                <h5 id="resumecv">Resume/CV</h5>
+                    <p>Upload it in the "Program Supplementary Information", under "Resume/CV" section.</p>
+            <h5>Graduate Program Additional Material</h5>
+                <h6 id="progapp">Program application</h6>
+                    <p>Complete the <a href="{{ config.asset_base }}/dist/documents/future/schpsy_programapplication.pdf">program application</a> form and upload it in the Program Supplementary Information section of the graduate application under "Graduate Program Additional Application".</p>
+                <h6 id="criticalissue">Critical Issue Essay</h6>
+                    <p>Upload a typed essay addressing each of the following questions (not to exceed 1 page, single spaced):</p>
+                    <ul>
+                        <li>What is the role of a school psychologist&#63;</li>
+                        <li>What are the most critical educational issues school psychologists can help address&#63;</li>
+                        <li>How would you like to contribute to addressing these issues in your future career&#63;</li>
+                    </ul>
+                    <p>Upload the essay under "Graduate Program Additional Upload" in the Materials section.</p>
           </div>
       </section>
     <section>
       <div class="feature twothirds">
-      <h2 class="text-center">Optional application materials</h2>
-        <h3 class="text-center">Diversity Statement</h3>
+      <h4 class="text-center">Optional Materials</h4>
+        <h5>Diversity Statement</h5>
           <p>Submitting the diversity statement is optional, but is encouraged. This statement may be used to nominate exceptional applicants for graduate fellowships.</p>
           <p>Describe how your background, experiences, and achievements will contribute to the program and university's goals of promoting excellence through diversity. If applicable, you may mention hardships or obstacles you overcame to complete your previous undergraduate or graduate education (e.g. coming from a low-income background or being a first-generation college student).</p>
-          <p>Upload the essay in the "Applicant Statements" section under "Diversity Statement", in the graduate application.</p>
-        <h3 class="text-center">DOVE Fellowship Statement</h3>
+          <p>Upload the essay under "Diversity Statement", in the Materials section.</p>
+        <h5>DOVE Fellowship Statement</h5>
           <p>The University's DOVE Fellowship provides a stipend, tuition, and health insurance for doctoral students from underrepresented backgrounds. Students from diverse ethnic, racial, economic, and educational backgrounds and experiences are encouraged to submit a statement describing (1) her or his background, experiences, and achievements that will contribute to the university’s goal of promoting excellence through diversity. If applicable, nominees should mention hardships or obstacles that they have overcome to complete their undergraduate education (e.g., coming from a low-income background or being a first-generation college student), and (2) experience with, or commitment to, serving or working with historically underserved or underprivileged populations.</p>
-          <p>Upload the essay in the "Applicant Statements" section under "DOVE Fellowship", in the graduate application</p>
-        <h3 class="text-center">Extenuating Circumstances</h3>
-          <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores.</p>
-        <h3 class="text-center">Graduate Program Additional Material</h3>
+          <p>Upload the essay instead of the standard "Diversity Statement" section under "Diversity Statement" in the Materials section.</p>
+        <h5>Extenuating Circumstances</h5>
+          <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores under "Extenuating Circumstances Statement" in the Materials section.</p>
+        <h5>Common Ground Consortium Statement</h5>
           <p>If you wish to be considered for a Common Ground Consortium fellowship for African&ndash;American students, please be sure to indicate this on your program application, and then upload a statement briefly addressing the following question&#58;  Given that the University of Minnesota is a public grant institution, it is imperative that CGC scholars can both benefits personally from their membership in the program as well as further the university’s founding mission to contribute to scholarship that benefits the local and greater communities.</p>
           <p>Please describe how your participation as a CGC scholar would do the following&#58; </p>
             <ul>
@@ -146,7 +152,9 @@
               <li>Prepare you for your chosen career</li>
               <li>Benefit the public</li>
             </ul>
-          <p>Upload the essay in the "Graduate Program Additional Material" section in the graduate application.</p>
+          <p>Upload the essay under "Graduate Program Additional Upload" in the Materials section.</p>
+        <h5>Writing Sample and Description of Research</h5>
+            <p>Writing Sample and Description of Research are not needed.</p>
         </div>
           </section>
         <section>

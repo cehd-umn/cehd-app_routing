@@ -6,20 +6,27 @@
 {% set page_title = "Special education" %}
 {%- import "macros/svg.html" as svg -%}
 {% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+#SvgjsTspan1012 {
+  fill: #fff;
+}
+</style>
+{% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
         <h2 class="h1">{{ page_title }}</h2>
             <section>
                 <div class="half">
-                  <div class="whole">
                     <img src="{{ config.base_url}}/assets/dist/images/programs/specialed/special-ed-aba-orientation.jpg" alt="first ever special education MA with ABA cohort at orientation">
-                    <div class"whole">
                     <figure>
-                        <figcaption>Our first-ever <a href="{{ config.base_url}}/programs/specialed/masters-aba/" {{ analytics.add_tracking("send", "event", "feature", "click", "spedmainfeature") }}>special education MA with an emphasis in applied behavior analysis</a> cohort visits during lunch at orientation. <a href="{{ config.base_url}}/programs/specialed/masters-aba/" {{ analytics.add_tracking("send", "event", "feature", "click", "spedmainfeature") }}>Learn more about the new program</a>
-                </div>
-              </div>
-        </div>
+                        <figcaption>Our first-ever <a href="{{ config.base_url}}/programs/specialed/masters-aba/" {{ analytics.add_tracking("send", "event", "feature", "click", "spedmainfeature") }}>
+                          special education MA with an emphasis in applied behavior analysis</a> cohort visits during lunch at orientation.
+                          <a href="{{ config.base_url}}/programs/specialed/masters-aba/" {{ analytics.add_tracking("send", "event", "feature", "click", "spedmainfeature") }}>Learn more about the new program</a>
+                        </figcaption>
+                      </figure>
+                  </div>
                 <div class="half">
                     <h2 class="no-margin-top">Help all students get the support they need to succeed</h2>
                     <p>Improve outcomes for individuals who require specialized
@@ -36,6 +43,7 @@
                     </ul>
             </div>
         </section>
+    <!--
         <section>
             <div class="half">
                     <p class="rankings">#5 in U.S. among special education graduate programs by <em>U.S. News and World Report</em> in 2018</p>
@@ -44,6 +52,51 @@
                     <p class="rankings">#3 in U.S. among special education undergraduate programs by <em>Best Education Degrees</em> in 2017</p>
             </div>
         </section>
+    -->
+      </div>
+      <div class="row margin-top-1">
+              <div class="container feature margin-top-2">
+                  {# make sure the SVG container has a unique id #}
+                  <div id="circle"
+                      data-svg-stat-group
+                      data-viewbox-x="0"
+                      data-viewbox-y="0"
+                      data-viewbox-height="250"
+                      data-viewbox-width="1400"
+                      data-circle-center-x="300"
+                      data-circle-center-y="125"
+                      data-circle-size="250"
+                      data-circle-bg-color="#7a0019"
+                      data-main-text-x="460"
+                      data-main-text-y="90"
+                      data-main-text-color="#000"
+                      data-main-text-font-family="Lato-light, sans-serif"
+                      data-main-text-font-size="30px"
+                      data-main-text-lines='["in the U.S. among special education graduate programs"]'
+                      data-stat-text-value="#5"
+                      data-stat-text-x="235"
+                      data-stat-text-y="50"
+                      data-stat-text-color="#fff"
+                      data-stat-text-font-family="Raleway, sans-serif"
+                      data-stat-text-font-size="70"
+                      data-caption-text-value="source: Ranked in 2018 by U.S. News & World Report"
+                      data-caption-text-x="460"
+                      data-caption-text-y="210"
+                      data-caption-text-color="#000"
+                      data-caption-text-font-family="Raleway, sans-serif"
+                      data-caption-text-font-size="13px"
+                      data-line-start-x="0"
+                      data-line-start-y="200"
+                      data-line-end-x="1400"
+                      data-line-end-y="200"
+                      data-line-stroke-width="10"
+                      data-line-stroke-color="#eee"
+                      data-line-stroke-opacity=".6"
+                  ></div>
+                </div>
+  </div>
+          <div class="container">
+
         <section>
                 <div class="half right">
                         {#-
@@ -70,7 +123,7 @@
                 </div>
               </section> -->
     </div>
-</div>
+<!--
 <div class="row emphasis cool margin-top-2">
     <div class="container">
         <div class="feature">
@@ -87,6 +140,7 @@
         </div>
     </div>
 </div>
+-->
 <div class="row">
     <div class="container">
     <section>
@@ -103,7 +157,7 @@
                 <p>Choose from two tracks.</p>
                 <h4><a href="{{ config.base_url }}/programs/specialed/sped-bs/">Bachelor's of Science (B.S.) with Academic Behavioral Strategist (ABS) licensure</a></h4>
                     <p>Earn your bachelor's of science in special education and academic behavior strategist (ABS) teaching license in four years.</p>
-                <h4><a href="{{ config.base_url }}/programs/specialed/sped-bs-foundations/">Bachelor’s of Science (B.S.): foundations of special education for schools and society</a></h4
+                <h4><a href="{{ config.base_url }}/programs/specialed/sped-bs-foundations/">Bachelor’s of Science (B.S.): foundations of special education for schools and society</a></h4>
                     <p>Gain expertise in the field of special education to expand its reach in schools and society. <em>This degree does not lead to a teaching license.</em></p>
             </div>
             <div class="third">
@@ -178,7 +232,7 @@
             <p class="text-center"><a href="{{ config.base_url }}/future-students/special-ed-med/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedmedmain") }} class="button center">How to apply <br />(M.Ed.)</a></p>
         </div>
         <div class="third">
-            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedbsmain") }}class="button center">Apply &#47; transfer <br />(B.S.)</a>
+            <p class="text-center"><a href="{{ config.base_url }}/programs/specialed/sped-bs/" {{ analytics.add_tracking("send", "event", "how to apply", "click", "spedbsmain") }}class="button center">Apply &#47; transfer <br />(B.S.)</a></p>
         </div>
     </div>
 </div>
@@ -276,7 +330,7 @@
                 </div>
             <div class="span-9">
               <h4 class="no-margin-top">Robert Henery<small class="clear h5 light">Lecturer<br />
-                <a href="mailto:hener005@umn.edu">hener005@umn.edu</a></small></h3>
+            <a href="mailto:hener005@umn.edu">hener005@umn.edu</a></small></h4>
             </div>
             </div>
         </section>
@@ -429,6 +483,7 @@
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/svg_stats.min.js"></script>
     {{ newsfeed.news_feed_js(
         "category/departments/educational-psychology/special-education/feed/",
         "#news-container",

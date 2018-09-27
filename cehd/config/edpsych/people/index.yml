@@ -14,7 +14,10 @@
   titles:
     - x500: smcconne
       section: Counseling & student personnel psychology (CSPP)
-      title: program coordinator & clinical training director
+      title: program coordinator & PhD clinical training director
+    - x500: mohrtman
+      section: Counseling & student personnel psychology (CSPP)
+      title: MA clinical training director
 - section: Psychological foundations of education
   query:
     param: tg

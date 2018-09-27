@@ -1365,7 +1365,7 @@
     meta_description: null
     section: null
 /firstgen/:
-  publish: false
+  publish: true
   template: cehd/firstgen/index.html
   template_data:
     - section: firstgen
@@ -1675,7 +1675,7 @@
   template_data:
     - section: research
 /research/consulting/:
-  publish: false
+  publish: true
   template: cehd/research/consulting.html
   template_data:
     - section: research
@@ -2854,6 +2854,11 @@
   template: cehd/trio/mcnair/open-house.html
   template_data:
     - section: trio
+/trio/mcnair/outcomes/:
+  publish: false
+  template: cehd/trio/mcnair/outcomes.html
+  template_data:
+    - section: trio
 /trio/mcnair/resources/:
   publish: true
   template: cehd/trio/mcnair/resources.html
@@ -3077,6 +3082,11 @@
 /undergraduate/involvement/:
   publish: true
   template: cehd/undergraduate/involvement.html
+  template_data:
+    - section: undergraduate
+/undergraduate/johnson/:
+  publish: true
+  template: cehd/undergraduate/johnson.html
   template_data:
     - section: undergraduate
 /undergraduate/mraz/:
