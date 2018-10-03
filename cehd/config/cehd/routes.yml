@@ -1200,6 +1200,11 @@
   template: cehd/events/homecoming.html
   template_data:
     - section: events
+/events/ken/:
+  publish: true
+  template: cehd/events/ken.html
+  template_data:
+    - section: events
 /events/thanksgiving/:
   publish: true
   template: cehd/events/thanksgiving.html
@@ -2855,7 +2860,7 @@
   template_data:
     - section: trio
 /trio/mcnair/outcomes/:
-  publish: false
+  publish: true
   template: cehd/trio/mcnair/outcomes.html
   template_data:
     - section: trio
