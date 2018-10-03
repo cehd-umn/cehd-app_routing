@@ -2,7 +2,7 @@
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% block css %}
 <link href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-<link href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+<link href="/assets/dist/css/minified/ssw.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
@@ -52,6 +52,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            width: 70%;
+            margin: 0 auto;
         }
         nav ul.nav.inline li {
             border-bottom: 0;
@@ -85,8 +87,8 @@
         nav ul.nav.inline li {
             border-bottom: 0;
             border-right: 1px solid;
-            padding-right: 1.7em;
-            padding-left: .1em;
+            padding-right: 1em;
+            padding-left: 1em;
             margin: 0;
         }
     }
@@ -98,10 +100,13 @@
         border-right: none;
         padding-right: 0px !important;
     }
+    #home-top-nav-item {
+    border-right: 0px solid;
+    }
 </style>
 {% endblock %}
 {% block section_wordmark %}
-<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>
+<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="SSW wordmark"></a>
 {% endblock %}
 {% block nav %}
 <div class="section-header-container row" id="nav-container">
@@ -134,19 +139,13 @@
                     <div class="dept-footer-container contact">
                         <h2 class="dept-footer-heading h4">Contact Us</h2>
                     </div>
-                    <p><a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a></p>
+                    <p><a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="OLPD wordmark"></a></p>
                     <address>
-                        Main office:
-                        206 Burton Hall<br />
-                        178 Pillsbury Drive SE <br />
-                        Minneapolis, MN 55455<br />
-                        Fax: 612-624-3377<br />
-                        Phone: 612-624-1006<br />
-                        <br />
-                        Undergraduate studies:<br />
-                        612-624-3640 | <a href="mailto:uolpd@umn.edu">ugolpd@umn.edu</a><br />
-                        Graduate studies:<br />
-                        612-626-9377 | <a href="mailto:olpd@umn.edu">olpd@umn.edu</a>
+                    105 Peters Hall<br />
+                    1404 Gortner Avenue<br />
+                    St. Paul, MN 55108<br />
+                    T: 612-625-1220  F: 612-624-3744<br />
+                    <a href="mailto:sswweb@umn.edu">Email our web team</a>
                     </address>
                 </div>
             </div>

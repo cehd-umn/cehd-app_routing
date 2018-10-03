@@ -1,25 +1,29 @@
 ---
-- name: First nav item
+- name: Academics
   href: "/change-me/"
   section: null
   subsections: null
-- name: Second nav item
+- name: Research & Centers
   href: "/change-me/"
   section: null
   subsections: null
-- name: Third nav item
+- name: People
   href: "/change-me/"
   section: null
   subsections: null
-- name: Fourth nav item
+- name: Giving
   href: "/change-me/"
   section: null
   subsections: null
-- name: Fifth nav item
+- name: Alumni
   href: "/change-me/"
   section: null
   subsections: null
-- name: Sixth nav item
+- name: About
+  href: "/change-me/"
+  section: null
+  subsections: null
+- name: Home
   href: "/change-me/"
   section: null
   subsections: null

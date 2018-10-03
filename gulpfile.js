@@ -16,6 +16,13 @@ gulp.task("default", function() {
     );
 });
 
+gulp.task("ssw", function() {
+    return gulp.src("./public/assets/src/sass/ssw.scss")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(gulp.dest("./public/assets/dist/css/minified/"));
+});
+
+
 gulp.task("olpd", function() {
     return gulp.src("./public/assets/src/sass/olpd.scss")
     .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
