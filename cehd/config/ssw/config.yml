@@ -1,0 +1,28 @@
+---
+
+asset_base: "/dev-ssw/"
+autoescape: true
+autoreload: true
+base_url: "/dev-ssw/"
+debug: false
+dept_name: "School of Social Work (SSW)"
+filter_method_names:
+  - hyphenate
+  - stripStyleAttributes
+redirect_prepend: "/dev-ssw/"
+search_sites:
+  primary:
+    client: "tc_education"
+    name: "OLPD"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/dev-ssw/"
+  secondary:
+    client: "tc_education"
+    name: "College of Education & Human Development"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/"
+  tertiary:
+    client: "searchumn"
+    name: "University of Minnesota"
+    site: "default_collection"
+    url: "www.umn.edu/"

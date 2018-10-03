@@ -1,0 +1,9 @@
+###
+# These are in `old-url/: /olpd/new-url/` format
+# To redirect to the OLPD home page, use `""`
+#
+# NOTE: `/olpd/` is assumed and should be left out of the old url and new new
+#
+###
+---
+default.html: ""
