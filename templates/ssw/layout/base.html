@@ -4,6 +4,8 @@
 <link href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 <link href="/assets/dist/css/minified/ssw.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
 {% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
@@ -105,8 +107,13 @@
     }
 </style>
 {% endblock %}
+{% block college_wordmark %}
+<a class="dept-text wordmark-svg cehd-wordmark" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">College of Education + Human Development</a>
+{% endblock %}
 {% block section_wordmark %}
-<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="SSW wordmark"></a>
+<!-- <a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="SSW wordmark"></a> -->
+<!-- <a class="dept-text" style="color:#333;" href="{{ config.base_url }}/">School of Social Work</a> -->
+<a class="dept-text" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">Department of <br />Organizational Leadership,</br> Policy + Development </a>
 {% endblock %}
 {% block nav %}
 <div class="section-header-container row" id="nav-container">

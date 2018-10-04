@@ -45,6 +45,16 @@
   publish: true
   template_data:
     - section: home
+/academics/:
+  template: ssw/academics/index.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/youth-studies-major/:
+  template: ssw/academics/youth-studies.html
+  publish: true
+  template_data:
+      - section: academics
 /about/:
   template: ssw/about.html
   publish: true

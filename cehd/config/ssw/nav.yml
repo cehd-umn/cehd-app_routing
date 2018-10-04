@@ -1,8 +1,10 @@
 ---
 - name: Academics
-  href: "/change-me/"
+  href: "/academics/"
   section: null
-  subsections: null
+  subsections:
+    - name: Youth Studies Major
+      href: "/academics/youth-studies-major/"
 - name: Research & Centers
   href: "/change-me/"
   section: null
