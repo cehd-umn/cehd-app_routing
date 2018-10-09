@@ -53,29 +53,32 @@
             -ms-display: flex;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            width: 70%;
+            justify-content: center;
+            width: 100%;
             margin: 0 auto;
         }
         nav ul.nav.inline li {
             border-bottom: 0;
             border-right: 1px solid;
-            padding-right: 2px;
-            padding-left: 2px;
+            padding-right: 8px;
+            padding-left: 15px;
             margin: 0;
         }
 
         nav.inline .dropdown-toggle::after {
-            margin-left: 0px;
+            margin-left: 3px;
         }
 
         nav {
-            margin-top: 20px !important;
+            margin-top: 40px !important;
             margin-bottom: 20px !important
         }
     }
 
     @media (min-width: 1009px) {
+        nav.inline ul {
+            width: 80%;
+        }
         nav ul.nav.inline li {
             border-bottom: 0;
             border-right: 1px solid;
@@ -105,6 +108,14 @@
     #home-top-nav-item {
     border-right: 0px solid;
     }
+
+    @media (min-width: 769px) {
+        .nav-container {
+            padding: 0 0 0em !important;
+            z-index: 1000;
+        }
+    }
+
 </style>
 {% endblock %}
 {% block college_wordmark %}
@@ -112,9 +123,7 @@
 {% endblock %}
 {% block section_wordmark %}
 <!-- <a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="SSW wordmark"></a> -->
-<!-- <a class="dept-text" style="color:#333;" href="{{ config.base_url }}/">School of Social Work</a> -->
-<a class="dept-text" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">Department of <br />Organizational Leadership,</br> Policy + Development </a>
-{% endblock %}
+<a class="dept-text" style="color:#333;font-size: 150%;" href="{{ config.base_url }}/">School of Social Work</a>{% endblock %}
 {% block nav %}
 <div class="section-header-container row" id="nav-container">
     <div class="container">
@@ -132,6 +141,8 @@
                     {% endif %}
                 </li>
                 {% endfor %}
+                <li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/"><img src="/assets/images/icons/Home.svg" alt="School of Social Work" /></a></li>
+                <!--<li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/">{%- include "ssw/includes/nav/home-icon.html" -%}</a></li>-->
             </ul>
         </nav>
     </div>

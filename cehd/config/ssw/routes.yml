@@ -80,3 +80,8 @@
   publish: true
   template_data:
       - section: about
+/people/:
+  template: ssw/people/index.html
+  publish: true
+  template_data:
+    - section: people

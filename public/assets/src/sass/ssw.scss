@@ -62,3 +62,29 @@ $olpd-nav-border-color: rgba(255, 222, 122, .5);
         float: right;
     }
 }
+
+.home-link {
+    width: 35px;
+    border-right: 0px !important;
+}
+@media (min-width: 768px) {
+    .home-link {
+        width: 30px;
+        border-right: 0px !important;
+    }
+}
+
+@media (min-width: 1050px) {
+    .home-link {
+        width: 30px;
+        border-right: 0px !important;
+    }
+}
+
+@media (min-width: 1160px) {
+    .home-link {
+        width: 30px;
+        border-right: 0px !important;
+    }
+}
+

@@ -3,6 +3,14 @@
   href: "/academics/"
   section: null
   subsections:
+    - name: Graduate Aid & Funding
+      href: "/academics/graduate-aid-&-funding/"
+    - name: Graduate Studies
+      href: "/academics/youth-studies-major/"
+    - name: Master of Social Work
+      href: "/academics/master-of-social-work/"
+    - name: Undergraduate Minors
+      href: "/academics/undergraduate-minors/"
     - name: Youth Studies Major
       href: "/academics/youth-studies-major/"
 - name: Research & Centers
@@ -10,7 +18,7 @@
   section: null
   subsections: null
 - name: People
-  href: "/change-me/"
+  href: "/people/"
   section: null
   subsections: null
 - name: Giving
@@ -22,10 +30,6 @@
   section: null
   subsections: null
 - name: About
-  href: "/change-me/"
-  section: null
-  subsections: null
-- name: Home
-  href: "/change-me/"
+  href: "/about/"
   section: null
   subsections: null

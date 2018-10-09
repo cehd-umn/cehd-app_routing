@@ -1,9 +1,9 @@
 ---
 
-asset_base: "/dev-ssw/"
+asset_base: "/dev-ssw"
 autoescape: true
 autoreload: true
-base_url: "/dev-ssw/"
+base_url: "/dev-ssw"
 debug: false
 dept_name: "School of Social Work (SSW)"
 filter_method_names:
@@ -13,7 +13,7 @@ redirect_prepend: "/dev-ssw/"
 search_sites:
   primary:
     client: "tc_education"
-    name: "OLPD"
+    name: "SSW"
     site: "tc_education_students"
     url: "www.cehd.umn.edu/dev-ssw/"
   secondary:
