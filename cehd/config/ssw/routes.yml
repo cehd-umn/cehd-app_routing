@@ -45,6 +45,21 @@
   publish: true
   template_data:
     - section: home
+/academics/graduate-aid-&-funding/:
+  template: ssw/academics/graduate-aid-&-funding.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/master-of-social-work/:
+  template: ssw/academics/master-of-social-work.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/graduate-studies/:
+  template: ssw/academics/graduate-studies.html
+  publish: true
+  template_data:
+      - section: academics
 /academics/:
   template: ssw/academics/index.html
   publish: true
@@ -52,6 +67,11 @@
       - section: academics
 /academics/youth-studies-major/:
   template: ssw/academics/youth-studies.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/undergraduate-minors/:
+  template: ssw/academics/undergraduate-minors.html
   publish: true
   template_data:
       - section: academics

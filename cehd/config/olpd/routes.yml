@@ -110,6 +110,11 @@
   publish: true
   template_data:
     - section: courses
+/courses/test/:
+  template: olpd/courses/undergraduate.html
+  publish: false
+  template_data:
+    - section: courses
 /apply/readmission/:
   template: olpd/apply/readmission.html
   publish: true
