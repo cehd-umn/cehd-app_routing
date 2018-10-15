@@ -45,6 +45,11 @@
   publish: true
   template_data:
     - section: home
+/academics/job-search-opportunities/:
+  template: ssw/academics/job-search-opportunities.html
+  publish: true
+  template_data:
+      - section: academics
 /academics/graduate-aid-&-funding/:
   template: ssw/academics/graduate-aid-&-funding.html
   publish: true
@@ -85,3 +90,38 @@
   publish: true
   template_data:
     - section: people
+/research-and-centers/families-children/:
+  template: ssw/research-and-centers/families-children.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/:
+  template: ssw/research-and-centers/index.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/centers/:
+  template: ssw/research-and-centers/centers.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/social-policy/:
+  template: ssw/research-and-centers/social-policy.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/mental-health/:
+  template: ssw/research-and-centers/mental-health.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/youth-development/:
+  template: ssw/research-and-centers/youth-development.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/disability-aging/:
+  template: ssw/research-and-centers/disability-aging.html
+  publish: true
+  template_data:
+      - section: research-and-centers

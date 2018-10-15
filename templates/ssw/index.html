@@ -24,12 +24,12 @@ School of Social Work (SSW)
 
     @media (min-width: 960px) {
         .hero-image-container {
-            min-height: 525px;
+            min-height: 610px;
         }
         .hero-overlay {
             background-color: rgba(255, 255, 255, 0.5);
             color: #000;
-            height: 80px;
+            height:auto;
             text-shadow: none;
         }
         .hero-overlay p {
@@ -38,7 +38,7 @@ School of Social Work (SSW)
             margin: .8em 0;
         }
         .hero-image {
-            top: 100px;
+            top: 130px;
         }
         .circular-stat {
             position:relative;
@@ -68,7 +68,8 @@ School of Social Work (SSW)
             position: absolute;
         }
 
-
+.row.has-hero-image {
+margin-top:470px;
     }
     .element {
         margin-bottom: 100px;
@@ -87,6 +88,15 @@ School of Social Work (SSW)
         margin-top:-150px;
         z-index:2;
     }
+	}
+	    @media (min-width: 1160px) {
+        .hero-image-container {
+            min-height: 800px;
+        }
+		.row.has-hero-image {
+margin-top:700px;
+    }
+		}
 </style>
 {% endblock %}
 {% block hero_image %}
