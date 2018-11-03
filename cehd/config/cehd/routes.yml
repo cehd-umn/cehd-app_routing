@@ -3094,6 +3094,11 @@
   template: cehd/undergraduate/johnson.html
   template_data:
     - section: undergraduate
+/undergraduate/mercado/:
+  publish: true
+  template: cehd/undergraduate/mercado.html
+  template_data:
+    - section: undergraduate
 /undergraduate/mraz/:
   publish: true
   template: cehd/undergraduate/mraz.html

@@ -7,107 +7,66 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <div class="row">
-    <div class="container">
-        <h1>News and events</h1>
-
-        <div class="span-6">
-            <h2>In the news</h2>
-            <iframe src="https://player.vimeo.com/video/256587102" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-       <p>In this KSTP news story, CEHD professor Abi Gewirtz explains how to support children after mass shooting tragedies.</p>
-       <div class="margin-top-1">
-       </div>
-            <h2>Research in depth</h2>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/ZPNqm9FfWvY?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-            <p>CEHD researcher Amy Hewitt and her team invented a cost-effective, efficient way to increase the competence of professionals supporting individuals with disabilities.</p>
-        </div>
-        <article class="span-4">
-            <section>
-                {{ loader.loader("CEHD news", "h2") }}
-            </section>
-            <div class="margin-top-1">
-            </div>
-            <section>
-                {{ loader.loader("CEHD events", "h2", "events-container") }}
-                <p class="text-right"><a href="/events/" class="news-more-news-link"><small>More events</small></a></p>
-            </section>
-            <section>
-                {{ loader.loader("Improving Lives blog", "h2", "visionblog-container") }}
-
-            </section>
-        </article>
+  <div class="container">
+    <h1>News and events</h1>
+    <div class="span-4">
+      <section>
+        {{ loader.loader("CEHD news", "h2") }}
+      </section>
     </div>
+    <div class="span-4">
+      <section>
+        {{ loader.loader("CEHD events", "h2", "events-container") }}
+        <p class="text-right"><a href="/events/" class="news-more-news-link"><small>More events</small></a></p>
+      </section>
+    </div>
+    <div class="span-4">
+      <h2>Discover CEHD on<br />social media</h2>
+      <p>See breaking news and information, learn more about activities and events, and view videos about research, programs, and community engagement.</p>
+      <div class="row twothird feature text-center margin-top-1">
+        <div class="super-span-3 push-3">
+          <div class="svg-social-media-icon size-40">
+            <a href="https://twitter.com/UMN_CEHD" alt="Twitter icon" title="Twitter: See breaking news and information from CEHD." {{ analytics.add_tracking("send", "event", "twitter", "click", "news-twitter") }}>{% include
+              "cehd/includes/svg/social-media/twitter.html" %}</a>
+          </div>
+        </div>
+        <div class="super-span-3">
+          <div class="svg-social-media-icon size-40">
+            <a href="https://www.facebook.com/umcehd" alt="Facebook icon" title="Facebook: Learn more about CEHD activities and events." {{ analytics.add_tracking("send", "event", "facebook", "click", "news-facebook") }}>{% include
+              "cehd/includes/svg/social-media/facebook.html" %}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
 <div class="margin-top-3">
 </div>
 <div class="row emphasis cool">
-    <div class="container">
-        <div class="twothird feature">
-            <div class="corner-borders-top mobile-hide"></div>
-            <div class="container margin-top-1">
-                <h2 class="twothird feature text-center">Discover CEHD on<br  />social media</h2>
-
-                <p class="text-center half feature margin-top-0">See breaking news and information, learn more about activities and events, and view videos about research, programs, and community engagement.</p>
-
-                <div class="row twothird feature text-center margin-top-1">
-                    <div class="super-span-3 push-3">
-                        <div class="svg-social-media-icon size-40">
-                            <a href="https://twitter.com/UMN_CEHD" alt="Twitter icon" title="Twitter: See breaking news and information from CEHD." {{ analytics.add_tracking("send", "event", "twitter", "click", "news-twitter") }}>{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
-                        </div>
-                    </div>
-                    <div class="super-span-3">
-                        <div class="svg-social-media-icon size-40">
-                            <a href="https://www.facebook.com/umcehd" alt="Facebook icon" title="Facebook: Learn more about CEHD activities and events." {{ analytics.add_tracking("send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="margin-top-3">
-            </div>
-            <div class="corner-borders-bottom mobile-hide"></div>
-        </div>
+  <div class="container twothird feature">
+    <h2 class="text-center">Our expertise and knowledge guide</h2>
+    <div class="twothird feature">
+      <p><a href="/topics/" {{ analytics.add_tracking("send", "event", "explore-research", "click", "news-research guide") }}>With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news,
+        local and national trends, policy issues, and emerging research.</p>
+      <p class="text-center">
+        <a href="/topics/" class="button center" {{ analytics.add_tracking("send", "event", "explore-research", "click", "news-research guide") }}>
+          Explore our research</a></p>
+      <h3 class="text-center">For the media</h3>
+      <p class="text-center">Contact Susan Diekman at 612-626-8453 | diekm003@umn.edu<br /> to request an interview with any of our experts.</p>
     </div>
-</div>
-<div class="margin-top-3">
+  </div>
 </div>
 <div class="row">
-    <div class="container">
-        <div class="span-12">
-            <h2 class="text-center">Our expertise and knowledge guide</h2>
-        </div>
-    </div>
-    <div class="margin-top-2">
-    </div>
-</div>
-<div class="row outer-bg-right emphasis">
-    <div class="container">
-        <div class="inner-bg-right">
-            <div class="half">
-                <p><a href="/topics/" {{ analytics.add_tracking("send", "event", "explore-research", "click", "news-research guide") }}>With our guide to CEHD research and expertise</a>, members of the media can access expert perspectives on breaking news, local and national trends, policy issues, and emerging research.</p>
-            </div>
-            <div class="half">{% include "includes/svg/for-the-media.html" %}</div>
-        </div>
-    </div>
-</div>
-
-<p class="text-center">
-    <a href="/topics/" class="button center"{{ analytics.add_tracking("send", "event", "explore-research", "click", "news-research guide") }}>
-        Explore our research</a>
-    </p>
-<div class="row">
-    {{ include('cehd/includes/connect.html') }}
+  {{ include('cehd/includes/connect.html') }}
 </div>
 <div class="margin-top-3">
-
 </div>
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {{ newsfeed.news_feed_js("category/feature-stories/feed/", "#news-container", "cehdnews.html", 3) }}
+    {{ newsfeed.news_feed_js("category/feature-stories/feed/", "#news-container", "cehdnews.html", 5) }}
 
-    {{ eventsfeed.events_feed_js(172, 3) }}
+    {{ eventsfeed.events_feed_js(172, 5) }}
 
     {{ newsfeed.news_feed_js("feed/", "#visionblog-container", "cehd-improvinglives.html", 3, "https://cehdvision2020.umn.edu/", "More stories") }}
 

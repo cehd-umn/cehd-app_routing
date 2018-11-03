@@ -165,6 +165,11 @@
   publish: true
   template_data:
     - section: apply
+/apply/education-policy-leadership/online-application-and-instructions/:
+  template: olpd/apply/epl/med.html
+  publish: false
+  template_data:
+    - section: apply
 /apply/evaluation-studies/phd/:
   template: olpd/apply/es/phd.html
   publish: true

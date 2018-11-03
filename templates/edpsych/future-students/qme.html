@@ -12,13 +12,14 @@
         <ul>
         <li><a href="#gradapp">Graduate school application</a></li>
         <li><a href="#appfee">Application fee</a></li>
-        <li><a href="#progapp">Program application</a></li>
-        <li><a href="#transcripts">Transcripts</a></li>
-        <li><a href="#letters">Three letters of recommendation</a></li>
+        <li><a href="#transcripts">Transcripts (Academic History)</a></li>
         <li><a href="#GRE">Graduate Record Examination (GRE) scores</a></li>
         <li><a href="#nonnativeeng">Non–native English speakers&#58;  English language test scores (TOEFL, IELTS, etc.)</a></li>
         <li><a href="#persstmt">Strong personal statement</a></li>
         <li><a href="#resumecv">Resume/CV</a></li>
+        <li><a href="#progapp">Program application</a></li>
+        <li><a href="#letters">Three letters of recommendation</a></li>
+        <li><a href="#diversitystatement">Diversity statement (not required but highly encouraged)</a></li>
         </ul>
 </div>
 <div class="half">
@@ -64,55 +65,65 @@
   <div class="container">
     <div class="feature twothirds">
 <h3 class="text-center">How to apply</h3>
-    <p class="text-center"><a href="https://www.grad.umn.edu/admissions/"  {{ analytics.add_tracking("send", "event", "exiting site", "click", "QME Application Page") }}} class="button center no-margin-top">Start your graduate application</a></p>
-<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://www.grad.umn.edu/"  {{ analytics.add_tracking("send", "event", "exiting site", "click", "QME Application Page") }} >graduate application</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu"> Graduate School website</a>.</p>
+    <p class="text-center"><a href="https://choose.umn.edu/apply/"  {{ analytics.add_tracking("send", "event", "exiting site", "click", "QME Application Page") }}} class="button center no-margin-top">Start your graduate application</a></p>
+<p><strong>Upload and submit all application materials</strong>, including transcripts, directly to the <a href="https://choose.umn.edu/apply/"  {{ analytics.add_tracking("send", "event", "exiting site", "click", "QME Application Page") }} >graduate application</a>. For additional information on how to apply, visit the<a href="http://www.grad.umn.edu"> Graduate School website</a>.</p>
 <h4 id="gradapp" class="text-center">Graduate school application</h4>
-<p><strong>Required fields&#58;  </strong>Personal Information, Application Information, Educational Background, Languages, Awards and Activities, Employment/Residence Information, Financial Support, Personal Statement, Program Supplementary Information and Recommendations.</p>
-<p><strong>Optional fields&#58;  </strong>All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
+<p><strong>Required fields&#58;  </strong>Program Selection, Term Selection, Biographical Information, Personal Background, Academic History (including transcripts), Test Scores, Employment, Materials (including: Personal Statement, Resume/CV, Graduate Program Supplemental Application) and three letters of recommendation</p>
+<p><strong>Optional fields&#58;  </strong>Diversity Statements are optional but highly encouraged. All other fields or application materials are optional, but will be taken into consideration if submitted.</p>
 <p><a href="http://www.grad.umn.edu/admissions/">Access the graduate application.</a></p>
   <h4 id="appfee" class="text-center">Application fee</h4>
     <p><a href= "http://www.grad.umn.edu/admissions/">Visit the Graduate School website for more information</a></p>
-  <h4 id="progapp" class="text-center">Program application</h4>
-    <p><a href="{{ config.asset_base }}/dist/documents/future/QME_Program_Application.doc">Download the program application</a></p>
-    <p>Complete the program application form and upload it in the Program Supplementary Information section of the graduate application under 'Graduate Program Additional Application'.</p>
-  <h4 id="transcripts" class="text-center">Transcripts</h4>
-      <p>Unofficial transcripts or academic records should be uploaded directly to the online application. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
+  <h4 id="transcripts" class="text-center">Transcripts (Academic History)</h4>
+      <p>Unofficial transcripts or academic records should be uploaded directly to the online application under the "Academic History" section. International students should also upload an English translation if the transcript is not in English. Please do not mail in paper copies of your transcripts, there is no need for official transcripts or academic records for initial review.</p>
       <p>If you are admitted, the University will then request official copies of this material.</p>
       <p><a href="http://www.grad.umn.edu/admissions/">More information about transcripts and credentials</a></p>
-  <h4 id="letters" class="text-center">Letters of recommendation</h4>
-    <p>Three letters of recommendation are required. Recommendations should be from professors or others who are able to comment on your educational and professional goals and potential.</p>
-    <p>You must input the names and contact information for each recommendation provider in the graduate application.</p>
   <h4 id="GRE" class="text-center">Graduate Record Examination (GRE) scores</h4>
-    <p>The GRE (General Test) is required for all applicants and must have been taken within five years of date of application. You <strong>do not</strong> need to take any GRE subject tests. Due to the length of processing time all applicants should take the GRE test no later than the October testing date to meet the December application deadline. Be sure to request that ETS send your scores to the University of Minnesota Graduate School (using institution code 6874).</p>
+    <p>GRE General Test Scores shoudl be entred in the "Test Scores" section in the graduate application. The GRE (General Test) is required for all applicants and must have been taken within five years of date of application. You <strong>do not</strong> need to take any GRE subject tests. Due to the length of processing time all applicants should take the GRE test no later than the October testing date to meet the December application deadline. Be sure to request that ETS send your scores to the University of Minnesota Graduate School (using institution code 6874).</p>
     <p><a href="http://www.grad.umn.edu/admissions/">Get more information about the GRE or see if the Graduate School has received your official scores</a></p>
   <h4 id="nonnativeeng" class="text-center">English language test scores (TOEFL, IELTS, etc.)</h4>
-    <p>Students whose native language is not English are required to submit English Language proficiency scores.</p>
+    <p>Report your TOEFL, IELTS, or MELAB scores (non-native English speakers only) in the “Test Scores” section.</p>
     <p><a href="http://www.grad.umn.edu/admissions/">More information on English Language test scores</a></p>
-  <h4 id="persstmt" class="text-center">Personal statement</h4>
-    <p>Upload a statement (not to exceed three double-spaced pages) to your application, outlining your interests and professional goals. This statement is an integral part of your application and will be weighted heavily in its evaluation. You should include, minimally, the following points&#58; </p>
-    <ul>
-      <li>How did you become interested in educational psychology&#63;</li>
-      <li>What specific factors have led you to apply to Minnesota for this specialization&#63;</li>
-      <li>From whom have you received encouragement to continue work in educational psychology&#63;</li>
-      <li>What do you consider to be your outstanding strengths and weaknesses&#63;</li>
-      <li>Please mention specific skills, special talents or aptitudes. What aspects of or specific problems in your area of specialization interest you most at this point&#63; What kinds of educational psychology work do you see yourself doing seven or eight years after you get your degree&#63; Please describe briefly any participation in research, applied educational psychology, or employment which might be relevant to your application.</li>
-    </ul>
-  <h4 id="resumecv" class="text-center">Resume/CV</h4>
-    <p>Upload in the Program Supplementary Information section of the graduate application under &ldquo;Resume/CV.&rdquo;</p>
+    <h4 id="letters" class="text-center">Letters of recommendation</h4>
+      <p>Three letters of recommendation are required. Recommendations should be from professors or others who are able to comment on your educational and professional goals and potential.</p>
+      <p>You must input the names and contact information for each recommendation provider in the graduate application. They will be sent directions on how to upload their letter directly into your application.</p>
+<h4 class="text-center">Materials</h4>
+    <h5 class="text-center">Required Materials</h5>
+        <h6 id="persstmt">Personal statement</h6>
+            <p>Upload a statement (not to exceed three double-spaced pages) to your application, outlining your interests and professional goals. This statement is an integral part of your application and will be weighted heavily in its evaluation. You should include, minimally, the following points&#58; </p>
+            <ul>
+              <li>How did you become interested in educational psychology&#63;</li>
+              <li>What specific factors have led you to apply to Minnesota for this specialization&#63;</li>
+              <li>From whom have you received encouragement to continue work in educational psychology&#63;</li>
+              <li>What do you consider to be your outstanding strengths and weaknesses&#63;</li>
+              <li>Please mention specific skills, special talents or aptitudes. What aspects of or specific problems in your area of specialization interest you most at this point&#63; What kinds of educational psychology work do you see yourself doing seven or eight years after you get your degree&#63; Please describe briefly any participation in research, applied educational psychology, or employment which might be relevant to your application.</li>
+            </ul>
+            <p>Upload the essay under “Personal Statement” in the Materials section in the graduate application.</p>
+        <h6 id="resumecv">Resume/CV</h6>
+            <p>Upload in the Program Supplementary Information section of the graduate application under &ldquo;Resume/CV.&rdquo;</p>
+        <h6>Graduate Program Additional Materials</h6>
+            <h7 id="progapp">Program application</h7>
+            <p><a href="{{ config.asset_base }}/dist/documents/future/QME_Program_Application.doc">Download the program application</a></p>
+            <p>Complete the program application form and upload it in the Program Supplementary Information section of the graduate application under 'Graduate Program Additional Application'.</p>
 </div>
 </div>
 </div>
 </section>
 <section>
-  <div class="feature twothirds">
-  <h3 class="text-center">Optional application materials</h3>
-    <h4 class="text-center">Writing Samples</h4>
+<div class="row">
+  <div class="container">
+    <div class="feature twothirds">
+  <h4 class="text-center">Optional Materials</h4>
+  <h5 id="diversitystatement">Diversity Statement</h5>
+    <p>Submitting the diversity statement is optional but highly encouraged. This statement may be used to nominate exceptional applicants for graduate fellowships.</p>
+    <p>Describe how your background, experiences, and achievements will contribute to the program and the University’s goals of promoting excellence through diversity. If applicable, you may mention hardships or obstacles you overcame to complete your previous undergraduate or graduate education (e.g., coming from a low-income background or being a first-generation college student).</p>
+    <p><strong>Tip:</strong> Tell <em>your</em> story. If you learned from obstacles you personally overcame, write about them. If you grew up with privilege, write about how you discovered your privilege. It might be tempting to write about someone else’s experience, an entire group’s experience, or diversity and inclusion in an abstract way. But most often, admissions teams want to understand how you personally came to be empathetic, reflective, resilient, and aware of systematic inequalities.</p>
+    <p>Upload the message under “Diversity Statement” in the Materials section in the graduation application.</p>
+</p>
+    <h5>Writing Samples</h5>
       <p>Upload publications and articles in the graduate application under &ldquo;Writing Samples.&rdquo;</p>
-    <h4 class="text-center">Diversity Statement</h4>
-      <p>Submitting the diversity statement is optional, however, you are encouraged to submit a statement (per the instructions provided in the graduate application) if you feel that submitting such an essay will add important information to your application.</p>
-    <h4 class="text-center">Extenuating Circumstances</h4>
-      <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores.</p>
-    <h4 class="text-center">Graduate Program Additional Material</h4>
+    <h5>Extenuating Circumstances</h5>
+      <p>You may upload a brief statement explaining any extenuating circumstances that may have affected your grades or your test scores under "Extenuating Circumstances" in the Materials section of the graduate application.</p>
+    <h5>Common Ground Consortium Statement</h5>
       <p>If you wish to be considered for a Common Ground Consortium fellowship for African&ndash;American students, please be sure to indicate this on your program application, and then upload a statement briefly addressing the following question&#58;  Given that the University of Minnesota is a public grant institution, it is imperative that CGC scholars can both benefits personally from their membership in the program as well as further the university’s founding mission to contribute to scholarship that benefits the local and greater communities.</p>
       <p>Please describe how your participation as a CGC scholar would do the following&#58; </p>
         <ul>
@@ -123,9 +134,11 @@
       </div>
       </section>
       <section>
-        <div class="feature twothirds">
+      <div class="row">
+        <div class="container">
+          <div class="feature twothirds">
         <h3 class="text-center">Tuition and funding</h3>
-          <h4>Tuition</h4>
+          <h4 class="text-center">Tuition</h4>
             <p>Visit the College of Education and Human Development's <a href="http://www.cehd.umn.edu/graduate/funding/">Finance and Funding page</a> for information on tuition.</p>
           <h4 class="text-center">Fellowships and awards</h4>
             <p>Submit your application materials by the Dec. 1 deadline, and you’ll automatically be considered for Graduate School fellowships and departmental awards based on scholastic achievement. Notification of awards will be sent in March.</p>

@@ -45,6 +45,81 @@
   publish: true
   template_data:
     - section: home
+/images/:
+  template: ssw/images.html
+  publish: true
+  template_data:
+    - section: image
+/alumni/:
+  template: ssw/alumni.html
+  publish: true
+  template_data:
+    - section: alumni
+/academics/meet-our-phd-students/:
+  template: ssw/academics/meet-our-phd-students.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/kente-circle-field-placement-fellowship/:
+  template: ssw/academics/kente-circle-field-placement-fellowship.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/john-a-wallace-fellowship/:
+  template: ssw/academics/john-a-wallace-fellowship.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/diversity-social-work-advancement-program-dswap/:
+  template: ssw/academics/diversity-social-work-advancement-program-dswap.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/eloise-and-elliot-kaplan/:
+  template: ssw/academics/eloise-and-elliot-kaplan.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/title-iv-e-child-welfare-training-fellowship/:
+  template: ssw/academics/title-iv-e-child-welfare-training-fellowship.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/master-of-social-work-how-to-apply/:
+  template: ssw/academics/master-of-social-work-how-to-apply.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/m.ed.-in-youth-development-leadership(YDL)/:
+  template: ssw/academics/m.ed.-in-youth-development-leadership(YDL).html
+  publish: true
+  template_data:
+      - section: academics
+/academics/careers-of-social-work-phd-graduates/:
+  template: ssw/academics/careers-of-social-work-phd-graduates.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/social-work-phd-dissertation-titles/:
+  template: ssw/academics/social-work-phd-dissertation-titles.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/non-degree-seeking-students/:
+  template: ssw/academics/non-degree-seeking-students.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/graduation/:
+  template: ssw/academics/graduation.html
+  publish: true
+  template_data:
+      - section: academics
+/academics/phd-in-social-work/:
+  template: ssw/academics/phd-in-social-work.html
+  publish: true
+  template_data:
+      - section: academics
 /academics/job-search-opportunities/:
   template: ssw/academics/job-search-opportunities.html
   publish: true
@@ -81,10 +156,20 @@
   template_data:
       - section: academics
 /about/:
-  template: ssw/about.html
+  template: ssw/about/index.html
   publish: true
   template_data:
       - section: about
+/about/ssw-jobs/:
+  template: ssw/about/ssw-jobs.html
+  publish: true
+  template_data:
+      - section: about
+/giving/:
+  template: ssw/giving.html
+  publish: true
+  template_data:
+    - section: giving
 /people/:
   template: ssw/people/index.html
   publish: true
@@ -122,6 +207,11 @@
       - section: research-and-centers
 /research-and-centers/disability-aging/:
   template: ssw/research-and-centers/disability-aging.html
+  publish: true
+  template_data:
+      - section: research-and-centers
+/research-and-centers/methodology/:
+  template: ssw/research-and-centers/methodology.html
   publish: true
   template_data:
       - section: research-and-centers
