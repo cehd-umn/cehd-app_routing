@@ -50,9 +50,11 @@ $olpd-nav-border-color: rgba(255, 222, 122, .5);
             }
         }
     }
+
     #wordmark-olpd-top {
         // max-width: 390px;
     }
+
     .wordmark-container-left {
         float: left;
     }
@@ -60,4 +62,92 @@ $olpd-nav-border-color: rgba(255, 222, 122, .5);
     .cehd-wordmark {
         float: right;
     }
+
+    nav.inline ul {
+        -ms-display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul.nav.inline li {
+        border-bottom: 0;
+        border-right: 1px solid;
+        padding-right: .75em;
+        padding-left: .75em;
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    nav.inline ul {
+        -ms-display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul.nav.inline li {
+        border-bottom: 0;
+        border-right: 1px solid;
+        padding-right: .15em;
+        padding-left: .75em;
+        margin: 0;
+    }
+
+    .dropdown-toggle {
+        margin-right: 0.45em;
+    }
+}
+
+@media (min-width: 960px) {
+    nav.inline ul {
+        -ms-display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul.nav.inline li {
+        border-bottom: 0;
+        border-right: 1px solid;
+        padding-right: .15em;
+        padding-left: .75em;
+        margin: 0;
+    }
+
+    .dropdown-toggle {
+        margin-right: 0.6em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    nav.inline ul {
+        -ms-display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav ul.nav.inline li {
+        border-bottom: 0;
+        border-right: 1px solid;
+        padding-left: 1.25em;
+        padding-right: .45em;
+        margin: 0;
+    }
+
+    .dropdown-toggle {
+        margin-right: .55em;
+    }
+
 }

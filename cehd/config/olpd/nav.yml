@@ -1,4 +1,3 @@
----
 - name: Undergraduate
   href: "/undergraduate-programs/"
   section: undergraduate programs
@@ -39,24 +38,24 @@
   href: "/research-and-engagement/"
   section: research
   subsections: null
-- name: Courses
-  href: "/courses/"
-  section: courses
-  subsections:
-    - name: Information
-      href: "/courses/"
-    - name: Undergraduate
-      href: "/courses/undergraduate/"
-    - name: Comparative International Development Education
-      href: "/courses/comparative-international-development-education/"
-    - name: Education Policy and Leadership
-      href: "/courses/education-policy-leadership/"
-    - name: Evaluation Studies
-      href: "/courses/evaluation-studies/"
-    - name: Higher Education
-      href: "/courses/higher-education/"
-    - name: Human Resource Development
-      href: "/courses/human-resource-development/"
+# - name: Courses
+#   href: "/courses/"
+#   section: courses
+#   subsections:
+#     - name: Information
+#       href: "/courses/"
+#     - name: Undergraduate
+#       href: "/courses/undergraduate/"
+#     - name: Comparative International Development Education
+#       href: "/courses/comparative-international-development-education/"
+#     - name: Education Policy and Leadership
+#       href: "/courses/education-policy-leadership/"
+#     - name: Evaluation Studies
+#       href: "/courses/evaluation-studies/"
+#     - name: Higher Education
+#       href: "/courses/higher-education/"
+#     - name: Human Resource Development
+#       href: "/courses/human-resource-development/"
 - name: People
   href: "/people/"
   section: people
