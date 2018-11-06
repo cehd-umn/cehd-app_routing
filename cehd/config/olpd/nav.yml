@@ -3,8 +3,6 @@
   href: "/undergraduate-programs/"
   section: undergraduate programs
   subsections:
-    - name: All Undergraduate Programs
-      href: "/undergraduate-programs/"
     - name: Business and Marketing Education
       href: "/undergraduate-programs/business-marketing-education/"
     - name: Human Resource Development
@@ -17,12 +15,12 @@
       href: "/undergraduate-programs/advising/"
     - name: BME Tinsley Scholarship
       href: "/undergraduate-programs/tinsley-grant/"
+    - name: Course Information
+      href: "/courses/"
 - name: Graduate
   href: "/graduate-programs/"
   section: graduate programs
   subsections:
-    - name: All Graduate Programs
-      href: "/graduate-programs/"
     - name: Comparative International Development Education
       href: "/graduate-programs/comparative-international-development-education/"
     - name: Education Policy and Leadership
@@ -35,28 +33,12 @@
       href: "/graduate-programs/human-resource-development/"
     - name: Student Resources
       href: "/graduate-programs/resources/"
+    - name: Course Information
+      href: "/courses/"
 - name: Research & Engagement
   href: "/research-and-engagement/"
   section: research
   subsections: null
-- name: Courses
-  href: "/courses/"
-  section: courses
-  subsections:
-    - name: Information
-      href: "/courses/"
-    - name: Undergraduate
-      href: "/courses/undergraduate/"
-    - name: Comparative International Development Education
-      href: "/courses/comparative-international-development-education/"
-    - name: Education Policy and Leadership
-      href: "/courses/education-policy-leadership/"
-    - name: Evaluation Studies
-      href: "/courses/evaluation-studies/"
-    - name: Higher Education
-      href: "/courses/higher-education/"
-    - name: Human Resource Development
-      href: "/courses/human-resource-development/"
 - name: People
   href: "/people/"
   section: people

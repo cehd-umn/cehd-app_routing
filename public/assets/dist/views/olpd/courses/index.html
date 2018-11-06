@@ -1,0 +1,7 @@
+{% for program in data.programs %}
+{% if loop.index < data.limit %} <h3>{{ program.title }}</h3>
+    <p>{{ program.description }}</p>
+    <p>{{ program.courseDescription }}</p>
+    <hr>
+    {% endif %}
+    {% endfor %}

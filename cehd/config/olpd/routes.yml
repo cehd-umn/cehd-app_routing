@@ -77,37 +77,37 @@
     - section: courses
 /courses/all-courses/:
   template: olpd/courses/all-courses.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/undergraduate/:
   template: olpd/courses/undergraduate.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/comparative-international-development-education/:
   template: olpd/courses/comparative-international-development-education.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/education-policy-leadership/:
   template: olpd/courses/education-policy-leadership.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/evaluation-studies/:
   template: olpd/courses/evaluation-studies.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/higher-education/:
   template: olpd/courses/higher-education.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/human-resource-development/:
   template: olpd/courses/human-resource-development.html
-  publish: true
+  publish: false
   template_data:
     - section: courses
 /courses/test/:
