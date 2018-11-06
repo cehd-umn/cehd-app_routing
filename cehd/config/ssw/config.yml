@@ -1,5 +1,3 @@
----
-
 asset_base: "/dev-ssw"
 autoescape: true
 autoreload: true
@@ -13,7 +11,7 @@ redirect_prepend: "/dev-ssw/"
 search_sites:
   primary:
     client: "tc_education"
-    name: "SSW"
+    name: "School of Social Work"
     site: "tc_education_students"
     url: "www.cehd.umn.edu/dev-ssw/"
   secondary:
