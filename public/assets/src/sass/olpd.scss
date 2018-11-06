@@ -102,6 +102,11 @@ $olpd-nav-border-color: rgba(255, 222, 122, .5);
     .dropdown-toggle {
         margin-right: 0.45em;
     }
+
+    .nav-container {
+        background: #fff;
+        padding: 20px 0 15px;
+    }
 }
 
 @media (min-width: 960px) {
