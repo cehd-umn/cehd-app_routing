@@ -1,52 +1,63 @@
-.search-form-element {
-    display: inline-block;
-    height: 39px;
+/* make the header a little taller */
+#umnhf-h-mast{
+  min-height: 68px;
 }
 
-.search-result-set {
-    display: none;
-
-    &.active {
-        display: block;
-    }
+/* move the search form down a bit */
+#umnhf-h-search{
+  top: -35px;
+  height: auto;
+  margin-left: 75%;
 }
 
-.search-button {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    color: $base-dark-grey;
-    font-family: "fontello";
-    font-size: 1em;
+/* standardize the search box */
+#umnhf-h-search form.gsc-search-box{
+  border: none;
+  background: white;
+  transition: all .3s ease-in-out;
+  font-size: 18px!important;
+  font-family: inherit, sans-serif!important;
+  padding: 0px!important;
+  margin-bottom: 0;
 }
 
-.search-result-set-link {
-    &.active {
-        border-bottom: 3px solid $nav-hover-border-top-color; // @todo rename this var
-        padding: 3px;
-    }
+/* add some padding */
+#umnhf-h-search .cse .gsc-search-button-v2, .gsc-search-button-v2{
+  padding: 8px 10px!important;
+  border-radius: 0!important;
+ }
 
-    &:hover {
-        border-bottom: 3px solid $nav-hover-border-top-color;
-        text-decoration: none;
-    }
+/* remove gap between search box and the button */
+#umnhf-h-search .gsc-search-box-tools .gsc-search-box .gsc-input{
+  padding-right: 0!important;
+  padding-left: .25em!important;
 }
 
-#search-page-query-input {
-    border: 1px solid $base-light-grey;
-    font-size: 16px;
-    padding: .55em;
-
-    &:focus {
-        background: $base-white;
-    }
+/* standardize the table elements */
+#umnhf-h-search table,
+#umnhf-h-search table *{
+  border: none!important;
+  box-shadow: none!important;
+  margin: 0;
+  padding: 0;
+  line-height: auto!important;
 }
 
-#search-page-submit {
-    background-color: inherit;
-    border: 0;
-    border-radius: 0;
-    font-size: 30px;
-    padding: inherit;
-    width: auto;
+/* give the clear X a fixed width so it doesn't float */
+td.gsib_b{
+  width: 20px!important;
+}
+
+/* style the drop-down completion menu */
+table.gssb_c {
+    margin:  0;
+}
+
+table.gsc-completion-container {
+    font-family:  'Open Sans';
+}
+
+table.gsc-completion-container tbody tr:nth-child(2n) {
+    background: none;
+    border: none;
 }

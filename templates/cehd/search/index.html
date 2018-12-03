@@ -2,57 +2,36 @@
 {% set page_title = "Search Results" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<div class="row">
-    <div class="container">
-        {% include "includes/search-results.html" %}
+<!-- Search box in the main area of the page -->
+<gcse:searchbox-only resultsURL="{{ config.base }}/search/"></gcse:searchbox-only>
+
+<!-- search filter menu -->
+<ul class="search-menu">
+  <li class="search-menu__item search_web"><a href="" class="search-menu__link" id="search-web">Web</a></li>
+  <li class="search-menu__item search_people"><a href="" class="search-menu__link" id="search-people">People</a></li>
+  <li class="search-menu__item search_depts"><a href="" class="search-menu__link" id="search-depts">Directory</a></li>
+</ul>
+
+<!-- main container for search results -->
+<div class="search-results-area">
+
+  <!-- search results -->
+  <gcse:searchresults-only as_oq="site:{{ config.base }}"></gcse:searchresults-only>
+
+    <!-- people search container -->
+    <div class='people-search__container'>
+        <h2 class='people-search__header h4'>People Search Results</h2>
+        <div class="people-search__svg-placeholder active">
+            <svg aria-hidden="true" data-prefix="fas" data-icon="spinner" class="svg-inline--fa fa-spinner fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg>
+        </div>
+        <div class='people-search__list-container'></div>
     </div>
+
 </div>
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-<script>
-    (function() {
-        "use strict";
-        var app = new App();
-        var http_client = new app.httpClient();
-        var start = 10;
 
-        $(".more-results-link").on("click", function(event) {
-            event.preventDefault();
-            var $self = $(this);
-            var query_params = {
-                "client": "{{ client }}",
-                "num": 10,
-                "in_url": "{{ in_url }}",
-                "filter": "{{ filter }}",
-                "q": encodeURIComponent("{{ query }}"),
-                "site": $self.data("site"),
-                "start": start
-            };
-            var params = {
-                "url": "/services/search/",
-                "method": "GET",
-                "data": query_params
-            };
-            var $target_element = $($self.data('target'));
-            var $request = http_client.get(params);
+<!-- use the cse-results-html.css file to style the results on this page-->
+<link href="/cse-results-html.css.css" rel="stylesheet">
 
-            $request.done(function() {
-                var results = http_client.getResults();
-                var template_params = {
-                    "template_path": "{{ config.nunjucks_view_base }}/cehd/search/",
-                    "template_name": "index.html",
-                    "$target_element": $target_element,
-                    "data": {
-                        results: results.results,
-                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                    }
-                };
-                var renderer = new app.renderer();
-                renderer.init(template_params);
-                renderer.render(true);
-                start = start + 10;
-            });
-        });
-    })();
-</script>
+<!-- use the cse.min.js file to style the results on this page-->
+<script src="/cse.min.js" type="text/javascript"></script>
 {% endblock %}
