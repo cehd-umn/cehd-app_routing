@@ -1,4 +1,5 @@
 require("babel-polyfill");
+require("./cse.js")
 const $ = require("jquery");
 const GA = require("./ga.js");
 const helpers = require("./helpers.js");
