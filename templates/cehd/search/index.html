@@ -3,22 +3,19 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 <!-- Search box in the main area of the page -->
+<div class="container">
 <div class="search-bar-area">
   <gcse:searchbox-only resultsURL="/search/"></gcse:searchbox-only>
 </div>
 
-<!-- search filter menu -->
-<ul class="search-menu">
-  <li class="search-menu__item search_web"><a href="" class="search-menu__link" id="search-web">Web</a></li>
-  <li class="search-menu__item search_people"><a href="" class="search-menu__link" id="search-people">People</a></li>
-  <li class="search-menu__item search_depts"><a href="" class="search-menu__link" id="search-depts">Directory</a></li>
-</ul>
-
-<!-- main container for search results -->
+<h3>Department Results</h3>
 <div class="search-results-area">
+  <gcse:searchresults-only as_oq="site:cehd.umn.edu"></gcse:searchresults-only>
+</div>
 
-  <!-- search results -->
-  <gcse:searchresults-only as_oq="site:cehd.umn.edu site:twin-cities.umn.edu site:umn.edu"></gcse:searchresults-only>
-
+<h3>College Results</h3>
+<div class="search-results-area">
+  <gcse:searchresults-only as_oq="site:cehd.umn.edu"></gcse:searchresults-only>
+</div>
 </div>
 {% endblock %}
