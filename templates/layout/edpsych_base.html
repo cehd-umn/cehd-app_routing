@@ -23,13 +23,20 @@
                         <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
                         <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
                     </ul>
-                    <div id="umnh-searchbox">
-                        <form action="{{ config.base_url }}/search/" method="get" name="gsearch" id="gsearch" title="Search for U of M sites and people">
-                            <!-- TODO evaluate use of tabindex -->
-                            <input id="umnh-searchfield" type="text" name="q" placeholder="Search" title="Search text" tabindex="80">
-                            <input id="umnh-searchbtn" type="submit" name="Search" value="&#xe803;">
-                        </form>
-                    </div><!-- /#umnh-searchbox -->
+                    <div class="umnhf" id="umnhf-h-search" role="search">
+                      <script>
+                        (function() {
+                          var cx = '002834015805923805805:c-0k--9bdkk';
+                          var gcse = document.createElement('script');
+                          gcse.type = 'text/javascript';
+                          gcse.async = true;
+                          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                          var s = document.getElementsByTagName('script')[0];
+                          s.parentNode.insertBefore(gcse, s);
+                        })();
+                      </script>
+                      <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
+                    </div>
                 </div>
             </div><!-- /#umnheader -->
             <div class="container">

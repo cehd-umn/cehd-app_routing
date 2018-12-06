@@ -2,57 +2,19 @@
 {% set page_title = "Search Results" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<div class="row">
-    <div class="container">
-        {% include "includes/search-results.html" %}
-    </div>
+<div class="container">
+<div class="search-bar-area">
+  <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
 </div>
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-<script>
-    (function() {
-        "use strict";
-        var app = new App();
-        var http_client = new app.httpClient();
-        var start = 10;
 
-        $(".more-results-link").on("click", function(event) {
-            event.preventDefault();
-            var $self = $(this);
-            var query_params = {
-                "client": "{{ client }}",
-                "num": 10,
-                "in_url": "{{ in_url }}",
-                "filter": "{{ filter }}",
-                "q": encodeURIComponent("{{ query }}"),
-                "site": $self.data("site"),
-                "start": start
-            };
-            var params = {
-                "url": "/services/search/",
-                "method": "GET",
-                "data": query_params
-            };
-            var $target_element = $($self.data('target'));
-            var $request = http_client.get(params);
+<h3>Department Results</h3>
+<div class="search-results-area">
+  <gcse:searchresults-only as_oq="site:cehd.umn.edu/edpsych"></gcse:searchresults-only>
+</div>
 
-            $request.done(function() {
-                var results = http_client.getResults();
-                var template_params = {
-                    "template_path": "/assets/dist/views/cehd/search/",
-                    "template_name": "index.html",
-                    "$target_element": $target_element,
-                    "data": {
-                        results: results.results,
-                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                    }
-                };
-                var renderer = new Renderer();
-                renderer.init(template_params);
-                renderer.render(true);
-                start = start + 10;
-            });
-        });
-    })();
-</script>
+<h3>College Results</h3>
+<div class="search-results-area">
+  <gcse:searchresults-only as_oq="site:cehd.umn.edu"></gcse:searchresults-only>
+</div>
+</div>
 {% endblock %}
