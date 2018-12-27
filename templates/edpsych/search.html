@@ -2,57 +2,94 @@
 {% set page_title = "Search Results" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<div class="row">
-    <div class="container">
-        {% include "includes/search-results.html" %}
+
+<!-- Search box in the main area of the page -->
+<div class="container">
+
+  <h1>Search results</h1>
+  <div class="span-3">
+    <div class="search-bar-area">
+      <gcse:searchbox-only resultsURL="/edpsych/search/"></gcse:searchbox-only>
     </div>
-</div>
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-<script>
-    (function() {
-        "use strict";
-        var app = new App();
-        var http_client = new app.httpClient();
-        var start = 10;
+  </div>
 
-        $(".more-results-link").on("click", function(event) {
-            event.preventDefault();
-            var $self = $(this);
-            var query_params = {
-                "client": "{{ client }}",
-                "num": 10,
-                "in_url": "{{ in_url }}",
-                "filter": "{{ filter }}",
-                "q": encodeURIComponent("{{ query }}"),
-                "site": $self.data("site"),
-                "start": start
-            };
-            var params = {
-                "url": "/services/search/",
-                "method": "GET",
-                "data": query_params
-            };
-            var $target_element = $($self.data('target'));
-            var $request = http_client.get(params);
+  <div class="span-9">
 
-            $request.done(function() {
-                var results = http_client.getResults();
-                var template_params = {
-                    "template_path": "/assets/dist/views/cehd/search/",
-                    "template_name": "index.html",
-                    "$target_element": $target_element,
-                    "data": {
-                        results: results.results,
-                        config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-                    }
-                };
-                var renderer = new Renderer();
-                renderer.init(template_params);
-                renderer.render(true);
-                start = start + 10;
-            });
-        });
-    })();
-</script>
-{% endblock %}
+    <ul class="tabs">
+      <li class="tab_first" rel="tab11">Filter by:</li>
+      <li class="active" rel="tab1">Department</li>
+      <li rel="tab2">College</li>
+      <li rel="tab3">University</li>
+    </ul>
+    <div class="tab_container">
+      <div id="tab1" class="tab_content">
+        <div class="search-results-area">
+          <gcse:searchresults-only as_oq="site:cehd.umn.edu/edpsych"></gcse:searchresults-only>
+        </div>
+      </div>
+      <!-- #tab1 -->
+      <div class="tab_container">
+        <div id="tab2" class="tab_content">
+          <div class="search-results-area">
+            <gcse:searchresults-only as_oq="site:cehd.umn.edu"></gcse:searchresults-only>
+          </div>
+        </div>
+        <!-- #tab2 -->
+        <div id="tab3" class="tab_content">
+          <div class="search-results-area">
+            <gcse:searchresults-only as_oq="site:https://twin-cities.umn.edu/"></gcse:searchresults-only>
+          </div>
+        </div>
+        <!-- #tab3 -->
+
+      </div>
+      <!-- .tab_container -->
+    </div>
+  </div>
+
+
+  {% endblock %}
+
+  {% block bottom_js %}{{ parent() }}
+  {# <script src="{{ config.js_base }}/sorter.min.js{{ js_cachebuster }}"></script> #}
+  <script>
+    // tabbed content
+    // http://www.entheosweb.com/tutorials/css/tabs.asp
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    /* if in tab mode */
+    $("ul.tabs li").click(function () {
+
+      $(".tab_content").hide();
+      var activeTab = $(this).attr("rel");
+      $("#" + activeTab).fadeIn();
+
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
+
+      $(".tab_drawer_heading").removeClass("d_active");
+      $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+
+    });
+    /* if in drawer mode */
+    $(".tab_drawer_heading").click(function () {
+
+      $(".tab_content").hide();
+      var d_activeTab = $(this).attr("rel");
+      $("#" + d_activeTab).fadeIn();
+
+      $(".tab_drawer_heading").removeClass("d_active");
+      $(this).addClass("d_active");
+
+      $("ul.tabs li").removeClass("active");
+      $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+    });
+
+
+    /* Extra class "tab_last"
+    to add border to right side
+    of last tab */
+    $('ul.tabs li').last().addClass("tab_last");
+  </script>
+  {% endblock %}

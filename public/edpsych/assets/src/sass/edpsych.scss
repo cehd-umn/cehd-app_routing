@@ -8,6 +8,8 @@
 // @import "loader";
 // @import "form_hack";
 // @import "../../../../assets/src/sass/search";
+@import "search";
+@import "cse-results-html";
 
 // .news-more-news-link {
 //     margin-right: 10px;
@@ -76,7 +78,8 @@
             display: block;
             padding: .5em 2em;
 
-            @each $pseudo-class, $color in $link-pseudo-classes {
+            @each $pseudo-class,
+            $color in $link-pseudo-classes {
                 &:#{$pseudo-class} {
                     color: $base-white;
                     text-decoration: none;
@@ -268,8 +271,11 @@ ol {
         }
     }
 
-    @each $heading, $size in $heading-map-mobile {
-        #{$heading}, .#{$heading} {
+    @each $heading,
+    $size in $heading-map-mobile {
+
+        #{$heading},
+        .#{$heading} {
             &.heading-profile {
                 font-size: $size;
 

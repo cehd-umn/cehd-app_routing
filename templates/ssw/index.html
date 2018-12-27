@@ -12,10 +12,12 @@ School of Social Work (SSW)
         nav {
             margin: 0 auto;
         }
+
         .nav-container {
             background: #fff;
             padding: 36px 0 0;
         }
+
         .dept-footer-section.first {
             border-right: 18px solid #fff;
             padding-left: 8.5%;
@@ -26,25 +28,30 @@ School of Social Work (SSW)
         .hero-image-container {
             min-height: 610px;
         }
+
         .hero-overlay {
             background-color: rgba(255, 255, 255, 0.5);
             color: #000;
-            height:auto;
+            height: auto;
             text-shadow: none;
         }
+
         .hero-overlay p {
             font-family: 'Montserrat', sans-serif;
             font-size: 30px;
             margin: .8em 0;
         }
+
         .hero-image {
             top: 130px;
         }
+
         .circular-stat {
-            position:relative;
+            position: relative;
             width: 100%;
             z-index: 1;
         }
+
         .stat-percent {
             color: #fff;
             font-family: 'Raleway', sans-serif;
@@ -53,6 +60,7 @@ School of Social Work (SSW)
             position: absolute;
             z-index: 99;
         }
+
         .stat-text p {
             font-family: 'Lato-light', sans-serif;
             font-size: 30px;
@@ -61,6 +69,7 @@ School of Social Work (SSW)
             width: 60%;
             z-index: 99;
         }
+
         .stat-caption {
             font-family: 'Lato', sans-serif;
             font-size: 10px;
@@ -68,35 +77,40 @@ School of Social Work (SSW)
             position: absolute;
         }
 
-.row.has-hero-image {
-margin-top:470px;
-    }
-    .element {
-        margin-bottom: 100px;
+        .row.has-hero-image {
+            margin-top: 470px;
+        }
 
+        .element {
+            margin-bottom: 100px;
+
+        }
+
+        .element-1 {
+            color: #ffcc33;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 275px;
+            position: relative;
+        }
+
+        .element-2 {
+            color: #666;
+            font-family: 'Lato', sans-serif;
+            font-size: 35px;
+            margin-top: -150px;
+            z-index: 2;
+        }
     }
-    .element-1 {
-        color:#ffcc33;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 275px;
-        position:relative;
-    }
-    .element-2 {
-        color:#666;
-        font-family: 'Lato', sans-serif;
-        font-size: 35px;
-        margin-top:-150px;
-        z-index:2;
-    }
-	}
-	    @media (min-width: 1160px) {
+
+    @media (min-width: 1160px) {
         .hero-image-container {
             min-height: 800px;
         }
-		.row.has-hero-image {
-margin-top:700px;
+
+        .row.has-hero-image {
+            margin-top: 700px;
+        }
     }
-		}
 </style>
 {% endblock %}
 {% block hero_image %}
@@ -105,7 +119,8 @@ margin-top:700px;
     <div class="hero-overlay">
         <div class="container">
             <div class="twothird text-center">
-                <p>Canoeists brave a chilly April day on Bde Maka Ska during a Youth Studies Experiential Learning Class</p>
+                <p>Canoeists brave a chilly April day on Bde Maka Ska during a Youth Studies Experiential Learning
+                    Class</p>
             </div>
             <div class="third">
                 <p><a href="" class="to-upper button clear">Read more</a></p>
@@ -119,10 +134,15 @@ margin-top:700px;
     <div class="container">
         <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
         <div class="feature twothird">
-            <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and policies are shaped by culture and power.
+            <p>Our world is full of systems and policies that affect how individuals learn, grow and relate to one
+                another. Organizational Leadership, Policy, and Development (OLPD) studies how those systems and
+                policies are shaped by culture and power.
                 We prepare leaders and researchers to transform our education and organizations for the better.</p>
 
-            <p>We teach our students how to design, test, implement, and revise our institutional strategies in both the public and private sectors, from the international to the local level. Our students gain practical experiences in creating approaches to increase social and economic development, foster human flourishing, disrupt power structures, and promote a more just society.</p>
+            <p>We teach our students how to design, test, implement, and revise our institutional strategies in both
+                the public and private sectors, from the international to the local level. Our students gain practical
+                experiences in creating approaches to increase social and economic development, foster human
+                flourishing, disrupt power structures, and promote a more just society.</p>
         </div>
     </div><!-- close container -->
     <!-- <div class="row">
@@ -143,42 +163,17 @@ margin-top:700px;
     <div class="row margin-top-1">
         <div class="container feature margin-top-2">
             {# make sure the SVG container has a unique id #}
-            <div id="circle"
-                 data-svg-stat-group
-                 data-viewbox-x="0"
-                 data-viewbox-y="0"
-                 data-viewbox-height="250"
-                 data-viewbox-width="1400"
-                 data-circle-center-x="300"
-                 data-circle-center-y="125"
-                 data-circle-size="250"
-                 data-circle-bg-color="#7a0019"
-                 data-main-text-x="460"
-                 data-main-text-y="90"
-                 data-main-text-color="#000"
-                 data-main-text-font-family="Lato-light, sans-serif"
-                 data-main-text-font-size="30px"
-                 data-main-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
-                 data-stat-text-value="78%"
-                 data-stat-text-x="235"
-                 data-stat-text-y="50"
-                 data-stat-text-color="#fff"
-                 data-stat-text-font-family="Raleway, sans-serif"
-                 data-stat-text-font-size="70"
-                 data-caption-text-value="source: Job Outlook 2017, National Association of Colleges and Employers"
-                 data-caption-text-x="460"
-                 data-caption-text-y="210"
-                 data-caption-text-color="#000"
-                 data-caption-text-font-family="Raleway, sans-serif"
-                 data-caption-text-font-size="13px"
-                 data-line-start-x="0"
-                 data-line-start-y="200"
-                 data-line-end-x="1400"
-                 data-line-end-y="200"
-                 data-line-stroke-width="10"
-                 data-line-stroke-color="#eee"
-                 data-line-stroke-opacity=".6"
-            ></div>
+            <div id="circle" data-svg-stat-group data-viewbox-x="0" data-viewbox-y="0" data-viewbox-height="250"
+                data-viewbox-width="1400" data-circle-center-x="300" data-circle-center-y="125" data-circle-size="250"
+                data-circle-bg-color="#7a0019" data-main-text-x="460" data-main-text-y="90" data-main-text-color="#000"
+                data-main-text-font-family="Lato-light, sans-serif" data-main-text-font-size="30px"
+                data-main-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
+                data-stat-text-value="78%" data-stat-text-x="235" data-stat-text-y="50" data-stat-text-color="#fff"
+                data-stat-text-font-family="Raleway, sans-serif" data-stat-text-font-size="70" data-caption-text-value="source: Job Outlook 2017, National Association of Colleges and Employers"
+                data-caption-text-x="460" data-caption-text-y="210" data-caption-text-color="#000"
+                data-caption-text-font-family="Raleway, sans-serif" data-caption-text-font-size="13px"
+                data-line-start-x="0" data-line-start-y="200" data-line-end-x="1400" data-line-end-y="200"
+                data-line-stroke-width="10" data-line-stroke-color="#eee" data-line-stroke-opacity=".6"></div>
 
             <!--
             <img class="circular-stat" src="/olpd/images/circle-stat.svg" alt="Circle stat">
@@ -200,40 +195,54 @@ margin-top:700px;
 
 
                 <div class="half">
-                    <p><a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/"><strong>Business and Marketing Education</strong></a></p>
-                    <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
+                    <p><a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/"><strong>Business
+                                and Marketing Education</strong></a></p>
+                    <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500
+                        companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
                 </div>
 
                 <div class="half">
-                    <p><a href="{{ config.asset_base }}/undergraduate-programs/human-resource-development/"><strong>Human Resource Development</strong></a></p>
-                    <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
+                    <p><a href="{{ config.asset_base }}/undergraduate-programs/human-resource-development/"><strong>Human
+                                Resource Development</strong></a></p>
+                    <p>Gain the skills you need to offer workplace training and contribute to organizational
+                        development in a variety of public and private organizations.</p>
                 </div>
             </div>
 
             <h2 class="text-center">Graduate program tracks</h2>
             <div class="row">
                 <div class="third">
-                    <p><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/"><strong>Comparative International Development Education</strong></a></p>
-                    <p>Examine educational ideas, practices, and systems through a global lens and foster understanding of transcultural issues and trends in education.</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/"><strong>Comparative
+                                International Development Education</strong></a></p>
+                    <p>Examine educational ideas, practices, and systems through a global lens and foster understanding
+                        of transcultural issues and trends in education.</p>
                 </div>
                 <div class="third">
-                    <p><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/"><strong>Education Policy and Leadership</strong></a></p>
-                    <p>Work to continuously improve educational quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/"><strong>Education
+                                Policy and Leadership</strong></a></p>
+                    <p>Work to continuously improve educational quality and effectiveness so that young people graduate
+                        from secondary education well-prepared to continue their learning and contribute to their
+                        communities.</p>
                 </div>
                 <div class="third">
-                    <p><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/"><strong>Evaluation Studies</strong></a></p>
-                    <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in a variety of fields.</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/"><strong>Evaluation
+                                Studies</strong></a></p>
+                    <p>Learn what works. Study evaluation theory and practice and inform the decision-making process in
+                        a variety of fields.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="half">
                     <p><a href="{{ config.asset_base }}/graduate-programs/higher-education/"><strong>Higher Education</strong></a></p>
-                    <p>Investigate the experiences, practices and decisions of those involved in post-secondary educations as well as the socio-political contexts in which higher education exists.</p>
+                    <p>Investigate the experiences, practices and decisions of those involved in post-secondary
+                        educations as well as the socio-political contexts in which higher education exists.</p>
                 </div>
                 <div class="half">
-                    <p><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/"><strong>Human Resource Development</strong></a></p>
-                    <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the conditions that empower people to be the best versions of themselves at work.</p>
+                    <p><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/"><strong>Human
+                                Resource Development</strong></a></p>
+                    <p>Study the ways in which people find meaning and thrive in their workplaces, and cultivate the
+                        conditions that empower people to be the best versions of themselves at work.</p>
                 </div>
             </div>
 
@@ -267,15 +276,13 @@ margin-top:700px;
                 </div>
                 <div class="third">
                     <h3>Improving Lives blog</h3>
-                    <div id="visionblog-container" class="loader-container" aria-live="polite"
-                         data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
-                         data-base-url="https://cehdvision2020.umn.edu/" {# The url of the website with an RSS feed #}
-                         data-feed-path="feed/?  call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post" {# The path for the feed at the site above #}
-                         data-target-element-selector="#visionblog-container" {# The element selector for the feed html #}
-                         data-template-path="/assets/dist/views/olpd/newsfeeds/" {# The path the the Nunjucks template #}
-                         data-template-name="improvinglives.html" {# The name of the Nunjucks template #}
-                         data-limit="5" {# How many stories to display #}
-                    >
+                    <div id="visionblog-container" class="loader-container" aria-live="polite" data-news-app {# this is
+                        how the JavaScript below knows we want to pull in a news feed #} data-base-url="https://cehdvision2020.umn.edu/"
+                        {# The url of the website with an RSS feed #} data-feed-path="feed/?  call_custom_simple_rss=1&csrp_tax_name=department&csrp_tax_term_id=2658&csrp_post_type=post"
+                        {# The path for the feed at the site above #} data-target-element-selector="#visionblog-container"
+                        {# The element selector for the feed html #} data-template-path="/assets/dist/views/olpd/newsfeeds/"
+                        {# The path the the Nunjucks template #} data-template-name="improvinglives.html" {# The name
+                        of the Nunjucks template #} data-limit="5" {# How many stories to display #}>
                         <div class="loader">
                             <div class="loader-figure "></div>
                             <p class="loader-label">Loading&hellip;</p>
@@ -296,13 +303,15 @@ margin-top:700px;
         <div class="container">
             <div class="twothird feature">
                 <h2 class="text-center">Discover OLPD on social media</h2>
-                <p>See breaking news and information, get involved in activities and events, and learn about research, programs, and community engagement.</p>
+                <p>See breaking news and information, get involved in activities and events, and learn about research,
+                    programs, and community engagement.</p>
                 <div class="span-8 feature">
                     <div class="half">
                         <div class="svg-social-media-icon size-40">
                             {% include "cehd/includes/svg/social-media/facebook.html" %}
                         </div>
-                        <p>Like us on Facebook<br /> <a href="https://www.facebook.com/ugolpd">Undergraduate Programs</a> <br /> <a href="https://www.facebook.com/olpdgrad">Graduate Programs</a></p>
+                        <p>Like us on Facebook<br /> <a href="https://www.facebook.com/ugolpd">Undergraduate Programs</a>
+                            <br /> <a href="https://www.facebook.com/olpdgrad">Graduate Programs</a></p>
 
                     </div>
                     <div class="half">
@@ -322,6 +331,7 @@ margin-top:700px;
 <script src="/assets/dist/js/svg_stats.min.js"></script>
 <script src="/assets/dist/js/news.min.js"></script>
 {# The call to parent() above is *very* important #}
-{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed", "#news-container", "olpdhome.html",  5) }}
+{{newsfeed.news_feed_js("category/departments/organizational-leadership-policy-and-development/feed",
+"#news-container", "olpdhome.html", 5) }}
 {{ eventsfeed.events_feed_js(132) }}
 {% endblock %}

@@ -79,7 +79,7 @@ class OLPDApp extends \CEHD\App\App\BaseApp
             $url = $query_data["url"];
         }
 
-        $search_query = $query_data["q"];
+        $search_query = $query_data["query"];
 
         $client_query_data = [
             'query' => [
