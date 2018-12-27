@@ -2109,11 +2109,6 @@
   template: cehd/trio/mcnair/2011/tarnowski.html
   template_data:
     - section: trio
-/trio/mcnair/2011/tesfaye/:
-  publish: true
-  template: cehd/trio/mcnair/2011/tesfaye.html
-  template_data:
-    - section: trio
 /trio/mcnair/2011/thompson/:
   publish: true
   template: cehd/trio/mcnair/2011/thompson.html

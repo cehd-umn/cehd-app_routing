@@ -26,6 +26,8 @@
   href: /current/
   section: current
   subsections:
+    - name: Student Profiles
+      href: /current/student-stories/
     - name: American Sign Language
       href: /current/asl/
     - name: Counseling & Student Personnel Psychology
@@ -58,6 +60,9 @@
   href: /giving/
 - name: Alumni
   href: /alumni/
+  subsections:
+    - name: Alumni Profiles
+      href: /alumni/alumni-profiles/
 - name: About
   href: /about/
   section: about

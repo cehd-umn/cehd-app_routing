@@ -600,6 +600,12 @@
     template_data:
         meta_description: "Learn about the University of Minnesota Professor Mary McEvoy's legacy in the field of special education."
         section: programs-degrees
+/edpsych/programs/specialed/scholarships/:
+    publish: true
+    template: edpsych/programs/specialed/scholarships.html
+    template_data:
+        meta_description: "Find funding for your special education degree."
+        section: programs-degrees
 /edpsych/programs/specialed/videos/:
     publish: true
     template: edpsych/programs/specialed/videos.html

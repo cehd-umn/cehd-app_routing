@@ -293,7 +293,7 @@ Evaluation Studies:
 Family and Community Engagement:
   meta: null
   publish: true
-  links: 
+  links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/fsos/programs/undergraduate/minor.html
   description: Deepen your understanding of nonprofit management, community development, program development and evaluation, culturally relevant programming and how families navigate systems such as schools and hospitals.
@@ -304,7 +304,7 @@ Family and Community Engagement:
 Family Financial Studies:
   meta: null
   publish: true
-  links: 
+  links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/fsos/programs/undergraduate/minor.html
   description: Prepare to work with families around financial issues, as a financial coach, counselor, or other delivery methods.
@@ -314,11 +314,11 @@ Family Financial Studies:
 Family Therapy:
   meta: null
   publish: true
-  links: 
+  links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/fsos/programs/undergraduate/minor.html
   description: Deepen your understanding of counseling practices, family therapy, and working with diverse families and cultures.
-  categories: 
+  categories:
     - Families, Youth, and Children
     - Psychology, Counseling, and Social Work
 Family Social Science:
@@ -514,18 +514,6 @@ Online Learning:
   description: Develop knowledge and skill in best practices for designing and delivering online distance learning.
   categories:
     - Teaching, Learning, and Schools
-Outdoor Recreation and Education:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/academics/undergrad/rec.html
-  description: An experiential program that can be completed through international and U.S. travel opportunities.
-  categories:
-    - Teaching, Learning, and Schools
-    - Recreation, Health, and Wellbeing
-    - Business, Administration, and Leadership
-    - Families, Youth, and Children
 Parent and Family Education:
   meta: null
   publish: true
@@ -634,18 +622,6 @@ Racial Justice in Urban Schooling:
     - Families, Youth, and Children
     - Languages, Culture, and International
     - Psychology, Counseling, and Social Work
-Recreation Administration:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Major
-      href: http://www.cehd.umn.edu/kin/academics/undergrad/rec.html
-  description: Help individuals, families, and communities live healthy and satisfying lives. Gain experience in recreation administration through internships and experiential learning.
-  categories:
-    - Recreation, Health, and Wellbeing
-    - Languages, Culture, and International
-    - Families, Youth, and Children
-    - Business, Administration, and Leadership
 School Psychology:
   meta: null
   publish: true

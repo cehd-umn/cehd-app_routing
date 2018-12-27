@@ -1,0 +1,40 @@
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "Academics" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Undergraduate Studies</h1>
+    <div class="half">
+    <p>If you are a student who wants to contribute to a just and caring society, the School of Social Work is the place for you.</p>
+    <p>The school offers a high-quality education that instills in its graduates the capability to incorporate and apply in their lives and work the core values of social work—service, social justice, dignity and worth of the person, importance of human relationships, integrity, and competence.</p>
+    <p>All of our programs have internships or service learning components that reflect our commitment to engaging with the community in learning, research and service.</p>
+    </div>
+    <div class="half">
+      <figure>
+        <img src="/dev-ssw/images/undergrad-class.jpg" alt="Kodjo Attisso in the Youth Studies class">
+        <figcaption>Kodjo Attisso in the Youth Studies class "Working with Somali Youth."</figcaption>
+    </figure>
+
+
+    </div>
+    </div>
+    <div class="row emphasis margin-top-2">
+
+    <div class="span-6 feature">
+      <h2 class="text-center">Areas of Study</h2>
+      <h3>Bachelor of Science in Youth Studies</h3>
+      <p><a href="{{ config.asset_base }}/academics/youth-studies.html">Bachelor of Science in Youth Studies</a></p>
+      <p>An interdisciplinary program that prepares you for work in community youth development and human services fields, with a focus on serving urban and marginalized young people.</p>
+
+      <h3>Minors</h3>
+      <p><a href="#">Minor in Youth Studies</a></p>
+      <p>A 16-credit University-wide minor that combines related undergraduate courses in anthropology, child psychology, family social science, recreation/park and leisure studies, and sociology.</p>
+      <p><a href="#">Minor in Social Justice</a></p>
+      <p>An 18-credit interdisciplinary program that offers you the opportunity to both theorize about the meanings of social justice and to practice social justice advocacy in community organizations. </p>
+      <p><a href="#">Minor in Family Violence Prevention</a></p>
+      <p>A 15-credit interdisciplinary program that strengthens your educational experience with a research base and a set of practical skills in family violence.</p>
+    </div>
+    </div>
+    </div>
+    {% endblock %}
