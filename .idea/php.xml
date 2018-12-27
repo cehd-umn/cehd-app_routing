@@ -25,6 +25,7 @@
       <path value="$PROJECT_DIR$/vendor/slim/twig-view" />
       <path value="$PROJECT_DIR$/vendor/slim/slim" />
       <path value="$PROJECT_DIR$/vendor/thoma127/dict" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
     </include_path>
   </component>
 </project>
