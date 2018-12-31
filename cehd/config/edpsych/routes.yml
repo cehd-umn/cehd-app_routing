@@ -914,3 +914,8 @@
     template_data:
         meta_description: "Our faculty and researchers develop and improve tests and tools to better assess learning."
         section: research
+/edpsych/search/:
+    publish: true
+    template: edpsych/search.html
+    template_data:
+    - section:

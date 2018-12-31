@@ -615,3 +615,8 @@
   publish: true
   template_data:
     - section: chautauqua
+/search/:
+  publish: true
+  template: olpd/search/index.html
+  template_data:
+  - section:

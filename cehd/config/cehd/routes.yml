@@ -3234,3 +3234,8 @@
   template: cehd/undergraduate/transfer/requirements.html
   template_data:
     - section: undergraduate
+/search/:
+  publish: true
+  template: cehd/search/index.html
+  template_data:
+    - section:

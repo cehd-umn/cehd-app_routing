@@ -462,11 +462,7 @@ class BaseApp extends \CEHD\App\BaseClass
 
         $client_query_data = [
             'query' => [
-                'client' => $client,
-                'num' => $num,
                 'q' => $search_query,
-                'site' => $site,
-                'start' => $start,
             ]
         ];
 
@@ -479,15 +475,8 @@ class BaseApp extends \CEHD\App\BaseClass
         $search_data = json_decode($client_response->getBody(), true);
 
         $template_data = [
-            "client" => $client,
-            "num" => $num,
-            "site" => $site,
-            "start" => $start,
-            "in_url" => $url,
-            "filter" => $filter,
             "query" => $search_query,
             "results" => $search_data["results"],
-            "key_match" => $search_data["keyMatch"],
         ];
 
         $template = 'cehd/search/index.html';

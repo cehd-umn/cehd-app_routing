@@ -29,7 +29,7 @@ $yaml_file_paths = [
 $app = new \CEHD\App\EdPsych\EdPsychApp($yaml_file_paths);
 
 // Search page
-$app->router->respond('GET', '/edpsych/search/', [$app, 'searchPageHandler']);
+//$app->router->respond('GET', '/edpsych/search/', [$app, 'searchPageHandler']);
 
 $app->router->respond(
     'GET',

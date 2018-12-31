@@ -19,33 +19,34 @@ class CEHDApp extends \CEHD\App\App\BaseApp
 {
     // @todo put this into the config file
     // @todo this can be public
-    protected $_searchApplianceSites = [
-                "primary" => [
-                    "client" => "tc_education",
-                    "name" => "For Students",
-                    "site" => "tc_education_students",
-                ],
-                "secondary" => [
-                    "client" => "tc_education",
-                    "name" => "College of Education + Human Development",
-                    "site" => "tc_education",
-                ],
-                "tertiary" => [
-                    "client" => "searchumn",
-                    "name" => "University of Minnesota",
-                    "site" => "default_collection",
-                    "url" => "www.umn.edu",
-                ]
-            ];
+
+//    protected $_searchApplianceSites = [
+//                "primary" => [
+//                    "client" => "tc_education",
+//                    "name" => "For Students",
+//                    "site" => "tc_education_students",
+//                ],
+//                "secondary" => [
+//                    "client" => "tc_education",
+//                    "name" => "College of Education + Human Development",
+//                    "site" => "tc_education",
+//                ],
+//                "tertiary" => [
+//                    "client" => "searchumn",
+//                    "name" => "University of Minnesota",
+//                    "site" => "default_collection",
+//                    "url" => "www.umn.edu",
+//                ]
+//            ];
 
     public function __construct($file_paths)
     {
         parent::__construct($file_paths);
 
-        $this->template->addGlobal(
-            "gsa_sites",
-            $this->_searchApplianceSites
-        );
+//        $this->template->addGlobal(
+//            "gsa_sites",
+//            $this->_searchApplianceSites
+//        );
 
         // Add a cachebuster for the css
         $this->template->addGlobal(
@@ -141,7 +142,7 @@ class CEHDApp extends \CEHD\App\App\BaseApp
         ];
         echo $this->_renderTemplate('cehd/programs/index.html', $template_data);
     }
-    
+
 
     public function topicsPageHandler($request, $response, $service, $app)
     {
