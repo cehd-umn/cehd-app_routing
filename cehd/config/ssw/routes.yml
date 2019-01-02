@@ -45,6 +45,12 @@
   publish: true
   template_data:
     - section: home
+/search/:
+  publish: true
+  template: ssw/search/index.html
+  template_data:
+  - section:
+
 /images/:
   template: ssw/images.html
   publish: true

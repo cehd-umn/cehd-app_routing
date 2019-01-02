@@ -90,4 +90,4 @@ foreach ($routes as $route => $route_info) {
 
 // $app->get("/data/people/", SSWApp::class . ":personExtraData");
  $app->get("/people/{internet_id}/", SSWApp::class . ":personPage");
- $app->get("/search/", SSWApp::class . ":searchPage");
+// $app->get("/search/", SSWApp::class . ":searchPage");
