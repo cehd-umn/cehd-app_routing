@@ -3,8 +3,6 @@
     <nav class="container">
         <ul class="nav">
         {%- for top_level_item in nav_items -%}
-            {%- set is_academics = top_level_item.name == "Academics" -%}
-            {%- set is_about = top_level_item.name == "About Us" -%}
             {%- set top_level_classes = "" -%}
             {%- if top_level_item.subsections -%}
                 {%- set top_level_classes = top_level_classes ~ " dropdown mega-dropdown" -%}

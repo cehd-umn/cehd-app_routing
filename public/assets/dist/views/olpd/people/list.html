@@ -1,3 +1,4 @@
+{%- set default_headshot = '/assets/images/headshots/slug.jpg' -%}
 {% for group in data.people %}
 <div class="row">
     <div class="container">
@@ -6,6 +7,8 @@
             <div class="third">
                 {% if person.headshotAddress|is_string %} <br />
                 <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
+                {% else %}
+                <p class="no-margin-top"><img src="{{ default_headshot }}" alt="{{ person.nameFirstLast }} headshot"></p>
                 {% endif %}
             </div>
             <div class="twothird">

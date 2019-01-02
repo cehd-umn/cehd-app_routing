@@ -1,30 +1,3 @@
-<!--<div class="section-header-container row" id="nav-container">-->
-    <!--<div class="container">-->
-        <!--<button class="nav-toggle">Menu</button>-->
-        <!--<nav class="inline">-->
-            <!--<ul class="nav inline">-->
-                <!--{%- for top_level_item in nav_items -%}-->
-                <!--{%- if loop.first -%}-->
-                <!--{%- set top_level_classes = top_level_classes ~ " first" -%}-->
-                <!--{%- endif -%}-->
-                <!--{%- for top_level_nav_item in nav_items -%}-->
-                <!--<li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>-->
-                    <!--{%- if top_level_nav_item.subsections -%}-->
-                    <!--<ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">-->
-                        <!--{%- for subsection in top_level_nav_item.subsections -%}-->
-                        <!--<li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>-->
-                            <!--{%- endfor -%}-->
-                    <!--</ul>-->
-                    <!--{%- endif -%}-->
-                <!--</li>-->
-                <!--{%- endfor -%}{# end for top_level_item in nav_items #}-->
-                <!--<li class="top-nav-item to-upper" id="home-top-nav-item"><a id="home-top-nav-link" class="top-level-nav-link" href="/">{%- include "ssw/includes/nav/home-icon.html" -%}</a></li>-->
-            <!--</ul>-->
-        <!--</nav>-->
-    <!--</div>-->
-<!--</div>&lt;!&ndash; // row &ndash;&gt;-->
-
-
 <div class="meganav-container" role="navigation">
     <button class="nav-toggle">Menu</button>
     <nav class="container">
@@ -74,77 +47,6 @@
                         </ul><!-- // ul.margin-top.nav -->
                     </div><!-- // .ul-container -->
                     {%- endfor -%}{# end for subsection in top_level_item.subsections #}
-                    {%- if not (is_academics or is_about) -%}
-                    <div class="{%- if loop.first -%}first {%- endif -%}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
-                        <div class="dropdown-right-content-wrapper flex-container" id="{{ top_level_item.name|hyphenate }}-dropdown-right-content-container">
-                            {%- include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" -%}
-                        </div>
-                    </div>
-                    {%- endif -%}
-                </div><!-- // dropdown-menu-wrapper -->
-                {%- endif -%}{# end if top_level_item.subsections #}
-            </li><!-- // top-level nav item -->
-            {%- endfor -%}{# end for top_level_item in nav_items #}
-            <li class="top-level" id="top-level-home"><a id="main-nav-home-link" href="/">{%- include "cehd/includes/nav/home-icon.html" -%}</a></li>
-        </ul><!-- /ul.nav -->
-    </nav>
-</div><!-- meganav-container -->
-<div class="container" role="navigation">
-    <button class="nav-toggle">Menu</button>
-    <nav class="container">
-        <ul class="nav">
-            {%- for top_level_item in nav_items -%}
-            {%- set is_academics = top_level_item.name == "Academics" -%}
-            {%- set is_about = top_level_item.name == "About Us" -%}
-            {%- set top_level_classes = "" -%}
-            {%- if top_level_item.subsections -%}
-            {%- set top_level_classes = top_level_classes ~ " dropdown mega-dropdown" -%}
-            {%- endif -%}
-            {%- if loop.first -%}
-            {%- set top_level_classes = top_level_classes ~ " first" -%}
-            {%- endif -%}
-            <li class="top-level{{ top_level_classes }}" id="top-level-{{ top_level_item.section }}">
-                <a href="{{ top_level_item.href }}" class="top-level-link{%- if top_level_item.subsections %} dropdown-toggle{%- endif -%}">
-                    {{ top_level_item.name }}
-                </a>
-                {%- if top_level_item.subsections -%}
-                <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
-                    {%- for subsection in top_level_item.subsections -%}
-                    <div class="ul-container nav-items{% if loop.first %} first{% endif %}">
-                        <ul class="margin-top nav">
-                            <li class="sub-nav-item">
-                                {%- if loop.first -%}
-                                <a href="{{ top_level_item.href }}" class="dropdown-header-repeated to-upper">{{ top_level_item.name }}</a>
-                                {%- endif -%}
-                                <ul id="{{ top_level_item.name|hyphenate }}-subsection-list-{{ loop.index }}">
-                                    {%- for sub_nav_item in subsection -%}
-                                    <li class="{%- if sub_nav_item.subsections -%}dropdown-header {%- endif -%}sub-nav-item" id="{{ top_level_item.name|lower|hyphenate }}-dropdown-subsection-{{ sub_nav_item.name|hyphenate }}">
-                                        <a class="sub-nav-item-link" href="{{ sub_nav_item.href }}">{{ sub_nav_item.name }}</a>
-                                        {%- if sub_nav_item.subsections -%}
-                                        <ul id="{{ top_level_item.name|hyphenate }}-{{ sub_nav_item.name|hyphenate }}-list">
-                                            {%- for sub_subsection in sub_nav_item.subsections -%}
-                                            {%- for sub_sub_nav_item in sub_subsection -%}
-                                            <li class="sub-nav-item">
-                                                <a class="sub-nav-item-link" href="{{ sub_sub_nav_item.href }}">{{ sub_sub_nav_item.name }}</a>
-                                            </li>
-                                            {%- endfor -%}
-                                            {%- endfor -%}
-                                        </ul><!-- // sub sub nav -->
-                                        {%- endif -%}
-                                    </li><!-- // dropdown header -->
-                                    {%- endfor -%}{# end for sub_nav_item in top_level_item.subsections #}
-                                </ul>
-                            </li><!-- / .sub-nav-item -->
-                        </ul><!-- // ul.margin-top.nav -->
-                    </div><!-- // .ul-container -->
-                    {%- endfor -%}{# end for subsection in top_level_item.subsections #}
-                    {%- if not (is_academics or is_about) -%}
-                    <div class="{%- if loop.first -%}first {%- endif -%}content-container flex-container align-center" id="dropdown-right-content-{{ top_level_item.name|hyphenate }}">
-                        <div class="dropdown-right-content-wrapper flex-container" id="{{ top_level_item.name|hyphenate }}-dropdown-right-content-container">
-                            {%- include "cehd/includes/nav/content/" ~ top_level_item.section ~ ".html" -%}
-                        </div>
-                    </div>
-                    {%- endif -%}
                 </div><!-- // dropdown-menu-wrapper -->
                 {%- endif -%}{# end if top_level_item.subsections #}
             </li><!-- // top-level nav item -->
