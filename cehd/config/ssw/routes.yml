@@ -86,8 +86,18 @@
   template: ssw/graduate/index.html
   template_data:
     - section: graduate
+/graduate/transfer-students/:
+  publish: true
+  template: ssw/graduate/transfer-students.html
+  template_data:
+    - section: graduate
 /graduate/meet-our-phd-students/:
   template: ssw/graduate/meet-our-phd-students.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/apply-phd/:
+  template: ssw/graduate/apply-phd.html
   publish: true
   template_data:
       - section: graduate

@@ -55,7 +55,10 @@
   titles:
     - x500: jmccomas
       section: Special education
-      title: associate department chair, special education program coordinator
+      title: special education program coordinator
+    - x500: mcmas004
+      section: Special education
+      title: associate department chair
     - x500: coneill
       section: Special education
       title: field placement coordinator
