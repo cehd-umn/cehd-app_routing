@@ -1,0 +1,20 @@
+<ul class="no-bullet">
+{% for news_item in data.news %}
+    {%- if news_item.link_override -%}
+        {%- set article_link = news_item.link_override -%}
+    {%- else -%}
+        {%- set article_link = news_item.link -%}
+    {%- endif -%}
+    {%- if news_item.title_override -%}
+        {%- set article_title = news_item.title_override -%}
+    {%- else -%}
+        {%- set article_title = news_item.title -%}
+    {%- endif -%}
+    {% if loop.index0 < data.limit %}
+        <li class="news-item">
+            <a data-ga-command="send" data-ga-hit-type="event" data-ga-category="news link" data-ga-action="click" data-ga-label="{{ article_title }}" href="{{ article_link|safe }}">{{ article_title|safe }}</a>
+            <p>{{ article_description|safe }}</p>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -71,6 +71,16 @@
   publish: true
   template_data:
       - section: about
+/about/history/:
+  template: ssw/about/history.html
+  publish: true
+  template_data:
+      - section: about
+/about/news-events/:
+  template: ssw/about/news-events.html
+  publish: true
+  template_data:
+      - section: about
 /about/ssw-jobs/:
   template: ssw/about/ssw-jobs.html
   publish: true

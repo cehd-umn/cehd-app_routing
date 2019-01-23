@@ -1,0 +1,44 @@
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "News & Events" %}
+{% block title %}
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>News and events</h1>
+    <div class="half">
+  <h2>News</h2>
+  <div id="news-container" class="loader-container" aria-live="polite"
+  data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
+  data-base-url="http://news.cehd.umn.edu/" {# The url of the website with an RSS feed #}
+  data-feed-path="category/departments/social-work/feed" {# The path for the feed at the site above #}
+  data-target-element-selector="#news-container" {# The element selector for the feed html #}
+  data-template-path="/assets/dist/views/ssw/about/" {# The path the the Nunjucks template #}
+  data-template-name="news.html" {# The name of the Nunjucks template #}
+  data-limit="99" {# How many stories to display #}
+  >
+  <div class="loader">
+      <div class="loader-figure "></div>
+      <p class="loader-label">Loading&hellip;</p>
+  </div>
+</div>
+</div>
+    <div class="half">
+  <h2>Events</h2>
+
+  </div>
+</div>
+</div>
+
+
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/news.min.js"></script>
+<script src="/assets/dist/js/events.min.js"></script>
+{# The call to parent() above is *very* important #}
+{{newsfeed.news_feed_js("category/departments/social-work/feed",
+"#news-container", "sswhome.html", 5) }}
+{{ eventsfeed.events_feed_js(132) }}
+{% endblock %}
