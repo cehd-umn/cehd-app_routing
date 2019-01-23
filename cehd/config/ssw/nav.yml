@@ -3,38 +3,34 @@
   href: "/academics/"
   section: academics
   subsections:
-  -
-    - name: UNDERGRADUATE
-      href: "/undergraduate/"
-      subsections:
-        -
-          - name: Undergraduate Studies
-            href: "/undergraduate/undergraduate-studies/"
-          - name: Undergraduate Minors
-            href: "/undergraduate/undergraduate-minors/"
-          - name: Youth Studies Major
-            href: "/undergraduate/youth-studies-major/"
-  -
-    - name: GRADUATE
-      href: "/graduate/"
-      subsections:
-        -
-          - name: PhD in Social Work
-            href: "/graduate/phd-in-social-work/"
-          - name: Master of Social Work
-            href: "/graduate/master-of-social-work/"
-          - name: MSW Field Instruction
-            href: "/graduate/msw-field-instruction/"
-          - name: M.Ed. in Youth Development Leadership
-            href: "/graduate/med-in-youth-development-leadership/"
-          - name: Graduation
-            href: "/graduate/graduation/"
-          - name: Aid & Funding
-            href: "/graduate/graduate-aid-funding/"
-          - name: Job Search Information
-            href: "/graduate/job-search-opportunities/"
+    - - name: UNDERGRADUATE
+        href: "/undergraduate/"
+        subsections:
+          - - name: Undergraduate Studies
+              href: "/undergraduate/undergraduate-studies/"
+            - name: Undergraduate Minors
+              href: "/undergraduate/undergraduate-minors/"
+            - name: Youth Studies Major
+              href: "/undergraduate/youth-studies-major/"
+    - - name: GRADUATE
+        href: "/graduate/"
+        subsections:
+          - - name: PhD in Social Work
+              href: "/graduate/phd-in-social-work/"
+            - name: Master of Social Work
+              href: "/graduate/master-of-social-work/"
+            - name: MSW Field Instruction
+              href: "/graduate/msw-field-instruction/"
+            - name: M.Ed. in Youth Development Leadership
+              href: "/graduate/med-in-youth-development-leadership/"
+            # - name: Graduation
+            #   href: "/graduate/graduation/"
+            # - name: Aid & Funding
+            #   href: "/graduate/graduate-aid-funding/"
+            # - name: Job Search Information
+            #   href: "/graduate/job-search-opportunities/"
 - name: Research & Centers
-  href: "/change-me/"
+  href: "/research-and-centers/"
   section: null
   subsections: null
 - name: People
@@ -42,11 +38,11 @@
   section: null
   subsections: null
 - name: Giving
-  href: "/change-me/"
+  href: "/giving/"
   section: null
   subsections: null
 - name: Alumni
-  href: "/change-me/"
+  href: "/alumni/"
   section: null
   subsections: null
 - name: About

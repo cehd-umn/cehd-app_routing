@@ -11,9 +11,10 @@
     src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
 }
 
-@each $heading, $size in $heading-map-mobile {
+@each $heading,
+$size in $heading-map-mobile {
     .cognito .c-forms-heading $heading {
-        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: $size;
         margin: .7em 0;
         padding: 0;
@@ -23,7 +24,7 @@
 .cognito {
     .c-title h3 {
         color: $cehd-dark-grey;
-        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 16px;
     }
 }

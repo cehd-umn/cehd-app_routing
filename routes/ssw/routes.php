@@ -60,7 +60,7 @@ $twig->addGlobal('nav_items', $nav_items);
 $twig->addGlobal('inline_styles', $inline_styles);
 $twig->addGlobal('inline_svg_styles', $inline_svg_styles);
 $twig->addGlobal('inline_nav_styles', $inline_nav_styles);
-$twig->addGlobal("gsa_sites", $app_config["search_sites"]);
+// $twig->addGlobal("gsa_sites", $app_config["search_sites"]);
 
 $container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);

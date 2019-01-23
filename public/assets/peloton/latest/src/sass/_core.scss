@@ -12,59 +12,63 @@
 @import "neat/neat";
 @import "variables";
 
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: "Open Sans";
+//     font-style: normal;
+//     font-weight: 400;
+//     src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: "Open Sans";
+//     font-style: normal;
+//     font-weight: 700;
+//     src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Lato';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: "Open Sans";
+//     font-style: italic;
+//     font-weight: 400;
+//     src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Lato';
-    font-style: italic;
-    font-weight: 700;
-    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: "Open Sans";
+//     font-style: italic;
+//     font-weight: 700;
+//     src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     font-style: normal;
+//     font-weight: 700;
+//     src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+// }
 
 @font-face {
     font-family: 'FontAwesome';
     src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot');
-    src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'), url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
+    src: url('{{ config.asset_base }}/fonts/font-awesome-4.5.0/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff2') format('woff2'),
+    url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.woff') format('woff'),
+    url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.ttf') format('truetype'),
+    url('/assets/fonts/font-awesome-4.5.0/fontawesome-webfont.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -159,7 +163,12 @@ img {
 }
 
 // @todo deprecate these in a future version
-@each $size in 12, 14, 16, 18, 20, 24 {
+@each $size in 12,
+14,
+16,
+18,
+20,
+24 {
     .margin-bottom-#{ $size } {
         margin-bottom: #{ $size }px;
     }
@@ -290,16 +299,20 @@ img {
 
 ol {
     &.with-headings {
-        counter-reset: li; /* Initiate a counter */;
+        counter-reset: li;
+        /* Initiate a counter */
+        ;
         padding-left: 1.13em;
 
-        > li {
+        >li {
             list-style: none;
             position: relative;
 
             &::before {
-                content: counter(li); /* Use the counter as content */
-                counter-increment: li; /* Increment the counter by 1 */
+                content: counter(li);
+                /* Use the counter as content */
+                counter-increment: li;
+                /* Increment the counter by 1 */
                 left: -2em;
                 margin-right: 8px;
                 padding: 4px;
@@ -316,20 +329,23 @@ ol {
 ///
 /// @requires $heading-map-desktop found in _variables.scss
 /// @todo figure out what margins should be
-@each $heading, $size in $heading-map-mobile {
-    #{$heading}, .#{$heading} {
-        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+@each $heading,
+$size in $heading-map-mobile {
+
+    #{$heading},
+    .#{$heading} {
+        font-family: "Open Sans", sans-serif;
         font-size: $size;
         margin: .7em 0;
         padding: 0;
 
         li.#{$heading} {
-            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: $size;
         }
 
         &.light {
-            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-weight: normal;
         }
 
@@ -344,7 +360,8 @@ ol {
 
 }
 
-@each $heading, $size in $subheading-map-mobile {
+@each $heading,
+$size in $subheading-map-mobile {
     #{$heading} {
         small {
             font-size: $size;
@@ -352,7 +369,7 @@ ol {
             &.clear {
                 clear: both;
                 display: block;
-                margin-top: if($heading == "h5", .5em, 5px);
+                margin-top: if($heading=="h5", .5em, 5px);
             }
         }
     }
@@ -478,8 +495,10 @@ ol {
 
 a {
     &.button {
-        @each $pseudo-class, $color in $link-pseudo-classes {
-            @if $pseudo-class != hover {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
+            @if $pseudo-class !=hover {
                 &:#{$pseudo-class} {
                     color: $umn-dark-grey-foreground;
                 }
@@ -511,7 +530,7 @@ a {
     position: relative;
 }
 
- /// Text styles
+/// Text styles
 
 .text-left {
     text-align: left;
@@ -545,7 +564,9 @@ a {
 
 footer {
     a {
-        @each $pseudo-class, $color in $link-pseudo-classes {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
                 color: $umn-dark-grey-foreground;
             }
@@ -606,9 +627,12 @@ footer {
     }
 
     /// @todo remove any redundant properties
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
-            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
+            font-family: "Open Sans", sans-serif;
             font-size: $size;
             font-weight: bold;
             margin: 1em 0;
@@ -617,7 +641,8 @@ footer {
         }
     }
 
-    @each $heading, $size in $subheading-map-desktop {
+    @each $heading,
+    $size in $subheading-map-desktop {
         #{$heading} {
             small {
                 font-size: $size;
@@ -703,8 +728,11 @@ footer {
         }
     }
 
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
             text-align: left;
         }
     }
@@ -985,7 +1013,10 @@ footer {
     color: $cehd-text-red;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (-o-min-device-pixel-ratio: 11 / 10), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.1),
+only screen and (-o-min-device-pixel-ratio: 11 / 10),
+only screen and (min--moz-device-pixel-ratio: 1.1),
+only screen and (min-device-pixel-ratio: 1.1) {
     #umnh-logos {
         background: url("../../../images/umnheader/umnh-logos@2x.png") no-repeat;
         background-position-y: 50%;

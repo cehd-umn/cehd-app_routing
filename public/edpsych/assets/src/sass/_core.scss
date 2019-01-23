@@ -142,21 +142,24 @@ img {
 /// classes
 ///
 /// @requires $heading-map-desktop found in _variables.scss
-@each $heading, $size in $heading-map-mobile {
-    #{$heading}, .#{$heading} {
-        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+@each $heading,
+$size in $heading-map-mobile {
+
+    #{$heading},
+    .#{$heading} {
+        font-family: "Open Sans", sans-serif;
         font-size: $size;
         margin: .7em 0;
         padding: 0;
 
         &.light {
-            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: 16px;
             font-weight: normal;
         }
 
         &.normal {
-            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-weight: normal;
         }
 
@@ -171,7 +174,8 @@ img {
 
 }
 
-@each $heading, $size in $subheading-map-mobile {
+@each $heading,
+$size in $subheading-map-mobile {
     #{$heading} {
         small {
             font-size: $size;
@@ -179,7 +183,7 @@ img {
             &.clear {
                 clear: both;
                 display: block;
-                margin-top: if($heading == "h5", .5em, 5px);
+                margin-top: if($heading=="h5", .5em, 5px);
             }
         }
     }
@@ -195,7 +199,7 @@ img {
         }
 
         &.light {
-            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: 16px;
             font-weight: normal;
         }
@@ -271,8 +275,10 @@ img {
 
 a {
     &.button {
-        @each $pseudo-class, $color in $link-pseudo-classes {
-            @if $pseudo-class != hover {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
+            @if $pseudo-class !=hover {
                 &:#{$pseudo-class} {
                     color: $umn-charcoal;
                 }
@@ -300,7 +306,7 @@ a {
     position: relative;
 }
 
- /// Text alignments
+/// Text alignments
 
 .text-left {
     text-align: left;
@@ -328,7 +334,9 @@ a {
 
 footer {
     a {
-        @each $pseudo-class, $color in $link-pseudo-classes {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
                 color: $umn-charcoal;
             }
@@ -390,9 +398,12 @@ footer {
     }
 
     /// @todo remove any redundant properties
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
-            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
+            font-family: "Open Sans", sans-serif;
             font-size: $size;
             font-weight: bold;
             margin: 1em 0;
@@ -401,7 +412,8 @@ footer {
         }
     }
 
-    @each $heading, $size in $subheading-map-desktop {
+    @each $heading,
+    $size in $subheading-map-desktop {
         #{$heading} {
             small {
                 font-size: $size;
@@ -478,8 +490,11 @@ footer {
         }
     }
 
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
             text-align: left;
         }
     }

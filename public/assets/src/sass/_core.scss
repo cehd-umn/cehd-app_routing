@@ -91,7 +91,12 @@ img {
     }
 }
 
-@each $size in 12, 14, 16, 18, 20, 24 {
+@each $size in 12,
+14,
+16,
+18,
+20,
+24 {
     .margin-bottom-#{ $size } {
         margin-bottom: #{ $size }px;
     }
@@ -223,16 +228,20 @@ img {
 
 ol {
     &.with-headings {
-        counter-reset: li; /* Initiate a counter */;
+        counter-reset: li;
+        /* Initiate a counter */
+        ;
         padding-left: 1.13em;
 
-        > li {
+        >li {
             list-style: none;
             position: relative;
 
             &::before {
-                content: counter(li); /* Use the counter as content */
-                counter-increment: li; /* Increment the counter by 1 */
+                content: counter(li);
+                /* Use the counter as content */
+                counter-increment: li;
+                /* Increment the counter by 1 */
                 left: -2em;
                 margin-right: 8px;
                 padding: 4px;
@@ -249,20 +258,23 @@ ol {
 ///
 /// @requires $heading-map-desktop found in _variables.scss
 /// @todo figure out what margins should be
-@each $heading, $size in $heading-map-mobile {
-    #{$heading}, .#{$heading} {
-        font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+@each $heading,
+$size in $heading-map-mobile {
+
+    #{$heading},
+    .#{$heading} {
+        font-family: "Open Sans", sans-serif;
         font-size: $size;
         margin: .7em 0;
         padding: 0;
 
         li.#{$heading} {
-            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-size: $size;
         }
 
         &.light {
-            font-family: Lato, Verdana, Geneva, sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-weight: normal;
         }
 
@@ -277,7 +289,8 @@ ol {
 
 }
 
-@each $heading, $size in $subheading-map-mobile {
+@each $heading,
+$size in $subheading-map-mobile {
     #{$heading} {
         small {
             font-size: $size;
@@ -285,7 +298,7 @@ ol {
             &.clear {
                 clear: both;
                 display: block;
-                margin-top: if($heading == "h5", .5em, 5px);
+                margin-top: if($heading=="h5", .5em, 5px);
             }
         }
     }
@@ -411,8 +424,10 @@ ol {
 
 a {
     &.button {
-        @each $pseudo-class, $color in $link-pseudo-classes {
-            @if $pseudo-class != hover {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
+            @if $pseudo-class !=hover {
                 &:#{$pseudo-class} {
                     color: $umn-dark-grey-foreground;
                 }
@@ -444,7 +459,7 @@ a {
     position: relative;
 }
 
- /// Text styles
+/// Text styles
 
 .text-left {
     text-align: left;
@@ -478,7 +493,9 @@ a {
 
 footer {
     a {
-        @each $pseudo-class, $color in $link-pseudo-classes {
+
+        @each $pseudo-class,
+        $color in $link-pseudo-classes {
             &:#{$pseudo-class} {
                 color: $umn-dark-grey-foreground;
             }
@@ -539,9 +556,12 @@ footer {
     }
 
     /// @todo remove any redundant properties
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
-            font-family: 'Montserrat', Verdana, Geneva, sans-serif;
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
+            font-family: "Open Sans", sans-serif;
             font-size: $size;
             font-weight: bold;
             margin: 1em 0;
@@ -550,7 +570,8 @@ footer {
         }
     }
 
-    @each $heading, $size in $subheading-map-desktop {
+    @each $heading,
+    $size in $subheading-map-desktop {
         #{$heading} {
             small {
                 font-size: $size;
@@ -636,8 +657,11 @@ footer {
         }
     }
 
-    @each $heading, $size in $heading-map-desktop {
-        #{$heading}, .#{$heading} {
+    @each $heading,
+    $size in $heading-map-desktop {
+
+        #{$heading},
+        .#{$heading} {
             text-align: left;
         }
     }
