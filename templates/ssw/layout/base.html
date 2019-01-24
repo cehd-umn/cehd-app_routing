@@ -70,8 +70,7 @@
         }
 
         nav {
-            margin-top: 40px !important;
-            margin-bottom: 20px !important
+            margin: 1rem auto 2rem !important;
         }
     }
 
@@ -116,37 +115,60 @@
         }
     }
 
+.top-level {
+text-transform: uppercase;
+}
+
+@media (min-width: 769px) {
+.top-level {
+    border-left: 1px solid #000;
+    display: inline-block;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+    width: auto;
+    text-align: justify;
+}
+#top-level-academics {
+    padding-left: 0px !important;
+}
+#top-level-diversity-inclusion {
+    width: 275px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+#top-level-news-events {
+    width: 200px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+}
+
+@media (min-width: 769px) {
+.dropdown-toggle::after {
+    margin-left: 0em;
+}
+}
+
+
+.sub-nav-item-link {
+    text-transform: capitalize;
+}
+
 </style>
 {% endblock %}
 {% block college_wordmark %}
-<a class="dept-text wordmark-svg cehd-wordmark" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">College of Education + Human Development</a>
+<!--<a class="dept-text wordmark-svg cehd-wordmark" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">College of Education + Human Development</a>-->
 {% endblock %}
 {% block section_wordmark %}
 <!-- <a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/SSW-wordmark.svg" alt="SSW wordmark"></a> -->
-<a class="dept-text" style="color:#333;font-size: 150%;" href="{{ config.base_url }}/">School of Social Work</a>{% endblock %}
+<p class="parentunit"><a href="http://cehd.umn.edu/">College of Education & Human Development</a></p>
+<h1 class="sitename"><a href="{{ config.base_url }}/" title="School of Social Work Home" rel="home">School of Social Work</a></h1>
+{% endblock %}
 {% block nav %}
-<div class="section-header-container row" id="nav-container">
-    <div class="container">
-        <button class="nav-toggle">Menu</button>
-        <nav class="inline">
-            <ul class="nav inline">
-                {% for top_level_nav_item in nav_items %}
-                <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
-                    {% if top_level_nav_item.subsections %}
-                    <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
-                        {% for subsection in top_level_nav_item.subsections %}
-                        <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
-                            {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
-                {% endfor %}
-                <li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/"><img src="/assets/images/icons/Home.svg" alt="School of Social Work" /></a></li>
-                <!--<li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/">{%- include "ssw/includes/nav/home-icon.html" -%}</a></li>-->
-            </ul>
-        </nav>
-    </div>
-</div><!-- // row -->
+<div class="section-header-container row">
+    {% include "ssw/includes/nav/main.html" with {"nav_items": nav_items} %}
+    </div><!-- // row -->
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">

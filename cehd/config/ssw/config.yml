@@ -1,7 +1,7 @@
 asset_base: "/dev-ssw"
 autoescape: true
 autoreload: true
-base_url: "/dev-ssw"
+base_url: "/dev-ssw/"
 debug: false
 dept_name: "School of Social Work (SSW)"
 filter_method_names:
