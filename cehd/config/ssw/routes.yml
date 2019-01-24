@@ -50,7 +50,6 @@
   template: ssw/search/index.html
   template_data:
   - section:
-
 /images/:
   template: ssw/images.html
   publish: true
@@ -61,6 +60,36 @@
   publish: true
   template_data:
     - section: alumni
+/centers/:
+  template: ssw/centers/index.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/eloise-and-elliot-kaplan/:
+  template: ssw/centers/eloise-and-elliot-kaplan.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/incommunity/:
+  template: ssw/centers/incommunity.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/oliver-williams/:
+  template: ssw/centers/oliver-williams.html
+  publish: true
+  template_data:
+    - section: center
+/centers/youth-community-lab/:
+  template: ssw/centers/youth-community-lab.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/youth-work-lab/:
+  template: ssw/centers/youth-work-lab.html
+  publish: true
+  template_data:
+    - section: centers
 /academics/:
   template: ssw/academics/index.html
   publish: true
@@ -216,46 +245,46 @@
   publish: true
   template_data:
     - section: people
-/research-and-centers/families-children/:
-  template: ssw/research-and-centers/families-children.html
+/research/families-children/:
+  template: ssw/research/families-children.html
+  publish: true
+  template_data:
+      - section: research
+/research/:
+  template: ssw/research/index.html
+  publish: true
+  template_data:
+      - section: research
+/research/disability-aging/:
+  template: ssw/research/disability-aging.html
+  publish: true
+  template_data:
+      - section: research
+/research/families-children/:
+  template: ssw/research/families-children.html
+  publish: true
+  template_data:
+      - section: research/research/social-policy/:
+/research/mental-health/:
+  template: ssw/research/mental-health.html
+  publish: true
+  template_data:
+      - section: research
+/research/methodology/:
+  template: ssw/research/methodology.html
   publish: true
   template_data:
       - section: research-and-centers
-/research-and-centers/:
-  template: ssw/research-and-centers/index.html
+/research/social-policy/:
+  template: ssw/research/social-policy.html
   publish: true
   template_data:
-      - section: research-and-centers
-/research-and-centers/centers/:
-  template: ssw/research-and-centers/centers.html
+      - section: research
+/research/youth-development/:
+  template: ssw/research/youth-development.html
   publish: true
   template_data:
-      - section: research-and-centers
-/research-and-centers/social-policy/:
-  template: ssw/research-and-centers/social-policy.html
-  publish: true
-  template_data:
-      - section: research-and-centers
-/research-and-centers/mental-health/:
-  template: ssw/research-and-centers/mental-health.html
-  publish: true
-  template_data:
-      - section: research-and-centers
-/research-and-centers/youth-development/:
-  template: ssw/research-and-centers/youth-development.html
-  publish: true
-  template_data:
-      - section: research-and-centers
-/research-and-centers/disability-aging/:
-  template: ssw/research-and-centers/disability-aging.html
-  publish: true
-  template_data:
-      - section: research-and-centers
-/research-and-centers/methodology/:
-  template: ssw/research-and-centers/methodology.html
-  publish: true
-  template_data:
-      - section: research-and-centers
+      - section: research
 /undergraduate/:
   publish: true
   template: ssw/undergraduate/index.html

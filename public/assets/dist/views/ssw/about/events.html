@@ -2,9 +2,15 @@
     <div class="events">
     {% for event in data.events %}
         {% if loop.index0 < data.limit %}
-            <dt class="event-date">{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}</dt>
-            <dd class="event-title">
-                <a href="/events/{{ event.id }}/">{{ event.title }}</a>
+        <dd class="event-title">
+            <a href="/events/{{ event.id }}/">{{ event.title }}</a>
+        </dd>
+            <dt class="event-date">{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }} </dt>
+            <dt class="event-date">{{ event.startTime }} - {{ event.endTime }} </dt>
+            <dd style="margin-left: 0;">
+                <p>
+                  {{ event.shortDescription|safe }}
+                  </p>
             </dd>
         {% endif %}
     {% endfor %}
@@ -13,6 +19,3 @@
 {% else %}
     <p>There are no upcoming events.</p>
 {% endif %}
-<div class="news-more-news-link-container">
-    <p class="text-right"><small><a href="#" class="news-more-news-link">More events</a></small></p>
-</div>

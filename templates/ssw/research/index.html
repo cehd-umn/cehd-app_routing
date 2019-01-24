@@ -1,0 +1,175 @@
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "Research Topics | School of Social Work | UMN" %}
+{% block title %}
+{{ page_title }}{% endblock %}
+{% block extra_css %}
+<style>
+
+  .centered {
+  	max-width: 870px;
+  	margin: 0 auto;
+  	float: none;
+  }
+
+  .module1 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(/dev-ssw/images/DSC04141.jpg);
+    position: relative;
+  }
+  .module2 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(/dev-ssw/images/DSC04141.jpg);
+    position: relative;
+  }
+  .module3 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(/dev-ssw/images/DSC04141.jpg);
+    position: relative;
+  }
+  .module4 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(images/YouthDevelopment.jpg);
+    position: relative;
+  }
+  .module5 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(images/HDA.jpg);
+    position: relative;
+  }
+  .module6 {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background: url(images/ResearchMethodology.jpg);
+    position: relative;
+  }
+
+  .mod h2 {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+  	position: absolute;
+  	bottom: 10px;
+  	padding: 4px 8px;
+  	margin: 0;
+  	font-family: 'Montserrat', sans-serif;
+  	line-height: 25px;
+  	font-size: 1.25em;
+  }
+
+  .module1:hover h2, .module2:hover h2, .module3:hover h2, .module4:hover h2, .module5:hover h2, .module6:hover h2 {
+  	background-color: #444;
+  	color: #fff;
+    opacity: 0.9;
+  }
+
+  </style>
+  {% endblock %}
+
+
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Research</h1>
+    <div class="twothirds feature">
+      <p>Our mission is to conduct research that contributes to
+      knowledge, promotes wellbeing for all citizens, and furthers the
+      common good. Our school includes a diverse group of scholars with
+      wide-ranging applied research interests united by an underlying
+      commitment to social justice.</p>
+      <p>We are especially proud of our contributions to the local
+      community, nation, and the world. Our faculty, doctoral students,
+      and alumni are an active group of professional practitioners and
+      scholars with many who are recognized nationally and
+      internationally for their research.</p>
+    </div>
+    </div>
+    </div>
+
+
+<div class="row">
+    <div class="container">
+
+    <div class="span-4">
+    <a href="#"><div class="module1 mod">
+    <h2 class="figure">Families &amp; Children</h2>
+    </div></a>
+    </div>
+
+    <div class="span-4">
+    	<a href="#"><div class="module2 mod">
+    <h2>Social Policy</h2>
+    </div></a>
+    </div>
+
+    <div class="span-4">
+    	<a href="#"><div class="module1 mod">
+    <h2>Mental Health</h2>
+    </div></a>
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+
+        <div class="span-4">
+        <a href="#"><div class="module1 mod">
+        <h2 class="figure">Youth development</h2>
+        </div></a>
+        </div>
+
+        <div class="span-4">
+        	<a href="#"><div class="module2 mod">
+        <h2>Health, disability <br>and aging</h2>
+        </div></a>
+        </div>
+
+        <div class="span-4">
+        	<a href="#"><div class="module1 mod">
+        <h2>Methods and methodology</h2>
+        </div></a>
+        </div>
+        </div>
+        </div>
+
+    <!-- <div class="row">
+      <div class="container">
+        <div class="third">
+          <h2> <a href="http://www.cehd.umn.edu/ssw/Research/families-children.html">Families and children</a></h2>
+        </div>
+
+        <div class="third ">
+          <h2><a href="http://www.cehd.umn.edu/ssw/Research/social-policy.html">Social policy</a></h2>
+        </div>
+
+        <div class="third ">
+          <h2><a href="http://www.cehd.umn.edu/ssw/Research/mental-health.html">Mental health</a></h2>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="third">
+        <h2> <a href="http://www.cehd.umn.edu/ssw/Research/youth-development.html">Youth development</a></h2>
+      </div>
+
+      <div class="third ">
+        <h2><a href="http://www.cehd.umn.edu/ssw/Research/disability-aging.html">Health, disability <br>and aging</a></h2>
+      </div>
+
+      <div class="third ">
+        <h2><a href="http://www.cehd.umn.edu/ssw/Research/methodology.html">Methods and methodology</a></h2>
+      </div>
+  </div>
+  </div> -->
+    {% endblock %}

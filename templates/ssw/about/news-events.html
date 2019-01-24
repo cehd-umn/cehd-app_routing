@@ -27,7 +27,21 @@
 </div>
     <div class="half">
   <h2>Events</h2>
-
+  <div id="events-container" class="loader-container" aria-live="polite"
+          data-events-app {# this is how the JavaScript below knows we want to pull in a events feed #}
+          data-q="6" {# get this from Link Pro on the events admin site #}
+          data-r="3" {# get this from Link Pro on the events admin site #}
+          data-t="127" {# get this from Link Pro on the events admin site #}
+          data-target-element-selector="#events-container" {# The element selector for the feed html #}
+          data-template-path="/assets/dist/views/ssw/about/" {# The path the the Nunjucks template #}
+          data-template-name="events.html" {# The name of the Nunjucks template #}
+          data-limit="99" {# How many stories to display #}
+      >
+      <div class="loader">
+          <div class="loader-figure "></div>
+          <p class="loader-label">Loading&hellip;</p>
+      </div>
+  </div>
   </div>
 </div>
 </div>
