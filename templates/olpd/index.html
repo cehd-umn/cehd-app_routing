@@ -3,9 +3,7 @@
 {% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "Department of Organizational Leadership, Policy, and Development" %}
-{% block title %}
-Department of Organizational Leadership, Policy, and Development (OLPD)
-{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
     @media (min-width: 769px) {

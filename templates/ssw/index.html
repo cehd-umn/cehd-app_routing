@@ -3,9 +3,7 @@
 {% import "macros/news-feed.html" as newsfeed %}
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "School of Social Work" %}
-{% block title %}
-School of Social Work (SSW)
-{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
   @media (min-width: 769px) {
