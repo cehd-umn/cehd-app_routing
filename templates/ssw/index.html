@@ -40,6 +40,7 @@ School of Social Work (SSW)
       font-family: 'Montserrat', sans-serif;
       font-size: 30px;
       margin: .8em 0;
+      font-weight: 600;
     }
 
     .hero-image {
@@ -115,7 +116,7 @@ School of Social Work (SSW)
 {% endblock %}
 {% block hero_image %}
 <div class="hero-image-container">
-  <img class="hero-image" src="/olpd/images/hp-hero.jpg" alt="OLPD students">
+  <img class="hero-image" src="/dev-ssw/images/SSW-Splash-canoe.jpg" alt="OLPD students">
   <div class="hero-overlay">
     <div class="container">
       <div class="twothird text-center">
@@ -123,7 +124,8 @@ School of Social Work (SSW)
           Class</p>
       </div>
       <div class="third">
-        <p><a href="http://www.cehd.umn.edu/ssw/News/Articles/Experiential-Learning.html" class="to-upper button clear">Read more</a></p>
+        <p><a href="http://www.cehd.umn.edu/ssw/News/Articles/Experiential-Learning.html" class="to-upper button clear">Read
+            more</a></p>
       </div>
     </div>
   </div>
@@ -134,17 +136,23 @@ School of Social Work (SSW)
   <div class="container">
     <h1 class="accessible-no-display">School of Social Work</h1>
 
-  <div class="feature twothirds">
-  <h1>Prepare to Build a Better World</h1>
-    <p>At the School of Social Work, we practice what we teach: leadership, scholarship, social justice, and community engagement.</p>
+    <div class="feature twothirds">
+      <h1>Prepare to Build a Better World</h1>
+      <p>At the School of Social Work, we practice what we teach: leadership, scholarship, social justice, and
+        community engagement.</p>
 
-    <p>We celebrated our 100th anniversary in 2017. <a href="http://www.cehd.umn.edu/ssw/100th/default.html">See where we've been, and join us for our next century.</a></p>
+      <p>We celebrated our 100th anniversary in 2017. <a href="http://www.cehd.umn.edu/ssw/100th/default.html">See
+          where we've been, and join us for our next century.</a></p>
 
-    <h2>Explore Our Programs</h2>
-    <p>Our Social Work PhD and Master of Social Work programs promote the knowledge, skills and values of the social work profession. Our Youth Development Leadership M.Ed. program supports an expanded understanding of young people, in the United
-      States and internationally. Our undergraduate programs — youth studies, family violence prevention, and social justice — support and promote ways of valuing, living, and working in the world that further social change and the common good.</p>
+      <h2>Explore Our Programs</h2>
+      <p>Our Social Work PhD and Master of Social Work programs promote the knowledge, skills and values of the social
+        work profession. Our Youth Development Leadership M.Ed. program supports an expanded understanding of young
+        people, in the United
+        States and internationally. Our undergraduate programs — youth studies, family violence prevention, and social
+        justice — support and promote ways of valuing, living, and working in the world that further social change and
+        the common good.</p>
+    </div>
   </div>
-</div>
 </div>
 
 <div class="row margin-top-1">
@@ -166,52 +174,50 @@ School of Social Work (SSW)
     <div class="row">
       <div class="third">
         <h2>Leaders in research</h2>
-        <p>The School of Social Work is an integral part of a world-class research university. Our academic programs are unique in Minnesota, preparing a diverse student body to be research-savvy professionals and scholars, and providing research and engagement with a local-to-global impact. <a href="#">The research productivity of our faculty was ranked 20th out of 76 U.S. social work doctoral programs in a recent study</a>.</p>
+        <p>The School of Social Work is an integral part of a world-class research university. Our academic programs
+          are unique in Minnesota, preparing a diverse student body to be research-savvy professionals and scholars,
+          and providing research and engagement with a local-to-global impact. <a href="#">The research productivity of
+            our faculty was ranked 20th out of 76 U.S. social work doctoral programs in a recent study</a>.</p>
 
         <p>Explore our research:</p>
         <ul>
-        <li><a href="research/families-children.html">Families and Children</a></li>
-        <li><a href="research/disability-aging.html">Health, Disability, and Aging</a></li>
-        <li><a href="research/mental-health.html">Mental Health</a></li>
-        <li><a href="research/methodology.html">Methods and Methodology</a></li>
-        <li><a href="research/social-policy.html">Social Policy</a></li>
-        <li><a href="research/youth-development.html">Youth Development</a></li>
+          <li><a href="research/families-children.html">Families and Children</a></li>
+          <li><a href="research/disability-aging.html">Health, Disability, and Aging</a></li>
+          <li><a href="research/mental-health.html">Mental Health</a></li>
+          <li><a href="research/methodology.html">Methods and Methodology</a></li>
+          <li><a href="research/social-policy.html">Social Policy</a></li>
+          <li><a href="research/youth-development.html">Youth Development</a></li>
         </ul>
       </div>
       <div class="third">
         <h2>Recent news</h2>
-        <div id="news-container" class="loader-container" aria-live="polite"
-        data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
-        data-base-url="http://news.cehd.umn.edu/" {# The url of the website with an RSS feed #}
-        data-feed-path="category/departments/social-work/feed" {# The path for the feed at the site above #}
-        data-target-element-selector="#news-container" {# The element selector for the feed html #}
-        data-template-path="/assets/dist/views/ssw/newsfeed/" {# The path the the Nunjucks template #}
-        data-template-name="index.html" {# The name of the Nunjucks template #}
-        data-limit="3" {# How many stories to display #}
-        >
-        <div class="loader">
+        <div id="news-container" class="loader-container" aria-live="polite" data-news-app {# this is how the
+          JavaScript below knows we want to pull in a news feed #} data-base-url="http://news.cehd.umn.edu/" {# The url
+          of the website with an RSS feed #} data-feed-path="category/departments/social-work/feed" {# The path for the
+          feed at the site above #} data-target-element-selector="#news-container" {# The element selector for the feed
+          html #} data-template-path="/assets/dist/views/ssw/newsfeed/" {# The path the the Nunjucks template #}
+          data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="3" {# How many stories to
+          display #}>
+          <div class="loader">
             <div class="loader-figure "></div>
             <p class="loader-label">Loading&hellip;</p>
+          </div>
         </div>
-    </div>
       </div>
       <div class="third">
         <h2>Upcoming events</h2>
-        <div id="events-container" class="loader-container" aria-live="polite"
-        data-events-app {# this is how the JavaScript below knows we want to pull in a events feed #}
-        data-q="6" {# get this from Link Pro on the events admin site #}
-        data-r="37" {# get this from Link Pro on the events admin site #}
-        data-t="127" {# get this from Link Pro on the events admin site #}
-        data-target-element-selector="#events-container" {# The element selector for the feed html #}
-        data-template-path="/assets/dist/views/ssw/events/" {# The path the the Nunjucks template #}
-        data-template-name="home.html" {# The name of the Nunjucks template #}
-        data-limit="3" {# How many stories to display #}
-    >
-    <div class="loader">
-        <div class="loader-figure "></div>
-        <p class="loader-label">Loading&hellip;</p>
-    </div>
-</div>
+        <div id="events-container" class="loader-container" aria-live="polite" data-events-app {# this is how the
+          JavaScript below knows we want to pull in a events feed #} data-q="6" {# get this from Link Pro on the events
+          admin site #} data-r="37" {# get this from Link Pro on the events admin site #} data-t="127" {# get this from
+          Link Pro on the events admin site #} data-target-element-selector="#events-container" {# The element selector
+          for the feed html #} data-template-path="/assets/dist/views/ssw/events/" {# The path the the Nunjucks
+          template #} data-template-name="home.html" {# The name of the Nunjucks template #} data-limit="3" {# How many
+          stories to display #}>
+          <div class="loader">
+            <div class="loader-figure "></div>
+            <p class="loader-label">Loading&hellip;</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -226,10 +232,12 @@ School of Social Work (SSW)
 
         <p class="text-center">For general questions about our department, contact:</p>
         <div class="third">
-          <p><strong>Undergraduate studies</strong><br /> <a href="http://backstage.cehd.umn.edu/dev-ssw/people/pavlo002/">Cindy Pavlowski</a><br />Senior Academic Advisor <br />612-624-4290  <br /><a href="mailto:pavlo002@umn.edu">pavlo002@umn.edu</a></p>
+          <p><strong>Undergraduate studies</strong><br /> <a href="http://backstage.cehd.umn.edu/dev-ssw/people/pavlo002/">Cindy
+              Pavlowski</a><br />Senior Academic Advisor <br />612-624-4290 <br /><a href="mailto:pavlo002@umn.edu">pavlo002@umn.edu</a></p>
         </div>
         <div class="third">
-          <p><strong>Graduate studies</strong><br /> <a href="http://backstage.cehd.umn.edu/dev-ssw/people/mbcase/">MacKenzie Case</a> <br />Graduate Program Coordinator <br />612-624-4258  <br /> <a href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
+          <p><strong>Graduate studies</strong><br /> <a href="http://backstage.cehd.umn.edu/dev-ssw/people/mbcase/">MacKenzie
+              Case</a> <br />Graduate Program Coordinator <br />612-624-4258 <br /> <a href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
         </div>
         <div class="third">
           <p><strong>Main office</strong><br /> 612-625-1220</p>
@@ -242,55 +250,61 @@ School of Social Work (SSW)
 </div>
 
 </div>
-  <div class="container margin-top-2">
-<div class="half"><div class="cognito">
-<script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
-<script>Cognito.load("forms", { id: "88" });</script>
-</div></div>
+<div class="container margin-top-2">
+  <div class="half">
+    <div class="cognito">
+      <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
+      <script>
+        Cognito.load("forms", {
+          id: "88"
+        });
+      </script>
+    </div>
+  </div>
 
-<div class="half">
+  <div class="half">
 
-<h3>Peters Hall hours:</h3>
-<dl>
-<dt>School year</dt>
-<dd>Monday–Friday: 7:00 a.m. to 9:30 p.m.<br>
-  Saturday: 7:00 a.m. to 6:00 p.m.<br>
-  Sunday: Closed</dd>
-
-
-
-<dt>Winter and spring breaks</dt>
-<dd>Monday–Friday: 6:30 a.m. to 5:30 p.m.<br>
-  Saturday: Closed<br>
-  Sunday: Closed</dd>
-<dt>Summer</dt>
-<dd>Monday–Friday: 6:30 a.m. to 6:30 p.m.<br>
-Saturday: Closed<br>
-  Sunday: Closed
-</dd>
-
-</dl>
+    <h3>Peters Hall hours:</h3>
+    <dl>
+      <dt>School year</dt>
+      <dd>Monday–Friday: 7:00 a.m. to 9:30 p.m.<br>
+        Saturday: 7:00 a.m. to 6:00 p.m.<br>
+        Sunday: Closed</dd>
 
 
-<h4>105 Peters Hall, front desk hours:</h4>
-<dl>
-<dt>School year</dt>
-  <dd>Monday-Friday: 8:00 a.m. to 5:30 p.m.<br>
-    Saturday: 7:45 a.m. to 3:15 p.m.<br>
-    Sunday: Closed</dd>
-<dt>Summer</dt>
-<dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
-  Saturday: Closed<br>
-  Sunday: Closed</dd>
 
-<dt>Winter and spring breaks</dt>
-  <dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
-  Saturday: Closed<br>
-  Sunday: Closed</dd>
+      <dt>Winter and spring breaks</dt>
+      <dd>Monday–Friday: 6:30 a.m. to 5:30 p.m.<br>
+        Saturday: Closed<br>
+        Sunday: Closed</dd>
+      <dt>Summer</dt>
+      <dd>Monday–Friday: 6:30 a.m. to 6:30 p.m.<br>
+        Saturday: Closed<br>
+        Sunday: Closed
+      </dd>
+
+    </dl>
 
 
-</dl>
-</div>
+    <h4>105 Peters Hall, front desk hours:</h4>
+    <dl>
+      <dt>School year</dt>
+      <dd>Monday-Friday: 8:00 a.m. to 5:30 p.m.<br>
+        Saturday: 7:45 a.m. to 3:15 p.m.<br>
+        Sunday: Closed</dd>
+      <dt>Summer</dt>
+      <dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
+        Saturday: Closed<br>
+        Sunday: Closed</dd>
+
+      <dt>Winter and spring breaks</dt>
+      <dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
+        Saturday: Closed<br>
+        Sunday: Closed</dd>
+
+
+    </dl>
+  </div>
 </div>
 
 {% endblock %}
