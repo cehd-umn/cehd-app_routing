@@ -197,6 +197,10 @@ nav a {
     .about-subsection-list-1 {
         left: -30px;
     }
+
+    .home-name {
+        display: none !important;
+    }
 }
 
 
@@ -209,6 +213,10 @@ nav a {
         margin-bottom: 15px;
         margin-left: 20px;
         text-transform: uppercase;
+    }
+
+    .home-name {
+        margin-top: -20px;
     }
 
     .dropdown-menu-wrapper {
@@ -226,8 +234,17 @@ nav a {
     ul.nav li {
         padding: 8px 0 0px 15px;
     }
+
+    .home-link {
+        display: none;
+    }
 }
 
 .dropdown-menu-6 {
     width: auto;
+}
+
+
+ul.nav li {
+    padding: 0px 0 0px 15px;
 }
