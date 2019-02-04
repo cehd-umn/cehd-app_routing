@@ -20,7 +20,7 @@
                 {%- if top_level_item.subsections -%}
                 <div class="dropdown-menu-wrapper dropdown-menu-{{ loop.index }}">
                     {%- for subsection in top_level_item.subsections -%}
-                    <div class="ul-container nav-items{% if loop.first %} first {% endif %}{% if loop.last %} lastsubnav {% endif %}">
+                    <div class="ul-container nav-items{% if loop.first %} first firstsubnav{% endif %}{% if loop.last %} lastsubnav {% endif %}">
                         <ul class="margin-top nav">
                             <li class="sub-nav-item">
                                 {%- if loop.first -%}
@@ -52,7 +52,7 @@
                         </ul><!-- // ul.margin-top.nav -->
                     </div><!-- // .ul-container -->
                     {%- endfor -%}{# end for subsection in top_level_item.subsections #}
-                    
+
                 </div><!-- // dropdown-menu-wrapper -->
                 {%- endif -%}{# end if top_level_item.subsections #}
             </li><!-- // top-level nav item -->
