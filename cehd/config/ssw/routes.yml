@@ -60,13 +60,18 @@
   publish: true
   template_data:
     - section: alumni
-/centers/:
-  template: ssw/centers/index.html
+/articles/experiential-learning/:
+  template: ssw/articles/experiential-learning.html
   publish: true
   template_data:
-    - section: centers
-/centers/eloise-and-elliot-kaplan/:
-  template: ssw/centers/eloise-and-elliot-kaplan.html
+    - section: articles
+/articles/somali-mental-health/:
+  template: ssw/articles/somali-mental-health.html
+  publish: true
+  template_data:
+    - section: articles
+/centers/:
+  template: ssw/centers/index.html
   publish: true
   template_data:
     - section: centers
@@ -75,13 +80,23 @@
   publish: true
   template_data:
     - section: centers
-/centers/oliver-williams/:
-  template: ssw/centers/oliver-williams.html
+/centers/mincava/:
+  template: ssw/centers/mincava/index.html
   publish: true
   template_data:
-    - section: center
-/centers/youth-community-lab/:
-  template: ssw/centers/youth-community-lab.html
+    - section: centers
+/centers/mincava/completed-research/:
+  template: ssw/centers/mincava/completed-research.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/mincava/current-research/:
+  template: ssw/centers/mincava/current-research.html
+  publish: true
+  template_data:
+    - section: centers
+/centers/mincava/history/:
+  template: ssw/centers/mincava/history.html
   publish: true
   template_data:
     - section: centers
@@ -130,8 +145,8 @@
   template: ssw/graduate/transfer-students.html
   template_data:
     - section: graduate
-/graduate/meet-our-phd-students/:
-  template: ssw/graduate/meet-our-phd-students.html
+/graduate/current-phd-students/:
+  template: ssw/graduate/current-phd-students.html
   publish: true
   template_data:
       - section: graduate
@@ -145,8 +160,38 @@
   publish: true
   template_data:
       - section: graduate
+/graduate/msw-field-fair/:
+  template: ssw/graduate/msw-field-fair.html
+  publish: true
+  template_data:
+      - section: graduate
 /graduate/msw-field-instruction/:
   template: ssw/graduate/msw-field-instruction.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/msw-meet/:
+  template: ssw/graduate/msw-meet.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/msw-mission/:
+  template: ssw/graduate/msw-mission.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/msw-programs/:
+  template: ssw/graduate/msw-programs.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/msw-requirements/:
+  template: ssw/graduate/msw-requirements.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/phd-candidates/:
+  template: ssw/graduate/phd-candidates.html
   publish: true
   template_data:
       - section: graduate
@@ -155,23 +200,28 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/kente-circle-field-placement-fellowship/:
-  template: ssw/graduate/kente-circle-field-placement-fellowship.html
+/graduate/kente-circle-placement-fellowship/:
+  template: ssw/graduate/kente-circle-placement-fellowship.html
   publish: true
   template_data:
       - section: graduate
-/graduate/john-a-wallace-fellowship/:
-  template: ssw/graduate/john-a-wallace-fellowship.html
+/graduate/john-wallace-fellowship/:
+  template: ssw/graduate/john-wallace-fellowship.html
   publish: true
   template_data:
       - section: graduate
-/graduate/diversity-social-work-advancement-program-dswap/:
-  template: ssw/graduate/diversity-social-work-advancement-program-dswap.html
+/graduate/dissertation-titles/:
+  template: ssw/graduate/dissertation-titles.html
   publish: true
   template_data:
       - section: graduate
-/graduate/eloise-and-elliot-kaplan/:
-  template: ssw/graduate/eloise-and-elliot-kaplan.html
+/graduate/diversity-social-work-advancement-program/:
+  template: ssw/graduate/diversity-social-work-advancement-program.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/eloise-elliot-kaplan/:
+  template: ssw/graduate/eloise-elliot-kaplan.html
   publish: true
   template_data:
       - section: graduate
@@ -185,23 +235,18 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/med-in-youth-development-leadership/:
-  template: ssw/graduate/med-in-youth-development-leadership.html
+/graduate/youth-development-leadership/:
+  template: ssw/graduate/youth-development-leadership.html
   publish: true
   template_data:
       - section: graduate
-/graduate/med-in-youth-development-leadership-how-to-apply/:
-  template: ssw/graduate/med-in-youth-development-leadership-how-to-apply.html
+/graduate/youth-development-leadership-how-to-apply/:
+  template: ssw/graduate/youth-development-leadership-how-to-apply.html
   publish: true
   template_data:
       - section: graduate
 /graduate/careers-of-social-work-phd-graduates/:
   template: ssw/graduate/careers-of-social-work-phd-graduates.html
-  publish: true
-  template_data:
-      - section: graduate
-/graduate/social-work-phd-dissertation-titles/:
-  template: ssw/graduate/social-work-phd-dissertation-titles.html
   publish: true
   template_data:
       - section: graduate
@@ -220,13 +265,13 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/job-search-opportunities/:
-  template: ssw/graduate/job-search-opportunities.html
+/graduate/job-search/:
+  template: ssw/graduate/job-search.html
   publish: true
   template_data:
       - section: graduate
-/graduate/graduate-aid-funding/:
-  template: ssw/graduate/graduate-aid-funding.html
+/graduate/funding/:
+  template: ssw/graduate/funding.html
   publish: true
   template_data:
       - section: graduate
@@ -235,16 +280,16 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/graduate-studies/:
-  template: ssw/graduate/graduate-studies.html
-  publish: true
-  template_data:
-      - section: graduate
 /people/:
   template: ssw/people/index.html
   publish: true
   template_data:
     - section: people
+/research-centers/:
+  template: ssw/research-centers.html
+  publish: true
+  template_data:
+    - section: research-centers
 /research/families-children/:
   template: ssw/research/families-children.html
   publish: true
@@ -295,13 +340,8 @@
   publish: true
   template_data:
       - section: undergraduate
-/undergraduate/undergraduate-minors/:
-  template: ssw/undergraduate/undergraduate-minors.html
-  publish: true
-  template_data:
-      - section: undergraduate
-/undergraduate/undergraduate-studies/:
-  template: ssw/undergraduate/undergraduate-studies.html
+/undergraduate/minors/:
+  template: ssw/undergraduate/minors.html
   publish: true
   template_data:
       - section: undergraduate

@@ -1,26 +1,36 @@
 ---
 -
   - heading: Robert Holmes Beck Chair of Ideas in Education
-    name: Karen Seashore
+    name: Muhammad Khalifa
     titles:
-      - Regents Professor
-    department: Department of Organizational Leadership, Policy, and Development
+      - Associate Professor
+    department: Department of Organizational Leadership and Policy
     term: 7/01/14-6/30/17
     urls:
-      headshot: /assets/images/giving/appointments/SeashoreK-2016.jpg
-      profile: http://www.cehd.umn.edu/olpd/people/faculty/seashore.asp
+      headshot: /assets/images/giving/appointments/KhalifaM-2015.jpg
+      profile: http://www.cehd.umn.edu/people/khalifam/
       department: http://www.cehd.umn.edu/olpd/
-  - heading: Emma M. Birkmaier Professor in Educational Leadership
-    name: Cynthia Lewis
+  - heading: Robert Holmes Beck Chair of Ideas in Education
+    name: Jean Quam
     titles:
-      - Department Chair
-    department: Department of Curriculum and Instruction
+      - Dean
+    department: School of Social Work
+    term: 7/01/14-6/30/17
+    urls:
+      headshot: /assets/images/headshots/QuamJ-2015.jpg
+      profile: http://www.cehd.umn.edu/people/jquam/
+      department: http://www.cehd.umn.edu/ssw/
+-
+  - heading: Emma M. Birkmaier Professor in Educational Leadership
+    name: Frank Symons
+    titles:
+      - Associate Dean for Research and Policy
+    department: Department of Education Psychology
     term: 7/01/15-6/30/18
     urls:
-      headshot: /assets/images/giving/appointments/LewisC-2016.jpg
-      profile: http://www.cehd.umn.edu/ci/people/profiles/lewis.html
-      department: http://www.cehd.umn.edu/ci/
--
+      headshot: /assets/images/giving/appointments/SymonsF-2005.jpg
+      profile: http://www.cehd.umn.edu/edpsych/people/symon007/
+      department: http://www.cehd.umn.edu/edpsy/
   - heading: Guy Bond Chair in Reading
     name: Deborah Dillon
     titles:
@@ -29,19 +39,19 @@
     term: 7/01/15-6/30/18
     urls:
       headshot: /assets/images/giving/appointments/DillonD-2005.jpg
-      profile: http://www.cehd.umn.edu/ci/People/profiles/dillon.html
+      profile: http://www.cehd.umn.edu/people/dillon/
       department: http://www.cehd.umn.edu/ci/
+-
   - heading: Guy Bond Chair in Reading
     name: Panayiota Kendeou
     titles:
-      - Associate Professor
+      - Associate Professor, Director of graduate studies
     department: Department of Educational Psychology
     term: 7/01/16-6/30/19
     urls:
       headshot: /assets/images/giving/appointments/kendeou_2.jpeg
       profile: http://www.cehd.umn.edu/edpsych/people/kend0040/
       department: http://www.cehd.umn.edu/edpsych/
--
   - heading: Campbell Leadership Chair in Education and Human Development
     name: Michael Rodriguez
     titles:
@@ -52,16 +62,6 @@
       headshot: /assets/images/giving/appointments/RodriguezM-2003.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/mcrdz/
       department: http://www.cehd.umn.edu/edpsych/
-  - heading: Campbell Chair for Innovation in Teacher Development
-    name: Mistilina Sato
-    titles:
-      - Professor
-    department: Department of Curriculum and Instruction
-    term: 7/01/15-6/30/18
-    urls:
-      headshot: /assets/images/giving/appointments/SatoM-2007.jpg
-      profile: http://www.cehd.umn.edu/ci/people/profiles/sato.html
-      department: http://www.cehd.umn.edu/ci/
 -
   - heading: Gamble-Skogmo Land Grant Chair in Child Welfare and Youth Policy
     name: Wendy Haight
@@ -92,18 +92,18 @@
     term: 7/01/15-6/30/18
     urls:
       headshot: /assets/images/giving/appointments/DoeringA-2014.jpg
-      profile: http://www.cehd.umn.edu/ci/people/profiles/doering.html
+      profile: http://www.cehd.umn.edu/people/adoering/
       department: http://www.cehd.umn.edu/ci/
   - heading: Irving Harris Professor of Child Development
     name: Ann Masten
     titles:
       - Regents Professor
       - Distinguished McKnight University Professor
-    department: Department of Curriculum and Instruction
+    department: Institute of Child Development
     term: 7/01/15-6/30/18
     urls:
       headshot: /assets/images/giving/appointments/MastenA-Pref.jpg
-      profile: http://www.cehd.umn.edu/icd/people/faculty/masten.html
+      profile: http://icd.umn.edu/people/amasten/
       department: http://www.cehd.umn.edu/icd/
 -
   - heading: William Harris Professor of Child Development and Psychiatry
@@ -116,6 +116,17 @@
       headshot: /assets/images/giving/appointments/CicchettiD-Pref.jpg
       profile: http://www.cehd.umn.edu/icd/people/faculty/cicchetti.html
       department: http://www.cehd.umn.edu/ci/
+  - heading: Leon-Taylor Professorship in Exercise Science and Health Enhancement
+    name: Donald R. Dengel
+    titles:
+      - Professor
+    department: Department of Kinesiology
+    term: 7/01/15-6/30/18
+    urls:
+      headshot: /assets/images/giving/appointments/DengelD-2018.jpg
+      profile: http://www.cehd.umn.edu/kin/people/denge001.html
+      department: http://www.cehd.umn.edu/kin/
+-
   - heading: The Lindahl Leadership Professor
     name: Abigail Gewirtz
     titles:
@@ -126,8 +137,7 @@
       headshot: /assets/images/giving/appointments/GewirtzA-2007.jpg
       profile: http://www.cehd.umn.edu/fsos/people/faculty/gewirtza.asp
       department: http://www.cehd.umn.edu/fsos/
--
-  - heading: The Nancy and John Lindahl Leadership Professor
+  - heading: Nancy M. and John E. Lindahl Professor for Excellence in Teaching
     name: Philip David Zelazo
     titles:
       - Professor
@@ -137,6 +147,7 @@
       headshot: /assets/images/giving/appointments/ZelazoP-Pref.jpg
       profile: http://www.cehd.umn.edu/people/zelazo/
       department: http://www.cehd.umn.edu/icd/
+-
   - heading: Dorothy McNeill and Elbridge Ashcraft Tucker Chair for Women in Exercise Science and Sport
     name: Mary Jo Kane
     titles:
@@ -147,7 +158,6 @@
       headshot: /assets/images/giving/appointments/KaneMJ-2005.jpg
       profile: http://www.cehd.umn.edu/kin/people/maryjo.html
       department: http://www.cehd.umn.edu/kin/
--
   - heading: John W. and Nancy E. Peyton Faculty Fellow in Child and Adolescent Wellbeing
     name: Clayton Cook
     titles:
@@ -158,6 +168,7 @@
       headshot: /assets/images/giving/appointments/CookC_2015.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/crcook/
       department: http://www.cehd.umn.edu/edpsych/
+-
   - heading: Sidney and Marguerite Henry Professor of Children's and Young Adult Literature
     name: Marek Oziewicz
     titles:
@@ -166,8 +177,18 @@
     term: 7/01/16-6/30/19
     urls:
       headshot: /assets/images/giving/appointments/OziewiczMarek-2014.jpg
-      profile: http://www.cehd.umn.edu/ci/people/profiles/oziewicz.html
+      profile: http://www.cehd.umn.edu/people/mco/
       department: http://www.cehd.umn.edu/ci/
+  - heading: Rodney S. Wallace Professor for the Advancement of Teaching and Learning
+    name: Jennifer McComas
+    titles:
+      - Professor
+    department: Department of Educational Psychology
+    term: 7/01/15-6/30/18
+    urls:
+      headshot: /assets/images/giving/appointments/McComasJ-2017.jpg
+      profile: http://www.cehd.umn.edu/edpsych/people/jmccomas/
+      department: http://www.cehd.umn.edu/edpsy/
 -
   - heading: Rodney S. Wallace Professor for the Advancement of Teaching and Learning
     name: Bic Ngo
@@ -177,7 +198,7 @@
     term: 7/01/15-6/30/18
     urls:
       headshot: /assets/images/giving/appointments/NgoB-2007.jpg
-      profile: http://cehd.cehd.umn.edu/ci/people/profiles/ngo.html
+      profile: http://www.cehd.umn.edu/people/bcngo/
       department: http://www.cehd.umn.edu/ci/
   - heading: Yackel Professor of Educational Assessment and Measurement
     name: Theodore Christ
@@ -200,3 +221,4 @@
       headshot: /assets/images/giving/appointments/DavisonM-2004.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/mld/
       department: http://www.cehd.umn.edu/edpsych/
+-
