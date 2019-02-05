@@ -7,9 +7,9 @@
         href: "/undergraduate/"
         subsections:
           - - name: Undergraduate Studies
-              href: "/undergraduate/undergraduate-studies/"
+              href: "/undergraduate/"
             - name: Undergraduate Minors
-              href: "/undergraduate/undergraduate-minors/"
+              href: "/undergraduate/minors/"
             - name: Youth Studies Major
               href: "/undergraduate/youth-studies-major/"
     - - name: GRADUATE
@@ -20,7 +20,7 @@
             - name: Master of Social Work
               href: "/graduate/master-of-social-work/"
             - name: MEd in Youth Development Leadership
-              href: "/graduate/med-in-youth-development-leadership/"
+              href: "/graduate/youth-development-leadership/"
 - name: Research & Centers
   href: "/research-centers/"
   section: null
