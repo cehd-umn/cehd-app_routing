@@ -67,6 +67,7 @@ $twig->addGlobal('inline_nav_styles', $inline_nav_styles);
 $container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);
 $container["redirects"] = new Dict($redirects);
+$container["redirects_camelcase"] = new Dict($redirects_camelcase);
 $container["redirect_prepend"] = $app_config["redirect_prepend"];
 
 $container["notFoundHandler"] = function ($container)
@@ -93,3 +94,81 @@ foreach ($routes as $route => $route_info) {
 // $app->get("/data/people/", SSWApp::class . ":personExtraData");
  $app->get("/people/{internet_id}/", SSWApp::class . ":personPage");
 // $app->get("/search/", SSWApp::class . ":searchPage");
+
+// A handful of hard-coded redirects. These are special cases where we want
+// possessive catching of all sub directory and files
+$app->get('/Undergraduate/YOST.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/undergraduate/youth-studies-major/');
+});
+$app->get('/Graduate/phd-apply.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/apply-phd/');
+});
+$app->get('/Graduate/phd-jobs.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/careers-of-social-work-phd-graduates/');
+});
+$app->get('/Graduate/DSWAP.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/diversity-social-work-advancement-program/');
+});
+$app->get('/Graduate/KaplanTBI.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/eloise-elliot-kaplan/');
+});
+$app->get('/Graduate/phd-FAQ.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/faq/');
+});
+$app->get('/Graduate/Wallace.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/john-wallace-fellowship/');
+});
+$app->get('/Graduate/Kente.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/kente-circle-placement-fellowship/');
+});
+$app->get('/Graduate/msw-apply.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/master-of-social-work-how-to-apply/');
+});
+$app->get('/Graduate/msw.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/master-of-social-work/');
+});
+$app->get('/Graduate/ydl-apply.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/youth-development-leadership-how-to-apply/');
+});
+$app->get('/Graduate/ydl.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/youth-development-leadership/');
+});
+$app->get('/Graduate/phd-currentstudents.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/current-phd-students/');
+});
+$app->get('/Graduate/msw-field.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/msw-field-instruction/');
+});
+$app->get('/Graduate/nds.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/non-degree-seeking-students/');
+});
+$app->get('/Graduate/phd.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/phd-in-social-work/');
+});
+$app->get('/Graduate/dissertations.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/dissertation-titles/');
+});
+$app->get('/Graduate/TitleIV-E.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/title-iv-e-child-welfare-training-fellowship/');
+});
+$app->get('/Graduate/msw-transfer.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/transfer-students/');
+});
+$app->get('/Graduate/completed.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/centers/mincava/completed-research/');
+});
+$app->get('/MINCAVA/current.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/centers/mincava/current-research');
+});
+$app->get('/MINCAVA/history.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/centers/mincava/history/');
+});
+$app->get('/News/Articles/Experiential-Learning.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/articles/experiential-learning/');
+});
+$app->get('/News/Articles/Somali-Mental-Health.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/articles/somali-mental-health/');
+});
+$app->get('/Graduate/msw-fieldfair.html', function ($req, $res, $args) {
+  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/msw-field-fair/');
+});
