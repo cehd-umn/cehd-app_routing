@@ -67,6 +67,7 @@ $twig->addGlobal('inline_nav_styles', $inline_nav_styles);
 $container['view'] = $helpers->configureTwigForSlim($container, $view, $app_config["base_url"]);
 $container["routes"] = new Dict($routes);
 $container["redirects"] = new Dict($redirects);
+$container["redirects_camelcase"] = new Dict($redirects_camelcase);
 $container["redirect_prepend"] = $app_config["redirect_prepend"];
 
 $container["notFoundHandler"] = function ($container)
@@ -93,7 +94,6 @@ foreach ($routes as $route => $route_info) {
 // $app->get("/data/people/", SSWApp::class . ":personExtraData");
  $app->get("/people/{internet_id}/", SSWApp::class . ":personPage");
 // $app->get("/search/", SSWApp::class . ":searchPage");
-
 
 // A handful of hard-coded redirects. These are special cases where we want
 // possessive catching of all sub directory and files
