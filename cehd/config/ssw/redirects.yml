@@ -1,9 +1,16 @@
 ###
-# These are in `old-url/: /olpd/new-url/` format
-# To redirect to the OLPD home page, use `""`
+# These are in `old-url/: /ssw/new-url/` format
+# To redirect to the SSW home page, use `""`
 #
-# NOTE: `/olpd/` is assumed and should be left out of the old url and new new
+# NOTE: `/ssw/` is assumed and should be left out of the old url and new new
 #
 ###
 ---
 default.html: ""
+/ssw/Undergraduate/YOST.html: /ssw/undergraduate/youth-studies-major/
+/ssw/Graduate/phd-apply.html: /ssw/graduate/apply-phd/
+/ssw/Graduate/phd-jobs.html: /ssw/graduate/careers-of-social-work-phd-graduates/
+/ssw/Graduate/DSWAP.html: /ssw/graduate/diversity-social-work-advancement-program/
+/ssw/Graduate/KaplanTBI.html: /ssw/graduate/eloise-elliot-kaplan/
+/ssw/Graduate/phd-FAQ.html: /ssw/graduate/faq/
+
