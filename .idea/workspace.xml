@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/cehd/config/ssw/redirects_camelcase.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cehd/config/ssw/redirects.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/ssw/redirects.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ssw/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ssw/routes.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/assets/dist/js/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +21,7 @@
     <session id="1705111694">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.29" value="1" />
@@ -38,9 +41,9 @@
           <entry key="html" value="43" />
           <entry key="jpg" value="1" />
           <entry key="js" value="1" />
-          <entry key="php" value="12" />
+          <entry key="php" value="19" />
           <entry key="scss" value="4" />
-          <entry key="yml" value="26" />
+          <entry key="yml" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -49,38 +52,72 @@
           <entry key="HTML" value="43" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="12" />
+          <entry key="PHP" value="19" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="4" />
-          <entry key="YAML" value="26" />
+          <entry key="YAML" value="38" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="211" />
-          <entry key="php" value="4" />
+          <entry key="php" value="9" />
           <entry key="scss" value="123" />
-          <entry key="yml" value="133" />
+          <entry key="yml" value="182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="211" />
-          <entry key="PHP" value="4" />
+          <entry key="PHP" value="9" />
           <entry key="SCSS" value="123" />
-          <entry key="YAML" value="133" />
+          <entry key="YAML" value="182" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cehd/config/ssw/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/redirects_camelcase.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1394" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/redirects.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1789">
+              <caret line="16" column="58" selection-end-line="16" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cehd/config/ssw/redirects.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="150">
+              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cehd/config/ssw/redirects_camelcase.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -116,6 +153,9 @@
       <find>msw-requirements/</find>
       <find>youth-studies</find>
       <find>msw-field-instruction</find>
+      <find>redir</find>
+      <find>red</find>
+      <find>$redirects_camelcase</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,14 +200,15 @@
         <option value="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" />
         <option value="$PROJECT_DIR$/public/assets/src/sass/ssw.scss" />
         <option value="$PROJECT_DIR$/templates/ssw/index.html" />
-        <option value="$PROJECT_DIR$/routes/ssw/routes.php" />
         <option value="$PROJECT_DIR$/cehd/config/ssw/config.yml" />
         <option value="$PROJECT_DIR$/templates/ssw/about/index.html" />
         <option value="$PROJECT_DIR$/templates/ssw/undergraduate/index.html" />
         <option value="$PROJECT_DIR$/templates/ssw/research-centers.html" />
         <option value="$PROJECT_DIR$/public/web.config" />
         <option value="$PROJECT_DIR$/templates/ssw/graduate/master-of-social-work.html" />
+        <option value="$PROJECT_DIR$/cehd/config/ssw/redirects_camelcase.yml" />
         <option value="$PROJECT_DIR$/cehd/config/ssw/redirects.yml" />
+        <option value="$PROJECT_DIR$/routes/ssw/routes.php" />
       </list>
     </option>
   </component>
@@ -221,11 +262,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="4480" />
-    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -251,7 +291,27 @@
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="OLPD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
@@ -276,6 +336,29 @@
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="olpd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -286,17 +369,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="dev-ssw/&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;searchPageHandler&#9;null&#9;null&#10;home-top&#9;null&#9;null&#10;dev-ssw//&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;OLPDRoutes&#9;null&#9;null&#10;_searchApplianceSites&#9;null&#9;null&#10;gsa_sites&#9;null&#9;null&#10;personExtraData&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="redirect&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/cehd/config/edpsych/redirects_camelcase.yml&#10;dev-ssw/&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;searchPageHandler&#9;null&#9;null&#10;home-top&#9;null&#9;null&#10;dev-ssw//&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;OLPDRoutes&#9;null&#9;null&#10;_searchApplianceSites&#9;null&#9;null&#10;gsa_sites&#9;null&#9;null&#10;personExtraData&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes/ssw" />
+      <recent name="$PROJECT_DIR$/cehd/config/ssw" />
       <recent name="$PROJECT_DIR$/public/assets/images/icons" />
       <recent name="$PROJECT_DIR$/templates/ssw/includes/nav" />
       <recent name="$PROJECT_DIR$/templates/ssw" />
-      <recent name="$PROJECT_DIR$/templates/ssw/error" />
-      <recent name="$PROJECT_DIR$/routes/ssw" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -343,18 +426,17 @@
       <workItem from="1549314500442" duration="516000" />
       <workItem from="1549381151981" duration="1451000" />
       <workItem from="1549402881829" duration="2232000" />
-      <workItem from="1549466144344" duration="712000" />
+      <workItem from="1549466144344" duration="1606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54489000" />
+    <option name="totallyTimeSpent" value="55383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4480" y="23" width="1920" height="1053" extended-state="0" />
-    <editor active="true" />
+    <frame x="4480" y="23" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.366167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.366167" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -368,7 +450,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18259023" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18259023" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -384,37 +466,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/olpd/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/cehd/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/routes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="900" column="51" lean-forward="true" selection-start-line="900" selection-start-column="51" selection-end-line="900" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ssw/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edpsych/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssw/undergraduate/undergraduate-studies.html" />
     <entry file="file://$PROJECT_DIR$/templates/ssw/alumni.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -434,9 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/app/OLPD/OLPDApp.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cehd/config/olpd/routes.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -582,24 +630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/ssw/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cehd/app/SSW/SSWApp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/nav.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -631,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/routes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="167" column="31" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/web.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -662,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssw/about/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-399">
@@ -676,22 +696,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/redirects.yml">
+    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/nav.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="510">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/olpd/redirects.yml">
+    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/routes.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2675" />
+        <state relative-caret-position="240">
+          <caret line="167" column="31" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/app/OLPD/OLPDApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/olpd/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/cehd/redirects.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/olpd/redirects.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/redirects_camelcase.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cehd/config/ssw/redirects.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/edpsych/redirects.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1789">
+          <caret line="16" column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/edpsych/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/ssw/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/config/ssw/redirects_camelcase.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
         </state>
       </provider>
     </entry>
