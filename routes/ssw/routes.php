@@ -88,18 +88,6 @@ foreach ($routes as $route => $route_info) {
     }
 }
 
-// $app->get("/data/people/", SSWApp::class . ":personExtraData");
- $app->get("/people/{internet_id}/", SSWApp::class . ":personPage");
-// $app->get("/search/", SSWApp::class . ":searchPage");
-$app->get('/Undergraduate/YOST.html', function ($req, $res, $args) {
-  return $res->withStatus(302)->withHeader('Location', '/ssw/undergraduate/youth-studies-major/');
-});
-$app->get('/Graduate/phd-apply.html', function ($req, $res, $args) {
-  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/apply-phd/');
-});
-$app->get('/Graduate/phd-jobs.html', function ($req, $res, $args) {
-  return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/careers-of-social-work-phd-graduates/');
-});
 $app->get('/Graduate/DSWAP.html', function ($req, $res, $args) {
   return $res->withStatus(302)->withHeader('Location', '/ssw/graduate/diversity-social-work-advancement-program/');
 });
