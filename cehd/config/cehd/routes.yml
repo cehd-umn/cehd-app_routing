@@ -1185,6 +1185,11 @@
   template: cehd/events/aera.html
   template_data:
     - section: events
+/events/basketball/:
+  publish: true
+  template: cehd/events/basketball.html
+  template_data:
+    - section: events
 /events/block-party/:
   publish: true
   template: cehd/events/block-party.html
@@ -1472,6 +1477,11 @@
 /global/intl-partnerships/:
   publish: true
   template: cehd/global/intl-partnerships.html
+  template_data:
+    - section: global
+/global/jrm-fellowship/:
+  publish: true
+  template: cehd/global/jrm-fellowship.html
   template_data:
     - section: global
 /global/maryt-fellowship/:
@@ -2942,11 +2952,6 @@
 /trio/upward-bound/apply/:
   publish: true
   template: cehd/trio/upward-bound/apply.html
-  template_data:
-    - section: trio
-/trio/upward-bound/cooper/:
-  publish: true
-  template: cehd/trio/upward-bound/cooper.html
   template_data:
     - section: trio
 /trio/upward-bound/hollenback/:

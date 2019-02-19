@@ -75,8 +75,8 @@
   publish: true
   template_data:
     - section: centers
-/centers/incommunity/:
-  template: ssw/centers/incommunity.html
+/centers/youth-work-lab/:
+  template: ssw/centers/youth-work-lab.html
   publish: true
   template_data:
     - section: centers
@@ -140,6 +140,11 @@
   template: ssw/graduate/index.html
   template_data:
     - section: graduate
+/graduate/new/:
+  publish: true
+  template: ssw/graduate/new.html
+  template_data:
+    - section: graduate
 /graduate/transfer-students/:
   publish: true
   template: ssw/graduate/transfer-students.html
@@ -157,6 +162,16 @@
       - section: graduate
 /graduate/faq/:
   template: ssw/graduate/faq.html
+  publish: true
+  template_data:
+      - section: graduate
+/graduate/faq-test/:
+  template: ssw/graduate/faq-test.html
+  publish: false
+  template_data:
+      - section: graduate
+/graduate/msw-transfer-apply/:
+  template: ssw/graduate/msw-transfer-apply.html
   publish: true
   template_data:
       - section: graduate
@@ -230,8 +245,8 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/master-of-social-work-how-to-apply/:
-  template: ssw/graduate/master-of-social-work-how-to-apply.html
+/graduate/msw-how-to-apply/:
+  template: ssw/graduate/msw-how-to-apply.html
   publish: true
   template_data:
       - section: graduate
