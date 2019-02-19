@@ -7,7 +7,10 @@
 @import "cse-results-html";
 
 $olpd-nav-border-color: rgba(255, 222, 122, .5);
-
+.section-header-container {
+    background-color: #fff;
+    top: -40px;
+}
 .h2 {
     &.search-result-filters {
         font-size: 16px;
@@ -269,7 +272,7 @@ width: 235px !important;
     }
 
     .nav-container {
-        background: #fff;
+        background: transparent;
         padding: 36px 0 0;
     }
 
@@ -277,9 +280,21 @@ width: 235px !important;
         border-right: 18px solid #fff;
         padding-left: 8.5%;
     }
+
+    nav {
+        margin: 1rem auto 1rem !important;
+    }
+
+    .row.has-hero-image {
+        margin-top: -40px;
+    }
+
+
 }
 
 @media (min-width: 960px) {
+
+
     .hero-image-container {
         min-height: 610px;
     }
@@ -299,7 +314,7 @@ width: 235px !important;
     }
 
     .hero-image {
-        top: 130px;
+        top: 200px;
     }
 
     .circular-stat {
@@ -335,7 +350,7 @@ width: 235px !important;
     }
 
     .row.has-hero-image {
-        margin-top: 400px;
+        margin-top: 360px;
     }
 
     .element {
@@ -385,7 +400,7 @@ width: 235px !important;
     }
 
     .row.has-hero-image {
-        margin-top: 520px;
+        margin-top: 480px;
     }
 
     .black-border {
@@ -411,7 +426,7 @@ width: 235px !important;
         min-height: 810px;
     }
     .row.has-hero-image {
-        margin-top: 600px;
+        margin-top: 560px;
     }
     .hero-overlay p {
         font-size: 22px;
@@ -515,3 +530,6 @@ just for appearance; change whatever you want
 }
 
 
+#home-top-nav-link {
+          margin-top: 5px;
+      }
