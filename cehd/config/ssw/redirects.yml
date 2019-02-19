@@ -1,7 +1,28 @@
 ---
 default.html: ""
-testing: graduate/msw-field-fair/
-another: about/
 undergraduate/yost.html: undergraduate/youth-studies-major/
 graduate/phd-apply.html: graduate/apply-phd/
 graduate/phd-jobs.html: graduate/careers-of-social-work-phd-graduates/
+graduate/dswap.html: graduate/diversity-social-work-advancement-program/
+graduate/kaplantbi.html: graduate/eloise-elliot-kaplan/
+graduate/phd-faq.html: graduate/faq/
+graduate/wallace.html: graduate/john-wallace-fellowship/
+graduate/kente.html: graduate/kente-circle-placement-fellowship/
+graduate/msw-apply.html: graduate/master-of-social-work-how-to-apply/
+graduate/msw.html: graduate/master-of-social-work/
+graduate/ydl-apply.html: graduate/youth-development-leadership-how-to-apply/
+graduate/ydl.html: graduate/youth-development-leadership/
+graduate/phd-currentstudents.html: graduate/current-phd-students/
+graduate/msw-field.html: graduate/msw-field-instruction/
+graduate/nds.html: graduate/non-degree-seeking-students/
+graduate/phd.html: graduate/phd-in-social-work/
+graduate/dissertations.html: graduate/dissertation-titles/
+graduate/titleiv-e.html: graduate/title-iv-e-child-welfare-training-fellowship/
+graduate/msw-transfer.html: graduate/transfer-students/
+graduate/completed.html: centers/mincava/completed-research/
+mincava/current.html: centers/mincava/current-research
+mincava/history.html: centers/mincava/history/
+news/articles/experiential-learning.html: articles/experiential-learning/
+news/articles/somali-mental-health.html: articles/somali-mental-health/
+graduate/msw-fieldfair.html: graduate/msw-field-fair/
+
