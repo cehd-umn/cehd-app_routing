@@ -4,112 +4,42 @@
 
 {% block extra_css %}
 <style>
-/* Next & previous buttons */
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-padding: 16px;
-margin-top: -22px;
-color: white;
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
 
-/* Position the "next button" to the right */
-.next {
-right: 0;
-border-radius: 3px 0 0 3px;
-}
+  .controls {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 20px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    margin: 10px 0px 0px 10px;
+    width: 70px;
+  }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-background-color: rgba(0,0,0,0.8);
-}
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+  .controls:hover,
+  .controls:focus {
+    background: #eee;
+    color: #333;
+  }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+  .container {
+    position: relative;
+  }
+
+  .buttons {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    font-size: 0px;
+  }
 </style>
 
 {% endblock %}
 
 {% block hero_image %}
-<div class="carousel" style="position:relative;margin:auto;">
-  <div id="slides">
-    <div class="slide showing">
-      <div class="hero-image-container">
-      <img class="hero-image" src="/ssw/images/SSW-Splash-canoe.jpg" alt="OLPD students">
-      <div class="hero-overlay">
-        <div class="container">
-          <div class="twothird text-center">
-            <p>Canoeists brave a chilly April day on Bde Maka Ska during a Youth Studies Experiential Learning
-              Class</p>
-          </div>
-          <div class="third">
-            <p><a href="/ssw/articles/experiential-learning/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
-              more</a></p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="hero-image-container">
-      <img class="hero-image" src="/ssw/images/SSW-Splash-FINAL-historic.jpg" alt="History of School of Social Work">
-      <div class="hero-overlay">
-        <div class="container">
-          <div class="twothird text-center">
-            <p>Clothing styles may have changed since 1926, but social workers still strive to improve child welfare.</p>
-          </div>
-          <div class="third">
-            <p><a href="/ssw/about/history/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
-              more</a></p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="hero-image-container">
-        <img class="hero-image" src="/ssw/images/SSW-Splash-FINAL-panel.jpg" alt="OLPD students">
-        <div class="hero-overlay">
-          <div class="container">
-            <div class="twothird text-center">
-              <p>SSW faculty and students participate in ground-breaking national conference focusing on Somali mental health services.</p>
-            </div>
-            <div class="third">
-              <p><a href="/ssw/articles/somali-mental-health/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
-                more</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-</div>
+{% include "ssw/home-slider.html" %}
 {% endblock %}
 
 {% block main_content %}

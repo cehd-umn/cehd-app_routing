@@ -365,6 +365,11 @@ width: 235px !important;
         margin-top: 7px;
     }
 
+    .buttons {
+        z-index: 5;
+        top: 390px;
+    }
+
 }
 
 @media (min-width: 1160px) {
@@ -390,6 +395,11 @@ width: 235px !important;
         margin-top: 7px;
     }
 
+    .buttons {
+        z-index: 5;
+        top: 450px;
+    }
+
 }
 
 @media (min-width: 1260px) {
@@ -406,6 +416,10 @@ width: 235px !important;
     .hero-overlay p {
         font-size: 22px;
         text-align: left;
+    }
+    .buttons {
+        z-index: 5;
+        top: 550px;
     }
 }
 
@@ -477,3 +491,27 @@ just for appearance; change whatever you want
     padding: 11px 0 0;
     z-index: 10;
 }
+
+
+#previous {
+    float: left;
+    background: transparent;
+    color: white;
+    border: 1px solid;
+    margin-left: 2rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+#next {
+    float: right;
+    background: transparent;
+    color: white;
+    border: 1px solid;
+    margin-right: 2rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+
