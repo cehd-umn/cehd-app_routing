@@ -360,3 +360,8 @@
   publish: true
   template_data:
       - section: undergraduate
+/slider-test/:
+  template: ssw/slider-test.html
+  publish: true
+  template_data:
+  - section:

@@ -262,3 +262,218 @@ width: 235px !important;
     border: 1px solid #333 !important;
     color: #333 !important;
 }
+
+@media (min-width: 769px) {
+    nav {
+        margin: 0 auto;
+    }
+
+    .nav-container {
+        background: #fff;
+        padding: 36px 0 0;
+    }
+
+    .dept-footer-section.first {
+        border-right: 18px solid #fff;
+        padding-left: 8.5%;
+    }
+}
+
+@media (min-width: 960px) {
+    .hero-image-container {
+        min-height: 610px;
+    }
+
+    .hero-overlay {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #333;
+        height: auto;
+        text-shadow: none;
+    }
+
+    .hero-overlay p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 19px;
+        margin: .8em 0;
+        font-weight: 600;
+    }
+
+    .hero-image {
+        top: 130px;
+    }
+
+    .circular-stat {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .stat-percent {
+        color: #fff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 72px;
+        margin: -175px 0 0 150px;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .stat-text p {
+        font-family: 'Lato-light', sans-serif;
+        font-size: 25px;
+        text-align: left;
+        margin: -175px 0 0 360px;
+        position: absolute;
+        width: 60%;
+        z-index: 99;
+    }
+
+    .stat-caption {
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        margin: -50px 0 0 360px;
+        position: absolute;
+    }
+
+    .row.has-hero-image {
+        margin-top: 400px;
+    }
+
+    .element {
+        margin-bottom: 100px;
+
+    }
+
+    .element-1 {
+        color: #ffcc33;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 275px;
+        position: relative;
+    }
+
+    .element-2 {
+        color: #666;
+        font-family: 'Lato', sans-serif;
+        font-size: 35px;
+        margin-top: -150px;
+        z-index: 2;
+    }
+
+    .black-border {
+        border: 1px solid #333 !important;
+        color: #333 !important;
+        font-size: 15px;
+        margin-top: 7px;
+    }
+
+}
+
+@media (min-width: 1160px) {
+    .hero-image-container {
+        min-height: 720px;
+    }
+    .hero-overlay p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 21px;
+        text-align: left;
+        margin: .8em 0;
+        font-weight: 600;
+    }
+
+    .row.has-hero-image {
+        margin-top: 520px;
+    }
+
+    .black-border {
+        border: 1px solid #333 !important;
+        color: #333 !important;
+        font-size: 17px;
+        margin-top: 7px;
+    }
+
+}
+
+@media (min-width: 1260px) {
+
+}
+
+@media (min-width: 1360px) {
+    .hero-image-container {
+        min-height: 810px;
+    }
+    .row.has-hero-image {
+        margin-top: 600px;
+    }
+    .hero-overlay p {
+        font-size: 22px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1560px) {
+    .hero-image-container {
+        min-height: 900px;
+    }
+    .row.has-hero-image {
+        margin-top: 700px;
+    }
+    .hero-overlay p {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .black-border {
+        border: 1px solid #333 !important;
+        color: #333 !important;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+}
+#slides{
+    position: relative;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+#slides li {
+    margin: 5px 0 5px 0px;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+.wordmark-container {
+    padding: 11px 0 0;
+    z-index: 10;
+}

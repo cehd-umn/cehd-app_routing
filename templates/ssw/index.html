@@ -4,190 +4,17 @@
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "School of Social Work" %}
 {% block title %}{{ page_title }}{% endblock %}
+
 {% block extra_css %}
 <style>
-  @media (min-width: 769px) {
-    nav {
-      margin: 0 auto;
-    }
-
-    .nav-container {
-      background: #fff;
-      padding: 36px 0 0;
-    }
-
-    .dept-footer-section.first {
-      border-right: 18px solid #fff;
-      padding-left: 8.5%;
-    }
-  }
-
-  @media (min-width: 960px) {
-    .hero-image-container {
-      min-height: 610px;
-    }
-
-    .hero-overlay {
-      background-color: rgba(255, 255, 255, 0.5);
-      color: #333;
-      height: auto;
-      text-shadow: none;
-    }
-
-    .hero-overlay p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 19px;
-      margin: .8em 0;
-      font-weight: 600;
-    }
-
-    .hero-image {
-      top: 130px;
-    }
-
-    .circular-stat {
-      position: relative;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .stat-percent {
-      color: #fff;
-      font-family: 'Raleway', sans-serif;
-      font-size: 72px;
-      margin: -175px 0 0 150px;
-      position: absolute;
-      z-index: 99;
-    }
-
-    .stat-text p {
-      font-family: 'Lato-light', sans-serif;
-      font-size: 30px;
-      margin: -175px 0 0 360px;
-      position: absolute;
-      width: 60%;
-      z-index: 99;
-    }
-
-    .stat-caption {
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      margin: -50px 0 0 360px;
-      position: absolute;
-    }
-
-    .row.has-hero-image {
-      margin-top: 400px;
-    }
-
-    .element {
-      margin-bottom: 100px;
-
-    }
-
-    .element-1 {
-      color: #ffcc33;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 275px;
-      position: relative;
-    }
-
-    .element-2 {
-      color: #666;
-      font-family: 'Lato', sans-serif;
-      font-size: 35px;
-      margin-top: -150px;
-      z-index: 2;
-    }
-
-    .black-border {
-      border: 1px solid #333 !important;
-      color: #333 !important;
-      font-size: 15px;
-      margin-top: 7px;
-    }
-
-  }
-
-  @media (min-width: 1160px) {
-    .hero-image-container {
-      min-height: 720px;
-    }
-    .hero-overlay p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 23px;
-      margin: .8em 0;
-      font-weight: 600;
-    }
-
-    .row.has-hero-image {
-      margin-top: 520px;
-    }
-
-    .black-border {
-      border: 1px solid #333 !important;
-      color: #333 !important;
-      font-size: 17px;
-      margin-top: 7px;
-    }
-
-  }
-
-  @media (min-width: 1260px) {
-
-  }
-
-  @media (min-width: 1360px) {
-    .hero-image-container {
-      min-height: 810px;
-    }
-    .row.has-hero-image {
-      margin-top: 600px;
-    }
-    .hero-overlay p {
-      font-size: 25px;
-    }
-  }
-
-  @media (min-width: 1560px) {
-    .hero-image-container {
-      min-height: 900px;
-    }
-    .row.has-hero-image {
-      margin-top: 700px;
-    }
-    .hero-overlay p {
-      font-size: 30px;
-    }
-
-    .black-border {
-      border: 1px solid #333 !important;
-      color: #333 !important;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-  }
 
 </style>
 {% endblock %}
+
 {% block hero_image %}
-<div class="hero-image-container">
-  <img class="hero-image" src="/ssw/images/SSW-Splash-canoe.jpg" alt="OLPD students">
-  <div class="hero-overlay">
-    <div class="container">
-      <div class="twothird text-center">
-        <p>Canoeists brave a chilly April day on Bde Maka Ska during a Youth Studies Experiential Learning
-          Class</p>
-      </div>
-      <div class="third">
-        <p><a href="/ssw/articles/experiential-learning/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
-            more</a></p>
-      </div>
-    </div>
-  </div>
-</div>
+{% include "ssw/home-slider.html" %}
 {% endblock %}
+
 {% block main_content %}
 <div class="row has-hero-image">
   <div class="container">
@@ -287,9 +114,9 @@
       <div class="">
         <h2 class="text-center">Contact information</h2>
       </div>
-    
 
-		
+
+
         <p class="text-center">For general questions about our department, contact:</p>
         <div class="span-3">
           <p><strong>Undergraduate studies</strong><br /> <a href="/people/pavlo002/">Cindy
@@ -299,7 +126,7 @@
           <p><strong>Graduate studies</strong><br /> <a href="/people/mbcase/">MacKenzie
               Case</a> <br />Graduate Program Coordinator <br />612-624-4258 <br /> <a href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
         </div>
-        
+
 
         <div class="span-3">
           <p><strong>MSW Admissions</strong><br /> 612-624-4905<br />
@@ -380,8 +207,6 @@
 <script src="/assets/dist/js/svg_stats.min.js"></script>
 <script src="/assets/dist/js/news.min.js"></script>
 <script src="/assets/dist/js/events.min.js"></script>
-{# The call to parent() above is *very* important #}
-{{newsfeed.news_feed_js("category/departments/social-work/feed",
-"#news-container", "sswhome.html", 5) }}
-{{ eventsfeed.events_feed_js(132) }}
+<script src="/assets/src/js/slider.js"></script>
+
 {% endblock %}
