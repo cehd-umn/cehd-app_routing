@@ -140,9 +140,9 @@
   template: ssw/graduate/index.html
   template_data:
     - section: graduate
-/graduate/new/:
+/graduate/msw-new/:
   publish: true
-  template: ssw/graduate/new.html
+  template: ssw/graduate/msw-new.html
   template_data:
     - section: graduate
 /graduate/transfer-students/:

@@ -1,321 +1,175 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<!-- InstanceBegin template="/Templates/SSW-RIGHTimage.dwt" codeOutsideHTMLIsLocked="false" -->
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "Welcome New MSW Students" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- InstanceBeginEditable name="doctitle" -->
-	<title>New MSW Students - School of Social Work - CEHD - U of M</title>
-	<!-- InstanceEndEditable -->
-	<link rel="icon" type="image/png" href="/assets-2015/favicons/favicon-gold.ico" />
-	<!--  global asset  -->
-	<link rel="stylesheet" href="../assets/css/core2015.css" media="all" type="text/css" />
-	<!--  local asset  -->
-	<link rel="stylesheet" href="../assets/CSS/umn-HF.css" media="all" type="text/css" />
-	<!--  local asset  -->
-	<link rel="stylesheet" href="../assets/CSS/Theme-CandI-Land.css" media="all" type="text/css" />
-	<!--  local asset  -->
-	<!--  This just makes HTML5 operate on old versions of IE -->
-	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-1.9.0.js"></script>
-	<!--  global asset  -->
-	<script type="text/javascript" src="/assets-2015/JS/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js"></script>
-	<!--  global asset  -->
-	<link rel="stylesheet" href="../assets/js/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" media="all" type="text/css" />
-	<!--  local asset  -->
-	<script type="text/javascript" src="../assets/js/responsive.js"></script>
-	<!--  local asset  -->
-	<script type="text/javascript" src="/assets-2015/js/globalnav.js"></script>
-	<!--  global asset  -->
-	<script type="text/javascript" src="/assets-2015/js/ajaxRSS.js"></script>
-	<!--  global asset  -->
+{% endblock %}
+{% block main_content %}
 
-	<!-- InstanceBeginEditable name="head" -->
+<div class="row">
+  <div class="container">
+    <h1>Welcome new MSW students!</h1>
+    <div class="half">
+    	<p>Welcome to the University of Minnesota Master of Social Work Program! Understanding the information on this page is essential for students who will begin the MSW program in the fall of 2019. Please review this web page and visit it frequently for updates!</p>
+    </div>
+    <div class="half">
+    	<p>image here</p> <!--<img src="/ssw/images/name-of-image-here.jpg" alt="description of image">-->
+    </div>
+</div>
+</div>
 
-	<!-- InstanceEndEditable -->
-</head>
+<div class="row emphasis">
+  <div class="container">
+    <h2 class="span-7">Materials from new MSW student registration information session</h2>
+    <div class="half">
+    	<h3><small><ul>Full program (53 credits)</small></h3>
+    		<li>Curricum Outline&mdash;All Concentrations</li>
+    		<li>Full Program Advising Slides</li>
+    		<li>Full Program (53 credits) Advising Video</li>
+    	</ul>
 
-<body id="lc">
-	<!--#include file="../assets/includes/skiplinks.asp" -->
-	<nav id="nav">
-		<!--#include file="../assets/includes/nav.asp" -->
-	</nav>
-	<div id="container">
-		<!--#include file="../assets/includes/umn-header.asp" -->
+    	<h3><small><ul>Clinical mental health</small></h3>
+    		<li>Clinical Mental Health Curriculum Outline</li>
+    		<li>CMH Advising Slides</li>
+    		<li>Advanced Standing, Clinical Mental Health Advising</li>
+    	</ul>
 
+    	<h3><small><ul>Community practice</small></h3>
+    		<li>Community Practice Curriculum Outline</li>
+    		<li>CP Advising Slides</li>
+    		<li>Advanced Standing Community Practice Video</li>
+    	</ul>
+    </div>
+    <div class="half">
+    	<h3><small><ul>Families and children</small></h3>
+    		<li>Families and Children Curriculum Outline</li>
+    		<li>FC Advising Slides</li>
+    		<li>Advanced Standing Families and Children Video</li>
+    	</ul>
 
-		<div id="maincontent">
-			<div id="tabnav"><span id="menuicon"></span><span id="menuword">Menu</span></div>
-			<!-- InstanceBeginEditable name="HalfHero" -->
-			<div id="pheader">
-				<div class="halfintro">
-					<a id="phwm" href="/ssw/" title=""><span>School of Social Work</span></a>
-					<h1>Welcome, New M.S.W. Students!</h1>
-					<p>Welcome to the University of Minnesota Master of Social Work Program! Understanding the information on this page is essential for students who will begin the M.S.W. program in the fall of 2018. <strong>Please review this web page and visit it frequently for updates!</strong></p>
+    	<h3><small><ul>Health, disability and aging</small></h3>
+    		<li>Families and Children Curriculum Outline</li>
+    		<li>Health, Disability & Aging Curriculum Outline</li>
+    		<li>HDA Advising Slides</li>
+    	</ul>
 
+    	<h3><small><ul>Class schedules</small></h3>
+    		<li>Summer 2018</li>
+    		<li>Fall 2018</li>
+    		<li>Spring 2019</li>
+    	</ul>
+    </div>
+</div>
+</div>
 
-				</div>
-				<div class="halfhero"><img src="/ssw/content-images/halfheros/FieldFair2016.jpg" alt="Field Fair in Coffman Union">
-					<p>Field Fair was held in Coffman Union in 2017.</p>
-				</div>
+<div class="row">
+  <div class="container">
+    <div class="half">
+    	 <h2>Financing</h2>
+    	 <p> Many graduate students also finance their graduate education through personal funds and private and governmental loans.</p>
+    	 <p>The School of Social Work financial aid application form is due March 31, 2018. Decisions from those applications are ongoing, and incoming MSW students will be notified about School of Social Work financial aid awards through the summer of 2018. More information about School of Social Work fellowship and scholarships.</p>
+    	 <ul>
+    	 	<li> School of Social Work financial aid form</li>
+    	 	<li> University financial aid</li>
+    	 	<li> University graduate assistantships</li>
+    	 	<li>Tuition and fees</li>
+    	 </ul>
 
-				<br class="clearfloat" />
+    	 <h2>MSW program class schedule</h2>
+    	 <p>MSW courses are scheduled all day Thursday–Saturday. Some courses are also offered on Monday–Wednesday evenings. MSW students will not be able to take courses exclusively during weekday business hours, or exclusively during evening and Saturday hours.</p>
+    	 <p>Students can often create a course schedule that meets their needs. All students, however, will have at least some evening courses during their time as a graduate student. Most students will have Saturday courses at some point in their graduate career.</p>
+    	 <p>Students taking a field placement are generally expected to be in field on Mondays–Wednesdays. Some field placements offer evening and weekend hours, but almost every field placement will require some time in the agency during regular Monday–Friday business hours.</p>
 
-			</div>
+    	 <h2>New student orientation: August 27, 2018</h2>
+    	 <p><strong>8 a.m.–5 p.m.
+    	 	<br>St. Paul Student Center, North Star Ballroom</strong></p>
+    	 	<p>This all-day event is the beginning of your graduate study. You will have the chance to meet classmates, the faculty of the School of Social Work, and your academic adviser. In contrast to the April 9 Registration Orientation, this day does not address nuts and bolts of the curriculum, registration, and being a student at the University of Minnesota.</p>
+    	 </div>
+    	 <div class="half">
+    	 	<h2>Computer internet access</h2>
+    	 	<p>The School of Social Work requires that students use information technology to support practice and scholarship. You will receive an official University e-mail address from the Graduate School. All SSW graduate students must have access to the Internet. If you do not have personal computer access, you can use the computer labs on campus.</p>
 
-			<!-- InstanceEndEditable -->
+    	 	<h2>Immunization requirements</h2>
+    	 	<p>Minnesota law requires all students born after December 31, 1956, who enroll in a state college or university to be immunized against diphtheria, tetanus, measles, mumps, and rubella. See the Academic Health Service page for important instructions on immunizations for U.S. and international students.</p>
 
-			<!-- InstanceBeginEditable name="main-content" -->
+    	 	<h2>Important documents</h2>
+    	 	<p>These documents outline expectations of professional behavior and practices for social workers and University students. The SSW has adopted these documents as school policy for all students.</p>
+    	 	<ul>
+    	 		<li>Standards of performance in the MSW program</li>
+    	 		<li><a href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics.aspx">National Association of Social Workers (NASW) Code of Ethics</a></li>
+    	 		<li><a href="http://mn.gov/health-licensing-boards/social-work/licensees/standardsofpractice.jsp"> Standards of practice and ethical conduct, as defined by Minnesota statute</a></li>
+    	 		<li><a href="http://oscai.umn.edu/">University of Minnesota Board of Regents Student Conduct Code</a></li>
+    	 	</ul>
+    	 </div>
+    	</div>
+    </div>
 
-			<h2>Materials from New M.S.W. Student Registration Information Session</h2>
-			
-			<ul>
-				
-				<li>
-							Full Program (53 credits)
-						</li>
-						<ul>
-							<li><a href="Documents/NewlyAdmitted/CurriculumOutline_AllConcentrations_2018-2019.pdf" target="_blank">Curricum Outline&mdash;All Concentrations</a> [PDF]</li>
-							<li><a href="Documents/NewlyAdmitted/Foundation_April9_2018.pdf" target="_blank">Full Program Advising Slides</a> [PDF]</li>
-							<li><a href="https://youtu.be/V--l3NLeG-Y">Full Program (53 credits) Advising Video</a></li>
-						</ul>
-					</ul>
+    <div class="row emphasis cool">
+    	<div class="container">
+    		<h2>Contacts for newly admitted students</h2>
+    		<div class="third">
+    		<p>Zer Vang
+    			<br><em>Director of MSW Admissions</em>
+    			<br> 612-625-8712
+    			<br> <a href="mailto:vang0655@umn.edu">vang0655@umn.edu</a></p>
+    		</div>
+    		<div class="third">
+    			<p>Andrew Howe
+    				<br><em>Graduate Admissions Support</em>
+    				<br> 612-624-4905
+    				<br> <a href="mailto:swadmis@umn.edu">swadmis@umn.edu</a></p>
+    			</div>
+    			<div class="third">
+    			<p>MacKenzie Case
+    				<br><em>Social Work Graduate Program Coordinator</em>
+    				<br> 612-624-4258
+    				<br> <a href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>	
+    			</div>
+    		</div>
 
-					<ul>
-						<li>
-							Clinical Mental Health
-						</li>
-						<ul>
-							<li><a href="Documents/NewlyAdmitted/CMH_CurriculumOutline.pdf" target="_blank">Clinical Mental Health Curriculum Outline </a> [PDF]</li>
-							<li><a href="Documents/NewlyAdmitted/CMH_April9_2018.pdf" target="_blank">CMH Advising Slides</a> [PDF]</li>
-							<li><a href="https://youtu.be/wCxxEu3JnQg">Advanced Standing, Clinical Mental Health Advising Video</a></li>
-						</ul>
-					</ul>
+    		<div class="container">
+    		<div class="third">
+    		<p>Megan Morrissey
+    			<br><em>MSW Program Director</em>
+    			<br> 612-624-4210 
+    			<br> <a href="mailto:mmorriss@umn.edu">mmorriss@umn.edu</a></p>
+    		</div>
+    		<div class="third">
+    			<p>MJ Gilbert
+    				<br><em>Director of MSW Field Instruction</em>
+    				<br> 612-624-4269
+    				<br> <a href="mailto:mgilbert@umn.edu">mgilbert@umn.edu</a></p>
+    			</div>
+    			<div class="third">
+    			<p>Rosetta Chears
+    				<br><em>MSW Field Program Coordinator</em>
+    				<br> 612-624-4241
+    				<br> <a href="mailto:rchears@umn.edu">rchears@umn.edu</a></p>	
+    			</div>
+    		</div>
+    	</div>
 
+<div class="row">
+  <div class="container">
+  	<h2>Prerequisites</h2>
+    <div class="half">
+    	<p>Please refer to the email you received from the School of Social Work to determine whether the following information applies to you. If the email said you require a statistics, biology and/or writing course, you will be able to register for fall 2017 classes, but you must successfully complete a college-level course in the areas indicated by Tuesday, September 4, 2018.</p>
+    	<p>These courses can be completed at any college, university, or community college. Please note that we do not accept CLEP credits or AP test scores as meeting prerequisites. Successful course completion is defined as earning a grade of C- or higher, or a grade of Pass, if taking the class on a pass/fail basis. There are no exceptions to this policy.</p>
+    	<p>We cannot recommend specific classes that might fulfill a prerequisite; however, if you would like to know whether a particular class will meet our requirement,<a href="mailto:swadmis@umn.edu"><strong> please email the SSW Admissions office.</strong></a></p>
 
-					<ul>
-						<li>
-							Community Practice
-						</li>
-						<ul>
-							<li><a href="Documents/NewlyAdmitted/CP_CurriculumOutline_2018.pdf" target="_blank">Community Practice Curriculum Outline</a> [PDF]</li>
-							<li><a href="Documents/NewlyAdmitted/CP_April9_2018.pdf" target="_blank">CP Advising Slides </a> [PDF]</li>
-							<li><a href="https://youtu.be/g_i8oZSj0tg_">Advanced Standing Community Practice Video</a></li>
-						</ul>
-					</ul>
+    	<h3><small>Biology requirement</small></h3>
+    	<p>Introductory biology classes including “Human Biology” or “General Biology” or classes with content in human anatomy and physiology fulfill the biology requirement. Biology classes that focus on human evolution or ecology, or courses from departments such as psychology or anthropology generally do not have the required content and do not fulfill the biology prerequisite.</p>
+    </div>
+    <div class="half">
 
-					<ul>
-						<li>
-							Families and Children
-						</li>
-						<ul>
-							<li><a href="Documents/NewlyAdmitted/FC_CurriculumOutline.pdf" target="_blank">Families and Children Curriculum Outline</a> [PDF]</li>
-							<li><a href="Documents/NewlyAdmitted/FC_April9_2018.pdf" target="_blank">FC Advising Slides </a> [PDF]</li>
-							<li><a href="https://youtu.be/_jTAbMHGVUI">Advanced Standing Families and Children Video</a></li>
-						</ul>
-					</ul>
+    	<h3><small>Statisitics requirement</small></h3>
+    	<p>Any college statistics class, including those from other departments, fulfills this requirement. Research methods classes generally include only a brief review of descriptive statistics, and most do not have enough statistics to prepare you for graduate-level research methods and, therefore, do not fulfill the statistics requirement. However, if you feel your research methods class was essentially a class in statistics, we will review the class to determine if it meets the requirement.</p>
 
-					<ul>
-						<li>
-							Health, Disability &amp; Aging
-						</li>
-						<ul>
-							<li><a href="Documents/NewlyAdmitted/HDA_CurriculumOutline.pdf" target="_blank">Health, Disability &amp; Aging Curriculum Outline</a> [PDF]</li>
-							<li><a href="Documents/NewlyAdmitted/HDA_April9_2018.pdf" target="_blank">HDA Advising Slides</a> [PDF]</li>
-							
-						</ul>
-					</ul>
-				</ul>
-			</ul>
-			
-			<ul>
-				<li>Class Schedules [PDF]</li>
-				<ul>
-					<li><a href="Documents/Summer-2018.pdf" target="_blank">Summer 2018</a> [PDF]</li>
-					<li><a href="Documents/Fall18_ClassSchedule.pdf" target="_blank">Fall 2018</a> [PDF]</li>
-					<li><a href="Documents/Spring-2019.pdf" target="_blank">Spring 2019</a> [PDF]</li>
-				</ul>
-				
-			</ul>
-
-
-
-			<br class="clearfloat" />
-			<!--<div class="half">
-    <h3>Materials for Registration Information Session</h3>
-
-      <ul>
-		  <li><a href="Documents/NewlyAdmitted/Agenda_April3_2017.pdf">Agenda</a></li>
-      <li><a href="Documents/NewlyAdmitted/CurriculumOutline_AllConcentrations.pdf">Curriculum Outline</a></li>
-      <li>Class Schedules 2017-2018
-      <uL><li><a href="Documents/Summer-2017.pdf">Summer 2017</a></li>
-      <li><a href="Documents/Fall-2017.pdf">Fall 2017</a></li>
-      <li><a href="Documents/Spring-2018.pdf">Spring 2018</a></li></ul>
-      <li><a href="Documents/NewlyAdmitted/RegInfo_RECORDED_April3_2017.pdf">Slides for Registration Information and Curriculum Overview</a>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=VBrpMU6YHHU&feature=youtu.be">Curricum Overview Video</a></li>
-          <li><a href="https://www.youtube.com/watch?v=N64YWjqFF5Y&feature=youtu.be">Nuts and Bolts Video&#8212;Part One</a></li>
-          <li><a href="https://www.youtube.com/watch?v=yOOXo58HxNk&feature=youtu.be">Nuts and Bolts Video&#8212;Part Two</a></li>
-        </ul>
-      </li>
-      <li>Slides for Group Advising Sessions</li>
-      <ul><li>Foundation (for 53-credit students)
-            <ul>
-              <li><a href="Documents/NewlyAdmitted/Foundation_RECORDED_April3_2017.pdf">Foundation Slides</a></li>
-              <li><a href="https://www.youtube.com/watch?v=bVkB6qtuREE&feature=youtu.be">Foundation Advising Video</a>      </li>
-            </ul>
-      </a></li>
-      <li>Clinical Mental Health (for Advanced Standing students)
-        <ul>
-          <li><a href="Documents/NewlyAdmitted/CMH_RECORDED_April3_2017.pdf">CMH Slides</a></li>
-          <li><a href="Documents/NewlyAdmitted/CMH_PlanningGRID.pdf">CMH Planning Grid</a></li>
-          <li><a href="https://www.youtube.com/watch?v=8eZnY2Jlsrs&feature=youtu.be">Clinical Mental Health Video</a></li>
-        </ul>
-      </li>
-      <li>Community Practice (for Advanced Standing students)
-        <ul>
-          <li><a href="Documents/NewlyAdmitted/CP_RECORDED_April3_2017.pdf">CP Slides</a></li>
-          <li><a href="Documents/NewlyAdmitted/CP_PlanningGRID.pdf">CP Planning Grid</a></li>
-          <li><a href="https://www.youtube.com/watch?v=nL6a6wXSrsw&feature=youtu.be">Community Practice Video</a></li>
-        </ul>
-      </li>
-      <li>Families and Children (for Advanced Standing students)
-        <ul>
-          <li><a href="Documents/NewlyAdmitted/FC_SLIDES_LIVE_April3_2017.pdf">FC Slides</a></li>
-          <li><a href="Documents/NewlyAdmitted/FC_PlanningGRID.pdf"> FC Planning Grid</a></li>
-          <li><a href="https://www.youtube.com/watch?v=KakeelMY4w4&feature=youtu.be"> Families and Children Video</a></li>
-        </ul>
-      </li>
-      <li>Health, Disability and Aging (for Advanced Standing students)
-        <ul>
-          <li><a href="Documents/NewlyAdmitted/HDA_SLIDES_LIVE_April3_2017.pdf"> HDA Slides</a></li>
-          <li><a href="Documents/NewlyAdmitted/HDA_PlanningGrid.pdf">HDA Planning Grid</a></li>
-          <li><a href="https://www.youtube.com/watch?v=-rEyOV9QyY8">Health, Disability and Aging Video</a></li>
-        </ul>
-      </li>
-      </ul>
-			</ul>
-			</div>-->
-			<h3>Materials for Field Fair Orientation and Field Fair</h3>
-
-			<p>The Field Fair will take place after the orientation. Please watch the two videos below&mdash;"Field Orientation" and "Navigating ITP 101"&mdash;before coming to the Registration Orientation/Field Fair on April 9.</p>
-			<h4>FAQs Regarding Required Field Placement:</h4>
-			<ul>
-				<li><a href="Documents/NewlyAdmitted/FullProgramFT2018-19.pdf">Full Program, Full Time Study</a></li>
-				<li><a href="Documents/NewlyAdmitted/FullProgramPT2018-19.pdf">Full Program, Part Time Study</a></li>
-
-				<li><a href="Documents/NewlyAdmitted/AdvStandingFT2018-2019.pdf">Advanced Standing, Full Time Study</a></li>
-
-				<li><a href="Documents/NewlyAdmitted/AdvStandingPT2018-9.pdf">Advanced Standing, Part Time Study</a></li>
-			</ul>
-			<p class="centerbox"><iframe width="569" height="320" src="https://www.youtube.com/embed/7Dolb629LKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
-
-			<p class="centerbox"><iframe width="569" height="320" src="https://www.youtube.com/embed/kmIrA2-wwV0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+    	<h3><small>Writing course</small></h3>
+    	<p>Based on the written materials submitted with the application to the M.S.W. program, many applicants are required to complete an additional writing course. This course is in addition to any college and graduate courses already taken. Students may satisfy this requirement by taking a course through the University of Minnesota, another university or community college. The course can be offered in person or online. It should focus on writing for research, academic and professional writing. Students should seek courses which emphasize development of scholarly and nonfiction writing.</p>
+    </div>
+</div>
+</div>
 
 
-			<div class="third">
-				<h2>Financing</h2>
-				<p>Many graduate students also finance their graduate education through personal funds and private and governmental loans. </p>
-				<p>The School of Social Work financial aid application form is due March 31, 2018. Decisions from those applications are ongoing, and incoming M.S.W. students will be notified about School of Social Work financial aid awards through the summer of 2018.
-					<a href="funding.html">More information about School of Social Work fellowship and scholarships</a>.</p>
-
-				<ul>
-					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeRCIAaWjtHdKWP0ar5d-Y2tCAFZogXMXGmmcvrD0HZT4B-EA/viewform?c=0&w=1">School of Social Work financial aid form</a><br />
-					</li>
-					<li><a href="http://onestop.umn.edu/finances/financial_aid/basics/index.html">University financial aid</a></li>
-					<li><a href="http://www1.umn.edu/ohr/gae/">University graduate assistantships</a></li>
-					<li><a href="http://onestop.umn.edu/finances/costs_and_tuition/tuition_and_fees/graduate_school_tuition.html">Tuition and fees</a></li>
-				</ul>
-
-				<h2>M.S.W. Program Class Schedule</h2>
-				<p>M.S.W. courses are scheduled all day Thursday–Saturday. Some courses are also offered on Monday–Wednesday evenings. M.S.W. students will not be able to take courses exclusively during weekday business hours, or exclusively during evening and Saturday
-					hours.
-				</p>
-				<p>Students can often create a course schedule that meets their needs. All students, however, will have at least some evening courses during their time as a graduate student. Most students will have Saturday courses at some point in their graduate career.
-				</p>
-				<p>Students taking a field placement are generally expected to be in field on Mondays–Wednesdays. Some field placements offer evening and weekend hours, but almost every field placement will require some time in the agency during regular Monday–Friday
-					business hours.</p>
-
-			</div>
-			<div class="third">
-
-				<h2>New Student Orientation: August 27, 2018</h2>
-				<p><strong> 8 a.m.&#8211;5 p.m.<br>
-      <a href="http://campusmaps.umn.edu/st-paul-student-center">St. Paul Student Center</a>, North Star Ballroom</strong></p>
-				<p>This all-day event is the beginning of your graduate study. You will have the chance to meet classmates, the faculty of the School of Social Work, and your academic adviser. In contrast to the April 9 Registration Orientation, this day does not address
-					nuts and bolts of the curriculum, registration, and being a student at the University of Minnesota.
-					<!--Instead we are pleased to be joined by members of the <strong><a href="https://penumbratheatre.org/">Penumbra Theater</a></strong>, who will offer a workshop to orient all of us to some of the challenges we will encounter in working across differences and engaging with diverse classmates, clients and colleagues.--></p>
-				<h2>Computer Internet Access</h2>
-				<p>The School of Social Work requires that students use information technology to support practice and scholarship. You will receive an official University e-mail address from the Graduate School. All SSW graduate students must have access to the Internet.
-					If you do not have personal computer access, you can use the <strong> <a href="http://www.oit.umn.edu/computer-labs/">computer labs on campus</a></strong>. </p>
-				<h2>Immunization Requirements</h2>
-				<p>Minnesota law requires all students born after December 31, 1956, who enroll in a state college or university to be immunized against diphtheria, tetanus, measles, mumps, and rubella. See the <strong> <a href="http://www.bhs.umn.edu/immunization-requirements.htm">Academic Health Service page
-      for important instructions on immunizations </a></strong>for U.S. and international students.</p>
-			</div>
-			<div class="third">
-
-				<h2>Important Documents</h2>
-				<p>These documents outline expectations of professional behavior and practices for social workers and University students. The SSW has adopted these documents as school policy for all students.</p>
-				<p><a href="../Documents/MSW/StandardsofPerformance.pdf"><strong>Standards of Performance in the M.S.W. Program</strong></a></p>
-				<p><strong><a href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics.aspx">National
-      Association of Social Workers (NASW) Code of Ethics</a></strong></p>
-				<p> <strong><a href="http://mn.gov/health-licensing-boards/social-work/licensees/standardsofpractice.jsp"> Standards
-      of Practice and Ethical Conduct, as defined by Minnesota Statute</a></strong></p>
-				<p> <strong><a href="http://oscai.umn.edu/">University
-      of Minnesota Board of Regents Student Conduct Code</a></strong></p>
-				<h2>Contacts for Newly Admitted Students </h2>
-				<p>Zer Vang, Director of M.S.W. Admissions<br> 612-625-8712
-					<br>
-					<a href="mailto:vang0655@umn.edu"> vang0655@umn.edu</a> </p>
-				<p>Andrew Howe, M.S.W. Graduate Admissions Support<br> 612-624-4905
-					<br>
-					<a href="mailto:swadmis@umn.edu">swadmis@umn.edu</a> </p>
-				<p>MacKenzie Case, Social Work Graduate Program Coordinator <br> 612-624-4258
-					<br>
-					<a href="mailto:mbcase@umn.edm">mbcase@umn.edm</a></p>
-				<p>Megan Morrissey, M.S.W. Program Director<br /> 612-624-4210
-					<br />
-					<a href="mailto:mmorriss@umn.edu">mmorriss@umn.edu</a> </p>
-				<p>MJ Gilbert, Director of M.S.W. Field Instruction <br /> 612-624-4269
-					<br />
-					<a href="mailto:mgilbert@umn.edu ">mgilbert@umn.edu </a></p>
-				<p>Rosetta Chears, M.S.W. Field Program Coordinator<br /> 612-624-4241
-					<br>
-					<a href="mailto:rchears@umn.edu">rchears@umn.edu</a></p>
-			</div>
-
-			<div class="whole colorblock POOL">
-				<h3>Prerequisites Must Be Completed <strong>by September 4, 2018</strong></h3>
-				<p><strong>NOTE</strong>: <em>Please refer to the email you received from the School of Social Work to determine whether the following information applies to you.</em> <br> If the email said you require a statistics, biology and/or writing course, you
-					will be able to register for fall 2017 classes, but <strong>you must successfully complete a college-level course in the areas indicated by Tuesday, September 4, 2018.</strong> </p>
-				<p>These courses can be completed at any college, university, or community college. Please note that we do not accept CLEP credits or AP test scores as meeting prerequisites. Successful course completion is defined as earning a grade of C- or higher,
-					or a grade of Pass, if taking the class on a pass/fail basis. There are no exceptions to this policy. </p>
-				<p>We cannot recommend specific classes that might fulfill a prerequisite; however, if you would like to know whether a particular class will meet our requirement, please <a href="mailto:swadmis@umn.edu"><strong>contact the SSW Admissions office</strong></a>.</p>
-				<ul>
-					<li><strong>BIOLOGY REQUIREMENT: </strong>Introductory biology classes including &ldquo;Human Biology&rdquo; or &ldquo;General Biology&rdquo; or classes with content in human anatomy and physiology fulfill the biology requirement. Biology classes that
-						focus on human evolution or ecology, or courses from departments such as psychology or anthropology generally do not have the required content and do not fulfill the biology prerequisite.</li>
-				</ul>
-				<ul>
-					<li><strong>STATISTICS REQUIREMENT:</strong> Any college statistics class, including those from other departments, fulfills this requirement. Research methods classes generally include only a brief review of descriptive statistics, and most do not have
-						enough statistics to prepare you for graduate-level research methods and, therefore, do not fulfill the statistics requirement. However, if you feel your research methods class was essentially a class in statistics, we will review the class to determine
-						if it meets the requirement.</li>
-				</ul>
-				<ul>
-					<li><strong>WRITING COURSE</strong> Based on the written materials submitted with the application to the M.S.W. program, many applicants are required to complete an additional writing course. This course is in addition to any college and graduate courses
-						already taken. Students may satisfy this requirement by taking a course through the University of Minnesota, another university or community college. The course can be offered in person or online. It should focus on writing for research, academic
-						and professional writing. Students should seek courses which emphasize development of scholarly and nonfiction writing.</li>
-				</ul>
-			</div>
-
-			<!-- InstanceEndEditable -->
-		</div>
-		<!-- ./maincontent -->
-		<br class="clearfloat" />
-		<!--#include file="../assets/includes/footer.asp" -->
-	</div>
-	<!-- ./container -->
-</body>
-<!-- InstanceEnd -->
-
-</html>
+{% endblock %}
