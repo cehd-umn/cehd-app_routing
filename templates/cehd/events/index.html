@@ -288,7 +288,7 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
     }
 
     #todayfilter:hover, #weekfilter:hover, #monthfilter:hover, #audiencefilter:hover, #clearfilter2:hover {
-        cursor: pointer; 
+        cursor: pointer;
         }
 </style>
 {% endblock %} {% block main_content %}
@@ -384,7 +384,9 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
     #}
     </div>
     <!-- ./row -->
-    {% endblock %} {% block bottom_js %}{{ parent() }} {{ eventsfeed.events_feed_js(172, 1000, "#events-container", "/assets/dist/views/cehd/events",
+    {% endblock %}
+
+{% block bottom_js %}{{ parent() }} {{ eventsfeed.events_feed_js(172, 1000, "#events-container", "/assets/dist/views/cehd/events",
     "events-page.html", 6, 3) }}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>

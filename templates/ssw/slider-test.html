@@ -1,0 +1,145 @@
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "Slider Test" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+</style>
+
+{% endblock %}
+
+{% block hero_image %}
+<div class="carousel" style="position:relative;margin:auto;">
+  <div id="slides">
+    <div class="slide showing">
+      <div class="hero-image-container">
+      <img class="hero-image" src="/ssw/images/SSW-Splash-canoe.jpg" alt="OLPD students">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="twothird text-center">
+            <p>Canoeists brave a chilly April day on Bde Maka Ska during a Youth Studies Experiential Learning
+              Class</p>
+          </div>
+          <div class="third">
+            <p><a href="/ssw/articles/experiential-learning/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
+              more</a></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="hero-image-container">
+      <img class="hero-image" src="/ssw/images/SSW-Splash-FINAL-historic.jpg" alt="History of School of Social Work">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="twothird text-center">
+            <p>Clothing styles may have changed since 1926, but social workers still strive to improve child welfare.</p>
+          </div>
+          <div class="third">
+            <p><a href="/ssw/about/history/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
+              more</a></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="hero-image-container">
+        <img class="hero-image" src="/ssw/images/SSW-Splash-FINAL-panel.jpg" alt="OLPD students">
+        <div class="hero-overlay">
+          <div class="container">
+            <div class="twothird text-center">
+              <p>SSW faculty and students participate in ground-breaking national conference focusing on Somali mental health services.</p>
+            </div>
+            <div class="third">
+              <p><a href="/ssw/articles/somali-mental-health/" class="to-upper button clear black-border" style="vertical-align: middle;">Read
+                more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="row has-hero-image">
+  <div class="container">
+    <h1>Slider</h1>
+    <div class="feature twothirds">
+      <p>
+        The School of Social Work is an integral part of a world-class research university. Our research and outreach
+        centers address challenging social issues locally and internationally. Our scholarship includes many
+        community-engaged
+        and interdisciplinary projects. We invite you to explore our research and outreach centers pages to find out
+        more
+        about our work.
+      </p>
+      <p class="text-center">
+        <a href="{{ config.asset_base }}/centers/" class="button center">
+          Explore our centers</a>
+        <a href="{{ config.asset_base }}/research/" class="button center">
+          Explore our research</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block bottom_js %}{{ parent() }}
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="/assets/src/js/slider.js"></script>
+<script>
+
+</script>
+{% endblock %}
