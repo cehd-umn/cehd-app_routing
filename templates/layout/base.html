@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}UMN{% endblock %}</title>
-        
-        
-        
+
+
+
         <meta property="og:title" content="{% block meta_title %}College of Education and Human Development{% endblock %}">
         <meta property="og:description" content="{% block meta_description %}Problem solvers, advocates, and leaders{% endblock %}">
         <meta property="og:image" content="{% block meta_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
@@ -19,12 +19,14 @@
 
         <meta property="fb:app_id" content="{% block fb_app_id %}{% endblock %}">
 
-        
+
         <meta name="description" content="{% block meta_content %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
         {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
-        {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
+        <link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+        {% block css %}{% endblock %}
         {% block extra_css %}{% endblock %}
     </head>
     <body>

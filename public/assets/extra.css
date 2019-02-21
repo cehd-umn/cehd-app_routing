@@ -1,0 +1,39 @@
+
+.parentunit,
+.parentunit a {
+    font-size: 16px;
+    line-height: 21.6px;
+    color: #777677;
+    margin: 0 0 2px 0;
+    border: none;
+    transition: none;
+    font-family: Open Sans, sans-serif !important;
+}
+
+.sitename {
+    line-height: 29.7px;
+    margin: 0 0 2px 0;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Open Sans, sans-serif !important;
+    line-height: 35.1px;
+}
+
+.sitename a {
+    color: #7a0019;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Open Sans, sans-serif !important;
+}
+
+nav a {
+    font-family: Open Sans, sans-serif !important;
+}
+
+body {
+    font-family: Open Sans, sans-serif !important;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    font-family: Open Sans, sans-serif !important;
+}

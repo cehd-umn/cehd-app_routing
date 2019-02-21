@@ -27,7 +27,7 @@
         color: #666;
         padding-right: 10px;
     }
-    
+
     @media (max-width: 768px) {
     .top-level-nav-link {
         font-size: 15px;
@@ -36,16 +36,16 @@
     .secondary-level-nav-link {
         text-transform: capitalize;
     }
-    
+
     }
-    
+
     @media (max-width: 960px) {
     .container {
         max-width: 850px !important;
     }
     }
-    
-    
+
+
     @media (min-width: 769px) {
         nav.inline ul {
         -ms-display: flex;
@@ -60,17 +60,17 @@
         padding-left: 2px;
         margin: 0;
     }
-    
+
     nav.inline .dropdown-toggle::after {
         margin-left: 0px;
     }
-    
+
     nav {
         margin-top: 20px !important;
         margin-bottom: 20px !important
     }
     }
-    
+
     @media (min-width: 1009px) {
     nav ul.nav.inline li {
         border-bottom: 0;
@@ -80,7 +80,7 @@
         margin: 0;
     }
     }
-    
+
     @media (min-width: 1209px) {
     nav ul.nav.inline li {
         border-bottom: 0;
@@ -90,7 +90,7 @@
         margin: 0;
     }
     }
-    
+
     #undergraduate-top-nav-link {
         padding-left: 0px !important;
     }
@@ -100,9 +100,14 @@
     }
     </style>
 {% endblock %}
+{% block college_wordmark %} {% endblock %}
 {% block section_wordmark %}
-    <a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>
+    <!--<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>-->
+
+<p class="parentunit" style="margin-top: 20px;"><a href="http://cehd.umn.edu/">College of Education & Human Development</a></p>
+<h1 class="sitename"><a href="{{ config.base_url }}/" title="Department of Organizational Leadership, Policy, and Development  Home" rel="home">Department of Organizational Leadership, Policy, and Development </a></h1>
 {% endblock %}
+
 {% block nav %}
 <div class="section-header-container row" id="nav-container">
     <div class="container">

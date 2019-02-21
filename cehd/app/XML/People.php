@@ -336,6 +336,11 @@ class Person extends \CEHD\App\XML\XML
     /**
      * @type string
      */
+    public $metaDescription;
+
+    /**
+     * @type string
+     */
     public $workingTitle;
 
     /**
@@ -387,6 +392,8 @@ class Person extends \CEHD\App\XML\XML
         $this->zip =                 $this->getFromProperty($person->zip);
 
         $this->departmentName =      $this->getFromProperty($person->departmentName);
+
+        $this->metaDescription =      $this->getFromProperty($person->metaDescription);
 
         $this->workingTitle =        $this->getFromProperty($person->workingTitle);
 
