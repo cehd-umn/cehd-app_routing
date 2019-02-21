@@ -26,8 +26,6 @@ People Tool asynchronous.
         var client = new app.httpClient();
         var $request = client.get(params);
         var page_title = document.title;
-        var page_metaDescription = document.meta_description;
-        var canURL = document.url;
 
         $request.done(function() {
             var person = client.getResults();
@@ -41,17 +39,8 @@ People Tool asynchronous.
                 }
             };
             document.title = person.nameFirstLast + " | " + page_title;
-            document.meta_description = person.metaDescription;
-            console.log(document.meta_description)
-
-            document.url = person.webPage;
-            var link = document.createElement('link');
-            link.setAttribute('rel', 'canonical');
-            link.setAttribute('href', document.url);
-            document.head.appendChild(link);
-            console.log(link)
-            console.log(document.url)
-
+            document.querySelector('meta[name="description"]').setAttribute("content", person.metaDescription);
+            document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
             renderer.init(template_params);
             renderer.render();
         });
