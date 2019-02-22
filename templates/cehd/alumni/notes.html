@@ -98,7 +98,7 @@
                             <article class="post-article-area" v-for="post in posts">
                                 <!--<a v-bind:href="post.link" target="_blank" rel="noopener"><h2 style="margin:1em 0 .25em;" v-html="post.title.rendered"></h2></a>-->
                                 <!--<span v-html="post.title.rendered)"></span>-->
-                                <span class="post-date">{{ post.date | date('n/j/y') }}</span>
+                                <span class="post-date">{{ post.date | date('F j, Y') }}</span>
                                 <span class="post-text" v-html="post.content.rendered"></span>
                                 <div class="bottomborder"></div>
                             </article>
