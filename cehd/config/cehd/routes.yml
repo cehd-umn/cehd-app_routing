@@ -125,6 +125,11 @@
   template: cehd/alumni/notes.html
   template_data:
     - section: alumni
+/alumni/notes2/:
+  publish: true
+  template: cehd/alumni/notes2.html
+  template_data:
+  - section: alumni
 /alumni/volunteer/:
   publish: true
   template: cehd/alumni/volunteer.html
