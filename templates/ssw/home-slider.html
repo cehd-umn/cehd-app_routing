@@ -1,6 +1,6 @@
 <div class="carousel" style="position: sticky;">
   <div id="slides">
-    <div class="slide showing">
+    <div id="0" class="slide showing">
       <div class="hero-image-container">
       <img class="hero-image" src="/ssw/images/SSW-Splash-canoe.jpg" alt="Canoeing on Bde Maka Ska">
       <div class="hero-overlay">
@@ -17,7 +17,7 @@
       </div>
       </div>
     </div>
-    <div class="slide">
+    <div id="1" class="slide">
       <div class="hero-image-container">
       <img class="hero-image" src="/ssw/images/SSW-Splash-historic.jpg" alt="History of School of Social Work">
       <div class="hero-overlay">
@@ -33,7 +33,7 @@
       </div>
       </div>
     </div>
-    <div class="slide">
+    <div id="2" class="slide">
       <div class="hero-image-container">
         <img class="hero-image" src="/ssw/images/SSW-Splash-panel.jpg" alt="SSW faculty and students participate in national conference">
         <div class="hero-overlay">
@@ -51,7 +51,14 @@
     </div>
     </div>
   <div class="buttons">
-    <button class="controls" id="previous">&lt;</button>
-    <button class="controls" id="next">&gt;</button>
+    <button class="controls left" id="previous">&lt;</button>
+    <div class="nav-thumbs">
+      <ul>
+        <li><a href="#" class="1 dot bullet-active" data-slide="0">1</a></li>
+        <li><a href="#" class="2 dot" data-slide="1">2</a></li>
+        <li><a href="#" class="3 dot" data-slide="2">3</a></li>
+      </ul>
+    </div>
+    <button class="controls right" id="next">&gt;</button>
   </div>
 </div>

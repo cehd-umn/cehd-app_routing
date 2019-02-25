@@ -379,7 +379,9 @@ width: 235px !important;
 
     .buttons {
         z-index: 5;
-        top: 390px;
+        top: 610px;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -409,7 +411,9 @@ width: 235px !important;
 
     .buttons {
         z-index: 5;
-        top: 450px;
+        top: 730px;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -431,7 +435,9 @@ width: 235px !important;
     }
     .buttons {
         z-index: 5;
-        top: 550px;
+        top: 815px;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -452,6 +458,12 @@ width: 235px !important;
         color: #333 !important;
         font-size: 20px;
         margin-top: 10px;
+    }
+    .buttons {
+        z-index: 5;
+        top: 920px;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -506,20 +518,20 @@ just for appearance; change whatever you want
 
 
 #previous {
-    float: left;
+    //float: left;
     background: transparent;
-    color: white;
-    border: 1px solid;
+    color: #333;
     margin-left: 2rem;
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
+    border: none;
 }
 #next {
-    float: right;
+    //float: right;
     background: transparent;
-    color: white;
-    border: 1px solid;
+    color: #333;
+    border: none;
     margin-right: 2rem;
     width: 50px;
     height: 50px;
@@ -530,3 +542,27 @@ just for appearance; change whatever you want
 #home-top-nav-link {
           margin-top: 5px;
       }
+
+.nav-thumbs {
+    clear: both;
+    display: inline-flex;
+}
+.nav-thumbs ul{list-style-type: none;}
+.nav-thumbs ul li {
+    display: inline-flex;
+    margin: 10px;
+}
+.nav-thumbs ul li a {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    /*float: left;*/
+    margin: 0 5px;
+    background-color: #333;
+    text-indent: -9999px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.nav-thumbs ul li a:hover, .nav-thumbs ul li a.active{background-color: #7a0019 !important;}
+.bullet-active{background-color: #7a0019 !important;}
