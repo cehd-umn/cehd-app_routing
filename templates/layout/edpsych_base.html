@@ -10,7 +10,9 @@
 
         {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
         {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
-        {% block extra_css %}{% endblock %}
+        {% block extra_css %}
+
+        {% endblock %}
     </head>
     <body>
         <header>
@@ -40,11 +42,12 @@
                 </div>
             </div><!-- /#umnheader -->
             <div class="container">
-                <div class="wordmark-container-right wordmark-container reverse-span-6">
-                    <a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
-                </div>
-                <div class="wordmark-container-left wordmark-container reverse-span-6">
-                    {% block section_wordmark %}{% endblock %}
+                <!--<div class="wordmark-container-right wordmark-container reverse-span-6">-->
+                    <!--<a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
+                <!--</div>-->
+                <div class="wordmark-container" style="padding-top: 30px;">
+                    <p class="parentunit"><a href="http://cehd.umn.edu/">College of Education and Human Development</a></p>
+                    <h1 class="sitename"><a href="{{ config.base_url }}/" title="School of Social Work Home" rel="home">School of Social Work</a></h1>
                 </div>
             </div>
         </header>
