@@ -84,22 +84,22 @@
   template: ssw/centers/mincava/index.html
   publish: true
   template_data:
-    - section: centers
+    - section: mincava
 /centers/mincava/completed-research/:
   template: ssw/centers/mincava/completed-research.html
   publish: true
   template_data:
-    - section: centers
+    - section: mincava
 /centers/mincava/current-research/:
   template: ssw/centers/mincava/current-research.html
   publish: true
   template_data:
-    - section: centers
+    - section: mincava
 /centers/mincava/history/:
   template: ssw/centers/mincava/history.html
   publish: true
   template_data:
-    - section: centers
+    - section: mincava
 /centers/youth-work-lab/:
   template: ssw/centers/youth-work-lab.html
   publish: true
@@ -163,11 +163,6 @@
 /graduate/faq/:
   template: ssw/graduate/faq.html
   publish: true
-  template_data:
-      - section: graduate
-/graduate/faq-test/:
-  template: ssw/graduate/faq-test.html
-  publish: false
   template_data:
       - section: graduate
 /graduate/msw-transfer-apply/:
@@ -240,11 +235,21 @@
   publish: true
   template_data:
       - section: graduate
+/graduate/integrated-behavioral-health/:
+  template: ssw/graduate/integrated-behavioral-health.html
+  publish: true
+  template_data:
+      - section: graduate
 /graduate/title-iv-e-child-welfare-training-fellowship/:
   template: ssw/graduate/title-iv-e-child-welfare-training-fellowship.html
   publish: true
   template_data:
       - section: graduate
+/graduate/weisdorf-oncology/:
+  template: ssw/graduate/weisdorf-oncology.html
+  publish: true
+  template_data:
+      - section: graduate      
 /graduate/msw-how-to-apply/:
   template: ssw/graduate/msw-how-to-apply.html
   publish: true
