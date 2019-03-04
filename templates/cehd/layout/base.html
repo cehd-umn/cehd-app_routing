@@ -111,10 +111,15 @@ text-transform: uppercase;
     text-transform: capitalize;
 }
 
+.wordmark-container {
+    padding: 25px 0 0 !important;
+    margin-bottom: -10px !important;
+}
 {{ inline_styles|raw }}
 </style>
 {% endblock %}
-{% block section_wordmark %}
+{% block college_wordmark %}
+<h1 class="sitename"><a href="{{ config.base_url }}/" title="College of Education and Human Development Home" rel="home">College of Education and Human Development</a></h1>
 {% endblock %}
 {% block nav %}
 <div class="section-header-container row">

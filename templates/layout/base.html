@@ -27,6 +27,8 @@
         {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+        <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+
         {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
         {% block extra_css %}{% endblock %}
     </head>
@@ -65,12 +67,12 @@
             <div class="section-header-container">
                 <div class="container">
                     <div id="wordmark-wrapper">
-                        <div class="wordmark-container-right wordmark-container half">
+                        <div class="wordmark-container">
                                 {% block college_wordmark %}
-                            <a href="/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>
+                            <!--<a href="/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
                             {% endblock %}
                         </div>
-                        <div class="wordmark-container-left wordmark-container half">
+                        <div class="wordmark-container">
                             {% block section_wordmark %}{% endblock %}
                         </div>
                     </div>
