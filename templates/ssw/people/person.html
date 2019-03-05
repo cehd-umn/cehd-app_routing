@@ -39,6 +39,8 @@ People Tool asynchronous.
         }
         };
             document.title = person.nameFirstLast + " | " + page_title;
+            $('link[rel="canonical"]').attr('href', person.webPage);
+            $('meta[name="description"]').attr('content', person.metaDescription);
             renderer.init(template_params);
             renderer.render();
         });

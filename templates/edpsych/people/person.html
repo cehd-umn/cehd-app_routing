@@ -40,6 +40,8 @@ People Tool asynchronous.
                 }
             };
             document.title = results.nameFirstLast + " | " + page_title;
+            $('link[rel="canonical"]').attr('href', results.webPage);
+            $('meta[name="description"]').attr('content', results.metaDescription);
             renderer.init(template_params);
             renderer.render();
         });
