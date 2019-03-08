@@ -31,8 +31,13 @@
                                     {%- for sub_nav_item in subsection -%}
                                     <li class="{%- if sub_nav_item.subsections -%}dropdown-header {%- endif -%}sub-nav-item"
                                         id="{{ top_level_item.name|lower|hyphenate }}-dropdown-subsection-{{ sub_nav_item.name|hyphenate }}">
+                                        {% if sub_nav_item.oref %}
+                                        <a class="sub-nav-item-link" href="{{ sub_nav_item.oref }}">{{
+                                            sub_nav_item.name }}</a>
+                                        {% else %}
                                         <a class="sub-nav-item-link" href="/ssw{{ sub_nav_item.href }}">{{
                                             sub_nav_item.name }}</a>
+                                        {%- endif -%}
                                         {%- if sub_nav_item.subsections -%}
                                         <ul id="{{ top_level_item.name|hyphenate }}-{{ sub_nav_item.name|hyphenate }}-list">
                                             {%- for sub_subsection in sub_nav_item.subsections -%}

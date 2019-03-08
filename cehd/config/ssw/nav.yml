@@ -21,8 +21,8 @@
               href: "/graduate/master-of-social-work/"
             - name: MEd in Youth Development Leadership
               href: "/graduate/youth-development-leadership/"
-            - name: CONTINUING EDUCATION
-              oref: "http://sswce.umn.edu/"
+      - name: CONTINUING EDUCATION
+        oref: "http://sswce.umn.edu/"
 - name: Research & Centers
   href: "/research-centers/"
   section: null
