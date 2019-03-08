@@ -22,7 +22,7 @@
             - name: MEd in Youth Development Leadership
               href: "/graduate/youth-development-leadership/"
             - name: CONTINUING EDUCATION
-              href: "http://sswce.umn.edu/"
+              oref: "http://sswce.umn.edu/"
 - name: Research & Centers
   href: "/research-centers/"
   section: null

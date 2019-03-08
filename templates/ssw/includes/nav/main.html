@@ -37,10 +37,17 @@
                                         <ul id="{{ top_level_item.name|hyphenate }}-{{ sub_nav_item.name|hyphenate }}-list">
                                             {%- for sub_subsection in sub_nav_item.subsections -%}
                                             {%- for sub_sub_nav_item in sub_subsection -%}
+                                            {% if sub_sub_nav_item.oref %}
                                             <li class="sub-nav-item">
-                                                <a class="sub-nav-item-link" href="/ssw{{ sub_sub_nav_item.href }}">{{
+                                                <a class="sub-nav-item-link b" href="{{ sub_sub_nav_item.oref }}">{{
                                                     sub_sub_nav_item.name }}</a>
                                             </li>
+                                            {% else %}
+                                            <li class="sub-nav-item">
+                                                <a class="sub-nav-item-link b" href="/ssw{{ sub_sub_nav_item.href }}">{{
+                                                    sub_sub_nav_item.name }}</a>
+                                            </li>
+                                            {%- endif -%}
                                             {%- endfor -%}
                                             {%- endfor -%}
                                         </ul><!-- // sub sub nav -->
