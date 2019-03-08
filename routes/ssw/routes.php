@@ -90,6 +90,17 @@ foreach ($routes as $route => $route_info) {
 
 
 $app->get("/people/{internet_id}/", SSWApp::class . ":personPage");
+
+
+// $app->get('/continuing-education', function ($req, $res, $args) {
+//    return $res->withStatus(302)->withHeader('Location', 'http://sswce.umn.edu/');
+//  });
+
+ $app->get('/continuing-education', function ($req, $res, $args) {
+  $url = 'http://sswce.umn.edu';
+  return $res->withRedirect($url);
+});
+
 // $app->get("/data/people/", SSWApp::class . ":personExtraData");
 // $app->get("/search/", SSWApp::class . ":searchPage");
 
