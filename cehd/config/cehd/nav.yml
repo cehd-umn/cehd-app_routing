@@ -106,7 +106,7 @@
         href: "/topics/"
       - name: Funding Opportunities
         href: "/research/funding/"
-      - name: Research Methodology Consulting Center 
+      - name: Research Methodology Consulting Center
         href: "/research/consulting/"
       - name: Research Day
         href: "/research/research-day/"
@@ -159,8 +159,8 @@
           -
             - name: Events
               href: "/giving/wplc/events/"
-            - name: Awards
-              href: "/giving/wplc/awards/"
+            # - name: Awards
+            #   href: "/giving/wplc/awards/"
             - name: Join
               href: "/giving/wplc/join/"
 - name: Alumni
