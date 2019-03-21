@@ -11,9 +11,13 @@
     background-color: #fff;
     top: -44px;
   }
-  #previous, #next, .dot {
+
+  #previous,
+  #next,
+  .dot {
     color: #777;
   }
+
   .nav-thumbs ul li a {
     background-color: #777;
   }
@@ -85,10 +89,10 @@
       <div class="third">
         <h2>Recent news</h2>
         <div id="news-container" class="loader-container" aria-live="polite" data-news-app {# this is how the
-          JavaScript below knows we want to pull in a news feed #} data-base-url="http://news.cehd.umn.edu/" {# The url
+          JavaScript below knows we want to pull in a news feed #} data-base-url="https://news.cehd.umn.edu/" {# The url
           of the website with an RSS feed #} data-feed-path="category/departments/social-work/feed" {# The path for the
           feed at the site above #} data-target-element-selector="#news-container" {# The element selector for the feed
-          html #} data-template-path="/assets/dist/views/ssw/newsfeed/" {# The path the the Nunjucks template #}
+          html #} data-template-path="/assets/dist/views/ssw/newsfeed/" {# The path thes the Nunjucks template #}
           data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="3" {# How many stories to
           display #}>
           <div class="loader">
@@ -120,35 +124,39 @@
 
   <div class="row emphasis margin-top-1">
     <div class="container">
-        <h2 class="text-center">Contact information</h2>
+      <h2 class="text-center">Contact information</h2>
+    </div>
+
+
+    <div class="container">
+
+      <p class="text-center">For general questions about our department, contact:</p>
+      <div class="span-3">
+        <p><strong>Undergraduate studies</strong><br /> <a href="/people/pavlo002/">Cindy
+            Pavlowski</a><br />Senior Academic Advisor <br />612-624-4290 <br /><a
+            href="mailto:pavlo002@umn.edu">pavlo002@umn.edu</a></p>
+      </div>
+      <div class="span-3">
+        <p><strong>Graduate studies</strong><br /> <a href="/people/mbcase/">MacKenzie
+            Case</a> <br />Graduate Program Coordinator <br />612-624-4258 <br /> <a
+            href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
       </div>
 
 
-
-        <p class="text-center">For general questions about our department, contact:</p>
-        <div class="span-3">
-          <p><strong>Undergraduate studies</strong><br /> <a href="/people/pavlo002/">Cindy
-              Pavlowski</a><br />Senior Academic Advisor <br />612-624-4290 <br /><a href="mailto:pavlo002@umn.edu">pavlo002@umn.edu</a></p>
-        </div>
-        <div class="span-3">
-          <p><strong>Graduate studies</strong><br /> <a href="/people/mbcase/">MacKenzie
-              Case</a> <br />Graduate Program Coordinator <br />612-624-4258 <br /> <a href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
-        </div>
+      <div class="span-3">
+        <p><strong>MSW Admissions</strong><br /> 612-624-4905<br />
+          <a href="mailto:swadmis@umn.edu">swadmis@umn.edu</a></p>
+      </div>
 
 
-        <div class="span-3">
-          <p><strong>MSW Admissions</strong><br /> 612-624-4905<br />
-            <a href="mailto:swadmis@umn.edu">swadmis@umn.edu</a></p>
-        </div>
-
-
-        <div class="span-3">
-          <p><strong>Main office</strong><br /> 612-625-1220</p>
-        </div>
-
+      <div class="span-3">
+        <p><strong>Main office</strong><br /> 612-625-1220</p>
       </div>
     </div>
+
   </div>
+</div>
+</div>
 
 </div>
 
