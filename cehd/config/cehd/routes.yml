@@ -1494,6 +1494,11 @@
   template: cehd/global/scholars.html
   template_data:
     - section: global
+/global/scholars-2019/:
+  publish: false
+  template: cehd/global/scholars-2019.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
@@ -2954,6 +2959,11 @@
   template: cehd/trio/upward-bound/apply.html
   template_data:
     - section: trio
+/trio/upward-bound/choerap/:
+  publish: true
+  template: cehd/trio/upward-bound/choerap.html
+  template_data:
+    - section: trio
 /trio/upward-bound/hollenback/:
   publish: true
   template: cehd/trio/upward-bound/hollenback.html
@@ -2982,6 +2992,11 @@
 /trio/upward-bound/wilkinson/:
   publish: true
   template: cehd/trio/upward-bound/wilkinson.html
+  template_data:
+    - section: trio
+/trio/upward-bound/yang/:
+  publish: true
+  template: cehd/trio/upward-bound/yang.html
   template_data:
     - section: trio
 /undergraduate/:

@@ -303,7 +303,7 @@ Family and Community Engagement:
     - Psychology, Counseling, and Social Work
 Family Financial Studies:
   meta: null
-  publish: true
+  publish: false
   links:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/fsos/programs/undergraduate/minor.html
@@ -553,8 +553,6 @@ Prevention Science:
   meta: null
   publish: true
   links:
-    - title: Masters
-      href: http://www.cehd.umn.edu/fsos/programs/masters/prev-sci/index.html
     - title: Graduate Minor
       href: http://www.cehd.umn.edu/fsos/programs/phd/prev-sci-minor.html
   description: The scientific study of systematic efforts to reduce the incidence of unhealthy or maladaptive behavior, and to promote health and adaptive behavior in populations across the life span.

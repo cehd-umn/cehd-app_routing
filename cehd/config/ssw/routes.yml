@@ -75,11 +75,6 @@
   publish: true
   template_data:
     - section: centers
-/centers/youth-work-lab/:
-  template: ssw/centers/youth-work-lab.html
-  publish: true
-  template_data:
-    - section: centers
 /centers/mincava/:
   template: ssw/centers/mincava/index.html
   publish: true
@@ -105,6 +100,11 @@
   publish: true
   template_data:
     - section: centers
+/centers/incommunity/:
+  template: ssw/centers/incommunity.html
+  publish: true
+  template_data:
+    - section: centers    
 /academics/:
   template: ssw/academics/index.html
   publish: true
