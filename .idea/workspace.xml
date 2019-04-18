@@ -65,7 +65,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1952" />
+          <entry key="html" value="1954" />
           <entry key="js" value="482" />
           <entry key="php" value="32" />
           <entry key="scss" value="357" />
@@ -74,7 +74,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1952" />
+          <entry key="HTML" value="1954" />
           <entry key="JavaScript" value="482" />
           <entry key="PHP" value="32" />
           <entry key="SCSS" value="357" />
@@ -106,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cehd/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+            <state relative-caret-position="318">
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
               <folding>
                 <element signature="e#9232#9251#0" expanded="true" />
               </folding>
@@ -546,12 +546,12 @@
       <workItem from="1551797695832" duration="3635000" />
       <workItem from="1554235159806" duration="1410000" />
       <workItem from="1554385592690" duration="1805000" />
-      <workItem from="1555599380156" duration="3123000" />
+      <workItem from="1555599380156" duration="3800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127329000" />
+    <option name="totallyTimeSpent" value="128006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4480" y="0" width="1920" height="1080" extended-state="0" />
@@ -571,7 +571,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3693239" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.37235117" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -869,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/cehd/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        <state relative-caret-position="318">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
           <folding>
             <element signature="e#9232#9251#0" expanded="true" />
           </folding>
