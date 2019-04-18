@@ -42,6 +42,16 @@
         top: 50%;
     }
 
+    .donatenowbtn {
+        background-color: #ffde7a !important;
+        color: #7a0019 !important;
+        margin: 0 !important;
+    }
+    .donatenowp {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
     .button:active,
     .button:focus,
     .button:hover {
@@ -276,7 +286,14 @@
         }
     }
 
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 1201px) {
+        .donatenowrow {
+            margin-top: -85px;
+        }
+    }
+
+
+        @media all and (min-width: 768px) {
         .vertical-center {
             align-items: center;
             display: flex;
@@ -346,6 +363,30 @@
         margin-right: 0;
     }
 </style>
+
+<style>
+
+    .donatenowrow {
+        margin-top: -50px;
+    }
+    @media all and (min-width: 768px) {
+        .donatenowrow {
+            margin-top: -50px;
+        }
+    }
+    @media all and (min-width: 1025px) {
+        .donatenowrow {
+            margin-top: -105px;
+        }
+    }
+    @media all and (min-width: 1201px) {
+        .donatenowrow {
+            margin-top: -85px;
+        }
+    }
+
+</style>
+
 {% endblock %}
 {% block main_content %}
 <div class="row">
@@ -375,8 +416,16 @@
         </div>
     </div><!-- close container -->
 </div><!-- close row -->
+
+
 {% endblock %}
 {% block main_aside %}
+
+<div class="row donatenowrow">
+    <div class="container" style="padding: 0;">
+        <p class="donatenowp"><a href="" class="button center simple maroon donatenowbtn to-upper">Donate Now!</a></p>
+    </div>
+</div>
 <aside class="row stats margin-bottom-24">
     <div class="container">
         <div class="third">
