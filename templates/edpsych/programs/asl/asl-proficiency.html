@@ -1,0 +1,28 @@
+{% extends "edpsych/layout/asl.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{% set page_title = "American Sign Language proficiency" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+      <section>
+            <h1 class="text-center">ASL classes and proficiency levels</h1>
+            <div class="half">
+              <h2>ASL 1 and 2: ASL 1701-1702</h2>
+              <p>By the end of ASL 2, students in our ASL Program should be able to understand, listen, and speak at a level comparable to that of a speaker within the range of low-novice to high-novice as defined by the ACTFL Guidelines (American Council on the Teaching of Foreign Languages) and receive a rating of Level 0 to Level 1+ as defined by the ASLPI (American Sign Language Proficiency Interview).</p>
+            </div>
+            <div class="half">
+              <h2>ASL 3 and 4: ASL 3703-3704</h2>
+              <p>By the end of the ASL 4, students in our ASL Program should be able to understand, listen, and speak at a level comparable to that of a speaker within the range of low-intermediate to high-intermediate as defined by the ACTFL Guidelines (American Council on the Teaching of Foreign Languages) and receive a rating of Level 2 to 2+ as defined by the ASLPI (American Sign Language Proficiency Interview).</p>
+            </div>
+        </section>
+        <section class="twothirds feature">
+          <div align="middle">
+          <img src="{{ config.asset_base }}/dist/images/Programs/ASL/proficiency.png" alt="Psych foundations student accept their awards." >
+          </div>
+          <p>Students are encouraged to take the <a href="https://www.gallaudet.edu/the-american-sign-language-proficiency-interview/aslpi">American Sign Language Proficiency (ASLPI) Interview</a> to determine where they are in terms of ‘overall’ proficiency level on a ‘0-5’ rating scale. ASLPI is a face-to-face language evaluation assessment used to determine a person’s language proficiency.  For more information, please visit the American Sign Language Proficiency Interview (ASLPI)’s <a href="https://www.gallaudet.edu/the-american-sign-language-proficiency-interview/aslpi">webpage.</a></p>
+        </section>
+
+  </div>
+</div>
+{% endblock %}

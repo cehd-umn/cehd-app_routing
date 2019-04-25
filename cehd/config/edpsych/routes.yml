@@ -294,6 +294,12 @@
     template_data:
         meta_description: "A guide for students taking ASL placement tests and registering for classes."
         section: programs-degrees
+/edpsych/programs/asl/asl-profiency/:
+    publish: true
+    template: edpsych/programs/asl/asl-proficiency.html
+    template_data:
+        meta_description: "Learn more about ASL proficiency."
+        section: programs-degrees
 /edpsych/programs/cspp/:
     publish: true
     template: edpsych/programs/cspp/index.html

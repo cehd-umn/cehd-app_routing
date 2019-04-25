@@ -1494,11 +1494,6 @@
   template: cehd/global/scholars.html
   template_data:
     - section: global
-/global/scholars-2019/:
-  publish: false
-  template: cehd/global/scholars-2019.html
-  template_data:
-    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html
@@ -1909,9 +1904,19 @@
   template: cehd/teaching/co-teaching/pairs/triad.html
   template_data:
     - section: teaching
+/teaching/partner/network/:
+  publish: true
+  template: cehd/teaching/partner/network.html
+  template_data:
+    - section: teaching
 /teaching/partner/network-day/:
   publish: true
   template: cehd/teaching/partner/network-day.html
+  template_data:
+    - section: teaching
+/teaching/partner/spring-summit/:
+  publish: true
+  template: cehd/teaching/partner/spring-summit.html
   template_data:
     - section: teaching
 /teaching/workshop/brown-bag/:
