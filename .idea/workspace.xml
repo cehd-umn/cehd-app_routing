@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/cehd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/people/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/people/person.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/assets/dist/js/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +19,7 @@
     <session id="1705111694">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -28,23 +29,23 @@
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="config" value="2" />
           <entry key="css" value="3" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="htaccess" value="1" />
-          <entry key="html" value="129" />
+          <entry key="html" value="140" />
           <entry key="jpg" value="1" />
           <entry key="js" value="14" />
           <entry key="json" value="2" />
-          <entry key="php" value="42" />
+          <entry key="php" value="44" />
           <entry key="scss" value="14" />
           <entry key="yml" value="69" />
         </counts>
@@ -52,12 +53,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="129" />
+          <entry key="HTML" value="140" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="14" />
-          <entry key="PHP" value="42" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PHP" value="44" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="SCSS" value="14" />
           <entry key="YAML" value="69" />
           <entry key="htaccess" value="1" />
@@ -65,7 +66,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1990" />
+          <entry key="html" value="1992" />
           <entry key="js" value="482" />
           <entry key="php" value="32" />
           <entry key="scss" value="357" />
@@ -74,7 +75,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1990" />
+          <entry key="HTML" value="1992" />
           <entry key="JavaScript" value="482" />
           <entry key="PHP" value="32" />
           <entry key="SCSS" value="357" />
@@ -85,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/cehd/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/cehd/people/person.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="429" column="193" selection-start-line="429" selection-start-column="193" selection-end-line="429" selection-end-column="193" />
+            <state relative-caret-position="264">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -97,22 +98,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/ssw/people/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="550">
               <caret line="53" column="24" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ssw/index.html">
+        <entry file="file://$PROJECT_DIR$/templates/ssw/people/person.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="226">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -122,51 +123,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cehd/people/person.html">
+        <entry file="file://$PROJECT_DIR$/templates/edpsych/people/person.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="391">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cehd/config/ssw/nav.yml">
+        <entry file="file://$PROJECT_DIR$/templates/edpsych/people/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-            </state>
+            <state relative-caret-position="-674" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cehd/includes/nav/content/news-events.html">
+        <entry file="file://$PROJECT_DIR$/public/edpsych/assets/dist/views/edpsych/people/person.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/dist/views/olpd/people/person-page.html">
+        <entry file="file://$PROJECT_DIR$/public/edpsych/assets/dist/views/edpsych/people/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/cehd/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="430">
+              <caret line="33" column="80" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/src/js/people/index.js">
+        <entry file="file://$PROJECT_DIR$/cehd/app/CEHD/CEHDApp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/src/js/people/people.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+            <state relative-caret-position="163">
+              <caret line="187" column="30" selection-start-line="187" selection-end-line="188" />
             </state>
           </provider>
         </entry>
@@ -216,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" />
         <option value="$PROJECT_DIR$/public/assets/dist/views/ssw/about/news.html" />
         <option value="$PROJECT_DIR$/templates/ssw/undergraduate/index.html" />
         <option value="$PROJECT_DIR$/templates/ssw/research-centers.html" />
@@ -239,7 +233,6 @@
         <option value="$PROJECT_DIR$/public/assets/extra.css" />
         <option value="$PROJECT_DIR$/public/edpsych/assets/dist/views/edpsych/people/person.html" />
         <option value="$PROJECT_DIR$/public/assets/dist/views/cehd/people/person.html" />
-        <option value="$PROJECT_DIR$/templates/cehd/people/person.html" />
         <option value="$PROJECT_DIR$/public/assets/dist/views/cehd/newsfeeds/alumni-notes.html" />
         <option value="$PROJECT_DIR$/templates/cehd/alumni/notes2.html" />
         <option value="$PROJECT_DIR$/templates/cehd/alumni/notes.html" />
@@ -256,7 +249,6 @@
         <option value="$PROJECT_DIR$/cehd/config/ssw/redirects_camelcase.yml" />
         <option value="$PROJECT_DIR$/cehd/config/ssw/redirects.yml" />
         <option value="$PROJECT_DIR$/templates/cehd/layout/base.html" />
-        <option value="$PROJECT_DIR$/templates/ssw/people/person.html" />
         <option value="$PROJECT_DIR$/templates/edpsych/people/person.html" />
         <option value="$PROJECT_DIR$/templates/layout/edpsych_base.html" />
         <option value="$PROJECT_DIR$/public/assets/dist/views/olpd/people/person-page.html" />
@@ -267,6 +259,9 @@
         <option value="$PROJECT_DIR$/templates/layout/base.html" />
         <option value="$PROJECT_DIR$/templates/ssw/people/index.html" />
         <option value="$PROJECT_DIR$/templates/cehd/index.html" />
+        <option value="$PROJECT_DIR$/templates/ssw/people/person.html" />
+        <option value="$PROJECT_DIR$/templates/cehd/people/person.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -348,14 +343,14 @@
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="cehd" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="cehd" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="ssw" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="CEHD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
@@ -366,18 +361,67 @@
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,6 +429,53 @@
               <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="cehd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="about" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="directory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cehd" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="edpsych" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cehd-app_routing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cehd-app_routing" type="b2602c69:ProjectViewProjectNode" />
@@ -469,18 +560,19 @@
       <workItem from="1554235159806" duration="1410000" />
       <workItem from="1554385592690" duration="1805000" />
       <workItem from="1555599380156" duration="4817000" />
-      <workItem from="1556221443530" duration="799000" />
+      <workItem from="1556221443530" duration="1255000" />
+      <workItem from="1556727908103" duration="1594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129822000" />
+    <option name="totallyTimeSpent" value="131872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24892934" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28907922" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -494,7 +586,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.37235117" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.38345107" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -510,43 +602,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/ssw/home-slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/src/js/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/olpd/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cehd/config/cehd/redirects.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/olpd/undergraduate-programs/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/olpd/graduate-programs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edpsych/programs/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssw/alumni.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -638,13 +693,6 @@
     <entry file="file://$PROJECT_DIR$/templates/cehd/layout/sorter2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssw/people/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout/edpsych_base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -669,13 +717,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/edpsych/layout/section.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edpsych/people/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/olpd/people/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -731,17 +772,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/templates/cehd/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="385">
+          <caret line="429" column="193" selection-start-line="429" selection-start-column="193" selection-end-line="429" selection-end-column="193" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cehd/people/person.html">
+    <entry file="file://$PROJECT_DIR$/templates/cehd/includes/nav/content/news-events.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cehd/about/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="320">
+          <caret line="99" column="80" selection-start-line="99" selection-start-column="80" selection-end-line="99" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ssw/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -752,12 +803,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cehd/includes/nav/content/news-events.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/dist/views/olpd/people/person-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
+        <state relative-caret-position="526">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
@@ -776,24 +824,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cehd/directory/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/cehd/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="33" column="80" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cehd/app/CEHD/CEHDApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="187" column="30" selection-start-line="187" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/edpsych/assets/dist/views/edpsych/people/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/edpsych/assets/dist/views/edpsych/people/person.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edpsych/people/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edpsych/people/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ssw/people/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="550">
           <caret line="53" column="24" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssw/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/ssw/people/person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state relative-caret-position="226">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cehd/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/cehd/people/person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="429" column="193" selection-start-line="429" selection-start-column="193" selection-end-line="429" selection-end-column="193" />
+        <state relative-caret-position="264">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

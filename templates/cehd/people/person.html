@@ -17,7 +17,7 @@ People Tool asynchronous.
     (function() {
         "use strict";
         var params = {
-            url: "/services/people-tool/person/",
+            url: "https://www.cehd.umn.edu/services/people-tool/person/",
             data: {
                 internetId: "{{ internet_id }}"
             }
@@ -39,9 +39,9 @@ People Tool asynchronous.
                 }
             };
             document.title = person.nameFirstLast + " | " + page_title;
-            document.querySelector('meta[name="description"]').setAttribute("content", person.metaDescription);
-            document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
-            renderer.init(template_params);
+            // document.querySelector('meta[name="description"]').setAttribute("content",  /person.metaDescription);
+            // document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
+            // renderer.init(template_params);
             renderer.render();
         });
     })();
