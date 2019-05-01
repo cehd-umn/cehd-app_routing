@@ -38,11 +38,11 @@ People Tool asynchronous.
                     config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
                 }
             };
-            // document.title = person.nameFirstLast + " | " + page_title;
+            document.title = person.nameFirstLast + " | " + page_title;
             // document.querySelector('meta[name="description"]').setAttribute("content",  /person.metaDescription);
             // document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
-            renderer.init(template_params);
-            // renderer.render();
+            // renderer.init(template_params);
+            renderer.render(template_params);
         });
     })();
 </script>
