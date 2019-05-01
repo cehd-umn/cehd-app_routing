@@ -39,18 +39,29 @@ Tool asynchronous. #}
 
             document.title = person.nameFirstLast + " | " + page_title;
 
-            var m = document.createElement('meta');
-            m.name = 'description';
+            var md = document.createElement('meta');
+            md.name = 'description';
             if (person.metaDescription == null) {
-                m.content = 'This tutorial has some helpful information for you, if you want to track how many hits come from browsers where JavaScript has been disabled.';
+                md.content = '';
             } else {
-                m.content = person.metaDescription;
+                md.content = person.metaDescription;
             }
-                document.head.appendChild(m);
-            console.log(m);
+                document.head.appendChild(md);
 
+            var ml = document.createElement('link');
+            ml.rel = 'canonical';
+            if (person.webPage == null) {
+            ml.href = window.location;
+            } else {
+                ml.href = person.webPage;
+            }
+
+            document.head.appendChild(ml);
+
+            console.log(md);
+            console.log(ml);
             // document.querySelector('meta[name="description"]').setAttribute("content", person.metaDescription);
-            document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
+            // document.querySelector('link[rel=\'canonical\']').setAttribute("content", person.webPage);
             renderer.init(template_params);
             renderer.render();
         });
