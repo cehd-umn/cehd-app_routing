@@ -12,9 +12,12 @@
     param: tg
     value: 316
   titles:
+    - x500: turne047
+      section: Counseling & student personnel psychology (CSPP)
+      title: PhD clinical training director
     - x500: smcconne
       section: Counseling & student personnel psychology (CSPP)
-      title: program coordinator & PhD clinical training director
+      title: program coordinator
     - x500: mohrtman
       section: Counseling & student personnel psychology (CSPP)
       title: MA clinical training director
