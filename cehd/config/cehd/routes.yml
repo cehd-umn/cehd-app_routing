@@ -795,6 +795,116 @@
   template: cehd/alumni/rising/2018/witmer.html
   template_data:
     - section: alumni
+/alumni/rising/2019/calhoun/:
+  publish: false
+  template: cehd/alumni/rising/2019/calhoun.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/casey/:
+  publish: false
+  template: cehd/alumni/rising/2019/casey.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/chidthachack-grande/:
+  publish: false
+  template: cehd/alumni/rising/2019/chidthachack-grande.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/cottledge/:
+  publish: false
+  template: cehd/alumni/rising/2019/cottledge.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/doering/:
+  publish: false
+  template: cehd/alumni/rising/2019/doering.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/elmeski/:
+  publish: false
+  template: cehd/alumni/rising/2019/elmeski.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/funk/:
+  publish: false
+  template: cehd/alumni/rising/2019/funk.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/galvin/:
+  publish: false
+  template: cehd/alumni/rising/2019/galvin.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/gilchrist/:
+  publish: false
+  template: cehd/alumni/rising/2019/gilchrist.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/gudjonsson/:
+  publish: false
+  template: cehd/alumni/rising/2019/gudjonsson.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/hoelscher/:
+  publish: false
+  template: cehd/alumni/rising/2019/hoelscher.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/holmes/:
+  publish: false
+  template: cehd/alumni/rising/2019/holmes.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/jang/:
+  publish: false
+  template: cehd/alumni/rising/2019/jang.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/kedrowski/:
+  publish: false
+  template: cehd/alumni/rising/2019/kedrowski.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/lupinek/:
+  publish: false
+  template: cehd/alumni/rising/2019/lupinek.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/melin/:
+  publish: false
+  template: cehd/alumni/rising/2019/melin.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/petree/:
+  publish: false
+  template: cehd/alumni/rising/2019/petree.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/ridgeway/:
+  publish: false
+  template: cehd/alumni/rising/2019/ridgeway.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/thao/:
+  publish: false
+  template: cehd/alumni/rising/2019/thao.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/williamsen/:
+  publish: false
+  template: cehd/alumni/rising/2019/williamsen.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/yang/:
+  publish: false
+  template: cehd/alumni/rising/2019/yang.html
+  template_data:
+    - section: alumni
+/alumni/rising/2019/yeboah/:
+  publish: false
+  template: cehd/alumni/rising/2019/yeboah.html
+  template_data:
+    - section: alumni
 /alumni/society/:
   publish: true
   template: cehd/alumni/society/index.html
@@ -1146,7 +1256,7 @@
   template_data:
     - section: commencement
 /commencement/guests/:
-  publish: true
+  publish: false
   template: cehd/commencement/guests.html
   template_data:
     - section: commencement
@@ -3097,11 +3207,6 @@
 /undergraduate/georgeson/:
   publish: true
   template: cehd/undergraduate/georgeson.html
-  template_data:
-    - section: undergraduate
-/undergraduate/hammell/:
-  publish: true
-  template: cehd/undergraduate/hammell.html
   template_data:
     - section: undergraduate
 /undergraduate/honors/:
