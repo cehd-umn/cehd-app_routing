@@ -454,6 +454,8 @@ Learning Technologies:
   meta: null
   publish: true
   links:
+    - title: Undergraduate Minor
+      href: https://www.cehd.umn.edu/ci/academics/LearningTechnologies/LT-minor.html
     - title: Masters
       href: http://www.cehd.umn.edu/ci/academics/LearningTechnologies/PhD-MA-LT.html
     - title: Ph.D.

@@ -740,6 +740,12 @@
     template_data:
         meta_description: "Geoffrey Maruyama's lab focuses on achievement processes in schools and developing effective approaches to address social-emotional needs of elementary and middle school students. Current projects of this lab include the Social Emotional Development Lab and the First in the World Grant."
         section: research
+/edpsych/research/labs/mccomas/:
+    publish: true
+    template: edpsych/research/labs/mccomas.html
+    template_data:
+        meta_description: "Jennifer McComas' lab conducts functional behavior assessment and treatment of challenging behavior of individuals with intellectual and neurodevelopmental disorders as well as assessment and instructional support related to Augmentative and Alternative Communication (AAC) for individuals who are non-vocal, including those with Rett syndrome."
+        section: research
 /edpsych/research/labs/mcconnell/:
     publish: true
     template: edpsych/research/labs/mcconnell.html
