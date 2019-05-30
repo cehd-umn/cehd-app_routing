@@ -1305,6 +1305,11 @@
   template: cehd/events/block-party.html
   template_data:
     - section: events
+/events/collins/:
+  publish: true
+  template: cehd/events/collins.html
+  template_data:
+    - section: events
 /events/faculty-students-social/:
   publish: true
   template: cehd/events/faculty-student-social.html
@@ -3272,6 +3277,11 @@
 /undergraduate/student-services/:
   publish: true
   template: cehd/undergraduate/student-services.html
+  template_data:
+    - section: undergraduate
+/undergraduate/stumme-berry/:
+  publish: true
+  template: cehd/undergraduate/stumme-berry.html
   template_data:
     - section: undergraduate
 /undergraduate/sunshine/:
