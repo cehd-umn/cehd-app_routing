@@ -65,6 +65,11 @@
   publish: true
   template_data:
     - section: travel
+/student-travel-grant-draft/:
+  template: olpd/student-travel-grant.html
+  publish: true
+  template_data:
+    - section: travel
 /research-and-engagement/:
   template: olpd/research-and-engagement/index.html
   publish: true

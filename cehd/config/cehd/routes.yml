@@ -3259,11 +3259,6 @@
   template: cehd/undergraduate/riley.html
   template_data:
     - section: undergraduate
-/undergraduate/sawyer/:
-  publish: true
-  template: cehd/undergraduate/sawyer.html
-  template_data:
-    - section: undergraduate
 /undergraduate/shaw/:
   publish: true
   template: cehd/undergraduate/shaw.html
@@ -3302,11 +3297,6 @@
 /undergraduate/vue/:
   publish: true
   template: cehd/undergraduate/vue.html
-  template_data:
-    - section: undergraduate
-/undergraduate/whittaker/:
-  publish: true
-  template: cehd/undergraduate/whittaker.html
   template_data:
     - section: undergraduate
 /undergraduate/yang/:

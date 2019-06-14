@@ -56,15 +56,35 @@
   template_data:
     - section: image
 /alumni/:
-  template: ssw/alumni.html
+  template: ssw/alumni/index.html
   publish: true
   template_data:
     - section: alumni
-/alumni/:
-  template: ssw/alumni-copy.html
-  publish: false
+/alumni/schoeppner/:
+  template: ssw/alumni/schoeppner.html
+  publish: true
   template_data:
-    - section: alumni    
+    - section: alumni
+/alumni/jordahl/:
+  template: ssw/alumni/jordahl.html
+  publish: true
+  template_data:
+    - section: alumni
+/alumni/sugrue/:
+  template: ssw/alumni/sugrue.html
+  publish: true
+  template_data:
+    - section: alumni
+/alumni/trumanue/:
+  template: ssw/alumni/trumanue.html
+  publish: true
+  template_data:
+    - section: alumni
+/alumni/walz/:
+  template: ssw/alumni/walz.html
+  publish: true
+  template_data:
+    - section: alumni
 /articles/experiential-learning/:
   template: ssw/articles/experiential-learning.html
   publish: true
