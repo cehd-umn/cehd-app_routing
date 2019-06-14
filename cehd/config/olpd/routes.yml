@@ -66,7 +66,7 @@
   template_data:
     - section: travel
 /student-travel-grant-draft/:
-  template: olpd/student-travel-grant.html
+  template: olpd/student-travel-grant-draft.html
   publish: true
   template_data:
     - section: travel
