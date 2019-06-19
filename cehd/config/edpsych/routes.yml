@@ -372,6 +372,12 @@
     template_data:
         meta_description: "Make improvements in education through psychology, science, and technology. As a student in the program, you’ll study the psychological processes critical to education."
         section: programs-degrees
+/edpsych/programs/foundations/minor/:
+    publish: true
+    template: edpsych/programs/foundations/minor.html
+    template_data:
+        meta_description: "Earn your graduate minor in educational psychology with an emphasis in psychological foundations of education. Coursework emphasizes on cognitive and social-emotional development, including high-level cognition and factors shaping and enhancing learning throughout the lifespan, and the development, deployment, and evaluation of educational technologies."
+        section: programs-degrees
 /edpsych/programs/foundations/social-psych/:
     publish: true
     template: edpsych/programs/foundations/social-psych.html
