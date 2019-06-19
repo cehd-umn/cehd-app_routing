@@ -72,10 +72,6 @@
   query:
     param: tg
     value: 344
-- section: College readiness consortium
-  query:
-    param: tg
-    value: 347
 - section: Administrative staff
   query:
     param: tg
