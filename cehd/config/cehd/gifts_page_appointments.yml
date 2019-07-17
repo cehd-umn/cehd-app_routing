@@ -22,6 +22,16 @@
       department: http://www.cehd.umn.edu/ssw/
 -
   - heading: Emma M. Birkmaier Professor in Educational Leadership
+    name: Amanda Sullivan
+    titles:
+      - Professor
+    department: Department of Education Psychology
+    term: 7/01/19-6/30/22
+    urls:
+      headshot: /assets/images/giving/appointments/SullivanA-2011.jpg
+      profile: https://www.cehd.umn.edu/edpsych/people/asulliva/
+      department: http://www.cehd.umn.edu/edpsy/
+  - heading: Emma M. Birkmaier Professor in Educational Leadership
     name: Frank Symons
     titles:
       - Associate Dean for Research and Policy
@@ -31,6 +41,7 @@
       headshot: /assets/images/giving/appointments/SymonsF-2005.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/symon007/
       department: http://www.cehd.umn.edu/edpsy/
+-
   - heading: Guy Bond Chair in Reading
     name: Deborah Dillon
     titles:
@@ -41,7 +52,6 @@
       headshot: /assets/images/giving/appointments/DillonD-2005.jpg
       profile: http://www.cehd.umn.edu/people/dillon/
       department: http://www.cehd.umn.edu/ci/
--
   - heading: Guy Bond Chair in Reading
     name: Panayiota Kendeou
     titles:
@@ -52,6 +62,7 @@
       headshot: /assets/images/giving/appointments/kendeou_2.jpeg
       profile: http://www.cehd.umn.edu/edpsych/people/kend0040/
       department: http://www.cehd.umn.edu/edpsych/
+-
   - heading: Campbell Leadership Chair in Education and Human Development
     name: Michael Rodriguez
     titles:
@@ -62,7 +73,6 @@
       headshot: /assets/images/giving/appointments/RodriguezM-2003.jpg
       profile: http://www.cehd.umn.edu/edpsych/people/mcrdz/
       department: http://www.cehd.umn.edu/edpsych/
--
   - heading: Gamble-Skogmo Land Grant Chair in Child Welfare and Youth Policy
     name: Wendy Haight
     titles:
@@ -73,6 +83,7 @@
       headshot: /assets/images/giving/appointments/HaightW-2011.jpg
       profile: http://www.cehd.umn.edu/ssw/people/profiles/haightw.html
       department: http://www.cehd.umn.edu/ssw/
+-
   - heading: Hellervik Endowed Chair in Leadership and Adult Career Development
     name: Alexandre Ardichvili
     titles:
@@ -83,17 +94,27 @@
       headshot: /assets/images/giving/appointments/ArdichviliA-2013.jpg
       profile: http://www.cehd.umn.edu/olpd/people/faculty/ardichvili.asp
       department: http://www.cehd.umn.edu/olpd/
+  - heading: Bonnie Westby Huebner Endowed Chair in Education and Technology
+    name: Bodong Chen
+    titles:
+      - Assistant Professor
+    department: Department of Curriculum and Instruction
+    term: 7/01/19-6/30/22
+    urls:
+      headshot: /assets/images/giving/appointments/ChenB-2016.jpg
+      profile: https://www.cehd.umn.edu/ci/people/Chen.html
+      department: http://www.cehd.umn.edu/ci/
 -
   - heading: Bonnie Westby Huebner Endowed Chair in Education and Technology
-    name: Aaron Doering
+    name: Sashank Varma
     titles:
-      - Professor
-    department: Department of Curriculum and Instruction
-    term: 7/01/15-6/30/18
+      - Associate Professor
+    department: Department of Educational Psychology
+    term: 7/01/19-6/30/22
     urls:
-      headshot: /assets/images/giving/appointments/DoeringA-2014.jpg
-      profile: http://www.cehd.umn.edu/people/adoering/
-      department: http://www.cehd.umn.edu/ci/
+      headshot: /assets/images/giving/appointments/VarmaS-2011.jpg
+      profile: https://www.cehd.umn.edu/edpsych/people/sashank/
+      department: http://www.cehd.umn.edu/edpsych/
   - heading: Irving Harris Professor of Child Development
     name: Ann Masten
     titles:
@@ -107,15 +128,15 @@
       department: http://www.cehd.umn.edu/icd/
 -
   - heading: William Harris Professor of Child Development and Psychiatry
-    name: Dante Cicchetti
+    name: Katie Thomas
     titles:
-      - McKnight Presidential Chair
+      - Professor
     department: Institute of Child Development
-    term: 7/1/16-6/30/19
+    term: 7/1/19-6/30/22
     urls:
-      headshot: /assets/images/giving/appointments/CicchettiD-Pref.jpg
-      profile: http://www.cehd.umn.edu/icd/people/faculty/cicchetti.html
-      department: http://www.cehd.umn.edu/ci/
+      headshot: /assets/images/giving/appointments/ThomasKa-2017.jpg
+      profile: https://icd.umn.edu/people/thoma114/
+      department: https://icd.umn.edu/
   - heading: Leon-Taylor Professorship in Exercise Science and Health Enhancement
     name: Donald R. Dengel
     titles:
@@ -179,16 +200,16 @@
       headshot: /assets/images/giving/appointments/OziewiczMarek-2014.jpg
       profile: http://www.cehd.umn.edu/people/mco/
       department: http://www.cehd.umn.edu/ci/
-  - heading: Rodney S. Wallace Professor for the Advancement of Teaching and Learning
-    name: Jennifer McComas
+  - heading: June and Phillip and Leo and Christine Stern Family Professorship in Reading Success
+    name: Kristen McMaster
     titles:
-      - Professor
+      - Department Chair
     department: Department of Educational Psychology
-    term: 7/01/15-6/30/18
+    term: 7/01/19-6/30/22
     urls:
-      headshot: /assets/images/giving/appointments/McComasJ-2017.jpg
-      profile: http://www.cehd.umn.edu/edpsych/people/jmccomas/
-      department: http://www.cehd.umn.edu/edpsy/
+      headshot: /assets/images/giving/appointments/McMasterKristen-2014.jpg
+      profile: https://www.cehd.umn.edu/edpsych/people/mcmas004/
+      department: http://www.cehd.umn.edu/edpsych/
 -
   - heading: Rodney S. Wallace Professor for the Advancement of Teaching and Learning
     name: Bic Ngo
@@ -209,16 +230,5 @@
     urls:
       headshot: /assets/images/giving/appointments/ChristT-2009.jpg
       profile: http://cehd.cehd.umn.edu/edpsych/people/tchrist/
-      department: http://www.cehd.umn.edu/edpsych/
--
-  - heading: Yackel Professor of Educational Assessment and Measurement
-    name: Mark Davison
-    titles:
-      - Professor
-    department: Department of Educational Psychology
-    term: 7/01/15-6/30/18
-    urls:
-      headshot: /assets/images/giving/appointments/DavisonM-2004.jpg
-      profile: http://www.cehd.umn.edu/edpsych/people/mld/
       department: http://www.cehd.umn.edu/edpsych/
 -

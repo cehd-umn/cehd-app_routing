@@ -15,9 +15,6 @@
     - x500: turne047
       section: Counseling & student personnel psychology (CSPP)
       title: PhD clinical training director
-    - x500: smcconne
-      section: Counseling & student personnel psychology (CSPP)
-      title: program coordinator
     - x500: mohrtman
       section: Counseling & student personnel psychology (CSPP)
       title: MA clinical training director
@@ -26,9 +23,6 @@
     param: tg
     value: 317
   titles:
-    - x500: geoff
-      section: Psychological foundations of education
-      title: department chair
     - x500: kend0040
       section: Psychological foundations of education
       title: director of graduate studies
@@ -43,6 +37,9 @@
     - x500: delma001
       section: Quantitative methods in education
       title: program coordinator
+    - x500: mcrdz
+      section: Quantitative methods in education
+      title: associate chair
 - section: School psychology
   query:
     param: tg
@@ -61,7 +58,7 @@
       title: special education program coordinator
     - x500: mcmas004
       section: Special education
-      title: associate department chair
+      title: department chair
     - x500: coneill
       section: Special education
       title: field placement coordinator

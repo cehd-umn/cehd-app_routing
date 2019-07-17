@@ -796,112 +796,112 @@
   template_data:
     - section: alumni
 /alumni/rising/2019/calhoun/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/calhoun.html
   template_data:
     - section: alumni
 /alumni/rising/2019/casey/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/casey.html
   template_data:
     - section: alumni
 /alumni/rising/2019/chidthachack-grande/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/chidthachack-grande.html
   template_data:
     - section: alumni
 /alumni/rising/2019/cottledge/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/cottledge.html
   template_data:
     - section: alumni
 /alumni/rising/2019/doering/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/doering.html
   template_data:
     - section: alumni
 /alumni/rising/2019/elmeski/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/elmeski.html
   template_data:
     - section: alumni
 /alumni/rising/2019/funk/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/funk.html
   template_data:
     - section: alumni
 /alumni/rising/2019/galvin/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/galvin.html
   template_data:
     - section: alumni
 /alumni/rising/2019/gilchrist/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/gilchrist.html
   template_data:
     - section: alumni
 /alumni/rising/2019/gudjonsson/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/gudjonsson.html
   template_data:
     - section: alumni
 /alumni/rising/2019/hoelscher/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/hoelscher.html
   template_data:
     - section: alumni
 /alumni/rising/2019/holmes/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/holmes.html
   template_data:
     - section: alumni
 /alumni/rising/2019/jang/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/jang.html
   template_data:
     - section: alumni
 /alumni/rising/2019/kedrowski/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/kedrowski.html
   template_data:
     - section: alumni
 /alumni/rising/2019/lupinek/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/lupinek.html
   template_data:
     - section: alumni
 /alumni/rising/2019/melin/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/melin.html
   template_data:
     - section: alumni
 /alumni/rising/2019/petree/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/petree.html
   template_data:
     - section: alumni
 /alumni/rising/2019/ridgeway/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/ridgeway.html
   template_data:
     - section: alumni
 /alumni/rising/2019/thao/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/thao.html
   template_data:
     - section: alumni
 /alumni/rising/2019/williamsen/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/williamsen.html
   template_data:
     - section: alumni
 /alumni/rising/2019/yang/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/yang.html
   template_data:
     - section: alumni
 /alumni/rising/2019/yeboah/:
-  publish: false
+  publish: true
   template: cehd/alumni/rising/2019/yeboah.html
   template_data:
     - section: alumni
@@ -1330,9 +1330,9 @@
   template: cehd/events/homecoming.html
   template_data:
     - section: events
-/events/ken/:
+/events/retirement/:
   publish: true
-  template: cehd/events/ken.html
+  template: cehd/events/retirement.html
   template_data:
     - section: events
 /events/thanksgiving/:
@@ -3232,6 +3232,11 @@
 /undergraduate/johnson/:
   publish: true
   template: cehd/undergraduate/johnson.html
+  template_data:
+    - section: undergraduate
+/undergraduate/kim/:
+  publish: falso
+  template: cehd/undergraduate/kim.html
   template_data:
     - section: undergraduate
 /undergraduate/mercado/:

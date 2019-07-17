@@ -85,6 +85,11 @@
   publish: true
   template_data:
     - section: alumni
+/alumni/hussein/:
+  template: ssw/alumni/hussein.html
+  publish: true
+  template_data:
+    - section: alumni    
 /articles/experiential-learning/:
   template: ssw/articles/experiential-learning.html
   publish: true
