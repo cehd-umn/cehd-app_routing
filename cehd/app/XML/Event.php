@@ -12,9 +12,9 @@ namespace CEHD\XML\Event;
 
 require_once __DIR__ . '/RSS.php';
 
-class Audience 
+class Audience
 
-{  
+{
     /**
      * @type string
      */
@@ -24,6 +24,26 @@ class Audience
      * @type string
      */
     public $audienceDescription;
+
+}
+
+class Occurrence
+
+{
+    /**
+     * @type string
+     */
+    public $oDate;
+
+    /**
+     * @type string
+     */
+    public $oStartTime;
+
+    /**
+     * @type string
+     */
+    public $oEndTime;
 
 }
 
@@ -95,6 +115,11 @@ class Event extends \CEHD\App\XML\RSS\RSS
      * @type object
      */
     public $audiences = [];
+
+    /**
+     * @type object
+     */
+    public $occurrences = [];
 
     /**
      * @type string
@@ -238,7 +263,7 @@ class Event extends \CEHD\App\XML\RSS\RSS
         $this->location = $this->getFromProperty($event->location);
 
         $this->locationURL = $this->getFromProperty($event->locationURL);
-        
+
         $this->shortDescription = $this->getFromProperty($event->briefDescr);
 
         $this->title = $this->getFromProperty($event->title);
@@ -250,6 +275,8 @@ class Event extends \CEHD\App\XML\RSS\RSS
         $this->relatedEventURL = $this->getFromProperty($event->relatedEventURL);
 
         $this->_setAudiences($event->audiences);
+
+        $this->_setOccurrences($event->occurrences);
     }
 
 
@@ -273,13 +300,39 @@ class Event extends \CEHD\App\XML\RSS\RSS
      */
     private function _setAudiences($audiencesData)
     {
-        // if (property_exists($audiencesData, "audience")) {
             foreach ($audiencesData->audience as $audienceData) {
                 array_push($this->audiences, $this->_createAudience($audienceData));
             }
-        // }
     }
-    
+
+
+    /**
+     * Creates a Occurrence instance
+     *
+     * @param object $occurrenceData - An XML object from an representing an occurrence
+     */
+    private function _createOccurrence($oData)
+    {
+        $occurrence = new Occurrence();
+        $occurrence->oDate   = $this->getFromProperty($oData->date);
+        $occurrence->oStartTime   = $this->getFromProperty($oData->startTime);
+        $occurrence->oEndTime   = $this->getFromProperty($oData->endTime);
+        return $occurrence;
+    }
+
+
+    /**
+     * Sets $this->occurrences
+     *
+     * @param object $occurrenceData - An XML object from an representing occurrences
+     */
+    private function _setOccurrences($osData)
+    {
+        foreach ($osData->occurrence as $occurrence) {
+            array_push($this->occurrences, $this->_createOccurrence($osData));
+        }
+    }
+
 
     /**
      * Returns the numerical starting hour of the event start time

@@ -1,5 +1,9 @@
-{% extends "cehd/layout/base.html" %} {%- import "macros/loader.html" as loader -%} {%- import "macros/events-feed.html"
-as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title }}{% endblock %} {% block meta_og %}
+{% extends "cehd/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{%- import "macros/events-feed2.html" as eventsfeed -%}
+{% set page_title = "Events" %}
+
+{% block title %}{{ page_title }}{% endblock %} {% block meta_og %}
 <meta property="og:url" content="http://www.cehd.umn.edu/events/" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="CEHD Events" />

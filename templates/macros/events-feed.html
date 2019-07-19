@@ -26,6 +26,9 @@
 
         $response.done(function() {
             var events = client.getResults();
+
+            console.log("1!")
+
             var template_params = {
                 "template_path": "{{ template_path }}",
                 "template_name": "{{ template_name }}",

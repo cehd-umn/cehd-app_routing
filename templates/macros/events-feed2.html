@@ -1,0 +1,78 @@
+{%- macro events_feed_js(
+    t,
+    limit=4,
+    target_element_selector="#events-container",
+    template_path="/assets/dist/views/cehd/events",
+    template_name="index.html",
+    q=6,
+    r=3
+    ) -%}
+<script>
+    (function() {
+        "use strict";
+        var base_url = "/services/events/feed/";
+        var params = {
+            url: base_url,
+            data: {
+                "q": "{{ q }}",
+                "r": "{{ r }}",
+                "t": "{{ t }}",
+                "x": "{{ limit }}",
+            }
+        };
+        var app = new App();
+        var client = new app.httpClient();
+        var $response = client.get(params);
+
+        $response.done(function() {
+            var events = client.getResults();
+            console.log(events)
+            var mergedEvents  = [];
+
+            events.forEach(function(event) {
+                console.log(event.id)
+                var existing = mergedEvents.filter(function(v, i) {
+                    return v.id == event.id;
+                    console.log(event.id)
+
+                });
+                console.log(existing)
+
+            //     if (existing.length) {
+            //         var existingIndex = mergedEvents.indexOf(existing[0]);
+            //         mergedEvents[existingIndex].date = mergedEvents[existingIndex].date.concat(event.date);
+            //         mergedEvents.date.forEach(function (date) {
+            //             console.log(mergedEvents.date)
+            //             console.log(date)
+            //             // moment(mergedEvents.date).format('MMMM Do YYYY)
+            //         });
+            //         console.log(mergedEvents.date)
+            //     } else {
+            //         if (typeof event.date == 'string')
+            //             event.date = [event.date];
+            //         mergedEvents.push(event);
+            //     }
+            });
+            console.log(mergedEvents);
+
+            var renderer = new app.renderer();
+            var template_params = {
+                "template_path": "{{ template_path }}",
+                "template_name": "{{ template_name }}",
+                "$target_element": $("{{ target_element_selector }}"),
+                "data": {
+                    events: events,
+                    limit: {{ limit }},
+            config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+        }
+        };
+
+            var renderer = new app.renderer();
+            renderer.init(template_params);
+            renderer.render();
+            // console.log(events)
+        });
+    })();
+
+</script>
+{%- endmacro -%}
