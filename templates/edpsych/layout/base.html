@@ -1,6 +1,16 @@
 {% extends "layout/edpsych_base.html" %}
 {% block css %}
 <style>
+@media (min-width: 768px) {
+.dept-footer-section.first {
+min-height: 430px !important;
+}
+}
+@media (min-width: 1200px) {
+.dept-footer-section.first {
+min-height: 340px !important;
+}
+}
 @media (max-width: 768px) {
 .top-level-nav-link {
     font-size: 15px;

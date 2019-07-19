@@ -18,6 +18,18 @@
 {# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 {# todo: add these font-face styles to inline.scss #}
 <style>
+
+@media (min-width: 768px) {
+.dept-footer-section.first {
+min-height: 430px !important;
+}
+}
+@media (min-width: 1200px) {
+.dept-footer-section.first {
+min-height: 340px !important;
+}
+}
+
 #giving-improving-lives-list {
         margin-bottom:0px;
 }
