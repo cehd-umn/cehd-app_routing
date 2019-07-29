@@ -1884,11 +1884,6 @@
   template: cehd/teaching/clinical.html
   template_data:
     - section: teaching
-/teaching/directrack/:
-  publish: true
-  template: cehd/teaching/directrack.html
-  template_data:
-    - section: teaching
 /teaching/grow/:
   publish: true
   template: cehd/teaching/grow/index.html

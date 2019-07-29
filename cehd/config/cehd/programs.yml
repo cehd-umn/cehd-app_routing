@@ -96,29 +96,6 @@ Business and Marketing Education:
   description: Courses in sales and marketing prepare you for careers in a variety of organizations, from Fortune 500 companies and entrepreneurial startups to nonprofit management
   categories:
     - Business, Administration, and Leadership
-Child Psychology:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Major
-      href: http://www.icd.umn.edu/academics/child-psychology-undergraduate/
-      footnote_indicator: "*"
-    - title: Undergraduate Minor
-      href: http://www.icd.umn.edu/academics/child-psychology-undergraduate/minor/
-      footnote_indicator: "*"
-    - title: Ph.D.
-      href: http://www.icd.umn.edu/academics/child-psychology-graduate/
-    - title: Graduate Minor
-      href: http://www.icd.umn.edu/academics/child-psychology-graduate/doctoral-minor/
-  description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience
-  categories:
-    - Teaching, Learning, and Schools
-    - Families, Youth, and Children
-    - Recreation, Health, and Wellbeing
-    - Disability and Aging
-    - Psychology, Counseling, and Social Work
-  footnotes:
-    - "* offered through CLA"
 Clinical Physiology and Movement Science:
   meta: null
   publish: true
@@ -189,6 +166,29 @@ Culture and Teaching:
   categories:
     - Teaching, Learning, and Schools
     - Languages, Culture, and International
+Developmental Psychology:
+  meta: null
+  publish: true
+  links:
+    - title: Undergraduate Major
+      href: https://icd.umn.edu/academics/developmental-psychology-undergraduate/
+      footnote_indicator: "*"
+    - title: Undergraduate Minor
+      href: https://icd.umn.edu/academics/developmental-psychology-undergraduate/minor/
+      footnote_indicator: "*"
+    - title: Ph.D.
+      href: https://icd.umn.edu/academics/developmental-psychology-graduate/
+    - title: Graduate Minor
+      href: https://icd.umn.edu/academics/developmental-psychology-graduate/doctoral-minor/
+  description: Prepare for a career in research. Specialize in an area such as cognitive development, language, learning, executive function, social development, or developmental psychobiology and neuroscience
+  categories:
+    - Teaching, Learning, and Schools
+    - Families, Youth, and Children
+    - Recreation, Health, and Wellbeing
+    - Disability and Aging
+    - Psychology, Counseling, and Social Work
+  footnotes:
+    - "* offered through CLA"
 Disability Policy and Services:
   meta: null
   publish: true
