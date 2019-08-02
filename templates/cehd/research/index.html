@@ -1,25 +1,6 @@
 {% extends "cehd/layout/base.html" %}
 {%- import "macros/svg.html" as svg -%}
 {% set page_title = "Research" %}
-{% block title %}{{ page_title }}{% endblock %}
-{% block hero_image %}
-<div class="hero-image-container">
-    <img class="hero-image" src="/assets/dist/images/research/hero.jpg" alt="Lab research">
-    <div class="hero-overlay">
-        <div class="twothird">
-            <p>Scott Brown, a doctoral student in exercise physiology, monitors an athlete's peak capabilities<br />
-                in the School of Kinesiology's Human Performance Research Laboratory</p>
-                <!-- <p>
-                  Professor Jed Elison and his team are expanding research <br />toward earlier detection of autism.
-                  </p> -->
-        </div>
-        <div class="third">
-            <!-- <p><a href="/research/centers/" class="to-upper button clear" {{ analytics.add_tracking("send", "event", "research", "click", "research splash-our centers and labs") }}>Our centers and labs</a></p -->
-
-        </div>
-    </div>
-</div>
-{% endblock %}
 {% block extra_css %}
 <style>
 #video-caption {
@@ -33,19 +14,29 @@
     width: 100%;
 }
 }
-
-/*iframe {
-    height: auto;
-    width: 100%;
-}*/
-/* @media (min-width: 767px){
-    iframe {
-        height: auto;
-    }
-} */
-
 </style>
 {% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/assets/dist/images/research/hero.jpg" alt="Professor Jed Elison and his team are expanding research
+toward earlier detection of autism">
+    <div class="hero-overlay">
+        <div class="twothird">
+                <p>
+                  Professor Jed Elison and his team are expanding research <br />toward earlier detection of autism.
+                  </p>
+        </div>
+        <div class="third">
+            <p><a href="https://connect.cehd.umn.edu/taking-action-to-improve-outcomes/" class="to-upper button clear" {{ analytics.add_tracking("send", "event", "research", "click", "research splash-our centers and labs") }}>Read more</a></p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
 {% block main_content %}
 <div class="row has-hero-image">
   <div class="container">
