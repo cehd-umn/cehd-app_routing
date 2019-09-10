@@ -67,7 +67,7 @@
     - section: travel
 /student-travel-grant-draft/:
   template: olpd/student-travel-grant-draft.html
-  publish: true
+  publish: false
   template_data:
     - section: travel
 /research-and-engagement/:
@@ -615,6 +615,16 @@
   publish: true
   template_data:
     - section: undergraduate-programs
+/visiting-scholar-program/:
+  template: olpd/visiting-scholar-program.html
+  publish: false
+  template_data:
+    - section: research-and-engagement
+/visiting-scholar-program-application/:
+  template: olpd/visiting-scholar-program-application.html
+  publish: false
+  template_data:
+    - section: research-and-engagement
 /chautauqua/:
   template: olpd/chautauqua/index.html
   publish: true

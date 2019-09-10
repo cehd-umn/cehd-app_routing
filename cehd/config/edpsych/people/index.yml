@@ -18,6 +18,9 @@
     - x500: mohrtman
       section: Counseling & student personnel psychology (CSPP)
       title: MA clinical training director
+    - x500: caberger
+      section: Counseling & student personnel psychology (CSPP)
+      title: program coordinator
 - section: Psychological foundations of education
   query:
     param: tg
@@ -39,7 +42,7 @@
       title: program coordinator
     - x500: mcrdz
       section: Quantitative methods in education
-      title: associate chair
+      title: CEHD Associate Dean for Undergraduate Programs, Diversity, and Equity
 - section: School psychology
   query:
     param: tg
@@ -53,18 +56,24 @@
     param: tg
     value: 315
   titles:
-    - x500: jmccomas
+    - x500: leannej
       section: Special education
-      title: special education program coordinator
+      title: interim program coordinator
     - x500: mcmas004
       section: Special education
       title: department chair
     - x500: coneill
       section: Special education
       title: field placement coordinator
+    - x500: laurap
+      section: Special education
+      title: academic advisor
     - x500: seif0074
       section: Special education
       title: director of undergraduate studies
+    - x500: symon007
+      section: Special education
+      title: CEHD Associate Dean for Research and Policy
 - section: Emeritus faculty
   query:
     param: tg

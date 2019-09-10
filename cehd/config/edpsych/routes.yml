@@ -113,6 +113,12 @@
     template_data:
         meta_description: "Get the resources and information you need as an ASL student and learn about opportunities available to you as your complete your ASL studies at the University of Minnesota."
         section: current
+/edpsych/current/asl/deaf-asl-resources/:
+    publish: true
+    template: edpsych/current/asl/deaf-asl-resources.html
+    template_data:
+        meta_description: "Get helpful resources for deaf people and those communicating or learning to communicate with American Sign Language (ASL)."
+        section: current
 /edpsych/current/cspp/:
     publish: true
     template: edpsych/current/cspp/index.html

@@ -1579,6 +1579,11 @@
   template: cehd/global/index.html
   template_data:
     - section: global
+/global/faith-resource/:
+  publish: true
+  template: cehd/global/faith-resource.html
+  template_data:
+    - section: global
 /global/gtep/:
   publish: true
   template: cehd/global/gtep.html
@@ -3024,6 +3029,11 @@
   template: cehd/trio/services/andicoechea.html
   template_data:
     - section: trio
+/trio/services/cardenas/:
+  publish: true
+  template: cehd/trio/services/cardenas.html
+  template_data:
+    - section: trio
 /trio/services/finances/:
   publish: true
   template: cehd/trio/services/finances.html
@@ -3047,6 +3057,11 @@
 /trio/services/staff/:
   publish: true
   template: cehd/trio/services/staff.html
+  template_data:
+    - section: trio
+/trio/services/vang-lo/:
+  publish: true
+  template: cehd/trio/services/vang-lo.html
   template_data:
     - section: trio
 /trio/training/:
@@ -3149,11 +3164,6 @@
   template: cehd/undergraduate/apply.html
   template_data:
     - section: undergraduate
-/undergraduate/bellcourt/:
-  publish: true
-  template: cehd/undergraduate/bellcourt.html
-  template_data:
-    - section: undergraduate
 /undergraduate/broad/:
   publish: true
   template: cehd/undergraduate/broad.html
@@ -3224,19 +3234,9 @@
   template: cehd/undergraduate/involvement.html
   template_data:
     - section: undergraduate
-/undergraduate/johnson/:
-  publish: true
-  template: cehd/undergraduate/johnson.html
-  template_data:
-    - section: undergraduate
 /undergraduate/kim/:
   publish: falso
   template: cehd/undergraduate/kim.html
-  template_data:
-    - section: undergraduate
-/undergraduate/mercado/:
-  publish: true
-  template: cehd/undergraduate/mercado.html
   template_data:
     - section: undergraduate
 /undergraduate/mraz/:
@@ -3254,14 +3254,14 @@
   template: cehd/undergraduate/research.html
   template_data:
     - section: undergraduate
+/undergraduate/richardson/:
+  publish: true
+  template: cehd/undergraduate/richardson.html
+  template_data:
+    - section: undergraduate
 /undergraduate/riley/:
   publish: true
   template: cehd/undergraduate/riley.html
-  template_data:
-    - section: undergraduate
-/undergraduate/shaw/:
-  publish: true
-  template: cehd/undergraduate/shaw.html
   template_data:
     - section: undergraduate
 /undergraduate/sherrill/:
