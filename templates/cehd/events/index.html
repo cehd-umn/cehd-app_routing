@@ -302,15 +302,16 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
             <div class="span-3"> {# another-class="filterArea" #}
 
                 <div class="searchmobile">
-                    <h3 class="titleh3">Search</h3>
+                    <h2 class="h3 titleh3">Search</h2>
                     {# TODO make sure these forms are accessible #}
                     <form class="searchf" action="" onsubmit='return false'>
                         <input type="text" id="full-text-search-input" placeholder="">
+                        <label for="full-text-search-input" class="visuallyhidden">Search Submit Button</label>
                     </form>
                 </div>
 
                 <div class="filterarea">
-                    <h3 class="titleh3">View Events</h3>
+                    <h2 class="h3 titleh3">View Events</h2>
                     <p class="filter-text">
                         <a id="todayfilter" onClick="todayFilter()">Today</a> |
                         <a id="weekfilter" onClick="weekFilter()">This Week</a> |
@@ -318,7 +319,7 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
                     </p>
                 </div>
                 <div class="filterarea">
-                    <h3 class="titleh3">Filter by audience</h3>
+                    <h2 class="h3 titleh3">Filter by audience</h2>
                     <ul id="audienceFilter" class="audience-list">
                         <li id="audiencefilter" class="audiencefilter" value="ps">Prospective Students</li>
                         <li id="audiencefilter" class="audiencefilter" value="gp">General Public</li>

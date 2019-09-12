@@ -232,35 +232,36 @@
         <div class="span-12 topfilter">
 
             <div class="span-7 filterarea">
-                <h3 class="titleh3">Filter by areas of study and degrees</h3>
+                <h2 class="h3 titleh3">Filter by areas of study and degrees</h3>
 
                 {% for category_group_title, category_group in categories %}
                 <div class="half halfmobile">
                     <select class="filterby select2" id="filters">
-                        <option style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
+                        <option id="option-{{ category_group_title }}" style="padding-left: 5px;" disabled selected>{{ category_group_title }}</option>
                         {% for category_class, category in category_group %}
                         <option type="checkbox" id="{{ category_class }}-filter" name="category-button-group" class="card-select category-select"
                             data-filter=".{{ category_class }}" data-selected-indicator="#category-selected" data-indicator-text="{{ category }}"
                             data-ga-category="{{ section }} {{ category }}" value="{{ category_class }}">{{ category }}</option>
                         {% endfor %}
                         <hr>
-                        <option class="card-select category-select clearfilter" value="clear">Clear Filters</option>
+                        <option id="cleaFilter" class="card-select category-select clearfilter" value="clear">Clear Filters</option>
                     </select>
                 </div>
                 {% endfor %}
             </div>
 
             <div class="span-2 halfmobile resultsmobile">
-                <h3 class="titleh3 resultsh3">Results</h3>
+                <h2 class="h3 titleh3 resultsh3">Results</h2>
                 {# TODO make sure these forms are accessible #}
                 <p id="results"></p>
             </div>
 
             <div class="span-3 halfmobile searchmobile">
-                <h3 class="titleh3">Search</h3>
+                <h2 class="h3 titleh3">Search</h2>
                 {# TODO make sure these forms are accessible #}
                 <form class="searchf" action="" onsubmit='return false'>
                     <input type="text" id="full-text-search-input" placeholder="Search">
+                    <label for="full-text-search-input" class="visuallyhidden">Search Submit Button</label>
                 </form>
             </div>
 
