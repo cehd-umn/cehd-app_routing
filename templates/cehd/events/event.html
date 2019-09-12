@@ -27,6 +27,10 @@
                         - {{ event.endTime }}
                     {% endif %}
                 </small>
+                <small class="clear h2">
+                    {{ event.date }}
+
+                </small>
             </h1>
             <h2 class="h3 no-margin-top">
               {% if event.locationURL %}
@@ -94,4 +98,7 @@
         </div>
     </div> <!-- ./container -->
 </div> <!-- ./row -->
+
+<script>console.log(event)</script>
+
 {% endblock %}

@@ -1,107 +1,54 @@
+
 {% if data.events|length > 0 %}
+{% set edates = "{% event.allDates|reverse %}" %}
 
 <dl class="events">
     <div id="FilterContainer" class="box">
 
         {% for event in data.events %} {% if loop.index0
-        < data.limit %} 
-        <div id="event-card eachevent" class="events single" value="{{ event.timestampStart }}">
+        < data.limit %}
+        <div id="event-card eachevent" class="events single {% for audience in event.audiences %}{{ audience.audienceCode }} {% endfor %}" value="{{ event.timestampStart }}" data-tags="{% for audience in event.audiences %}{{ audience.audienceCode }},{% endfor %}">
             <span id="timestamp" class="timestamps" style="display:none;" value="{{ event.timestampStart }}">
                 {{ event.timestampStart }}
             </span>
             <span id="startdate" class="startdate" style="display:none;" value="{{ event.timestampStart }}">
                 {{ event.dateTimeStart }}
                         </span>
-            <span id="audience" class="audience" style="display:none;" value="{{ event.timestampStart }}">
-                {{ event.audiences[0] }}, {{ event.audiences.audienceCode }}, {{ event.audiences.audienceDescr }}, {{ audiences.audienceDescr}}, {{ audience.audienceCode}}
- {{ event.audienceCode}}
-            </span>
-                <dt class="date" id="dateTimeStart" value="{{ event.dateTimeStart }}">
-                    {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }} {% if event.startTime and event.endTime %}
-                    | {{ event.startTime }} - {{ event.endTime }} {% endif %}
-                </dt>
+            {% for audience in event.audiences %}
+            <span id="audience" class="audience {{ audience.audienceCode }}" style="display:none;" value="{{ audience.audienceCode }}">
+                {{ audience.audienceCode }}, {{ audience.audienceDescription }}
+            </span>    {% endfor %}
 
-                <dd class="event-title">
-                    <p class="event">
-                        <a class="event-link" data-event-id="{{ event.id }}" href="/events/{{ event.id }}/">{{ event.title }}</a>
-                    </p>
-                    {% if event.shortDescription %}
-                    <div class="description">
-                        {{ event.shortDescription|strip_style_attributes|safe }}
-<p>{{ event.audiences }}</p>
-                    </div>
-                    {% endif %}
-                </dd>
+            <dt class="date" id="dateTimeStart" value="{{ event.dateTimeStart }}">
+                {{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }} {% if event.startTime and event.endTime %}
+                | {{ event.startTime }} - {{ event.endTime }} {% endif %}
+            </dt>
+
+            {% if event.allDates %}
+            <dt class="date2" style="margin-top: -11px;" id="dateTimEnd" value="{{ event.dateTimeEnd }}">
+               <span class="alldatesspan"> *Multi-Day Event:
+                   <ul class="alldatesul">
+                   {% for date in event.allDates|reverse %}
+                   <li class="alldatesli">{{ date }}</li>
+            {% endfor %}
+                       </ul>
+               </span>
+            </dt>
+            {% endif %}
+
+            <dd class="event-title">
+                <p class="event">
+                    <a class="event-link" data-event-id="{{ event.id }}" href="/events/{{ event.id }}/">{{ event.title }}</a>
+            <dd class="event"></span>{% if event.shortDescription %}{{ event.shortDescription|strip_style_attributes|safe }}{% endif %}</ddin>
+                </p>
+
+
+            </dd>
             {% endif %}
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </dl>
 {% else %}
 <p>There are no upcoming events.</p>
 {% endif %}
-
-{% if data.events|length > 0 %}
-    <dl class="events">
-    {% for event in data.events %}
-        {% if loop.index0 < data.limit %}
-            <dt class="date">
-                {{ event.dayOfWeek }},
-                {{ event.fullMonth }}
-                {{ event.day }}, {{ event.year }}
-                {% if event.startTime and event.endTime %}
-                    | {{ event.startTime }} - {{ event.endTime }}
-                {% endif %}
-            </dt>
-            <dd class="event-title">
-                <p class="event">
-                    <a class="event-link" data-event-id="{{ event.id }}" href="/events/{{ event.id }}/">{{ event.title }}</a>
-                </p>
-                {% if event.shortDescription %}
-                    <div class="description">
-                        {{ event.shortDescription|strip_style_attributes|safe }}
-                    </div>
-                {% endif %}
-            </dd>
-        {% endif %}
-    {% endfor %}
-    </dl>
-{% else %}
-    <p>There are no upcoming events.</p>
-{% endif %}
-
-{#
-{% for event in data.events %}
-    <div class="off-canvas event-details" id="event-{{ event.id }}" class="accessible-hidden">
-        <a class="close-button" href="{{ event.url }}" data-target="#event-{{ event.id }}"><span class="accesible-hidden">Close</span></a>
-        <h2 class="event-box text-center">Event details</h2>
-        <h3 class="og-title">{{ event.title }}</h3>
-        <dl>
-            <dt>When</dt>
-            <dd>
-                {{ event.dayOfWeek }},
-                {{ event.fullMonth }}
-                {{ event.day }}
-                {% if event.startTime and event.endTime %}
-                    | {{ event.startTime }} - {{ event.endTime }}
-                {% endif %}
-            </dd>
-            {% if event.location %}
-            <dt>Where</dt>
-            <dd>
-                {% if event.locationURL %}
-                    <a class="og-url" href="{{ event.locationURL }}">
-                {% endif %}
-                    {{ event.location }}
-                {% if event.locationURL %}
-                    </a>
-                {% endif %}
-            </dd>
-            <div class="og-description">
-                {{ event.shortDescription|strip_style_attributes|safe }}
-            </div>
-            {% endif %}
-        </dl>
-    </div>
-{% endfor %}
-#}

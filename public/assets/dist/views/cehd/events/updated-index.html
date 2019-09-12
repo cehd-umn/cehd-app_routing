@@ -1,0 +1,19 @@
+{% if data.events|length > 0 %}
+    <div class="events">
+    {% for event in data.events %}
+        {% if loop.index0 < data.limit %}
+        {% if data.events.allDates %}
+        <dt class="event-date">
+            This!
+        </dt>
+        {% endif %}
+        <dt class="event-date">{{ event.dayOfWeek }}, {{ event.fullMonth }} {{ event.day }}, {{ event.year }}</dt>
+            <dd class="event-title">
+                <a href="/events/{{ event.id }}/">{{ event.title }}</a>
+            </dd>
+        {% endif %}
+    {% endfor %}
+        </div>
+{% else %}
+    <p>There are no upcoming events.</p>
+{% endif %}

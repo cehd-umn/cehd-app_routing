@@ -1,3 +1,35 @@
+window.addEventListener("load", function(){
+  var seen = {};
+
+  var eventsList = FilterContainer.querySelectorAll(".events");
+  eventsList.forEach(function(event) {
+ {
+  var currentTitle = event.getElementsByClassName("event-link")[i].innerText;
+   var eventTitle = event.getElementsByClassName("event-link")[0].innerText;
+
+   if(eventTitle != currentTitle)
+    {
+      textbox.disabled = true;
+      break;
+    }
+    firstName = names[i].Value;
+  }
+
+    var eventTitle = event.getElementsByClassName("event-link")[0].innerText;
+    console.log(eventTitle);
+
+    if (seen[eventTitle])
+      console.log(this);
+    else
+      console.log("no!");
+  // });
+
+  console.log(seen);
+  console.log(eventsList)
+});
+
+
+
 // Load Search Function
 $("#full-text-search-input").on("keyup", function() {
   var value = $(this)

@@ -1,14 +1,18 @@
-{% extends "cehd/layout/base.html" %} {%- import "macros/loader.html" as loader -%} {%- import "macros/events-feed.html"
+{% extends "cehd/layout/base.html" %} {%- import "macros/loader.html" as loader -%} {%- import "macros/events-feed2.html"
 as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title }}{% endblock %} {% block meta_og %}
 <meta property="og:url" content="http://www.cehd.umn.edu/events/" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="CEHD Events" />
 <meta property="og:description" content="Events for the College of Education and human development" /> {% endblock %} {% block extra_css %}
 <style>
+    .alldatesli {padding: 0px 10px; background: white; line-height: 17px; display: block;}
+.alldatesspan {font-weight: 400; font-size: 12px; margin: 0px 0; padding: 5px 15px 5px; display: inline-flex; flex-direction: row; background: #ffec99; color: #555;}
+    .alldatesul {list-style: none; display: flex; flex-direction: row; margin: -5px; padding: 0;}
+    .alldatesli.first { color: blue;}
     .date {
         background-color: #eeeeed;
-        font-size: 14px;
-        font-weight: normal;
+        font-size: 15px;
+        font-weight: 600;
         height: 40px;
         padding: 10px 0 0 15px;
     }
@@ -36,9 +40,6 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
         border: 1px solid #eee;
         padding: 10px;
     }
-
-
-
 
 
     .topfilter {
@@ -387,7 +388,7 @@ as eventsfeed -%} {% set page_title = "Events" %} {% block title %}{{ page_title
     {% endblock %}
 
 {% block bottom_js %}{{ parent() }} {{ eventsfeed.events_feed_js(172, 1000, "#events-container", "/assets/dist/views/cehd/events",
-    "events-page.html", 6, 3) }}
+    "events-page2.html", 6, 3) }}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"></script>

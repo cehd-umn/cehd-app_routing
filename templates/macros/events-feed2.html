@@ -1,0 +1,68 @@
+{%- macro events_feed_js(
+    t,
+    limit=4,
+    target_element_selector="#events-container",
+    template_path="/assets/dist/views/cehd/events",
+    template_name="index.html",
+    q=6,
+    r=3
+    ) -%}
+<script>
+  var base_url = "/services/events/feed/";
+  var params = {
+    url: base_url,
+    data: {
+      "q": "{{ q }}",
+      "r": "{{ r }}",
+      "t": "{{ t }}",
+      "x": "{{ limit }}",
+    }
+  };
+
+  var app = new App();
+  var client = new app.httpClient();
+  var $request = client.get(params);
+  var page_title = document.title;
+
+  $request.done(function () {
+  var results = client.getResults(),
+      i = 0,
+      j = results.length - 1,
+      current;
+  console.log(results);
+  // var mergedEvents = [];
+
+
+      for (;i < results.length; i++) {
+          current = results[i];
+          for (;j > i; j--) {
+              if (current.id === results[j].id) {
+
+                  console.log(results);
+
+                  // results.splice(j, 1);
+              }
+
+          }
+      }
+
+      console.log(results);
+
+
+      var renderer = new app.renderer();
+  var template_params = {
+      "template_path": "{{ template_path }}",
+      "template_name": "{{ template_name }}",
+      "$target_element": $("{{ target_element_selector }}"),
+      "data": {
+          events: results,
+          limit: {{ limit }},
+  config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
+  }
+  };
+      renderer.init(template_params);
+      renderer.render();
+  });
+</script>
+
+{%- endmacro -%}
