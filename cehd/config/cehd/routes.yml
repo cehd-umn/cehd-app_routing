@@ -3039,6 +3039,11 @@
   template: cehd/trio/services/finances.html
   template_data:
     - section: trio
+/trio/services/hanson/:
+  publish: true
+  template: cehd/trio/services/hanson.html
+  template_data:
+    - section: trio
 /trio/services/munoz/:
   publish: true
   template: cehd/trio/services/munoz.html
