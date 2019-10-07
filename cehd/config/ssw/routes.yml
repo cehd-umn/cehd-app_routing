@@ -285,6 +285,14 @@
   publish: true
   template_data:
       - section: graduate
+
+/graduate/msw-CMH-adv-standing/:
+  template: ssw/graduate/msw-CMH-adv-standing.html
+  publish: true
+  template_data:
+      - section: graduate
+
+
 /graduate/youth-development-leadership/:
   template: ssw/graduate/youth-development-leadership.html
   publish: true

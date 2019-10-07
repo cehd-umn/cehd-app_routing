@@ -194,7 +194,7 @@ Disability Policy and Services:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/OLPD/grad-programs/EPL/disabilitycert.html
+      href: https://www.cehd.umn.edu/olpd/graduate-programs/certificate/disability-policy-services/
   description: This program surveys the spectrum of education, health, and social services available to individuals with disabilities and their families, and the public and private networks of disability services
   categories:
     - Psychology, Counseling, and Social Work
@@ -432,7 +432,7 @@ Kinesiology:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/kin/academics/undergrad/kin.html
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/academics/grad/masters.html#smgt
+      href: https://www.cehd.umn.edu/kin/academics/grad/ms.html
     - title: Ph.D.
       href: http://www.cehd.umn.edu/kin/academics/grad/phd.html
   description: Help people live healthier lives. Kinesiology - the study of physical activity and human movement - prepares you for a variety of careers in health science and wellness
@@ -526,7 +526,7 @@ Physical Activity and Health:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/academics/grad/professional/med-pah.html
+      href: https://www.cehd.umn.edu/kin/academics/grad/med-pah.html
   description: Learn about the leading-edge research, trends, and practices in physical activity as they relate to health. Discover techniques for implementing programs through population-based physical activity
   categories:
     - Recreation, Health, and Wellbeing
@@ -557,7 +557,7 @@ Professional Development:
   publish: true
   links:
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/olpd/grad-programs/EPL/profdev-cert.html
+      href: https://www.cehd.umn.edu/olpd/graduate-programs/certificate/professional-development/
   description: Design, implement, and evaluate learning opportunities for PreK-12 educators and related staff
   categories:
     - Business, Administration, and Leadership
@@ -566,9 +566,9 @@ Program Evaluation:
   publish: true
   links:
     - title: Graduate Minor
-      href: http://www.cehd.umn.edu/olpd/grad-programs/ES/programeval-minor.html
+      href: https://www.cehd.umn.edu/olpd/graduate-programs/minor/program-evaluation/
     - title: Graduate Certificate
-      href: http://www.cehd.umn.edu/olpd/grad-programs/ES/programeval-cert.html
+      href: https://www.cehd.umn.edu/olpd/graduate-programs/certificate/program-evaluation/
   description: Intensive study of the techniques and process of evaluation and policy research, in addition to the social and political context within which program evaluation occurs
   categories:
     - Evaluation and Methods
@@ -726,7 +726,7 @@ Sport Management:
     - title: Undergraduate Minor
       href: http://www.cehd.umn.edu/kin/academics/undergrad/smgt.html#minor
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/academics/grad/masters.html#smgt
+      href: https://www.cehd.umn.edu/kin/academics/grad/med-smgt.html
   description: Combine theoretical instruction and practical experience to prepare for leadership success in the sports industry and marketplace
   categories:
     - Business, Administration, and Leadership
@@ -736,7 +736,7 @@ Sport and Exercise Science:
   publish: true
   links:
     - title: Masters
-      href: http://www.cehd.umn.edu/kin/academics/grad/professional.html#exsci
+      href: https://www.cehd.umn.edu/kin/academics/grad/med-smgt.html
   description: Health-related advanced study with focus tracks in Sport Performance, Athletic Training, and Health Promotion
   categories:
     - Recreation, Health, and Wellbeing

@@ -1,0 +1,62 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "Adult Education Certificate" %}
+{% block title %}
+  Adult Education Certificate
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Adult Education certificate</h1>
+    <div class="twothird feature">
+        <p>Developing a practice of lifelong learning helps others to feel fulfilled and inspires social change. With a certificate in Adult Education, you can advise on workplace or public policy and provide knowledge of best practices.</p>
+        <p>This certificate prepares you with specialized skills and knowledge of the unique challenges and opportunities adult learners face in educational growth, professional development, and personal enrichment. Learn about advanced strategies in teaching adults, and hone your own abilities in conveying facts and theories in a persuasive and motivational way.</p>
+    </div>
+    </div>
+    <div class="container">
+        <div class="half">
+            <h2>Benefits</h2>
+                <ul class="bullet">
+                    <li>Earn a credential that distinguishes you from other job candidates in a range of industries.</li>
+                    <li>Earn a credential while building credits toward a full Master’s program.</li>
+                    <li>Obtain specialized knowledge and feel confident and self-assured in your work.</li>
+                </ul>
+        </div>
+        <div class="half">
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>14 credits minimum completed in 1-2 semesters for full time students.</li>
+                    <li>Certificate coursework completed with undergraduate student status cannot be applied to graduate-level degree programs.</li>
+
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/CertAdEdGrad.pdf">Program planning sheet [pdf]</a></li>
+                </ul>
+        </div>
+    </div>
+    <div class="half feature">
+        <h2 class="text-center">Curriculum</h2>
+            <h3>Required courses</h3>
+                <ul class="bullet">
+                    <li>OLPD 5201—Strategies for Teaching Adults (3 cr)</li>
+                    <li>OLPD 5202—Perspectives of Adult Learning and Development (3 cr)</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/internship/">OLPD 5296—Field Experience</a> (4 cr required; no more than 6 credits count toward the program)<br>
+                    OR <a href="{{ config.asset_base }}/graduate-programs/human-resource-development/internship/">OLPD 5696—Internship: Human Resource Development</a> (4 cr required; no more than 6 credits count toward the program)</li>
+                    <li>OLPD 5801—Survey: Human Resource Development and Adult Education (3 cr)</li>
+                </ul>
+            <h3>Electives</h3>
+                <ul class="bullet">
+                    <li>Any remaining credits can be selected from adult education coursework<br>
+                    OR OLPD 5607—Organization Development (3 cr)</li>
+                </ul>
+    </div>
+    <div class="container">
+        <p class="text-center"><a href="{{ config.asset_base }}/apply/certificate/adult-education/" class="button center">How to apply</a></p>
+    </div>
+</div>
+<div class="container feature twothird margin-top-1">
+    <h2 class="text-center">Contact</h2>
+    <p class="text-center"><a href="/people/herna220">Jeremy Hernandez</a><br> Coordinator of Graduate Studies<br> 612-626-9377 | <a href="mailto:herna220@umn.edu">herna220@umn.edu</a></p>
+</div>
+{% endblock %}

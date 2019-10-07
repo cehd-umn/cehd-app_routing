@@ -1,0 +1,72 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Education Policy and Leadership" %}
+{% block title %}
+    Education Policy and Leadership
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Education Policy and Leadership track</h1>
+        <div class="twothird feature">
+            <p>Education can be a hot-button issue. How do we provide fair and equal educational opportunities to all learners? How do we understand the legacies of the policies and choices we’ve made in the past? How do we ensure young people are afforded
+                dignity and inclusion into our learning communities?</p>
+            <p>The Education Policy and Leadership (EPL) track offers coursework and research experiences designed to prepare you to make a difference in educational systems and settings for PK-12 children and youth. We provide you with a foundational understanding
+                of the histories and variables that affect how a school or district is run, and we give you the scholarship and tools to make positive changes. We are committed to supporting leaders and scholars who work to continuously improve educational
+                quality and effectiveness so that young people graduate from secondary education well-prepared to continue their learning and contribute to their communities.</p>
+        </div>
+    </div>
+</div><!-- close row -->
+        <div class="row emphasis">
+        <div class="container">
+            <div class="twothird feature">
+                <h2 class="text-center">Degrees and programs</h2>
+            <div class="row">
+                <div class="half">
+                    <h3>Education policy and administration</h3>
+                    <ul class="no-bullet">
+                        <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/phd/">Ph.D.</a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/executive-phd/">Ph.D.: Executive Cohort</a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/ma/">M.A.</a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/med/">M.Ed. Leadership in Education</a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/certificate/disability-policy-services/">Disability Policy and Services Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <h3>K-12 administrative licensure</h3>
+                    <ul class="no-bullet">
+                        <li><a href="{{ config.asset_base }}/graduate-programs/administrative-licensure/">PK-12 Administration Certificate</a>
+                        <br> Certification for K-12 Superintendent, K-12 Principal, Director of Special Education, or Director of Community Education</li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/certificate/professional-development/">Professional Development Certificate</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+<div class="row">
+    <div class="container">
+        <div class="span-12 feature margin-top-2">
+
+            <h2 class="text-center">Faculty</h2>
+            <div id="people-container" class="loader-container"
+            data-people-app data-tag="463"
+            data-target-element-selector="#people-container"
+            data-template-path="/assets/dist/views/olpd/people/"
+            data-template-name="list.html"
+            data-base-path="{{ config.base_url }}"
+            data-people-per-group="2">
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

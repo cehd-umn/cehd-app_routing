@@ -1,0 +1,59 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "MEd - Human Resource Development" %}
+{% block title %}
+  MEd - Human Resource Development
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>M.Ed.<br />
+            <small>Human Resource Development</small></h1>
+        <div class="twothird feature">
+            <p>The field of human resource development explores how people learn, change, and relate to one another in their work environments. Practitioners in the field aspire to help workers find a sense of meaning, satisfaction, and accomplishment in their daily work.</p>
+            <p>A Master's of Education in Human Resource Development (HRD) prepares you to lead training and development in organizations, assess when various development strategies are needed, and implement and evaluate solutions for organizational change. This program is designed for professionals seeking advancement in their careers in a variety of settings.</p>
+            <h2>Benefits</h2>
+            <p>M.Ed. students in Human Resource Development gain the capacity to:</p>
+            <ul class="bullet">
+                <li>Communicate effectively in front of both small and large groups of people.</li>
+                <li>Quickly assess and distill the necessary skills and knowledge needed in the subjects for which they design and implement training.</li>
+                <li>Present new ideas and concepts in persuasive and memorable ways.</li>
+                <li>Provide people-based solutions to their organizations or clients.</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class=span-6>
+                <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>Manager of training programs</li>
+                    <li>Learning coach</li>
+                    <li>Consultant (both internal and external)</li>
+                    <li>Trainer or program facilitator</li>
+                </ul>
+            </div>
+            <div class=span-6>
+                <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>34 credits completed in 1-2 years for full time students</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med-curriculum/">Curriculum</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/internship/">HRD internship information</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <p class="text-center"><a href="{{ config.asset_base }}/apply/human-resource-development/med/" class="button center">How to apply</a></p>
+        </div>
+
+        <div class="container feature twothird margin-top-1">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/herna220">Jeremy Hernandez</a><br> Coordinator of Graduate Studies<br> 612-626-9377 | <a href="mailto:herna220@umn.edu">herna220@umn.edu</a></p>
+        </div>
+    </div>
+
+</div>
+<!-- close row -->
+{% endblock %}

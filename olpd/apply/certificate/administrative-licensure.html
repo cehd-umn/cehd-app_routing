@@ -1,0 +1,67 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Apply PK12 Administrative Licensure Certificate" %}
+{% block title %}
+    Apply PK12 Administrative Licensure Certificate
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Certificate<br />
+            <small>PK-12 Administrative licensure</small> </h1>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="half">
+            <h2>Application deadline and instructions</h2>
+                <p><strong>Applications are reviewed on an ongoing basis and may be submitted at any time.</strong>
+                <p>Admission is open to degree-seeking or <a href="https://onestop.umn.edu/academics/take-class-non-degreeguest-student">non-degree seeking</a> students.</p>
+                <p>Applications are not complete until ALL required materials and fees have been received.</p>
+                <p><a href="{{ config.asset_base }}/documents/Apply/AdmLicCertificateApplicationInstructions.pdf">Online application and instructions</a></p>
+        </div>
+
+        <div class="half">
+            <h2>Admission requirements</h2>
+                <p><strong>GPA:</strong> Undergraduate 3.0</p>
+                <p><strong>GRE scores:</strong> Not required</p>
+                <p><strong>TOEFL/IELTS Scores (Not required for U.S. students):</strong></p>
+                    <ul class="bullet">
+                        <li>TOEFL: Internet based = 79 or above<br> (21 writing/19 reading)</li>
+                        <li>IELTS = 6.5</li>
+                    </ul>
+        </div>
+
+    </div>
+
+    <div class="half feature">
+        <h2 class="text-center">Fees</h2>
+            <p>If you are pursuing multiple endorsements, you will pay $550 for the first license and $275 for subsequent licenses. At least half of the $550 program fee is due at the time of application.</p>
+            <p>If you are pursuing a Ph.D. or Ed.D. in addition to an administrative license, you are charged a program fee of $275 for each license sought. Applications to the doctoral and licensure programs are separate processes. At least half of the $550 program fee is due at the time of application.
+            <p>Payment should be sent to the following address:<br>
+            Diane Boatman<br>
+            206 Burton Hall<br>
+            178 Pillsbury Drive SE<br>
+            Minneapolis, MN 55455-0221</p>
+    </div>
+
+    <div class="container">
+        <div class="half">
+            <h2>Tuition information</h2>
+                <ul>
+                    <li><a href="/graduate/funding/">CEHD</a></li>
+                    <li><a href="https://onestop.umn.edu/finances/tuition">OneStop</a></li>
+        </div>
+
+        <div class="half">
+            <h2>Readmission</h2>
+            <p>If a graduate student in an OLPD program has become inactive they must follow the <a href="{{ config.asset_base }}/apply/readmission/">readmission procedures.</a></p>
+        </div>
+    </div>
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center"><a href="/people/pres0004">Gary Prest</a><br> Director of Administrative Licensure<br> 612-626-8647 | <a href="mailto:pres0004@umn.edu">pres0004@umn.edu</a></p>
+    </div>
+</div><!-- close row -->
+{% endblock %}

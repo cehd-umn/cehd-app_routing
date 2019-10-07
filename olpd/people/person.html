@@ -1,0 +1,43 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Faculty & Instructors" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div id="person-container" class="loader-container" aria-live="polite"
+    data-person-with-extra-app
+    data-internet-id="{{ internet_id }}"
+    data-target-element-selector="#person-container"
+    data-template-path="/assets/dist/views/olpd/people/"
+    data-extra-data-url="{{ config.base_url }}/data/people/"
+    data-extra-data-data='{ "internetId": "{{ internet_id }}" }'
+    data-template-name="person-page.html">
+    <div class="loader">
+        <div class="loader-figure "></div>
+        <p class="loader-label">Loading&hellip;</p>
+    </div>
+</div>
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+<script>
+    (function() {
+        "use strict";
+        var params = {
+            url: "/services/people-tool/person/",
+            data: {
+                internetId: "{{ internet_id }}"
+            }
+        };
+        var app = new App();
+        var client = new app.httpClient();
+        var $request = client.get(params);
+        var page_title = document.title;
+        $request.done(function() {
+            var person = client.getResults();
+            document.title = person.nameFirstLast + " | " + page_title;
+            document.querySelector('meta[name="description"]').setAttribute("content", person.metaDescription);
+            document.querySelector('link[rel=\'canonical\']').setAttribute("href", person.webPage);
+        });
+    })();
+</script>
+
+{% endblock %}

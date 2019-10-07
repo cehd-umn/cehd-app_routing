@@ -1,0 +1,19 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "CEHD Principal Brunch" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <!-- Called OTE-Principal Brunch in Cognito - CC  -->
+    <!-- Intro copy and form hosted in Cognito -->
+    <div class="row span-6 ">
+      <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=228" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="1053" width="100%"></iframe>
+      <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+      <script>
+        Cognito.setCss('http://www.cehd.umn.edu/assets/dist/css/minified/forms.css');
+      </script>
+  </div>
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

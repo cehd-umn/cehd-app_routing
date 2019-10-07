@@ -1,0 +1,53 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "MEd - Adult Education" %}
+{% block title %}
+  MEd - Adult Education
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>M.Ed.<br />
+            <small>Adult Education</small></h1>
+        <div class="twothird feature">
+            <p>Our world insists on staying informed, adapting to new technology, and adjusting to ever changing social norms. As we age, we continue to learn new information and to change our behavior to better connect with others. Adult Education is the study and practice of understanding how adult learners acquire new knowledge, skills, and abilities in order to interact with our world.</p>
+            <p>With a Master’s of Education in Adult Education (AdEd) you will be prepared to design and implement a range of effective curricula and programming for adult learners. You will have a sophisticated understanding of the unique challenges and opportunities adult learners face in educational growth, professional development, and personal enrichment. You might help immigrants, refugees, and other displaced people make sense of their new environments, make a difference in the lives of adults and out-of-school youth who struggle with reading, writing, and numeracy, or consult on best practices for employee training and development programs.</p>
+            <h2>Benefits</h2>
+            <p>M.Ed. students in Adult Education will have the ability to:</p>
+            <ul class="bullet">
+                <li>Design, deliver, evaluate, and improve adult education programs for a range of industries and purposes.</li>
+                <li>Anticipate needs for and calibrate adult education through organizational change.</li>
+                <li>Negotiate and balance the needs of organizations and their stakeholders to ensure positive outcomes.</li>
+                <li>Apply research driven strategies and techniques to improve program efficiency and effectiveness. </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class=span-6>
+                <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>Instructor in a variety of educational settings serving immigrant and refugee populations</li>
+                    <li>Manager of training programs</li>
+                </ul>
+            </div>
+            <div class=span-6>
+                <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>34 credits completed in 1-2 years for full time students</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med-curriculum/">Curriculum</a></li>
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <p class="text-center"><a href="{{ config.asset_base }}/apply/adult-education/med/" class="button center">How to apply</a></p>
+        </div>
+        <div class="container feature twothird margin-top-1">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center"><a href="/people/herna220">Jeremy Hernandez</a><br> Coordinator of Graduate Studies<br> 612-626-9377 | <a href="mailto:herna220@umn.edu">herna220@umn.edu</a></p>
+        </div>
+    </div>
+</div><!-- close row -->
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "PK-12 Administrative Licensure Certificate" %}
+{% block title %}
+  K-12 Administrative Licensure Certificate
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>PK-12 Administrative licensure certificate</h1>
+    <div class="twothird feature">
+        <p>The licensing and leadership development program for educational administrators offers an individualized program to prepare aspiring administrators for licensure as:</p>
+             <ul class="bullet">
+                 <li><a href="{{ config.asset_base }}/documents/administrative-licensure/2008PrincipalComp.pdf">K-12 principals</a></li>
+                 <li><a href="{{ config.asset_base }}/documents/administrative-licensure/2008SuperComp.pdf">Superintendents</a></li>
+                 <li><a href="{{ config.asset_base }}/documents/administrative-licensure/2008DSEComp.pdf">Directors of special education</a></li>
+                 <li><a href="{{ config.asset_base }}/documents/administrative-licensure/2008DCEComp.pdf">Directors of community education</a></li>
+             </ul>
+        <p>This program is not offered full-time and therefore is not intended for international students needing a visa to study in the United States.</p>
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="half">
+            <h2>Benefits</h2>
+                <ul class="bullet">
+                    <li>Most students who enroll in the program are practicing teachers. On average they complete the program in one to two years.</li>
+                    <li>Students may complete their program on-campus or as a member of an off campus cohort.</li>
+                    <li>Students may earn a certificate in PK-12 administration as a stand-alone program or in addition to an M.Ed, M.A., or Ph.D.</li>
+                    <li>Individuals already licensed in educational administration are eligible for a non-certificate option to complete Minnesota requirements for additional licensure.</li>
+                </ul>
+        </div>
+        <div class="half">
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+                    <li>22-23 credits minimum completed in 1-2 years.</li>
+                    <li>Students pursuing administrative licensure also complete a 320-hour field experience.</li>
+                    <li>Courses are offered throughout the year with evening courses offered during fall, spring, and summer semesters, and day courses offered during summer semester.</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/administrative-licensure/curriculum/"/>Curriculum</a></li>
+                  
+                    <li><a href="{{ config.asset_base }}/documents/planning-sheets/CertPK12Adm.pdf">Program planning sheet [pdf]</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="span-12 feature margin-top-2">
+            <h2 class="text-center">Director</h2>
+                <div id="coordinator-container" class="loader-container" aria-live="polite"
+                    data-person-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+                    data-internet-id="pres0004" {# This is the id of the tag from the People tool #}
+                    data-target-element-selector="#coordinator-container" {# The element selector for the feed html #}
+                    data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+                    data-base-path="{{ config.base_url }}"
+                    data-template-name="person.html"> {# The name of the Nunjucks template #}
+                    <div class="loader">
+                        <div class="loader-figure "></div>
+                        <p class="loader-label">Loading...</p>
+                    </div>
+                </div>
+                <h2 class="text-center">Faculty</h2>
+                <div id="people-container" class="loader-container"
+                    data-people-app
+                    data-tag="474"
+                    data-target-element-selector="#people-container"
+                    data-template-path="/assets/dist/views/olpd/people/"
+                    data-template-name="list.html"
+                    data-base-path="{{ config.base_url }}"
+                    data-people-per-group="2">
+                    <div class="loader">
+                        <div class="loader-figure "></div>
+                        <p class="loader-label">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- close container -->
+
+    <div class="container">
+    <div class="twothird feature">
+        <h2>Profession builder</h2>
+            <p>A unique feature of our program is the option to complete multiple credentials simultaneously. When you choose the University of Minnesota to further your education, you aren't limited to completing just one credential. As you complete the 60 credits that the State of Minnesota requires for administrative licensure, you can earn multiple credentials including degrees, licenses, and certificates.</p>
+            <p><a href="{{ config.asset_base }}/documents/administrative-licensure/OnlyAtTheU.pdf">Check out our Only At The U! Profession Builder</a> to see how studying at the University of Minnesota will empower you to become a leader of educational leaders! Your time is valuable so why not use it to accomplish as much as possible?</p>
+
+        <h2>Practice informed by research</h2>
+            <p>This program is committed to honoring the diversity of communities and learners through integrating professional wisdom; research, inquiry, and reflection; and authentic practice in the life-long development of educational administrators. Project-based learning is embedded throughout the program to ensure authentic learning opportunities. <a href="{{ config.asset_base }}/graduate-programs/administrative-licensure/vision/">Read more about our vision and core beliefs.</a></p>
+
+        <h2>Charter Area Learning Center and other alternative education programs</h2>
+            <p>Area learning centers, charter schools, and other alternative education programs have unique requirements and necessitate specialized administrative skills. Students enrolled with a career goal of administration of an alternative setting will seek a principal's license.</p>
+    </div>
+</div>
+    <div class="container">
+        <p class="text-center"><a href="{{ config.asset_base }}/apply/certificate/administrative-licensure/" class="button center">How to apply</a></p>
+    </div>
+
+
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center"><a href="/people/pres0004">Gary Prest</a><br> Program Director<br> 612-626-8647 | <a href="mailto:pres0004@umn.edu">pres0004@umn.edu</a></p>
+    </div>
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

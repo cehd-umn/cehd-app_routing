@@ -455,11 +455,6 @@
   publish: true
   template_data:
     - section: graduate-programs
-/graduate-programs/adult-education/abe/:
-  template: olpd/graduate-programs/aded/abe.html
-  publish: true
-  template_data:
-    - section: graduate-programs
 /graduate-programs/certificate/adult-education/:
   template: olpd/graduate-programs/certificate/adult-education.html
   publish: true

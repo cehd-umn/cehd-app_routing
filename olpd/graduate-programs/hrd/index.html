@@ -1,0 +1,71 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Human Resource Development" %}
+{% block title %}
+    Human Resource Development
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Human Resource Development track</h1>
+
+    <div class="twothird feature">
+        <p>Human Resource Development (HRD) is an interdisciplinary field that combines insights from psychology, sociology, economics, organizational development, and education. We explore the human element of how organizations run. We research the dynamics between employees in an organizational context, and how knowledge is created and shared both formally and informally.</p>
+        <p>HRD practitioners are prepared to design training and development programs, identify system and business process needs, forecast necessary staffing changes, and improve employee engagement and performance. As a community of scholars, we seek to answer questions like:</p>
+            <ul class="bullet">
+                <li>How does telecommuting affect workers’ sense of belonging?</li>
+                <li>What are the undervalued leadership qualities needed for organizational innovation and success?</li>
+                <li>What incentives motivate our workers to continuously improve?</li>
+                <li>How do our everyday practices intersect with our political and socio-economic contexts?</li>
+            </ul>
+    </div>
+    </div>
+<div class="row emphasis margin-top-2">
+    <div class="container">
+        <div class="twothird feature">
+            <h2 class="text-center">Degrees and programs</h2>
+      <div class="row">
+              <div class="half">
+          <ul class="no-bullet">
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/phd/">Ph.D.</a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/ma/">M.A.</a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med/">M.Ed. in Adult Education</a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med/">M.Ed. in Human Resource Development</a></li>
+          </ul>
+      </div>
+
+      <div class="half">
+          <ul class="no-bullet">
+              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-education/">Adult Education Certificate</a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-literacy/">Adult Literacy Certificate</a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/human-resource-development/">Human Resource Development Certificate</a></li>
+          </ul>
+      </div>
+  </div>
+
+    </div>
+    </div>
+</div>
+    <div class="container">
+            <div class="span-12 feature margin-top-2">
+            <h2 class="text-center">Faculty</h2>
+            <div id="people-container" class="loader-container"
+                data-people-app
+                data-tag="464"
+                data-target-element-selector="#people-container"
+                data-template-path="/assets/dist/views/olpd/people/"
+                data-template-name="list.html"
+                data-base-path="{{ config.base_url }}"
+                data-people-per-group="2">
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

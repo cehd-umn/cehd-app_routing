@@ -1,0 +1,61 @@
+{% extends "olpd/layout/base.html" %}
+{% import "macros/people/people.html" as peoplefeed %}
+{%- import "macros/loader.html" as loader -%}
+{% set page_title = "OLPD MA: ES" %}
+{% block title %}
+  OLPD MA: ES
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>M.A. in OLPD<br  />
+            <small>Evaluation Studies</small></h1>
+    <div class="twothird feature">
+        <p>This Evaluation Studies (ES) track program prepares you with the professional experience and the theoretical knowledge for a career in program evaluation.</p>
+        <p>In this program, you will learn how to: </p>
+            <ul class="bullet">
+                <li>Frame and conceptualize organizational issues,</li>
+                <li>Assess the performance of public and nonprofit programs, and</li>
+                <li>Apply advanced techniques in evaluation and measurements in order to get actionable and reliable results.</li>
+            </ul>
+    </div>
+    </div>
+    <div class="container feature twothird">
+        <h2>Benefits</h2>
+            <p>Evaluation professionals bring a sophisticated toolkit of methods and models to help organizations understand what is happening in their programs and what could happen. Through organizational partnerships, you will work in real-life evaluation cases and get hands-on experience while in your program. With a master’s degree in evaluation studies, you will be able to provide specialized knowledge and skills to all kinds of professional settings, including education, governance, health care, industry, non-profits, and NGOs.</p>
+        <div class=span-6>
+            <h2>Careers</h2>
+                <ul class="bullet">
+                    <li>Program evaluator</li>
+                    <li>Program manager</li>
+                    <li>Program specialist</li>
+                    <li>Program developer</li>
+                    <li>Organizational development specialist</li>
+                    <li>Trainer or research manager</li>
+                    <li>Adjunct instructor</li>
+                    <li>Behavioral scientist</li>
+                </ul>
+        </div>
+        <div class=span-6>
+            <h2>Coursework</h2>
+                <ul class="no-bullet">
+
+                    <li><strong>Plan A option:</strong> 31-32 credits (with master's thesis) completed in 2 years for full time students</li>
+                    <li><strong>Plan B option:</strong> 30-32 credits (without thesis but with additional coursework) completed in 2 years for full time students</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/ma-curriculum/">Curriculum</a></li>
+
+                </ul>
+        </div>
+    </div>
+    <div class="container">
+        <p class="text-center"><a href="{{ config.asset_base }}/apply/evaluation-studies/ma/" class="button center">How to apply</a></p>
+    </div>
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center"><a href="/people/herna220">Jeremy Hernandez</a><br> Coordinator of Graduate Studies<br> 612-626-9377 | <a href="mailto:herna220@umn.edu">herna220@umn.edu</a></p>
+    </div>
+            </div>
+</div>
+{% endblock %}

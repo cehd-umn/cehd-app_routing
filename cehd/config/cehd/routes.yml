@@ -990,6 +990,11 @@
   template: cehd/book-week/previous-authors/munoz-ryan.html
   template_data:
     - section: book-week
+/book-week/previous-authors/napoli/:
+  publish: true
+  template: cehd/book-week/previous-authors/napoli.html
+  template_data:
+    - section: book-week
 /book-week/previous-authors/okorafor/:
   publish: true
   template: cehd/book-week/previous-authors/okorafor.html
@@ -1330,6 +1335,11 @@
   template: cehd/events/homecoming.html
   template_data:
     - section: events
+/events/principal-brunch/:
+  publish: true
+  template: cehd/events/principal-brunch.html
+  template_data:
+    - section: events
 /events/retirement/:
   publish: true
   template: cehd/events/retirement.html
@@ -1590,7 +1600,7 @@
   template_data:
     - section: global
 /global/i-connect/:
-  publish: true
+  publish: false
   template: cehd/global/i-connect.html
   template_data:
     - section: global
@@ -1757,6 +1767,11 @@
 /reads/previous-books/:
   publish: true
   template: cehd/reads/previous-books/index.html
+  template_data:
+    - section: reads
+/reads/event/:
+  publish: true
+  template: cehd/reads/event.html
   template_data:
     - section: reads
 /reads/previous-books/gaines/:
@@ -2961,12 +2976,117 @@
     - section: trio
 /trio/mcnair/2018/westfall-mccoy/:
   publish: true
-  template: cehd/trio/mcnair/2018/westfallmccoy.html
+  template: cehd/trio/mcnair/2018/westfall-mccoy.html
   template_data:
     - section: trio
 /trio/mcnair/2018/xiong/:
   publish: true
   template: cehd/trio/mcnair/2018/xiong.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/abdullahi/:
+  publish: true
+  template: cehd/trio/mcnair/2019/abdullahi.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/bartelt/:
+  publish: true
+  template: cehd/trio/mcnair/2019/bartelt.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/cornejo/:
+  publish: true
+  template: cehd/trio/mcnair/2019/cornejo.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/diazrodriguez/:
+  publish: true
+  template: cehd/trio/mcnair/2019/diazrodriguez.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/dominguez/:
+  publish: true
+  template: cehd/trio/mcnair/2019/dominguez.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/duong/:
+  publish: true
+  template: cehd/trio/mcnair/2019/duong.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/eucedamejia/:
+  publish: true
+  template: cehd/trio/mcnair/2019/eucedamejia.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/gardow/:
+  publish: true
+  template: cehd/trio/mcnair/2019/gardow.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/guerrero/:
+  publish: true
+  template: cehd/trio/mcnair/2019/guerrero.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/hamernick/:
+  publish: true
+  template: cehd/trio/mcnair/2019/hamernick.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/heinz/:
+  publish: true
+  template: cehd/trio/mcnair/2019/heinz.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/hussein/:
+  publish: true
+  template: cehd/trio/mcnair/2019/hussein.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/jeldo/:
+  publish: true
+  template: cehd/trio/mcnair/2019/jeldo.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/moua/:
+  publish: true
+  template: cehd/trio/mcnair/2019/moua.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/oatis/:
+  publish: true
+  template: cehd/trio/mcnair/2019/oatis.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/osman/:
+  publish: true
+  template: cehd/trio/mcnair/2019/osman.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/rogers/:
+  publish: true
+  template: cehd/trio/mcnair/2019/rogers.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/sanchez/:
+  publish: true
+  template: cehd/trio/mcnair/2019/sanchez.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/tsegai/:
+  publish: true
+  template: cehd/trio/mcnair/2019/tsegai.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/xiong/:
+  publish: true
+  template: cehd/trio/mcnair/2019/xiong.html
+  template_data:
+    - section: trio
+/trio/mcnair/2019/yang/:
+  publish: true
+  template: cehd/trio/mcnair/2019/yang.html
   template_data:
     - section: trio
 /trio/mcnair/:

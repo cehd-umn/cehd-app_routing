@@ -1,0 +1,61 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "2019 Author" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+
+        <h1>Book Week<small class="clear"><em>A celebration of children's literature</em></small></h1>
+                {{ include('cehd/book-week/aa-nav.html') }}
+
+      <div class="twothird feature">
+        <h2>2019 author: Donna Jo Napoli</h2>
+        <div class="row">
+        <div class="span-3">
+          <figure class="margin-top-3">
+            <img class="circular" alt="Donna Jo Napoli" src="/assets/images/book-week/Napoli/sq-Napoli.jpg" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+         <div class="span-9">
+           <p>
+             Donna Jo Napoli is the author of award-winning books for children as well as a prominent linguist, whose work ranges from mathematical analysis of folk dance to structures of American Sign Language. Born to Italian American parents, Napoli is best known for her emotionally gripping retellings of premodern folk and fairy tales, like <em>Zel, The Magic Circle, The Great God Pan</em> or<em> Mogo, the Third Warthog</em>, but her prolific work ranges across genres and formats. Most of her books deal with a loss or challenge and feature characters who develop the ability to overcome a disruption in their lives.
+             </p>
+
+            </div>
+        </div>
+    </div>
+  </div>
+ </div> <!-- ./container -->
+ <!-- ADD book jackets here -->
+ <div class="row emphasis margin-top-1">
+   <div class="container">
+     <div class="row">
+       <h2 class="text-center">Featured books</h2>
+
+       <div class="twothird feature">
+         <div class="span-3">
+           <img alt="Book Jacket: Zel" src="/assets/images/book-week/Napoli/Zel.jpg" />
+           <figcaption>Zel</figcaption>
+         </div>
+         <div class="span-3">
+         <img alt="Book Jacket: The Magic Circle" src="/assets/images/book-week/Napoli/Magic.jpg" />
+         <figcaption>The Magic Circle</figcaption>
+       </div>
+
+       <div class="span-3">
+         <img alt="Book Jacket: The Great God Pan" src="/assets/images/book-week/Napoli/Pan.jpg"/>
+         <figcaption>The Great God Pan</figcaption>
+       </div>
+       <div class="span-3">
+         <img alt="Book Jacket: Mogo, The Third Warthog" src="/assets/images/book-week/Napoli/Mogo.jpg"/>
+         <figcaption>Mogo, The Third Warthog</figcaption>
+       </div>
+   </div>
+
+     </div>
+   </div>
+ </div>
+   <!-- END book jackets here -->
+</div> <!-- ./row -->
+{% endblock %}

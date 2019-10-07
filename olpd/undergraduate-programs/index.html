@@ -1,0 +1,73 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Welcome to our Homepage" %}
+{% block title %}
+     Undergraduate Programs
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Undergraduate programs</h1>
+    </div>
+</div>
+  <div class="container">
+    <h2>Majors</h2>
+        <div class="half">
+            <h3><a href="{{ config.asset_base }}/undergraduate-programs/business-marketing-education/">Business and marketing education</a></h3>
+            <p>Learn a broad set of skills to prepare for a variety of careers, from positions in Fortune 500 companies, entrepreneurial startups, and international organizations to nonprofit management.</p>
+
+            <h3><a href="{{ config.asset_base }}/undergraduate-programs/human-resource-development/">Human resource development</a></h3>
+            <p>Gain the skills you need to offer workplace training and contribute to organizational development in a variety of public and private organizations.</p>
+
+    <h2>Certificates and minor</h2>
+        <ul class="no-bullet">
+            <li><a href="{{ config.asset_base }}/undergraduate-programs/certificate/adult-education/">Adult education certificate</a></li>
+            <li><a href="{{ config.asset_base }}/undergraduate-programs/certificate/human-resource-development/">Human resource development certificate</a></li>
+            <li><a href="http://lead.umn.edu/minor/">Leadership minor</a></li>
+        </ul>
+
+        </div>
+
+        <div class="half">
+            <figure>
+                <img src="/olpd/images/undergraduate-presentation.jpg" alt="undergraduate students attending a presentation">
+                <figcaption>BME and HRD undergraduate students attending a presentation.</figcaption>
+            </figure>
+        </div>
+
+    </div>
+    <div class="row emphasis margin-top-1">
+        <div class="container">
+            <div class="feature twothird">
+            <h2><small>About our students</small></h2>
+            <p class="pull-quote">"I was drawn to OLPD because it allowed me to pursue coursework and projects using both qualitative and quantitative methodologies, and I continue to love being part of this department because of the faculty and colleagues who were incredibly welcoming from the beginning and have been very supportive and genuinely invested in my work."</p>
+            <p align="right" class="speaker">Paige Puntillo - BME B.S. Student</p>
+            <p>Paige is working on a group project in her E-Marketing class that focuses on the digital marketing strategy of Lufthansa, the leading airline based out of Germany. They are researching social media, search engine optimization, digital touch points, and web content/user experience. 
+</p>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="span-12 feature margin-top-2">
+            <h2 class="text-center">Faculty</h2>
+                <div id="people-container" class="loader-container"
+                    data-people-app
+                    data-tag="473"
+                    data-target-element-selector="#people-container"
+                    data-template-path="/assets/dist/views/olpd/people/"
+                    data-template-name="list.html"
+                    data-base-path="{{ config.base_url }}"
+                    data-people-per-group="2">
+                    <div class="loader">
+                        <div class="loader-figure "></div>
+                        <p class="loader-label">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- close container -->
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

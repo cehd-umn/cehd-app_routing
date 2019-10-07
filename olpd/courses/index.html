@@ -1,0 +1,46 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Course Information" %}
+{% block title %}
+  Course Information
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Course information<br>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half">
+                <h2>Course registration</h2>
+                    <p>Search or register for classes via OneStop.</p>
+                        <ul class="bullet">
+                            <li><a href="https://onestop.umn.edu/academics/class-search-resources">Course search resources</a></li>
+                            <li><a href="https://onestop.umn.edu/academics/enroll-class">Class registration instructions</a></li>
+                            <li><a href="https://onestop.umn.edu/">OneStop student services</a></li>
+                        </ul><br>
+
+                <h2>Course designator changes</h2>
+                    <p>Conversion information for courses changed to the OLPD designator.</p>
+                <h3>Former PSTL courses</h3>
+                    <ul class="bullet">
+                        <li><a href="{{ config.asset_base }}/documents/Courses/PSTLGradCourses.pdf">Course list sorted by former PSTL designator</a></li>
+                    </ul>
+                <h3>Former ADED, BIE, EDPA, HRD, and WHRE courses</h3>
+                <h4>Undergraduate</h4>
+                    <ul class="bullet">
+                        <li><a href="{{ config.asset_base }}/documents/Courses/UGCourses-OLPDSort.pdf">Course list sorted by new OLPD designator</a></li>
+                        <li><a href="{{ config.asset_base }}/documents/Courses/UGCourses-EDPAWHRESort.pdf">Course list sorted by former EDPA/WHRE designators</a></li>
+                    </ul>
+                <h4>Graduate</h4>
+                    <ul class="bullet">
+                        <li><a href="{{ config.asset_base }}/documents/Courses/GradCourses-OLPDSort.pdf">Course list sorted by new OLPD designator</a></li>
+                        <li><a href="{{ config.asset_base }}/documents/Courses/GradCourses-EDPAWHRESort.pdf">Course list sorted by former EDPA/WHRE designators</a></li>
+                        <li><a href="{{ config.asset_base }}/documents/Courses/GradCourses-AreaSort.pdf">Course list sorted by track</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- close row -->
+{% endblock %}
