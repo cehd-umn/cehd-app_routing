@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/google-analytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/google-analytics.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <workItem from="1568646187203" duration="590000" />
       <workItem from="1568663446042" duration="101000" />
       <workItem from="1568733850094" duration="433000" />
-      <workItem from="1582052139608" duration="1969000" />
+      <workItem from="1582052139608" duration="2055000" />
     </task>
     <servers />
   </component>
