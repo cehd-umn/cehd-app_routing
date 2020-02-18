@@ -32,7 +32,7 @@
                     </p>
                     {% if item.meta %}
                     <!-- NEED TO FIND LONG TERM FIX FOR META DATA INCLUDED IN SEARCH -->
-                    <p class="description hide">{{ item.meta }}</p> 
+                    <p class="description hide">{{ item.meta }}</p>
                   {% endif %}
                     {% if item.description %}
                       <p class="description">{{ item.description }}. </p>
@@ -40,7 +40,7 @@
                     {% if item.links %}
                     <ul class="no-bullet">
                         {% for link in item.links %}
-                          <li><a href="{{ link.href }}">{{ link.title }}
+                          <li><a href="{{ link.href }}" {{ analytics.add_tracking("send", "event", "programSorter", "click", "{{ item_title }} - {{ link.title }}") }}>{{ link.title }}
                             {% if link.footnote_indicator %}{{ link.footnote_indicator }}{% endif %}
                           </a></li>
                         {% endfor %}
