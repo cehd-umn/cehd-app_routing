@@ -31,6 +31,8 @@
 
         {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
         {% block extra_css %}{% endblock %}
+
+        {% include 'includes/google-analytics.html' %}
     </head>
     <body>
         <header>
@@ -99,7 +101,7 @@
         {% block bottom_js %}{% endblock %}
         {# Don't load Google analytics in dev environments #}
         {# {% if config.is_prod or config.is_test %} #}
-            {% include 'includes/google-analytics.html' %}
+<!--            {% include 'includes/google-analytics.html' %}-->
         {# {% endif %} #}
     </body>
 </html>
