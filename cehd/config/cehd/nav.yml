@@ -85,8 +85,8 @@
               href: "/career/resumes/"
             - name: Find a Job or Internship
               href: "/career/internships/"
-            - name: Prepare for Grad School
-              href: "/career/grad-school/prepare/"
+            - name: Resources for Graduate Students
+              href: "/career/grad-school/"
             - name: Hire a CEHD Student or Graduate
               href: "/career/employers/"
             - name: Resources for Teachers
@@ -114,6 +114,8 @@
         href: "/research/grantsmanship/"
       - name: PI Eligibility
         href: "/research/pi/"
+      - name: Three Minute Thesis
+        href: "/research/threeminute/"
       - name: Policy Breakfast Series
         href: "/policy-breakfast/"
 - name: Diversity & Inclusion
@@ -189,7 +191,7 @@
               href: "/alumni/society/message/"
             - name: Scholarships
               href: "/alumni/society/scholarships/"
-            - name: Scholarship Funds
+            - name: Give to Alumni Scholarships
               href: "/alumni/society/fund/"
     -
       - name: AWARDS & SCHOLARSHIPS
@@ -220,5 +222,7 @@
         href: "/about/accreditation/"
       - name: Directory
         href: "/directory/"
+      - name: Dean Search
+        href: "/about/dean-search/"
       - name: Departments & Centers
         href: "/departments-centers/"

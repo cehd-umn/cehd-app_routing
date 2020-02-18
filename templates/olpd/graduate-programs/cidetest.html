@@ -1,0 +1,75 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Comparative and International Development Education" %}
+{% block title %}
+    Comparative and International Development Education
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Comparative and International Development Education track</h1>
+    </div>
+    <div class="row emphasis cool margin-top-1">
+        <div class="container">
+
+            <div class="row">
+                <div class="half">
+                    <ul class="no-bullet">
+                        <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/phd/"><strong>Ph.D.</strong></a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/liie/"><strong>Ph.D.: Leadership for Intercultural and International Education (LIIE) cohort</strong></a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="half">
+                    <ul class="no-bullet">
+                        <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/ma/"><strong>M.A.</strong></a></li>
+                        <li><a href="{{ config.asset_base }}/graduate-programs/minor/international-education/"><strong>Graduate Minor in International Education</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+            <div class="half">
+            <h2>About CIDE at Minnesota</h2>
+            <p>We are a community of scholars who research education policy and practice in complex, rapidly changing international and intercultural contexts. Our students and faculty examine formal, non-formal, and informal education from global, interdisciplinary, and comparative perspectives. We look at how cultural formations, political institutions, and economic systems influence our educational philosophies and infrastructures. We also dedicate ourselves to enhancing and fostering the understanding of important issues and trends that affect education, such as gender relations, human rights, international relations, and migration.</p>
+            <p>Students who join our Comparative and International Development Education (CIDE) community represent the future scholars, policy analysts, educators, and researchers active in a complex, ever changing, international field. They come from a wide array of educational backgrounds, including history, geography, political science, sociology, economics, education, anthropology, and intercultural studies. They also come from many countries, such as Bahrain, Brazil, China, Ethiopia, Guatemala, India, Japan, Kenya, Pakistan, South Korea, Thailand, the U.S., Venezuela, and Zambia. Our students care about social justice and equity, intercultural competence, and contextually-relevant education reform. They are also concerned about the internationalization of education and how students and scholars make sense of their international experiences.</p>
+            <p>A distinctive feature of our program is the close collaboration between faculty and students in both research and development projects in the U.S. and abroad. Several of these research projects have involved fieldwork by our students in diverse countries and over multiple years.  This intensive, hands-on experience in conducting policy-relevant research has contributed to the impressive success of our alumni across the nation and globe in a diverse range of positions in important international and intercultural organizations.</p>
+        </div>
+        <div class="half">
+            <h2>Contact Us</h2>
+            <p>If you would like more information about any of our program offerings, please fill out this form and we will be in touch. We will not share your contact information outside our department.</p>
+            <iframe src="https://services.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=233" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="866" width="100%"></iframe>
+            <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+        </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="span-12 feature margin-top-2">
+
+            <h2 class="text-center">Faculty</h2>
+            <div id="people-container" class="loader-container"
+                data-people-app
+                data-tag="465"
+                data-target-element-selector="#people-container"
+                data-template-path="/assets/dist/views/olpd/people/"
+                data-template-name="list.html"
+                data-base-path="{{ config.base_url }}"
+                data-people-per-group="2">
+                <div class="loader">
+                    <div class="loader-figure "></div>
+                    <p class="loader-label">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- close container -->
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

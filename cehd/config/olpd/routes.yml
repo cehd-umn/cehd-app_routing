@@ -197,7 +197,7 @@
     - section: apply
 /apply/multicultural-college-teaching-learning/ma/:
   template: olpd/apply/mctl/ma.html
-  publish: true
+  publish: false
   template_data:
     - section: apply
 /apply/human-resource-development/phd/:
@@ -272,6 +272,11 @@
     - section: graduate-programs
 /graduate-programs/comparative-international-development-education/:
   template: olpd/graduate-programs/cide/index.html
+  publish: true
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetest/:
+  template: olpd/graduate-programs/cidetest.html
   publish: true
   template_data:
     - section: graduate-programs
@@ -442,6 +447,11 @@
     - section: graduate-programs
 /graduate-programs/human-resource-development/internship/:
   template: olpd/graduate-programs/hrd/internship.html
+  publish: true
+  template_data:
+    - section: graduate-programs
+/graduate-programs/human-resource-development/mclean-fellowship/:
+  template: olpd/graduate-programs/hrd/mclean-fellowship.html
   publish: true
   template_data:
     - section: graduate-programs

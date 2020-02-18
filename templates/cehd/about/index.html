@@ -40,8 +40,8 @@
 <h3 class="text-center">2019 Annual Report</h3>
 <p class="text-center">To learn more, <a href="/assets/docs/about/CEHD-Annual-Report-2019.pdf" {{ analytics.add_tracking("send", "event", "2018 Annual Report", "click", "annualreport") }}>download our Annual Report</a> (pdf).</p>
 <div class="span-12 push-4">
-            <p>      <img src="/assets/images/about/Annual-Report-2019-Cover.jpg" width="25%"alt="Annual report cover">
-</p>
+    <p><img src="/assets/images/about/Annual-Report-2019-Cover.jpg" width="25%"alt="Annual report cover" />
+    </p>
         </div>
     </div>
     </div>
@@ -74,50 +74,8 @@
                     <p>1,644 degrees granted during 2016-17 (760 B.S., 502 M.Ed., 382 masters and advanced graduate degrees). In addition, 387 students completed post baccalaureate teacher licensure (285 initial licensure, 102 additional licensure).</p>
                 </div>
             </div> -->
-            <div class="twothird feature">
-                <h2 class="text-center" id="admin">College administration</h2>
-            </div>
-            <div class="row">
-                <div class="span-4">
-                    &nbsp;
-                </div>
-                <div class="span-2">
-                    <p><img class="circular" alt="Dean Jean Quam" src="/assets/images/headshots/faculty-features/sq-QuamJean-2015.jpg" /></p>
-                </div>
-                <div class="span-4">
-                    <h3><a href="/ssw/people/jquam/">Jean K. Quam</a></h3>
-                    <p>Dean<br>
-                        <a href="mailto:jquam@umn.edu">jquam@umn.edu</a> | 612-626-5177 <br  /><a href="https://twitter.com/jeankquam?lang=en">@JeanKQuam</a></p>
 
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span-2">
-                    <p><img src="/assets/images/headshots/Sq-DillonD-2017.jpg" class="circular" alt="Deborah Dillon" /></p>
-                </div>
-                <div class="span-2">
-                    <h3><a href="/ci/people/dillon.html">Deborah Dillon</a></h3>
-                    <p>Senior Associate Dean for Graduate and Professional Programs<br>
-                        <a href="mailto:dillon@umn.edu">dillon@umn.edu</a> | 612-626-8271</p>
-                </div>
-                <div class="span-2">
-                    <p><img src="/assets/images/headshots/RodriguezM-2017-Sq.jpg" class="circular" alt="Michael Rodriguez" /></p>
-                </div>
-                <div class="span-2">
-                    <h3><a href="/edpsych/people/mcrdz/">Michael Rodriguez</a></h3>
-                        <p>Associate Dean for Undergraduate Education, Diversity, and International Initiatives<br>
-                            <a href="mailto:mcrdz@umn.edu">mcrdz@umn.edu</a> | 612-624-4324</p>
-                </div>
-                <div class="span-2">
-                    <p><img src="/assets/images/headshots/Sq-SymonsF-2005.jpg" class="circular" alt="Frank J. Symons" /></p>
-                </div>
-                <div class="span-2">
-                    <h3><a href="/edpsych/people/Faculty/symons.html">Frank Symons</a></h3>
-                    <p>Associate Dean for Research and Policy<br />
-                        <a href="mailto:symon007@umn.edu">symon007@umn.edu</a> | 612-626-8697</p>
-                </div>
-            </div><!-- ./row -->
+            {% include "cehd/directory/includes/senior-management-team.html" %}
 
             <div class="twothird feature">
                 <h2 class="text-center">Employment opportunities</h2>
@@ -125,7 +83,7 @@
             <div class="row">
               <div class="third">
                   <h3>College contacts</h3>
-                  <p><a href="/directory/">List of administrative services</a> and contacts.</p>
+                  <p><a href="/directory/">Directory and college contacts</a>.</p>
               </div>
               <div class="third">
                   <h3>Employment</h3>

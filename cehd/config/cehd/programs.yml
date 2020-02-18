@@ -107,20 +107,6 @@ Clinical Physiology and Movement Science:
   description: null
   categories:
     - Recreation, Health, and Wellbeing
-Coaching:
-  meta: null
-  publish: true
-  links:
-    - title: Undergraduate Certificate
-      href: http://www.cehd.umn.edu/kin/academics/coaching.html
-    - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/kin/academics/coaching.html
-  description: If you're interested in pursuing sport management or teacher licensure, this certificate  gives you a foundation for developing your coaching skills
-  categories:
-    - Teaching, Learning, and Schools
-    - Recreation, Health, and Wellbeing
-    - Business, Administration, and Leadership
-    - Psychology, Counseling, and Social Work
 Comparative International Development Education:
   meta: null
   publish: true
@@ -346,7 +332,7 @@ Family Violence Prevention:
   publish: true
   links:
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
+      href: https://www.cehd.umn.edu/ssw/undergraduate/minors/
   description: Expand your knowledge of preventing family violence through this minor in the School of Social Work
   categories:
     - Families, Youth, and Children
@@ -664,7 +650,7 @@ Social Justice:
   publish: true
   links:
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/SSW/Undergraduate/minors.html
+      href: https://www.cehd.umn.edu/ssw/undergraduate/minors/
   description: Examine how to create socially just communities through this minor in the School of Social Work
   categories:
     - Business, Administration, and Leadership
@@ -716,6 +702,20 @@ Special Education:
   categories:
     - Teaching, Learning, and Schools
     - Disability and Aging
+    - Psychology, Counseling, and Social Work
+Sports Coaching:
+  meta: null
+  publish: true
+  links:
+    - title: Undergraduate Certificate
+      href: http://www.cehd.umn.edu/kin/academics/coaching.html
+    - title: Undergraduate Minor
+      href: http://www.cehd.umn.edu/kin/academics/coaching.html
+  description: If you're interested in pursuing sport management or teacher licensure, this certificate  gives you a foundation for developing your coaching skills
+  categories:
+    - Teaching, Learning, and Schools
+    - Recreation, Health, and Wellbeing
+    - Business, Administration, and Leadership
     - Psychology, Counseling, and Social Work
 Sport Management:
   meta: null
@@ -801,7 +801,7 @@ Youth Studies:
     - title: Undergraduate Major
       href: http://www.cehd.umn.edu/SSW/Undergraduate/YOST.html
     - title: Undergraduate Minor
-      href: http://www.cehd.umn.edu/ssw/Undergraduate/minors.html
+      href: https://www.cehd.umn.edu/ssw/undergraduate/minors/
   description: Make a difference in young people's lives. Prepare for careers working with youth in a variety of settings or pursue graduate work in social work, education, or public policy
   categories:
     - Families, Youth, and Children

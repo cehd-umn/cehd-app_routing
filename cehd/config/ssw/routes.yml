@@ -60,6 +60,16 @@
   publish: true
   template_data:
     - section: alumni
+/alumni/moua/:
+  template: ssw/alumni/moua.html
+  publish: true
+  template_data:
+    - section: alumni    
+/alumni/gbolo/:
+  template: ssw/alumni/gbolo.html
+  publish: true
+  template_data:
+    - section: alumni
 /alumni/schoeppner/:
   template: ssw/alumni/schoeppner.html
   publish: true

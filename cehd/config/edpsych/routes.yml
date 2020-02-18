@@ -161,6 +161,12 @@
     template_data:
         meta_description: null
         section: current
+/edpsych/current/psych-foundations/psych-foundations-travel-funding/:
+    publish: true
+    template: edpsych/current/psych-foundations/psych-foundations-travel-funding.html
+    template_data:
+        meta_description: null
+        section: current
 /edpsych/current/qme/:
     publish: true
     template: edpsych/current/qme/index.html
@@ -170,6 +176,12 @@
 /edpsych/current/qme/handbook/:
     publish: true
     template: edpsych/current/qme/handbook.html
+    template_data:
+        meta_description: "Get resources to help you complete your degree in quantitative methods in education."
+        section: current
+/edpsych/current/qme/qme-travel-funding/:
+    publish: true
+    template: edpsych/current/qme/qme-travel-funding.html
     template_data:
         meta_description: "Get resources to help you complete your degree in quantitative methods in education."
         section: current
@@ -497,6 +509,12 @@
     template: edpsych/programs/schoolpsych/pride-fellow.html
     template_data:
         meta_description: "The school psychology program at the University of Minnesota has five Project PRIDE fellowships available to students enrolling in the Master’s/Specialist Certificate track for Fall 2017."
+        section: programs-degrees
+/edpsych/programs/schoolpsych/research-presentations/:
+    publish: true
+    template: edpsych/programs/schoolpsych/research-presentations.html
+    template_data:
+        meta_description: "Faculty and students in the school psychology program at the University of Minnesota present at a number of local, national, and international conferences."
         section: programs-degrees
 /edpsych/programs/specialed/:
     publish: true

@@ -85,6 +85,16 @@
   template: cehd/about/dac/index.html
   template_data:
     - section: about
+/about/dean-search/:
+  publish: true
+  template: cehd/about/dean-search.html
+  template_data:
+    - section: about
+/about/dean-search-committee/:
+  publish: true
+  template: cehd/about/dean-search-committee.html
+  template_data:
+    - section: about
 /about/ote/:
   publish: true
   template: cehd/about/ote/index.html
@@ -1251,7 +1261,7 @@
   template_data:
     - section: career
 /career/teacher/success/:
-  publish: true
+  publish: false
   template: cehd/career/teacher/success.html
   template_data:
     - section: career
@@ -1261,7 +1271,7 @@
   template_data:
     - section: commencement
 /commencement/guests/:
-  publish: false
+  publish: true
   template: cehd/commencement/guests.html
   template_data:
     - section: commencement
@@ -1310,14 +1320,19 @@
   template: cehd/events/block-party.html
   template_data:
     - section: events
-/events/collins/:
+/events/china-champions/:
   publish: true
-  template: cehd/events/collins.html
+  template: cehd/events/china-champions.html
+  template_data:
+    - section: events
+/events/diversity-social-hour/:
+  publish: true
+  template: cehd/events/diversity-social-hour.html
   template_data:
     - section: events
 /events/faculty-students-social/:
   publish: true
-  template: cehd/events/faculty-student-social.html
+  template: cehd/events/faculty-students-social.html
   template_data:
     - section: events
 /events/fall-assembly/:
@@ -1335,6 +1350,11 @@
   template: cehd/events/homecoming.html
   template_data:
     - section: events
+/events/pelsb/:
+  publish: true
+  template: cehd/events/pelsb.html
+  template_data:
+    - section: events
 /events/principal-brunch/:
   publish: true
   template: cehd/events/principal-brunch.html
@@ -1343,11 +1363,6 @@
 /events/retirement/:
   publish: true
   template: cehd/events/retirement.html
-  template_data:
-    - section: events
-/events/thanksgiving/:
-  publish: true
-  template: cehd/events/thanksgiving.html
   template_data:
     - section: events
 /events/research-day/:
@@ -1363,6 +1378,11 @@
 /events/spring-assembly/:
   publish: true
   template: cehd/events/spring-assembly.html
+  template_data:
+    - section: events
+/events/thanksgiving/:
+  publish: true
+  template: cehd/events/thanksgiving.html
   template_data:
     - section: events
 /events/undergrad-networking/:
@@ -1592,6 +1612,16 @@
 /global/faith-resource/:
   publish: true
   template: cehd/global/faith-resource.html
+  template_data:
+    - section: global
+/global/fellowships/:
+  publish: true
+  template: cehd/global/fellowships.html
+  template_data:
+    - section: global
+/global/fulbright/:
+  publish: true
+  template: cehd/global/fulbright.html
   template_data:
     - section: global
 /global/gtep/:
@@ -1872,6 +1902,11 @@
 /research/resources/:
   publish: true
   template: cehd/research/resources.html
+  template_data:
+    - section: research
+/research/threeminute/:
+  publish: true
+  template: cehd/research/threeminute.html
   template_data:
     - section: research
 /study-abroad/:
@@ -3374,6 +3409,11 @@
   template: cehd/undergraduate/outcomes.html
   template_data:
     - section: undergraduate
+/undergraduate/readmission/:
+  publish: true
+  template: cehd/undergraduate/readmission.html
+  template_data:
+    - section: undergraduate
 /undergraduate/research/:
   publish: true
   template: cehd/undergraduate/research.html
@@ -3414,9 +3454,9 @@
   template: cehd/undergraduate/thompson.html
   template_data:
     - section: undergraduate
-/undergraduate/tuition/:
+/undergraduate/tigue/:
   publish: true
-  template: cehd/undergraduate/tuition.html
+  template: cehd/undergraduate/tigue.html
   template_data:
     - section: undergraduate
 /undergraduate/vue/:
@@ -3432,11 +3472,6 @@
 /undergraduate/scholarships/:
   publish: true
   template: cehd/undergraduate/scholarships/index.html
-  template_data:
-    - section: undergraduate
-/undergraduate/scholarships/alumni/:
-  publish: true
-  template: cehd/undergraduate/scholarships/alumni.html
   template_data:
     - section: undergraduate
 /undergraduate/scholarships/general/:
