@@ -1,0 +1,26 @@
+asset_base: "/kin"
+autoescape: true
+autoreload: true
+base_url: "/kin"
+debug: false
+dept_name: "School of Kinesiology (KIN)"
+filter_method_names:
+  - hyphenate
+  - stripStyleAttributes
+redirect_prepend: "/kin/"
+search_sites:
+  primary:
+    client: "tc_education"
+    name: "School of Kinesiology"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/kin/"
+  secondary:
+    client: "tc_education"
+    name: "College of Education & Human Development"
+    site: "tc_education_students"
+    url: "www.cehd.umn.edu/"
+  tertiary:
+    client: "searchumn"
+    name: "University of Minnesota"
+    site: "default_collection"
+    url: "www.umn.edu/"

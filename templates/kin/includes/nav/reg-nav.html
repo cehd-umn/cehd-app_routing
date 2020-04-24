@@ -1,0 +1,24 @@
+<div class="container">
+    <button class="nav-toggle">Menu</button>
+    <nav class="inline">
+        <ul class="nav inline">
+            {% for top_level_nav_item in nav_items %}
+            <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}"
+                    id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{
+                    top_level_nav_item.name }}</a>
+                {% if top_level_nav_item.subsections %}
+                <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
+                    {% for subsection in top_level_nav_item.subsections %}
+                    <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a
+                            href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{
+                            subsection.name }}</a>
+                        {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+            <li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/"><img src="/assets/images/icons/Home.svg" alt="School of Social Work" /></a></li>
+            <!--<li class="top-nav-item top-home-item to-upper" id="home-top-nav-item"><a id="home=top-nav-link" class="top-level-nav-link home-link" href="/">{%- include "ssw/includes/nav/home-icon.html" -%}</a></li>-->
+        </ul>
+    </nav>
+</div>
