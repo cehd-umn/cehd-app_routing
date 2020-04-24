@@ -1,13 +1,13 @@
-asset_base: "/kin"
+asset_base: "/dev-kin"
 autoescape: true
 autoreload: true
-base_url: "/kin"
+base_url: "/dev-kin"
 debug: false
 dept_name: "School of Kinesiology (KIN)"
 filter_method_names:
   - hyphenate
   - stripStyleAttributes
-redirect_prepend: "/kin/"
+redirect_prepend: "/dev-kin/"
 search_sites:
   primary:
     client: "tc_education"

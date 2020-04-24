@@ -116,11 +116,11 @@ class KINApp extends \CEHD\App\App\BaseApp
         return $response;
     }
 
-    // public function errorPageHandler($code=404, $router)
-    // {
-    //     // @todo Create separate 404 template
-    //     $html = $this->_renderTemplate('cehd/error/404.html', []);
-    //     $router->response()->status($code);
-    //     $router->response()->body($html);
-    // }
+     public function errorPageHandler($code=404, $router)
+{
+    // @todo Create separate 404 template
+    $html = $this->_renderTemplate('kin/error/404.html', []);
+    $router->response()->status($code);
+    $router->response()->body($html);
+}
 }

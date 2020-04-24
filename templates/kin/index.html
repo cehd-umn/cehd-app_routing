@@ -9,7 +9,7 @@
 <style>
   .section-header-container {
     background-color: #fff;
-    top: -44px;
+    /*top: -44px;*/
   }
 
   #previous,
@@ -24,197 +24,29 @@
 </style>
 {% endblock %}
 
-{% block hero_image %}
-{% include "ssw/home-slider.html" %}
-{% endblock %}
 
 {% block main_content %}
 <div class="row has-hero-image">
-  <div class="container">
-    <h1 class="accessible-no-display">School of Kinesiology</h1>
-    <h1>Prepare to Build a Better World</h1>
+<!--  <div class="container">-->
+<!--    <h1 class="accessible-no-display">School of Kinesiology</h1>-->
+<!--    <h1>Prepare to Build a Better World</h1>-->
 
-    <div class="feature twothirds">
-      <p>At the School of Kinesiology, we practice what we teach: leadership, scholarship, social justice, and
-        community engagement.</p>
+<!--    <div class="feature twothirds">-->
+<!--      <p>At the School of Kinesiology, we practice what we teach: leadership, scholarship, social justice, and-->
+<!--        community engagement.</p>-->
 
 
-      <h2>Explore Our Programs</h2>
-      <p>Our Social Work PhD and Master of Social Work programs promote the knowledge, skills and values of the social
-        work profession. Our Youth Development Leadership M.Ed. program supports an expanded understanding of young
-        people, in the United
-        States and internationally. Our undergraduate programs — youth studies, family violence prevention, and social
-        justice — support and promote ways of valuing, living, and working in the world that further social change and
-        the common good.</p>
-    </div>
-  </div>
+<!--      <h2>Explore Our Programs</h2>-->
+<!--      <p>Our Social Work PhD and Master of Social Work programs promote the knowledge, skills and values of the social-->
+<!--        work profession. Our Youth Development Leadership M.Ed. program supports an expanded understanding of young-->
+<!--        people, in the United-->
+<!--        States and internationally. Our undergraduate programs — youth studies, family violence prevention, and social-->
+<!--        justice — support and promote ways of valuing, living, and working in the world that further social change and-->
+<!--        the common good.</p>-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
 
-<div class="row margin-top-1">
-  <!-- this is the percentage feature SEE OLPD homepage
-  <div class="container feature margin-top-2">
-    {# make sure the SVG container has a unique id #}
-    <div id="circle" data-svg-stat-group data-viewbox-x="0" data-viewbox-y="0" data-viewbox-height="250" data-viewbox-width="1400" data-circle-center-x="300" data-circle-center-y="125" data-circle-size="250" data-circle-bg-color="#7a0019"
-      data-main-text-x="460" data-main-text-y="90" data-main-text-color="#000" data-main-text-font-family="Lato-light, sans-serif" data-main-text-font-size="30px" data-main-text-lines='["employers identify &ldquo;ability to work in a team&rdquo; as", "the top attribute they seek in new hires"]'
-      data-stat-text-value="78%" data-stat-text-x="235" data-stat-text-y="50" data-stat-text-color="#fff" data-stat-text-font-family="Raleway, sans-serif" data-stat-text-font-size="70" data-caption-text-value="source: Job Outlook 2017, National Association of Colleges and Employers"
-      data-caption-text-x="460" data-caption-text-y="210" data-caption-text-color="#000" data-caption-text-font-family="Raleway, sans-serif" data-caption-text-font-size="13px" data-line-start-x="0" data-line-start-y="200" data-line-end-x="1400"
-      data-line-end-y="200" data-line-stroke-width="10" data-line-stroke-color="#eee" data-line-stroke-opacity=".6"></div>
-
-
-  </div> -->
-
-  <div class="container margin-top-4">
-
-
-    <div class="row">
-      <div class="third">
-        <h2>Leaders in research</h2>
-        <p>The School of Kinesiology is an integral part of a world-class research university. Our academic programs
-          are unique in Minnesota, preparing a diverse student body to be research-savvy professionals and scholars,
-          and providing research and engagement with a local-to-global impact. <a href="#">The research productivity of
-            our faculty was ranked 20th out of 76 U.S. social work doctoral programs in a recent study</a>.</p>
-
-        <p>Explore our research:</p>
-        <ul>
-          <li><a href="research/families-children/">Families and Children</a></li>
-          <li><a href="research/disability-aging/">Health, Disability, and Aging</a></li>
-          <li><a href="research/mental-health/">Mental Health</a></li>
-          <li><a href="research/methodology/">Methods and Methodology</a></li>
-          <li><a href="research/social-policy/">Social Policy</a></li>
-          <li><a href="research/youth-development/">Youth Development</a></li>
-        </ul>
-      </div>
-      <div class="third">
-        <h2>Recent news</h2>
-        <div id="news-container" class="loader-container" aria-live="polite" data-news-app {# this is how the
-          JavaScript below knows we want to pull in a news feed #} data-base-url="https://news.cehd.umn.edu/" {# The url
-          of the website with an RSS feed #} data-feed-path="category/departments/social-work/feed" {# The path for the
-          feed at the site above #} data-target-element-selector="#news-container" {# The element selector for the feed
-          html #} data-template-path="/assets/dist/views/ssw/newsfeed/" {# The path thes the Nunjucks template #}
-          data-template-name="index.html" {# The name of the Nunjucks template #} data-limit="3" {# How many stories to
-          display #}>
-          <div class="loader">
-            <div class="loader-figure "></div>
-            <p class="loader-label">Loading&hellip;</p>
-          </div>
-        </div>
-      </div>
-      <div class="third">
-        <h2>Upcoming events</h2>
-        <div id="events-container" class="loader-container" aria-live="polite" data-events-app {# this is how the
-          JavaScript below knows we want to pull in a events feed #} data-q="6" {# get this from Link Pro on the events
-          admin site #} data-r="37" {# get this from Link Pro on the events admin site #} data-t="127" {# get this from
-          Link Pro on the events admin site #} data-target-element-selector="#events-container" {# The element selector
-          for the feed html #} data-template-path="/assets/dist/views/ssw/events/" {# The path the the Nunjucks
-          template #} data-template-name="home.html" {# The name of the Nunjucks template #} data-limit="3" {# How many
-          stories to display #}>
-          <div class="loader">
-            <div class="loader-figure "></div>
-            <p class="loader-label">Loading&hellip;</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div><!-- close container -->
-
-  <div class="row emphasis margin-top-1">
-    <div class="container">
-      <h2 class="text-center">Contact information</h2>
-    </div>
-
-
-    <div class="container">
-
-      <p class="text-center">For general questions about our department, contact:</p>
-      <div class="span-3">
-        <p><strong>Undergraduate studies</strong><br /> Mike Valesano<br />
-          Undergraduate Advisor <br />612-624-4290 <br />
-          <a href="mailto:vale0168@umn.edu">vale0168@umn.edu</a></p>
-      </div>
-      <div class="span-3">
-        <p><strong>Graduate studies</strong><br /> <a href="/people/mbcase/">MacKenzie
-            Case</a> <br />Graduate Program Coordinator <br />612-624-4258 <br /> <a
-            href="mailto:mbcase@umn.edu">mbcase@umn.edu</a></p>
-      </div>
-
-
-      <div class="span-3">
-        <p><strong>MSW Admissions</strong><br /> 612-624-4905<br />
-          <a href="mailto:swadmis@umn.edu">swadmis@umn.edu</a></p>
-      </div>
-
-
-      <div class="span-3">
-        <p><strong>Main office</strong><br /> 612-625-1220</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-</div>
-
-</div>
-<div class="container margin-top-2">
-  <div class="half">
-    <div class="cognito">
-      <script src="https://services.cognitoforms.com/s/W-exKdUYPUu0h7yuDFt3rg"></script>
-      <script>
-        Cognito.load("forms", {
-          id: "88"
-        });
-      </script>
-    </div>
-  </div>
-
-  <div class="half">
-
-    <h3>Peters Hall hours:</h3>
-    <dl>
-      <dt>School year</dt>
-      <dd>Monday–Friday: 7:00 a.m. to 9:30 p.m.<br>
-        Saturday: 7:00 a.m. to 6:00 p.m.<br>
-        Sunday: Closed</dd>
-
-
-
-      <dt>Winter and spring breaks</dt>
-      <dd>Monday–Friday: 6:30 a.m. to 5:30 p.m.<br>
-        Saturday: Closed<br>
-        Sunday: Closed</dd>
-      <dt>Summer</dt>
-      <dd>Monday–Friday: 6:30 a.m. to 6:30 p.m.<br>
-        Saturday: Closed<br>
-        Sunday: Closed
-      </dd>
-
-    </dl>
-
-
-    <h4>105 Peters Hall, front desk hours:</h4>
-    <dl>
-      <dt>School year</dt>
-      <dd>Monday-Friday: 8:00 a.m. to 5:30 p.m.<br>
-        Saturday: 7:45 a.m. to 3:15 p.m.<br>
-        Sunday: Closed</dd>
-      <dt>Summer</dt>
-      <dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
-        Saturday: Closed<br>
-        Sunday: Closed</dd>
-
-      <dt>Winter and spring breaks</dt>
-      <dd>Monday–Friday: 8:00 a.m. to 4:00 p.m.<br>
-        Saturday: Closed<br>
-        Sunday: Closed</dd>
-
-
-    </dl>
-  </div>
-</div>
 
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
