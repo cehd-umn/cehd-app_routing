@@ -1,0 +1,148 @@
+.image-link,
+.image-link img {
+  text-decoration: none !important;
+  border-bottom: 0px !important;
+  outline: none;
+  border-width: 0px;
+  outline-width: 0px;
+  border-bottom: none;
+}
+
+.image-link:focus,
+.image-link img:focus,
+.image-link:hover,
+.image-link img:hover {
+  background-color: transparent !important;
+}
+
+
+#maincontent a,
+#maincontent a:link {
+  color: #900021;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+  border-bottom: 1px solid #900021;
+}
+
+/* #maincontent a:visited,
+#maincontent a🔗visited,
+.newlinks a:visited {
+  color: #5a5a5a;
+  border-bottom: 1px solid #5a5a5a;
+} */
+
+#maincontent a:focus,
+#maincontent a:hover {
+  background-color: #ffcc33;
+}
+
+#maincontent a.button,
+#maincontent a.button:link {
+  color: #900021;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+  border: 0.15em solid #999 !important;
+}
+
+#maincontent a.button:visited,
+#maincontent a.button:visited {
+  color: #5a5a5a;
+  border: 0.15em solid #999 !important;
+}
+
+#maincontent a.button:focus,
+#maincontent a.button:hover {
+  background-color: #ffcc33;
+}
+
+figcaption a,
+figcaption a:link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+  border-bottom: 0px solid #900021;
+}
+
+figcaption a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+  border-bottom: 0px solid #900021;
+}
+
+figcaption a {
+  background-color: transparent;
+}
+
+.newlinks a,
+.newlinks a:link {
+  color: #900021;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+  border-bottom: 1px solid #900021;
+}
+
+.newlinks a:hover {
+  color: #900021;
+}
+
+.newlinks a:visited {
+  color: #5a5a5a;
+  border-bottom: 1px solid #5a5a5a;
+}
+
+.newlinks a:link {
+  color: #900021;
+}
+
+.home-image figcaption a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-image figcaption a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button a {
+  color: #fff !important;
+  display: block;
+  padding: 2em;
+  border-bottom: none;
+}
+
+.nav a.current,
+nav a:hover {
+  color: #900021;
+}
+
+@media (min-width: 769px) {
+  .top-level:hover .top-level-link {
+    border-top: 5px solid transparent !important;
+    color: #900021;
+    text-decoration: none;
+  }
+
+  .top-level:hover li a:hover {
+    background-color: transparent !important;
+    color: #900021;
+  }
+}
+
+@media (min-width: 769px) {
+  .top-level:hover {
+    background: transparent !important;
+  }
+
+  .top-level:hover .top-level-link {
+    border-top: 5px solid transparent !important;
+    color: #900021 !important;
+    text-decoration: none;
+  }
+
+  .top-level:hover li a:hover {
+    background-color: transparent !important;
+    color: #900021;
+  }
+}

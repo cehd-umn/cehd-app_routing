@@ -7,152 +7,184 @@
 {% block heading_1 %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
-    .img-center {
-        display: block;
-        height: 150px;
-        margin: 0 auto;
-    }
-    .margin-bottom-0 {
-        margin-bottom: 0;
-    }
+  .img-center {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .margin-bottom-0 {
+    margin-bottom: 0;
+  }
 </style>
 {% endblock %}
 {% block main_content %}
 
+<div class="row emphasis subtle margin-top-1 margin-bottom-2">
+   <div class="container">
+       <div class="twothirds feature">
+           <p>The University of Minnesota is closely monitoring and responding to the COVID-19 public health concern. <a href="https://safe-campus.umn.edu/public-health-alerts" target="_blank">Stay informed⟶</a></p>
+       </div>
+   </div>
+</div>
 <div class="row">
-    <div class="container home-images-container">
-        <div class="home-images">
-            <div class="large-image-container">
-                <div class="home-image large">
-                    <figure>
-                        <a href="{{ config.base_url}}/research/topics/" {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
-                            <img src="{{ config.base_url}}/assets/dist/images/home/back-to-school-with-social-emotional-learning-homepage.jpg" alt="High school students attend a social-emotional learning committee meeting led by an Educational Psychology faculty member">
-                        </a>
-                        <figcaption>
-                            <a href="http://www.cehd.umn.edu/edpsych/research/topics/ {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}" >
-                                Research that makes a real difference
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div><!-- end home-image -->
-            </div><!-- end large-image-container -->
-            <div class="small-image-container">
-                <div class="home-image small top">
-                    <figure>
-                        <a href="{{ config.base_url}}/about/diversity-inclusion/">
-                            <img src="{{ config.base_url}}/assets/dist/images/home/2018_diversity_in_psychology_program_attendees_homepage.jpg" alt="Students attend 2018 Diversity in Psychology program">
-                        </a>
-                        <figcaption>
-                            <a href="{{ config.base_url}}/about/diversity-inclusion/">
-                              Our commmitment to diversity
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div><!-- end home-image -->
-                <div class="home-image small bottom">
-                    <figure>
-                        <a href="{{ config.base_url}}/programs/specialed/phd/">
-                            <img src="{{ config.base_url}}/assets/dist/images/home/sped-phd-funding.jpg" alt="Earn funding for your PhD in special education">
-                        </a>
-                        <figcaption>
-                            <a href="{{ config.base_url}}/programs/specialed/phd/">Earn funding for your PhD in special education
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div><!-- end home-image -->
-            </div><!-- end small-image-container -->
-        </div><!-- end home-images -->
-    </div><!-- end home-images-container -->
+  <div class="container home-images-container">
+    <div class="home-images">
+      <div class="large-image-container">
+        <div class="home-image large">
+          <figure>
+            <a class="image-link" href="http://www.cehd.umn.edu/edpsych/programs/"
+              {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
+              <img
+                src="{{ config.base_url}}/assets/dist/images/home/students-on-education-sciences-building-deck.jpg"
+                alt="Students studying on the deck of the Education Sciences Building">
+            </a>
+            <figcaption>
+              <a style="color:#fff !important; border-bottom: none !important;"
+                href="http://www.cehd.umn.edu/edpsych/programs/ {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
+                Three grad programs in <em>U.S. News & World Report</em> top 10</a>
+              </a>
+            </figcaption>
+          </figure>
+        </div><!-- end home-image -->
+      </div><!-- end large-image-container -->
+      <div class="small-image-container">
+        <div class="home-image small top">
+          <figure>
+            <a class="image-link" href="{{ config.base_url}}/about/diversity-inclusion/">
+              <img
+                src="{{ config.base_url}}/assets/dist/images/home/2018_diversity_in_psychology_program_attendees_homepage.jpg"
+                alt="Students attend 2018 Diversity in Psychology program">
+            </a>
+            <figcaption>
+              <a style="color:#fff !important; border-bottom: none !important;"
+                href="{{ config.base_url}}/about/diversity-inclusion/">
+                Our commitment to diversity
+              </a>
+            </figcaption>
+          </figure>
+        </div><!-- end home-image -->
+        <div class="home-image small bottom">
+          <figure>
+            <a class="image-link" href="{{ config.base_url}}/programs/cspp/">
+              <img src="{{ config.base_url}}/assets/dist/images/home/sped-phd-funding.jpg"
+                alt="Counseling and student personnel psychology application deadline extended to July 15">
+            </a>
+            <figcaption>
+              <a style="color:#fff !important; border-bottom: none !important;"
+                href="{{ config.base_url}}/programs/cspp/">Counseling MA deadline extended to July 15</em>
+              </a>
+            </figcaption>
+          </figure>
+        </div><!-- end home-image -->
+      </div><!-- end small-image-container -->
+    </div><!-- end home-images -->
+  </div><!-- end home-images-container -->
 </div><!-- end row -->
 <div class="row">
-    <div class="container">
-        <div class="twothirds feature">
-            <h2 class="text-center h1 margin-bottom-0">Educational Psychology</h2>
-            <h2 class="text-center margin-top-0">Helping people learn and grow</h2>
-            <p>At the department of Educational Psychology, we believe that
-            education is both an art and a science. Our focus: preparing the
-            next generation of researchers and scientist-practitioners with
-            degrees in psychological foundations of education, quantitative
-            methods in education, counseling psychology, school psychology, and
-            special education. In 2019, we were rated #10 in the nation among educational psychology graduate programs by <em>U.S. News &amp; World Report</em>.</p>
-        <h3 class="text-center">Learn with us: programs and degrees</h3>
-            <div class="half">
-                <h4 class="no-margin-top">Graduate programs</h4>
-                <ul class="no-bullet">
-                    <li>  <a href="{{ config.base_url}}/programs/cspp/">Counseling &amp; Student Personnel Psychology</a></li>
-                    <li>  <a href="{{ config.base_url}}/programs/foundations/">Psychological Foundations of Education:</a>
-                        <ul class="no-bullet">
-                            <li><a href="{{ config.base_url}}/programs/foundations/learning/">Learning &amp; Cognition / Educational Technology</a></li>
-                            <li><a href="{{ config.base_url}}/programs/foundations/social-psych/">Social Psychological &amp; Developmental Processes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ config.base_url}}/programs/qme/">Quantitative Methods in Education</a></li>
-                    <li><a href="{{ config.base_url}}/programs/schoolpsych/">School Psychology</a></li>
-                    <li><a href="{{ config.base_url}}/programs/specialed/">Special Education</a></li>
-                    <li><a href="{{ config.base_url}}/programs/graduate-minor/">Graduate Minor</a></li>
-                </ul>
-            </div><!-- end half -->
-            <div class="half">
-                <h4 class="no-margin-top">Undergraduate programs</h4>
-                <ul class="no-bullet">
-                    <li><a href="{{ config.base_url}}/programs/specialed/sped-bs/">Special Education</a></li>
-                    <li><a href="{{ config.base_url}}/programs/minor/">Undergraduate Minor</a></li>
-                    <li><a href="{{ config.base_url}}/programs/asl/">American Sign Language (ASL) classes</a></li>
-                </ul>
-                <h4>Certificates</h4>
-                <ul class="no-bullet">
-                    <li><a href="{{ config.base_url}}/programs/specialed/certificate/autism/">Autism Spectrum Disorder (ASD)</a></li>
-                    <li><a href="{{ config.base_url}}/programs/foundations/talent/">Talent Development &amp; Gifted Education</a></li>
-                </ul>
-            </div><!-- end half -->
-        </div><!-- end half -->
-    </div><!-- end container -->
+  <div class="container">
+    <div class="twothirds feature">
+      <h2 class="text-center h1 margin-bottom-0">Educational Psychology</h2>
+      <h2 class="text-center margin-top-0">Helping people learn and grow</h2>
+      <p>At the department of Educational Psychology, we believe that
+        education is both an art and a science. Our focus: preparing the
+        next generation of researchers and scientist-practitioners with
+        degrees in psychological foundations of education, quantitative
+        methods in education, counseling psychology, school psychology, and
+        special education.</p>
+        <p>In 2020, we were rated #9 in the nation among educational psychology graduate programs by
+        <em>U.S. News &amp; World Report</em>. Our <a href="{{ config.base_url}}/programs/specialed/">special education</a> and <a href="{{ config.base_url}}/programs/cspp/">counseling and student personnel psychology</a> programs were also rated in the top ten, #9 and #10 respectively.</p>
+      <h3 class="text-center">Learn with us: programs and degrees</h3>
+      <div class="half">
+        <h4 class="no-margin-top">Graduate programs</h4>
+        <ul class="no-bullet">
+          <li class="newlinks"> <a href="{{ config.base_url}}/programs/cspp/">Counseling &amp; Student
+              Personnel Psychology</a></li>
+          <li class="newlinks"> <a href="{{ config.base_url}}/programs/foundations/">Psychological Foundations
+              of Education:</a>
+            <ul class="no-bullet">
+              <li class="newlinks"><a href="{{ config.base_url}}/programs/foundations/learning/">Learning
+                  &amp; Cognition / Educational Technology</a></li>
+              <li class="newlinks"><a href="{{ config.base_url}}/programs/foundations/social-psych/">Social
+                  Psychological
+                  &amp; Developmental Processes</a></li>
+            </ul>
+          </li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/qme/">Quantitative Methods in
+              Education</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/schoolpsych/">School Psychology</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/specialed/">Special Education</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/graduate-minor/">Graduate Minor</a></li>
+        </ul>
+      </div><!-- end half -->
+      <div class="half">
+        <h4 class="no-margin-top">Undergraduate programs</h4>
+        <ul class="no-bullet">
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/specialed/sped-bs/">Special
+              Education</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/minor/">Undergraduate Minor</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/asl/">American Sign Language (ASL)
+              classes</a></li>
+        </ul>
+        <h4>Certificates</h4>
+        <ul class="no-bullet">
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/specialed/certificate/autism/">Autism
+              Spectrum Disorder (ASD)</a></li>
+          <li class="newlinks"><a href="{{ config.base_url}}/programs/foundations/talent/">Talent Development
+              &amp; Gifted Education</a></li>
+        </ul>
+      </div><!-- end half -->
+    </div><!-- end half -->
+  </div><!-- end container -->
 </div><!-- end row -->
 <div class="row emphasis">
-    <div class="container">
-        <div class="twothirds feature">
-            <div class="half">
-                <p class="h3">Questions?<br>
-                    <small class="h4">Contact us</small></p>
-            </div><!-- end half -->
-            <div class="half">
-                <p>For general question about our department, contact us at <a href="mailto:edpsych@umn.edu">edpsych@umn.edu</a>.</p>
-                <p>For program specific questions, tell us what you're looking for by completing our <a href="{{ config.base_url}}/contact/">contact form</a>.</p>
-                <p>To find out more about what it's like to be a student here, visit our <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Facebook page.</a></p>
-                  <p><strong>Educational Psychology</strong></br>
-                  250 Education Sciences Bldg,</br>
-                  56 East River Road</br>
-                  Minneapolis, MN 55455</br>
-                  P: 612-624-6083 | F: 612-624-8241 </p>
-            </div><!-- end half -->
-        </div><!-- end half -->
-    </div><!-- end container -->
+  <div class="container">
+    <div class="twothirds feature">
+      <div class="half">
+        <p class="h3">Questions?<br>
+          <small class="h4">Contact us</small></p>
+      </div><!-- end half -->
+      <div class="half">
+        <p>For general question about our department, contact us at <a
+            href="mailto:edpsych@umn.edu">edpsych@umn.edu</a>.</p>
+        <p>For program specific questions, tell us what you're looking for by completing our <a
+            href="{{ config.base_url}}/contact/">contact form</a>.</p>
+        <p>To find out more about what it's like to be a student here, visit our <a
+            href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/">Facebook page.</a></p>
+        <p><strong>Educational Psychology</strong></br>
+          250 Education Sciences Bldg,</br>
+          56 East River Road</br>
+          Minneapolis, MN 55455</br>
+          P: 612-624-6083 | F: 612-624-8241 </p>
+      </div><!-- end half -->
+    </div><!-- end half -->
+  </div><!-- end container -->
 </div><!-- end row -->
 <div class="row">
-    <div class="container">
-        <div class="twothird">
-            <div>
-                {#- This places the html the JavaScript is expecting for rendering
+  <div class="container">
+    <div class="twothird">
+      <div>
+        {#- This places the html the JavaScript is expecting for rendering
                 the list of news items, including the fancy loader -#}
-                {{ loader.loader("News & announcements") }}
-            </div>
-            <aside>
-                <p><a href="http://news.cehd.umn.edu/category/departments/educational-psychology/">More news</a></p>
-            </aside>
-        </div><!-- end twothird -->
-        <div class="third">
-            {{ loader.loader(
+        {{ loader.loader("News & announcements") }}
+      </div>
+      <aside>
+        <p><a href="http://news.cehd.umn.edu/category/departments/educational-psychology/">More news</a></p>
+      </aside>
+    </div><!-- end twothird -->
+    <div class="third">
+      {{ loader.loader(
                 "Events & deadlines",
                 "h3",
                 "events-container"
                 ) }}
-        </div><!-- end third -->
-    </div><!-- end container -->
+    </div><!-- end third -->
+  </div><!-- end container -->
 </div><!-- end row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
-    {#- news feed -#}
-    {{ newsfeed.news_feed_js(
+{#- news feed -#}
+{{ newsfeed.news_feed_js(
         "category/educational-psychology/homepage/feed",
         "#news-container",
         "home.html",
@@ -161,9 +193,9 @@
         "More news",
         "/edpsych/assets/dist/views/edpsych/newsfeeds"
     ) }}
-    {#- events feed -#}
-    {# 	http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&q=6&r=3&t=130 #}
-    {{ eventsfeed.events_feed_js(
+{#- events feed -#}
+{# 	http://apps.cehd.umn.edu/events/Admin/XMLFeed.aspx?&q=6&r=3&t=130 #}
+{{ eventsfeed.events_feed_js(
         130,
         4,
         "#events-container",

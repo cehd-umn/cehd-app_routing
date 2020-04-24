@@ -1,0 +1,167 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Graduate student resources" %}
+{% block title %}
+Graduate student resources
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <h1>Graduate student resources</h1>
+  </div>
+  <div class="row margin-top-1">
+    <div class="container">
+
+      <div class="half">
+        <h2>Grad student news and events</h2>
+
+        <h3>COVID-19 Information</h3>
+        <ul class="no-bullet">
+
+          <li><a href="https://innovation.umn.edu/cehd-covid19-response/">CEHD COVID-19 Response Page</a></li>
+          <li><a href="https://safe-campus.umn.edu/public-health-alerts">University Public Health Alerts: Coronavirus</a></li>
+        </ul>
+
+        <h3>OLPD news</h3>
+        <p class="text-notice">insert feed here</p>
+        <h3> Discover OLPD on social</h3>
+        <p>Discover OLPD on social media
+          See breaking news and information, get involved in activities and events, and
+          learn about research, programs, and community engagement.</p>
+
+        <div class="row">
+          <div class="container">
+            <div class="span-4 push-2">
+              <div class="svg-social-media-icon size-40">
+                {% include "cehd/includes/svg/social-media/facebook.html" %}
+              </div>
+            </div>
+            <div class="span-6">
+              <div class="svg-social-media-icon size-40">
+                {% include "cehd/includes/svg/social-media/twitter.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>OLPD events</h3>
+        <p class="text-notice">Insert feed</p>
+
+        <h3>We’d like to hear from you</h3>
+        <p>Let us know of your news, send us updates of your acheivments and events</p>
+        <p class="text-notice">insert form here</p>
+
+      </div>
+      <div class="half margin-top-4">
+        <h3><small>From the Chair and DGS: March 20, 2020</small></h3>
+        <p><em>Dear OLPD Graduate Students,</em></p>
+
+        <p><em>These are unprecedented times. There is a lot of uncertainty and rapidly changing circumstances that affect all aspects of your life as well as your graduate education. We want to let you know that all OLPD faculty and staff are working very hard to ensure that there will be no interruption of your progress towards your education goals.</em></p>
+
+        <p><em>Please know that the department has developed specific plans and procedures for conducting oral exams, proposal/prospect meetings, and final defenses remotely. If you were planning to complete any of these milestones this semester, your timelines will not change—only the format. Faculty are available for advising via email and Zoom.</em></p>
+
+        <p><em>In regards to written prelims, we can assure you that all exam results have been processed on time, and decisions and feedback will be sent to you early next week at the latest.</em></p>
+
+        <p><em>Please reach out to your advisor if you have any questions about your research, upcoming exams or defenses, or future coursework plans. Feel free to contact either of us directly at any time if you have any questions (Ken at <a href="mailto:bartlett@umn.edu">bartlett@umn.edu</a> and Sasha at <a href="mailto:ardic001@umn.edu">ardic001@umn.edu</a>).</em></p>
+
+        <p><em>You are invited to join both of us for a <a href="umn.zoom.us/j/685947179">Zoom session on Thursday, March 26th from 12-1 pm</a> with us both. This is an opportunity for you to ask questions, voice concerns, and inform us about anything that's on your mind. If desired, feel free to <a href="www.cognitoforms.com/UniversityOfMinnesota1/QuestionsCommentsForChairDGS">submit your questions in advance via this online form</a> (you will also be able to share questions and comments during the meeting). We will record the session for those unable to attend—and we also plan to make this a weekly event for the rest of the semester. We will announce times for sessions in April shortly.</em></p>
+
+        <p><em>Lastly, please remember that every member of the OLPD faculty was once a graduate student, yet, we never had to deal with a situation like we all face with COVID-19. We understand this is a stressful time and are committed to working with you. We are here to help during these challenging times. Together, with patience, tolerance, and kindness we will get through this. Let your advisor know if you have questions, struggles, or—equally important—success stories to share. Hearing that your learning journey continues, that a breakthrough idea for your research has emerged, or that progress on your scholarly writing is advancing is a wonderful boost for you and your advisor.</em></p>
+
+        <p><em>Be well and take care.</em></p>
+
+        <p><em>Ken Bartlett, Department Chair<br>
+            Sasha Ardichvili, Director of Graduate Studies</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container margin-top-3">
+    <div class="half">
+      <h3>Student research</h3>
+      <p class="text-notice">Intro text and Link to OLPD grad student research conference site</p>
+      <p class="text-notice">Intro text and Link to GLO student group</p>
+      <p class="text-notice">Intro text and Link to #ThriveOLPD mental health initiative</p>
+    </div>
+    <div class="half">
+      <h3>Faculty publications</h3>
+      <p class="text-notice">Intro text and Link to faculty one</p>
+      <p class="text-notice">Intro text and Link to faculty two</p>
+      <p class="text-notice">Intro text and Link to faculty three</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row emphasis margin-top-1">
+  <div class="container">
+    <div class="half feature">
+      <p>Student profile here</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row emphasis subtle margin-top-2">
+  <div class="container">
+    <div class="half feature">
+      <h2>Program handbooks and forms</h2>
+    </div>
+    <div class="third">
+      <h3>Ph.D. Handbooks</h3>
+      <ul class="no-bullet">
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2019-20.pdf">2019-2020 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2018-19.pdf">2018-2019 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2017-18.pdf">2017-2018 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2016-17.pdf">2016-2017 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2015-16.pdf">2015-2016 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2014-15.pdf">2014-2015 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2013-14.pdf">2013-2014 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2012-13.pdf">2012-2013 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/PHD2011-12.pdf">2011-2012 [pdf]</a></li>
+      </ul><br>
+    </div>
+
+    <div class="third">
+      <h3>M.A. and M.Ed. Handbooks</h3>
+      <ul class="no-bullet">
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2019-20.pdf">2019-2020 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2018-19.pdf">2018-2019 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2017-18.pdf">2017-2018 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MAMEd2016-17.pdf">2016-2017 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MA2015-16.pdf">2015-2016 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MA2014-15.pdf">2014-2015 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MA2013-14.pdf">2013-2014 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MA2012-13.pdf">2012-2013 [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/handbooks/MA2011-12.pdf">2011-2012 [pdf]</a></li>
+      </ul>
+    </div>
+    <div class="third">
+      <h3>Program planning</h3>
+      <ul class="no-bullet">
+        <li><a href="{{ config.asset_base }}/graduate-programs/phd-program-planning-sheets/">Ph.D. Program Planning Sheets</a></li>
+        <li><a href="{{ config.asset_base }}/graduate-programs/mamed-program-planning-sheets/">M.A. and M.Ed. Program Planning Sheets</a></li>
+      </ul>
+
+      <h3>Forms</h3>
+      <ul class="no-bullet">
+        <li><a href="{{ config.asset_base }}/documents/forms/adviserchange.pdf">Change of Adviser [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/forms/dirindstudyproposal.pdf">Directed Study/Independent Study Proposal [pdf]</a></li>
+        <li><a href="{{ config.asset_base }}/documents/forms/grad999.pdf">Grad 999 [pdf]</a></li>
+        <li><a href="https://onestop.umn.edu/academics/leave-absence-loa">Leave of Absence</a></li>
+        <li><a href="http://www.cehd.umn.edu/olpd/student-travel-grant/">Student Travel Grant</a></li>
+        <li><a href="{{ config.asset_base }}/documents/forms/thesispanelprospectusapproval.pdf">Thesis Panel Prospectus Approval [pdf]</a></li>
+      </ul>
+
+      <h3>Other Resources</h3>
+      <ul class="no-bullet">
+        <li><a href="{{ config.asset_base }}/documents/resources/research_methods_course_guide_Aug_2019.docx">Research Methods Course Guide [.docx]</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

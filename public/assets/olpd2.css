@@ -1,0 +1,90 @@
+ @media (min-width: 768px) {
+   .dept-footer-section.first {
+     min-height: 430px !important;
+   }
+ }
+
+ @media (min-width: 1200px) {
+   .dept-footer-section.first {
+     min-height: 340px !important;
+   }
+ }
+
+ nav a:link {
+   color: #666 !important;
+   padding-right: 10px !important;
+ }
+
+ @media (max-width: 768px) {
+   .top-level-nav-link {
+     font-size: 15px !important;
+     font-weight: 700 !important;
+   }
+
+   .secondary-level-nav-link {
+     text-transform: capitalize !important;
+   }
+
+ }
+
+ @media (max-width: 960px) {
+   .container {
+     max-width: 850px !important;
+   }
+ }
+
+
+ @media (min-width: 769px) {
+   nav.inline ul {
+     -ms-display: flex !important;
+     display: flex !important;
+     flex-wrap: wrap !important;
+     justify-content: space-around !important;
+   }
+
+   nav ul.nav.inline li {
+     border-bottom: 0 !important;
+     border-right: 1px solid !important;
+     padding-right: 2px !important;
+     padding-left: 2px !important;
+     margin: 0 !important;
+   }
+
+   nav.inline .dropdown-toggle::after {
+     margin-left: 0px !important;
+   }
+
+   nav {
+     margin-top: 20px !important;
+     margin-bottom: 20px !important
+   }
+ }
+
+ @media (min-width: 1009px) {
+   nav ul.nav.inline li {
+     border-bottom: 0 !important;
+     border-right: 1px solid !important;
+     padding-right: 5px !important;
+     padding-left: 9px !important;
+     margin: 0 !important;
+   }
+ }
+
+ @media (min-width: 1209px) {
+   nav ul.nav.inline li {
+     border-bottom: 0 !important;
+     border-right: 1px solid !important;
+     padding-right: 1.7em !important;
+     padding-left: .1em !important;
+     margin: 0;
+   }
+ }
+
+ #undergraduate-top-nav-link {
+   padding-left: 0px !important;
+ }
+
+ #about-us-top-nav-item {
+   border-right: none;
+   padding-right: 0px !important;
+ }

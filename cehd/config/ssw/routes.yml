@@ -289,20 +289,22 @@
   template: ssw/graduate/weisdorf-oncology.html
   publish: true
   template_data:
-      - section: graduate      
+      - section: graduate
+/graduate/SWITCH/:
+  template: ssw/graduate/SWITCH.html
+  publish: true
+  template_data:
+      - section: graduate   
 /graduate/msw-how-to-apply/:
   template: ssw/graduate/msw-how-to-apply.html
   publish: true
   template_data:
       - section: graduate
-
 /graduate/msw-CMH-adv-standing/:
   template: ssw/graduate/msw-CMH-adv-standing.html
   publish: true
   template_data:
       - section: graduate
-
-
 /graduate/youth-development-leadership/:
   template: ssw/graduate/youth-development-leadership.html
   publish: true

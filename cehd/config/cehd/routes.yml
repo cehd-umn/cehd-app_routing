@@ -211,7 +211,7 @@
   template_data:
     - section: alumni
 /alumni/distinguished/deans-2019/:
-  publish: false
+  publish: true
   template: cehd/alumni/distinguished/deans-2019.html
   template_data:
     - section: alumni
@@ -1055,11 +1055,6 @@
   template: cehd/career/volunteer.html
   template_data:
     - section: career
-/career/workshops/:
-  publish: true
-  template: cehd/career/workshops.html
-  template_data:
-    - section: career
 /career/degrees/:
   publish: true
   template: cehd/career/degrees/index.html
@@ -1802,51 +1797,6 @@
 /reads/event/:
   publish: true
   template: cehd/reads/event.html
-  template_data:
-    - section: reads
-/reads/previous-books/gaines/:
-  publish: true
-  template: cehd/reads/previous-books/gaines.html
-  template_data:
-    - section: reads
-/reads/previous-books/moore/:
-  publish: true
-  template: cehd/reads/previous-books/moore.html
-  template_data:
-    - section: reads
-/reads/previous-books/nemat/:
-  publish: true
-  template: cehd/reads/previous-books/nemat.html
-  template_data:
-    - section: reads
-/reads/previous-books/rusesabagina/:
-  publish: true
-  template: cehd/reads/previous-books/rusesabagina.html
-  template_data:
-    - section: reads
-/reads/previous-books/skloot/:
-  publish: true
-  template: cehd/reads/previous-books/skloot.html
-  template_data:
-    - section: reads
-/reads/previous-books/stevenson/:
-  publish: true
-  template: cehd/reads/previous-books/stevenson.html
-  template_data:
-    - section: reads
-/reads/previous-books/stjames/:
-  publish: true
-  template: cehd/reads/previous-books/stjames.html
-  template_data:
-    - section: reads
-/reads/previous-books/treuer/:
-  publish: true
-  template: cehd/reads/previous-books/treuer.html
-  template_data:
-    - section: reads
-/reads/previous-books/yang/:
-  publish: true
-  template: cehd/reads/previous-books/yang.html
   template_data:
     - section: reads
 /report-a-problem/:
@@ -3179,11 +3129,6 @@
   template: cehd/trio/services/academics.html
   template_data:
     - section: trio
-/trio/services/andicoechea/:
-  publish: true
-  template: cehd/trio/services/andicoechea.html
-  template_data:
-    - section: trio
 /trio/services/cardenas/:
   publish: true
   template: cehd/trio/services/cardenas.html
@@ -3202,11 +3147,6 @@
 /trio/services/munoz/:
   publish: true
   template: cehd/trio/services/munoz.html
-  template_data:
-    - section: trio
-/trio/services/ortiz/:
-  publish: true
-  template: cehd/trio/services/ortiz.html
   template_data:
     - section: trio
 /trio/services/services/:
@@ -3357,11 +3297,6 @@
 /undergraduate/declare-major/:
   publish: true
   template: cehd/undergraduate/declare-major.html
-  template_data:
-    - section: undergraduate
-/undergraduate/faculty/:
-  publish: true
-  template: cehd/undergraduate/faculty.html
   template_data:
     - section: undergraduate
 /undergraduate/freshmen/:

@@ -270,6 +270,11 @@
   publish: true
   template_data:
     - section: graduate-programs
+/graduate-programs/resources-copy/:
+  template: olpd/graduate-programs/resources-copy.html
+  publish: true
+  template_data:
+    - section: graduate-programs
 /graduate-programs/comparative-international-development-education/:
   template: olpd/graduate-programs/cide/index.html
   publish: true

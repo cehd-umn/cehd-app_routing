@@ -1,80 +1,86 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}University of Minnesota{% endblock %}</title>
-        <meta name="description" content="{% block meta_content %}{% endblock %}">
-        <link rel="canonical" type="image/png" href="{% block canonical %}/{% endblock %}"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
 
-        {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
-        {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
-        {% block extra_css %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}University of
+    Minnesota{% endblock %}</title>
+  <meta name="description" content="{% block meta_content %}{% endblock %}">
+  <link rel="canonical" type="image/png" href="{% block canonical %}/{% endblock %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico" />
 
-        {% endblock %}
-    </head>
-    <body>
-        <header>
-            <h1 class="accessible-no-display">{% block heading_1 %}{% endblock %}</h1>
-            <p class="accessible-no-display"><a href="#maincontent">Skip to main content</a></p>
-            <div id="umnheader">
-                <div class="container">
-                    <ul id="umn-links">
-                        <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"></a></li>
-                        <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
-                        <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
-                    </ul>
-                    <div class="umnhf" id="umnhf-h-search" role="search">
-                      <script>
-                        (function() {
-                          var cx = '002834015805923805805:c-0k--9bdkk';
-                          var gcse = document.createElement('script');
-                          gcse.type = 'text/javascript';
-                          gcse.async = true;
-                          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                          var s = document.getElementsByTagName('script')[0];
-                          s.parentNode.insertBefore(gcse, s);
-                        })();
-                      </script>
-                      <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
-                    </div>
-                </div>
-            </div><!-- /#umnheader -->
-            <div class="container">
-                <!--<div class="wordmark-container-right wordmark-container reverse-span-6">-->
-                    <!--<a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
-                <!--</div>-->
-                <div class="wordmark-container" style="padding-top: 30px;">
-                    <p class="parentunit"><a href="http://cehd.umn.edu/">College of Education and Human Development</a></p>
-                    <h1 class="sitename"><a href="{{ config.base_url }}/" title="Department of Educational Psychology Home" rel="home">Department of Educational Psychology</a></h1>
-                </div>
-            </div>
-        </header>
-        <div class="nav-container">
-            <div class="section-header-container row">
-                <div class="container">
-                {% block nav %}{% endblock %}
-                </div>
-            </div>
+  {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+  {% block css %}
+  <link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">
+  {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
+</head>
+
+<body>
+  <header>
+    <h1 class="accessible-no-display">{% block heading_1 %}{% endblock %}</h1>
+    <p class="accessible-no-display"><a href="#maincontent">Skip to main content</a></p>
+    <div id="umnheader">
+      <div class="container">
+        <ul id="umn-links">
+          <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"></a></li>
+          <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
+          <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
+        </ul>
+        <div class="umnhf" id="umnhf-h-search" role="search">
+          <script>
+            (function () {
+              var cx = '002834015805923805805:c-0k--9bdkk';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
         </div>
-        <main id="maincontent">
-            {% block main_content %}{% endblock %}
-        </main>
-        <footer class="margin-top-2">
-            {% block dept_footer %}{% endblock %}
-            <div id="umnfoot">
-                <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
-                    The University of Minnesota is an equal opportunity educator and employer.
-                    <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
-                </p>
-            </div>
-        </footer>
-        {% block bottom_js %}{% endblock %}
-        {# Don't load Google analytics in dev environments #}
-        {# {% if config.is_prod or config.is_test %} #}
-            {% include 'includes/google-analytics.html' %}
-        {# {% endif %} #}
-    </body>
+      </div>
+    </div><!-- /#umnheader -->
+    <div class="container">
+      <!--<div class="wordmark-container-right wordmark-container reverse-span-6">-->
+      <!--<a href="http://www.cehd.umn.edu"><img id="cehd-wordmark" class="wordmark-svg" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
+      <!--</div>-->
+      <div class="wordmark-container" style="padding-top: 30px;">
+        <p class="parentunit"><a href="http://cehd.umn.edu/">College of Education and Human Development</a></p>
+        <h1 class="sitename"><a href="{{ config.base_url }}/" title="Department of Educational Psychology Home"
+            rel="home">Department of Educational Psychology</a></h1>
+      </div>
+    </div>
+  </header>
+  <div class="nav-container">
+    <div class="section-header-container row">
+      <div class="container">
+        {% block nav %}{% endblock %}
+      </div>
+    </div>
+  </div>
+  <main id="maincontent">
+    {% block main_content %}{% endblock %}
+  </main>
+  <footer class="margin-top-2">
+    {% block dept_footer %}{% endblock %}
+    <div id="umnfoot">
+      <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
+        The University of Minnesota is an equal opportunity educator and employer.
+        <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+  {% block bottom_js %}{% endblock %}
+  {# Don't load Google analytics in dev environments #}
+  {# {% if config.is_prod or config.is_test %} #}
+  {% include 'includes/google-analytics.html' %}
+  {# {% endif %} #}
+</body>
+
 </html>

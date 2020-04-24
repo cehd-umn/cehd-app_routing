@@ -1,9 +1,9 @@
 <div class="row cards">
-    <div class="container">
-        <div id="FilterContainer" class="card-container margin-top-2">
-            {% for item_title, item in item_data %}
-                {% if item.publish is not defined or item.publish %}
-                <div id="card-{{ loop.index }}" class="card
+  <div class="container">
+    <div id="FilterContainer" class="card-container margin-top-2">
+      {% for item_title, item in item_data %}
+      {% if item.publish is not defined or item.publish %}
+      <div id="card-{{ loop.index }}" class="card
                     {%- if item.categories_hyphenated -%}
                       {{ " " }}{{- item.categories_hyphenated|join(" ") -}}
                     {%- endif -%}
@@ -12,48 +12,45 @@
                         {{ " " }}{{ internal_category|hyphenate -}}
                       {%- endfor -%}
                     {%- endif -%}
-                    "{#- close the class= quote -#}
-                    {%- if item.categories -%}
-                      {{ " " }}data-categories="{{- item.categories|join(" ") }}
+                    " {#- close the class= quote -#} {%- if item.categories -%} {{ " " }}data-categories="{{- item.categories|join(" ") }}
                       {%- if item.links -%}
                         {{ " " }}{{- item.links.title|join(" ") }}
                       {%- endif -%}
-                      "{#- close the data-categories= quote -#}
-                    {%- endif -%}
-                    >{#- close the tag -#}
-                    <p class="h4 title">
-                    {% if item.uri %}
-                        <a href="{{ item.uri }}">
-                    {% endif %}
-                            {{ item_title }}
-                    {% if item.uri %}
-                        </a>
-                    {% endif %}
-                    </p>
-                    {% if item.meta %}
-                    <!-- NEED TO FIND LONG TERM FIX FOR META DATA INCLUDED IN SEARCH -->
-                    <p class="description hide">{{ item.meta }}</p>
-                  {% endif %}
-                    {% if item.description %}
-                      <p class="description">{{ item.description }}. </p>
-                    {% endif %}
-                    {% if item.links %}
-                    <ul class="no-bullet">
-                        {% for link in item.links %}
-                          <li><a href="{{ link.href }}" {{ analytics.add_tracking("send", "event", "programSorter", "click", "{{ item_title }} - {{ link.title }}") }}>{{ link.title }}
-                            {% if link.footnote_indicator %}{{ link.footnote_indicator }}{% endif %}
-                          </a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                    {% if item.footnotes %}
-                        {% for footnote in item.footnotes %}
-                          <p><small>{{ footnote }}</small></p>
-                        {% endfor %}
-                    {% endif %}
-                </div><!-- / card -->
-                {% endif %}
-            {% endfor %}
-        </div><!-- / card-container -->
-    </div><!-- / container -->
+                      " {#- close the data-categories= quote -#} {%- endif -%}>{#- close the tag -#}
+        <p class="h4 title">
+          {% if item.uri %}
+          <a href="{{ item.uri }}">
+            {% endif %}
+            {{ item_title }}
+            {% if item.uri %}
+          </a>
+          {% endif %}
+        </p>
+        {% if item.meta %}
+        <!-- NEED TO FIND LONG TERM FIX FOR META DATA INCLUDED IN SEARCH -->
+        <p class="description hide">{{ item.meta }}</p>
+        {% endif %}
+        {% if item.description %}
+        <p class="description">{{ item.description }}. </p>
+        {% endif %}
+        {% if item.links %}
+        <ul class="no-bullet">
+          {% for link in item.links %}
+          <li><a href="{{ link.href }}"
+              {{ analytics.add_tracking("send", "event", "programSorter", "click", item_title ~ "-" ~ link.title) }}>{{ link.title }}
+              {% if link.footnote_indicator %}{{ link.footnote_indicator }}{% endif %}
+            </a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if item.footnotes %}
+        {% for footnote in item.footnotes %}
+        <p><small>{{ footnote }}</small></p>
+        {% endfor %}
+        {% endif %}
+      </div><!-- / card -->
+      {% endif %}
+      {% endfor %}
+    </div><!-- / card-container -->
+  </div><!-- / container -->
 </div><!-- / row -->

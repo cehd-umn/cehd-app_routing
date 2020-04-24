@@ -1,107 +1,128 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %} {% block title_append %}UMN{% endblock %}</title>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% block title_prepend %}{% endblock %} {% block title %}{% endblock %}
+    {% block title_append %}UMN{% endblock %}</title>
 
 
 
-        <meta property="og:title" content="{% block meta_title %}College of Education and Human Development{% endblock %}">
-        <meta property="og:description" content="{% block meta_description %}Problem solvers, advocates, and leaders{% endblock %}">
-        <meta property="og:image" content="{% block meta_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
-        <meta property="og:url" content="{% block meta_url %} http://www.cehd.umn.edu/ {% endblock %}">
+  <meta property="og:title" content="{% block meta_title %}College of Education and Human Development{% endblock %}">
+  <meta property="og:description"
+    content="{% block meta_description %}Problem solvers, advocates, and leaders{% endblock %}">
+  <meta property="og:image"
+    content="{% block meta_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
+  <meta property="og:url" content="{% block meta_url %} http://www.cehd.umn.edu/ {% endblock %}">
 
-        <meta name="twitter:title" content="{% block twitter_title %}College of Education and Human Development{% endblock %}">
-        <meta name="twitter:description" content="{% block twitter_description %}Problem solvers, advocates, and leaders{% endblock %}">
-        <meta name="twitter:image" content="{% block twitter_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
-        <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+    content="{% block twitter_title %}College of Education and Human Development{% endblock %}">
+  <meta name="twitter:description"
+    content="{% block twitter_description %}Problem solvers, advocates, and leaders{% endblock %}">
+  <meta name="twitter:image"
+    content="{% block twitter_image %} http://www.cehd.umn.edu/assets/images/social/CEHD_full_lockup_black.jpg {% endblock %}">
+  <meta name="twitter:card" content="summary_large_image">
 
-        <meta property="fb:app_id" content="{% block fb_app_id %}{% endblock %}">
+  <meta property="fb:app_id" content="{% block fb_app_id %}{% endblock %}">
 
-        <link rel="canonical" href="{% block canonical %}/{% endblock %}"/>
+  <link rel="canonical" href="{% block canonical %}/{% endblock %}" />
 
-        <!--<meta name="description" content="{% block meta_content %}{% endblock %}">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico"/>
-        {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
+  <!--<meta name="description" content="{% block meta_content %}{% endblock %}">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-gold.ico" />
+  {% block inline_css %}{% endblock %}{# intended for department-level inline CSS to speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
-        <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+  <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+  <link href="/assets/folwell.css" rel="stylesheet" type="text/css">
+  {% block css %}
+  <link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
+  {% block extra_css %}
 
-        {% block css %}<link href="{{ config.css_base }}/dist/minified/core-dept.min.css" rel="stylesheet" type="text/css">{% endblock %}
-        {% block extra_css %}{% endblock %}
+  {# Controls SSW navigation hover style for Folwell #}
+  <style>
 
-        {% include 'includes/google-analytics.html' %}
-    </head>
-    <body>
-        <header>
-            <div class="accessible-no-display">
-                <ul class="accessible-no-display">
-                    <li class="accessible-no-display"><a class="accessible-no-display" href="#maincontent">Skip to main content</a>
-                    <li class="accessible-no-display"><a class="accessible-no-display" href="#mainnav">Skip to main navigation</a>
-                </ul>
-            </div>
-            <div id="umnheader">
-                <div class="container">
-                    <ul id="umn-links">
-                        <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"><span class="visuallyhidden">U of M System Homepage</span> </a></li>
-                        <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
-                        <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
-                    </ul>
-                    <div class="umnhf" id="umnhf-h-search" role="search">
-                      <script>
-                        (function() {
-                          var cx = '002834015805923805805:c-0k--9bdkk';
-                          var gcse = document.createElement('script');
-                          gcse.type = 'text/javascript';
-                          gcse.async = true;
-                          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                          var s = document.getElementsByTagName('script')[0];
-                          s.parentNode.insertBefore(gcse, s);
-                        })();
-                      </script>
-                      <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
-                    </div>
-                </div>
-            </div><!-- /#umnheader -->
-            {% block hero_image %}{% endblock %}
-            <div class="section-header-container">
-                <div class="container">
-                    <div id="wordmark-wrapper">
-                        <div class="wordmark-container">
-                                {% block college_wordmark %}
-                            <!--<a href="/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
-                            {% endblock %}
-                        </div>
-                        <div class="wordmark-container">
-                            {% block section_wordmark %}{% endblock %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div id="mainnav" class="nav-container">
-            {% block nav %}{% endblock %}
+  </style>
+
+  {% endblock %}
+
+  {% include 'includes/google-analytics.html' %}
+</head>
+
+<body>
+  <header>
+    <div class="accessible-no-display">
+      <ul class="accessible-no-display">
+        <li class="accessible-no-display"><a class="accessible-no-display" href="#maincontent">Skip to main content</a>
+        <li class="accessible-no-display"><a class="accessible-no-display" href="#mainnav">Skip to main navigation</a>
+      </ul>
+    </div>
+    <div id="umnheader">
+      <div class="container">
+        <ul id="umn-links">
+          <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"><span
+                class="visuallyhidden">U of M System Homepage</span> </a></li>
+          <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
+          <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
+        </ul>
+        <div class="umnhf" id="umnhf-h-search" role="search">
+          <script>
+            (function () {
+              var cx = '002834015805923805805:c-0k--9bdkk';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
         </div>
-        <main id="maincontent">
-            {% block main_content %}{% endblock %}
-            {% block append_content %}{% endblock %}
-        </main>
-        {% block main_aside %}{% endblock %}
-        <footer class="margin-top-2">
-            {% block dept_footer %}{% endblock %}
-            <div id="umnfoot">
-                <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
-                    The University of Minnesota is an equal opportunity educator and employer.
-                    <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
-                </p>
-            </div>
-        </footer>
-        {% block bottom_js %}{% endblock %}
-        {# Don't load Google analytics in dev environments #}
-        {# {% if config.is_prod or config.is_test %} #}
-<!--            {% include 'includes/google-analytics.html' %}-->
-        {# {% endif %} #}
-    </body>
+      </div>
+    </div><!-- /#umnheader -->
+    {% block hero_image %}{% endblock %}
+    <div class="section-header-container">
+      <div class="container">
+        <div id="wordmark-wrapper">
+          <div class="wordmark-container">
+            {% block college_wordmark %}
+            <!--<a href="/"><img class="wordmark-svg cehd-wordmark" src="/assets/images/wordmarks/wordmark-cehd.svg" alt="College of Education and Human Development wordmark."></a>-->
+            {% endblock %}
+          </div>
+          <div class="wordmark-container">
+            {% block section_wordmark %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="mainnav" class="nav-container">
+    {% block nav %}{% endblock %}
+  </div>
+      
+	  {% block urgentmsg %}{% endblock %}
+  
+  <main id="maincontent">
+    {% block main_content %}{% endblock %}
+    {% block append_content %}{% endblock %}
+  </main>
+  {% block main_aside %}{% endblock %}
+  <footer class="margin-top-2">
+    {% block dept_footer %}{% endblock %}
+    <div id="umnfoot">
+      <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
+        The University of Minnesota is an equal opportunity educator and employer.
+        <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+  {% block bottom_js %}{% endblock %}
+  {# Don't load Google analytics in dev environments #}
+  {# {% if config.is_prod or config.is_test %} #}
+  <!--            {% include 'includes/google-analytics.html' %}-->
+  {# {% endif %} #}
+</body>
+
 </html>

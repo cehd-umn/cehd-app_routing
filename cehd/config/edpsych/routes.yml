@@ -85,6 +85,12 @@
     template_data:
         meta_description: "Discover what Department of Educational Psychology alums working on today."
         section: alumni
+/edpsych/alumni/testimonials/:
+    publish: false
+    template: edpsych/alumni/testimonials.html
+    template_data:
+        meta_description: "Hear from recent alumni."
+        section: alumni
 
 # Contact
 /edpsych/contact/:
@@ -723,7 +729,7 @@
         meta_description: "Dr. Christ's research lab focuses on innovation as it applies to cloud-based assessment and interventions."
         section: research
 /edpsych/research/labs/codding/:
-    publish: true
+    publish: false
     template: edpsych/research/labs/codding.html
     template_data:
         meta_description: "Dr. Codding's research lab focuses on prevention and intervenetion of academic problems, data-based instructional decision making, and the implementation of evidence-based practices in schools."
