@@ -570,6 +570,12 @@
     template_data:
         meta_description: "Help young children with developmental delays and disabilities succeed."
         section: programs-degrees
+/edpsych/programs/specialed/gap-year-classes/:
+    publish: true
+    template: edpsych/programs/specialed/gap-year-classes.html
+    template_data:
+        meta_description: "Earn credits toward your graduate degree in special education now to apply to a degree later."
+        section: programs-degrees
 /edpsych/programs/specialed/ld-licensure/:
     publish: false
     template: edpsych/programs/specialed/ld-licensure.html
@@ -665,6 +671,12 @@
     template: edpsych/programs/specialed/license.html
     template_data:
         meta_description: null
+        section: programs-degrees
+/edpsych/programs/undergrad-gap-year-classes/:
+    publish: true
+    template: edpsych/programs/specialed/undergrad-gap-year-classes.html
+    template_data:
+        meta_description: "Gain exposure to the field of educational psychology, and earn credits toward an undergraduate degree now to apply to a degree later."
         section: programs-degrees
 
 # Research

@@ -325,11 +325,6 @@
   publish: true
   template_data:
       - section: graduate
-/graduate/graduation/:
-  template: ssw/graduate/graduation.html
-  publish: true
-  template_data:
-      - section: graduate
 /graduate/phd-in-social-work/:
   template: ssw/graduate/phd-in-social-work.html
   publish: true

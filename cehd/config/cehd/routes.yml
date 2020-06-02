@@ -1265,6 +1265,11 @@
   template: cehd/commencement/index.html
   template_data:
     - section: commencement
+/commencement/graduate/:
+  publish: true
+  template: cehd/commencement/graduate.html
+  template_data:
+    - section: commencement
 /commencement/guests/:
   publish: true
   template: cehd/commencement/guests.html
@@ -1275,9 +1280,19 @@
   template: cehd/commencement/index-for-jan-2018.html
   template_data:
     - section: commencement
+/commencement/med/:
+  publish: true
+  template: cehd/commencement/med.html
+  template_data:
+    - section: commencement
 /commencement/speakers/:
   publish: true
   template: cehd/commencement/speakers.html
+  template_data:
+    - section: commencement
+/commencement/undergraduate/:
+  publish: true
+  template: cehd/commencement/undergraduate.html
   template_data:
     - section: commencement
 /diversity/:
@@ -1577,6 +1592,11 @@
 /giving/wplc/:
   publish: true
   template: cehd/giving/wplc/index.html
+  template_data:
+    - section: giving
+/giving/wplc/2020-recipients/:
+  publish: true
+  template: cehd/giving/wplc/2020-recipients.html
   template_data:
     - section: giving
 /giving/wplc/events/:

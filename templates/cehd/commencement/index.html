@@ -1,22 +1,130 @@
 {% extends "cehd/layout/base.html" %}
 {% set page_title = "Commencement" %}
+{% block extra_css %}
+<style>
+a.button:visited, #maincontent a.button:visited {
+    color: #fff;
+    border: 0.1em solid #ffcc33 !important;
+    color: #fff;
+}
+.button.center {
+    display: inline-block;
+     margin: 0 auto;
+}
+.button.simple.maroon {
+    background-color: #ffcc33 !important;
+     color: #fff;
+}
+#maincontent a:focus, #maincontent a:hover {
+    background-color: #900021;
+}
+</style>
+{% endblock %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
-<div class="row">
-    <div class="container feature">
-        <h1>Commencement </h1>
+
+
+<div class="container">
+	<h1>Commencement 2020</h1>
+
+		<div class="row">
+			<div class="span-6">
+			<figure>
+			<img src="/assets/images/events/Hail-to-Thee-A.png" alt="Hail to thee logo">
+			<figcaption><samp>The theme for the celebration is “Hail to Thee,”
+			the University’s alma mater and a reference from Minnesota’s state song chosen to reflect the
+			University’s admiration for your incredible resilience in these stressful times.</samp></figcaption>
+			</figure>
+		</div>
+			<div class="span-6 margin-top-1">
+			<p>On May 16, the University of Minnesota will honor all 2020 undergraduate and graduate students during a virtual commencement.
+			Join us at 11 a.m. CDT for the <a href="https://z.umn.edu/commencement2020">Twin Cities campus online celebration</a> and at 11:15 a.m.
+			for the CEHD commencement ceremony.</p>
+			</div>
+		</div>
+	<h2 class="text-center margin-top-2">The CEHD virtual celebration will include:</h2>
+		<div class="twothird feature">
+			<ul>
+				<li>Dean Jean Quam, video messages for graduate students and undergraduate students</li>
+				<li>Rashné Jehangir, associate professor in the Department of Organizational Leadership, Policy, and Development,
+				a video message for all students</li>
+				<li>Dan-neya Yancey, Family Social Science graduate and undergraduate student speaker
+				</li>
+			</ul>
+		</div>
+</div>
+
+<div class="row emphasis margin-top-2">
+<div class="container">
+	<h3 class="text-center">Celebrating our graduates</h3>
+		<p class="text-center"><small>NOTE: Link will be live at 11:15 a.m. central time</small></p>
+		<p class="text-center"><a href="http://virtualgrad.marchingorder.com/umn/xi" class="button center simple maroon">CEHD virtual commencement</a><br>
+		</p>
+		<p class="twothird feature text-center">Graduating students are encouraged to use <strong>#HailtoThee2020</strong> and <strong>#CEHD2020</strong> in their commencement social posts.</p>
+
+	<h3 class="text-center margin-top-2">Names of graduates by degree</h3>
+		<div class="row">
+			<div class="twothird feature">
+				<div class="half">
+				<p><a href="https://www.cehd.umn.edu/commencement/undergraduate/">BS graduates</a></p>
+
+				<p><a href="https://www.cehd.umn.edu/commencement/med/">MEd graduates</a></p>
         <p>
+          <a href="https://pub.umn.edu/cehd/UG-commencement-Program-2020/">Undergraduate commencement program</a>
+          </p>
+				</div>
+				<div class="half">
+				<p><a href="https://www.cehd.umn.edu/commencement/graduate/">MA, MS, MSW, EdD, PhD, and Specialist Certificate graduates</a></p>
+        <p>
+          <a href="https://pub.umn.edu/cehd/Graduate-Commencement-Program-2020/">Graduate commencement program</a>
+          </p>
+        </div>
+			</div>
+		</div>
+
+	<div class="twothird feature">
+		<h3 class="text-center">CEHD faculty and staff Flipgrid messages</h3>
+			<p>Faculty and staff from across the college have recorded well wishes for graduating students. View the messages for <a href="https://flipgrid.com/cehd2020undergrad">undergraduate students</a> or <a href="https://flipgrid.com/cehd2020grad">graduate students</a>. </p>
+	</div>
+	<div class="margin-top-2"></div>
+		<h3 class="text-center">Department Flipgrid messages</h3>
+		<div class="row">
+			<div class="twothird feature">
+				<div class="half">
+					<p><a href="https://flipgrid.com/+ci">Curriculum and Instruction </a></p>
+					<p><a href="https://flipgrid.com/+edpsych">Educational Psychology </a></p>
+					<p><a href="https://flipgrid.com/+fsos">Family Social Science </a></p>
+					<p><a href="https://flipgrid.com/+icd">Institute of Child Development </a></p>
+				</div>
+				<div class="half">
+					<p><a href="https://flipgrid.com/+kin">School of Kinesiology </a></p>
+					<p><a href="https://flipgrid.com/+cehdolpd">Organizational Leadership, Policy, and Development </a></p>
+					<p><a href="https://flipgrid.com/+ssw">School of Social Work </a></p>
+					<p><a href="https://flipgrid.com/+studentservices ">Student Services</a></p>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+       <!--  <p>
           <p>On May 16, the University of Minnesota will honor all 2020 undergraduate and graduate students during a virtual commencement.
-            Join us at 11 a.m. CDT for an online celebration. The theme for the celebration is “Hail to Thee,”
+            Join us at 11 a.m. CDT for the <a href="https://z.umn.edu/commencement2020">Twin Cities campus online celebration</a> and at 11:15 a.m.
+            for the CEHD commencement ceremony.
+            <p>The CEHD virtual celebration will include:
+            <ul>
+            <li>Dean Jean Quam, video messages for graduate students and undergraduate students</li>
+            <li>Rashné Jehangir, associate professor in the Department of Organizational Leadership, Policy, and Development,
+              a video message for all students</li>
+            <li>Dan-neya Yancey, Family Social Science graduate and undergraduate student speaker
+            </li>
+            </ul></p>
+            <p>The theme for the celebration is “Hail to Thee,”
             the University’s alma mater and a reference from Minnesota’s state song chosen to reflect the
-            University’s admiration for your incredible resilience in these stressful times. Graduates will receive an email from MarchingOrder
-             to provide a photo that will be displayed with their graduation information on the commencement site.
-             For those planning to graduate this spring or fall, if you don't receive an email by April 24, <a href="https://docs.google.com/forms/d/e/1FAIpQLSerMS6Qv9sbMkRUXVVz2FiWgjUCtSwT-YKtIk_EXAXLcyfKew/viewform">
-               please let us know</a>.
-Graduating students are encouraged to use #HailtoThee2020 in their commencement social posts and participate in a cap decorating contest, #CapsOff2020. Branded Zoom backgrounds, cap decorating instructions,
-other assets and commencement information are available at <a href="https://z.umn.edu/commencement2020">z.umn.edu/commencement2020</a>.
-<p>CEHD will host a virtual ceremony in conjunction with the U of M systemwide ceremony. Further details will be posted soon.
-  </p>
+            University’s admiration for your incredible resilience in these stressful times. </p>
+
+<p>Graduating students are encouraged to use #HailtoThee2020 and #CEHD2020 in their commencement social posts.</p> -->
+
 
 
         <!-- <div class="row">
@@ -35,7 +143,7 @@ other assets and commencement information are available at <a href="https://z.um
 
                 <p>CEHD commencement is held once a year in the spring. No tickets are necessary, and seating is available on a first-come basis.
                   <a href="http://www1.umn.edu/twincities/maps/MarA/">3M Arena at Mariucci</a> has ample seating for any number
-                    of guests.</p>
+                  of guests.</p>
                     <p><a href="/commencement/guests/">Find more information for guests</a>.
                       </p>
 
@@ -43,9 +151,9 @@ other assets and commencement information are available at <a href="https://z.um
             <div class="span-6">
               <figure>
                  <img src="/assets/images/events/Commencement_2017.jpg" alt="Students celebrating commencement ">
-                 <!-- <figcaption>Example image</figcaption> -->
-             </figure>
-              </div></div>
+               <figcaption>Example image</figcaption> -->
+             <!-- </figure>
+              </div></div> -->
               <!-- <div class="container">
               <div class="row">
                 <div class="span-6">
@@ -114,6 +222,7 @@ other assets and commencement information are available at <a href="https://z.um
 </div>
 </div>
         <!-- ./container -->
+
 </div>
 </div>
 <!-- ./container -->

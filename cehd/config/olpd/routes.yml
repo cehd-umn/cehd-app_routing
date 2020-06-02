@@ -282,7 +282,37 @@
     - section: graduate-programs
 /graduate-programs/cidetest/:
   template: olpd/graduate-programs/cidetest.html
-  publish: true
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestphd/:
+  template: olpd/graduate-programs/cidetestphd.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestgradminor/:
+  template: olpd/graduate-programs/cidetestgradminor.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestliie/:
+  template: olpd/graduate-programs/cidetestliie.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestma/:
+  template: olpd/graduate-programs/cidetestma.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestresearch/:
+  template: olpd/graduate-programs/cidetestresearch.html
+  publish: false
+  template_data:
+    - section: graduate-programs
+/graduate-programs/cidetestcourses/:
+  template: olpd/graduate-programs/cidetestcourses.html
+  publish: false
   template_data:
     - section: graduate-programs
 /graduate-programs/comparative-international-development-education/phd/:
