@@ -33,7 +33,7 @@ $app = new \CEHD\App\EdPsych\EdPsychApp($yaml_file_paths);
 
 $app->router->respond(
     'GET',
-    '/edpsych/programs/courses/[asl|qme|psyf:course]/',
+    '/edpsych/programs/courses/[asl:course]/', 
     [$app, 'programsCoursePageHandler']
 );
 

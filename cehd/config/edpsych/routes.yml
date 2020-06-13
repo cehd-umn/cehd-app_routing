@@ -54,7 +54,7 @@
         meta_description: "The Department of Educational Psychology provides training in the cognitive, emotional, and social learning processes that underlie education and human development across the lifespan, including: the psychological foundations of education, quantitative methods in education, the practice and science of counseling psychology, school psychology, and special education."
         section: about
 /edpsych/about/deno-event-2017/:
-    publish: true
+    publish: false
     template: edpsych/about/deno-event-2017.html
     template_data:
         meta_description: "Join members of the Department of Educational Psychology for a Memorial Conference, Stanley Scramble golf event, and University of Minnesota Outstanding Achievement Award Luncheon celebrating the life and work of Stan Deno."
@@ -328,7 +328,7 @@
     publish: true
     template: edpsych/programs/cspp/index.html
     template_data:
-        meta_description: "View brief descriptions of the courses offered for a degree in psychological foundations of education."
+        meta_description: "With a masters of arts in counseling and student personnel psychology (CSPP), you’ll be qualified to counsel others throughout their lifespan."
         section: programs-degrees
 /edpsych/programs/cspp/hansen/:
     publish: true
@@ -457,13 +457,13 @@
         meta_description: "Earn your graduate minor in educational psychology with an emphasis in quantitative methods in education. Coursework emphasizes both the theory underlying various methodologies and their correct application and interpretation of results."
         section: programs-degrees
 /edpsych/programs/qme/stats-ed-courses/:
-    publish: true
+    publish: false
     template: edpsych/programs/qme/stats-ed-courses.html
     template_data:
         meta_description: null
         section: programs-degrees
 /edpsych/programs/qme/stats-intro/:
-    publish: true
+    publish: false
     template: edpsych/programs/qme/stats-intro.html
     template_data:
         meta_description: "As a student in the statistics education concentration in our quantitative methods in education program, you’ll train for a career in statistics education as well as methodological competencies in statistics, measurement, and evaluation."
@@ -672,9 +672,9 @@
     template_data:
         meta_description: null
         section: programs-degrees
-/edpsych/programs/undergrad-gap-year-classes/:
+/edpsych/programs/undergrad-non-degree-seeking-courses/:
     publish: true
-    template: edpsych/programs/specialed/undergrad-gap-year-classes.html
+    template: edpsych/programs/undergrad-non-degree-seeking-courses.html
     template_data:
         meta_description: "Gain exposure to the field of educational psychology, and earn credits toward an undergraduate degree now to apply to a degree later."
         section: programs-degrees
@@ -686,41 +686,11 @@
     template_data:
         meta_description: Our research helps tackle some of the toughest issues in education today, including achievement gaps, autism, and behavioral and social-emotional development. We're dedicated to improving students' mathematical thinking and reading comprehension skills and analyzing student changes."
         section: research
-/edpsych/research/500-under-five/:
-    publish: true
-    template: edpsych/research/500-under-five.html
-    template_data:
-        meta_description: "Five Hundred under 5 (FHu5) began in 2006 as a place-based and collaborative initiative to promote school readiness in north Minneapolis."
-        section: research
-/edpsych/research/community-engaged-research/:
-    publish: true
-    template: edpsych/research/community-engaged-research/index.html
-    template_data:
-        meta_description: "Learn how Educational Psychology research is at work in our communities."
-        section: research
-/edpsych/research/family-academy/:
-    publish: true
-    template: edpsych/research/family-academy.html
-    template_data:
-        meta_description: "Family Academy is a parent education and empowerment program for families with children aged 0-3. Its purpose is to start early by empowering parents to get their kids ready for kindergarten and on the pathway to college and life-long success."
-        section: research
-/edpsych/research/fresh-garden/:
-    publish: true
-    template: edpsych/research/fresh-garden.html
-    template_data:
-        meta_description: "The Fresh Start Garden program is a community-led garden and cooking program for preschool-aged children, their adult caregivers, and older youth from North Minneapolis."
-        section: research
 /edpsych/research/health-social-care/:
     publish: true
     template: edpsych/research/health-social-care.html
     template_data:
         meta_description: "Our research helps tackle some of the toughest issues in health and social care today, including autism and behavioral and social-emotional development."
-        section: research
-/edpsych/research/ggg/:
-    publish: true
-    template: edpsych/research/ggg.html
-    template_data:
-        meta_description: "The Get It, Got It, Go! project developed a website that provided informational materials, assessments, and database-driven systems to help educators, parents, and others."
         section: research
 /edpsych/research/labs/:
     publish: true
@@ -739,24 +709,6 @@
     template: edpsych/research/labs/christ.html
     template_data:
         meta_description: "Dr. Christ's research lab focuses on innovation as it applies to cloud-based assessment and interventions."
-        section: research
-/edpsych/research/labs/codding/:
-    publish: false
-    template: edpsych/research/labs/codding.html
-    template_data:
-        meta_description: "Dr. Codding's research lab focuses on prevention and intervenetion of academic problems, data-based instructional decision making, and the implementation of evidence-based practices in schools."
-        section: research
-/edpsych/research/community/:
-    publish: true
-    template: edpsych/research/community/index.html
-    template_data:
-        meta_description: "Learn more about the research our faculty, staff, and students are doing to benefit our communities."
-        section: research
-/edpsych/research/labs/fleury/:
-    publish: false
-    template: edpsych/research/labs/fleury.html
-    template_data:
-        meta_description: "Dr. Fleury's research lab examines how core characteristics of ASD inhibit or promote students’ ability to participate in classroom activities."
         section: research
 /edpsych/research/labs/johnson/:
     publish: true
@@ -831,7 +783,7 @@
         meta_description: "Dr. Symons' research lab aims to gain greater understanding of the severe behavior problems of children and adults with special needs, primarily those with developmental disabilities and emotional or behavioral disorders."
         section: research
 /edpsych/research/labs/tennyson/:
-    publish: true
+    publish: false
     template: edpsych/research/labs/tennyson.html
     template_data:
         meta_description: "Robert Tennyson's lab focuses on the use of iPads in elementary schools, technology features for math and reading, achievement gains with technology tools (standardized tests), and educational gaming and simulations to improve problem solving and decision making."
@@ -848,41 +800,11 @@
     template_data:
         meta_description: "Dr. Wolff's reserach lab focuses on early brain and behavioral development in children with autism spectrum disorder and restricted and repetitive behaviors associated with autism and other developmental disabilities."
         section: research
-/edpsych/research/labs/yussen/:
-    publish: true
-    template: edpsych/research/labs/yussen.html
-    template_data:
-        meta_description: "The development of narrative thinking lab, led by Steve Yussen, focuses on memory and comprehension of stories, narrative exchanges between children and parents, and the role of culture on narrative storytelling and memory."
-        section: research
-/edpsych/research/making-a-difference-with-data/:
-    publish: true
-    template: edpsych/research/making-a-difference-with-data.html
-    template_data:
-        meta_description: "LeAnne Johnson, assistant professor in special education and coordinator for the early childhood special education M.Ed. and licensure program, is dedicated to ensuring teachers have the tools they need to decide what interventions they should use with kids."
-        section: research
-/edpsych/research/empowering-parents-to-help-close-the-word-gap/:
-    publish: true
-    template: edpsych/research/empowering-parents-to-help-close-the-word-gap.html
-    template_data:
-        meta_description: "Researchers from the Department of Educational Psychology are partnering with early childhood practitioners to get more parents in Minnesota talking to their young children."
-        section: research
 /edpsych/research/news/:
     publish: true
     template: edpsych/research/news/index.html
     template_data:
         meta_description: "Catch up on the latest research news at the Department of Educational Psychology at the University of Minnesota."
-        section: research
-/edpsych/research/pnrc/:
-    publish: true
-    template: edpsych/research/pnrc.html
-    template_data:
-        meta_description: "This project is working to create the infrastructure to begin research on comprehensive preventive interventions in the nation’s highest poverty neighborhoods."
-        section: research
-/edpsych/research/ready-to-succeed/:
-    publish: true
-    template: edpsych/research/ready-to-succeed.html
-    template_data:
-        meta_description: "Ready to Succeed! is a UROC project in partnership with CEED and Northside Achievement Zone (NAZ). The goal is to promote kindergarten readiness through family-focused curriculum as part of the NAZ pipeline of family support provided by the NAZ Family Academy curricular offerings."
         section: research
 /edpsych/research/resources/rbs-ec/:
     publish: true
