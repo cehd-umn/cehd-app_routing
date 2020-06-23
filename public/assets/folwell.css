@@ -146,3 +146,9 @@ nav a:hover {
     color: #900021;
   }
 }
+
+/* Adding to override simple maroon button color */
+.button.simple.maroon {
+  background-color: #7a0019;
+  color: #fff;
+}
