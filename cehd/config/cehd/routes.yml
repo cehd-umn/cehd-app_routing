@@ -110,24 +110,19 @@
   template: cehd/alumni/index.html
   template_data:
     - section: alumni
+/alumni/career/:
+  publish: false
+  template: cehd/alumni/career.html
+  template_data:
+    - section: alumni
 /alumni/contact/:
   publish: true
   template: cehd/alumni/contact.html
   template_data:
     - section: alumni
-/alumni/events/:
-  publish: true
-  template: cehd/alumni/events.html
-  template_data:
-    - section: alumni
 /alumni/involved/:
   publish: true
   template: cehd/alumni/involved.html
-  template_data:
-    - section: alumni
-/alumni/mentor/:
-  publish: true
-  template: cehd/alumni/mentor.html
   template_data:
     - section: alumni
 /alumni/news/:
@@ -138,11 +133,6 @@
 /alumni/notes/:
   publish: true
   template: cehd/alumni/notes.html
-  template_data:
-    - section: alumni
-/alumni/volunteer/:
-  publish: true
-  template: cehd/alumni/volunteer.html
   template_data:
     - section: alumni
 /alumni/awards/:

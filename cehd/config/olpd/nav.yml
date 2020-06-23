@@ -1,3 +1,7 @@
+- name: Home
+  href: "/"
+  section: home
+  subsections: null
 - name: Undergraduate
   href: "/undergraduate-programs/"
   section: undergraduate programs
@@ -50,3 +54,4 @@
   href: "/about/"
   section: about
   subsections: null
+

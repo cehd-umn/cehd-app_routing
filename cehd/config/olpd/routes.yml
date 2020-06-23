@@ -600,6 +600,21 @@
   publish: true
   template_data:
     - section: people
+/people/students/:
+  template: olpd/people/students/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/:
+  template: olpd/people/students/cide/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/template/:
+  template: olpd/people/students/cide/template.html
+  publish: true
+  template_data:
+    - section: people
 /undergraduate-programs/:
   template: olpd/undergraduate-programs/index.html
   publish: true

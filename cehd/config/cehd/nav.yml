@@ -171,13 +171,6 @@
     -
       - name: STAY INVOLVED
         href: "/alumni/involved/"
-        subsections:
-          -
-            - name: Mentor Programs
-              href: "/alumni/mentor/"
-            - name: Volunteer Opportunities
-              href: "/alumni/volunteer/"
-    -
       - name: ALUMNI SOCIETY
         href: "/alumni/society/"
         subsections:
@@ -208,8 +201,6 @@
         href: "/alumni/news/"
       - name: Notes
         href: "/alumni/notes/"
-      - name: Events
-        href: "/alumni/events/"
       - name: Contact Us
         href: "/alumni/contact/"
 - name: About Us

@@ -120,7 +120,7 @@
         meta_description: "Get the resources and information you need as an ASL student and learn about opportunities available to you as your complete your ASL studies at the University of Minnesota."
         section: current
 /edpsych/current/asl/deaf-asl-resources/:
-    publish: true
+    publish: false
     template: edpsych/current/asl/deaf-asl-resources.html
     template_data:
         meta_description: "Get helpful resources for deaf people and those communicating or learning to communicate with American Sign Language (ASL)."
@@ -208,12 +208,6 @@
     template: edpsych/current/special-ed/index.html
     template_data:
         meta_description: "Find the resources you need to complete your degree in special education."
-        section: current
-/edpsych/current/special-ed/student-teaching-practicum/:
-    publish: true
-    template: edpsych/current/special-ed/student-teaching-practicum.html
-    template_data:
-        meta_description: "Getting to know nearby public schools will help you request a practicum or student teaching placement and, later on, with your job search."
         section: current
 /edpsych/current/special-ed/autism-certificate/:
     publish: true
@@ -799,12 +793,6 @@
     template: edpsych/research/labs/wolff.html
     template_data:
         meta_description: "Dr. Wolff's reserach lab focuses on early brain and behavioral development in children with autism spectrum disorder and restricted and repetitive behaviors associated with autism and other developmental disabilities."
-        section: research
-/edpsych/research/news/:
-    publish: true
-    template: edpsych/research/news/index.html
-    template_data:
-        meta_description: "Catch up on the latest research news at the Department of Educational Psychology at the University of Minnesota."
         section: research
 /edpsych/research/resources/rbs-ec/:
     publish: true

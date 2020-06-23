@@ -1,7 +1,6 @@
 {% extends "cehd/layout/alumni.html" %}
 {%- import "macros/loader.html" as loader -%}
 {% import "macros/news-feed.html" as newsfeed %}
-{%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "Alumni" %}
 {% block extra_css %}
 <style>
@@ -19,13 +18,11 @@
     width: 100%;
     top: 150px;
 }
-
 }
-
-
 </style>
 {% endblock %}
 {% block title %}{{ page_title }}{% endblock %}
+
 {% block hero_image %}
 <div class="hero-image-container">
     <img class="hero-image" src="/assets/dist/images/alumni/hero.jpg" alt="Alumna Dale LaFrenz">
@@ -33,49 +30,67 @@
         <div class="twothird">
             <p>Alumna Dale LaFrenz, '78<br />launched the K-12 educational computing industry</p>
         </div>
-        <div class="third">
+         <div class="third">
             <p><a href="https://connect.cehd.umn.edu/the-pioneer/" class="to-upper button clear" {{ analytics.add_tracking("send", "event", "alumni", "click", "alumni-read more") }}>Read more</a></p>
         </div>
     </div>
 </div>
 {% endblock %}
+
 {% block main_content %}
 <div class="row has-hero-image">
   <div class="container">
     <h1>Welcome, alumni</h1>
-    <div class="twothird feature">
+      <div class="twothird feature">
         <p>College of Education and Human Development alumni and friends are
-        invited to become members of the
-        <a href="http://umnalumni.org/home">University of Minnesota Alumni
-        Association</a> and the <a href="/alumni/society/">CEHD Alumni
-        Society</a>.</p>
+        invited to become members of the <a href="https://www.umnalumni.org/s/1867/18/home.aspx?sid=1867&gid=2">University of
+          Minnesota Alumni Association</a> and the <a href="/alumni/society/">CEHD Alumni Society</a>.
+        </p>
         <p>The college has over 75,000 living alumni globally. With over 8,000 Alumni Association members, the CEHD
-        Alumni Society is the second largest alumni society at the University of Minnesota. Nearly 1,200 CEHD graduates are faculty or staff members at the University. Three hundred work in CEHD. </p>
-      <div class="row">
-        <div class="span-6">
-          {{ loader.loader(
-            "Alumni News",
-            "h2",
-            "news-container"
-          ) }}
-        </div>
-        <div class="span-6">
-          {{ loader.loader(
-            "Alumni Events",
-            "h2",
-            "events-container"
-          ) }}
-        </div>
-      </div>
-    </div>
- </div> <!-- ./container -->
- <div class="span-12">
-              {{ include('cehd/includes/connect.html') }}
- </div>
+        Alumni Society is the second largest alumni society at the University of Minnesota.
+        Nearly 1,200 CEHD graduates are faculty or staff members at the University. Three hundred work in CEHD. </p>
+     </div>
+      <div class="third feature">
 
-</div> <!-- ./row -->
+        {{ loader.loader(
+          "Alumni News",
+          "h2",
+          "news-container"
+        ) }}
+      </div>
+
+
+  <div class="row">
+    <div class="span-6">
+      <h2>Ways to get involved</h2>
+        <p>
+        Connect with a current student by participating in an informational interview.</p>
+        <p>These are generally 20-30 minutes in length and  allow a student to gain an inside view into your particular industry area and hear your first hand experiences. Share your experience with students by participating on a career panel or mock interview.</p>
+        <p>
+        Visit a class or student group to share information about your career area.
+        </p>
+    </div>
+    <div class="span-6">
+      <h2>Join</h2>
+        <ul>
+          <li><a href="https://www.umnalumni.org/s/1867/18/home.aspx?sid=1867&gid=2">University of Minnesota Alumni Association</a>
+          </li>
+          <li><a href="https://www.cehd.umn.edu/giving/wplc/join/">Women’s Philanthropic Leadership Circle (WPLC)</a></li>
+          <li><a href="https://advocates.umn.edu/">Legislative Network</a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+ </div>
+  <div class="span-12">
+        {{ include('cehd/includes/connect.html') }}
+  </div>
+  </div><!-- ./container -->
+
+
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
         {{ newsfeed.news_feed_js("category/alumni/feed/?cat=-757") }}
-        {{ eventsfeed.events_feed_js(182, 5) }}
+
 {% endblock %}
