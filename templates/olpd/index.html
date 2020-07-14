@@ -6,7 +6,7 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
-    
+
 
     @media (min-width: 960px) {
         .hero-image-container {
@@ -61,7 +61,7 @@
             position: absolute;
         }
 
-      
+
 
 
     }
@@ -90,6 +90,8 @@
 
 {% endblock %}
 {% block hero_image %}
+
+
 <div class="hero-image-container">
     <img class="hero-image" src="/olpd/images/hp-hero.jpg" alt="OLPD students">
     <div class="hero-overlay">
@@ -110,14 +112,14 @@
 
 
 <div class="row has-hero-image">
-
-          <div class="row emphasis subtle margin-top-1 border-top">
-              <div class="container">
-                  <div class="feature">
-                      <h3 class="text-center"><a href="https://cehd.umn.edu/olpd/graduate-programs/resources/">Message and resources for OLPD students re: COVID-19</a></h3>
-                  </div>
-              </div>
+  <div class="row emphasis subtle margin-top-1 margin-bottom 2">
+      <div class="container">
+          <div class="twothirds feature">
+              <p>The University of Minnesota is closely monitoring and responding to the COVID-19 public health concern. <a href="https://safe-campus.umn.edu/public-health-alerts" target="_blank">Stay informed⟶</a></p>
           </div>
+      </div>
+  </div>
+
           <div class="container">
               <h1 class="accessible-no-display">Organizational Leadership, Policy, and Development</h1>
               <div class="feature twothird">
@@ -237,7 +239,7 @@
 
         </div><!-- close container -->
 
-        <div class="row emphasis margin-top-1">
+        <div class="row emphasis cool margin-top-1">
             <div class="container">
                 <div class="twothird feature">
                     <h2 class="text-center">Contact information</h2>
@@ -270,31 +272,7 @@
     </div>
 </div>
 
-<div class="row emphasis cool margin-top-2">
-    <div class="container">
-        <div class="twothird feature">
-            <h2 class="text-center">Discover OLPD on social media</h2>
-            <p>See breaking news and information, get involved in activities and events, and learn about research,
-                programs, and community engagement.</p>
-            <div class="span-8 feature">
-                <div class="half">
-                    <div class="svg-social-media-icon size-40">
-                        {% include "cehd/includes/svg/social-media/facebook.html" %}
-                    </div>
-                    <p>Like us on Facebook<br /> <a href="https://www.facebook.com/ugolpd">Undergraduate Programs</a>
-                        <br /> <a href="https://www.facebook.com/olpdgrad">Graduate Programs</a></p>
 
-                </div>
-                <div class="half">
-                    <div class="svg-social-media-icon size-40">
-                        {% include "cehd/includes/svg/social-media/twitter.html" %}
-                    </div>
-                    <p>Follow us on <a href="https://twitter.com/UMN_olpd">Twitter</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 
 {% endblock %}
