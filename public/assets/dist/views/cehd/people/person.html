@@ -4,6 +4,9 @@
             <span class="divider one-half"></span>
             <div class="half right">
                 <h1 class="heading-profile h2">{{ data.person.nameFirstLast }}
+                    {% if data.person.personalPronouns|is_string %}
+                    <small class="clear h4">Pronouns: {{ data.person.personalPronouns }}</small>
+                    {% endif %}
                     <small class="clear h4">
                     {% if data.person.workingTitle|is_string %}
                         {{ data.person.workingTitle|safe }}
@@ -44,7 +47,10 @@
                     <p>{{ data.person.officeHours|safe }}</p>
                 {% endif %}
                 {% if data.person.curriculumVitaeAddr|is_string %}
-                    <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+                <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+                {% endif %}
+                {% if data.person.advisingStatementAddr|is_string %}
+                <p><a href="{{ data.person.advisingStatementAddr }}">Download Advising Statement</a> [PDF]</p>
                 {% endif %}
             </div><!-- end half -->
         </div><!-- end twothird -->

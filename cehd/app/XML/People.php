@@ -211,6 +211,11 @@ class Person extends \CEHD\App\XML\XML
     /**
      * @type string
      */
+    public $advisingStatementAddr;
+
+    /**
+     * @type string
+     */
     public $dateDisplay;
 
     /**
@@ -252,6 +257,11 @@ class Person extends \CEHD\App\XML\XML
      * @type string
      */
     public $internetId;
+
+    /**
+     * @type string
+     */
+    public $personalPronouns;
 
     /**
      * @type array
@@ -363,6 +373,8 @@ class Person extends \CEHD\App\XML\XML
 
         $this->internetId =          $this->getFromProperty($person->internetId);
 
+        $this->personalPronouns =          $this->getFromProperty($person->personalPronouns);
+
         $this->firstName =           $this->getFromProperty($person->firstName);
 
         $this->middleName =          $this->getFromProperty($person->middleName);
@@ -408,6 +420,8 @@ class Person extends \CEHD\App\XML\XML
         $this->webPage =             $this->getFromProperty($person->webPage);
 
         $this->curriculumVitaeAddr = $this->getFromProperty($person->curriculumVitaeAddr);
+
+        $this->advisingStatementAddr = $this->getFromProperty($person->advisingStatementAddr);
 
         $this->tags =                $this->_setTagData($person->tags, "tag");
 

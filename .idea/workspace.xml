@@ -2,92 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/dev-kin/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cehd-app_routing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cehd-app_routing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/app/KIN/KINApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/app/KIN/KINApp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/kin/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/kin/nav.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/nav.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/kin/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/about/history.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/about/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/about/news-events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/about/ssw-jobs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/academics/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni-copy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/gbolo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/hussein.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/jordahl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/moua.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/schoeppner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/sugrue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/trumanue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/alumni/walz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/articles/experiential-learning.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/articles/somali-mental-health.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/incommunity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/mincava/completed-research.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/mincava/current-research.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/mincava/history.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/mincava/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/centers/youth-work-lab.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/experiential-learning.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/giving.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/.master-of-social-work.html.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/apply-phd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/careers-of-social-work-phd-graduates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/current-phd-students.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/dissertation-titles.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/diversity-social-work-advancement-program.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/eloise-elliot-kaplan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/faq-test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/faq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/funding.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/graduation - Copy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/graduation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/integrated-behavioral-health.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/job-search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/john-wallace-fellowship.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/kente-circle-placement-fellowship.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/master-of-social-work.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-CMH-adv-standing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-field-fair.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-field-instruction.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-how-to-apply.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-meet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-mission.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-programs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-requirements.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/msw-transfer-apply.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/non-degree-seeking-students.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/phd-candidates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/phd-in-social-work.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/title-iv-e-child-welfare-training-fellowship.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/transfer-students.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/weisdorf-oncology.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/youth-development-leadership-how-to-apply.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/graduate/youth-development-leadership.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/people/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/people/person.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research-centers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/disability-aging.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/families-children.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/mental-health.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/methodology.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/social-policy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/research/youth-development.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/slider-test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/undergraduate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/undergraduate/minors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/undergraduate/youth-studies-major.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/app/XML/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/app/XML/People.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/cehd/people/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/cehd/people/person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,9 +17,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,6 +52,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XzbzDiqXOgJcRG5CBvNbf1ndvf" />
@@ -141,7 +65,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -160,18 +83,6 @@
       <recent name="$PROJECT_DIR$/cehd/config/kin" />
       <recent name="$PROJECT_DIR$/public/assets/src/js" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -241,17 +152,22 @@
       <workItem from="1587139407678" duration="575000" />
       <workItem from="1587393116097" duration="2097000" />
       <workItem from="1587755329187" duration="2971000" />
+      <workItem from="1594758964379" duration="2512000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1559" y="408" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587762859057">
       <screen x="-2560" y="-122" width="2560" height="1440" />
     </state>
     <state x="-1559" y="408" key="#com.intellij.fileTypes.FileTypeChooser/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587762859057" />
+    <state x="3258" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594819463061">
+      <screen x="2560" y="23" width="1920" height="1057" />
+    </state>
+    <state x="3258" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.23.1920.1057/0.23.2560.1417@2560.23.1920.1057" timestamp="1594819463061" />
     <state width="2518" height="422" key="GridCell.Tab.0.bottom" timestamp="1587756474257">
       <screen x="-2560" y="-122" width="2560" height="1440" />
     </state>
@@ -277,13 +193,10 @@
     </state>
     <state x="-1739" y="377" key="com.intellij.ide.util.TipDialog/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587755329278" />
     <state x="616" y="389" key="com.intellij.ide.util.TipDialog/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587393191564" />
-    <state x="616" y="374" key="com.intellij.ide.util.TipDialog/-4480.0.1920.1080/-2560.0.2560.1440/0.0.1920.1080@0.0.1920.1080" timestamp="1582052139633" />
     <state x="539" y="379" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587041375499" />
     <state x="-1727" y="175" width="894" height="921" key="search.everywhere.popup" timestamp="1587756710054">
       <screen x="-2560" y="-122" width="2560" height="1440" />
     </state>
     <state x="-1727" y="175" width="894" height="921" key="search.everywhere.popup/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756710054" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/-4480.0.1920.1080/-2560.0.2560.1440/0.0.1920.1080@0.0.1920.1080" timestamp="1582052597466" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/-4480.23.1920.1057/-2560.23.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1582053901093" />
   </component>
 </project>
