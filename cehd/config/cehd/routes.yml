@@ -1664,6 +1664,11 @@
   template: cehd/global/scholars.html
   template_data:
     - section: global
+/global/school-leaders-association/:
+  publish: true
+  template: cehd/global/school-leaders-association.html
+  template_data:
+    - section: global
 /graduate/:
   publish: true
   template: cehd/graduate/index.html

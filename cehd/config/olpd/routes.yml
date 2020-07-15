@@ -602,7 +602,7 @@
     - section: people
 /people/students/:
   template: olpd/people/students/index.html
-  publish: true
+  publish: false
   template_data:
     - section: people
 /people/students/cide/:
@@ -612,6 +612,66 @@
     - section: people
 /people/students/cide/template/:
   template: olpd/people/students/cide/template.html
+  publish: false
+  template_data:
+    - section: people
+/people/students/cide/nisse102/:
+  template: olpd/people/students/cide/nisse102.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/rasmu830/:
+  template: olpd/people/students/cide/rasmu830.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/chati005/:
+  template: olpd/people/students/cide/chati005.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/allen595/:
+  template: olpd/people/students/cide/allen595.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/bitte024/:
+  template: olpd/people/students/cide/bitte024.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/braun754/:
+  template: olpd/people/students/cide/braun754.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/elias279/:
+  template: olpd/people/students/cide/elias279.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/keels004/:
+  template: olpd/people/students/cide/keels004.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/seith004/:
+  template: olpd/people/students/cide/seith004.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/sirle004/:
+  template: olpd/people/students/cide/sirle004.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/smit8814/:
+  template: olpd/people/students/cide/smit8814.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/voll0144/:
+  template: olpd/people/students/cide/voll0144.html
   publish: true
   template_data:
     - section: people
