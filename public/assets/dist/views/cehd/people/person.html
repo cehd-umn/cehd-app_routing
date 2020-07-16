@@ -4,10 +4,24 @@
             <span class="divider one-half"></span>
             <div class="half right">
                 <h1 class="heading-profile h2">{{ data.person.nameFirstLast }}
-                    {% if data.person.personalPronouns|is_string %}
-                    <small class="clear h4">Pronouns: {{ data.person.personalPronouns }}</small>
+				
+				{%if ( data.person.personalPronouns|is_string ) and ( data.person.personalPronouns !== 'prefer not to specify' ) %}
+                    {% if data.person.personalPronouns === 'he/ him/ his' %}
+						<small class="clear h4">Pronouns: he, him, his</small>
+					{% elseif data.person.personalPronouns === 'she/ her/ hers' %}
+<small class="clear h4">Pronouns: she, her, hers</small>
+					{% elseif data.person.personalPronouns === 'they/ them/ theirs' %}
+						<small class="clear h4">Pronouns: they, them, theirs</small
+					{% elseif data.person.personalPronouns === 'ze/ zir/ zirs' %}
+						<small class="clear h4">Pronouns: ze, zir, zirs</small>
+                    {% elseif data.person.personalPronouns === 'none (name only)' %}
+						<small class="clear h4">Pronouns: please use my name</small>
+                    {% else %}
+						<small class="clear h4">Pronouns: {{ data.person.personalPronouns }}</small>					
                     {% endif %}
-                    <small class="clear h4">
+                {% endif %}
+                
+				<small class="clear h4">
                     {% if data.person.workingTitle|is_string %}
                         {{ data.person.workingTitle|safe }}
                     {% endif %}

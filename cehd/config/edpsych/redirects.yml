@@ -106,8 +106,9 @@
 /edpsych/programs/courses/asl.html: /edpsych/program/courses/asl/
 /edpsych/programs/courses/psyf.html: /edpsych/program/courses/psyf/
 /edpsych/programs/courses/qme.html: /edpsych/program/courses/qme/
-/edpsych/programs/cspp/: /edpsych/program/counselor-education/
-/edpsych/programs/cspp/default.html: /edpsych/program/counselor-education/
+/edpsych/program/cspp/: /edpsych/programs/counselor-education/
+/edpsych/programs/cspp/: /edpsych/programs/counselor-education/
+/edpsych/programs/cspp/default.html: /edpsych/programs/counselor-education/
 /edpsych/programs/cspp/handbooks/default.html: /edpsych/programs/counselor-education/handbooks/
 /edpsych/programs/default.html: /edpsych/programs/
 /edpsych/programs/foundations/5135.html: /edpsych/programs/foundations/5135/

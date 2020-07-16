@@ -1,0 +1,85 @@
+{% extends "edpsych/layout/section.html" %}
+{% set page_title = "Counselor education: student resources" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h2 class="h1 text-center">Counselor education: student resources</h2>
+        <section class="twothirds feature">
+
+            <h2>Advising philosophy</h2>
+            <p>Upon acceptance into the counselor education program, each incoming student is assigned a faculty advisor. Advisor assignments are made based on students’ identified academic and career interests. We encourage students to meet with their advisor to discuss academic planning and progress, practicum opportunities, professional development goals, and academic adjustment. Advisors also serve as a primary point of contact with the broader program and department, and can connect students with necessary resources for assistantships, research opportunities, and professional resources. The advisor, the DGS, and the DGS Administrative Assistant monitor student progress toward degree completion.</p>
+            <p><a href="{{ config.asset_base }}/dist/documents/current/counselor-education/CSPP_Advising_Philosophy_2019_12-16.pdf">Review the counselor education advising philosophy</a></p>
+        <h2>Handbooks</h2>
+        <ul>
+          <li><a href="{{ config.base_url }}/current/counselor-education/handbooks/">CSPP Handbook</a></li>
+          <li><a href="{{ config.base_url }}/current/handbook/">Educational Psychology Graduate Student Handbook</a></li>
+        </ul>
+        <h2>Funding</h2>
+        <h3>Scholarship applications</h3>
+        <ul>
+            <li><a href="{{ config.base_url }}/programs/counselor-education/hansen/">The Sunny Hansen BORN FREE Scholarship Fund</a></li>
+            <li><a href="https://makingagift.umn.edu/give/fund.html?fundCode=EDPSYCH912">Counseling and Student Personnel Psychology Fund</a></li>
+            <li><a href="https://makingagift.umn.edu/give/fund.html?id=23476">Kay Herting Wahl Fund</a></li>
+            <li><a href="http://www.cehd.umn.edu/graduate/tuition.html">College of Education and Human Development’s Tuition, Aid and Scholarships</a></li>
+        <h3>Travel funding</h3>
+            <li><a href="{{ config.base_url }}/current/travel-funding/">Department student travel funding</a></li>
+        </ul>
+        <h2>Forms</h2>
+        <h3>CSPP</h3>
+        <ul>
+          <li><a href="{{ config.asset_base }}/dist/documents/current/counseling-education/CSPPPetition.pdf">Petition</a> [.pdf]</li>
+          <li><a href="{{ config.asset_base }}/dist/documents/current/counseling-education/CSPPPetition.doc">Petition</a> [.doc]</li>
+          <li><a href="{{ config.asset_base }}/dist/documents/current/counseling-education/Clinical_experience_agreement_form.pdf">CSPP Sanctioned Clinical Experience Agreement Form</a></li>
+        </ul>
+        <h3>Department of Educational Psychology</h3>
+        <ul>
+          <li><a href="{{ config.base_url }}/forms/">Degree forms</a></li>
+        </ul>
+        <h3>Graduate School</h3>
+            <p><a href="https://grad.umn.edu/change-add">Graduate School Change or Add a Degree Objective page</a></p>
+        <h3>University of Minneota</h3>
+        <ul>
+            <li><a href="https://sos.dl.umn.edu/">Student Conflict Resolution Center</a></li>
+            <li><a href="https://onestop.umn.edu/terms-and-conditions/student-complaints-and-grievances">Student complaints and grievances</a></li>
+            </ul>
+    </section>
+  </div>
+  <div class="row emphasis margin-top-1">
+      <div class="container">
+        <div class="twothirds feature margin-1">
+          <h2 class="text-center">Student profile</h2>
+              <p class="pull-quote">&ldquo;I was ready to be back in school and learning, after taking 4 years off in between my undergrad and master’s. I came in with the expectation to be a sponge and take in everything. It’s been so exciting and exhilarating to learn more about the field of psychology and counseling.&rdquo;</p>
+            </div>
+      <div class="twothirds feature margin-2">
+              <div class="third">
+                <img src="{{ config.asset_base }}/dist/images/student-stories/hannah-boldt-web.jpg" class="mobile-hide" alt="Andrea Boh headshot">
+              </div>
+        <div class="twothird">
+                  <h3 class="no-margin-top">Hannah Boldt<small class="clear h4"> MA student | <a href="mailto:bold0099@umn.edu">bold0099@umn.edu</a></small></h3>
+                  <p><a href="http://news.cehd.umn.edu/qa-with-hannah-boldt-cspp-student/">Read more about Hannah's experience.</a></p>
+                  <p><a href="{{ config.base_url }}/current/student-stories/#CSPP_student_profiles">See more student profiles.</a></p>
+              </div>
+        </div>
+      </div>
+  </div>
+<section>
+      <div class="row emphasis cool margin-top-2">
+          <div class="container">
+              <div class="feature">
+                    <h2 class="text-center">Like us on Facebook</h2>
+                  <p class="text-center">Like or follow the <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" {{ analytics.add_tracking( "send", "event", "Facebook", "click", "spedphdmainfacebook") }}>Department of Educational Psychology Facebook page</a> for updates on research, events, and other happenings.</p>
+                  <div class="row twothird feature text-center margin-top-1">
+                      <div class="text-center">
+                          <div class="svg-social-media-icon size-40">
+                              <a href="https://www.facebook.com/UMNDepartmentofEducationalPsychology/" alt="Facebook icon" title="Facebook: Connect with students, faculty, staff, and alumni." {{ analytics.add_tracking( "send", "event", "facebook", "click", "news-facebook") }}>{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}
