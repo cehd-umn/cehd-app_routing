@@ -187,7 +187,24 @@ border-right: none;
         border-right: none !important;:
     }
 
+    @media (min-width: 769px) {
+        nav.inline .dropdown-toggle::after {
+            border-left: .3em solid transparent;
+            border-right: .3em solid transparent;
+            border-top: .3em solid;
+            content: "";
+            display: inline-block;
+            height: 0;
+            margin-left: .3em !important;
+            vertical-align: middle;
+            width: 0;
+            position: inherit !important;
+            top: 0 !important;
+        }
+    }
+
     /* End of new even spaced navigation  */
+
 
 
 </style>

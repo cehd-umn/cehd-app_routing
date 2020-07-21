@@ -75,7 +75,7 @@ min-height: 340px !important;
         margin: 0;
     }
 
-    nav.inline .dropdown-toggle::after {
+    .dropdown-toggle::after {
         margin-left: 0px;
     }
 
@@ -151,6 +151,22 @@ min-height: 340px !important;
 
 nav ul.nav li li {
 border-right: none !important;:
+}
+
+@media (min-width: 769px) {
+    nav.inline .dropdown-toggle::after {
+        border-left: .3em solid transparent;
+        border-right: .3em solid transparent;
+        border-top: .3em solid;
+        content: "";
+        display: inline-block;
+        height: 0;
+        margin-left: .3em;
+        vertical-align: middle;
+        width: 0;
+        position: inherit;
+        top: 0;
+    }
 }
 
 /* End of new even spaced navigation  */
