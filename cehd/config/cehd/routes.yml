@@ -1839,6 +1839,11 @@
   template: cehd/research/consulting.html
   template_data:
     - section: research
+/research/distance-learning/:
+  publish: true
+  template: cehd/research/distance-learning.html
+  template_data:
+    - section: research
 /research/funding/:
   publish: true
   template: cehd/research/funding.html
