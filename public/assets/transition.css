@@ -1,3 +1,18 @@
+#top-level-home {
+    border-left: none;
+    border-right: 1px solid #000;
+    padding-right: 1em !important;
+}
+
+#main-nav-home-link {
+    height: auto;
+    margin: none;
+    opacity: 1;
+    border-top: 5px solid transparent;
+    display: block;
+    text-align: center;
+}
+
 @media (min-width: 768px) {
     .outer-bg-right {
         background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
