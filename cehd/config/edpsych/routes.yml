@@ -782,6 +782,12 @@
     template_data:
         meta_description: "Robert Tennyson's lab focuses on the use of iPads in elementary schools, technology features for math and reading, achievement gains with technology tools (standardized tests), and educational gaming and simulations to improve problem solving and decision making."
         section: research
+/edpsych/research/labs/vanboekel/:
+    publish: false
+    template: edpsych/research/labs/vanboekel.html
+    template_data:
+        meta_description: "Martin Van Boekel's lab focuses on the conditions that support or interfere with learning. A statement that is intentionally vague and wide open because I have many research interests.."
+        section: research
 /edpsych/research/labs/vukovic/:
     publish: true
     template: edpsych/research/labs/vukovic.html

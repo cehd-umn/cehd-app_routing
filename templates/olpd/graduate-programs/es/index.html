@@ -8,38 +8,53 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>Evaluation Studies track</h1>
-        <div class="twothird feature">
-            <p>Study and apply evaluation methods, theory, and practice to inform the decision-making process for all kinds of organizations in a variety of fields. We help institutions all over the world achieve their missions by assessing their impact, improving their performance, designing innovative programs, and informing the creation of new policies and procedures. We value inclusive, culturally-responsive, and diverse evaluation perspectives. We share our most advanced practices and theories in order to support more effective and innovative organizations. And, we tell stories, glean data-informed insights, illuminate potential solutions, and creatively overcome roadblocks for the common good.</p>
-            <p>The field of evaluation is growing steadily in influence and demand. Businesses, government agencies, and public programs looking to be more adaptive, efficient, and effective have turned to trained evaluators to analyze and assess their efforts. For example, the American Evaluation Association more than doubled their membership in the last 15 years, and there is an ever-increasing number of international professional associations devoted to the science of evaluation.</p>
+        <h1>Evaluation Studies</h1>
         </div>
-    </div>
-    <div class="row emphasis">
-        <div class="container">
-            <div class="twothird feature">
-                <h2 class="text-center">Degrees and programs</h2>
-                <div class="row">
-                    <div class="half">
-                        <ul class="no-bullet">
-                            <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/phd/">Ph.D.</a></li>
-                            <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/ma/">M.A.</a></li>
-                        </ul>
-                    </div>
-                    <div class="half">
-                        <ul class="no-bullet">
-                            <li><a href="{{ config.asset_base }}/graduate-programs/certificate/program-evaluation/">Program Evaluation Certificate</a></li>
-                            <li><a href="{{ config.asset_base }}/graduate-programs/minor/program-evaluation/">Program Evaluation Minor</a></li>
-                        </ul>
-                        </ul>
-                    </div>
+        </div>
+
+        <div class="row emphasis">
+            <div class="container">
+              <div class="row">
+                <div class="twothirds">
+                  <h3 class=margin-top-0>Programs</h3>
+                    <ul class="no-bullet indent">
+                      <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/phd"><strong>Ph.D.</strong></a></li>
+                      <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/ma"><strong>M.A.</strong></a></li>
+                      <li><a href="{{ config.asset_base }}/graduate-programs/certificate/program-evaluation"><strong>Program Evaluation Certificate</strong></a></li>
+                      <li><a href="{{ config.asset_base }}/graduate-programs/minor/program-evaluation"><strong>Program Evaluation Graduate Minor</strong></a></li>
+                    </ul>
+                  </div>
+                  <div class="third margin-top-0">
+                    <h3 class=margin-top-0>People</h3>
+                      <ul class="no-bullet indent">
+                        <li><strong><a href="#faculty">Program Faculty</a></strong></li>
+                      </ul>
+                  </div>
                 </div>
             </div>
         </div>
+
+        <div class="twothird feature">
+
+        </div>
     </div>
+
+    <div class="container">
+        <div class="half">
+          <h2>About Evaluation Studies at Minnesota</h2>
+          <p>Study and apply evaluation methods, theory, and practice to inform the decision-making process for all kinds of organizations in a variety of fields. We help institutions all over the world achieve their missions by assessing their impact, improving their performance, designing innovative programs, and informing the creation of new policies and procedures. We value inclusive, culturally-responsive, and diverse evaluation perspectives. We share our most advanced practices and theories in order to support more effective and innovative organizations. And, we tell stories, glean data-informed insights, illuminate potential solutions, and creatively overcome roadblocks for the common good.</p>
+          <p>The field of evaluation is growing steadily in influence and demand. Businesses, government agencies, and public programs looking to be more adaptive, efficient, and effective have turned to trained evaluators to analyze and assess their efforts. For example, the American Evaluation Association more than doubled their membership in the last 15 years, and there is an ever-increasing number of international professional associations devoted to the science of evaluation.</p>
+        </div>
+        <div class="half">
+          <h2>Begin Your Journey</h2>
+          <iframe src="https://www.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=303" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="916" width="100%"></iframe>
+          <script src="https://www.cognitoforms.com/scripts/embed.js"></script>
+          <p>We will not share your contact information outside our department.</p>
+        </div>
+      </div>
     <div class="container">
         <div class="span-12 feature margin-top-2">
-          
-            <h2 class="text-center">Faculty</h2>
+            <h2 class="text-left"><a id="faculty"></a>Program Faculty</a></h2>
             <div id="people-container" class="loader-container"
                 data-people-app data-tag="462"
                 data-target-element-selector="#people-container"
@@ -53,6 +68,7 @@
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script src="/assets/dist/js/people.min.js"></script>

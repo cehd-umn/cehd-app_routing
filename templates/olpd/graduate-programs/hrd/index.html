@@ -8,9 +8,43 @@
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>Human Resource Development track</h1>
+        <h1>Human Resource Development</h1>
+    </div>
+</div>
+<div class="row emphasis">
+    <div class="container">
+      <div class="row">
+        <div class="third margin-top-0">
+          <h3 class=margin-top-0>Degree Programs</h3>
+            <ul class="no-bullet indent">
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/phd"><strong>Ph.D.</strong></a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/ma"><strong>M.A.</strong></a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med"><strong>M.Ed.</strong></a></li>
+              <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med"><strong>M.Ed. in Adult Education</strong></a></li>
+            </ul>
+            </div>
+            <div class="third margin-top-0">
+              <h3 class=margin-top-0>Certificate Programs</h3>
+                <ul class="no-bullet indent">
+                  <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-education"><strong>Adult Education</strong></a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-literacy/"><strong>Adult Literacy</strong></a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/certificate/human-resource-development"><strong>Human Resource Development</strong></a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med"><strong>M.Ed. in Adult Education</strong></a></li>
+                </ul>
+            </div>
+            <div class="third margin-top-0">
+              <h3 class=margin-top-0>People</h3>
+              <ul class="no-bullet indent">
+                <li><strong><a href="#faculty">Program Faculty</a></strong></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <div class="twothird feature">
+<div class="container">
+  <div class="half">
+  <h2>About HRD at Minnesota</h2>
         <p>Human Resource Development (HRD) is an interdisciplinary field that combines insights from psychology, sociology, economics, organizational development, and education. We explore the human element of how organizations run. We research the dynamics between employees in an organizational context, and how knowledge is created and shared both formally and informally.</p>
         <p>HRD practitioners are prepared to design training and development programs, identify system and business process needs, forecast necessary staffing changes, and improve employee engagement and performance. As a community of scholars, we seek to answer questions like:</p>
             <ul class="bullet">
@@ -20,37 +54,20 @@
                 <li>How do our everyday practices intersect with our political and socio-economic contexts?</li>
             </ul>
     </div>
-    </div>
-<div class="row emphasis margin-top-2">
-    <div class="container">
-        <div class="twothird feature">
-            <h2 class="text-center">Degrees and programs</h2>
-      <div class="row">
-              <div class="half">
-          <ul class="no-bullet">
-              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/phd/">Ph.D.</a></li>
-              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/ma/">M.A.</a></li>
-              <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med/">M.Ed. in Adult Education</a></li>
-              <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med/">M.Ed. in Human Resource Development</a></li>
-          </ul>
-      </div>
-
-      <div class="half">
-          <ul class="no-bullet">
-              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-education/">Adult Education Certificate</a></li>
-              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-literacy/">Adult Literacy Certificate</a></li>
-              <li><a href="{{ config.asset_base }}/graduate-programs/certificate/human-resource-development/">Human Resource Development Certificate</a></li>
-          </ul>
-      </div>
-  </div>
-
-    </div>
+  <div class="half">
+    <h2>Begin Your Journey</h2>
+    <iframe src="https://www.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=305" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="888" width="100%"></iframe>
+    <script src="https://www.cognitoforms.com/scripts/embed.js"></script>
+    <p>We will not share your contact information outside our department.</p>
     </div>
 </div>
-    <div class="container">
-            <div class="span-12 feature margin-top-2">
-            <h2 class="text-center">Faculty</h2>
-            <div id="people-container" class="loader-container"
+<div class="row">
+  <div class="container">
+    <div class="span-12 feature margin-top-2">
+
+            <h2 class="text-left"><a id="faculty"></a>Program Faculty</a></h2>
+            Our award-winning faculty are leaders in their fields.
+          <div id="people-container" class="loader-container"
                 data-people-app
                 data-tag="464"
                 data-target-element-selector="#people-container"
@@ -63,7 +80,7 @@
                     <p class="loader-label">Loading...</p>
                 </div>
             </div>
-
+</div>
 </div><!-- close row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}

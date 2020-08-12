@@ -1839,6 +1839,11 @@
   template: cehd/research/consulting.html
   template_data:
     - section: research
+/research/covid19/:
+  publish: true
+  template: cehd/research/covid19.html
+  template_data:
+    - section: research
 /research/distance-learning/:
   publish: true
   template: cehd/research/distance-learning.html
@@ -3099,6 +3104,106 @@
   template: cehd/trio/mcnair/2019/yang.html
   template_data:
     - section: trio
+/trio/mcnair/2020/armstrong/:
+  publish: true
+  template: cehd/trio/mcnair/2020/armstrong.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/flowers/:
+  publish: true
+  template: cehd/trio/mcnair/2020/flowers.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/galvanochoa/:
+  publish: true
+  template: cehd/trio/mcnair/2020/galvanochoa.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/guan/:
+  publish: true
+  template: cehd/trio/mcnair/2020/guan.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/hendrix/:
+  publish: true
+  template: cehd/trio/mcnair/2020/hendrix.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/lee/:
+  publish: true
+  template: cehd/trio/mcnair/2020/lee.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/otremba/:
+  publish: true
+  template: cehd/trio/mcnair/2020/otremba.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/partida/:
+  publish: true
+  template: cehd/trio/mcnair/2020/partida.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/pulidonava/:
+  publish: true
+  template: cehd/trio/mcnair/2020/pulidonava.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/riverakloeppel/:
+  publish: true
+  template: cehd/trio/mcnair/2020/riverakloeppel.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/rogers/:
+  publish: true
+  template: cehd/trio/mcnair/2020/rogers.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/smiley/:
+  publish: true
+  template: cehd/trio/mcnair/2020/smiley.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/thompsoneja/:
+  publish: true
+  template: cehd/trio/mcnair/2020/thompsoneja.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/vang/:
+  publish: true
+  template: cehd/trio/mcnair/2020/vang.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/westenberg/:
+  publish: true
+  template: cehd/trio/mcnair/2020/westenberg.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/xiong/:
+  publish: true
+  template: cehd/trio/mcnair/2020/xiong.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/yangh/:
+  publish: true
+  template: cehd/trio/mcnair/2020/yangh.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/yimam/:
+  publish: true
+  template: cehd/trio/mcnair/2020/yimam.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/zamarripa/:
+  publish: true
+  template: cehd/trio/mcnair/2020/zamarripa.html
+  template_data:
+    - section: trio
+/trio/mcnair/2020/zewdie/:
+  publish: true
+  template: cehd/trio/mcnair/2020/zewdie.html
+  template_data:
+    - section: trio
 /trio/mcnair/:
   publish: true
   template: cehd/trio/mcnair/index.html
@@ -3117,6 +3222,11 @@
 /trio/mcnair/apply/:
   publish: true
   template: cehd/trio/mcnair/apply.html
+  template_data:
+    - section: trio
+/trio/mcnair/ghere-scholarship/:
+  publish: true
+  template: cehd/trio/mcnair/ghere-scholarship.html
   template_data:
     - section: trio
 /trio/mcnair/mentors/:
@@ -3217,6 +3327,11 @@
 /trio/upward-bound/choerap/:
   publish: true
   template: cehd/trio/upward-bound/choerap.html
+  template_data:
+    - section: trio
+/trio/upward-bound/fall2020/:
+  publish: false
+  template: cehd/trio/upward-bound/fall2020.html
   template_data:
     - section: trio
 /trio/upward-bound/hollenback/:
