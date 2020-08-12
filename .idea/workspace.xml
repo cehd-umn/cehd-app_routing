@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/olpd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patterns/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patterns/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/layout/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +155,7 @@
       <workItem from="1587755329187" duration="2971000" />
       <workItem from="1594758964379" duration="3019000" />
       <workItem from="1595355535189" duration="2323000" />
+      <workItem from="1597242419239" duration="1458000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    .outer-bg-right {
+        background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
+    }
+}
+
+@media (min-width: 960px) {
+    .outer-bg-right.right-third {
+        background: linear-gradient(90deg, #fff 64%, #ffec99 64%);
+    }
+}
+
+@media (min-width: 1200px) {
+    .outer-bg-right.right-third {
+        background: linear-gradient(90deg, #fff 65%, #ffec99 64%);
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .outer-bg-right.right-third {
+        background: linear-gradient(90deg, #fff 64%, #ffec99 64%);
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .outer-bg-right.right-third {
+        background: linear-gradient(90deg, #fff 63%, #ffec99 63%);
+    }
+}
+
+@media (min-width: 960px) {
+    .outer-bg-right.right-third {
+        background: linear-gradient(90deg, #fff 64%, #ffec99 64%);
+    }
+}
+
