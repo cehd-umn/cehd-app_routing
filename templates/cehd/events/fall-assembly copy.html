@@ -1,0 +1,22 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "Fall Assembly" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+  <div class="container">
+    <!-- Called 2020 Fall Assembly in Cognito - JFA  -->
+    <!-- Intro copy and form hosted in Cognito -->
+    <div class="span-4">
+        <img class="circular" src="/assets/images/events/sq-fall-leaves.jpg" alt="Autumn leaves.">
+    </div>
+    <div class="row span-6 ">
+      <iframe src="https://www.cognitoforms.com/f/W-exKdUYPUu0h7yuDFt3rg?id=253" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="1250" width="100%"></iframe>
+      <script src="https://www.cognitoforms.com/scripts/embed.js"></script>
+      <script>
+        Cognito.setCss('http://www.cehd.umn.edu/assets/dist/css/minified/forms.css');
+      </script>
+    </div>
+
+  </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

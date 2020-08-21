@@ -602,7 +602,7 @@
     - section: people
 /people/students/:
   template: olpd/people/students/index.html
-  publish: false
+  publish: true
   template_data:
     - section: people
 /people/students/cide/:
@@ -700,8 +700,18 @@
   publish: true
   template_data:
     - section: people
+/people/students/epl/karl0173/:
+  template: olpd/people/students/epl/karl0173.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/epl/stant171/:
   template: olpd/people/students/epl/stant171.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/epl/yousu014/:
+  template: olpd/people/students/epl/yousu014.html
   publish: true
   template_data:
     - section: people
@@ -709,62 +719,92 @@
   template: olpd/people/students/es/index.html
   publish: true
   template_data:
+    - section: people
+/people/students/es/mcada049/:
+  template: olpd/people/students/es/mcada049.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/he/:
   template: olpd/people/students/he/index.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/lboey/:
   template: olpd/people/students/he/lboey.html
   publish: true
   template_data:
+    - section: people
+/people/students/he/lhaas/:
+  template: olpd/people/students/he/lhaas.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/he/smit8896/:
   template: olpd/people/students/he/smit8896.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/fulto076/:
   template: olpd/people/students/he/fulto076.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/bufor011/:
   template: olpd/people/students/he/bufor011.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/cklee/:
   template: olpd/people/students/he/cklee.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/bartl220/:
   template: olpd/people/students/he/bartl220.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/sitt0036/:
   template: olpd/people/students/he/sitt0036.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/grewe/:
   template: olpd/people/students/he/grewe.html
   publish: true
   template_data:
+    - section: people
 /people/students/he/mskjerve/:
   template: olpd/people/students/he/mskjerve.html
+  publish: false
+  template_data:
+    - section: people
+/people/students/he/schn1174/:
+  template: olpd/people/students/he/schn1174.html
   publish: true
   template_data:
+    - section: people
 /people/students/hrd/:
   template: olpd/people/students/hrd/index.html
   publish: true
   template_data:
+    - section: people
 /people/students/hrd/leex9207/:
   template: olpd/people/students/hrd/leex9207.html
   publish: true
   template_data:
+    - section: people
 /people/students/hrd/fang0297/:
   template: olpd/people/students/hrd/fang0297.html
   publish: true
   template_data:
+    - section: people
 /people/students/hrd/wohk0001/:
   template: olpd/people/students/hrd/wohk0001.html
   publish: true
   template_data:
+    - section: people
 /undergraduate-programs/:
   template: olpd/undergraduate-programs/index.html
   publish: true
