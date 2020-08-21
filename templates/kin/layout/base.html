@@ -2,8 +2,9 @@
 {%- import "macros/ga-tracking.html" as analytics -%}{# <-- the GA tracking macro #}
 {% block css %}
 <link href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-<link href="/assets/dist/css/minified/ssw.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+<!--<link href="/assets/dist/css/minified/ssw.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">-->
 <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+<link href="/assets/kin.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
 {% endblock %}
@@ -29,6 +30,8 @@
 .dept-footer-section.first {
 min-height: 430px !important;
 }
+
+
 }
 @media (min-width: 1200px) {
 .dept-footer-section.first {
@@ -76,6 +79,10 @@ min-height: 340px !important;
             margin: 0;
         }
 
+        nav ul.nav li {
+            border-bottom: 0px solid #ccc !important;
+        }
+
         nav.inline .dropdown-toggle::after {
             margin-left: 3px;
         }
@@ -117,6 +124,7 @@ min-height: 340px !important;
     }
     #home-top-nav-item {
     border-right: 0px solid;
+        border-left: none;
     }
 
     @media (min-width: 769px) {
@@ -139,9 +147,12 @@ text-transform: uppercase;
     width: auto;
     text-align: justify;
 }
-#top-level-academics {
-    padding-left: 0px !important;
-}
+    #top-level-academics {
+        padding-left: 0px !important;
+    }
+    #top-level-home {
+        border-right: none !important;
+    }
 #top-level-diversity-inclusion {
     width: 275px !important;
     padding-left: 0px !important;
@@ -159,12 +170,19 @@ text-transform: uppercase;
 .dropdown-toggle::after {
     margin-left: 0em;
 }
+
+
 }
 
 
 .sub-nav-item-link {
     text-transform: capitalize;
 }
+
+    ul.nav {
+        display: flex;
+        justify-content: center;
+    }
 
 </style>
 {% endblock %}
@@ -182,42 +200,39 @@ text-transform: uppercase;
     </div><!-- // row -->
 {% endblock %}
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
-<div id="dept-footer">
+<div id="kin-footer">
     <div class="row">
         <div class="container">
-            <div class="span-8">
-                <div class="dept-footer-section first">
-                    <div class="dept-footer-container contact">
-                        <h2 class="dept-footer-heading h4">Contact Us</h2>
-                    </div>
-                    <p><a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-KIN.svg" alt="School of Kinesiology wordmark"></a></p>
-                    <address>
-                        Cooke Hall<br />
-                        1900 University Avenue SE<br />
-                        Minneapolis, MN 55455<br />
-                    T: 612-625-5300  F: 612-626-7700<br />
-                    <a href="mailto:kin@umn.edu">Email our web team</a>
-                    </address>
-                </div>
-            </div>
-            <div class="span-4">
-                <div class="dept-footer-section last">
-                    <div class="dept-footer-container campus">
-                        <h2 class="dept-footer-heading h4">Visit Campus</h2>
-                    </div>
-                    <div class="dept-footer-campus-container">
-                        <p><a href="http://umn.edu/"><img class="university-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-uofm-black-and-white.svg" alt="University of Minnesota wordmark."></a></p>
-                        <ul id="footerlinks" class="no-bullet">
-                            <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
-                            <li><a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a></li>
-                            <li><a href="https://admissions.tc.umn.edu/visit/">Schedule a tour</a></li>
-                            <li><small><a href="https://system.umn.edu/">Learn more about the University system</a> and how it is making an impact on our state and our world. </small>
-                              </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="third feature">
+                <h1 class="footer-sitename">School of Kinesiology</h1>
             </div>
         </div>
+        <div class="container">
+            <div class="third">
+                <p><strong>Contact</strong></p>
+                <p>Cooke Hall (Main Office: Cooke Hall 111)<br>1900 University Ave SE<br>Minneapolis, MN 55455</p>
+                <p>Phone: 612-625-5300 | Fax: 612-626-7700</p>
+                <p>Email: <a href="mailto:kin@umn.edu">kin@umn.edu</a></p>
+            </div>
+            <div class="third">
+                <p><strong>Make a Gift</strong></p>
+                <p>Help support the School of Kinesiology</p>
+                <p><a>Give</a></p>
+            </div>
+            <div class="third">
+                <p><strong>University of Minnesota</strong></p>
+                <p><a>Parking & Transportation</a><br><a>Maps & Directions</a><br><a>Schedule a tour</a></p>
+                <p><a>Learn more about the University system</a> and how it is making an impact on our state and world.</p>
+            </div><!-- the third .third is the last child inside the container div -->
+        </div>
     </div>
+</div>
+{% endblock %}
+{% block umnfoot %}
+<div id="kin-umnfoot">
+    <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
+        The University of Minnesota is an equal opportunity educator and employer.
+        <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
+    </p>
 </div>
 {% endblock %}

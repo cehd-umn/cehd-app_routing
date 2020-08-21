@@ -2,6 +2,15 @@
     <button class="nav-toggle">Menu</button>
     <nav class="container">
         <ul class="nav">
+<!--            <li class="top-nav-item top-home-item to-upper top-level" id="home-top-nav-item">-->
+<!--                <a id="home-top-nav-link" class="top-level-nav-link home-link" href="/dev-kin/">-->
+<!--&lt;!&ndash;                    <img src="/assets/images/icons/Home.svg" alt="School of Social Work" />&ndash;&gt;-->
+<!--                Home-->
+<!--                </a>-->
+<!--                <a href="/dev-kin{{ top_level_item.href }}" class="top-level-link home-name">-->
+<!--                    Home-->
+<!--                </a>-->
+<!--            </li>-->
             {%- for top_level_item in nav_items -%}
             {%- set is_academics = top_level_item.name == "Academics" -%}
             {%- set is_about = top_level_item.name == "About Us" -%}
@@ -69,11 +78,7 @@
                 {%- endif -%}{# end if top_level_item.subsections #}
             </li><!-- // top-level nav item -->
             {%- endfor -%}{# end for top_level_item in nav_items #}
-            <li class="top-nav-item top-home-item to-upper top-level" id="home-top-nav-item"><a id="home-top-nav-link" class="top-level-nav-link home-link" href="/dev-kin/"><img src="/assets/images/icons/Home.svg" alt="School of Social Work" /></a>
-            <a href="/dev-kin{{ top_level_item.href }}" class="top-level-link home-name">
-                   Home
-                </a>
-                </li>
+
         </ul><!-- /ul.nav -->
     </nav>
 </div><!-- meganav-container -->

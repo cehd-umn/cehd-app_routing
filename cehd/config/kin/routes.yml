@@ -45,8 +45,8 @@
   publish: true
   template_data:
     - section: home
-/academics:
-  template: kin/academics/index.html
+/about/:
+  template: kin/about/index.html
   publish: true
   template_data:
-    - section:
+    - section: about

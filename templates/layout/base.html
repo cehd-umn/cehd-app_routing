@@ -112,12 +112,14 @@
   {% block main_aside %}{% endblock %}
   <footer class="margin-top-2">
     {% block dept_footer %}{% endblock %}
+    {% block umnfoot %}
     <div id="umnfoot">
       <p>&copy; {{ config.copyright_year }} Regents of the University of Minnesota. All rights reserved.
         The University of Minnesota is an equal opportunity educator and employer.
         <br><a href="http://www.cehd.umn.edu/privacy/">Privacy Policy</a>
       </p>
     </div>
+    {% endblock %}
   </footer>
   {% block bottom_js %}{% endblock %}
   {# Don't load Google analytics in dev environments #}

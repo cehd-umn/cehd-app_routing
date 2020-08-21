@@ -1,21 +1,25 @@
 ---
+- name: Home
+  href: "/"
+  section: home
+  subsections: null
+- name: About
+  href: "/about/"
+  section: about
+  subsections: null
 - name: Academics
   href: "/academics/"
   section: academics
-  subsections: null
-- name: Research
-  href: "/research/"
-  section: null
   subsections: null
 - name: People
   href: "/people/"
   section: null
   subsections: null
+- name: Research
+  href: "/research/"
+  section: null
+  subsections: null
 - name: Giving
   href: "/giving/"
   section: null
-  subsections: null
-- name: About
-  href: "/about/"
-  section: about
   subsections: null

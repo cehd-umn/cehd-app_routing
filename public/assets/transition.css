@@ -13,9 +13,69 @@
     text-align: center;
 }
 
+#umnh-onestop, #umnh-myu {
+    margin: 10px 5px 4px 4px !important;
+}
+
+#umnhf-h-search {
+    top: -40px;
+    height: auto;
+    margin-left: 75%;
+    border: none;
+}
+
+.gsc-search-box-tools .gsc-search-box td.gsc-input {
+    padding: 0 !important;
+    font-size: 16px !important;
+    background: transparent !important;
+}
+
+input.gsc-input {
+    padding: 0 .3em !important;
+}
+
+header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
+    padding: 6px 12px !important;
+}
+
+
+
+.gsc-search-button {
+    background: #7a0019;
+}
+
+.btn.bg-maroon {
+    color: #fff !important;
+    background-color: #7a0019;
+}
+.btn-arrow:after, .btn-arrow:link:after {
+    font-family: FontAwesome;
+    font-size: .8em;
+    padding-left: 10px;
+    content: "\f054";
+}
+
+
+
+
+
+
+
 @media (min-width: 768px) {
     .outer-bg-right {
         background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
+    }
+    #top-level-academics {
+        padding: 8px 15px 8px 15px !important;
+        border-left: 1px solid #000 !important;
+    }
+    .top-level.first {
+        border-left: inherit !important;
+    }
+    .top-level:hover .top-level-link {
+        border-top: none !important;
+        color: #900021 !important;
+        text-decoration: none;
     }
 }
 

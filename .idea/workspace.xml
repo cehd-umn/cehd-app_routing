@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/kin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/kin/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/kin/about/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/config/kin/nav.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/nav.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/config/kin/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/routes.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/edpsych_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/edpsych_base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,20 +73,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="umZDeptIdDescription&#9;null&#9;null&#10;categoryDecade&#9;null&#9;null&#10;vue&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/templates/cehd/undergraduate/vue.html&#10;redirect&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/cehd/config/edpsych/redirects_camelcase.yml&#10;dev-ssw/&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;searchPageHandler&#9;null&#9;null&#10;home-top&#9;null&#9;null&#10;dev-ssw//&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;OLPDRoutes&#9;null&#9;null&#10;_searchApplianceSites&#9;null&#9;null&#10;gsa_sites&#9;null&#9;null&#10;personExtraData&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/dev-kin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/kin" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/kin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/kin" />
       <recent name="$PROJECT_DIR$/public/dev-kin" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/cehd/config/kin" />
-      <recent name="$PROJECT_DIR$/public/assets/src/js" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -151,7 +163,8 @@
       <workItem from="1587755329187" duration="2971000" />
       <workItem from="1594758964379" duration="3019000" />
       <workItem from="1595355535189" duration="2323000" />
-      <workItem from="1597242419239" duration="2351000" />
+      <workItem from="1597242419239" duration="6012000" />
+      <workItem from="1598037008713" duration="6093000" />
     </task>
     <servers />
   </component>
