@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/kin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/kin/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/kin/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/kin/nav.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/nav.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/kin/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/kin/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/edpsych_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/edpsych_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dev-kin/web.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +67,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="umZDeptIdDescription&#9;null&#9;null&#10;categoryDecade&#9;null&#9;null&#10;vue&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/templates/cehd/undergraduate/vue.html&#10;redirect&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/cehd/config/edpsych/redirects_camelcase.yml&#10;dev-ssw/&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;searchPageHandler&#9;null&#9;null&#10;home-top&#9;null&#9;null&#10;dev-ssw//&#9;FILE&#9;file:///Users/mhm/work/cehd-app_routing/public/ssw&#10;OLPDRoutes&#9;null&#9;null&#10;_searchApplianceSites&#9;null&#9;null&#10;gsa_sites&#9;null&#9;null&#10;personExtraData&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/kin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/dev-kin" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -86,8 +75,8 @@
       <recent name="$PROJECT_DIR$/templates/kin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/kin" />
       <recent name="$PROJECT_DIR$/public/dev-kin" />
+      <recent name="$PROJECT_DIR$/templates/kin" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/cehd/config/kin" />
@@ -164,7 +153,7 @@
       <workItem from="1594758964379" duration="3019000" />
       <workItem from="1595355535189" duration="2323000" />
       <workItem from="1597242419239" duration="6012000" />
-      <workItem from="1598037008713" duration="6093000" />
+      <workItem from="1598037008713" duration="6270000" />
     </task>
     <servers />
   </component>
@@ -172,43 +161,13 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1559" y="408" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587762859057">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
+    <state x="3242" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598043636789">
+      <screen x="2560" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1559" y="408" key="#com.intellij.fileTypes.FileTypeChooser/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587762859057" />
+    <state x="3242" y="349" key="#com.intellij.fileTypes.FileTypeChooser/2560.0.1920.1080/0.0.2560.1440@2560.0.1920.1080" timestamp="1598043636788" />
     <state x="3258" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594819463061">
       <screen x="2560" y="23" width="1920" height="1057" />
     </state>
     <state x="3258" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.23.1920.1057/0.23.2560.1417@2560.23.1920.1057" timestamp="1594819463061" />
-    <state width="2518" height="422" key="GridCell.Tab.0.bottom" timestamp="1587756474257">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="422" key="GridCell.Tab.0.bottom/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756474257" />
-    <state width="1638" height="287" key="GridCell.Tab.0.bottom/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587147465334" />
-    <state width="2518" height="422" key="GridCell.Tab.0.center" timestamp="1587756474254">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="422" key="GridCell.Tab.0.center/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756474254" />
-    <state width="1638" height="287" key="GridCell.Tab.0.center/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587147465332" />
-    <state width="2518" height="422" key="GridCell.Tab.0.left" timestamp="1587756474253">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="422" key="GridCell.Tab.0.left/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756474253" />
-    <state width="1638" height="287" key="GridCell.Tab.0.left/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587147465331" />
-    <state width="2518" height="422" key="GridCell.Tab.0.right" timestamp="1587756474256">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="422" key="GridCell.Tab.0.right/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756474256" />
-    <state width="1638" height="287" key="GridCell.Tab.0.right/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587147465333" />
-    <state x="-1739" y="377" key="com.intellij.ide.util.TipDialog" timestamp="1587755329278">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state x="-1739" y="377" key="com.intellij.ide.util.TipDialog/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587755329278" />
-    <state x="616" y="389" key="com.intellij.ide.util.TipDialog/-2560.-99.2560.1417/0.23.1920.1057@0.23.1920.1057" timestamp="1587393191564" />
-    <state x="539" y="379" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587041375499" />
-    <state x="-1727" y="175" width="894" height="921" key="search.everywhere.popup" timestamp="1587756710054">
-      <screen x="-2560" y="-122" width="2560" height="1440" />
-    </state>
-    <state x="-1727" y="175" width="894" height="921" key="search.everywhere.popup/-2560.-122.2560.1440/0.0.1920.1080@-2560.-122.2560.1440" timestamp="1587756710054" />
   </component>
 </project>
