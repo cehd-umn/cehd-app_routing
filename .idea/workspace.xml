@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +156,7 @@
       <workItem from="1597242419239" duration="6012000" />
       <workItem from="1598037008713" duration="6456000" />
       <workItem from="1598242971074" duration="3233000" />
-      <workItem from="1598276751818" duration="345000" />
+      <workItem from="1598276751818" duration="516000" />
     </task>
     <servers />
   </component>
