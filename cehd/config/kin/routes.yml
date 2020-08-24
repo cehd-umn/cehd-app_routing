@@ -50,3 +50,18 @@
   publish: true
   template_data:
     - section: about
+/academics/:
+  template: kin/academics/index.html
+  publish: true
+  template_data:
+    - section: academics
+/academics/phd1/:
+  template: kin/academics/phd1.html
+  publish: true
+  template_data:
+    - section: academics
+/academics/phd2/:
+  template: kin/academics/phd2.html
+  publish: true
+  template_data:
+    - section: academics

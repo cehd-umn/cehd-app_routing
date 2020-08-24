@@ -1631,7 +1631,7 @@
     - section: teaching
 /teaching/co-teaching/foundations/about/:
   publish: true
-  template: cehd/teaching/co-teaching/foundations/about.html
+  template: cehd/teaching/co-teaching/foundations/phd1.html
   template_data:
     - section: teaching
 /teaching/co-teaching/foundations/completion/:
@@ -2546,7 +2546,7 @@
     - section: trio
 /trio/mcnair/about/:
   publish: true
-  template: cehd/trio/mcnair/about.html
+  template: cehd/trio/mcnair/phd1.html
   template_data:
     - section: trio
 /trio/mcnair/alumni/:

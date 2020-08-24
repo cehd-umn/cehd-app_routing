@@ -66,8 +66,8 @@ header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
         background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
     }
     #top-level-academics {
-        padding: 8px 15px 8px 15px !important;
-        border-left: 1px solid #000 !important;
+        padding: 8px 15px 8px 15px;
+        border-left: 1px solid #000 ;
     }
     .top-level.first {
         border-left: inherit !important;
