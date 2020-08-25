@@ -46,3 +46,25 @@ table {
 td {
     border: 0px solid #e2e2e2;
 }
+
+.gsc-search-box {
+    border-style: none !important;
+    border-width: 0 !important;
+    border-spacing: 0 0 !important;
+    margin-bottom: 2px !important;
+    width: 300px !important;
+    float: right !important;
+    margin-top: -20px !important;
+    margin-right: -20px !important;
+}
+.gsc-search-button {
+    margin-left: -20px !important;
+}
+
+@media (min-width: 769px) {
+    .top-level:hover .top-level-link {
+        border-top: 0px solid transparent !important;
+        color: #900021 !important;
+        text-decoration: none;
+    }
+}
