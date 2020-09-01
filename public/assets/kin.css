@@ -1,50 +1,83 @@
 #kin-footer {
-    background-color: #900021;
-    padding: 1em;
+  background-color: #900021;
+  padding: 1em;
 }
 #kin-footer a {
-    color: #ffb71e;
+  color: #ffb71e;
 }
 
 #kin-footer p {
-    color: #f5f5f5;
-    margin: 0em 0 .75em;
+  color: #f5f5f5;
+  margin: 0em 0 0.75em;
 }
 #kin-footer strong {
-    color: #fff;
+  color: #fff;
 }
 .footer-sitename {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    font-family: Open Sans, sans-serif !important;
-
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: Open Sans, sans-serif !important;
 }
-
 
 #kin-umnfoot {
-    background-color: #5b0013;
-    clear: both;
-    color: #f5f5f5;
-    display: block;
-    font-size: .8em;
-    overflow: hidden;
-    padding: 1em;
-    text-align: center;
-    width: 100%;
+  background-color: #5b0013;
+  clear: both;
+  color: #f5f5f5;
+  display: block;
+  font-size: 0.8em;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
 }
 #kin-umnfoot a {
-    color: #ffb71e;
+  color: #ffb71e;
 }
 #kin-umnfoot a {
-    margin: 0;
+  margin: 0;
 }
 
 table {
-    margin: 0;
+  margin: 0;
 }
 td {
-    border: 0px solid #e2e2e2;
+  border: 0px solid #e2e2e2;
+}
+
+.gsc-search-box {
+  border-style: none !important;
+  border-width: 0 !important;
+  border-spacing: 0 0 !important;
+  margin-bottom: 2px !important;
+  width: 300px !important;
+  float: right !important;
+  margin-top: -20px !important;
+  margin-right: -20px !important;
+}
+.gsc-search-button {
+  margin-left: -20px !important;
+}
+
+@media (min-width: 769px) {
+  .top-level:hover .top-level-link {
+    border-top: 0px solid transparent !important;
+    color: #900021 !important;
+    text-decoration: none;
+  }
+}
+
+.cognito .c-forms-heading .c-forms-form-title {
+  padding: 28px 0 10px 0;
+  display: none !important;
+}
+
+.icon-twitter:visited {
+  fill: #0084b4;
+}
+
+.svg-social-media-icon a:visited {
+  fill: #fff;
 }
 
 .gsc-search-box {

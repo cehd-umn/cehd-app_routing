@@ -1395,6 +1395,11 @@
   template: cehd/events/thanksgiving.html
   template_data:
     - section: events
+/events/town-hall/:
+  publish: false
+  template: cehd/events/town-hall.html
+  template_data:
+    - section: events
 /events/undergrad-networking/:
   publish: true
   template: cehd/events/undergrad-networking.html
@@ -1919,11 +1924,6 @@
   template: cehd/teaching/assessment.html
   template_data:
     - section: teaching
-/teaching/assessment-draft/:
-  publish: false
-  template: cehd/teaching/assessment-draft.html
-  template_data:
-    - section: teaching
 /teaching/clinical/:
   publish: true
   template: cehd/teaching/clinical.html
@@ -1986,7 +1986,7 @@
     - section: teaching
 /teaching/co-teaching/foundations/about/:
   publish: true
-  template: cehd/teaching/co-teaching/foundations/phd1.html
+  template: cehd/teaching/co-teaching/foundations/about.html
   template_data:
     - section: teaching
 /teaching/co-teaching/foundations/completion/:
