@@ -24,6 +24,9 @@
 <style>
     {{ inline_styles|raw }}
     {{ inline_nav_styles|raw }}
+    .svg-social-media-icon {
+        fill: #fff;
+    }
 </style>
 <style>
 @media (min-width: 768px) {
@@ -41,7 +44,7 @@ min-height: 340px !important;
 
     nav a:link {
         color: #666;
-        padding: 10px;
+        padding: 0 10px;
     }
 
     @media (max-width: 768px) {
@@ -204,7 +207,7 @@ text-transform: uppercase;
     <div class="row">
         <div class="container">
             <div class="third feature">
-                <h1 class="footer-sitename">School of Kinesiology</h1>
+                <h1 class="footer-sitename text-center">School of Kinesiology</h1>
             </div>
         </div>
         <div class="container">
@@ -225,6 +228,23 @@ text-transform: uppercase;
                 <p><a>Learn more about the University system</a> and how it is making an impact on our state and world.</p>
             </div><!-- the third .third is the last child inside the container div -->
         </div>
+        <div class="span-12 text-center">
+            <div class="svg-social-media-icon size-60">
+    {% include "cehd/includes/svg/social-media/facebook.html" %}
+</div>
+<div class="svg-social-media-icon size-60">
+    {% include "cehd/includes/svg/social-media/twitter.html" %}
+</div>
+<div class="svg-social-media-icon size-60">
+    {% include "cehd/includes/svg/social-media/instagram.html" %}
+</div>
+<div class="svg-social-media-icon size-60">
+    {% include "cehd/includes/svg/social-media/youtube.html" %}
+</div>
+<div class="svg-social-media-icon size-60">
+    {% include "cehd/includes/svg/social-media/linkedin.html" %}
+</div>
+    </div>
     </div>
 </div>
 {% endblock %}

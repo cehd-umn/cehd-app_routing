@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/documents/current/counselor-education/20-21 CEP MA Handbook - FINAL.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/kin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/kin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/diversity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/diversity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/olpd/documents/Planning-sheets/CertProgEval.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/olpd/documents/Planning-sheets/CertProgEval.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/society/board.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/society/board.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/career/exploredraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/exploredraft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/career/resumes/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/resumes/cv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/diversity/cgc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/diversity/cgc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/wplc/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/wplc/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/news/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/study-abroad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/study-abroad/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/advising.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/advising.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/asl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/asl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/foundations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/foundations/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/foundations/learning.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/foundations/learning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/research-and-engagement/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/research-and-engagement/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +179,7 @@
       <workItem from="1598037008713" duration="6456000" />
       <workItem from="1598242971074" duration="3233000" />
       <workItem from="1598276751818" duration="3518000" />
+      <workItem from="1598381445129" duration="1108000" />
     </task>
     <servers />
   </component>

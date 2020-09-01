@@ -47,6 +47,7 @@ td {
     border: 0px solid #e2e2e2;
 }
 
+
 .gsc-search-box {
     border-style: none !important;
     border-width: 0 !important;
@@ -68,3 +69,10 @@ td {
         text-decoration: none;
     }
 }
+
+
+.cognito .c-forms-heading .c-forms-form-title {
+    padding: 28px 0 10px 0;
+    display: none !important;
+}
+
