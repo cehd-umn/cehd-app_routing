@@ -27,8 +27,13 @@
     .svg-social-media-icon {
         fill: #fff;
     }
-</style>
-<style>
+    a .svg-social-media-icon {
+        fill: #fff;
+    }
+     a:visited .svg-social-media-icon {
+        fill: #fff;
+    }
+
 @media (min-width: 768px) {
 .dept-footer-section.first {
 min-height: 430px !important;
@@ -230,20 +235,20 @@ text-transform: uppercase;
         </div>
         <div class="span-12 text-center">
             <div class="svg-social-media-icon size-60">
-    {% include "cehd/includes/svg/social-media/facebook.html" %}
-</div>
-<div class="svg-social-media-icon size-60">
-    {% include "cehd/includes/svg/social-media/twitter.html" %}
-</div>
-<div class="svg-social-media-icon size-60">
-    {% include "cehd/includes/svg/social-media/instagram.html" %}
-</div>
-<div class="svg-social-media-icon size-60">
-    {% include "cehd/includes/svg/social-media/youtube.html" %}
-</div>
-<div class="svg-social-media-icon size-60">
-    {% include "cehd/includes/svg/social-media/linkedin.html" %}
-</div>
+			    <a href="https://www.facebook.com/umnkinesiology">{% include "cehd/includes/svg/social-media/facebook.html" %}</a>
+			</div>
+			<div class="svg-social-media-icon size-60">
+			    <a href="https://twitter.com/umnkinesiology">{% include "cehd/includes/svg/social-media/twitter.html" %}</a>
+			</div>
+			<div class="svg-social-media-icon size-60">
+			    <a href="https://www.instagram.com/umnkinesiology/">{% include "cehd/includes/svg/social-media/instagram.html" %}</a>
+			</div>
+			<div class="svg-social-media-icon size-60">
+			    <a href="https://www.youtube.com/channel/UCKhZXYPvDjMf45Ph01Ujg9Q">{% include "cehd/includes/svg/social-media/youtube.html" %}</a>
+			</div>
+			<div class="svg-social-media-icon size-60">
+			    <a href="https://www.linkedin.com/groups/2720034/">{% include "cehd/includes/svg/social-media/linkedin.html" %}</a>
+			</div>
     </div>
     </div>
 </div>

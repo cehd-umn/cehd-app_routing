@@ -51,7 +51,7 @@
   template_data:
     - section: home
 /about/:
-  template: olpd/phd1.html
+  template: olpd/about.html
   publish: true
   template_data:
     - section: about
