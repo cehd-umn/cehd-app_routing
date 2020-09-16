@@ -3,14 +3,22 @@
     border-right: 1px solid #000;
     /*padding-right: 1em !important;*/
 }
-
+@media (max-width: 768px) {
+    #top-level-home {
+        font-size: 17px;
+        font-weight: 700;
+        padding-left: 2.5em;
+        border-right: none;
+    }
+}
 #main-nav-home-link {
     height: auto;
-    margin: none;
+    margin: 0 !important;
     opacity: 1;
     border-top: 5px solid transparent;
     display: block;
-    text-align: center;
+    text-align: left;
+    width: initial !important;
 }
 
 #umnh-onestop, #umnh-myu {

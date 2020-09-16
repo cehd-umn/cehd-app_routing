@@ -54,8 +54,10 @@ todo: add these font-face styles to inline.scss #}
     .top-level {
         border-left: 1px solid #000;
         display: inline-block;
-        padding-left: 1.5em !important;
-        padding-right: 1.5em !important;
+      /*padding-left: 1.5em !important;*/
+      /*padding-right: 1.5em !important;*/
+      padding-left: 15px !important;
+      padding-right: 15px !important;
         width: auto;
         text-align: justify;
     }
@@ -73,7 +75,7 @@ todo: add these font-face styles to inline.scss #}
         /*padding-right: 0px !important;*/
     }
       .top-level {
-        width: inherit !important;
+        /*width: auto !important;*/
       }
       nav ul {
         width: inherit !important;
@@ -90,13 +92,14 @@ todo: add these font-face styles to inline.scss #}
     #top-level-home {
       border-left: none;
       border-right: 1px solid #000;
-      padding-right: 2.5em !important;
-      margin-left: -10px;
+      padding-right: 15px !important;
+      margin-left: -3px;
     }
 
     @media (min-width: 769px) {
     .dropdown-toggle::after {
         margin-left: 0em;
+      align-self: center;
     }
     }
 
@@ -121,6 +124,14 @@ todo: add these font-face styles to inline.scss #}
       display: none;
   }
   @media (min-width: 768px) {
+    .top-level {
+      font-size: 12px !important;
+    }
+    .top-level .top-level-link {
+      border-top: 5px solid transparent;
+      display: flex !important;
+      text-align: center;
+    }
     .nav-container {
       padding: 0 0 .5em !important;
       z-index: 1000;
@@ -131,7 +142,7 @@ todo: add these font-face styles to inline.scss #}
       padding-top: .8em;
     }
       #top-level-academics {
-          padding: 0 15px 8px 15px !important;
+          padding: 0 15px 0px 15px !important;
       }
 
       #breadcrumb {
@@ -183,6 +194,9 @@ todo: add these font-face styles to inline.scss #}
   }
 
     @media (min-width: 960px) {
+      .top-level {
+        font-size: 12.75px !important;
+      }
       .hero-overlay {
         background-color: rgba(0, 0, 0, 0.4);
         bottom: 0;
@@ -195,11 +209,43 @@ todo: add these font-face styles to inline.scss #}
         width: 100%;
         z-index: 999;
       }
+      #top-level-home {
+      display: inherit !important;
+      }
     }
     .section-header-container {
       background-color: #fff;
       z-index: 999;
     }
+
+    @media (min-width: 1200px) {
+      .top-level {
+        font-size: 15px !important;
+      }
+    }
+    @media (max-width: 1400px) {
+      #top-level-home {
+        display: block !important;
+      }
+    }
+
+    /*@media (max-width: 1024px) {*/
+    /*nav {*/
+    /*  display: none !important;*/
+    /*}*/
+    /*  .nav-toggle {*/
+    /*    margin-bottom: 10px;*/
+    /*    display: block !important;*/
+    /*  }*/
+    /*}*/
+
+
+    .top-level {
+      width: inherit !important;
+
+    }
+
+
     {{ inline_styles|raw }}
 </style>
 {% endblock %} {% block college_wordmark %}

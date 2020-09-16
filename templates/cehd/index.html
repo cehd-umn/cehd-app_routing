@@ -208,6 +208,17 @@
     }
 
     @media all and (max-width: 1024px) {
+        .top-level .top-level-link {
+            font-size: 13px;
+        }
+        nav {
+            display: none !important;
+        }
+        .nav-toggle {
+            margin-bottom: 10px;
+            display: block;
+        }
+
         html, body, main {
             height: 395px;
         }
@@ -239,9 +250,6 @@
             padding: 9px;
         }
 
-        .nav-toggle {
-            margin-bottom: 10px;
-        }
 
         .vertical-center {
             padding-top: 246px;
@@ -393,6 +401,12 @@
 </style>
 
 {% endblock %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+
 {% block main_content %}
 <div class="row">
     <div class="main-heading-box">
