@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
