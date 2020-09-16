@@ -119,10 +119,25 @@ header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
     }
 }
 
+@media only screen and (max-width: 1100px) and (min-width:769px) {
+.container {
+    max-width: 100% !important;
+}
+}
+
 #breadcrumb {
-    display: block;
+    display: none;
     /*z-index: -2;*/
 }
+
+@media (min-width: 769px) {
+    #breadcrumb {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+
 
 .breadcrumb { white-space: nowrap; margin: 0; }
 .breadcrumb li {
@@ -157,7 +172,7 @@ header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
 }
 
 .breadcrumb li a {
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     text-decoration: none;
     color: #666;
     font-size: 14px;

@@ -3,7 +3,7 @@
         <div class="container">
             <div id="siteBreadcrumb">
                 <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">home</a></li>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
                     <script>
                         var path = "";
@@ -14,9 +14,9 @@
                         for (var i = 3; i < s.length - 1; i++) {
                             console.log(path);
                             path +=
-                                '<LI><A HREF="' +
+                                '<LI><A HREF=' +
                                 href.substring(0, href.indexOf("/" + s[i]) + s[i].length + 1) +
-                                '/">' +
+                                '"/">' +
                                 s[i].replace("-", " ") +
                                 "</A></LI>";
                             console.log(path);
