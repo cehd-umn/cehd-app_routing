@@ -72,10 +72,6 @@ td {
   display: none !important;
 }
 
-.icon-twitter:visited {
-  fill: #0084b4;
-}
-
 .svg-social-media-icon a:visited {
   fill: #fff;
 }
@@ -101,3 +97,23 @@ td {
         text-decoration: none;
     }
 }
+
+/*.svg-social-media-icon a:hover {
+  fill: #ffcc33;
+}*/
+.icon-twitter:hover {
+  fill: #ffcc33;
+}
+.icon-facebook:hover {
+  fill: #ffcc33;
+}
+.icon-instagram:hover {
+  fill: #ffcc33;
+}
+.icon-youtube:hover {
+  fill: #ffcc33;
+}
+.icon-linkedin:hover {
+  fill: #ffcc33;
+}
+>>>>>>> 6e6bcdaa1d524cd362d329afb6333373deff9895
