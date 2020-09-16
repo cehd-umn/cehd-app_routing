@@ -1,0 +1,25 @@
+{%- set default_headshot = '/assets/images/headshots/slug-white.jpg' -%}
+{% for group in data.people %}
+<div class="row">
+    <div class="container">
+        {% for person in group %}
+        <div class="half">
+            <div class="third">
+                {% if person.headshotAddress|is_string %} <br />
+                <p class="no-margin-top"><img src="{{ person.headshotAddress }}" alt="{{ person.nameFirstLast }} headshot"></p>
+                {% else %}
+                <p class="no-margin-top"><img src="{{ default_headshot }}" alt="{{ person.nameFirstLast }} headshot"></p>
+                {% endif %}
+            </div>
+            <div class="twothird">
+                <h4 class="heading-profile"><a href="{{ data.base_url }}/people/{{ person.internetId}}/">{{ person.firstName }} {{ person.middleName }} {{ person.lastName }}</a></h4>
+                <p>
+                    {% if person.workingTitle|is_string %} {{ person.workingTitle|safe }} {% endif %}<br  />
+                    {{ person.phone }} <br  /> <a href="mailto:{{ person.internetId }}@umn.edu">{{ person.internetId }}@umn.edu</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div><!-- end container -->
+</div><!-- end row.emphasis -->
+{% endfor %}
