@@ -2,98 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/docs/teaching/co-teaching-modules/Co-Teaching-Strategies-During-Remote-Learning-2020.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/AndicoecheaJ-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/AndicoecheaJ-2020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/CardenasR-2019-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/CruzT-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/CruzT-2020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/HansonR-2019-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/LewisJ-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/LewisJ-2020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/MunozM-2018-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/RodriguezM-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/headshots/Vang-LoA-2019-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/trio/DornackerL-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/trio/WarneE-2020-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/undergrad/BeckS-2019-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/undergrad/CEHD-Transfer-Team-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/undergrad/Turnage-ButterbaughI-2019-sq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/images/Programs/CSPP/gautham-krisnan-headshot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/images/student-stories/emma-doran-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/images/student-stories/gautham-krisnan-headshot-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/images/student-stories/jasmine-kim-headshot-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/images/student-stories/jasminekim-headshot-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cehd/trio/services/andicoechea.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cehd/trio/services/cruz.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cehd/trio/services/lewis.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/contact-draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/cide/laurend.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/cide/sanch620.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/epl/yesak001.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/camp0544.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/dgonzale.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/evanwitt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/he - Shortcut.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/hrd/fengx472.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/hrd/hartm492.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/olpd/people/students/hrd/leldridg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/cehd/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/cehd/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/edpsych/people/extra_content.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/edpsych/people/extra_content.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/edpsych/people/index.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/edpsych/people/index.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cehd/config/olpd/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/olpd/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/extra.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/extra.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/kin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/kin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/involved.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/involved.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/assessment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/assessment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/explore.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/explore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/exploredraft.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/grad-school/prepare.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/grad-school/prepare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/hours.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/hours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/interview/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/interview/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/networking/informational.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/networking/informational.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/search/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/career/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/career/staff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/sass/inline/_meganav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/sass/inline/_meganav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cehd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/news/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/research/consulting.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/consulting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/research/covid19.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/covid19.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/foundations/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/foundations/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/foundations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/foundations/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/pairs/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/pairs/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/pairs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/teaching/co-teaching/pairs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/teaching/trainings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/teaching/trainings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/cardenas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/cardenas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/hanson.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/hanson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/munoz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/munoz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/rodriguez.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/rodriguez.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/staff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/services/vang-lo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/services/vang-lo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/upward-bound/fall2020.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/upward-bound/fall2020.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/upward-bound/people.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/upward-bound/people.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/declare-major.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/declare-major.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/student-services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/student-services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edpsych/about/diversity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/about/diversity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/psych-foundations/prelim.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/psych-foundations/prelim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/student-stories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/student-stories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edpsych/research/labs/kendeou.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/research/labs/kendeou.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/research/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/chautauqua/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/chautauqua/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/MAMEDprogramsheets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/MAMEDprogramsheets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/PHDprogramsheets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/PHDprogramsheets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/cide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/cide/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/epl/karl0173.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/epl/karl0173.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/he/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/he/lboey.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/lboey.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/hrd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/hrd/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/current-phd-students.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/current-phd-students.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-how-to-apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-how-to-apply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-transfer-apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-transfer-apply.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

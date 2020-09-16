@@ -63,16 +63,35 @@ todo: add these font-face styles to inline.scss #}
         padding-left: 0px !important;
     }
     #top-level-diversity-inclusion {
-        width: 275px !important;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+        /*width: 275px !important;*/
+        /*padding-left: 0px !important;*/
+        /*padding-right: 0px !important;*/
     }
     #top-level-news-events {
-        width: 200px;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+        /*width: 200px;*/
+        /*padding-left: 0px !important;*/
+        /*padding-right: 0px !important;*/
+    }
+      .top-level {
+        width: inherit !important;
+      }
+      nav ul {
+        width: inherit !important;
+      }
+      nav {
+        -ms-display: flex;
+        display: flex;
+        justify-content: left !important;
+        max-height: 2000px;
+        overflow: visible;
+      }
     }
 
+    #top-level-home {
+      border-left: none;
+      border-right: 1px solid #000;
+      padding-right: 2.5em !important;
+      margin-left: -10px;
     }
 
     @media (min-width: 769px) {
@@ -94,7 +113,7 @@ todo: add these font-face styles to inline.scss #}
     #top-level-home {
         border-left: none;
         border-right: 0px solid #000;
-        padding-right: 1em !important;
+        /*padding-right: 1em !important;*/
     }
 
 
@@ -102,6 +121,15 @@ todo: add these font-face styles to inline.scss #}
       display: none;
   }
   @media (min-width: 768px) {
+    .nav-container {
+      padding: 0 0 .5em !important;
+      z-index: 1000;
+    }
+    .meganav-container {
+      box-shadow: none !important;
+      padding-bottom: .8em;
+      padding-top: .8em;
+    }
       #top-level-academics {
           padding: 0 15px 8px 15px !important;
       }
@@ -115,7 +143,7 @@ todo: add these font-face styles to inline.scss #}
       .breadcrumb li {
           display: inline-block;
           line-height: 26px;
-          margin: 0 9px 0 -10px;
+          margin: 0 9px 0 -16px;
           padding: 0 20px;
           position: relative;
       }
@@ -154,7 +182,24 @@ todo: add these font-face styles to inline.scss #}
       }
   }
 
-
+    @media (min-width: 960px) {
+      .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        bottom: 0;
+        color: #fff;
+        font-size: 20px;
+        left: 0;
+        padding: 0 3em;
+        position: absolute;
+        text-shadow: 1px 1px 1px #000;
+        width: 100%;
+        z-index: 999;
+      }
+    }
+    .section-header-container {
+      background-color: #fff;
+      z-index: 999;
+    }
     {{ inline_styles|raw }}
 </style>
 {% endblock %} {% block college_wordmark %}
@@ -171,8 +216,10 @@ todo: add these font-face styles to inline.scss #}
   {% include "cehd/includes/nav/main.html" with {"nav_items": nav_items} %}
 </div>
 <!-- // row -->
-{% endblock %} {% block breadcrumbs %}
+{% endblock %}
+{% block breadcrumbs %}
 <div id="breadcrumb">
+  <div class="row ">
   <div class="container">
     <div id="siteBreadcrumb">
       <ol class="breadcrumb">
@@ -208,8 +255,13 @@ todo: add these font-face styles to inline.scss #}
       </ol>
     </div>
   </div>
+  </div>
 </div>
-{% endblock %} {% block urgentmsg %}{% endblock %} {% block dept_footer %}{#
+{% endblock %}
+
+{% block urgentmsg %}{% endblock %}
+
+{% block dept_footer %}{#
 TODO create a college-level template with the college info that has a dept block
 #}
 <div id="dept-footer">

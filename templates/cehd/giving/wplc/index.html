@@ -14,8 +14,50 @@
     </div>
 </div>
 {% endblock %}
+{% block breadcrumbs %}
+<div id="breadcrumb">
+    <div class="row has-hero-image">
+        <div class="container">
+            <div id="siteBreadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                    <script>
+                        var path = "";
+                        var href = document.location.href;
+                        var s = href.split("/");
+                        console.log(s);
+
+                        for (var i = 3; i < s.length - 1; i++) {
+                            console.log(path);
+                            path +=
+                                '<LI><A HREF="' +
+                                href.substring(0, href.indexOf("/" + s[i]) + s[i].length + 1) +
+                                '/">' +
+                                s[i].replace("-", " ") +
+                                "</A></LI>";
+                            console.log(path);
+                        }
+                        i = s.length - 1;
+                        path +=
+                            '<A HREF="' +
+                            href.substring(0, href.indexOf(s[i]) + s[i].length) +
+                            '">' +
+                            s[i] +
+                            "</A>";
+                        var url = path;
+                        document.writeln(url);
+                        console.log(url);
+                    </script>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block main_content %}
-<div class="row has-hero-image">
+<div class="row ">
 
     <div class="container">
       <h1>Women’s Philanthropic Leadership Circle </h1>
@@ -46,7 +88,7 @@
             </p>
           <!-- <ul>
           <li><a href="https://umn.qualtrics.com/jfe/form/SV_3ZQdWW4Sh64zAb3">Graduate student application</a></li>
-          <li><a href="https://umn.qualtrics.com/jfe/form/SV_8jjdDSULA7xxrMh">Faculty application</a></li> 
+          <li><a href="https://umn.qualtrics.com/jfe/form/SV_8jjdDSULA7xxrMh">Faculty application</a></li>
           </ul>-->
           <!-- <p><strong>Please nominate yourself using the application form above.</strong>
             <br /><a href="/giving/wplc/awards/">More information on award criteria</a>.</p> -->
