@@ -234,6 +234,12 @@ border-right: none;
     </nav>
 </div>
 {% endblock %}
+
+
+{% block breadcrumbs %}
+{% include "edpsych/layout/breadcrumbs.html" %}
+{% endblock %}
+
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">
     <div class="row">

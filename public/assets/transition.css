@@ -119,3 +119,50 @@ header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
     }
 }
 
+#breadcrumb {
+    display: block;
+    /*z-index: -2;*/
+}
+
+.breadcrumb { white-space: nowrap; margin: 0; }
+.breadcrumb li {
+    display: inline-block;
+    line-height: 26px;
+    margin: 0 9px 0 -16px;
+    padding: 0 20px;
+    position: relative;
+}
+.breadcrumb li::before,
+.breadcrumb li::after {
+    border-right: 1px solid #666666;
+    content: '';
+    display: block;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: -1;
+    transform: skewX(45deg);
+}
+.breadcrumb li::after {
+    bottom: 6px;
+    top: auto;
+    transform: skewX(-45deg);
+}
+
+.breadcrumb li:last-of-type::before,
+.breadcrumb li:last-of-type::after {
+    display: none;
+}
+
+.breadcrumb li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+.hero-image {
+    z-index: 2 !important;
+}
+}
