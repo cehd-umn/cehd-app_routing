@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/hero-breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/research/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/edpsych_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/edpsych_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/person.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
