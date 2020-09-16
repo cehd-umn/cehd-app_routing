@@ -655,6 +655,11 @@
   publish: true
   template_data:
     - section: people
+/people/students/cide/laurend/:
+  template: olpd/people/students/cide/laurend.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/ogunl013/:
   template: olpd/people/students/cide/ogunl013.html
   publish: true
@@ -662,6 +667,11 @@
     - section: people
 /people/students/cide/patti039/:
   template: olpd/people/students/cide/patti039.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/sanch620/:
+  template: olpd/people/students/cide/sanch620.html
   publish: true
   template_data:
     - section: people
@@ -710,6 +720,11 @@
   publish: true
   template_data:
     - section: people
+/people/students/epl/yesak001/:
+  template: olpd/people/students/epl/yesak001.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/epl/yousu014/:
   template: olpd/people/students/epl/yousu014.html
   publish: true
@@ -727,6 +742,21 @@
     - section: people
 /people/students/he/:
   template: olpd/people/students/he/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/he/dgonzale/:
+  template: olpd/people/students/he/dgonzale.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/he/evanwitt/:
+  template: olpd/people/students/he/evanwitt.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/he/camp0544/:
+  template: olpd/people/students/he/camp0544.html
   publish: true
   template_data:
     - section: people
@@ -797,6 +827,21 @@
     - section: people
 /people/students/hrd/fang0297/:
   template: olpd/people/students/hrd/fang0297.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/hrd/fengx472/:
+  template: olpd/people/students/hrd/fengx472.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/hrd/hartm492/:
+  template: olpd/people/students/hrd/hartm492.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/hrd/leldridg/:
+  template: olpd/people/students/hrd/leldridg.html
   publish: true
   template_data:
     - section: people

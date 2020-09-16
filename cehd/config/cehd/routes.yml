@@ -1030,11 +1030,6 @@
   template: cehd/career/explore.html
   template_data:
     - section: career
-/career/exploredraft/:
-  publish: false
-  template: cehd/career/exploredraft.html
-  template_data:
-    - section: career
 /career/hours/:
   publish: true
   template: cehd/career/hours.html
@@ -1396,7 +1391,7 @@
   template_data:
     - section: events
 /events/town-hall/:
-  publish: false
+  publish: true
   template: cehd/events/town-hall.html
   template_data:
     - section: events
@@ -2699,9 +2694,19 @@
   template: cehd/trio/services/academics.html
   template_data:
     - section: trio
+/trio/services/andicoechea/:
+  publish: true
+  template: cehd/trio/services/andicoechea.html
+  template_data:
+    - section: trio
 /trio/services/cardenas/:
   publish: true
   template: cehd/trio/services/cardenas.html
+  template_data:
+    - section: trio
+/trio/services/cruz/:
+  publish: true
+  template: cehd/trio/services/cruz.html
   template_data:
     - section: trio
 /trio/services/finances/:
@@ -2712,6 +2717,11 @@
 /trio/services/hanson/:
   publish: true
   template: cehd/trio/services/hanson.html
+  template_data:
+    - section: trio
+/trio/services/lewis/:
+  publish: true
+  template: cehd/trio/services/lewis.html
   template_data:
     - section: trio
 /trio/services/munoz/:
@@ -3012,6 +3022,11 @@
 /undergraduate/transfer/contact/:
   publish: true
   template: cehd/undergraduate/transfer/contact.html
+  template_data:
+    - section: undergraduate
+/undergraduate/transfer/contact-draft/:
+  publish: false
+  template: cehd/undergraduate/transfer/contact-draft.html
   template_data:
     - section: undergraduate
 /undergraduate/transfer/credits/:
