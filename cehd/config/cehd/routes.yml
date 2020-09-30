@@ -945,6 +945,11 @@
   template: cehd/alumni/society/scholarships.html
   template_data:
     - section: alumni
+/alumni/society/testimonials/:
+  publish: true
+  template: cehd/alumni/society/testimonials.html
+  template_data:
+    - section: alumni
 /book-week/:
   publish: true
   template: cehd/book-week/index.html
@@ -2641,7 +2646,7 @@
     - section: trio
 /trio/mcnair/about/:
   publish: true
-  template: cehd/trio/mcnair/phd1.html
+  template: cehd/trio/mcnair/about.html
   template_data:
     - section: trio
 /trio/mcnair/alumni/:
@@ -2829,11 +2834,6 @@
   template: cehd/undergraduate/academic-support.html
   template_data:
     - section: undergraduate
-/undergraduate/admissions/:
-  publish: true
-  template: cehd/undergraduate/admissions.html
-  template_data:
-    - section: undergraduate
 /undergraduate/admitted/:
   publish: true
   template: cehd/undergraduate/admitted.html
@@ -3019,6 +3019,11 @@
   template: cehd/undergraduate/transfer/index.html
   template_data:
     - section: undergraduate
+/undergraduate/transfer/apply-draft/:
+  publish: false
+  template: cehd/undergraduate/transfer/apply-draft.html
+  template_data:
+    - section: undergraduate
 /undergraduate/transfer/contact/:
   publish: true
   template: cehd/undergraduate/transfer/contact.html
@@ -3047,6 +3052,11 @@
 /undergraduate/transfer/guides/:
   publish: true
   template: cehd/undergraduate/transfer/guides.html
+  template_data:
+    - section: undergraduate
+/undergraduate/transfer/index-draft/:
+  publish: false
+  template: cehd/undergraduate/transfer/index-draft.html
   template_data:
     - section: undergraduate
 /undergraduate/transfer/internal/:

@@ -49,7 +49,7 @@
   publish: true
   template: ssw/search/index.html
   template_data:
-  - section:
+    - section:
 /images/:
   template: ssw/images.html
   publish: true
@@ -64,7 +64,7 @@
   template: ssw/alumni/moua.html
   publish: true
   template_data:
-    - section: alumni    
+    - section: alumni
 /alumni/gbolo/:
   template: ssw/alumni/gbolo.html
   publish: true
@@ -99,7 +99,7 @@
   template: ssw/alumni/hussein.html
   publish: true
   template_data:
-    - section: alumni    
+    - section: alumni
 /articles/experiential-learning/:
   template: ssw/articles/experiential-learning.html
   publish: true
@@ -107,6 +107,11 @@
     - section: articles
 /articles/somali-mental-health/:
   template: ssw/articles/somali-mental-health.html
+  publish: true
+  template_data:
+    - section: articles
+/articles/kivnick-memorial/:
+  template: ssw/articles/kivnick-memorial.html
   publish: true
   template_data:
     - section: articles
@@ -144,32 +149,32 @@
   template: ssw/centers/incommunity.html
   publish: true
   template_data:
-    - section: centers    
+    - section: centers
 /academics/:
   template: ssw/academics/index.html
   publish: true
   template_data:
-      - section: academics
+    - section: academics
 /about/:
   template: ssw/about/index.html
   publish: true
   template_data:
-      - section: about
+    - section: about
 /about/history/:
   template: ssw/about/history.html
   publish: true
   template_data:
-      - section: about
+    - section: about
 /about/news-events/:
   template: ssw/about/news-events.html
   publish: true
   template_data:
-      - section: about
+    - section: about
 /about/ssw-jobs/:
   template: ssw/about/ssw-jobs.html
   publish: true
   template_data:
-      - section: about
+    - section: about
 /giving/:
   template: ssw/giving.html
   publish: true
@@ -194,157 +199,162 @@
   template: ssw/graduate/current-phd-students.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/apply-phd/:
   template: ssw/graduate/apply-phd.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/faq/:
   template: ssw/graduate/faq.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-transfer-apply/:
   template: ssw/graduate/msw-transfer-apply.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-field-fair/:
   template: ssw/graduate/msw-field-fair.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-field-instruction/:
   template: ssw/graduate/msw-field-instruction.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-meet/:
   template: ssw/graduate/msw-meet.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-mission/:
   template: ssw/graduate/msw-mission.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-programs/:
   template: ssw/graduate/msw-programs.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-requirements/:
   template: ssw/graduate/msw-requirements.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/phd-candidates/:
   template: ssw/graduate/phd-candidates.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
+/graduate/phd-publications/:
+  template: ssw/graduate/phd-publications.html
+  publish: true
+  template_data:
+    - section: graduate
 /graduate/test-page/:
   template: ssw/graduate/test-page.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/kente-circle-placement-fellowship/:
   template: ssw/graduate/kente-circle-placement-fellowship.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/john-wallace-fellowship/:
   template: ssw/graduate/john-wallace-fellowship.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/dissertation-titles/:
   template: ssw/graduate/dissertation-titles.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/diversity-social-work-advancement-program/:
   template: ssw/graduate/diversity-social-work-advancement-program.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/eloise-elliot-kaplan/:
   template: ssw/graduate/eloise-elliot-kaplan.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/integrated-behavioral-health/:
   template: ssw/graduate/integrated-behavioral-health.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/title-iv-e-child-welfare-training-fellowship/:
   template: ssw/graduate/title-iv-e-child-welfare-training-fellowship.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/weisdorf-oncology/:
   template: ssw/graduate/weisdorf-oncology.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/SWITCH/:
   template: ssw/graduate/SWITCH.html
   publish: true
   template_data:
-      - section: graduate   
+    - section: graduate
 /graduate/msw-how-to-apply/:
   template: ssw/graduate/msw-how-to-apply.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/msw-CMH-adv-standing/:
   template: ssw/graduate/msw-CMH-adv-standing.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/youth-development-leadership/:
   template: ssw/graduate/youth-development-leadership.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/youth-development-leadership-how-to-apply/:
   template: ssw/graduate/youth-development-leadership-how-to-apply.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/careers-of-social-work-phd-graduates/:
   template: ssw/graduate/careers-of-social-work-phd-graduates.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/non-degree-seeking-students/:
   template: ssw/graduate/non-degree-seeking-students.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/phd-in-social-work/:
   template: ssw/graduate/phd-in-social-work.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/job-search/:
   template: ssw/graduate/job-search.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/funding/:
   template: ssw/graduate/funding.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /graduate/master-of-social-work/:
   template: ssw/graduate/master-of-social-work.html
   publish: true
   template_data:
-      - section: graduate
+    - section: graduate
 /people/:
   template: ssw/people/index.html
   publish: true
@@ -359,57 +369,62 @@
   template: ssw/research/families-children.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /research/:
   template: ssw/research/index.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /research/disability-aging/:
   template: ssw/research/disability-aging.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /research/families-children/:
   template: ssw/research/families-children.html
   publish: true
   template_data:
-      - section: research/research/social-policy/:
+    - section: research
 /research/mental-health/:
   template: ssw/research/mental-health.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /research/methodology/:
   template: ssw/research/methodology.html
   publish: true
   template_data:
-      - section: research-and-centers
+    - section: research-and-centers
 /research/social-policy/:
   template: ssw/research/social-policy.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /research/youth-development/:
   template: ssw/research/youth-development.html
   publish: true
   template_data:
-      - section: research
+    - section: research
 /undergraduate/:
   publish: true
   template: ssw/undergraduate/index.html
+  template_data:
+    - section: undergraduate
+/undergraduate/2020changeslanding:
+  publish: true
+  template: ssw/undergraduate/2020changeslanding.html
   template_data:
     - section: undergraduate
 /undergraduate/youth-studies-major/:
   template: ssw/undergraduate/youth-studies-major.html
   publish: true
   template_data:
-      - section: undergraduate
+    - section: undergraduate
 /undergraduate/minors/:
   template: ssw/undergraduate/minors.html
   publish: true
   template_data:
-      - section: undergraduate
+    - section: undergraduate
 /slider-test/:
   template: ssw/slider-test.html
   publish: true
