@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/olpd/layout/breadcrumbs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/olpd/layout/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ssw/layout/breadcrumbs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/olpd.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/olpd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/includes/nav/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/reg-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/reg-nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/edpsych_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/edpsych_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/includes/nav/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/layout/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +89,18 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/cehd/layout" />
-      <recent name="$PROJECT_DIR$/templates/kin/academics" />
-      <recent name="$PROJECT_DIR$/templates/kin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/kin/academics" />
       <recent name="$PROJECT_DIR$/public/dev-kin" />
       <recent name="$PROJECT_DIR$/templates/kin" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/olpd/layout" />
+      <recent name="$PROJECT_DIR$/templates/cehd/layout" />
+      <recent name="$PROJECT_DIR$/templates/kin/academics" />
+      <recent name="$PROJECT_DIR$/templates/kin" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -161,6 +177,9 @@
       <workItem from="1598037008713" duration="6456000" />
       <workItem from="1598242971074" duration="3233000" />
       <workItem from="1598276751818" duration="3518000" />
+      <workItem from="1600787872768" duration="6144000" />
+      <workItem from="1601401567518" duration="2910000" />
+      <workItem from="1601456688098" duration="2969000" />
     </task>
     <servers />
   </component>

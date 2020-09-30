@@ -27,10 +27,19 @@
 }
 
 #umnhf-h-search {
-  top: -40px;
-  height: auto;
-  margin-left: 75%;
-  border: none;
+    top: 0px !important;
+    height: auto;
+    margin-left: 0 !important;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    #umnhf-h-search {
+        top: -40px !important;
+        height: auto;
+        margin-left: 75% !important;
+        border: none;
+    }
 }
 
 .gsc-search-box-tools .gsc-search-box td.gsc-input {
@@ -65,6 +74,7 @@ header .gsc-search-button-v2 {
 }
 
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .outer-bg-right {
     background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
   }
@@ -80,6 +90,23 @@ header .gsc-search-button-v2 {
     color: #900021 !important;
     text-decoration: none;
   }
+=======
+    .outer-bg-right {
+        background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
+    }
+    #top-level-academics {
+        padding: 8px 15px 8px 15px;
+        border-left: 1px solid #000 ;
+    }
+    .top-level.first {
+        border-left: inherit !important;
+    }
+    .top-level:hover .top-level-link {
+        /*border-top: none !important;*/
+        color: #900021 !important;
+        text-decoration: none;
+    }
+>>>>>>> navBreadcrumbs
 }
 
 @media (min-width: 960px) {

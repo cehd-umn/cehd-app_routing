@@ -1,5 +1,9 @@
 {% extends "layout/edpsych_base.html" %}
 {% block css %}
+<link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
+<link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">
+<link href="/edpsych/ie.css" rel="stylesheet" type="text/css">
+<link href="/assets/transition.css" rel="stylesheet" type="text/css">
 <style>
 @media (min-width: 768px) {
 .dept-footer-section.first {
@@ -18,10 +22,6 @@ min-height: 340px !important;
 }
 }
 </style>
-<link href="/assets/peloton/latest/dist/css/minified/all.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-    <link href="{{ config.css_base }}/minified/edpsych.css" rel="stylesheet" type="text/css">
-    <link href="/edpsych/ie.css" rel="stylesheet" type="text/css">
-<link href="/assets/transition.css" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block heading_1 %}{{ config.dept_name }}{% endblock %}
 {% block title_append %} | {{ config.dept_name|raw }} | University of Minnesota{% endblock %}
@@ -40,10 +40,13 @@ min-height: 340px !important;
 <style>
     nav a:link {
     color: #666;
-    padding-right: 10px;
 }
 
-@media (max-width: 768px) {
+    .dropdown-toggle {
+        padding-right: 15px;
+    }
+
+    @media (max-width: 768px) {
 .top-level-nav-link {
     font-size: 15px;
     font-weight: 700 !important;
@@ -60,13 +63,38 @@ min-height: 340px !important;
 }
 }
 
+    @media (min-width: 768px) {
+        .nav-container {
+            padding: 7px 0 0px !important;
+        }
+        ul.secondary-nav li {
+            border-right: 0px solid !important;
+        }
+    }
 
 @media (min-width: 769px) {
+
+    .inline {
+        margin-top:0 !important;
+        margin-bottom: 5px;
+    }
+    nav.inline .secondary-nav {
+        padding: 10px 0 0 12px !important;
+        top: 20px !important;
+    }
+
+    nav.inline li.top-nav-item {
+        align-items: flex-start !important;
+        -ms-display: flex;
+        display: flex;
+        padding: 0 15px !important;
+    }
+
     nav.inline ul {
     -ms-display: flex;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start !important;
 }
 nav ul.nav.inline li {
     border-bottom: 0;
@@ -76,6 +104,7 @@ nav ul.nav.inline li {
 
 nav.inline .dropdown-toggle::after {
     margin-left: 0px;
+    top: 10px !important;
 }
 
 nav {
@@ -148,66 +177,6 @@ border-right: none;
     }
 
 
-
-    /* New even spaced navigation */
-
-    .primary_nav {
-        width: 100%;
-    }
-
-    .primary_nav ul {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -moz-flex;
-        display: -webkit-flex;
-        display: flex;
-
-        -webkit-flex-direction: row;
-        flex-direction: row;
-
-        flex-wrap: wrap;
-
-        -webkit-justify-content: space-around;
-        justify-content: space-around;
-
-        -webkit-align-content: space-around;
-        align-content: space-around;
-    }
-
-    .primary_nav li {
-        text-transform: uppercase;
-        text-align:center;
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: auto;
-        justify-content: space-evenly;
-    }
-
-    nav ul.nav li li {
-        border-right: none !important;:
-    }
-
-    @media (min-width: 769px) {
-        nav.inline .dropdown-toggle::after {
-            border-left: .3em solid transparent;
-            border-right: .3em solid transparent;
-            border-top: .3em solid;
-            content: "";
-            display: inline-block;
-            height: 0;
-            margin-left: .3em !important;
-            vertical-align: middle;
-            width: 0;
-            position: inherit !important;
-            top: 0 !important;
-        }
-    }
-
-    /* End of new even spaced navigation  */
-
-
-
 </style>
 {% endblock %}
 {% block section_wordmark %}
@@ -216,22 +185,30 @@ border-right: none;
 {% block nav %}
 <div id="main-nav" {% if cehd_edpsych_nav_open == "true" %}class="active"{% endif %}>
     <h2 class="accessible-hidden accessible-no-display" id="nav-main-heading">Navigation</h2>
-    <button class="nav-toggle">Menu</button>
-    <nav class="inline primary_nav">
-        <ul class="nav inline">
-            {% for top_level_nav_item in nav_items %}
-                <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
-                    {% if top_level_nav_item.subsections %}
-                    <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
-                        {% for subsection in top_level_nav_item.subsections %}
-                        <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link"id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{ subsection.name }}</a>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+<button class="nav-toggle">Menu</button>
+<nav class="inline">
+    <ul class="nav inline">
+        {% for top_level_nav_item in nav_items %}
+        {% if top_level_nav_item.subsections %}
+        <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}"
+                                                                                                       id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{
+            top_level_nav_item.name }}</a>
+            <ul class="secondary-nav" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-items">
+                {% for subsection in top_level_nav_item.subsections %}
+                <li class="secondary-nav-item" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-item"><a
+                        href="{{ config.base_url }}{{ subsection.href }}" class="secondary-level-nav-link" id="{{ top_level_nav_item.name|hyphenate }}-secondary-nav-link">{{
+                    subsection.name }}</a>
+                    {% endfor %}
+            </ul>
+        </li>
+
+        {% else %}
+        <li class="top-nav-item to-upper" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-item"><a href="{{ config.base_url }}{{ top_level_nav_item.href }}" id="{{ top_level_nav_item.name|hyphenate }}-top-nav-link" class="top-level-nav-link{% if top_level_nav_item.subsections %} dropdown-toggle{% endif %}">{{ top_level_nav_item.name }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
 </div>
 {% endblock %}
 

@@ -1,6 +1,6 @@
-<div class="meganav-container" id="meganavA">
+<div class="meganav-container">
     <button class="nav-toggle">Menu</button>
-    <nav class="container" role="navigation">
+    <nav class="container" role="navigation" id="meganavA">
         <ul class="nav">
             <li class="top-level" id="top-level-home"><a id="main-nav-home-link" href="/">Home</a></li> <!-- old version had {%- include "cehd/includes/nav/home-icon.html" -%} --!>
             {%- for top_level_item in nav_items -%}
@@ -61,3 +61,9 @@
     </nav>
 </div><!-- meganav-container -->
 
+
+<script>
+    // var specialNav = document.getElementById("meganavA");
+    // active item menu //
+    $('.nav li a[href="' + location.pathname + '"]').addClass('menu-active');
+</script>
