@@ -82,13 +82,13 @@
     }
 
     nav {
-      margin: 1rem auto 2rem !important;
+      /*margin: 1rem auto 2rem !important;*/
     }
   }
 
   @media (min-width: 1009px) {
     nav.inline ul {
-      width: 80%;
+      /*width: 80%;*/
     }
     nav ul.nav.inline li {
       border-bottom: 0;
@@ -142,8 +142,8 @@
       text-align: justify;
     }
     #top-level-academics {
-      padding-left: 20px !important;
-      border-left: 1px solid #000;
+      /*padding-left: 20px !important;*/
+      /*border-left: 1px solid #000;*/
     }
     #top-level-diversity-inclusion {
       width: 275px !important;
@@ -169,12 +169,44 @@
     text-transform: capitalize;
   }
 
+  #umnhf-h-search {
+    top: 0px !important;
+    height: auto;
+    margin-left: 0 !important;
+    border: none;
+  }
+
   @media (min-width: 768px) {
+    #umnhf-h-search {
+      top: -40px !important;
+      height: auto;
+      margin-left: 75% !important;
+      border: none;
+    }
     #top-level-academics {
       border-left: 1px solid #000 !important;
+      padding: 3px 15px 3px 15px;
+    }
+    #home-top-nav-item {
+      padding-left: 0 !important;
+    }
+    .mega-dropdown:hover .dropdown-menu-wrapper {
+      z-index: 99;
+    }
+    .top-level:hover .top-level-link {
+      border-top: 5px solid transparent !important;
+      color: #900021 !important;
+      text-decoration: none;
     }
   }
 
+  .fullw {
+    width: 100% !important;
+  }
+
+  #maincontent {
+    z-index: 0;
+  }
 </style>
 {% endblock %}
 {% block college_wordmark %}
@@ -190,6 +222,11 @@
   {% include "ssw/includes/nav/main.html" with {"nav_items": nav_items} %}
 </div><!-- // row -->
 {% endblock %}
+
+{% block breadcrumbs %}
+{% include "ssw/layout/breadcrumbs.html" %}
+{% endblock %}
+
 {% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
 <div id="dept-footer">
   <div class="row">

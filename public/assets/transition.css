@@ -26,10 +26,19 @@
 }
 
 #umnhf-h-search {
-    top: -40px;
+    top: 0px !important;
     height: auto;
-    margin-left: 75%;
+    margin-left: 0 !important;
     border: none;
+}
+
+@media (min-width: 768px) {
+    #umnhf-h-search {
+        top: -40px !important;
+        height: auto;
+        margin-left: 75% !important;
+        border: none;
+    }
 }
 
 .gsc-search-box-tools .gsc-search-box td.gsc-input {
@@ -81,7 +90,7 @@ header .cse .gsc-search-button-v2, header .gsc-search-button-v2 {
         border-left: inherit !important;
     }
     .top-level:hover .top-level-link {
-        border-top: none !important;
+        /*border-top: none !important;*/
         color: #900021 !important;
         text-decoration: none;
     }
