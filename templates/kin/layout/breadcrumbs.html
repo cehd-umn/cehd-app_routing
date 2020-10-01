@@ -1,0 +1,90 @@
+<style>
+
+    #breadcrumb {
+        display: block;
+        /*z-index: -2;*/
+    }
+
+    .breadcrumb { white-space: nowrap; margin: 0; }
+    .breadcrumb li {
+        display: inline-block;
+        line-height: 26px;
+        margin: 0 9px 0 -16px;
+        padding: 0 20px;
+        position: relative;
+    }
+    .breadcrumb li::before,
+    .breadcrumb li::after {
+        border-right: 1px solid #666666;
+        content: '';
+        display: block;
+        height: 20%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10px;
+        z-index: -1;
+        transform: skewX(45deg);
+    }
+    .breadcrumb li::after {
+        bottom: 6px;
+        top: auto;
+        transform: skewX(-45deg);
+    }
+
+    .breadcrumb li:last-of-type::before,
+    .breadcrumb li:last-of-type::after {
+        display: none;
+    }
+
+    .breadcrumb li a {
+        /*text-transform: capitalize;*/
+        text-decoration: none;
+        color: #666;
+        font-size: 14px;
+    }
+    .hero-image {
+        z-index: 2 !important;
+    }
+    }
+</style>
+
+<div id="breadcrumb">
+    <div class="row ">
+        <div class="container">
+            <div id="siteBreadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="/dev-kin/">home</a></li>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                    <script>
+                        var path = "";
+                        var href = document.location.href;
+                        var s = href.split("/");
+                        // console.log(s);
+
+                        for (var i = 4; i < s.length - 1; i++) {
+                            // console.log(path);
+                            path +=
+                                '<LI><A HREF=' +
+                                href.substring(0, href.indexOf("/" + s[i]) + s[i].length + 1) +
+                                '/>' +
+                                s[i].replace(/-/g, " ") +
+                                "</A></LI>";
+                            console.log(s[i]);
+                        }
+                        i = s.length - 1;
+                        path +=
+                            '<A HREF="' +
+                            href.substring(0, href.indexOf(s[i]) + s[i].length) +
+                            '">' +
+                            s[i].replace(/-/g, " ") +
+                            "</A>";
+                        var url = path;
+                        document.writeln(url);
+                        // console.log(url);
+                    </script>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

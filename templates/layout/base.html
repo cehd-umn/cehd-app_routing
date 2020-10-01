@@ -52,36 +52,7 @@
 
 <body>
   <header>
-    <div class="accessible-no-display">
-      <ul class="accessible-no-display">
-        <li class="accessible-no-display"><a class="accessible-no-display" href="#maincontent">Skip to main content</a>
-        <li class="accessible-no-display"><a class="accessible-no-display" href="#mainnav">Skip to main navigation</a>
-      </ul>
-    </div>
-    <div id="umnheader">
-      <div class="container">
-        <ul id="umn-links">
-          <li><a href="http://www.umn.edu/" id="umnh-logos" title="U of M System Homepage"><span
-                class="visuallyhidden">U of M System Homepage</span> </a></li>
-          <li><a href="https://www.myu.umn.edu/" id="umnh-myu" title="My U">MyU</a></li>
-          <li><a href="http://onestop.umn.edu/" id="umnh-onestop" title="One Stop">One Stop</a></li>
-        </ul>
-        <div class="umnhf" id="umnhf-h-search" role="search">
-          <script>
-            (function () {
-              var cx = '002834015805923805805:c-0k--9bdkk';
-              var gcse = document.createElement('script');
-              gcse.type = 'text/javascript';
-              gcse.async = true;
-              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(gcse, s);
-            })();
-          </script>
-          <gcse:searchbox-only resultsURL="{{ config.base_url }}/search/"></gcse:searchbox-only>
-        </div>
-      </div>
-    </div><!-- /#umnheader -->
+    {% include 'layout/header.html' %}<!-- /#umnheader -->
     {% block hero_image %}{% endblock %}
     <div class="section-header-container">
       <div class="container">

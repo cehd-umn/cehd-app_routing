@@ -78,7 +78,7 @@ header .gsc-search-button-v2 {
         background: linear-gradient(90deg, #fff 50%, #ffec99 50%);
     }
     #top-level-academics {
-        padding: 8px 15px 8px 15px;
+        padding: 0px 15px 0px 15px !important;
         border-left: 1px solid #000 ;
     }
     .top-level.first {
@@ -279,4 +279,21 @@ figcaption a:link {
     flex: 1;
     float: right;
   }
+}
+
+@media (min-width: 769px) {
+  nav.inline li.top-nav-item {
+    padding: 0px 15px !important;
+  }
+}
+
+.gsc-input-box {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.gsc-search-button {
+  width: 1%
+  margin-left: 0px !important;
 }

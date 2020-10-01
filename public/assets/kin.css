@@ -217,4 +217,20 @@ figcaption a:link {
 }
 
 
->>>>>>> 6e6bcdaa1d524cd362d329afb6333373deff9895
+
+#umnhf-h-search {
+  top: 0px !important;
+  height: auto !important;
+  border: none !important;
+}
+.gsc-search-button {
+  margin-left: 0px !important;
+}
+@media (min-width: 768px) {
+  #umnhf-h-search {
+    top: 0px !important;
+    height: auto !important;
+    margin-left: 75% !important;
+    border: none !important;
+  }
+}
