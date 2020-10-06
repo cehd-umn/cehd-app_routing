@@ -50,6 +50,11 @@
   publish: true
   template_data:
     - section: about
+/about/news/:
+  template: kin/about/news.html
+  publish: true
+  template_data:
+    - section: about
 /academics/:
   template: kin/academics/index.html
   publish: true

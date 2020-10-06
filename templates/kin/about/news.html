@@ -1,0 +1,57 @@
+{% extends "kin/layout/base.html" %}
+{%- import "macros/loader.html" as loader -%}
+{% import "macros/news-feed.html" as newsfeed %}
+{%- import "macros/events-feed.html" as eventsfeed -%}
+{% set page_title = "News | School of Kinesiology" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block extra_css %}
+<style>
+</style>
+{% endblock %}
+
+
+
+{% block breadcrumbs %}
+<!--{% include "kin/layout/breadcrumbs.html" %}-->
+{% endblock %}
+
+{% block main_content %}
+
+
+
+<div class="row">
+  <div class="container home-images-container">
+    <h1>News</h1>
+    <h2>Connect Test</h2>
+<div class="twothird feature">
+   
+    <!-- div w/ data attributes -->
+    <div id="news-container" class="loader-container" aria-live="polite"
+        data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
+        data-base-url="https://connect.cehd.umn.edu/youth-sports-today-and-tomorrow/feed/?withoutcomments=1" {# The url of the website with an RSS feed #}
+        data-feed-path="category/departments/organizational-leadership-policy-and-development/feed" {# The path for the feed at the site above #}
+        data-target-element-selector="#news-container" {# The element selector for the feed html #}
+        data-template-path="/assets/dist/views/cehd/newsfeeds/" {# The path the the Nunjucks template #}
+        data-template-name="index.html" {# The name of the Nunjucks template #}
+        data-limit="3" {# How many stories to display #}
+        >
+        <div class="loader">
+            <div class="loader-figure "></div>
+            <p class="loader-label">Loading&hellip;</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+ </div><!-- end container -->
+
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/svg_stats.min.js"></script>
+<script src="/assets/dist/js/news.min.js"></script>
+<script src="/assets/dist/js/events.min.js"></script>
+
+
+{% endblock %}

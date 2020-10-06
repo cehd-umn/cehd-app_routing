@@ -1,16 +1,15 @@
-{% extends "kin/layout/base.html" %}
-{% set page_title = "Ooops! No Page Here" %}
-{% set message = "Try the search bar at the top." %}
-{% block title %}{{ page_title }}{% endblock %}
-{% block main_content %}
+{% extends "kin/layout/base.html" %} {% set page_title = "Ooops! No Page Here"
+%} {% set message = "Try the search bar at the top." %} {% block title %}{{
+page_title }}{% endblock %} {% block breadcrumbs %}{%endblock %} {% block
+main_content %}
 <div class="row">
-    <div class="container">
-        <div class="half feature">
-            <div class="circle-container">
-                <h1>{{ page_title }}</h1>
-                <p>{{ message|raw }}</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="half feature">
+      <div class="circle-container">
+        <h1>{{ page_title }}</h1>
+        <p>{{ message|raw }}</p>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

@@ -16,14 +16,14 @@ analytics -%}{# <-- the GA tracking macro #} {% block css %}
   type="text/css"
 />
 <link
-        href="/assets/transition.css{{ css_cachebuster }}"
-        rel="stylesheet"
-        type="text/css"
+  href="/assets/transition.css{{ css_cachebuster }}"
+  rel="stylesheet"
+  type="text/css"
 />
 <link
-        href="/assets/kin.css{{ css_cachebuster }}"
-        rel="stylesheet"
-        type="text/css"
+  href="/assets/kin.css{{ css_cachebuster }}"
+  rel="stylesheet"
+  type="text/css"
 />
 <link
   href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
@@ -60,9 +60,8 @@ todo: add these font-face styles to inline.scss #}
   .dept-footer-section.first {
   min-height: 430px !important;
   }
-
-
   }
+
   @media (min-width: 1200px) {
   .dept-footer-section.first {
   min-height: 340px !important;
@@ -224,6 +223,9 @@ todo: add these font-face styles to inline.scss #}
         padding: 15px 0 0 !important;
       }
 
+      #mainnav {
+        height:40px;
+      }
 </style>
 {% endblock %} {% block college_wordmark %}
 <!--<a class="dept-text wordmark-svg cehd-wordmark" style="font-family: 'Open Sans', sans-serif;color:#333;" href="{{ config.base_url }}/">College of Education + Human Development</a>-->
@@ -242,13 +244,8 @@ todo: add these font-face styles to inline.scss #}
   {% include "kin/includes/nav/main.html" with {"nav_items": nav_items} %}
 </div>
 <!-- // row -->
-{% endblock %}
-
-{% block breadcrumbs %}
-{% include "kin/layout/breadcrumbs.html" %}
-{% endblock %}
-
-{% block dept_footer %}{# TODO create a college-level template
+{% endblock %} {% block breadcrumbs %} {% include "kin/layout/breadcrumbs.html"
+%} {% endblock %} {% block dept_footer %}{# TODO create a college-level template
 with the college info that has a dept block #}
 <div id="kin-footer">
   <div class="row">

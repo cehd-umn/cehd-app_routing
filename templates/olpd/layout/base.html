@@ -1,137 +1,166 @@
-{% extends "layout/base.html" %}
-{%- import "macros/ga-tracking.html" as analytics -%}
-{% block css %}
-    <link href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-    <link href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-    <link href="/assets/extra.css{{ css_cachebuster }}" rel="stylesheet" type="text/css">
-<link href="/assets/transition.css" rel="stylesheet" type="text/css">
-{% endblock %}
-{% block heading_1 %}{{ config.dept_name }}{% endblock %}
-{% block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %}
-{% block bottom_js %}
-    <script src="/assets/dist/js/common.min.js{{ js_cachebuster }}"></script>
-    <script src="/assets/dist/js/app.min.js{{ js_cachebuster }}"></script>
-    <script>
-        "use strict";
-        var app = new App();
-    </script>
-{% endblock %}
-{% block inline_css %}
-{# Render-blocking styles that, if inline, will speed up page rendering. See https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #}
-{# todo: add these font-face styles to inline.scss #}
+{% extends "layout/base.html" %} {%- import "macros/ga-tracking.html" as
+analytics -%} {% block css %}
+<link
+  href="/assets/peloton/latest/dist/css/minified/styles.css{{ css_cachebuster }}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/assets/dist/css/minified/olpd.css{{ css_cachebuster }}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/assets/extra.css{{ css_cachebuster }}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link href="/assets/transition.css" rel="stylesheet" type="text/css" />
+{% endblock %} {% block heading_1 %}{{ config.dept_name }}{% endblock %} {%
+block title_append %} | {{ config.dept_name|raw }} | UMN{% endblock %} {% block
+bottom_js %}
+<script src="/assets/dist/js/common.min.js{{ js_cachebuster }}"></script>
+<script src="/assets/dist/js/app.min.js{{ js_cachebuster }}"></script>
+<script>
+  "use strict";
+  var app = new App();
+</script>
+{% endblock %} {% block inline_css %} {# Render-blocking styles that, if inline,
+will speed up page rendering. See
+https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery #} {#
+todo: add these font-face styles to inline.scss #}
 <style>
-{{ inline_styles|raw }}
-{{ inline_nav_styles|raw }}
+  {{ inline_styles|raw }}
+  {{ inline_nav_styles|raw }}
 </style>
 <style>
-@media (min-width: 768px) {
-#home-top-nav-item {
-padding-left:0;
-}
+      @media (min-width: 768px) {
+      #home-top-nav-item {
+      padding-left:0;
+      }
+      }
+      @media (min-width: 769px) {
+    nav.inline li:hover .secondary-nav {
+        display: block;
+        top: 17px !important;
+        border-top: 0px solid !important;
+        padding-top: 15px !important;
+    }
+    .secondary-nav-item {
+      border-right: none !important;
+    }
+      }
 
-.dept-footer-section.first {
-min-height: 430px !important;
-}
-}
-@media (min-width: 1200px) {
-.dept-footer-section.first {
-min-height: 340px !important;
-}
-}
-        nav a:link {
-        color: #666;
-        padding-right: 10px;
-    }
+      .dept-footer-section.first {
+  min-height: 430px !important;
+  }
+  }
+  @media (min-width: 1200px) {
+  .dept-footer-section.first {
+  min-height: 340px !important;
+  }
+  }
+          nav a:link {
+          color: #666;
+          padding-right: 10px;
+      }
 
-    @media (max-width: 768px) {
-    .top-level-nav-link {
-        font-size: 15px;
-        font-weight: 700 !important;
-    }
-    .secondary-level-nav-link {
-        text-transform: capitalize;
-    }
+      @media (max-width: 768px) {
+      .top-level-nav-link {
+          font-size: 15px;
+          font-weight: 700 !important;
+      }
+      .secondary-level-nav-link {
+          text-transform: capitalize;
+      }
 
-    }
+      }
 
-    @media (max-width: 960px) {
-    .container {
-        max-width: 850px !important;
-    }
-    }
+      @media (max-width: 960px) {
+      .container {
+          max-width: 850px !important;
+      }
+      }
 
 
-    @media (min-width: 769px) {
-        nav.inline ul {
-        -ms-display: flex;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    nav ul.nav.inline li {
-        border-bottom: 0;
-        border-right: 1px solid;
-        padding-right: 2px;
-        padding-left: 2px;
-        margin: 0;
-    }
+      @media (min-width: 769px) {
+          nav.inline ul {
+          -ms-display: flex;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+      nav ul.nav.inline li {
+          border-bottom: 0;
+          border-right: 1px solid;
+          padding-right: 2px;
+          padding-left: 2px;
+          margin: 0;
+      }
 
-    .dropdown-toggle::after {
-        margin-left: 0px;
-        top: 10px !important;
-    }
+      .dropdown-toggle::after {
+          margin-left: 0px;
+          top: 10px !important;
+      }
 
-    nav {
-        margin-top: 0px !important;
-        margin-bottom: 20px !important
-    }
-    }
+      nav {
+          margin-top: 0px !important;
+          margin-bottom: 20px !important
+      }
+      }
 
-    @media (min-width: 1009px) {
-    nav ul.nav.inline li {
-        border-bottom: 0;
-        border-right: 1px solid;
-        padding-right: 5px;
-        padding-left: 9px;
-        margin: 0;
-    }
-    }
+      @media (min-width: 1009px) {
+      nav ul.nav.inline li {
+          border-bottom: 0;
+          border-right: 1px solid;
+          padding-right: 5px;
+          padding-left: 9px;
+          margin: 0;
+      }
+      }
 
-    @media (min-width: 1209px) {
-    nav ul.nav.inline li {
-        border-bottom: 0;
-        border-right: 1px solid;
-        padding-right: 1.7em;
-        padding-left: .1em;
-        margin: 0;
-    }
-    }
+      @media (min-width: 1209px) {
+      nav ul.nav.inline li {
+          border-bottom: 0;
+          border-right: 1px solid;
+          padding-right: 1.7em;
+          padding-left: .1em;
+          margin: 0;
+      }
+      }
 
-    #undergraduate-top-nav-link {
-        padding-left: 0px !important;
-    }
-    #about-us-top-nav-item {
-    border-right: none;
-         padding-right: 0px !important;
-    }
+      #undergraduate-top-nav-link {
+          padding-left: 0px !important;
+      }
+      #about-us-top-nav-item {
+      border-right: none;
+           padding-right: 0px !important;
+      }
 
-#home-top-nav-item {
-    padding-left: 0 !important;
-}
+  #home-top-nav-item {
+      padding-left: 0 !important;
+  }
 </style>
-{% endblock %}
-{% block college_wordmark %} {% endblock %}
-{% block section_wordmark %}
-    <!--<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>-->
+{% endblock %} {% block college_wordmark %} {% endblock %} {% block
+section_wordmark %}
+<!--<a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a>-->
 
-<p class="parentunit" style="margin-top: 20px;"><a href="http://cehd.umn.edu/">College of Education and Human Development</a></p>
-<h1 class="sitename"><a href="{{ config.base_url }}/" title="Department of Organizational Leadership, Policy, and Development  Home" rel="home">Department of Organizational Leadership, Policy, and Development </a></h1>
-{% endblock %}
-
-{% block nav %}
+<p class="parentunit" style="margin-top: 20px">
+  <a href="http://cehd.umn.edu/">College of Education and Human Development</a>
+</p>
+<h1 class="sitename">
+  <a
+    href="{{ config.base_url }}/"
+    title="Department of Organizational Leadership, Policy, and Development  Home"
+    rel="home"
+    >Department of Organizational Leadership, Policy, and Development
+  </a>
+</h1>
+{% endblock %} {% block nav %}
 <div class="section-header-container row">
-    {% include "olpd/layout/nav.html" with {"nav_items": nav_items} %}
-</div><!-- // row -->
+  {% include "olpd/layout/nav.html" with {"nav_items": nav_items} %}
+</div>
+<!-- // row -->
 <!--<div class="section-header-container row" id="nav-container">-->
 <!--    <div class="container">-->
 <!--        <button class="nav-toggle">Menu</button>-->
@@ -152,53 +181,82 @@ min-height: 340px !important;
 <!--        </nav>-->
 <!--    </div>-->
 <!--</div>&lt;!&ndash; // row &ndash;&gt;-->
-{% endblock %}
-{% block breadcrumbs %}
-{% include "olpd/layout/breadcrumbs.html" %}
-{% endblock %}
-{% block dept_footer %}{# TODO create a college-level template with the college info that has a dept block #}
+{% endblock %} {% block breadcrumbs %} {% include "olpd/layout/breadcrumbs.html"
+%} {% endblock %} {% block dept_footer %}{# TODO create a college-level template
+with the college info that has a dept block #}
 <div id="dept-footer">
-    <div class="row">
-        <div class="container">
-            <div class="span-8">
-                <div class="dept-footer-section first">
-                    <div class="dept-footer-container contact">
-                        <h2 class="dept-footer-heading h4">Contact Us</h2>
-                    </div>
-                    <p><a href="{{ config.base_url }}/"><img class="dept-wordmark wordmark-svg" id="wordmark-olpd-top" src="/assets/images/wordmarks/wordmark-olpd-stacked.svg" alt="OLPD wordmark"></a></p>
-                    <address>
-                        Main office:
-                        206 Burton Hall<br />
-                        178 Pillsbury Drive SE <br />
-                        Minneapolis, MN 55455<br />
-                        Fax: 612-624-3377<br />
-                        Phone: 612-624-1006<br />
-                        <br />
-                        Undergraduate studies:<br />
-                        612-624-3640 | <a href="mailto:uolpd@umn.edu">ugolpd@umn.edu</a><br />
-                        Graduate studies:<br />
-                        612-626-9377 | <a href="mailto:olpd@umn.edu">olpd@umn.edu</a>
-                    </address>
-                </div>
-            </div>
-            <div class="span-4">
-                <div class="dept-footer-section last">
-                    <div class="dept-footer-container campus">
-                        <h2 class="dept-footer-heading h4">Visit Campus</h2>
-                    </div>
-                    <div class="dept-footer-campus-container">
-                        <p><a href="http://umn.edu/"><img class="university-wordmark wordmark-svg" src="/assets/images/wordmarks/wordmark-uofm-black-and-white.svg" alt="University of Minnesota wordmark."></a></p>
-                        <ul id="footerlinks" class="no-bullet">
-                            <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
-                            <li><a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a></li>
-                            <li><a href="https://admissions.tc.umn.edu/visit/">Schedule a tour</a></li>
-                            <li><small><a href="https://system.umn.edu/">Learn more about the University system</a> and how it is making an impact on our state and our world. </small>
-                              </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="row">
+    <div class="container">
+      <div class="span-8">
+        <div class="dept-footer-section first">
+          <div class="dept-footer-container contact">
+            <h2 class="dept-footer-heading h4">Contact Us</h2>
+          </div>
+          <p>
+            <a href="{{ config.base_url }}/"
+              ><img
+                class="dept-wordmark wordmark-svg"
+                id="wordmark-olpd-top"
+                src="/assets/images/wordmarks/wordmark-olpd-stacked.svg"
+                alt="OLPD wordmark"
+            /></a>
+          </p>
+          <address>
+            Main office: 206 Burton Hall<br />
+            178 Pillsbury Drive SE <br />
+            Minneapolis, MN 55455<br />
+            Fax: 612-624-3377<br />
+            Phone: 612-624-1006<br />
+            <br />
+            Undergraduate studies:<br />
+            612-624-3640 | <a href="mailto:uolpd@umn.edu">ugolpd@umn.edu</a
+            ><br />
+            Graduate studies:<br />
+            612-626-9377 | <a href="mailto:olpd@umn.edu">olpd@umn.edu</a>
+          </address>
         </div>
+      </div>
+      <div class="span-4">
+        <div class="dept-footer-section last">
+          <div class="dept-footer-container campus">
+            <h2 class="dept-footer-heading h4">Visit Campus</h2>
+          </div>
+          <div class="dept-footer-campus-container">
+            <p>
+              <a href="http://umn.edu/"
+                ><img
+                  class="university-wordmark wordmark-svg"
+                  src="/assets/images/wordmarks/wordmark-uofm-black-and-white.svg"
+                  alt="University of Minnesota wordmark."
+              /></a>
+            </p>
+            <ul id="footerlinks" class="no-bullet">
+              <li>
+                <a href="http://www1.umn.edu/pts/"
+                  >Parking &amp; Transportation</a
+                >
+              </li>
+              <li>
+                <a href="http://campusmaps.umn.edu/">Maps &amp; Directions</a>
+              </li>
+              <li>
+                <a href="https://admissions.tc.umn.edu/visit/"
+                  >Schedule a tour</a
+                >
+              </li>
+              <li>
+                <small
+                  ><a href="https://system.umn.edu/"
+                    >Learn more about the University system</a
+                  >
+                  and how it is making an impact on our state and our world.
+                </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

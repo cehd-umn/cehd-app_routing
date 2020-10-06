@@ -4,238 +4,217 @@
 {%- import "macros/events-feed.html" as eventsfeed -%}
 {% set page_title = "School of Kinesiology" %}
 {% block title %}{{ page_title }}{% endblock %}
-
 {% block extra_css %}
 <style>
-  .section-header-container {
-    background-color: #fff;
-    /*top: -44px;*/
-  }
-
-  #previous,
-  #next,
-  .dot {
-    color: #777;
-  }
-
-  .nav-thumbs ul li a {
-    background-color: #777;
-  }
-  .stat-number-large {
-    margin-top: -20px;
-}
-  .stat-number p {
-  font-size: 16px;
-    text-transform: uppercase;
-}
-
-.box:hover {background: #fc3;}
-
-    @media all and (max-width: 620px) {
-      .half {
-        width: 100%;
-      }
-    }
-.box {
-    background-color: #fff;
-    color: #444;
-    border-radius: 5px;
-    padding: 0 25px 25px 25px;
-    font-size: 100%;
-    border: 1px solid #e2e2e2;
-}
-.wrapper {
+	.section-header-container {
+	background-color: #fff;
+	/*top: -44px;*/
+	}
+	#previous,
+	#next,
+	.dot {
+	color: #777;
+	}
+	.nav-thumbs ul li a {
+	background-color: #777;
+	}
+	.stat-number-large {
+	margin-top: -20px;
+	}
+	.stat-number p {
+	font-size: 16px;
+	text-transform: uppercase;
+	}
+	.box:hover {background: #fc3;}
+	@media all and (max-width: 620px) {
+	.half {
+	width: 100%;
+	}
+	}
+	.box {
+	background-color: #fff;
+	color: #444;
+	border-radius: 5px;
+	padding: 0 25px 25px 25px;
+	font-size: 100%;
+	border: 1px solid #e2e2e2;
+	}
+	.wrapper {
 	display: grid;
 	grid-template-columns: 33% 33% 33% !important;
 	grid-gap: 10px;
 	background-color: #fff;
 	color: #444;
-}
-.program-box-text {font-size: 16px; line-height: 20px; margin: }
-.program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+	}
+	.program-box-text {font-size: 16px; line-height: 20px; margin: }
+	.program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
 </style>
 {% endblock %}
-
-
-
 {% block breadcrumbs %}
-<!--{% include "kin/layout/breadcrumbs.html" %}-->
+	<!--{% include "kin/layout/breadcrumbs.html" %}-->
 {% endblock %}
-
 {% block main_content %}
-
-
-
-<div class="row">
-  <div class="container home-images-container">
-    <div class="home-images">
-      <div class="large-image-container">
-        <div class="home-image large">
-          <figure>
-            <a class="image-link" href="https://umnkinesiology.wordpress.com/2020/08/27/school-of-kinesiology-research-lab-adjusts-to-covid-19/" {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
-              <img
-                src=" {{ config.base_url}}/assets/dist/images/home/Greising_Sarah-2019.jpg"
-              alt="Christiana Raymond-Pope, PhD, in a research lab during a global pandemic.">
-            </a>
-            <figcaption>
-              <a style="color:#fff !important; border-bottom: none !important;" href="https://umnkinesiology.wordpress.com/2020/08/27/school-of-kinesiology-research-lab-adjusts-to-covid-19/ {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
-                School of Kinesiology research lab adjusts to COVID-19</a>
-            </figcaption>
-          </figure>
-        </div><!-- end home-image -->
-      </div><!-- end large-image-container -->
-      <div class="small-image-container">
-        <div class="home-image small top">
-          <figure>
-            <a class="image-link" href="{{ config.base_url}}/academics/default.html/">
-              <img src="{{ config.base_url}}/assets/dist/images/home/Lab-Skeletons.jpg" alt="Kinesiology lab with students and skeletons"></a>
-            <figcaption>
-             <!--  <a style="color:#fff !important; border-bottom: none !important;" href="{{ config.base_url}}/academics/default.html/">
-                School of Kinesiology sets students up to be successful</a> -->
-                 <a style="color:#fff !important; border-bottom: none !important;" href="https://www.cehd.umn.edu/kin/academics/default.html">
-                School of Kinesiology sets students up to be successful</a>
-            </figcaption>
-          </figure>
-        </div><!-- end home-image-small-top -->
-        <div class="home-image small bottom">
-          <figure>
-            <a class="image-link" href="https://umnkinesiology.wordpress.com/2020/06/24/school-of-kinesiology-med-student-zach-wiesen-navigates-owning-a-gym-in-2020/">
-              <img src="{{ config.base_url}}/assets/dist/images/home/Wiesen_Zach-2020.jpg" alt="Zach Wiesen, Sport and Exercise Science MEd student in the School of Kinesiology."></a>
-            <figcaption>
-              <a style="color:#fff !important; border-bottom: none !important;" href="https://umnkinesiology.wordpress.com/2020/06/24/school-of-kinesiology-med-student-zach-wiesen-navigates-owning-a-gym-in-2020/">MEd student Zach Weisen talks about being a small business owner</a>
-            </figcaption>
-          </figure>
-        </div><!-- end home-image-small-bottom -->
-      </div><!-- end small-image-container -->
-    </div><!-- end home-images -->
-  </div><!-- end home-images-container -->
-</div><!-- end row -->
-
-
-<div class="container">
-  <div class="feature twothirds">
-  <h2 class="text-center">What is Kinesiology?</h2>
-  <p>Kinesiology is the academic discipline and interdisciplinary field of study focused on the science and management of physical activity and human movement within contexts such as exercise, health care, and sport.</p>
-</div>
-</div>
-<div class="row emphasis margin-top-2">
-	<div class="container margin-top-2">
-<div class="third">
- <div class="stat-number">
-
-            <h1 class="stat-number-large text-center">#6</h1>
-            <!-- <p class="stat-number-small">million</p> -->
-            <p class="text-center">School of Kinesiology’s national ranking among kinesiology doctoral programs reviewed by NAK in 2014</p>
-          </div>
-</div>
-<div class="third">
- <div class="stat-number">
-
-            <h1 class="stat-number-large text-center">514 | 153</h1>
-            <!-- <p class="stat-number-small">million</p> -->
-            <p class="text-center">Undergraduate major and graduate students enrolled<br />(Fall 2019)</p>
-          </div>
-</div>
-<div class="third">
- <div class="stat-number">
-
-            <h1 class="stat-number-large text-center">#336</h1>
-            <!-- <p class="stat-number-small">million</p> -->
-            <p class="text-center">Number of classes offered in 2018-19</p>
-          </div>
-</div>
-
-</div>
-
-</div>
-
- <div class="container margin-top-2">
-<div class="row">
-  <div class="third">
-   <h2>	<img src="{{ config.base_url}}/assets/dist/images/home/Research.jpg" alt="Kinesiology lab with students and skeletons">
-   Research</h2>
-Part of the School of Kinesiology’s mission is to conduct innovative, interdisciplinary research in physical activity, human movement, and sport. Check out the work being done in the School’s research labs and centers <link to research home page>
-
-  </div>
-    <div class="third">
-    	<h2><img src="{{ config.base_url}}/assets/dist/images/home/Teaching.jpg" alt="person writing on whiteboard">
-      Teaching</h2>
-The School of Kinesiology is home to two undergraduate majors, three undergraduate minors, six graduate programs, and two non-degree programs and certificates. Read more about the programs we offer <link to academics homepage> and the faculty who instruct them <link to people homepage>
-  </div>
-    <div class="third">
-    	<h2><img src="{{ config.base_url}}/assets/dist/images/home/Outreach.jpg" alt="person standing in center of students sitting in a semi-circle">
-      Outreach</h2>
-The work done by School of Kinesiology faculty and students promotes lifelong health and well-being in local, national, and global communities through public outreach and civic engagement activities. Read the latest news from the School here <link to SoK Tagged section of the CEHD news blog>
-  </div>
-</div>
-
-
-
-<div class="row margin-top-2">
- <div class="feature">
-   <h2> News and Announcements</h2>
-           <div class="third">
-                {{ loader.loader("", "h2", "news-container") }}
-            </div>
-
-<div class="third">
-	<p>Feature image goes here.</p>
-	<p>Feature story goes here.</p>
-	<!-- It would be nice for these features to feed in with the title and the first two or three lines of text. It would also be nice if there were an option for them to feed in with a photo, but not every post will have a photo worth showing. -->
-</div>
-<div class="third">
-	<p>Sign up to receive Kinesiology’s newsletter<br /> <a href=" http://eepurl.com/2iKvb"><em>The Weekly Wire</em></a></p>
-</div>
-</div>
-
-  </div>
-<div class="row margin-top-4 margin-bottom-3">
-    <div class="container">
-        <h2 class="text-center">Learn with us</h2>
-        <div class="wrapper">
-            <div class="box a">
-
-	<h3>Undergraduate</h3>
-<ul class="no-bullet">
-<li><a href="#">Kinesiology BS</a></li>
-<li><a href="#">Sport Management BS</a></li>
-
-<li><a href="#">Sports Coaching Minor</a></li>
-<li><a href="#">Health and Wellness Promotion Minor</a></li>
-<li><a href="#">Sport Management Minor</a></li>
-</ul>
-</div>
-<div class="box b">
-<h3>Graduate</h3>
-<ul class="no-bullet">
-<li><a href="#">Kinesiology PhD</a></li>
-<li><a href="#">Kinesiology MS</a></li>
-<li><a href="#">Sport Management MA</a></li>
-
-<li><a href="#">Physical Activity and Health MEd</a></li>
-<li><a href="#">Sport and Exercise Science MEd</a></li>
-<li><a href="#">Sport Management MEd</a></li>
-</ul>
-</div>
-<div class="box c">
-<h3>Non-Degree Programs</h3>
-<ul class="no-bullet">
-<li><a href="#">Physical Activity Program</a></li>
-<li><a href="#">Coaching Certificate</a></li>
-</ul>
-</div>
-</div>
-</div>
-
- </div><!-- end container -->
-
-{% endblock %}
-{% block bottom_js %}{{ parent() }}
-<script src="/assets/dist/js/svg_stats.min.js"></script>
-<script src="/assets/dist/js/news.min.js"></script>
-{{newsfeed.news_feed_js("category/departments/kinesiology/feed",
-"#news-container", "olpdhome.html", 3) }}
-<script src="/assets/dist/js/events.min.js"></script>
-
-
-{% endblock %}
+	<div class="row">
+		<div class="container home-images-container">
+			<div class="home-images">
+				<div class="large-image-container">
+					<div class="home-image large">
+						<figure>
+							<a class="image-link" href="https://umnkinesiology.wordpress.com/2020/08/27/school-of-kinesiology-research-lab-adjusts-to-covid-19/" {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
+								<img
+								src=" {{ config.base_url}}/assets/dist/images/home/Greising_Sarah-2019.jpg"
+								alt="Christiana Raymond-Pope, PhD, in a research lab during a global pandemic.">
+							</a>
+							<figcaption>
+							<a style="color:#fff !important; border-bottom: none !important;" href="https://umnkinesiology.wordpress.com/2020/08/27/school-of-kinesiology-research-lab-adjusts-to-covid-19/ {{ analytics.add_tracking("send", "event", "feature", "click", "homemainfeature") }}">
+							School of Kinesiology research lab adjusts to COVID-19</a>
+							</figcaption>
+						</figure>
+						</div><!-- end home-image -->
+						</div><!-- end large-image-container -->
+						<div class="small-image-container">
+							<div class="home-image small top">
+								<figure>
+									<a class="image-link" href="{{ config.base_url}}/academics/default.html/">
+									<img src="{{ config.base_url}}/assets/dist/images/home/Lab-Skeletons.jpg" alt="Kinesiology lab with students and skeletons"></a>
+									<figcaption>
+									<!--  <a style="color:#fff !important; border-bottom: none !important;" href="{{ config.base_url}}/academics/default.html/">
+									School of Kinesiology sets students up to be successful</a> -->
+									<a style="color:#fff !important; border-bottom: none !important;" href="https://www.cehd.umn.edu/kin/academics/default.html">
+									School of Kinesiology sets students up to be successful</a>
+									</figcaption>
+								</figure>
+								</div><!-- end home-image-small-top -->
+								<div class="home-image small bottom">
+									<figure>
+										<a class="image-link" href="https://umnkinesiology.wordpress.com/2020/06/24/school-of-kinesiology-med-student-zach-wiesen-navigates-owning-a-gym-in-2020/">
+										<img src="{{ config.base_url}}/assets/dist/images/home/Wiesen_Zach-2020.jpg" alt="Zach Wiesen, Sport and Exercise Science MEd student in the School of Kinesiology."></a>
+										<figcaption>
+										<a style="color:#fff !important; border-bottom: none !important;" href="https://umnkinesiology.wordpress.com/2020/06/24/school-of-kinesiology-med-student-zach-wiesen-navigates-owning-a-gym-in-2020/">MEd student Zach Weisen talks about being a small business owner</a>
+										</figcaption>
+									</figure>
+									</div><!-- end home-image-small-bottom -->
+									</div><!-- end small-image-container -->
+									</div><!-- end home-images -->
+									</div><!-- end home-images-container -->
+									</div><!-- end row -->
+									<div class="container">
+										<div class="feature twothirds">
+											<h2 class="text-center">What is Kinesiology?</h2>
+											<p>Kinesiology is the academic discipline and interdisciplinary field of study focused on the science and management of physical activity and human movement within contexts such as exercise, health care, and sport.</p>
+										</div>
+									</div>
+									<div class="row emphasis margin-top-2">
+										<div class="container margin-top-2">
+											<div class="third">
+												<div class="stat-number">
+													<h1 class="stat-number-large text-center">#6</h1>
+													<!-- <p class="stat-number-small">million</p> -->
+													<p class="text-center">School of Kinesiology’s national ranking among kinesiology doctoral programs reviewed by NAK in 2014</p>
+												</div>
+											</div>
+											<div class="third">
+												<div class="stat-number">
+													<h1 class="stat-number-large text-center">514 | 153</h1>
+													<!-- <p class="stat-number-small">million</p> -->
+													<p class="text-center">Undergraduate major and graduate students enrolled<br />(Fall 2019)</p>
+												</div>
+											</div>
+											<div class="third">
+												<div class="stat-number">
+													<h1 class="stat-number-large text-center">#336</h1>
+													<!-- <p class="stat-number-small">million</p> -->
+													<p class="text-center">Number of classes offered in 2018-19</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="container margin-top-2">
+										<div class="row">
+											<div class="third">
+												<h2>	<img src="{{ config.base_url}}/assets/dist/images/home/Research.jpg" alt="Kinesiology lab with students and skeletons">
+												Research</h2>
+												Part of the School of Kinesiology’s mission is to conduct innovative, interdisciplinary research in physical activity, human movement, and sport. Check out the work being done in the School’s research labs and centers <link to research home page>
+											</div>
+											<div class="third">
+												<h2><img src="{{ config.base_url}}/assets/dist/images/home/Teaching.jpg" alt="person writing on whiteboard">
+												Teaching</h2>
+												The School of Kinesiology is home to two undergraduate majors, three undergraduate minors, six graduate programs, and two non-degree programs and certificates. Read more about the programs we offer <link to academics homepage> and the faculty who instruct them <link to people homepage>
+											</div>
+											<div class="third">
+												<h2><img src="{{ config.base_url}}/assets/dist/images/home/Outreach.jpg" alt="person standing in center of students sitting in a semi-circle">
+												Outreach</h2>
+												The work done by School of Kinesiology faculty and students promotes lifelong health and well-being in local, national, and global communities through public outreach and civic engagement activities. Read the latest news from the School here <link to SoK Tagged section of the CEHD news blog>
+											</div>
+										</div>
+										<div class="row margin-top-2">
+											<div class="feature">
+												<h2> News and Announcements</h2>
+												<div class="third">
+													{{ loader.loader("", "h2", "news-container") }}
+													<p>Sign up to receive Kinesiology’s newsletter<br /> <a href=" http://eepurl.com/2iKvb"><em>The Weekly Wire</em></a></p>
+												</div>
+												<div class="twothird">
+													<div class="half">
+														<figure>
+															<img src="{{ config.base_url}}/assets/dist/images/home/Community_YouthSports.jpg" alt="Group of students stretching">
+															<figcaption>Group of students stretching</figcaption>
+														</figure>
+														
+														<!-- 	<img src="{{ config.base_url}}/assets/dist/images/home/Community_YouthSports.jpg" alt="Group of students stretching">
+													--></div>
+													<div class="half">
+														<h3>Youth Sports: Today, and Tomorrow</h3>
+														<!-- <p>Kinesiology faculty weigh in on the current state of youth sports</p> -->
+														<p>Over 60 million children in the United States are involved in youth sports, which can provide children with confidence, skill development, and friendships. Yet youth sports are often described as exclusive, expensive, or unsafe. <a href="https://connect.cehd.umn.edu/youth-sports-today-and-tomorrow/">Why is that, and what can we do about it?</a> </p>
+													</div>
+													<!-- It would be nice for these features to feed in with the title and the first two or three lines of text. It would also be nice if there were an option for them to feed in with a photo, but not every post will have a photo worth showing. -->
+												</div>
+												<!-- <div class="third">
+															<p>Sign up to receive Kinesiology’s newsletter<br /> <a href=" http://eepurl.com/2iKvb"><em>The Weekly Wire</em></a></p>
+												</div> -->
+											</div>
+										</div>
+										<div class="row margin-top-4 margin-bottom-3">
+											<div class="container">
+												<h2 class="text-center">Learn with us</h2>
+												<div class="wrapper">
+													<div class="box a">
+														<h3>Undergraduate</h3>
+														<ul class="no-bullet">
+															<li><a href="#">Kinesiology BS</a></li>
+															<li><a href="#">Sport Management BS</a></li>
+															<li><a href="#">Sports Coaching Minor</a></li>
+															<li><a href="#">Health and Wellness Promotion Minor</a></li>
+															<li><a href="#">Sport Management Minor</a></li>
+														</ul>
+													</div>
+													<div class="box b">
+														<h3>Graduate</h3>
+														<ul class="no-bullet">
+															<li><a href="#">Kinesiology PhD</a></li>
+															<li><a href="#">Kinesiology MS</a></li>
+															<li><a href="#">Sport Management MA</a></li>
+															<li><a href="#">Physical Activity and Health MEd</a></li>
+															<li><a href="#">Sport and Exercise Science MEd</a></li>
+															<li><a href="#">Sport Management MEd</a></li>
+														</ul>
+													</div>
+													<div class="box c">
+														<h3>Non-Degree Programs</h3>
+														<ul class="no-bullet">
+															<li><a href="#">Physical Activity Program</a></li>
+															<li><a href="#">Coaching Certificate</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											</div><!-- end container -->
+										{% endblock %}
+										{% block bottom_js %}{{ parent() }}
+											<script src="/assets/dist/js/svg_stats.min.js"></script>
+											<script src="/assets/dist/js/news.min.js"></script>
+											{{newsfeed.news_feed_js("category/departments/kinesiology/feed",
+											"#news-container", "olpdhome.html", 3) }}
+											<script src="/assets/dist/js/events.min.js"></script>
+										{% endblock %}

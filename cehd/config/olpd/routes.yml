@@ -615,6 +615,11 @@
   publish: false
   template_data:
     - section: people
+/people/students/cide/burd0133/:
+  template: olpd/people/students/cide/burd0133.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/nisse102/:
   template: olpd/people/students/cide/nisse102.html
   publish: true
@@ -715,6 +720,11 @@
   publish: true
   template_data:
     - section: people
+/people/students/epl/poexx024/:
+  template: olpd/people/students/epl/poexx024.html
+  publish: true
+  template_data:
+    - section: people    
 /people/students/epl/stant171/:
   template: olpd/people/students/epl/stant171.html
   publish: true
