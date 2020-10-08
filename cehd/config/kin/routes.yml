@@ -70,3 +70,8 @@
   publish: true
   template_data:
     - section: academics
+/undergraduate/sports-management/:
+  template: kin/undergraduate/sports-management.html
+  publish: true
+  template_data:
+    - section: undergraduate

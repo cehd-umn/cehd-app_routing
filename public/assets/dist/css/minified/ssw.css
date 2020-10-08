@@ -281,7 +281,7 @@ nav .dropdown-header li {
     padding-right: 0;
   }
   .top-level .top-level-link {
-    border-top: 5px solid transparent;
+    border-top: 0px solid transparent !important;
     display: block;
     text-align: center;
   }
@@ -1255,7 +1255,7 @@ nav a {
   font-size: 1.5rem;
 }
 #home-top-nav-link {
-  margin-top: 5px;
+  margin-top: 0px !important;
 }
 .nav-thumbs {
   clear: both;
@@ -1285,4 +1285,7 @@ nav a {
 }
 .bullet-active {
   background-color: #7a0019 !important;
+}
+.top-level:hover .top-level-link {
+    border-top: 0px solid transparent !important;
 }

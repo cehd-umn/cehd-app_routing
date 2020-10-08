@@ -18,13 +18,30 @@
 	.nav-thumbs ul li a {
 	background-color: #777;
 	}
-	.stat-number-large {
-	margin-top: -20px;
-	}
-	.stat-number p {
-	font-size: 16px;
+
+	.stat-number  {
+	margin-bottom: 25px;
+	margin-top: 25px;
+	text-align: center;
 	text-transform: uppercase;
 	}
+
+	.stat-number-detail {
+	font-size: 18px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	}
+
+	.stat-number-large {
+	font-size: 48px;
+	margin-bottom: 25px;
+	margin-top: 0px;
+	text-align: center;
+	font-weight: 700;
+	}
+
 	.box:hover {background: #fc3;}
 	@media all and (max-width: 620px) {
 	.half {
@@ -33,21 +50,15 @@
 	}
 	.box {
 	background-color: #fff;
-	color: #444;
-	border-radius: 5px;
-	padding: 0 25px 25px 25px;
-	font-size: 100%;
 	border: 1px solid #e2e2e2;
-	}
-	.wrapper {
-	display: grid;
-	grid-template-columns: 33% 33% 33% !important;
-	grid-gap: 10px;
-	background-color: #fff;
+	border-radius: 5px;
 	color: #444;
+	font-size: 100%;
+	padding: 0 25px 25px 25px;
 	}
 	.program-box-text {font-size: 16px; line-height: 20px; margin: }
 	.program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+
 </style>
 {% endblock %}
 {% block breadcrumbs %}
@@ -104,27 +115,27 @@
 											<p>Kinesiology is the academic discipline and interdisciplinary field of study focused on the science and management of physical activity and human movement within contexts such as exercise, health care, and sport.</p>
 										</div>
 									</div>
-									<div class="row emphasis margin-top-2">
-										<div class="container margin-top-2">
+									<div class="row emphasis margin-top-2 margin-bottom-2">
+										<div class="container margin-top-2 margin-bottom-2 margin-bottom-2">
 											<div class="third">
 												<div class="stat-number">
-													<h1 class="stat-number-large text-center">#6</h1>
+													<p class="stat-number-large text-center">#6</p>
 													<!-- <p class="stat-number-small">million</p> -->
-													<p class="text-center">School of Kinesiology’s national ranking among kinesiology doctoral programs reviewed by NAK in 2014</p>
+													<p class="stat-number-detail text-center">School of Kinesiology’s national ranking among kinesiology doctoral programs reviewed by NAK in 2014</p>
 												</div>
 											</div>
 											<div class="third">
 												<div class="stat-number">
-													<h1 class="stat-number-large text-center">514 | 153</h1>
+													<p class="stat-number-large text-center">514 | 153</p>
 													<!-- <p class="stat-number-small">million</p> -->
-													<p class="text-center">Undergraduate major and graduate students enrolled<br />(Fall 2019)</p>
+													<p class="stat-number-detail text-center">Undergraduate major and graduate students enrolled<br />(Fall 2019)</p>
 												</div>
 											</div>
 											<div class="third">
 												<div class="stat-number">
-													<h1 class="stat-number-large text-center">#336</h1>
+													<p class="stat-number-large text-center">#336</p>
 													<!-- <p class="stat-number-small">million</p> -->
-													<p class="text-center">Number of classes offered in 2018-19</p>
+													<p class="stat-number-detail text-center">Number of classes offered in 2018-19</p>
 												</div>
 											</div>
 										</div>
@@ -160,7 +171,7 @@
 															<img src="{{ config.base_url}}/assets/dist/images/home/Community_YouthSports.jpg" alt="Group of students stretching">
 															<figcaption>Group of students stretching</figcaption>
 														</figure>
-														
+
 														<!-- 	<img src="{{ config.base_url}}/assets/dist/images/home/Community_YouthSports.jpg" alt="Group of students stretching">
 													--></div>
 													<div class="half">

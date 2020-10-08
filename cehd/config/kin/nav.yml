@@ -10,7 +10,13 @@
 - name: Academics
   href: "/academics/"
   section: academics
-  subsections: null
+  subsections:
+    - name: Undergraduate
+      href: "/academics/undergraduate/"
+    - name: Graduate
+      href: "/academics/graduate/"
+    - name: Related Programs
+      href: "/academics/related/"
 - name: People
   href: "/people/"
   section: null

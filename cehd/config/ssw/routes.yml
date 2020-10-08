@@ -420,6 +420,11 @@
   publish: true
   template_data:
     - section: undergraduate
+/undergraduate/youth-studies-new/:
+  template: ssw/undergraduate/youth-studies-new.html
+  publish: true
+  template_data:
+    - section: undergraduate    
 /undergraduate/minors/:
   template: ssw/undergraduate/minors.html
   publish: true

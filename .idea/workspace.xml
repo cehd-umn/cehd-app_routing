@@ -1,7 +1,754 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="" />
+    <list default="true" id="9ac729dc-ba81-47e8-a321-ddd3a676ffcd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/app/KIN/KINApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/app/KIN/KINApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/config/edpsych/people/index.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/edpsych/people/index.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/config/edpsych/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/edpsych/routes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cehd/config/olpd/olpd/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/cehd/config/olpd/olpd/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/Readium/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/public/Readium/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/Readium/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/BSD_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/analytics/ExtensionAnalytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/background.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/epubReadingSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/extended-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/extended-worker-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/i18n/Strings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/icons/devBuild/large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/icons/devBuild/medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/icons/large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/icons/medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/icons/small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/storage/ChromeSettings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/chrome-app/storage/FileSystemStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/annotations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/library.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/readium_js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/settings.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/sourcesanspro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/viewer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/css/viewer_audio.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/embed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/bk01-toc.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch01.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch01s02.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch02.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch02s02.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch02s03.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03s02.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03s03.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03s04.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03s05.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch03s06.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/ch04.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/co01.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/cover.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/covers/9781449328030_lrg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/css/epub.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/css/synth.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/FreeSansBold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/FreeSerif.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/UbuntuMono-B.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/UbuntuMono-BI.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/UbuntuMono-R.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/fonts/UbuntuMono-RI.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/images/spi_global_ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/images/web/epub3_0401.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/lexicon/en.pls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/lexicon/fr.pls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/package.opf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/pr01.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/pr01s02.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/pr01s03.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/pr01s04.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/pr01s05.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/EPUB/spi-ad.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/META-INF/container.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/accessible_epub_3/mimetype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/epub_library.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/internal_link.epub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/css/commonltr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/css/epub.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/package.opf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/copyright.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li100.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li101.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li102.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li103.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li104.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li106.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li107.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li108.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li109.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li110.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li111.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li112.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li28.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li31.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li32.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li33.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li36.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li43.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li45.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li46.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li48.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li50.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li52.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li53.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li54.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li55.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li58.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li59.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li60.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li61.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li62.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li63.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li64.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li65.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li66.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li67.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li68.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li69.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li70.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li71.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li72.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li73.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li74.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li75.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li76.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li77.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li78.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li79.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li80.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li81.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li82.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li83.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li84.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li85.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li86.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li87.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li88.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li89.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li90.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li91.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li92.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li93.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li94.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li95.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li96.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li97.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/fcla-xml-2.30li98.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/EPUB/xhtml/titlepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/META-INF/container.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/linear-algebra/mimetype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/META-INF/container.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_001.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_002.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_003.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_004.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_005.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_006.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_007.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_008.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_009.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_010.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_011.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_012.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_013.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_014.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_015.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_016.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_017.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_018.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_019.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_020.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_021.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_022.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_023.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_024.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_025.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_026.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_027.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_028.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_029.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_030.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_031.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_032.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_033.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_034.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_035.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_036.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_037.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_038.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_039.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_040.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_041.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_042.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_043.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_044.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_045.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_046.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_047.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_048.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_049.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_050.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_051.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_052.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_053.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_054.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_055.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_056.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_057.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_058.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_059.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_060.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_061.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_062.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_063.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_064.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_065.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_066.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_067.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_068.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_069.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_070.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_071.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_072.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_073.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_074.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_075.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_076.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_077.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_078.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_079.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_080.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_081.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_082.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_083.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_084.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_085.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_086.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_087.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_088.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_089.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_090.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_091.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_092.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_093.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_094.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_095.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_096.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_097.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_098.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_099.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_100.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_101.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_102.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_103.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_104.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_105.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_106.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_107.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_108.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_109.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_110.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_111.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_112.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_113.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_114.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_115.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_116.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_117.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_118.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_119.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_120.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_121.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_122.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_123.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_124.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_125.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_126.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_127.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_128.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_129.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_130.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_131.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_132.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_133.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_134.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_135.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/chapter_136.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/copyright.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/cover.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/css/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/epigraph_001.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/fonts/STIXGeneral.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/fonts/STIXGeneralBol.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/fonts/STIXGeneralBolIta.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/fonts/STIXGeneralItalic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/images/9780316000000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/images/Moby-Dick_FE_title_page.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/introduction_001.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/package.opf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/preface_001.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/titlepage.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/toc-short.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/OPS/toc.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/moby_dick/mimetype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_000.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_001.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_002.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_003.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_004.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_005.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_006.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_007.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/PageBlanche_Page_008.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Content/cover.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/PageBlanche_Page_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Image/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Navigation/nav.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Navigation/toc.ncx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/Style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/EPUB/package.opf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/META-INF/container.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/epub_content/page-blanche/mimetype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/extend_require_config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/aliases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/clean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/concurrent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/copy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/crx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/cssmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/express.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/nodeunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/requirejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/run_grunt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/simplemocha.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/versioning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/grunt/watch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/Strings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/de/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/en_US/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/es/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/fr/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/id/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/it/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/ja/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/ko/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/pt_BR/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/zh_CN/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/i18n/_locales/zh_TW/messages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/about_readium_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/covers/cover8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/epub-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/epub_favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/glyphicons_115_text_smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/glyphicons_116_text_bigger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/ico_doublepage_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/ico_singlepage_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/library_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/margin1_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/margin4_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/pagination.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/pagination1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/partner_logos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/readium-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/readium_favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/images/readium_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/Dialogs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/EpubLibrary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/EpubLibraryManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/EpubReader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/EpubReaderBackgroundAudioTrack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/EpubReaderMediaOverlays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/Keyboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/PackageParser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/ReaderSettingsDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/ReaderSettingsDialog_Keyboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/Readium.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/ReadiumViewer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/ReadiumViewerLite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/Spinner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/analytics/Analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/console_shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/gestures.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/initialize_viewer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/mathjax/MathJax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/migration/MigrationManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/storage/EpubUnzipper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/storage/RemoteStorageManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/storage/Settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/storage/StaticStorageManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/URIjs/IPv6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/URIjs/SecondLevelDomains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/URIjs/URI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/URIjs/punycode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/almond.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/backbone-0.9.10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/console_shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/crypto-sha1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/deflate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/hammer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/hgn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/hogan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/inflate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/jath.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/jquery-1.11.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/jquery.hammer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/json2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/keymaster.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/remotestorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/screenfull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/spin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/text/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/text/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/text/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/text/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/underscore-1.4.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/zip-ext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/zip-fs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/thirdparty/zip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/versioning/PackagedVersioning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/versioning/UnpackagedVersioning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/workers/ContentTransformer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/workers/EpubLibraryWriter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/workers/Messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/lib/workers/WorkerProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/logos/mini-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/logos/readium (no glow).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/logos/readium rotated (no glow).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/logos/readium-rotated.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/logos/readium.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/readium-js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/require_config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/simpleviewer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/about-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/add-epub-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/details-body.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/details-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/empty-library.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/library-body.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/library-item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/library-navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/managed-buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/managed-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/progress-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/reader-body-page-btns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/reader-body.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/reader-navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/settings-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/templates/settings-keyboard-item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/epubs/accessible_epub_3.epub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/epubs/cc-shared-culture.epub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/old_tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/test.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Readium/tests/tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/css/umn-HF.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/css/umn-HF.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Abril_Fatface/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Abril_Fatface/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Lato/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Lato/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Playfair_Display/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Playfair_Display/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Raleway/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Raleway/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Vollkorn/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/fonts/Vollkorn/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/The-Changing-Story/web.config.old" beforeDir="false" afterPath="$PROJECT_DIR$/public/The-Changing-Story/web.config.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/cehd.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/cehd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/edpsych.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/edpsych.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/inline.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/inline.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/olpd.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/olpd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/ssw.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/minified/svg.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/minified/svg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/cehd/courses/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/cehd/courses/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/cehd/newsfeeds/sswhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/cehd/newsfeeds/sswhome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list-emeritus-middlename.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list-emeritus-middlename.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list-middlename.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list-middlename.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/person-page-middlename.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/olpd/people/person-page-middlename.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dist/views/ssw/about/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/views/ssw/about/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/extra.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/extra.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/kin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/kin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/js/cse.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/js/cse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/js/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/sass/_search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/sass/_search.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/sass/cse-results-html.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/sass/cse-results-html.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/src/sass/olpd.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/src/sass/olpd.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/transition.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dev-kin/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/dev-kin/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dev-kin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/dev-kin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/edpsych/assets/dist/css/minified/edpsych.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/edpsych/assets/dist/css/minified/edpsych.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/edpsych/assets/src/sass/_search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/edpsych/assets/src/sass/_search.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/edpsych/assets/src/sass/cse-results-html.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/edpsych/assets/src/sass/cse-results-html.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/edpsych/assets/src/sass/edpsych.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/edpsych/assets/src/sass/edpsych.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/olpd/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/olpd/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/about/dean-search-committee.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/about/dean-search-committee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/about/dean-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/about/dean-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/about/george-floyd-statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/about/george-floyd-statement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/calhoun.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/calhoun.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/casey.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/casey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/chidthachack-grande.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/chidthachack-grande.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/cottledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/cottledge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/doering.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/doering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/elmeski.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/elmeski.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/funk.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/funk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/galvin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/galvin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/gilchrist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/gilchrist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/gudjonsson.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/gudjonsson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/hoelscher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/hoelscher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/holmes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/holmes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/jang.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/jang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/kedrowski.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/kedrowski.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/lupinek.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/lupinek.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/melin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/melin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/petree.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/petree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/ridgeway.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/ridgeway.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/thao.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/thao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/williamsen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/williamsen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/yang.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/yang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/yeboah.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/rising/2019/yeboah.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/alumni/society/testimonials.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/alumni/society/testimonials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/directory/includes/people-search-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/directory/includes/people-search-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/future-building.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/future-building.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/recognition.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/recognition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/giving/wplc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/global/fellowships.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/global/fellowships.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/global/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/global/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/graduate/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/graduate/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/graduate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/graduate/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/graduate/scholarships.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/graduate/scholarships.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/nav/content/academics.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/includes/nav/content/academics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/includes/nav/content/alumni.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/includes/nav/content/alumni.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/career.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/career.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/extrnal-rel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/extrnal-rel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/grad-ed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/grad-ed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/hero-breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/international.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/international.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/ote.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/ote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/research.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/research.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/stu-serv.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/stu-serv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/transfer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/trio-m.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/trio-m.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/trio-sss.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/trio-sss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/layout/trio-ub.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/layout/trio-ub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/reads/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/reads/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/research/covid19.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/covid19.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/research/research-day - 2018 copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/research-day - 2018 copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/research/research-day.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/research-day.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/research/threeminute.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/research/threeminute.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/topics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/topics/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/trio/mcnair/ghere-scholarship.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/trio/mcnair/ghere-scholarship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/apply-draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/apply-draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/index-draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cehd/undergraduate/transfer/index-draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/asl/deaf-asl-resources.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/asl/deaf-asl-resources.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/advanced-practicum/advanced.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/advanced-practicum/advanced.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/advanced-practicum/documentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/advanced-practicum/documentation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/counselor-education/handbooks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/psych-foundations/psych-foundations-travel-funding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/psych-foundations/psych-foundations-travel-funding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/current/qme/qme-travel-funding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/current/qme/qme-travel-funding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/future-students/counselor-education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/future-students/counselor-education.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/minor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/minor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/counselor-education/hansen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/counselor-education/hansen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/counselor-education/sullivan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/counselor-education/sullivan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/foundations/minor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/foundations/minor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/schoolpsych/research-presentations.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/schoolpsych/research-presentations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/specialed/gap-year-classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/specialed/gap-year-classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/specialed/scholarships.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/specialed/scholarships.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/programs/undergrad-non-degree-seeking-courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/programs/undergrad-non-degree-seeking-courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/research/labs/mccomas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/research/labs/mccomas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edpsych/research/labs/vanboekel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edpsych/research/labs/vanboekel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/academics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/academics/phd2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/academics/phd2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/home-hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/home-hero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/home-slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/home-slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/includes/nav/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kin/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kin/search/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index-revision" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index-revision" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index-revision.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index-revision.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cide/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestcourses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestcourses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestgradminor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestgradminor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestliie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestliie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestma.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestphd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestphd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestresearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/cidetestresearch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/mctl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/mctl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/mctl/ma.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/mctl/ma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/graduate-programs/resources-copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/graduate-programs/resources-copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/layout/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/layout/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/olpd/nav.yml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/olpd/nav.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/olpd/people/extra_content.yml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/olpd/people/extra_content.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/olpd/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/olpd/routes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/cide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/cide/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/cide/seith004.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/cide/seith004.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/epl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/es/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/es/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/he/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/he/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/hrd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/hrd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/people/students/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/people/students/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/student-travel-grant-draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/student-travel-grant-draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/student-travel-grant.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/student-travel-grant.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/visiting-scholar-program-application.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/visiting-scholar-program-application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/olpd/visiting-scholar-program.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/olpd/visiting-scholar-program.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/about/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/about/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/about/news-events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/about/news-events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/gbolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/gbolo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/hussein.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/hussein.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/jordahl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/jordahl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/moua.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/moua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/schoeppner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/schoeppner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/sugrue.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/sugrue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/testimonials.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/testimonials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/trumanue.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/trumanue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/alumni/walz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/alumni/walz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/articles/experiential-learning.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/articles/experiential-learning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/articles/kivnick-memorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/articles/kivnick-memorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/articles/somali-mental-health.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/articles/somali-mental-health.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/centers/incommunity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/centers/incommunity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/centers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/centers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/centers/youth-work-lab.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/centers/youth-work-lab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/SWITCH.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/SWITCH.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/apply-phd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/apply-phd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/current-phd-students.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/current-phd-students.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/diversity-social-work-advancement-program.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/diversity-social-work-advancement-program.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/eloise-elliot-kaplan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/eloise-elliot-kaplan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/faq-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/faq-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/funding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/funding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/graduation - Copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/graduation - Copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/graduation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/graduation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/integrated-behavioral-health.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/integrated-behavioral-health.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/job-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/job-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/john-wallace-fellowship.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/john-wallace-fellowship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/kente-circle-placement-fellowship.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/kente-circle-placement-fellowship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/master-of-social-work.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/master-of-social-work.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-CMH-adv-standing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-CMH-adv-standing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-credit-transfer-policies.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-credit-transfer-policies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-field-fair.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-field-fair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-field-instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-field-instruction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-how-to-apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-how-to-apply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-meet.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-meet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-mission.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-mission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-programs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-requirements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-requirements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/msw-transfer-apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/msw-transfer-apply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/non-degree-seeking-students.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/non-degree-seeking-students.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/phd-candidates.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/phd-candidates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/phd-in-social-work.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/phd-in-social-work.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/phd-publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/phd-publications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/title-iv-e-child-welfare-training-fellowship.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/title-iv-e-child-welfare-training-fellowship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/transfer-students.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/transfer-students.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/weisdorf-oncology.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/weisdorf-oncology.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/youth-development-leadership-how-to-apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/youth-development-leadership-how-to-apply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/graduate/youth-development-leadership.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/graduate/youth-development-leadership.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/home-hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/home-hero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/home-slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/home-slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/layout/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/layout/breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research-centers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research-centers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/disability-aging.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/disability-aging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/families-children.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/families-children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/mental-health.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/mental-health.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/methodology.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/methodology.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/social-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/social-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/research/youth-development.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/research/youth-development.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/search/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/slider-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/slider-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/undergraduate/2020changeslanding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/undergraduate/2020changeslanding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/undergraduate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/undergraduate/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/undergraduate/minors.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/undergraduate/minors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ssw/undergraduate/youth-studies-major.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ssw/undergraduate/youth-studies-major.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/AUTHORS.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/AUTHORS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/templates/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/templates/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/tests/fixtures/empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/tests/fixtures/empty.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/truetone/peloton/tests/fixtures/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/truetone/peloton/tests/fixtures/yaml.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +905,7 @@
       <workItem from="1601401567518" duration="2910000" />
       <workItem from="1601456688098" duration="6771000" />
       <workItem from="1601562057292" duration="1145000" />
+      <workItem from="1602086096763" duration="2593000" />
     </task>
     <servers />
   </component>
