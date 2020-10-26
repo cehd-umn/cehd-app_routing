@@ -1,0 +1,127 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Undergraduate" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .box:hover {background: #fc3;}
+    @media all and (max-width: 620px) {
+    .half {
+    width: 100%;
+    }
+    }
+    .box {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 100%;
+    padding: 0 25px 25px 25px;
+    }
+    #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    /* color: #000;*/
+    text-decoration: none;
+    }
+    #maincontent .box a, #maincontent .box a:link p {
+    /*color: #000;*/
+    }
+    .program-box-text {font-size: 16px; line-height: 20px; margin: }
+    .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+        <div class="container">
+            <h1>Undergraduate majors and minors</h1>
+            <div class="feature twothirds">
+                <p>The School of Kinesiology’s undergraduate programs are tied to our mission of advancing knowledge about physical activity and human movement. Students can choose a major or minor program that will allow them to study the science and management of physical activity and human movement within the contexts of exercise, health care, and sport.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-4 margin-bottom-3">
+        <div class="container">
+            <h2>Explore the undergraduate majors and minors opportunities</h2>
+            <!--                 <h3>Explore the undergraduate majors and minors opportunities</h3>
+            -->
+            <div class="wrapper">
+                <div class="box a">
+                    <h4><a href="/dev-kin/undergraduate/kin/">Kinesiology BS</a></h4>
+                    
+                </div>
+                <div class="box b">
+                    <h4><a href="/dev-kin/undergraduate/smgt/">Sport Management BS</a></h4>
+                    
+                </div>
+                <div class="box c">
+                    <h4><a href="/dev-kin/undergraduate/coaching-minor/">Sports Coaching Minor</a></h4>
+                    
+                </div>
+                <div class="box d">
+                    <h4><a href="/dev-kin/undergraduate/health-pro-minor/">Health and Wellness Promotion Minor</a></h4>
+                    
+                </div>
+                <div class="box d">
+                    <h4><a href="/dev-kin/undergraduate/smgt-minor/">Sport Management Minor</a></h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half">
+                <h2>University Honors Program</h2>
+                <p><a href="https://honors.umn.edu/">The University Honors Program</a> (UHP) seeks to provide students with a rich environment in which to pursue an enhanced undergraduate experience.</p>
+                <p>Honors students who are admitted to the School of Kinesiology participate in directed research and thesis writing in the physical activities sciences, designed to provide the most significant and challenging experience faculty can offer to undergraduates. Learn more about what being a <a href="https://www.cehd.umn.edu/kin/academics/undergrad/honors.html">School of Kinesiology Honors student</a></p>
+                
+                <h2>Financial aid</h2>
+                <p>The School, College, and University all offer financial aid opportunities for students. Use the following resources to see available funding opportunities:</p>
+                <ul>
+                    <li><a href="/dev-kin/scholarships/">School scholarship</a></li>
+                    <li><a href="http://www.cehd.umn.edu/undergraduate/tuition.html">CEHD tuition, fees and funding opportunities</a></li>
+                    <li><a href="http://onestop.umn.edu/finances/financial_aid/scholarships/">University of Minnesota scholarships</a></li>
+                    <li><a href="http://onestop.umn.edu/finances/receiving-financial-aid">University of Minnesota financial aid</a></li>
+                </ul>
+            </div>
+            <div class="half">
+                <h2>Research opportunities</h2>
+                <p>The School of Kinesiology houses fourteen labs and centers that specialize in a wide variety of research. Much of the research conducted in the School is interdisciplinary and involves collaborative partnerships with life science disciplines such as medicine, neuroscience, and epidemiology, and fosters links with business, education, and social sciences. Review each lab or center web page for more information about specific projects. </p>
+                <h3>Undergraduate research opportunities program</h3>
+                <p>Undergraduate students who are interested in participating in research projects should do so through the Undergraduate Research Opportunities Program (UROP). Housed in the Office of Undergraduate Research program, UROP facilitates undergraduate participation in faculty-mentored research projects. Funding opportunities exist and the programs are flexible, allowing research study in any academic area University-wide.</p>
+                <p class="text-notice">Link to Directed Research Contract</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="half">
+                <h2>Studying away from campus</h2>
+                <p>Visit the <a href="https://umabroad.umn.edu">Learning Abroad Center</a> to review the learning abroad opportunities that are  <a href="https://umabroad.umn.edu/students/maps/cehd/sports-management">tailored to Sport Management students</a>, and opportunities that are  <a href="https://umabroad.umn.edu/students/maps/cehd/kinesiology">tailored to Kinesiology students</a>.</p>
+                <p class="text-notice">Feature images and stories from School of Kinesiology programs.</p>
+                <ul>
+                    <li><a href="https://umnkinesiology.wordpress.com/2020/03/09/kinesiology-study-abroad-students-explore-london-via-boat/">Story one</a> (London)</li>
+                    <li><a href="https://umnkinesiology.wordpress.com/2019/09/16/study-abroad-trip-to-china-is-unforgettable-experience-for-kinesiology-student-karl-dischinger/">Story two</a> (Beijing)</li>
+                    <li><a href="https://umnkinesiology.wordpress.com/2020/03/04/where-will-a-kinesiology-degree-take-you/">Story three</a> (Kenya)</li>
+                </ul>
+            </div>
+            <div class="half">
+                <h2>Student orgs</h2>
+                <p>Joining a <a href="https://sua.umn.edu/get-involved/student-groups">student organization</a> is a great way to get involved, meet new friends and contacts, and enhance your UMN experience. It can also give you a valuable advantage in your career, allowing you to make connections and gain work experience.</p>
+                <p>Kinesiology students often find value in the following student organizations:</p>
+                <ul>
+                    <li><a href="https://gopherlink.umn.edu/organization/1881">Undergraduate Public Health Association</a></li>
+                    <li><a href="https://gopherlink.umn.edu/organization/1970">Pre-Physical Therapy Club</a></li>
+                    <li><a href="https://gopherlink.umn.edu/organization/2067">Pre-Occupational Therapy Club</a></li>
+                    <li><a href="http://kinsc.umn.edu">School of Kinesiology Student Council</a></li>
+                </ul>
+                <p>Sport Management students often find value in the following student organizations:</p>
+                <ul>
+                <li><a href="http://sua.umn.edu/groups/directory/group/1955/">Sports Management Association (SMA)</a></li>
+                <li><a href="http://sua.umn.edu/groups/directory/group/3116/">Women in Sports Careers (WISC)</a></li>
+                <li><a href="http://kinsc.umn.edu">School of Kinesiology Student Council</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

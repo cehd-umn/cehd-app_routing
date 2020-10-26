@@ -1,0 +1,155 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Scholarships" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .box:hover {background: #fc3;}
+    @media all and (max-width: 620px) {
+    .half {
+    width: 100%;
+    }
+    }
+    .box {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 100%;
+    padding: 0 25px 25px 25px;
+    }
+    #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    color: #000;
+    text-decoration: none;
+    }
+    #maincontent .box a, #maincontent .box a:link p {
+    /*color: #000;*/
+    }
+    .program-box-text {font-size: 16px; line-height: 20px; margin: }
+    .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+        <div class="container">
+            <h1>Scholarships</h1>
+            <div class="row margin-top-4 margin-bottom-3">
+                <div class="container">
+                    <h2 class="text-center">School of Kinesiology Scholarships</h2>
+                    <p class="text-center">The application system is now open, with a March 1, 2020 deadline</p>
+                    <div class="wrapper">
+                        <div class="box a">
+                            <a href="/dev-kin/giving/fund-6388/">
+                                <h3>Dorothy McNeill Tucker Fellowship Fund</h3>
+                                <p><strong>Award:</strong> $1000-$3000 (1-2 awards)</p>
+                                <p>Funding for graduate students working with the Tucker Center for Research on Girls & Women in Sports.</p>
+                            </a>
+                        </div>
+                        <div class="box b">
+                            <a href="/dev-kin/giving/fund-5216/">
+                                <h3>Edith Mueller Endowed Fund for Graduate Education in the Tucker Center</h3>
+                                <p><strong>Award:</strong> $1000-$5000 (1-3 awards)</p>
+                                <p>The income from the fund will be used to support graduate education, including but not limited to graduate assistantships, research support, travel to conferences, and equipment.</p>
+                            </a>
+                        </div>
+                        <div class="box c">
+                            <a href="/dev-kin/giving/fund-4266/">
+                                <h3>Edith Mueller Memorial Fund</h3>
+                                <p><strong>Award:</strong> $1000-$2000 (1-2 awards)</p>
+                                <p>The Edith Mueller Memorial Award seeks to reward participation and enthusiasm of undergraduate students pursuing a program in Sport Management.</p>
+                            </a>
+                        </div>
+                        <div class="box d">
+                            <a href="/dev-kin/giving/fund-4449/">
+                                <h3>Eloise M. Jaeger Scholarship at the Tucker Center</h3>
+                                <p><strong>Award:</strong> $1000-$5000 (1-3 awards)</p>
+                                <p>To provide scholarships in the Tucker Center for Research on Girls & Women in Sport.</p>
+                            </a>
+                        </div>
+                        <div class="box e">
+                            <a href="/dev-kin/giving/fund-5080/">
+                                <h3>Frances Kidd Endowed Scholarship</h3>
+                                <p><strong>Award:</strong> $500-$1200 (1-3 awards)</p>
+                                <p>To provide scholarships to undergraduate students studying Kinesiology (formerly Physical Education students).</p>
+                            </a>
+                        </div>
+                        <div class="box f">
+                            <a href="/dev-kin/giving/fund-0496/">
+                                <h3>J Anna Norris Scholarship Fund</h3>
+                                <p><strong>Award:</strong> $500-4500 (1-3 awards)</p>
+                                <p>A loan, gift or scholarship for promising students with financial need engaged in professional preparation in the School of Kinesiology.</p>
+                            </a>
+                        </div>
+                        <div class="box g">
+                            <a href="/dev-kin/giving/fund-21752/">
+                                <h3>Roger W. and Ann T. Drinkwalter Fellowship for Nutrition Research</h3>
+                                <p><strong>Award:</strong> $750-1200 (1-2 awards)</p>
+                                <p>Fellowships in nutrition research to be awarded to graduate students pursuing research on aspects of nutrition as an important context for critical factors related to health and wellbeing.</p>
+                            </a>
+                        </div>
+                        <div class="box h">
+                            <a href="/dev-kin/giving/fund-3583/">
+                                <h3>School of Kinesiology Scholarship Fund</h3>
+                                <p><strong>Award:</strong> $200-$750 (1-3 awards)</p>
+                                <p>To provide scholarships to students in the School of Kinesiology.</p>
+                            </a>
+                        </div>
+                        <div class="box i">
+                            <a href="/dev-kin/giving/fund-8644/">
+                                <h3>Tucker Center Graduate Fellowship for Gender Equity in Sport</h3>
+                                <p><strong>Award:</strong> $1000-$5000 (1-2 awards)</p>
+                                <p>The Tucker Center Graduate Fellowship for Gender Equity in Sport provides funding for graduate fellowships in the Tucker Center for Research on Girls & Women in Sport.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="half">
+                <h2>University-wide scholarships</h2>
+                <ul class="no-bullet">
+                    <li><a href="http://onestop.umn.edu/finances/financial_aid/scholarships/">One Stop Student Services scholarships information</a></li>
+                    <li><a href="http://admissions.tc.umn.edu/costsaid/schol_campus.html">Office of Admissions University-wide academic scholarships</a></li>
+                    <li><a href="https://cogs.umn.edu/grants">Council of Graduate Students (COGS) grants</a></li>
+                    <li><a href="http://www.sphc.umn.edu/undergraduate-child-care-assistance-grants-and-other-funding">Student Parent Help Center funding</a></li>
+                </ul>
+                <h2>Graduate School Fellowships</h2>
+                <ul class="no-bullet">
+                    <li><a href="http://www.grad.umn.edu/funding-tuition/fellowshipsandgrants">Graduate School Fellowship Office</a>
+                    <p>See especially:</p>
+                    <ul class="no-bullet">
+                        <li><a href="https://www.grad.umn.edu/funding-tuition/ddf">Doctoral Dissertation Fellowship (DDF)</a></li>
+                        <li><a href="https://www.grad.umn.edu/diversity-faculty-staff/dove">Diversity of Views and Experiences (DOVE)</a></li>
+                        <li><a href="https://www.grad.umn.edu/funding-tuition-fellowships-grants/excellence-teaching-award">Excellence in Teaching Award</a></li>
+                        <li><a href="https://grad.umn.edu/funding/current-students/apply-through-program/interdisciplinary-doctoral-fellowship">Interdisciplinary Doctoral Fellowship IDF)</a></li>
+                        <li><a href="https://www.grad.umn.edu/funding-tuition/thesis-research-travel-grant">Thesis Research Travel Grants</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="half">
+                <h2>School of Kinesiology Graduate Student Fundings</h2>
+                <ul class="no-bullet">
+                    <li>Doctoral Student Travel Award-RFP (<a href="/kin/library/docs/grad/RFPDoctoralStudentTravelAward 2019-20 (1).pdf">PDF</a>)</li>
+                    <li>MA/MS Student Travel Award-RFP (<a href="/kin/library/docs/grad/RFPMasterStudentTravelAward 2019-20 (1).pdf">PDF</a>)</li>
+                    <li>CEHD Grants to Advance Graduate Education (GAGE) Fellowship <a href="/kin/library/docs/grad/CEHD GAGE Fellowship 2019 award announcement_FINAL_12.11.18.pdf">(PDF)</a></li>
+                </ul>
+                <h2>College of Education and Human Development Scholarships and Awards</h2>
+                
+                <ul class="no-bullet">
+                    <li><a href="http://www.cehd.umn.edu/graduate/cehd-aid.html">Professional and graduate scholarships and awards</a></li>
+                    <li><a href="http://www.cehd.umn.edu/undergraduate/scholarships/">Undergraduate scholarships and awards</a></li>
+                    <li><a href="http://www.cehd.umn.edu/graduate/scholarships/">Graduate Student Fellowships</a></li>
+                    
+                    <p>See especially:</p>
+                    <ul class="no-bullet">
+                        <li><a href="/kin/library/docs/awards/RFP-Hauge-2019-20.pdf">Hauge Fellowship</a></li>
+                        <li><a href="http://www.cehd.umn.edu/graduate/scholarships/">Seashore Graduate Fellowship</a></li>
+                        <li><a href="http://www.cehd.umn.edu/giving/wplc/awards/">Women's Philanthropic Leadership Circle Graduate Awards (WPLC)</a></li>
+                        <li><a href="https://innovation.umn.edu/gradsehd/gradsehd-grants/">Graduate Students in Education and Human Development (GradSEHD)</a></li>
+                    </ul>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Graduate Assistants" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Graduate assistants</h1>
+        <div id="faculty-container" class="loader-container" aria-live="polite"
+             data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
+             data-tag="248" {# This is the id of the tag from the People tool #}
+             data-target-element-selector="#faculty-container" {# The element selector for the feed html #}
+             data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
+             data-template-name="list.html" {# The name of the Nunjucks template #}
+             data-base-path="{{ config.base_url }}"
+             data-people-per-group="2"> {# How many people to put in each group #}
+            <div class="loader">
+                <div class="loader-figure "></div>
+                <p class="loader-label">Loading&hellip;</p>
+            </div>
+        </div>
+    </div>
+</div><!-- close row -->
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="/assets/dist/js/people.min.js"></script>
+{% endblock %}

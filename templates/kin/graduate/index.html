@@ -1,0 +1,96 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Graduate" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .box:hover {background: #fc3;}
+    @media all and (max-width: 620px) {
+    .half {
+    width: 100%;
+    }
+    }
+    .box {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 100%;
+    padding: 0 25px 25px 25px;
+    }
+    #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    /*    color: #000;*/
+    text-decoration: none;
+    }
+    #maincontent .box a, #maincontent .box a:link p {
+    /*color: #000;*/
+    }
+    .program-box-text {font-size: 16px; line-height: 20px; margin: }
+    .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+        <div class="container">
+            <h1>Graduate degrees</h1>
+            <div class="feature twothirds">
+                <p>The School of Kinesiology offers both professional and research-based graduate programs. Each program provides a tailored education experience meant to enhance the understanding of the science and management of physical activity and human movement. Students have a variety of tracks and emphasis areas to choose from to create a customized program that fits their individual goals.</p>
+                <p>The School of Kinesiology offers different types of master’s degree programs: The Master of Science/Master of Art (research based) and the Master of Education (professional based). <a href="http://backstage.cehd.umn.edu/dev-kin/graduate/masters-compare/">Find out which program</a> is right for you.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row margin-top-4 margin-bottom-3">
+                <div class="container">
+                    <h2>Graduate degrees</h2>
+                    <div class="wrapper">
+                        <div class="box a">
+                            <h3><a href="/dev-kin/graduate/kin-phd/">Kinesiology PhD</a></h3>
+                            
+                        </div>
+                        <div class="box b">
+                            <h3><a href="/dev-kin/graduate/kin-ms/">Kinesiology MS</a></h3>
+                            
+                        </div>
+                        <div class="box c">
+                            <h3><a href="/dev-kin/graduate/smgt-med/">Sport Management MA</a></h3>
+                            
+                        </div>
+                        <div class="box d">
+                            <h3><a href="/dev-kin/graduate/pah-med/">Physical Activity and Health MEd</a></h3>
+                            
+                        </div>
+                        <div class="box d">
+                            <h3><a href="/dev-kin/graduate/ses-med/">Sport and Exercise Science MEd</a></h3>
+                            
+                        </div>
+                        <div class="box f">
+                            <h3><a href="/dev-kin/graduate/smgt-med/">Sport Management MEd</a></h3>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="row margin-top-4 margin-bottom-3">
+                <div class="container">
+                    <div class="half">
+            <h2>Current student Resources</h2>
+            <p><a href="http://kingrad.umn.edu/">Explore resources</a> for current graduate students.</p>
+            <h2>Financial aid</h2>
+            <p>The School, College, and University all offer financial aid opportunities for students. Use the following resources to see available funding opportunities:</p>
+            <ul>
+                <li><a href="https://www.cehd.umn.edu/kin/academics/scholarships/default.html">School scholarships</a></li>
+                <li><a href="http://www.cehd.umn.edu/undergraduate/tuition.html">CEHD tuition, fees and funding opportunities</a></li>
+                <li><a href="http://onestop.umn.edu/finances/financial_aid/scholarships/">University of Minnesota scholarships</a></li>
+                <li><a href="http://onestop.umn.edu/finances/receiving-financial-aid">University of Minnesota financial aid</a></li>
+            </ul>
+        </div>
+        <div class="half">
+            <h2>Research Opportunities</h2>
+            <p>The School of Kinesiology houses fourteen labs and centers that specialize in a wide variety of research. Much of the research conducted in the School is interdisciplinary and involves collaborative partnerships with life science disciplines such as medicine, neuroscience, and epidemiology, and fosters links with business, education, and social sciences. <a href="/dev-kin/research/labs/">Review each lab or center web page for more information about specific projects.</a></p>
+            <h2>Student orgs</h2>
+            <p>Joining a <a href="https://sua.umn.edu/get-involved/student-groups">student organization</a> is a great way to get involved, meet new friends and contacts, and enhance your UMN experience. Check out the <a href="http://kinsc.umn.edu">School of Kinesiology Student Council</a> website for more information about what they do and how to become involved. </p>
+        </div>
+    </div>
+    </div>
+    
+{% endblock %}

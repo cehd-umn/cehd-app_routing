@@ -1,0 +1,97 @@
+{% extends "edpsych/layout/section.html" %}
+{%- import "macros/ga-tracking.html" as analytics -%}
+{% set page_title = "Learn more about earning your MA or PhD in special education" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block heading_1 %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<style>
+#SvgjsTspan1012 {
+  fill: #fff;
+}
+</style>
+<div class="row">
+    <div class="container">
+        <h2 class="h1 text-center">Learn more about earning your MA or PhD in special education</h2>
+        <section>
+          <div class="half">
+            <img src="{{ config.base_url}}/assets/dist/images/programs/specialed/special-ed-aba-web.jpg" alt="Jennifer McComas presents to special education students.">
+            <figcaption>Jennifer McComas, head of the special education MA with an emphasis in ABA program, presents to special education students.</figcaption>
+          </div>
+        <div class="half">
+            <h2 class="no-margin-top">Help all students get the support they need to succeed.</h2>
+                <p>At the University of Minnesota, it's our mission to help Earn your graduate degree in one of our research-focused special education programs, including:</p>
+                <h3><a href="{{ config.base_url }}/programs/specialed/phd/">Doctorate</a></h3>
+                        <p>Conduct research in special education and train other researchers and special educators.</p>
+                <h3><a href="{{ config.base_url }}/programs/specialed/masters/">Master of arts</a></h3>
+                    <p>Conduct research or work toward your PhD.</p>
+                <h3><a href="/programs/specialed/masters-aba/">Special education master's with an emphasis
+in applied behavior analysis (ABA)</a></h3>
+    <p>Prepare to become a board certified behavior analyst.</p>
+</div>
+</div>
+<div class="row margin-top-1">
+        <div class="container feature margin-top-2">
+            {# make sure the SVG container has a unique id #}
+            <div id="circle"
+                data-svg-stat-group
+                data-viewbox-x="0"
+                data-viewbox-y="0"
+                data-viewbox-height="250"
+                data-viewbox-width="1400"
+                data-circle-center-x="300"
+                data-circle-center-y="125"
+                data-circle-size="250"
+                data-circle-bg-color="#7a0019"
+                data-main-text-x="460"
+                data-main-text-y="90"
+                data-main-text-color="#000"
+                data-main-text-font-family="Lato-light, sans-serif"
+                data-main-text-font-size="30px"
+                data-main-text-lines='["in the U.S. among special education graduate programs"]'
+                data-stat-text-value="#9"
+                data-stat-text-x="235"
+                data-stat-text-y="50"
+                data-stat-text-color="#fff"
+                data-stat-text-font-family="Raleway, sans-serif"
+                data-stat-text-font-size="70"
+                data-caption-text-value="source: Ranked in 2020 by U.S. News & World Report"
+                data-caption-text-x="460"
+                data-caption-text-y="210"
+                data-caption-text-color="#000"
+                data-caption-text-font-family="Raleway, sans-serif"
+                data-caption-text-font-size="13px"
+                data-line-start-x="0"
+                data-line-start-y="200"
+                data-line-end-x="1400"
+                data-line-end-y="200"
+                data-line-stroke-width="10"
+                data-line-stroke-color="#eee"
+                data-line-stroke-opacity=".6"
+            ></div>
+          </div>
+</div>
+    <div class="container">
+</div>
+</div>
+<div class="row">
+    <div class="container">
+      <h2 class="text-center">Faculty</h2>
+        <section class="margin-top-1">
+           <div class="half">
+              <div class="span-3">
+                <img src="http://apps.cehd.umn.edu/people/Headshot/McComasJ_2017.jpg" alt="Jennifer McComas headshot">
+              </div>
+              <div class="span-9">
+                <h4 class="h5 no-margin-top"><a href="{{ config.base_url }}/people/jmccomas/">Jennifer McComas</a><small class="clear h6 light">Head special education MA with emphasis in ABA and emotional behavioral disorders licensure &amp; MEd program<br />
+                  <a href="mailto:jmccomas@umn.edu">jmccomas@umn.edu</a> | <a href="{{ config.base_url }}/research/labs/mccomas/">Lab</a></small></h4>
+                  <ul>
+                    <li>Functional analysis of problem behavior in educational and residential settings</li>
+                    <li>Basic behavioral processes maintaining desirable and undesirable behavior, such as schedules of reinforcement, stimulus control, and establishing operations</li>
+                    <li>Behavioral treatment of problem behavior based on concurrent schedules of reinforcement as well as antecedent stimuli</li>
+                    <li>Analysis of academic performance of students with behavior problems</li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+        </section>
+{% endblock %}

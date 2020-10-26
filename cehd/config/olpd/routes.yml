@@ -55,6 +55,11 @@
   publish: true
   template_data:
     - section: about
+/apply/:
+  template: olpd/apply/index.html
+  publish: true
+  template_data:
+    - section: home
 /giving/:
   template: olpd/giving.html
   publish: true
@@ -715,8 +720,23 @@
   publish: true
   template_data:
     - section: people
+/people/students/epl/atchi030/:
+  template: olpd/people/students/epl/atchi030.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/epl/berg2939/:
+  template: olpd/people/students/epl/berg2939.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/epl/karl0173/:
   template: olpd/people/students/epl/karl0173.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/epl/jenki259/:
+  template: olpd/people/students/epl/jenki259.html
   publish: true
   template_data:
     - section: people
@@ -724,7 +744,7 @@
   template: olpd/people/students/epl/poexx024.html
   publish: true
   template_data:
-    - section: people    
+    - section: people
 /people/students/epl/stant171/:
   template: olpd/people/students/epl/stant171.html
   publish: true
@@ -742,6 +762,11 @@
     - section: people
 /people/students/es/:
   template: olpd/people/students/es/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/es/ahmad210/:
+  template: olpd/people/students/es/ahmad210.html
   publish: true
   template_data:
     - section: people

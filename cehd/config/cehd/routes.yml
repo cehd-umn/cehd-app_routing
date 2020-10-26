@@ -1929,16 +1929,6 @@
   template: cehd/teaching/clinical.html
   template_data:
     - section: teaching
-/teaching/grow/:
-  publish: true
-  template: cehd/teaching/grow/index.html
-  template_data:
-    - section: teaching
-/teaching/grow/district/:
-  publish: true
-  template: cehd/teaching/grow/district.html
-  template_data:
-    - section: teaching
 /teaching/grow/teacher/:
   publish: true
   template: cehd/teaching/grow/teacher.html

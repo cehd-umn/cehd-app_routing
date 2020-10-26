@@ -1,0 +1,59 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Non-degree" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .box:hover {background: #fc3;}
+    @media all and (max-width: 620px) {
+    .half {
+    width: 100%;
+    }
+    }
+    .box {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 100%;
+    padding: 0 25px 25px 25px;
+    }
+    #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    color: #000;
+    text-decoration: none;
+    }
+    /*    #maincontent .box a, #maincontent .box a:link p {
+    color: #000;
+    }*/
+    .program-box-text {font-size: 16px; line-height: 20px; margin: }
+    .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+        <div class="container">
+            <h1>Information for non-degree students</h1>
+        </div>
+        <div class="container">
+            
+            <div class="row margin-top-4 margin-bottom-3">
+                <div class="container">
+                    <h2>Non-degree programs</h2>
+                    <div class="wrapper">
+                        <div class="box a">
+                            <h3><a href="http://backstage.cehd.umn.edu/dev-kin/non-degree/physical-activity/">Physical Activity Program</a></h3>
+                        </div>
+                        <div class="box b">
+                            <h3><a href="http://backstage.cehd.umn.edu/dev-kin/non-degree/coaching/">Coaching Certificate</a></h3>
+                        </div>
+                        <div class="box b">
+                            <h3><a href="http://backstage.cehd.umn.edu/dev-kin/non-degree/study-abroad/">Study Abroad</a></h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

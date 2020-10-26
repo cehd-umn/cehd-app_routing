@@ -1,8 +1,6 @@
 {% extends "kin/layout/base.html" %}
 {% set page_title = "Academics" %}
-{% block title %}
-About Us
-{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 <style>
 .box:hover {background: #fc3;}
@@ -19,6 +17,10 @@ About Us
     font-size: 100%;
     padding: 0 25px 25px 25px;
     }
+/*      #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    text-decoration: none;
+    }*/
     .program-box-text {font-size: 16px; line-height: 20px; margin: }
     .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
 
@@ -33,55 +35,47 @@ About Us
 
 
     <div class="container">
-         <!--NOTE: phd2 is the EMPAISI PhD landing page 
-        <div class="half">
-            <h2><a href="/dev-kin/academics/phd1/">Kinesiology Ph.D. Example 1</a></h2>
-        </div>-->
-
- <!--NOTE: phd2 is the MAIN PhD landing page 
-        <div class="half">
-            <h2><a href="/dev-kin/academics/phd2/">Kinesiology Ph.D. Example 2</a></h2>
-        </div>-->
     </div>
 
 
 </div>
-            <div class="row margin-top-4 margin-bottom-3">
-                                            <div class="container">
-                                                <h2 class="text-center">Learn with us</h2>
-                                                <div class="wrapper">
-                                                    <div class="box a">
-                                                        <h3>Undergraduate</h3>
-                                                        <ul class="no-bullet">
-                                                            <li><a href="#">Kinesiology BS</a></li>
-                                                            <li><a href="http://backstage.cehd.umn.edu/dev-kin/undergraduate/sports-management/">Sport Management BS</a></li>
-                                                            <li><a href="#">Sports Coaching Minor</a></li>
-                                                            <li><a href="#">Health and Wellness Promotion Minor</a></li>
-                                                            <li><a href="#">Sport Management Minor</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="box b">
-                                                        <h3>Graduate</h3>
-                                                        <ul class="no-bullet">
-                                                             <!-- phd2 is the MAIN PhD landing page -->
-                                                            <li><a href="http://backstage.cehd.umn.edu/dev-kin/academics/phd2/">Kinesiology PhD</a></li>
-                                                            <li><a href="#">Kinesiology MS</a></li>
-                                                            <li><a href="#">Sport Management MA</a></li>
-                                                            <li><a href="#">Physical Activity and Health MEd</a></li>
-                                                            <li><a href="#">Sport and Exercise Science MEd</a></li>
-                                                            <li><a href="#">Sport Management MEd</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="box c">
-                                                        <h3>Non-Degree Programs</h3>
-                                                        <ul class="no-bullet">
-                                                            <li><a href="#">Physical Activity Program</a></li>
-                                                            <li><a href="#">Coaching Certificate</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div><!-- end container -->
+<div class="row margin-top-4 margin-bottom-3">
+    <div class="container">
+        <h2 class="text-center">Learn with us</h2>
+        <div class="wrapper">
+            <div class="box a">
+                <h3>Undergraduate</h3>
+                <ul class="no-bullet">
+                    <li><a href="/dev-kin/undergraduate/kin/">Kinesiology BS</a></li>
+                    <li><a href="/dev-kin/undergraduate/smgt/">Sport Management BS</a></li>
+                    <li><a href="/dev-kin/undergraduate/coaching-minor/">Sports Coaching Minor</a></li>
+                    <li><a href="/dev-kin/undergraduate/health-pro-minor/">Health and Wellness Promotion Minor</a></li>
+                    <li><a href="/dev-kin/undergraduate/smgt-minor/">Sport Management Minor</a></li>
+                </ul>
+            </div>
+            <div class="box b">
+                <h3>Graduate</h3>
+                <ul class="no-bullet">
+                    <li><a href="/dev-kin/graduate/kin-phd/">Kinesiology PhD</a></li>
+                    <li><a href="/dev-kin/graduate/kin-ms/">Kinesiology MS</a></li>
+                    <li><a href="/dev-kin/graduate/smgt-med/">Sport Management MA</a></li>
+                    <li><a href="/dev-kin/graduate/pah-med/">Physical Activity and Health MEd</a></li>
+                    <li><a href="/dev-kin/graduate/ses-med/">Sport and Exercise Science MEd</a></li>
+                    <li><a href="/dev-kin/graduate/smgt-med/">Sport Management MEd</a></li>
+                    <li><a href="/dev-kin/graduate/masters-compare/">MS/MA versus MEd</a></li>
+                </ul>
+            </div>
+            <div class="box c">
+                <h3>Non-Degree Programs</h3>
+                <ul class="no-bullet">
+                    <li><a href="/dev-kin/non-degree/physical-activity/">Physical Activity Program</a></li>
+                    <li><a href="/dev-kin/non-degree/coaching/">Coaching Certificate</a></li>
+                    <li><a href="/dev-kin/non-degree/study-abroad/">Study Abroad</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 </div><!-- close row -->
 {% endblock %}

@@ -552,6 +552,12 @@
     template_data:
         meta_description: "Our Deaf/Hard of Hearing program prepares you with the needed training to effectively teach students, birth through grade 12, with varying degrees of hearing."
         section: programs-degrees
+/edpsych/programs/specialed/earn-your-ma-or-phd/:
+    publish: true
+    template: edpsych/programs/specialed/earn-your-ma-or-phd.html
+    template_data:
+        meta_description: "Earn your MA, MA with an emphasis in applied behavior analysis, or PhD in special education. Our program was ranked #9 by <em>U.S. News & World Report</em> in 2020."
+        section: programs-degrees
 /edpsych/programs/specialed/ebd-residency-based/:
     publish: true
     template: edpsych/programs/specialed/ebd-residency-based.html

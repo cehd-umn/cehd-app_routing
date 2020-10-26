@@ -50,8 +50,8 @@
   publish: true
   template_data:
     - section: about
-/about/news/:
-  template: kin/about/news.html
+/instagram/:
+  template: kin/instagram.html
   publish: true
   template_data:
     - section: about
@@ -60,18 +60,338 @@
   publish: true
   template_data:
     - section: academics
-/academics/phd1/:
-  template: kin/academics/phd1.html
+/giving/:
+  template: kin/giving/index.html
   publish: true
   template_data:
-    - section: academics
-/academics/phd2/:
-  template: kin/academics/phd2.html
+    - section: giving
+/giving/fund-0496/:
+  template: kin/giving/fund-0496.html
   publish: true
   template_data:
-    - section: academics
-/undergraduate/sports-management/:
-  template: kin/undergraduate/sports-management.html
+    - section: giving
+/giving/fund-1430/:
+  template: kin/giving/fund-1430.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-2891/:
+  template: kin/giving/fund-2891.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-3583/:
+  template: kin/giving/fund-3583.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-3743/:
+  template: kin/giving/fund-3743.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-4266/:
+  template: kin/giving/fund-4266.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-4411/:
+  template: kin/giving/fund-4411.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-4449/:
+  template: kin/giving/fund-4449.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-5080/:
+  template: kin/giving/fund-5080.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-5216/:
+  template: kin/giving/fund-5216.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-6050/:
+  template: kin/giving/fund-6050.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-6388/:
+  template: kin/giving/fund-6388.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-8644/:
+  template: kin/giving/fund-8644.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-8673/:
+  template: kin/giving/fund-8673.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20120/:
+  template: kin/giving/fund-20120.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20355/:
+  template: kin/giving/fund-20355.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20374/:
+  template: kin/giving/fund-20374.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20590/:
+  template: kin/giving/fund-20590.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20658/:
+  template: kin/giving/fund-20658.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20788/:
+  template: kin/giving/fund-20788.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-20939/:
+  template: kin/giving/fund-20939.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21124/:
+  template: kin/giving/fund-21124.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21171/:
+  template: kin/giving/fund-21171.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21306/:
+  template: kin/giving/fund-21306.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21591/:
+  template: kin/giving/fund-21591.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21593/:
+  template: kin/giving/fund-21593.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-21752/:
+  template: kin/giving/fund-21752.html
+  publish: true
+  template_data:
+    - section: giving
+/giving/fund-23222/:
+  template: kin/giving/fund-23222.html
+  publish: true
+  template_data:
+    - section: giving
+/graduate/:
+  template: kin/graduate/index.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/kin-phd/:
+  template: kin/graduate/kin-phd.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/kin-ms/:
+  template: kin/graduate/kin-ms.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/masters-compare/:
+  template: kin/graduate/masters-compare.html
+  publish: true
+  template_data:
+    - section: graduate    
+/graduate/smgt-med/:
+  template: kin/graduate/smgt-med.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/pah-med/:
+  template: kin/graduate/pah-med.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/ses-med/:
+  template: kin/graduate/ses-med.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/smgt-med/:
+  template: kin/graduate/smgt-med.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/behavioral/:
+  template: kin/graduate/emphasis/kin-ms-phd/behavioral.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/biomechanics/:
+  template: kin/graduate/emphasis/kin-ms-phd/biomechanics.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/exercise-physiology/:
+  template: kin/graduate/emphasis/kin-ms-phd/exercise-physiology.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/perceptual-motor/:
+  template: kin/graduate/emphasis/kin-ms-phd/perceptual-motor.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/physical/:
+  template: kin/graduate/emphasis/kin-ms-phd/physical.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/smgt/:
+  template: kin/graduate/emphasis/kin-ms-phd/smgt.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/sport-psych/:
+  template: kin/graduate/emphasis/kin-ms-phd/sport-psych.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/kin-ms-phd/sport-soc/:
+  template: kin/graduate/emphasis/kin-ms-phd/sport-soc.html
+  publish: true
+  template_data:
+    - section: graduate
+/news/:
+  template: kin/news/index.html
+  publish: true
+  template_data:
+    - section: news
+/news/instagram/:
+  template: kin/news/instagram.html
+  publish: true
+  template_data:
+    - section: news
+/non-degree/:
+  template: kin/non-degree/index.html
+  publish: true
+  template_data:
+    - section: non-degree
+/non-degree/study-abroad/:
+  template: kin/non-degree/study-abroad.html
+  publish: true
+  template_data:
+    - section: non-degree
+/non-degree/coaching/:
+  template: kin/non-degree/coaching.html
+  publish: true
+  template_data:
+    - section: non-degree
+/non-degree/physical-activity/:
+  template: kin/non-degree/physical-activity.html
+  publish: true
+  template_data:
+    - section: non-degree
+/people/:
+  template: kin/people/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/faculty/:
+  template: kin/people/faculty.html
+  publish: true
+  template_data:
+    - section: people
+/people/grad-asst/:
+  template: kin/people/grad-asst.html
+  publish: true
+  template_data:
+    - section: people
+/people/leadership/:
+  template: kin/people/leadership.html
+  publish: true
+  template_data:
+    - section: people
+/people/researchers-post-docs/:
+  template: kin/people/researchers-post-docs.html
+  publish: true
+  template_data:
+    - section: people
+/people/program-contacts/:
+  template: kin/people/program-contacts.html
+  publish: true
+  template_data:
+    - section: people
+/people/staff/:
+  template: kin/people/staff.html
+  publish: true
+  template_data:
+    - section: people
+/research/:
+  template: kin/research/index.html
+  publish: true
+  template_data:
+    - section: research
+/research/labs/:
+  template: kin/research/labs.html
+  publish: true
+  template_data:
+    - section: research
+/scholarships/:
+  template: kin/scholarships/index.html
+  publish: true
+  template_data:
+    - section: scholarships
+/undergraduate/:
+  template: kin/undergraduate/index.html
+  publish: true
+  template_data:
+    - section: undergraduate
+/undergraduate/coaching-minor/:
+  template: kin/undergraduate/coaching-minor.html
+  publish: true
+  template_data:
+    - section: undergraduate
+/undergraduate/health-pro-minor/:
+  template: kin/undergraduate/health-pro-minor.html
+  publish: true
+  template_data:
+    - section: undergraduate
+/undergraduate/kin/:
+  template: kin/undergraduate/kin.html
+  publish: true
+  template_data:
+    - section: undergraduate
+/undergraduate/smgt-minor/:
+  template: kin/undergraduate/smgt-minor.html
+  publish: true
+  template_data:
+    - section: undergraduate
+/undergraduate/smgt/:
+  template: kin/undergraduate/smgt.html
   publish: true
   template_data:
     - section: undergraduate

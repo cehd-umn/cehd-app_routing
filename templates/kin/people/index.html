@@ -1,0 +1,92 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "People" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .box:hover {background: #fc3;}
+    @media all and (max-width: 620px) {
+    .half {
+    width: 100%;
+    }
+    }
+    .box {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 100%;
+    padding: 0 25px 25px 25px;
+    }
+    #maincontent .box a:link, #maincontent .box a:link {
+    border-bottom: none;
+    text-decoration: none;
+    }
+    .program-box-text {font-size: 16px; line-height: 20px; margin: }
+    .program-box-degrees {font-size: 16px; line-height: 20px; margin-bottom: .25em;}
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+        <div class="container">
+            <h1>Meet the people behind the program</h1>
+        </div>
+    </div>
+    <div class="row margin-top-4 margin-bottom-3">
+        <div class="row">
+            <div class="container">
+                <div class="span-6">
+                    <p>The School of Kinesiology’s academic and research success happens because of the dedicated individuals who devote their expertise and time to our mission.</p>
+                    <p>Learn more about their work and find their contact information below:</p>
+                </div>
+                <div class="span-6">
+                    <figure>
+                        <img width="625x" src="{{ config.base_url}}/assets/dist/images/people/Commencement-2019.jpg" alt="Members of the School of Kinesiology faculty take a group photo during the 2019 Commencement ceremony">
+                        <figcaption>Now that's one highly educated selfie! Members of the School of Kinesiology faculty take a group photo during the 2019 Commencement ceremony. 
+</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container margin-top-2">
+            <div class="wrapper">
+                <div class="box a">
+                    <h3><a href="/dev-kin/people/program-contacts/">Program contacts</a></h3>
+                </div>
+                <div class="box b">
+                    <h3><a href="/dev-kin/people/faculty/">Faculty</a></h3>
+                </div>
+                <div class="box c">
+                    <h3><a href="/dev-kin/people/post-docs/">Post-Docs</a></h3>
+                </div>
+                <div class="box d">
+                    <h3><a href="/dev-kin/people/grad-asst/">Graduate assistants</a></h3>
+                </div>
+                <div class="box e">
+                    <h3><a href="/dev-kin/people/staff/">Staff</a></h3>
+                </div>
+                <div class="box f">
+                    <h3><a href="/dev-kin/people/leadership/">Leadership</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row emphasis cool margin-top-2">
+            <div class="container container span-7 push-3">
+            <div class="third">
+                <img class="circular mobile-hide" src="{{ config.base_url}}/assets/dist/images/people/Staff-bowling-2019.jpg" alt="Kinesiology staff at bowling party 2019">
+            </div>
+            <div class="twothird">
+                <h4>Contact us</h4>
+                <p>Cooke Hall (Main Office: Cooke Hall 111)<br />
+                    1900 University Ave SE<br />
+                    Minneapolis, MN 55455<br />
+                    Phone: 612-625-5300 | Fax: 612-626-7700<br />
+                    Email: <a href="mailto:kin@umn.edu">kin@umn.edu</a>
+                </p>
+            </div>     
+            </div>
+        </div>
+    {% endblock %}
