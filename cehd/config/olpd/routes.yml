@@ -625,6 +625,11 @@
   publish: true
   template_data:
     - section: people
+/people/students/cide/cookx561/:
+  template: olpd/people/students/cide/cookx561.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/nisse102/:
   template: olpd/people/students/cide/nisse102.html
   publish: true
@@ -635,13 +640,13 @@
   publish: true
   template_data:
     - section: people
-/people/students/cide/chati005/:
-  template: olpd/people/students/cide/chati005.html
+/people/students/cide/allen595/:
+  template: olpd/people/students/cide/allen595.html
   publish: true
   template_data:
     - section: people
-/people/students/cide/allen595/:
-  template: olpd/people/students/cide/allen595.html
+/people/students/cide/baig0019/:
+  template: olpd/people/students/cide/baig0019.html
   publish: true
   template_data:
     - section: people
@@ -652,6 +657,21 @@
     - section: people
 /people/students/cide/braun754/:
   template: olpd/people/students/cide/braun754.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/chati005/:
+  template: olpd/people/students/cide/chati005.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/cond0066/:
+  template: olpd/people/students/cide/cond0066.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/downe174/:
+  template: olpd/people/students/cide/downe174.html
   publish: true
   template_data:
     - section: people
@@ -695,13 +715,33 @@
   publish: true
   template_data:
     - section: people
+/people/students/cide/smi01338/:
+  template: olpd/people/students/cide/smi01338.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/smit8814/:
   template: olpd/people/students/cide/smit8814.html
   publish: true
   template_data:
     - section: people
+/people/students/cide/tran0492/:
+  template: olpd/people/students/cide/tran0492.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/voll0144/:
   template: olpd/people/students/cide/voll0144.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/wals0295/:
+  template: olpd/people/students/cide/wals0295.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/villa472/:
+  template: olpd/people/students/cide/villa472.html
   publish: true
   template_data:
     - section: people

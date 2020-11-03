@@ -1,0 +1,95 @@
+{% extends "olpd/layout/base.html" %}
+{% set page_title = "Graduate Degrees &amp; Programs" %}
+{% block title %}
+    Graduate Degrees &amp; Programs
+{% endblock %}
+{% block extra_css %}
+{% endblock %}
+{% block main_content %}
+
+
+<div class="row">
+    <div class="container">
+        <h1>Graduate degrees and programs</h1>
+    </div>
+</div>
+
+ <div class="container">
+
+
+    <div class="half">
+
+      <h2>Degrees</h2>
+          <h3>Ph.D.</h3>
+              <ul class="no-bullet">
+                  <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/phd/">Comparative and International Development Education</a></li>
+                      <ul class="no-bullet">
+                          <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/liie/">Leadership for Intercultural and International Education Cohort</a></li>
+                      </ul>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/phd/">Education Policy and Leadership</a></li>
+                      <ul class="no-bullet">
+                          <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/executive-phd/">Executive Cohort</a></li>
+                      </ul>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/phd/">Evaluation Studies</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/higher-education/phd/">Higher Education</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/phd/">Human Resource Development</a></li>
+              </ul>
+
+          <h3>M.A.</h3>
+              <ul class="no-bullet">
+                  <li><a href="{{ config.asset_base }}/graduate-programs/comparative-international-development-education/ma/">Comparative and International Development Education</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/ma/">Education Policy and Leadership</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/evaluation-studies/ma/">Evaluation Studies</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/higher-education/ma/">Higher Education</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/ma/">Human Resource Development</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/multicultural-college-teaching-learning/ma/">Multicultural College Teaching and Learning</a></li>
+              </ul>
+
+          <h3>M.Ed.</h3>
+              <ul class="no-bullet">
+                  <li><a href="{{ config.asset_base }}/graduate-programs/adult-education/med/">Adult Education</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/education-policy-leadership/med/">Leadership in Education</a></li>
+                  <li><a href="{{ config.asset_base }}/graduate-programs/human-resource-development/med/">Human Resource Development</a></li>
+              </ul>
+
+        <h2>Programs</h2>
+            <h3>Certificates</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-education/">Adult Education</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/adult-literacy/">Adult Literacy</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/disability-policy-services/">Disability Policy and Services</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/human-resource-development/">Human Resource Development</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/administrative-licensure/">PK-12 Administrative Licensure</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/professional-development/">Professional Development</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/program-evaluation/">Program Evaluation</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/certificate/multicultural-teaching-learning/">Undergraduate Multicultural Teaching and Learning</a></li>
+                </ul>
+
+            <h3>Graduate minors</h3>
+                <ul class="no-bullet">
+                    <li><a href="{{ config.asset_base }}/graduate-programs/minor/international-education/">International Education</li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/minor/integrative-leadership/">Integrative Leadership</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/minor/multicultural-college-teaching-learning/">Multicultural College Teaching and Learning</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/minor/program-evaluation/">Program Evaluation</a></li>
+                    <li><a href="{{ config.asset_base }}/graduate-programs/minor/sociocultural-studies-education/">Sociocultural Studies in Education</a></li>
+                </ul>
+
+
+        </div>
+        <div class="half margin-top-2"">
+          <figure>
+            <a href="https://www.cehd.umn.edu/events/8821/">
+              <img src="/olpd/images/OLPDinfosession.png" alt="Join us for a virtual info session on OLPD graduate programs October 28, 2:00 to 3:30pm, via Zoom at z.umn.edu/OLPDinfo">
+            </a>
+          </figure>
+
+            </div>
+    </div>
+
+    <div class="container feature twothird margin-top-1">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center"><a href="/people/herna220">Jeremy Hernandez</a>, Coordinator<br> Graduate Studies<br> 612-626-9377 | <a href="mailto:herna220@umn.edu">herna220@umn.edu</a></p>
+        </div>
+    </div><!-- close container -->
+</div><!-- close row -->
+{% endblock %}

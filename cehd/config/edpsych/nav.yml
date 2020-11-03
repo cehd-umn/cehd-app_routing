@@ -52,8 +52,9 @@
       href: /research/labs/
     - name: Student Dissertations
       href: /research/student-dissertations/
-- name: Giving
-  href: /giving/
+- name: Diversity & Inclusion
+  href: /about/diversity-inclusion/
+  section: About
 - name: Alumni
   href: /alumni/
   subsections:
@@ -62,6 +63,3 @@
 - name: About
   href: /about/
   section: about
-  subsections:
-    - name: Diversity & Inclusion
-      href: /about/diversity-inclusion/

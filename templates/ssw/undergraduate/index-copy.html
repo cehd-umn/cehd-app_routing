@@ -1,0 +1,53 @@
+{% extends "ssw/layout/base.html" %}
+{% set page_title = "School of Social Work Undergraduate Programs" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+{{ parent() }}{# include the parent template styles #}
+<style>
+    .row.has-hero-image {
+        margin-top: 450px; /* dial in the top margin */
+    }
+</style>
+{% endblock %}
+{% block hero_image %}
+<div class="hero-image-container">
+    <img class="hero-image" src="/ssw/images/YS-small-banner.jpg" alt="Students canoe on a Minneapolis lake as part of a Youth Studies Experiential Learning class.">
+    
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+<div class="row has-hero-image">
+  <div class="container">
+    <h1 class="accessible-no-display">School of Social Work undergraduate programs</h1
+
+    </div>
+
+
+
+
+</div>
+        <div class="row emphasis">
+    <div class="container">
+        
+          <h1>Undergraduate areas of study:<br> Youth Studies major &amp; minor, and <br>Social Justice &amp; Family Violence Prevention minors</h1>
+         
+          
+        </div>
+    </div>
+
+
+<div class="row emphasis cool">
+    <div class="container">
+        <h1>What is Youth Studies?</h1>
+    </div>
+</div>
+
+<div class="row has-hero-image">
+  <div class="container">
+  <img src="/ssw/images/YS-small-banner.jpg" alt="What is youth studies?">
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="container">
+    <div class="feature twothird">
+      <span class="divider one-half"></span>
+      <div class="half right">
+        <h1 class="heading-profile h2">{{ data.person.nameFirstLast }}
+
+          {%if ( data.person.personalPronouns|is_string ) and ( data.person.personalPronouns !== 'prefer not to specify' ) %}
+          {% if data.person.personalPronouns === 'he/ him/ his' %}
+          <small class="clear h4">Pronouns: he, him, his</small>
+          {% elseif data.person.personalPronouns === 'she/ her/ hers' %}
+          <small class="clear h4">Pronouns: she, her, hers</small>
+          {% elseif data.person.personalPronouns === 'they/ them/ theirs' %}
+          <small class="clear h4">Pronouns: they, them, theirs</small
+            {% elseif data.person.personalPronouns === 'ze/ zir/ zirs' %} <small class="clear h4">Pronouns: ze, zir,
+          zirs</small>
+          {% elseif data.person.personalPronouns === 'none (name only)' %}
+          <small class="clear h4">Pronouns: please use my name</small>
+          {% else %}
+          <small class="clear h4">Pronouns: {{ data.person.personalPronouns }}</small>
+          {% endif %}
+          {% endif %}
+
+          <small class="clear h4">
+            {% if data.person.workingTitle|is_string %}
+            {{ data.person.workingTitle|safe }}
+            {% endif %}
+          </small>
+        </h1>
+      </div>
+      <div class="half">
+        <p>
+          {% if data.person.departmentName %}
+          {{ data.person.departmentName }}<br>
+          {% else %}
+          {% if data.person.address_1 %}
+          {{ data.person.address_1 }}<br>
+          {% endif %}
+          {% endif %}
+          {% if data.person.address_2 %}
+          {{ data.person.address_2 }}<br>
+          {% endif %}
+          {% if data.person.address_3 %}
+          {{ data.person.address_3 }}<br>
+          {% endif %}
+          {% if data.person.address_4 %}
+          {{ data.person.address_4 }}<br>
+          {% endif %}
+          {% if data.person.city|is_string %}
+          {{ data.person.city }}, {{ data.person.state }} {{ data.person.zip }}
+          {% endif %}
+        </p>
+        <p>
+          {% if data.person.phone|is_string %}
+          {{ data.person.phone }}<br>
+          {% endif %}
+          <a href="mailto:{{ data.person.internetId }}@umn.edu">{{ data.person.internetId }}@umn.edu</a>
+        </p>
+        {% if data.person.twitterName|is_string %}
+        <p><i class="fa fa-twitter" aria-hidden="true"></i>
+<a href="https://www.twitter.com/{{ data.person.twitterName }}">{{ data.person.twitterName }}</a></p>
+        {% endif %}
+        {% if data.person.officeHours|is_string %}
+        <h2 class="h5">Office hours</h2>
+        <p>{{ data.person.officeHours|safe }}</p>
+        {% endif %}
+        {% if data.person.curriculumVitaeAddr|is_string %}
+        <p><a href="{{ data.person.curriculumVitaeAddr }}">Download Curriculum Vitae</a> [PDF]</p>
+        {% endif %}
+        {% if data.person.advisingStatementAddr|is_string %}
+        <p><a href="{{ data.person.advisingStatementAddr }}">Download Advising Statement</a> [PDF]</p>
+        {% endif %}
+      </div><!-- end half -->
+    </div><!-- end twothird -->
+  </div><!-- end container -->
+</div><!-- end row -->
+<div class="row emphasis">
+  <div class="container">
+    <div class="feature twothird">
+      <div class="span-3">
+        {% if data.person.headshotAddress|is_string and data.person.areasOfInterest|is_string %}
+        <p class="no-margin-top"><img src="{{ data.person.headshotAddress }}"
+            alt="{{ data.person.nameFirstLast }} headshot"></p>
+        {% endif %}
+      </div>
+      <div class="span-9">
+        {% if data.person.areasOfInterest|is_string %}
+        <h2 class="no-margin-top">Areas of interest</h2>
+        <p>{{ data.person.areasOfInterest|safe }}</p>
+        {% endif %}
+      </div>
+    </div><!-- end feature.twothird -->
+  </div><!-- end container -->
+</div><!-- end row.emphasis -->
+<div class="row">
+  <div class="container">
+    <div class="feature twothird">
+      {% if data.person.degrees %}
+      <h2>Degrees</h2>
+      <p>{{ data.person.degrees|safe }}</p>
+      {% endif %}
+      {% if data.person.briefBio|is_string %}
+      <h2>Research</h2>
+      <p>{{ data.person.briefBio|safe }}</p>
+      {% endif %}
+      {% if data.person.fullBio|is_string %}
+      <h2>Bio</h2>
+      <p>{{ data.person.fullBio|safe }}</p>
+      {% endif %}
+      {% if data.person.publications|length %}
+      <h2>Selected publications</h2>
+      <ol class="profile-list no-bullet">
+        {% for publication in data.person.publications %}
+        <li>{{ publication|strip_style_attributes|safe }}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+      {% if data.person.presentations|length %}
+      <h2>Selected presentations</h2>
+      <ol class="profile-list no-bullet">
+        {% for presentation in data.person.presentations %}
+        <li>{{ presentation|strip_style_attributes|safe }}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </div><!-- end feature.twothird -->
+  </div><!-- end container -->
+</div><!-- end row.emphasis -->
