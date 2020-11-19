@@ -60,6 +60,11 @@
   publish: true
   template_data:
     - section: academics
+/academics/scholarships/:
+  template: kin/academics/scholarships.html
+  publish: true
+  template_data:
+    - section: academics
 /giving/:
   template: kin/giving/index.html
   publish: true
@@ -210,8 +215,18 @@
   publish: true
   template_data:
     - section: graduate
-/graduate/kin-phd/:
-  template: kin/graduate/kin-phd.html
+/graduate/assistantships/:
+  template: kin/graduate/assistantships.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/how-to-apply-med/:
+  template: kin/graduate/how-to-apply-med.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/how-to-apply-ms-ma-phd/:
+  template: kin/graduate/how-to-apply-ms-ma-phd.html
   publish: true
   template_data:
     - section: graduate
@@ -220,13 +235,23 @@
   publish: true
   template_data:
     - section: graduate
+/graduate/kin-phd/:
+  template: kin/graduate/kin-phd.html
+  publish: true
+  template_data:
+    - section: graduate
 /graduate/masters-compare/:
   template: kin/graduate/masters-compare.html
   publish: true
   template_data:
-    - section: graduate    
-/graduate/smgt-med/:
-  template: kin/graduate/smgt-med.html
+    - section: graduate
+/graduate/med-application/:
+  template: kin/graduate/med-application.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/ms-ma-phd-application/:
+  template: kin/graduate/ms-ma-phd-application.html
   publish: true
   template_data:
     - section: graduate
@@ -240,48 +265,58 @@
   publish: true
   template_data:
     - section: graduate
+/graduate/smgt-ma/:
+  template: kin/graduate/smgt-ma.html
+  publish: true
+  template_data:
+    - section: graduate
 /graduate/smgt-med/:
   template: kin/graduate/smgt-med.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/behavioral/:
-  template: kin/graduate/emphasis/kin-ms-phd/behavioral.html
+/graduate/emphasis/activity-health/:
+  template: kin/graduate/emphasis/activity-health.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/biomechanics/:
-  template: kin/graduate/emphasis/kin-ms-phd/biomechanics.html
+/graduate/emphasis/behavioral/:
+  template: kin/graduate/emphasis/behavioral.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/exercise-physiology/:
-  template: kin/graduate/emphasis/kin-ms-phd/exercise-physiology.html
+/graduate/emphasis/biomechanics/:
+  template: kin/graduate/emphasis/biomechanics.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/perceptual-motor/:
-  template: kin/graduate/emphasis/kin-ms-phd/perceptual-motor.html
+/graduate/emphasis/exercise-physiology/:
+  template: kin/graduate/emphasis/exercise-physiology.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/physical/:
-  template: kin/graduate/emphasis/kin-ms-phd/physical.html
+/graduate/emphasis/perceptual-motor/:
+  template: kin/graduate/emphasis/perceptual-motor.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/smgt/:
-  template: kin/graduate/emphasis/kin-ms-phd/smgt.html
+/graduate/emphasis/physical/:
+  template: kin/graduate/emphasis/physical.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/sport-psych/:
-  template: kin/graduate/emphasis/kin-ms-phd/sport-psych.html
+/graduate/emphasis/smgt/:
+  template: kin/graduate/emphasis/smgt.html
   publish: true
   template_data:
     - section: graduate
-/graduate/emphasis/kin-ms-phd/sport-soc/:
-  template: kin/graduate/emphasis/kin-ms-phd/sport-soc.html
+/graduate/emphasis/sport-psych/:
+  template: kin/graduate/emphasis/sport-psych.html
+  publish: true
+  template_data:
+    - section: graduate
+/graduate/emphasis/sport-soc/:
+  template: kin/graduate/emphasis/sport-soc.html
   publish: true
   template_data:
     - section: graduate
@@ -335,6 +370,11 @@
   publish: true
   template_data:
     - section: people
+/people/research-faculty/:
+  template: kin/people/research-faculty.html
+  publish: true
+  template_data:
+    - section: people
 /people/researchers-post-docs/:
   template: kin/people/researchers-post-docs.html
   publish: true
@@ -355,16 +395,16 @@
   publish: true
   template_data:
     - section: research
+/research/index:
+  template: kin/research/index.html
+  publish: true
+  template_data:
+    - section: research
 /research/labs/:
   template: kin/research/labs.html
   publish: true
   template_data:
     - section: research
-/scholarships/:
-  template: kin/scholarships/index.html
-  publish: true
-  template_data:
-    - section: scholarships
 /undergraduate/:
   template: kin/undergraduate/index.html
   publish: true

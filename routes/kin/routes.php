@@ -88,5 +88,4 @@ foreach ($routes as $route => $route_info) {
     }
 }
 
-
-//$app->get("/people/{internet_id}/", KINApp::class . ":personPage");
+$app->get("/people/{internet_id}/", KINApp::class . ":personPage");

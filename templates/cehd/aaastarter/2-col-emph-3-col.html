@@ -1,0 +1,66 @@
+{% extends "cehd/layout/base.html" %}
+{% set page_title = "2 Column Emph 3 Column" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block main_content %}
+<div class="row">
+    <div class="container">
+        <h1>Example layout</h1>
+        <div class="row">
+            <div class="span-8 push-2">
+                <p>Your challenge is to replicate this layout using a blank template and the pattern library. If you get stuck try using the inspect feature in a browser rather than opening this page and looking at the source code directly.</p>
+                <p>Some of the elements on this page are using more than one class. The div wrapping this text for example is using span-10 push-2. In reference to the 12 grid system, this means it covers 8 columns and is pushed over 2 columns.</p>
+                <p>But that only adds up to 10! Yes, the last two columns are unused and the row ends so nothing floats up into the empty space on the right.</p>
+            </div>
+        </div> <!--./row -->
+        <div class="row">
+            <div class="span-6">
+                <h2 class="text-center">HTML</h2>
+                <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+            </div>
+            <div class="span-6">
+                <h2 class="text-center">CSS</h2>
+                <p>Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents. These pages contain information on how to learn and use CSS and on available software. They also contain news from the CSS working group.</p>
+            </div>
+        </div>
+    </div> <!-- ./container -->
+
+    <div class="row emphasis cool margin-top-1">
+        <div class="container">
+            <div class="half feature">
+                <h2 class="text-center">Pattern library</h2>
+                <p>A pattern library is a collection of design elements that can be reused across a website.</p>
+                <p>The <a href="https://patterns.cehd.umn.edu/v1/">CEHD version 1 pattern library</a> is about to be upgraded.</p>
+            </div>
+        </div>
+    </div> <!--./row -->
+
+    <div class="container">
+        <div class="row">
+            <div class="span-4">
+                <h2 class="h3">Keyboard shortcuts</h2>
+                <p>Developers often prefer using keyboard shortcuts because it is faster to code if your fingers never leave the keyboard. Many <a herf="https://www.shortcutfoo.com/app/dojos/sublime-text-3-mac/cheatsheet">Sublime cheat sheets exist online</a> as a handy reference, you can remap keyboard shortcuts in Sublime to your liking as well.</p>
+            </div>
+            <div class="span-4">
+                <h2 class="h3">Middle Goldy</h2>
+                <img class="circular mobile-hide" src="/assets/images/examples/Goldie-2019-sq.jpg" alt="Goldy Gopher">
+                <p>Everyone loves Goldy!<br>Shrink the screen and he disappears on mobile.</p>
+                <p>This is a square image with two classes applied.</p>
+            </div>
+            <div class="span-4">
+                <h2 class="h3">Jeff's favorite shortcuts</h2>
+                <p>People that don't love HTML must not know good key commands.</p>
+                <ul>
+                    <li>Wrap in tag</li>
+                    <li>Close tag</li>
+                    <li>Indent lines</li>
+                    <li>Insert comment</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <h2>The longest journey begins with a single step</h2>
+            <p>As long as you are interested in writing code and have the ability to handle and learn from failure, you will go far. Some people have made a very good career out of just knowing HTML, <em>and the patience to search for answers.</em> </p>
+        </div><!-- ./row -->
+    </div> <!-- ./container -->
+</div> <!-- ./row -->
+{% endblock %}

@@ -31,8 +31,12 @@
       href: "/people/leadership/"
 - name: Research
   href: "/research/"
-  section: null
-  subsections: null
+  section: research
+  subsections:
+   - name: Research Areas
+     href: "/research/"
+   - name: Centers & Labs
+     href: "/research/labs/" 
 - name: Giving
   href: "/giving/"
   section: null
@@ -41,5 +45,7 @@
   href: "/about/"
   section: about
   subsections:
+    - name: News
+      href: "/news/"
     - name: Instagram Feed
       href: "/instagram/"

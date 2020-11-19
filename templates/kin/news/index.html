@@ -18,30 +18,25 @@
 
 {% block main_content %}
 
-
-
 <div class="row">
-  <div class="container home-images-container">
-    <h1>News</h1>
-    <h2>Connect Test</h2>
-<div class="twothird feature">
-   
+  <div class="container">
+    <h1>News Feed and Connect Test</h1>
+
+<!--     <div class="feature twothirds">
+
+        {#- This places the html the JavaScript is expecting for rendering
+                the list of news items, including the fancy loader -#}
+        {{ loader.loader("News") }}
+
+
+   </div> -->
     <!-- div w/ data attributes -->
-    <div id="news-container" class="loader-container" aria-live="polite"
-        data-news-app {# this is how the JavaScript below knows we want to pull in a news feed #}
-        data-base-url="https://connect.cehd.umn.edu/youth-sports-today-and-tomorrow/feed/?withoutcomments=1" {# The url of the website with an RSS feed #}
-        data-feed-path="category/departments/organizational-leadership-policy-and-development/feed" {# The path for the feed at the site above #}
-        data-target-element-selector="#news-container" {# The element selector for the feed html #}
-        data-template-path="/assets/dist/views/cehd/newsfeeds/" {# The path the the Nunjucks template #}
-        data-template-name="index.html" {# The name of the Nunjucks template #}
-        data-limit="3" {# How many stories to display #}
-        >
-        <div class="loader">
-            <div class="loader-figure "></div>
-            <p class="loader-label">Loading&hellip;</p>
+    <div id="news-container" class="loader-container" aria-live="polite">
+      <div class="loader">
+          <div class="loader-figure"></div>
+          <p class="loader-label">Loading</p>
         </div>
     </div>
-</div>
 
 </div>
 
@@ -53,5 +48,15 @@
 <script src="/assets/dist/js/news.min.js"></script>
 <script src="/assets/dist/js/events.min.js"></script>
 
+{#- news feed -#}
+{{ newsfeed.news_feed_js(
+        "category/kinesiology/feed/",
+        "#news-container",
+        "home.html",
+        5,
+        "http://news.cehd.umn.edu/",
+        "More news",
+        "/edpsych/assets/dist/views/kin/newsfeeds"
+    ) }}
 
 {% endblock %}

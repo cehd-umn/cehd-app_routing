@@ -1,15 +1,40 @@
 {% extends "kin/layout/base.html" %}
-{% set page_title = "Researchers & Post-doc" %}
+{% set page_title = "Research Faculty" %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block extra_css %}
 {% endblock %}
 {% block main_content %}
 <div class="row">
     <div class="container">
-        <h1>Researchers and Post-docs</h1>
-        <div id="faculty-container" class="loader-container" aria-live="polite"
+        <h1> Research Faculty</h1>
+        <h2 class="text-notice">this needs several new feeds</h2>
+<div class="third">
+<h3>Exercise Science</h3>
+</div>
+<div class="third">
+<h3>Movement Science</h3>
+</div>
+<div class="third">
+<h3>Physical Activity &#38; Health Science</h3>
+</div>
+</div>
+<div class="row">
+    <div class="container">
+    <div class="span-5 push-2">
+<h3>Physical Activity &#38; Sport Science</h3>
+</div>
+<div class="span-5">
+<h3>Sport Management</h3>
+</div>
+</div>
+</div>
+
+
+
+
+        <!-- <div id="faculty-container" class="loader-container" aria-live="polite"
              data-people-app {# The JavaScript is looking for this to indicate that it should pull a feed in #}
-             data-tag="290" {# This is the id of the tag from the People tool #}
+             data-tag="240" {# This is the id of the tag from the People tool #}
              data-target-element-selector="#faculty-container" {# The element selector for the feed html #}
              data-template-path="/assets/dist/views/olpd/people/" {# The path the the Nunjucks template #}
              data-template-name="list.html" {# The name of the Nunjucks template #}
@@ -20,7 +45,7 @@
                 <p class="loader-label">Loading&hellip;</p>
             </div>
         </div>
-    </div>
+    </div> -->
 </div><!-- close row -->
 {% endblock %}
 {% block bottom_js %}{{ parent() }}

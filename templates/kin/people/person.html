@@ -3,43 +3,51 @@
 {% block title %}{{ page_title }}{% endblock %}
 {% block main_content %}
 {# This uses a JavaScript template located at:
-app_template/public/assets/dist/views/kin/people/person.html
+app_template/public/edpsych/assets/dist/views/edpsych/people/person.html
 
 The reason JavaScript is handling this is so we can make the requests to the
 People Tool asynchronous.
 #}
 <div id="results-container" aria-live="polite">
-    <div class="loader"><div class="loader-figure"></div><p class="loader-label">Loading...</p></div>
+  <div class="loader">
+    <div class="loader-figure"></div>
+    <p class="loader-label">Loading...</p>
+  </div>
 </div>
 {% endblock %}
 {% block bottom_js %}{{ parent() }}
 <script>
-    (function() {
-        "use strict";
-        var params = {
-            url: "https://www.cehd.umn.edu/services/people-tool/person/",
-            data: {
-                internetId: "{{ internet_id }}"
-            }
+  (function () {
+    "use strict";
+    var params = {
+      url: "/services/people-tool/person/",
+      data: {
+        internetId: "{{ internet_id }}"
+      }
+    };
+    var app = new App();
+    var client = new app.httpClient();
+    var $request = client.get(params);
+    var page_title = document.title;
+
+    $request.done(function () {
+      var person = client.getResults();
+      var renderer = new app.renderer();
+      var template_params = {
+        'template_path': '/assets/dist/views/kin/people/',
+        'template_name': 'person.html',
+        'data': {
+          person: person,
+          config: {{ config| json_encode | raw
+    }} // passes Twig config info for use in Nunjucks templates
+        }
         };
-        var app = new App();
-        var client = new app.httpClient();
-        var $request = client.get(params);
-        var page_title = document.title;
-        $request.done(function() {
-            // var person = client.getResults();
-            // var renderer = new app.renderer();
-            // var template_params = {
-            //     'template_path': '/assets/dist/views/kin/people/',
-            //     'template_name': 'person.html',
-            //     'data': {
-            //         person: person,
-            //         config: {{ config|json_encode|raw }} // passes Twig config info for use in Nunjucks templates
-            //     }
-            // };
-            // document.title = person.nameFirstLast + " | " + page_title;
-            console.log("yeh")
+  document.title = person.nameFirstLast + " | " + page_title;
+  $('link[rel="canonical"]').attr('href', person.webPage);
+  $('meta[name="description"]').attr('content', person.metaDescription);
+  renderer.init(template_params);
+  renderer.render();
         });
-    })();
+    }) ();
 </script>
 {% endblock %}

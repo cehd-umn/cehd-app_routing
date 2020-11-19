@@ -7,47 +7,377 @@
     .row.has-hero-image {
         margin-top: 450px; /* dial in the top margin */
     }
+.row.stats {
+        background: #fff;
+    }
+
+    .stats .container {
+        color: #555;
+        font-family: Raleway, sans-serif;
+    }
+
+    .circular {
+        border-radius: 50%;
+        height: 200px;
+        margin: 1em auto;
+        overflow: hidden;
+        width: 200px;
+    }
+
+    .circular:hover {
+        cursor: pointer;
+    }
+
+    .circular:hover,
+    .circular:focus {
+            background-color: #ffec99;
+    }
+
+    .stat-heading {
+        display: block;
+        font-family: "Montserrat Alternates";
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .stat-subheading {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        top: -10px;
+    }
+
+    .stat-text {
+        display: block;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 1.2;
+        margin: 0 auto;
+        max-width: 80%;
+        text-align: center;
+        top: 0;
+    }
+
+    .svg-wrapper {
+        position: relative;
+        top: -11px;
+    }
+
+    #stat-1-svg-wrapper {
+        left: -250px;
+    }
+
+    #stat-2-svg-wrapper {
+        left: -200px;
+    }
+
+    #stat-3-svg-wrapper {
+        left: -150px;
+    }
+
+    @media all and (min-width: 768px) {
+        .circular {
+            border-radius: 50%;
+            height: 300px;
+            margin: 1em auto;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .stat-heading {
+            font-size: 110px;
+            margin-top: 45px;
+        }
+
+        .svg-wrapper {
+            position: absolute;
+            top: 144px;
+        }
+
+        .stat-subheading {
+            top: 47px;
+        }
+
+        .stat-text {
+            top: 47px;
+        }
+
+        #stat-2-svg-wrapper {
+            left: -150px;
+        }
+
+        #stat-3-svg-wrapper {
+            left: -50px;
+        }
+    }
+
 </style>
 {% endblock %}
+
 {% block hero_image %}
 <div class="hero-image-container">
-    <img class="hero-image" src="/ssw/images/YS-small-banner.jpg" alt="Students canoe on a Minneapolis lake as part of a Youth Studies Experiential Learning class.">
+    <img class="hero-image" src="/ssw/images/YS-grads-2019.jpg" alt="Youth Studies students celebrate graduation.">
     
 </div>
 {% endblock %}
 
 
 {% block main_content %}
-<div class="row has-hero-image">
-  <div class="container">
-    <h1 class="accessible-no-display">School of Social Work undergraduate programs</h1
 
-    </div>
-
-
-
-
-</div>
         <div class="row emphasis">
     <div class="container">
-        
-          <h1>Undergraduate areas of study:<br> Youth Studies major &amp; minor, and <br>Social Justice &amp; Family Violence Prevention minors</h1>
-         
-          
+         <img src="/ssw/images/YS-celebrants-2019.jpg" alt="Youth Studies students celebrate graduation.">
+
+       <h1>Youth Studies major</h1> 
+          <h2>What is Youth Studies?</h2>
+          <ul>
+              <li>Interdisciplinary studies of youth: anthropological, political, sociological, phenomenological, biopsychological, and historical approaches</li>
+            <li>Identify and interrogate ideas and ask increasingly complicated questions about young people and what is known about them</li>
+            <li>Engage in critical reflection on your own experiences of being a young person</li>
+            <li>Learn about the everyday lives of youth</li>
+            <li>Leave prepared to design and engage in a range of youthwork practices and professional space</li>
+          </ul>
+ 
         </div>
     </div>
-
-
-<div class="row emphasis cool">
+    
+<aside class="row stats margin-top-2 margin-bottom-3">
     <div class="container">
-        <h1>What is Youth Studies?</h1>
+        <div class="third">
+            <div class="circular">
+                <div id="stat-1-heading" class="stat-heading">42%</div>
+                <div id="stat-1-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-1-sub-heading" class="stat-subheading to-upper">First-year students</div>
+                <div id="stat-1-text" class="stat-text">who are first-generation<br>college students</div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="circular middle" data-href="https://www.usnews.com/best-graduate-schools/top-health-schools/social-work-rankings">
+                <div id="stat-2-heading" class="stat-heading">#36</div>
+                <div id="stat-2-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-2-sub-heading" class="stat-subheading to-upper">School of Social Work</div>
+                <div id="stat-2-text" class="stat-text">Ranked out of 262<br />
+                2021 U.S. News &amp; World Report</div>
+            </div>
+            <div id="stat-2-svg-container" class="stat-svg-container"></div>
+        </div>
+        <div class="third">
+            <div class="third"></div>
+            <div class="circular">
+                <div id="stat-3-heading" class="stat-heading">20+</div>
+                <div id="stat-3-svg-wrapper" class="svg-wrapper"></div>
+                <div id="stat-3-sub-heading" class="stat-subheading to-upper">Research</div>
+                <div id="stat-3-text" class="stat-text">centers ranging from<br>children's mental health<br>to women in sports</div>
+            </div>
+            <div id="stat-3-svg-container" class="stat-svg-container"></div>
+        </div>
+    </div>
+</aside>
+
+<div class="row">
+    <div class="container margin-top-1">
+        <h2 class="text-center">How to declare/apply to the Youth Studies major</h2>
+        <div class="third">
+            <p class="text-center"><a href="https://www.cehd.umn.edu/undergraduate/declare-major/" class="button center clear">If you are a current CEHD student</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="https://cape.umn.edu/planning/transferring" class="button center clear">If you are a UMN student, not in CEHD</a></p>
+        </div>
+        <div class="third">
+            <p class="text-center"><a href="https://admissions.tc.umn.edu/transfer/index.html" class="button center clear">If you are not a UMN student</a></p>
+        </div>
     </div>
 </div>
 
-<div class="row has-hero-image">
+
+<div class="row">
+    <div class="container margin-top-1">
+        <h2 class="text-center">How do we teach? How do we learn?</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-curious.png" alt="A drawing of two thought-clouds intersecting.">
+        <h3>Curious</h3>
+
+    </figure>  
+        </div>
+        <div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-dialogic.png" alt="A cartoon of people of talking.">
+        <h3>Dialogic</h3>
+
+    </figure>  
+        </div><div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-reflective.png" alt="A venn diagram with one circle labeled 'Knowing myself;' second labeled 'Knowing my community;' third labeled 'Building my skills;' intersection labeled 'How I will contribute.'">
+        <h3 class="center">Reflective</h3>
+
+    </figure>  
+        </div><div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-engaged.png" alt="A cartoon of people in a circle with hands touching.">
+        <h3 class="center">Engaged</h3>
+
+    </figure>  
+        </div><div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-experiential.png" alt="A drawing of a person standing within Earth with the words 'Experiencing, Relflecting, Thinking and Acting.' written around the globe.">
+        <h3 class="center">Experiential</h3>
+
+    </figure>  
+        </div><div class="span-2">
+        <figure>
+        <img src="/ssw/images/YS-collaborative.png" alt="Two hands fist-bumping.">
+        <h3 class="center">Collaborative</h3>
+
+    </figure>  
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container margin-top-1">
+        <h2 class="text-center">Our curriculum</h2>
+        <div class="half">
+            <p class="text-center"><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=3193&strm=1213&campus=UMNTC" class="button center clear">Learn more about the requirements<br> for the Youth Studies MAJOR</a></p>
+        </div>
+        <div class="half">
+            <p class="text-center"><a href="https://onestop2.umn.edu/pcas/viewCatalogProgram.do?programID=506&strm=1213&campus=UMNTC" class="button center clear">Learn more about the requirements<br> for the Youth Studies MINOR</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="">        
+    </div>
+</div>
+
+<div class="row">
   <div class="container">
-  <img src="/ssw/images/YS-small-banner.jpg" alt="What is youth studies?">
+  <img src="/ssw/images/YS-small-banner.jpg" alt="A banner printed with pictures of young people and the questions, Youth: Who are they?; Why are we interested?; What should we do? What should I do?">
 </div>
 </div>
 
+{% endblock %}
+{% block bottom_js %}{{ parent() }}
+<script src="https://vjs.zencdn.net/5.14.1/video.js"></script>
+<script src="/assets/dist/js/lib/videojs-background.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
+<script>
+    var l1 = SVG("stat-1-svg-wrapper").size(600, 49);
+    var l2 = SVG("stat-2-svg-wrapper").size(600, 49);
+    var l3 = SVG("stat-3-svg-wrapper").size(600, 49);
+    var end_plot = [
+        [
+            600,
+            46
+        ],
+        [
+            325,
+            46
+        ],
+        [
+            300,
+            15
+        ],
+        [
+            275,
+            46
+        ],
+        [
+            0,
+            46
+        ],
+    ];
+    var points = "600,46 325,46 300,46 275,46 0,46";
+    var stroke_params = {
+        color: "#555",
+        width: 5
+    };
+    var fill = "none"
+    var line1 = l1.polyline(points).stroke(stroke_params).fill(fill);
+    var line2 = l2.polyline(points).stroke(stroke_params).fill(fill);
+    var line3 = l3.polyline(points).stroke(stroke_params).fill(fill);
+    var $line1 = $("#stat-1-svg-wrapper");
+    var animation_fired = false;
+    var $circles = $(".circular");
+
+    $circles.on("click touch", function() {
+        var $element = $(this);
+        window.location = $element.data("href");
+    });
+
+
+    // https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2
+    $.fn.isInViewport = function() {
+        var $element = $(this);
+        var $window = $(window);
+        var elementTop = $element.offset().top;
+        var elementBottom = elementTop + $element.outerHeight();
+        var viewportTop = $window.scrollTop();
+        var viewportBottom = viewportTop + $window.height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).on("resize scroll", function() {
+        if ($line1.isInViewport() && animation_fired === false) {
+            line1.animate(3000).plot(end_plot);
+            line2.animate(3000).plot(end_plot);
+            line3.animate(3000).plot(end_plot);
+            animation_fired = true;
+        }
+    });
+
+    if ($("#bg-video").is(":visible")) {
+
+        var videojs_options = {
+            loop: false,
+            preload: "auto"
+        };
+        var player = videojs("bg-video", videojs_options);
+        player.ready(function() {
+            var idx = 0;
+            var playlist = [
+            {% for video in videos %}
+                {
+                    sources: [
+                        {
+                            src: "{{ video.source }}{{ video.cachebuster }}",
+                            type: "{{ video.type }}"
+                        }
+                    ],
+                    poster: "http://media.w3.org/2010/05/sintel/poster.png"
+                }{% if not loop.last %},{% endif %}
+            {% endfor %}
+            ];
+
+            // Activate background video plugin
+            this.Background();
+
+            this.on("ended", function() {
+
+                // Update the index
+                if (idx < {{ videos|length - 1 }}) {
+                    idx++;
+                } else {
+                    idx = 0;
+                }
+
+                // Set a new src and play
+                this.src(playlist[idx].sources[0].src);
+                this.play();
+            });
+        });
+    }
+
+</script>
 {% endblock %}

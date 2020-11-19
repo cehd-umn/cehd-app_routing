@@ -1,0 +1,51 @@
+{% extends "kin/layout/base.html" %}
+{% set page_title = "Graduate assistantships" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block extra_css %}
+    <style>
+    .stat-number  {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    .stat-number-detail {
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    .stat-number-large {
+    font-size: 48px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 700;
+    }
+    </style>
+{% endblock %}
+{% block main_content %}
+    <div class="row">
+      <div class="container">
+        <h1>Graduate assistantships</h1>
+      </div>
+      <div class="container feature twothirds">
+        <h2>MA, , and PhD applicants</h2>
+        <p>Each January the School of Kinesiology faculty members evaluate the pool of applicants for graduate assistant positions for the following academic year (fall-spring). Most graduate assistant positions involve teaching, but some may involve administration or research. The number of positions available in any given year varies and is limited in number.</p>
+        <p><strong>In order to be considered for these positions, the School of Kinesiology must receive a graduate assistant application by December 1.</strong> If you are interested in applying for the Graduate Assistantship, you will need to upload the Graduate assistantship application form to the "Graduate Program Additional Material" section in your online application. Instructions can be found in the application form below.</p>
+        <p><strong>Admission to the Graduate School is a prerequisite for the awarding of graduate assistantships.</strong></p>
+        <p>The application focuses on qualifications related to teaching physical activity and sport, teaching undergraduate majors courses in kinesiology and sport management, and research experience and skills.</p>
+        <ul>
+          <li><a href="https://www.cehd.umn.edu/kin/library/docs/grad/GradAssistantApplication2020-21%202.pdf">Graduate assistantship application form download</a></li>
+        </ul>
+        <p>University resources</p>
+        <ul>
+          <li><a href="http://humanresources.umn.edu/find-job/graduate-assistant-jobs">Graduate Assistant Employment Office</a></li>
+          <li><a href="http://humanresources.umn.edu/find-job/graduate-assistant-jobs">Graduate School Fellowships</a></li>
+        </ul>
+      </div>
+
+
+    </div><!-- close row -->
+    {% endblock %}

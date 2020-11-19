@@ -55,6 +55,11 @@
   publish: true
   template_data:
     - section: home
+/aaastarter/:
+  publish: false
+  template: cehd/aaastarter/2-col-emph-3-col.html
+  template_data:
+    - section: aaastarter
 /academics/:
   publish: true
   template: cehd/academics/index.html
@@ -1544,6 +1549,11 @@
   template_data:
     meta_description: null
     section: null
+/aaastarter/emma/:
+  publish: false
+  template: cehd/aaastarter/emma.html
+  template_data:
+    - section: emma
 /firstgen/:
   publish: true
   template: cehd/firstgen/index.html
@@ -2882,6 +2892,11 @@
 /undergraduate/freshmen/:
   publish: true
   template: cehd/undergraduate/freshmen.html
+  template_data:
+    - section: undergraduate
+/undergraduate/!freshmen-copy/:
+  publish: true
+  template: cehd/undergraduate/!freshmen-copy.html
   template_data:
     - section: undergraduate
 /undergraduate/fye/:

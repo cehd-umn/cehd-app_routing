@@ -58,6 +58,7 @@ class KINApp extends \CEHD\App\App\BaseApp
         return $response;
     }
 
+
     // @todo use type hinting
     public function searchPage($request, $response, $args)
     {

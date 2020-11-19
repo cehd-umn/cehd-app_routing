@@ -630,6 +630,16 @@
   publish: true
   template_data:
     - section: people
+/people/students/cide/daoxx127/:
+  template: olpd/people/students/cide/daoxx127.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/deuts153/:
+  template: olpd/people/students/cide/deuts153.html
+  publish: true
+  template_data:
+    - section: people
 /people/students/cide/nisse102/:
   template: olpd/people/students/cide/nisse102.html
   publish: true
@@ -687,6 +697,11 @@
     - section: people
 /people/students/cide/laurend/:
   template: olpd/people/students/cide/laurend.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/cide/mente021/:
+  template: olpd/people/students/cide/mente021.html
   publish: true
   template_data:
     - section: people
@@ -802,6 +817,11 @@
     - section: people
 /people/students/es/:
   template: olpd/people/students/es/index.html
+  publish: true
+  template_data:
+    - section: people
+/people/students/es/alissaj/:
+  template: olpd/people/students/es/alissaj.html
   publish: true
   template_data:
     - section: people
