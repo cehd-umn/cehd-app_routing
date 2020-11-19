@@ -1031,6 +1031,15 @@ nav a {
   border: 1px solid #333 !important;
   color: #333 !important;
 }
+
+#mainnav {
+  z-index: 999;
+}
+
+.carousel {
+  z-index: 9999;
+}
+
 @media (min-width: 769px) {
   nav {
     margin: 0 auto;
@@ -1059,6 +1068,7 @@ nav a {
     color: #333;
     height: auto;
     text-shadow: none;
+    z-index: 99;
   }
   .hero-overlay p {
     font-family: "Montserrat", sans-serif;
