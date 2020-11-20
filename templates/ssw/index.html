@@ -9,7 +9,6 @@
 <style>
   .section-header-container {
     background-color: #fff;
-    top: -44px;
   }
 
   #previous,
@@ -24,10 +23,6 @@
 </style>
 {% endblock %}
 
-{% block hero_image %}
-{% include "ssw/home-slider.html" %}
-{% endblock %}
-
 
 {% block breadcrumbs %}
 
@@ -35,7 +30,8 @@
 
 
 {% block main_content %}
-<div class="row has-hero-image">
+{% include "ssw/home-slider.html" %}
+<div class="row">
   <div class="container">
     <h1 class="accessible-no-display">School of Social Work</h1>
     <h1>Prepare to Build a Better World</h1>

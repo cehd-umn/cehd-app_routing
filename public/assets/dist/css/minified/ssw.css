@@ -1038,6 +1038,7 @@ nav a {
 
 .carousel {
   z-index: 9999;
+  display: none;
 }
 
 @media (min-width: 769px) {
@@ -1060,8 +1061,15 @@ nav a {
   }
 }
 @media (min-width: 960px) {
+#slides {
+    min-height: 500px;
+}
+.carousel {
+  display: block;
+    min-height: 550px;
+}
   .hero-image-container {
-    min-height: 610px;
+    min-height: 500px;
   }
   .hero-overlay {
     background-color: rgba(255, 255, 255, 0.5);
@@ -1077,7 +1085,7 @@ nav a {
     font-weight: 600;
   }
   .hero-image {
-    top: 163px;
+    top: 20px;
   }
   .circular-stat {
     position: relative;
@@ -1134,14 +1142,21 @@ nav a {
   }
   .buttons {
     z-index: 5;
-    top: 610px;
+    top: 30px;
     display: flex;
     justify-content: center;
   }
 }
 @media (min-width: 1160px) {
+#slides {
+    min-height: 600px;
+}
+.carousel{
+  display: block;
+    min-height: 600px;
+}
   .hero-image-container {
-    min-height: 720px;
+    min-height: 610px;
   }
   .hero-overlay p {
     font-family: "Montserrat", sans-serif;
@@ -1161,14 +1176,21 @@ nav a {
   }
   .buttons {
     z-index: 5;
-    top: 730px;
+    top: 30px;
     display: flex;
     justify-content: center;
   }
 }
 @media (min-width: 1360px) {
+#slides {
+    min-height: 700px;
+}
+.carousel{
+  display: block;
+    min-height: 700px;
+}
   .hero-image-container {
-    min-height: 810px;
+    min-height: 700px;
   }
   .row.has-hero-image {
     margin-top: 640px;
@@ -1179,14 +1201,21 @@ nav a {
   }
   .buttons {
     z-index: 5;
-    top: 815px;
+    top: 30px;
     display: flex;
     justify-content: center;
   }
 }
 @media (min-width: 1560px) {
+#slides {
+    min-height: 800px;
+}
+.carousel{
+  display: block;
+    min-height: 800px;
+}
   .hero-image-container {
-    min-height: 900px;
+    min-height: 800px;
   }
   .row.has-hero-image {
     margin-top: 730px;
@@ -1203,20 +1232,19 @@ nav a {
   }
   .buttons {
     z-index: 5;
-    top: 920px;
+    top: 30px;
     display: flex;
     justify-content: center;
   }
 }
 #slides {
   position: relative;
-  height: auto;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
 }
 .slide {
-  position: absolute;
+  /* position: absolute; */
   left: 0px;
   top: 0px;
   width: 100%;
